@@ -120,7 +120,7 @@ hash = "8dbd7ed422d8cd88d8ac7ca47a8308c5a0d40d4db1a6af5cf46e989c3a5a4129"
 
 [[files]]
 file = "config/defaultoptions/keybindings.txt"
-hash = "fdb2f5f8138229d28b257a8cae2c6541c86bb402bc8014aaf77d542529af28ce"
+hash = "b6aec0ba9d1f3ca8f625b790481bdc21ef6204e9b94e8391dd4673c57902c4b6"
 
 [[files]]
 file = "config/defaultoptions/options.txt"
@@ -1048,6 +1048,11 @@ metafile = true
 [[files]]
 file = "mods/serene-seasons.pw.toml"
 hash = "ba30c5a40ed43a9971d774b47f0f5b2db0ccad6930754e79fc141e7ac8106d1a"
+metafile = true
+
+[[files]]
+file = "mods/simple-voice-chat.pw.toml"
+hash = "3bd4e09190316b4c4901ba9fd822b891e2cf216eb645687458e3547ad13f93f0"
 metafile = true
 
 [[files]]

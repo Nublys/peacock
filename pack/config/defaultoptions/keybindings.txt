@@ -62,3 +62,13 @@ key_create.keyinfo.rotate_menu:key.keyboard.unknown
 key_supplementaries.keybind.quiver:key.keyboard.v
 key_key.valkyrienskies.ship_down:key.keyboard.v
 key_key.valkyrienskies.ship_cruise:key.keyboard.c
+key_key.voice_chat:key.keyboard.comma
+key_key.voice_chat_settings:key.keyboard.unknown
+key_key.push_to_talk:key.keyboard.caps.lock
+key_key.mute_microphone:key.keyboard.period
+key_key.disable_voice_chat:key.keyboard.unknown
+key_key.hide_icons:key.keyboard.unknown
+key_key.voice_chat_group:key.keyboard.unknown
+key_key.whisper:key.keyboard.unknown
+key_key.voice_chat_toggle_recording:key.keyboard.unknown
+key_key.voice_chat_adjust_volumes:key.keyboard.unknown

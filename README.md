@@ -15,7 +15,7 @@ installer fetches them. Everything you can edit lives in `pack/`.
 pack/                 the packwiz pack — this is what gets installed
   pack.toml           name, versions, index hash
   index.toml          every file below, hashed (regenerate with `packwiz refresh`)
-  mods/*.pw.toml      one file per mod (141)
+  mods/*.pw.toml      one file per mod (142)
   resourcepacks/      Fresh Animations (Modrinth-managed)
   shaderpacks/        Complementary Reimagined + Unbound (Modrinth-managed)
   config/             shipped configs; `preserve = true` files are not overwritten on update
@@ -67,7 +67,7 @@ docs/                 PLAN.md (phases), DECISIONS.md (why things are the way the
 java -jar packwiz-installer-bootstrap.jar -g -s server https://raw.githubusercontent.com/Nublys/peacock/main/pack/pack.toml
 ```
 
-`-s server` skips client-only mods. Server-side Distant Horizons generates the LODs;
+`-s server` skips client-only mods. Open **UDP 24454** (Simple Voice Chat) alongside TCP 25565. Server-side Distant Horizons generates the LODs;
 client generation is disabled in the shipped config. Pregenerate with Chunky before
 letting DH run. (Server runbook: Phase 5 in `docs/PLAN.md`.)
 
@@ -96,6 +96,7 @@ Adding a mod: `packwiz modrinth add <slug>` (or `packwiz curseforge add <slug>`)
 | `I` | Village Expansion wiki |
 | `V` | Quiver (Supplementaries) |
 | `Shift+1–4` | Doggy Talents whistles |
+| `,` / `.` | Voice chat menu / mute mic (voice activation by default; `Caps Lock` push-to-talk) |
 | `Alt` | Create tool menu / toolbelt, Railways bogey menu (context) |
 
 Controlling is installed — search any bind by name in Options → Controls.

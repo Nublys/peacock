@@ -134,6 +134,7 @@ where others have.
     AFK — no `/home`, `/tpa` or warps (no fast travel is a design rule)
   - **FTB Chunks** — claims (anti-grief) and *capped* force-loading (1 chunk/player unless
     a stage raises it); its map/minimap turned **off** so Map Atlases stays the only map
+  - Simple Voice Chat: UDP 24454 open; proximity distance ~48 blocks, groups on
   - Discord bridge (DiscordIntegration or similar) for chat/join/death relay
   - Backups: rolling world snapshots on the host (Aaron's infra) + a pre-update snapshot
     hook before any pack version bump
