@@ -1,0 +1,66 @@
+{
+  "_comment": "Peacock \u2014 Forge 1.20.1 server kept in sync with the pack via packwiz. Import in Admin \u2192 Nests \u2192 Import Egg.",
+  "meta": {
+    "version": "PTDL_v2",
+    "update_url": null
+  },
+  "exported_at": "2026-10-16T23:45:48+00:00",
+  "name": "Peacock (Forge 1.20.1 + packwiz)",
+  "author": "admin@onecolo.com",
+  "description": "Installs Forge 1.20.1-47.4.16 and syncs the Peacock pack (server side) from GitHub on every start. Voice chat shares the game port (TCP+UDP).",
+  "features": [
+    "eula",
+    "java_version",
+    "pid_limit"
+  ],
+  "docker_images": {
+    "Java 17": "ghcr.io/pterodactyl/yolks:java_17"
+  },
+  "file_denylist": [],
+  "startup": "java -jar packwiz-installer-bootstrap.jar -g -s server {{PACK_URL}} && cp -r peacock-server/. . && java -Xms128M -XX:MaxRAMPercentage=90.0 -Dterminal.jline=false -Dterminal.ansi=true @user_jvm_args.txt @libraries/net/minecraftforge/forge/{{MC_VERSION}}-{{FORGE_VERSION}}/unix_args.txt nogui",
+  "config": {
+    "files": "{\n    \"server.properties\": {\n        \"parser\": \"properties\",\n        \"find\": {\n            \"server-ip\": \"0.0.0.0\",\n            \"server-port\": \"{{server.build.default.port}}\",\n            \"query.port\": \"{{server.build.default.port}}\"\n        }\n    }\n}",
+    "startup": "{\n    \"done\": \")! For help, type \"\n}",
+    "logs": "{}",
+    "stop": "stop"
+  },
+  "scripts": {
+    "installation": {
+      "script": "#!/bin/bash\n# Peacock egg \u2014 installation script (runs once in the install container, with Java 17).\n# Installs Forge, the packwiz bootstrap, server.properties defaults and the pack's JVM args,\n# then performs the first server-side sync so the server is ready on first start.\nset -euo pipefail\nexport DEBIAN_FRONTEND=noninteractive\napt-get update -qq && apt-get install -y -qq curl jq >/dev/null\n\nmkdir -p /mnt/server && cd /mnt/server\n\nMC_VERSION=\"${MC_VERSION:-1.20.1}\"\nFORGE_VERSION=\"${FORGE_VERSION:-47.4.16}\"\nPACK_URL=\"${PACK_URL:-https://raw.githubusercontent.com/Nublys/peacock/main/pack/pack.toml}\"\nREPO_RAW=\"${PACK_URL%/pack/pack.toml}\"\n\necho \"== Forge ${MC_VERSION}-${FORGE_VERSION}\"\ncurl -fsSL -o forge-installer.jar \\\n  \"https://maven.minecraftforge.net/net/minecraftforge/forge/${MC_VERSION}-${FORGE_VERSION}/forge-${MC_VERSION}-${FORGE_VERSION}-installer.jar\"\njava -jar forge-installer.jar --installServer >/dev/null\nrm -f forge-installer.jar forge-installer.jar.log run.bat\n\necho \"== pack defaults\"\n[ -f server.properties ] || curl -fsSL -o server.properties \"${REPO_RAW}/server/server.properties\"\ncurl -fsSL -o user_jvm_args.txt \"${REPO_RAW}/server/user_jvm_args.txt\"\necho \"eula=true\" > eula.txt\n\necho \"== packwiz bootstrap + first sync\"\ncurl -fsSL -o packwiz-installer-bootstrap.jar \\\n  \"https://github.com/packwiz/packwiz-installer-bootstrap/releases/latest/download/packwiz-installer-bootstrap.jar\"\njava -jar packwiz-installer-bootstrap.jar -g -s server \"${PACK_URL}\"\ncp -r peacock-server/. .\n\necho \"== done\"\n",
+      "container": "eclipse-temurin:17-jdk",
+      "entrypoint": "bash"
+    }
+  },
+  "variables": [
+    {
+      "name": "Pack URL",
+      "description": "packwiz pack.toml to sync from. Pin a commit for rollback: .../<sha>/pack/pack.toml",
+      "env_variable": "PACK_URL",
+      "default_value": "https://raw.githubusercontent.com/Nublys/peacock/main/pack/pack.toml",
+      "user_viewable": true,
+      "user_editable": true,
+      "rules": "required|string|max:255",
+      "field_type": "text"
+    },
+    {
+      "name": "Minecraft Version",
+      "description": "",
+      "env_variable": "MC_VERSION",
+      "default_value": "1.20.1",
+      "user_viewable": true,
+      "user_editable": false,
+      "rules": "required|string|max:20",
+      "field_type": "text"
+    },
+    {
+      "name": "Forge Version",
+      "description": "Forge build (without the MC prefix).",
+      "env_variable": "FORGE_VERSION",
+      "default_value": "47.4.16",
+      "user_viewable": true,
+      "user_editable": false,
+      "rules": "required|string|max:20",
+      "field_type": "text"
+    }
+  ]
+}

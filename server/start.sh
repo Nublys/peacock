@@ -8,6 +8,9 @@
 #   PEACOCK_PACK_URL   pack.toml URL (default: main on GitHub)
 #   PEACOCK_RUN_DIR    server directory (default: <repo>/server/run)
 #   PEACOCK_SNAPSHOT=1 tar the world before syncing (pre-update safety net)
+#   PEACOCK_MEM        heap, default 10G
+#
+# Pterodactyl hosts: use server/pterodactyl/egg-peacock.json instead of this script.
 set -euo pipefail
 
 FORGE_VERSION="1.20.1-47.4.16"
@@ -36,9 +39,9 @@ sync_pack() {
   [ -f packwiz-installer-bootstrap.jar ] || curl -fL -o packwiz-installer-bootstrap.jar "$BOOTSTRAP_URL"
   log "syncing pack (server side) from $PACK_URL"
   java -jar packwiz-installer-bootstrap.jar -g -s server "$PACK_URL"
-  # server-specific config that the pack cannot express per side
+  # server-specific config travels inside the pack (pack/peacock-server/) so it also reaches containers
   log "applying server overrides"
-  cp -r "$REPO_DIR/server/overrides/." "$RUN_DIR/"
+  cp -r "$RUN_DIR/peacock-server/." "$RUN_DIR/"
 }
 
 snapshot_world() {
@@ -62,4 +65,5 @@ esac
 sync_pack
 cd "$RUN_DIR"
 log "starting Forge $FORGE_VERSION"
+export JAVA_TOOL_OPTIONS="-Xms${PEACOCK_MEM:-10G} -Xmx${PEACOCK_MEM:-10G} ${JAVA_TOOL_OPTIONS:-}"
 exec ./run.sh nogui

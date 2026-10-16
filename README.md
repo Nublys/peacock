@@ -23,7 +23,8 @@ pack/                 the packwiz pack — this is what gets installed
 profiles/             hardware profiles copied over pack defaults (mac is the pack default)
 instance/             Prism instance.cfg / mmc-pack.json for reference (Forge 47.4.16)
 tools/                validate.py (CI), apply-profile.sh
-server/               start.sh (install/sync/launch), overrides/, server.properties, JVM args
+server/               pterodactyl/ (egg + install script), start.sh (bare metal), server.properties, JVM args
+pack/peacock-server/  server-only config overrides, shipped by the pack, copied over the server root on start
 docs/                 PLAN.md (phases), DECISIONS.md (why things are the way they are)
 ```
 
@@ -64,14 +65,10 @@ docs/                 PLAN.md (phases), DECISIONS.md (why things are the way the
 
 ## Server
 
-```
-git clone https://github.com/Nublys/peacock.git && cd peacock
-./server/start.sh --install     # once
-./server/start.sh               # every start: sync from main, apply overrides, launch
-```
-
-Full runbook in [`server/README.md`](server/README.md) — ports (TCP 25565, UDP 24454),
-pregen, overrides, rollback. Server-only mods (Chunky, Spark, LuckPerms) carry
+Pterodactyl: import `server/pterodactyl/egg-peacock.json`, create a server from it, one
+allocation (voice chat shares the game port). Every start syncs the pack from `main`.
+Full runbook in [`server/README.md`](server/README.md) — install, pregen, overrides, rollback;
+bare-metal `server/start.sh` as the alternative. Server-only mods (Chunky, Spark, LuckPerms) carry
 `side = "server"` and never reach clients.
 
 ## Updating the pack

@@ -1201,6 +1201,18 @@ hash = "1157664b81af8fe4b2631bab4b2e2c3740b424bd577600d08bb3bbfe38e5bfa9"
 metafile = true
 
 [[files]]
+file = "peacock-server/README.txt"
+hash = "1f139b8561336fed8a4fd2830af1989d808425ac6cc603c26028afd49d105899"
+
+[[files]]
+file = "peacock-server/config/DistantHorizons.toml"
+hash = "9a4f666ce77c0d382723766666b11c594598aa3daca04eb1fde0fb06e3610b3a"
+
+[[files]]
+file = "peacock-server/config/voicechat/voicechat-server.properties"
+hash = "87bad15949ca26d599fd8af9d9c7fcb79b83401280a74bdd102e3968e8f97494"
+
+[[files]]
 file = "resourcepacks/fresh-animations.pw.toml"
 hash = "6a1556a0e4fcb411b33efafc3382b4abd9a6e671f140dc0d42e9aad2808e24f3"
 metafile = true

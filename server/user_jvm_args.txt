@@ -1,7 +1,5 @@
 # JVM args for the Peacock dedicated server (read by Forge's run.sh).
-# Heap: 10 GB fits Create + VS + DH generation + a handful of players. Raise -Xmx/-Xms together.
--Xms10G
--Xmx10G
+# No -Xmx here: Pterodactyl applies -XX:MaxRAMPercentage from the allocation; start.sh passes -Xmx from PEACOCK_MEM.
 -XX:+UseG1GC
 -XX:+ParallelRefProcEnabled
 -XX:MaxGCPauseMillis=130

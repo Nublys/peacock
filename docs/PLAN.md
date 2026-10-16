@@ -124,12 +124,17 @@ where others have.
   the charter recipe works for a third player who has neither.
 
 ## Phase 5 — Server (a real multiplayer server)  🟡 scaffold done 2026-10-16
-`server/start.sh --install` + `server/start.sh`; overrides for DH; Chunky/Spark/LuckPerms as
-`side = "server"`. Remaining: claims decision, Discord bridge, backups on the host, runbook
+**Pterodactyl egg** (`server/pterodactyl/egg-peacock.json`): install script sets up Forge +
+bootstrap + first sync; startup re-syncs and applies `pack/peacock-server/` overrides. Voice
+chat shares the game port (`port=-1`) so one allocation suffices. Bare-metal `start.sh` kept.
+Chunky/Spark/LuckPerms as `side = "server"`. Remaining: claims decision, Discord bridge, backups on the host, runbook
 details below as they get exercised.
 - Server-side packwiz (`-s server`), same datapacks/KubeJS; Forge 47.4.16, Java 17
 - `server.properties`: view-distance 8, simulation-distance 6, whitelist on, max-tick-time
   tuned, spawn-protection 0 (the capital is protected by claims instead)
+- Host is **Pterodactyl**: backups, schedules, console and allocations come from the panel;
+  the egg owns install + startup. Overrides travel inside the pack (`pack/peacock-server/`)
+  because the container has no repo checkout.
 - **Server-only mods** (`side = "server"` in the pack so clients never see them):
   - Chunky — pregen (≈3000-block radius) before DH's LOD pass
   - Spark — profiling, the first thing to open when TPS drops
@@ -137,10 +142,9 @@ details below as they get exercised.
     AFK — no `/home`, `/tpa` or warps (no fast travel is a design rule)
   - **FTB Chunks** — claims (anti-grief) and *capped* force-loading (1 chunk/player unless
     a stage raises it); its map/minimap turned **off** so Map Atlases stays the only map
-  - Simple Voice Chat: UDP 24454 open; proximity distance ~48 blocks, groups on
+  - Simple Voice Chat: shares the game port (`port=-1`, Wings opens TCP+UDP); 48-block range, groups on
   - Discord bridge (DiscordIntegration or similar) for chat/join/death relay
-  - Backups: rolling world snapshots on the host (Aaron's infra) + a pre-update snapshot
-    hook before any pack version bump
+  - Backups: Pterodactyl backups + a daily schedule; manual backup before a pack version bump
 - Distant Horizons server config: LOD generation on the server, distribution to clients,
   rate limits for many clients
 - Valkyrien Skies: per-player ship caps; Create: contraption size limits; Illager Invasion:
