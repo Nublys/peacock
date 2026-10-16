@@ -1,0 +1,19 @@
+# JVM args for the Peacock dedicated server (read by Forge's run.sh).
+# Heap: 10 GB fits Create + VS + DH generation + a handful of players. Raise -Xmx/-Xms together.
+-Xms10G
+-Xmx10G
+-XX:+UseG1GC
+-XX:+ParallelRefProcEnabled
+-XX:MaxGCPauseMillis=130
+-XX:+UnlockExperimentalVMOptions
+-XX:+DisableExplicitGC
+-XX:+AlwaysPreTouch
+-XX:G1NewSizePercent=28
+-XX:G1HeapRegionSize=16M
+-XX:G1ReservePercent=20
+-XX:InitiatingHeapOccupancyPercent=15
+-XX:G1MixedGCLiveThresholdPercent=90
+-XX:SurvivorRatio=32
+-XX:MaxTenuringThreshold=1
+-Dusing.aikars.flags=https://mcflags.emc.gs
+-Daikars.new.flags=true

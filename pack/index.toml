@@ -556,6 +556,11 @@ hash = "259d7b1bb82931ccc8438933c6627e14c1176091549e48096a7f62b3fca45041"
 metafile = true
 
 [[files]]
+file = "mods/chunky.pw.toml"
+hash = "2274e08910d949f9962383e2314e8d42490f2e8195782786392614d0f0879629"
+metafile = true
+
+[[files]]
 file = "mods/cloth-config.pw.toml"
 hash = "fd272388d2eb458eb8e96ae4d49fe94231ca5cd3f2a16bd77c4e926e84e73a0e"
 metafile = true
@@ -881,6 +886,11 @@ hash = "96d02e3bc38dabe9256640345030d355ba104edc5a3f323b24c960520d58e9a7"
 metafile = true
 
 [[files]]
+file = "mods/luckperms.pw.toml"
+hash = "f8b4210300a8f2ce76a2329de37f2e671ac5dfeca17018528cadb333b019a814"
+metafile = true
+
+[[files]]
 file = "mods/macaws-bridges.pw.toml"
 hash = "a383c86427ceaf4a2f455ee632b4cb5ca8d78cb706ea68b989d9202bc4a9c4b4"
 metafile = true
@@ -1058,6 +1068,11 @@ metafile = true
 [[files]]
 file = "mods/slice-and-dice.pw.toml"
 hash = "20b871a55bfdf89334c6d8c174bd0c9ddc81a1a2806a44a406dc1a88b917c6a0"
+metafile = true
+
+[[files]]
+file = "mods/spark.pw.toml"
+hash = "0ef2a47f506c83478052262348c105c307d970fbff3f6b0917e46d67f61d8953"
 metafile = true
 
 [[files]]

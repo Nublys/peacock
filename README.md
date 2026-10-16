@@ -15,7 +15,7 @@ installer fetches them. Everything you can edit lives in `pack/`.
 pack/                 the packwiz pack — this is what gets installed
   pack.toml           name, versions, index hash
   index.toml          every file below, hashed (regenerate with `packwiz refresh`)
-  mods/*.pw.toml      one file per mod (142)
+  mods/*.pw.toml      one file per mod (145; 3 server-only)
   resourcepacks/      Fresh Animations (Modrinth-managed)
   shaderpacks/        Complementary Reimagined + Unbound (Modrinth-managed)
   config/             shipped configs; `preserve = true` files are not overwritten on update
@@ -23,6 +23,7 @@ pack/                 the packwiz pack — this is what gets installed
 profiles/             hardware profiles copied over pack defaults (mac is the pack default)
 instance/             Prism instance.cfg / mmc-pack.json for reference (Forge 47.4.16)
 tools/                validate.py (CI), apply-profile.sh
+server/               start.sh (install/sync/launch), overrides/, server.properties, JVM args
 docs/                 PLAN.md (phases), DECISIONS.md (why things are the way they are)
 ```
 
@@ -64,12 +65,14 @@ docs/                 PLAN.md (phases), DECISIONS.md (why things are the way the
 ## Server
 
 ```
-java -jar packwiz-installer-bootstrap.jar -g -s server https://raw.githubusercontent.com/Nublys/peacock/main/pack/pack.toml
+git clone https://github.com/Nublys/peacock.git && cd peacock
+./server/start.sh --install     # once
+./server/start.sh               # every start: sync from main, apply overrides, launch
 ```
 
-`-s server` skips client-only mods. Open **UDP 24454** (Simple Voice Chat) alongside TCP 25565. Server-side Distant Horizons generates the LODs;
-client generation is disabled in the shipped config. Pregenerate with Chunky before
-letting DH run. (Server runbook: Phase 5 in `docs/PLAN.md`.)
+Full runbook in [`server/README.md`](server/README.md) — ports (TCP 25565, UDP 24454),
+pregen, overrides, rollback. Server-only mods (Chunky, Spark, LuckPerms) carry
+`side = "server"` and never reach clients.
 
 ## Updating the pack
 

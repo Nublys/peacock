@@ -123,7 +123,10 @@ where others have.
   B cannot; A hands B the second Blueprint; B uses it and can; B's Almanac chapter opens;
   the charter recipe works for a third player who has neither.
 
-## Phase 5 — Server (a real multiplayer server)
+## Phase 5 — Server (a real multiplayer server)  🟡 scaffold done 2026-10-16
+`server/start.sh --install` + `server/start.sh`; overrides for DH; Chunky/Spark/LuckPerms as
+`side = "server"`. Remaining: claims decision, Discord bridge, backups on the host, runbook
+details below as they get exercised.
 - Server-side packwiz (`-s server`), same datapacks/KubeJS; Forge 47.4.16, Java 17
 - `server.properties`: view-distance 8, simulation-distance 6, whitelist on, max-tick-time
   tuned, spawn-protection 0 (the capital is protected by claims instead)

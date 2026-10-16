@@ -19,3 +19,6 @@ options.txt
 # OS / editor
 .DS_Store
 Thumbs.db
+
+# dedicated server runtime (Forge install, world, mods) — never committed
+server/run/
