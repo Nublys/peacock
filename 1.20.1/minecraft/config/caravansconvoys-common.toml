@@ -1,0 +1,112 @@
+
+[trade]
+	#Max stacks a single run can carry, regardless of wagon slots
+	#Range: 1 ~ 27
+	wagonCargoStacks = 6
+	#Items of each type always left in the exported chest before loading
+	#Range: 0 ~ 100000
+	defaultSurplusFloor = 64
+	#Off by design: a route always ships the full agreed bundle or nothing
+	allowPartialShipments = false
+	#Cross-player routes need both owners to whitelist each other
+	requireMutualWhitelist = true
+	#Cap on simultaneous trade links from one Dock
+	#Range: 1 ~ 64
+	maxLinksPerDock = 4
+
+[wagon]
+	#Main mode: two wagons meet and swap. If false, always use the single-wagon failsafe
+	rendezvousEnabled = true
+	#Seconds the wagons stand still to visibly swap cargo when they meet
+	#Range: 0 ~ 120
+	meetSwapSeconds = 5
+	#Seconds a wagon parks at a dock to load/unload (it repairs, the driver eats and heals) before turning around
+	#Range: 0 ~ 120
+	serviceSeconds = 5
+	#No-progress time before a wagon flags itself STUCK and trips the failsafe
+	#Range: 3 ~ 600
+	stuckAfterSeconds = 20
+	#Cooldown before a dead draft horse respawns (the ambush window)
+	#Range: 0 ~ 600
+	horseRespawnSeconds = 45
+	#Cooldown before a killed Coach is replaced at the wagon
+	#Range: 0 ~ 600
+	coachRespawnSeconds = 30
+	#Item charged to rebuild a wrecked wagon
+	wagonRepairItem = "minecraft:iron_ingot"
+	#How many of that item a repair costs (0 = free redeploy)
+	#Range: 0 ~ 6400
+	wagonRepairAmount = 16
+	#A destroyed wagon spills its cargo as items at the wreck
+	cargoDropsOnWreck = true
+	#Wagon types a Caravan Dock refuses to send out. The royal wagon is a passenger coach rather than a freight cart, so it is barred by default. Wagons with no inventory of their own (the armoured wagon) are NOT banned: they carry their load in a sealed hold that can only be got at by destroying the wagon.
+	bannedWagons = ["trotting_wagons:royal_wagon"]
+
+[pathfinding]
+	#Path-cost multiplier on a road (lower = more strongly preferred)
+	#Range: 0.05 ~ 1.0
+	roadSurfaceMult = 0.25
+	#Speed multiplier while the wagon drives on a player-made road (1.0 = no bonus). Pairs with roadSurfaceMult: roads are both preferred by the planner and faster to drive, so building a road always pays off. The planner also treats this bonus as a travel-time saving, so a longer route that stays on roads can rightly win over a shorter dirt shortcut.
+	#Range: 1.0 ~ 4.0
+	roadSpeedMult = 1.6
+	#Path cost added per block of climb (higher = hates hills more)
+	#Range: 0.0 ~ 100.0
+	elevationPenalty = 6.0
+	#Share of elevationPenalty charged per block of DESCENT. Taxing only the climb made routes asymmetric: a hill the wagon detoured around on the way out was a free drop on the way back, so the return leg abandoned the road and went straight over. 1.0 = fully symmetric, so a caravan retraces the road it came out on; lower lets it take gentler downhill shortcuts home.
+	#Range: 0.0 ~ 1.0
+	descentPenalty = 1.0
+	#Tallest step a wagon may climb without a ramp/road
+	#Range: 1 ~ 4
+	maxStepHeight = 1
+	#Contiguous uniform blocks needed to count as a road
+	#Range: 1 ~ 16
+	roadMinRun = 3
+	#Path cost added per block of water the route would cross. Deliberately higher than the off-road tax, so a caravan takes a bridge or goes the long way round the shore whenever either exists, and only walks the seabed when there is genuinely no dry route to the destination. Additive like every other cost here, so water is never made impassable: an island dock is still reachable, it is just the last resort.
+	#Range: 0.0 ~ 100.0
+	waterPenalty = 12.0
+	#Log every route a caravan plans: whether a path was found at all, how much of it runs on road, and whether the wagon is actually on the road it planned. Diagnostic for 'the wagon ignores my road', which has three different causes that look identical in game - no path at all (the driver falls back to steering straight at the destination), a path that avoids the road (a cost problem), or a path along the road that the driver then cuts corners off (a steering problem). Writes to the server log; leave off in normal play.
+	debugRoutes = false
+	#When Via Romana is installed, every block it counts as a path block (its via_romana:path_block tag, which follows its own config) is also a road to caravans: preferred by the route planner and driven at road speed. Does nothing when Via Romana is not installed.
+	viaRomanaRoads = true
+
+[freight]
+	#Items that must be waiting in a sending Freight Dock's chest before its wagon sets off, so it does not make a trip for a single block. The Send now button ignores this.
+	#Range: 1 ~ 100000
+	freightMinItems = 64
+
+[checkpoints]
+	#How far to either side of the straight dock-to-dock line a Caravan Checkpoint may sit and still count as 'on the way'. A checkpoint outside this corridor, or behind either dock, is ignored so caravans never detour to one that is nowhere near their route.
+	#Range: 4.0 ~ 512.0
+	checkpointCorridor = 48.0
+	#Most checkpoints a single leg will drive through. A longer chain is sampled evenly along the route, so a road paved with checkpoints keeps its shape without the wagon stopping at every one.
+	#Range: 1 ~ 64
+	checkpointMaxPerRoute = 8
+	#How close the wagon must get to a checkpoint to count as having passed it. Generous on purpose: a checkpoint is normally buried under a road, so the rig drives over it rather than onto it.
+	#Range: 2 ~ 32
+	checkpointArriveRadius = 5
+
+[guards]
+	#Allow posting HYW soldiers as escorts (ignored if HYW absent)
+	escortsEnabled = true
+	#Max scrolls/escorts a single wagon (or dock, in Milestone 1) can carry
+	#Range: 1 ~ 9
+	guardSlots = 4
+	#A non-owner opening the wagon turns posted guards hostile to them
+	guardHostileOnTheft = true
+	#Cooldown to repost a fallen guard from remaining scrolls
+	#Range: 0 ~ 600
+	guardRepostSeconds = 90
+	#Escorts a bandit-mode convoy leaves with. This is the difficulty dial for the intercept minigame: raise it to make a shipment worth bringing friends for.
+	#Range: 0 ~ 32
+	banditSlots = 6
+	#What a bandit convoy is escorted by when no spawn eggs are in the dock's chest, which is the normal case: a bandit run should work the moment it is switched on. Drop spawn eggs in the chest to override this per-dock.
+	banditDefaultMobs = ["minecraft:pillager", "minecraft:vindicator"]
+	#Announce to nearby players when a bandit shipment reaches its Endplate and is lost. Off by default: a route ticking over in the background should be silent, and anyone building or testing one does not want a message every time a convoy completes. Turn it on when you are running the route as a live event and want players told they lost the chase.
+	announceShipmentEscaped = false
+	#Most Villager Recruits that can join one caravan's escort. Recruits join when you press Start Operation (or press it again while the wagon waits at home) with your recruits standing near the dock. Does nothing when Recruits is not installed.
+	#Range: 0 ~ 64
+	recruitEscortMax = 10
+	#How close to the dock your recruits must stand to join the escort when you press Start Operation.
+	#Range: 2 ~ 48
+	recruitEnlistRadius = 12
+

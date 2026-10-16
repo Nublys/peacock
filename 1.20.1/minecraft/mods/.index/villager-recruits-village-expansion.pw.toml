@@ -1,0 +1,39 @@
+filename = 'village_recruits-1.0.7.93TC-206.jar'
+name = 'Villager Recruits: Village Expansion'
+side = 'both'
+x-prismlauncher-loaders = [ 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20.1' ]
+x-prismlauncher-release-type = 'beta'
+x-prismlauncher-version-number = '1.0.7.21'
+
+[download]
+hash = '8bdbc839af783fa413d345008f90756ef1d9dece24775f3e69140dacd4bae6bed463a4be66da929598a7170ce75d17aa0b9c35f52875d131d5f0cc909af9acdf'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/mkSW0fEr/versions/DkZTsNdv/village_recruits-1.0.7.93TC-206.jar'
+
+[update.modrinth]
+mod-id = 'mkSW0fEr'
+version = 'DkZTsNdv'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'kD1J3BFy'
+type = 'INCOMPATIBLE'
+
+[[x-prismlauncher-dependencies]]
+addonId = '7Cq2Y0Rq'
+type = 'INCOMPATIBLE'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'Pqlv7VM3'
+type = 'REQUIRED'
+version = '49csRXJc'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'n38qCKN4'
+type = 'INCOMPATIBLE'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'WOg9lm4u'
+type = 'REQUIRED'
+version = '2zXpVxK4'

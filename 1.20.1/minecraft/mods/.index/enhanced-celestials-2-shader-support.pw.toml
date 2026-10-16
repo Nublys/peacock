@@ -1,0 +1,37 @@
+filename = 'Enhanced-Celestials-2-Shaders-Forge-1.20.1-1.0.0.4.jar'
+name = 'Enhanced Celestials 2: Shader Support'
+side = 'client'
+x-prismlauncher-loaders = [ 'neoforge', 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = '1.0.0.4-forge'
+
+[download]
+hash = '950a99dbe068ad0353480d01e031c925cf18bd9cb4ce2bceb783360d52cf837407faf145ddea75b1bf6fd1d1415a64bd598e6b95407b50860d3af10206f90d5f'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/6cEnKtmZ/versions/mMmRvQrI/Enhanced-Celestials-2-Shaders-Forge-1.20.1-1.0.0.4.jar'
+
+[update.modrinth]
+mod-id = '6cEnKtmZ'
+version = 'mMmRvQrI'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'sk9rgfiA'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'GchcoXML'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'ziOp6EO8'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'z2XEADmE'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'ugCWUHV9'
+type = 'REQUIRED'

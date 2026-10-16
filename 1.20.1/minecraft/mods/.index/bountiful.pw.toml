@@ -1,0 +1,29 @@
+filename = 'Bountiful-6.0.4+1.20.1-forge.jar'
+name = 'Bountiful'
+side = 'both'
+x-prismlauncher-loaders = [ 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = '6.0.4+1.20.1'
+
+[download]
+hash = '63e460c967d4c38bad82e20eb35955f1bb22b505239fafb02aed60a43840f7417306cc99ea8da25bf7ea36d0a1c65347b3b20d0f597311dc7c4473908bd63705'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/BpwWFOVM/versions/EM7Su3PD/Bountiful-6.0.4%2B1.20.1-forge.jar'
+
+[update.modrinth]
+mod-id = 'BpwWFOVM'
+version = 'EM7Su3PD'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'zfbCkvdZ'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = '9s6osm5g'
+type = 'OPTIONAL'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'ordsPcFz'
+type = 'REQUIRED'

@@ -1,0 +1,21 @@
+filename = 'vlib-1.20.1-0.1.1+forge.jar'
+name = 'VLib'
+side = 'both'
+x-prismlauncher-loaders = [ 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20.1' ]
+x-prismlauncher-release-type = 'beta'
+x-prismlauncher-version-number = '1.20.1-0.1.1'
+
+[download]
+hash = '7ecbbd2bbad4cfd20a7c72f688761fd287b653256223a09a217bf0c0d351f29f90108ebd3f85e449edcf294257e302f3085da907ff734b203ca45c23e5bc70ff'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/V1UmcEMX/versions/lEFffQqd/vlib-1.20.1-0.1.1%2Bforge.jar'
+
+[update.modrinth]
+mod-id = 'V1UmcEMX'
+version = 'lEFffQqd'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'V5ujR2yw'
+type = 'REQUIRED'

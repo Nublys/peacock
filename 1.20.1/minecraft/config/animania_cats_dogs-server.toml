@@ -1,0 +1,61 @@
+
+[catsdogs]
+	#Food items accepted by cat
+	catFood = ["minecraft:fish"]
+	#Preferred bed block for cat
+	catBed = "animania:cat_bed_1"
+	#Backup bed block for cat
+	catBed2 = "animania:cat_bed_2"
+	#Nearby cat spawn limit
+	#Range: 0 ~ 10000
+	spawnLimitCats = 20
+	#Nearby dog spawn limit
+	#Range: 0 ~ 10000
+	spawnLimitDogs = 20
+	#Legacy cat spawn weight
+	#Range: 0 ~ 1000
+	spawnProbabilityCats = 4
+	#Legacy dog spawn weight
+	#Range: 0 ~ 1000
+	spawnProbabilityDogs = 5
+	#Maximum dog family group size
+	#Range: 1 ~ 64
+	numberDogFamilies = 2
+	#Maximum cat family group size
+	#Range: 1 ~ 64
+	numberCatFamilies = 2
+	#Food items accepted by dog
+	dogFood = ["listAllbeefraw"]
+	#Items accepted by pet bowls
+	petBowlFood = ["minecraft:fish", "listAllbeefraw", "animania:hamster_food"]
+	#Preferred bed block for dog
+	dogBed = "animania:dog_pillow"
+	#Backup bed block for dog
+	dogBed2 = "animania:block_straw"
+	#Legacy biome categories for wolf
+	wolfBiomeTypes = ["MOUNTAIN", "FOREST", "SNOWY", "COLD"]
+	#Legacy biome categories for wolfAshen
+	wolfAshenBiomeTypes = ["FOREST", "SNOWY", "COLD"]
+	#Legacy biome categories for wolfBlack
+	wolfBlackBiomeTypes = ["FOREST", "SNOWY", "COLD"]
+	#Legacy biome categories for wolfChestnut
+	wolfChestnutBiomeTypes = ["FOREST", "SNOWY", "COLD"]
+	#Legacy biome categories for wolfRusty
+	wolfRustyBiomeTypes = ["JUNGLE"]
+	#Legacy biome categories for wolfSpotted
+	wolfSpottedBiomeTypes = ["SAVANNA"]
+	#Legacy biome categories for wolfStriped
+	wolfStripedBiomeTypes = ["MESA"]
+	#Legacy biome categories for wolfSnowy
+	wolfSnowyBiomeTypes = ["FOREST", "SNOWY", "COLD"]
+	#Legacy biome categories for wolfWoods
+	wolfWoodsBiomeTypes = ["FOREST", "SNOWY", "COLD"]
+	#Legacy biome categories for fox
+	foxBiomeTypes = ["FOREST", "SNOWY", "COLD"]
+	#Legacy biome categories for ocelot
+	ocelotBiomeTypes = ["HOT", "JUNGLE", "SAVANNA"]
+	#Replace naturally spawning vanilla wolves
+	replaceVanillaWolves = true
+	#Replace naturally spawning vanilla ocelots
+	replaceVanillaOcelots = true
+

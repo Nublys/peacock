@@ -1,0 +1,116 @@
+
+[gameRules]
+	#Foods give bonus effects
+	foodsGiveBonusEffects = true
+	#Show mod update notification at startup
+	showModUpdateNotification = true
+	#Show male parts (modesty flag)
+	showParts = false
+	#Show particles when animals are hungry or thirsty
+	showUnhappyParticles = true
+	#Allow dispensers to place seeds
+	allowSeedDispenserPlacement = true
+	#Require shift-right-click for seed placement
+	shiftSeedPlacement = false
+	#Animals take starvation damage when not fed and watered
+	animalsStarve = false
+	#Allow random mobs to ride Animania animals
+	allowMobRiding = true
+	#Allow trough automation with hoppers and capabilities
+	allowTroughAutomation = true
+	#Leashed-animal fall damage multiplier
+	#Range: 0.0 ~ 1.0
+	fallDamageReduceMultiplier = 0.45
+	#Remove source water after large animals drink
+	waterRemovedAfterDrinking = true
+	#Remove plant blocks after animals eat them
+	plantsRemovedAfterEating = true
+	#Animals do not need food or water
+	ambianceMode = false
+	#Animals sleep
+	animalsSleep = true
+	#Animals can attack other entities
+	animalsCanAttackOthers = true
+	#Items accepted by troughs
+	troughFood = ["animania:block_straw", "minecraft:wheat", "simplecorn:corncob", "harvestcraft:barleyitem", "harvestcraft:oatsitem", "harvestcraft:ryeitem", "harvestcraft:cornitem", "minecraft:apple", "minecraft:carrot", "minecraft:beetroot", "minecraft:potato", "minecraft:poisonous_potato", "minecraft:wheat_seeds", "minecraft:melon_seeds", "minecraft:beetroot_seeds", "minecraft:pumpkin_seeds", "biomesoplenty:turnip_seeds", "minecraft:egg", "animania:brown_egg", "listAllbeefraw", "minecraft:fish"]
+	#AI tick countdown timer
+	#Range: 1 ~ 72000
+	ticksBetweenAIFirings = 100
+	#Tamed animals teleport to their owner
+	tamedAnimalsTeleport = true
+	#Use fancy entity spawn eggs
+	fancyEggs = false
+	#Rotate fancy entity eggs
+	fancyEggsRotate = false
+	#Allow Animania food to be eaten at full hunger
+	eatFoodAnytime = true
+	#Birds shed feathers naturally
+	birdsDropFeathers = true
+	#Range animals search for food, water and beds
+	#Range: 1 ~ 64
+	aiBlockSearchRange = 16
+	#Range used by per-species spawn caps
+	#Range: 8 ~ 256
+	animalCapSearchRange = 80
+	#Untouched naturally spawned animals do not eat or breed
+	requireAnimalInteractionForAI = true
+	#Allow squids to spawn in fresh water
+	spawnFreshWaterSquids = true
+
+[careAndFeeding]
+	#Ticks before incremental child growth
+	#Range: 1 ~ 72000
+	childGrowthTick = 200
+	#Ticks between feedings
+	#Range: 1 ~ 2400000
+	feedTimer = 12000
+	#Ticks between drinking
+	#Range: 1 ~ 2400000
+	waterTimer = 12000
+	#Ticks between playing
+	#Range: 1 ~ 2400000
+	playTimer = 12000
+	#Ticks between laying eggs
+	#Range: 1 ~ 2400000
+	laidTimer = 2000
+	#Ticks between feather drops
+	#Range: 1 ~ 2400000
+	featherTimer = 12000
+	#Ticks between mating and birth
+	#Range: 1 ~ 2400000
+	gestationTimer = 20000
+	#Mammals mate only after hand-feeding
+	feedToBreed = true
+	#Ticks before wool regrows
+	#Range: 1 ~ 2400000
+	woolRegrowthTimer = 8000
+	#Ticks between starvation damage
+	#Range: 1 ~ 72000
+	starvationTimer = 400
+	#Egg hatch chance denominator (1/x)
+	#Range: 1 ~ 10000
+	eggHatchChance = 2
+	#Ticks between salt lick uses
+	#Range: 1 ~ 2400000
+	saltLickTick = 8000
+	#Maximum salt lick uses
+	#Range: 1 ~ 1000000
+	saltLickMaxUses = 200
+	#Ingredients used to make slop
+	slopIngredients = ["minecraft:carrot", "minecraft:beetroot", "minecraft:potato", "minecraft:poisonous_potato", "minecraft:bread"]
+	#Nearby same-type breeding limit
+	#Range: 0 ~ 10000
+	entityBreedingLimit = 15
+	#Legacy compatibility option. Pair bonds now follow species: livestock are unpaired; wolves and foxes form pairs.
+	malesMateMultipleFemales = false
+	#Geometric chance of additional offspring
+	#Range: 0.0 ~ 1.0
+	birthMultipleChance = 0.1
+	#Chance poorly cared-for pregnant animals lose the pregnancy
+	#Range: 0.0 ~ 1.0
+	animalLossChance = 0.0
+
+[foodValues]
+	#modid:item(hunger,saturationMultiplier) overrides
+	foodValueOverrides = []
+

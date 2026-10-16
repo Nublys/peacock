@@ -1,0 +1,18 @@
+filename = 'OldGunsV2-1.5.0.1.jar'
+name = 'Old Guns'
+side = 'both'
+x-prismlauncher-dependencies = []
+x-prismlauncher-loaders = [ 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20.1' ]
+x-prismlauncher-release-type = 'beta'
+x-prismlauncher-version-number = '1.5.0.1'
+
+[download]
+hash = 'dbb59066b57848585f25ab1e3ba9a4e732880755c0fe4d31e96a8b39f79b96347118f06a24e4f75b7485a0a12d0cd2a2fee810170d3729a7f83f1b885d4bae15'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/7rAclWoX/versions/wyVhWcWG/OldGunsV2-1.5.0.1.jar'
+
+[update.modrinth]
+mod-id = '7rAclWoX'
+version = 'wyVhWcWG'

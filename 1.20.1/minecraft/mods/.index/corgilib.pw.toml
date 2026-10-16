@@ -1,0 +1,18 @@
+filename = 'Corgilib-Forge-1.20.1-4.0.3.6.jar'
+name = 'CorgiLib'
+side = 'both'
+x-prismlauncher-dependencies = []
+x-prismlauncher-loaders = [ 'neoforge', 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = '1.20.1-4.0.3.6-forge'
+
+[download]
+hash = '877085c2cab93fe23b09b3e52063fee0c2cfa83dfcd40c62c3c130b8a721e68b1b46bd7cda0b15b86e5d00aae7f0132c8438c9a3287846db2b2a1c489d20cf0b'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/ziOp6EO8/versions/OtJzHtsl/Corgilib-Forge-1.20.1-4.0.3.6.jar'
+
+[update.modrinth]
+mod-id = 'ziOp6EO8'
+version = 'OtJzHtsl'
