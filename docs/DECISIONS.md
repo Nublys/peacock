@@ -33,11 +33,14 @@ Why things are the way they are. Add an entry when a choice would surprise someo
 - **Simple Clouds, colored lighting** — need OpenGL 4.2+/compute; macOS tops out at 4.1.
 - **Xaero's** — Map Atlases chosen for immersion; one-jar swap if it frustrates.
 - **Simply Swords, Apotheosis, Epic Fight, Ice & Fire** — wrong tone or replace too much.
+- **Pet Home** (1.1.2 and 1.1.3) — `MobMixin` shadows `setPathfindingMalus` with no refmap
+  entry, so the mixin fails on production Forge and the game exits before the title screen.
+  Removed 2026-10-16; re-add when a release ships a correct refmap.
 
 ## Dogs
 - One dog: **Doggy Talents Next.** Animania's dog breeds are spawn-disabled (cats kept);
-  vanilla wolves no longer replaced by Animania; DTN converts tamed wolves (follow-up);
-  Pet Home will blacklist wolves (follow-up). Pet Home itself adds no entities.
+  vanilla wolves no longer replaced by Animania; DTN converts tamed wolves (follow-up).
+  Pet Home was dropped (broken build, see below), so horses/cats keep vanilla behaviour.
 
 ## Trading
 - **No trading halls.** Villager Restock Balance (need bed + bell) and Villager Comfort

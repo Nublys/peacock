@@ -22,7 +22,6 @@ throughout: launch → paste the log → the log becomes the next commit.
 ### Phase 1 follow-ups (need a first launch to generate the config file)
 - Doggy Talents: enable tame-wolf → dog conversion (server config, generated in
   `defaultconfigs/` / world `serverconfig/`)
-- Pet Home: blacklist `minecraft:wolf`
 - Oculus: switch `shaderPack=` to the Euphoria-patched folder name once Euphoria has run
 - Confirm Fresh Animations' `pack.mcmeta` loads (log previously said "Missing metadata")
 

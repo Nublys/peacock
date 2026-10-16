@@ -1016,11 +1016,6 @@ hash = "2c5f9c46337d69d5b63766d19a005ffcf9656b4a61480fc4362e06f34ea6e430"
 metafile = true
 
 [[files]]
-file = "mods/pet_home.pw.toml"
-hash = "44372237a27af1f53323de10ee86b5a2af7b6a66963fefdd8535ddfc09a8c827"
-metafile = true
-
-[[files]]
 file = "mods/playeranimator.pw.toml"
 hash = "294d960c31eb9ba6072eba973af52cf85257cc4ffffb193d9b014fa0185dd46b"
 metafile = true
