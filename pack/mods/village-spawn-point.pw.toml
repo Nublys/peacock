@@ -1,0 +1,13 @@
+name = "Village Spawn Point"
+filename = "villagespawnpoint-1.20.1-4.8.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/KplTt9Ku/versions/otAz6Bml/villagespawnpoint-1.20.1-4.8.jar"
+hash-format = "sha512"
+hash = "3fbf3cc4938cb201afd74408af8a59360bd4b83caebec390262f0e9aca387f2f0bf2ec382faebb4721f120b953196909f9d3eb32fd6279c885af0b984c2aefe0"
+mode = "url"
+
+[update.modrinth]
+mod-id = "KplTt9Ku"
+version = "otAz6Bml"

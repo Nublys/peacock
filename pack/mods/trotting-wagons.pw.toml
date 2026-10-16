@@ -1,0 +1,12 @@
+name = "Trotting Wagons"
+filename = "trotting_wagons-1.0.4.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "5fea9ad2835a3164bc29ad4c708a50bcd7b0a153"
+mode = "metadata:curseforge"
+
+[update.curseforge]
+file-id = 6916809
+project-id = 1313811

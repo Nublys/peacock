@@ -1,0 +1,13 @@
+name = "Villager Recruits: Village Expansion"
+filename = "village_recruits-1.0.7.93TC-206.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/mkSW0fEr/versions/DkZTsNdv/village_recruits-1.0.7.93TC-206.jar"
+hash-format = "sha512"
+hash = "8bdbc839af783fa413d345008f90756ef1d9dece24775f3e69140dacd4bae6bed463a4be66da929598a7170ce75d17aa0b9c35f52875d131d5f0cc909af9acdf"
+mode = "url"
+
+[update.modrinth]
+mod-id = "mkSW0fEr"
+version = "DkZTsNdv"

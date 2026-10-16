@@ -1,0 +1,12 @@
+name = "Villager Comfort Updated (+ Now bug fixed!)"
+filename = "villager-comfort-1.1.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "8d844f17bb5852c63b9dd90337be686d48ebbb29"
+mode = "metadata:curseforge"
+
+[update.curseforge]
+file-id = 6840239
+project-id = 1082700

@@ -1,0 +1,12 @@
+name = "Animania Reborn"
+filename = "animania-forge-1.20.1-1.0.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "b17f3605dab0afe6695002457dcd4e14c4b03000"
+mode = "metadata:curseforge"
+
+[update.curseforge]
+file-id = 8970935
+project-id = 1683347
