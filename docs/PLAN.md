@@ -22,8 +22,8 @@ throughout: launch → paste the log → the log becomes the next commit.
 ### Phase 1 follow-ups (need a first launch to generate the config file)
 - Doggy Talents: enable tame-wolf → dog conversion (server config, generated in
   `defaultconfigs/` / world `serverconfig/`)
-- Oculus: switch `shaderPack=` to the Euphoria-patched folder name once Euphoria has run
-- Confirm Fresh Animations' `pack.mcmeta` loads (log previously said "Missing metadata")
+- ~~Oculus → Euphoria folder~~ done: `ComplementaryReimagined_r5.9.3 + EuphoriaPatches_1.10.5`
+- ~~Fresh Animations metadata~~ done: 1.10.5 lacks `pack_format`; pinned 1.10.4
 
 ### Phase 1b — Hardware profiles + cross-platform launcher
 - Profiles named by hardware tier, not OS: `low`, `balanced` (pack default), `performance`,

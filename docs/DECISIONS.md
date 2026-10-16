@@ -24,7 +24,9 @@ Why things are the way they are. Add an entry when a choice would surprise someo
 - Client DH generation is **off** — the server generates LODs. Singleplayer test worlds
   will not grow LODs unless `chunkGeneratorMode` is set back to `FEATURES`.
 - `preserve = true` on DH, Oculus, Embeddium, Flywheel, Colorwheel, EMF, ETF configs so
-  in-game tweaks survive pack updates.
+  in-game tweaks survive pack updates. **Caveat:** preserve means "never overwrite an existing
+  file", so an instance converted from a pre-packwiz install keeps its old copies — delete
+  those files once and relaunch to receive the pack's versions. Fresh installs are unaffected.
 - FML `earlyWindowControl = false` — the early loading window misbehaves on macOS.
 
 ## Removed / not added, deliberately
@@ -39,6 +41,9 @@ Why things are the way they are. Add an entry when a choice would surprise someo
 - **Simple Clouds, colored lighting** — need OpenGL 4.2+/compute; macOS tops out at 4.1.
 - **Xaero's** — Map Atlases chosen for immersion; one-jar swap if it frustrates.
 - **Simply Swords, Apotheosis, Epic Fight, Ice & Fire** — wrong tone or replace too much.
+- **Fresh Animations pinned to 1.10.4.** 1.10.5's `pack.mcmeta` uses only the 1.21.9+
+  `min_format`/`max_format` keys and omits `pack_format`, so 1.20.1 reports "Missing metadata"
+  and never loads it. Stay on 1.10.4 until a release restores `pack_format`.
 - **Pet Home** (1.1.2 and 1.1.3) — `MobMixin` shadows `setPathfindingMalus` with no refmap
   entry, so the mixin fails on production Forge and the game exits before the title screen.
   Removed 2026-10-16; re-add when a release ships a correct refmap.

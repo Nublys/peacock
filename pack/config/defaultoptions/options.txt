@@ -42,7 +42,7 @@ ao:true
 prioritizeChunkUpdates:0
 biomeBlendRadius:3
 renderClouds:"false"
-resourcePacks:["vanilla","mod_resources","file/FreshAnimations_v1.10.5.zip"]
+resourcePacks:["vanilla","mod_resources","file/FreshAnimations_v1.10.4.zip"]
 incompatibleResourcePacks:[]
 lastServer:
 lang:en_us

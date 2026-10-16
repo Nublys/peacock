@@ -124,7 +124,7 @@ hash = "fdb2f5f8138229d28b257a8cae2c6541c86bb402bc8014aaf77d542529af28ce"
 
 [[files]]
 file = "config/defaultoptions/options.txt"
-hash = "e5557e9d57852e93ae1824ffd5bebb1f745e8229e8a35ccdfbf444f1e6a00da6"
+hash = "406714fdfb288e7e88bee658d1384858e997afc3231a9907d9198e5498689893"
 
 [[files]]
 file = "config/distraction_free_recipes-client.toml"
@@ -308,7 +308,7 @@ hash = "45121987f8bbbb948bd5096ffb02b1361c762b3e34836b3f9097a9a4ef7222d4"
 
 [[files]]
 file = "config/oculus.properties"
-hash = "064398b6c586c07c0121656e1a42172352accf9e940cfde1ef679bcc1cd39ff9"
+hash = "575fb1dce240114bf1529c650bc091a366215d360d0bf4cee6f4fa888f94d8ac"
 preserve = true
 
 [[files]]
@@ -1182,7 +1182,7 @@ metafile = true
 
 [[files]]
 file = "resourcepacks/fresh-animations.pw.toml"
-hash = "1dcf29d17c2326930c9e57c233f25544c389d78e1b84cc44e4f3fb4103f1b5b2"
+hash = "6a1556a0e4fcb411b33efafc3382b4abd9a6e671f140dc0d42e9aad2808e24f3"
 metafile = true
 
 [[files]]
