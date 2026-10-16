@@ -12,7 +12,13 @@ Why things are the way they are. Add an entry when a choice would surprise someo
   Euphoria Patches is the one shader pack Colorwheel supports natively.
 - **packwiz** so both machines sync from `main`; mods are never committed.
 
-## Client defaults (MacBook Air M5, fanless, 16 GB) are the pack defaults
+## Profiles are named by hardware tier, never by OS
+- `low` / `balanced` / `performance` / `ultra`. The OS decides nothing about settings; the GPU,
+  cooling and RAM do. A Windows desktop is `ultra`; a Windows ultrabook is `balanced`.
+- Launch plumbing is the only OS-sensitive part, so the launcher is Java (available in every
+  instance via `$INST_JAVA`) rather than a shell or batch script.
+
+## Client defaults (`balanced`: MacBook Air M5, fanless, 16 GB) are the pack defaults
 - DH 192 chunks, FAKE transparency, 2 threads; render distance 8; shader render scale
   0.75 is a per-pack setting (set once Euphoria has produced its folder).
 - Client DH generation is **off** — the server generates LODs. Singleplayer test worlds

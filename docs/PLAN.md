@@ -25,6 +25,32 @@ throughout: launch → paste the log → the log becomes the next commit.
 - Oculus: switch `shaderPack=` to the Euphoria-patched folder name once Euphoria has run
 - Confirm Fresh Animations' `pack.mcmeta` loads (log previously said "Missing metadata")
 
+### Phase 1b — Hardware profiles + cross-platform launcher
+- Profiles named by hardware tier, not OS: `low`, `balanced` (pack default), `performance`,
+  `ultra`. Each is a folder of only the files that differ: `DistantHorizons.toml`,
+  `embeddium-options.json`, `oculus.properties`, the shader settings `.txt`, and an
+  `options.txt` fragment (render distance, GUI scale, fullscreen).
+  | profile | meant for | DH | shader preset |
+  |---|---|---|---|
+  | `low` | iGPU / thermally limited / <16 GB | 128, FAKE, 1 thread, SSAO off | Potato, shaders off by default |
+  | `balanced` | fanless thin-and-light, 16 GB | 192, FAKE, 2 threads | Medium, render scale 0.75 |
+  | `performance` | laptop with a decent GPU and cooling | 256, COMPLETE, 4 threads | High, scale 1.0 |
+  | `ultra` | desktop with a dedicated GPU | 384, 6 threads | Ultra |
+- Profiles ship inside the pack (`pack/peacock/profiles/`) so packwiz keeps them updated;
+  rename existing `profiles/mac` → `balanced`, `profiles/linux` → `performance`.
+- Selection via a per-instance environment variable in Prism: `PEACOCK_PROFILE=balanced`.
+- Launcher is a single `Launch.java` run with `$INST_JAVA` (Java 17 runs source files
+  directly): it runs the packwiz bootstrap, then copies the selected profile. Same command on
+  macOS, Linux and Windows — Prism runs pre-launch commands without a shell, so no `sh`/`.bat`.
+  ```
+  "$INST_JAVA" "$INST_MC_DIR/peacock/Launch.java" https://raw.githubusercontent.com/Nublys/peacock/main/pack/pack.toml
+  ```
+- Profile files are copied only when the target is absent or still matches a previous
+  profile's hash — once a player edits a file in-game it is theirs (a profile is a starting
+  point, not a lock). Retires `tools/apply-profile.sh`.
+- **Test:** set `PEACOCK_PROFILE` on each machine, launch, confirm the DH radius and shader
+  preset match the table; change the variable, relaunch, confirm the switch.
+
 ## Phase 2 — World and balance config
 - Serene Seasons: season length (default 16 days/sub-season), fertility datapack for
   Farmer's Delight + Aquaculture
