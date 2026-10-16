@@ -15,7 +15,7 @@ installer fetches them. Everything you can edit lives in `pack/`.
 pack/                 the packwiz pack — this is what gets installed
   pack.toml           name, versions, index hash
   index.toml          every file below, hashed (regenerate with `packwiz refresh`)
-  mods/*.pw.toml      one file per mod (141)
+  mods/*.pw.toml      one file per mod (142)
   resourcepacks/      Fresh Animations (Modrinth-managed)
   shaderpacks/        Complementary Reimagined + Unbound (Modrinth-managed)
   config/             shipped configs; `preserve = true` files are not overwritten on update
@@ -32,13 +32,17 @@ docs/                 PLAN.md (phases), DECISIONS.md (why things are the way the
    - Memory: 6 GB on the 16 GB MacBook Air (`-Xmx6G`), 8 GB on the Linux laptop.
    - JVM args: `-XX:+UseG1GC -XX:MaxGCPauseMillis=50`
    - On the Mac, confirm `java -version` reports `aarch64` — Rosetta Java halves performance.
-2. Download `packwiz-installer-bootstrap.jar` from
-   <https://github.com/packwiz/packwiz-installer-bootstrap/releases> into the
-   instance's `minecraft/` folder.
+2. Put `packwiz-installer-bootstrap.jar` in the instance's **Minecraft Folder** (Prism:
+   right-click instance → Minecraft Folder; not the instance folder one level up):
+
+   ```
+   curl -L -o "<minecraft folder>/packwiz-installer-bootstrap.jar" \
+     https://github.com/packwiz/packwiz-installer-bootstrap/releases/latest/download/packwiz-installer-bootstrap.jar
+   ```
 3. Instance → Edit → Settings → **Custom commands** → Pre-launch command:
 
    ```
-   "$INST_JAVA" -jar packwiz-installer-bootstrap.jar https://raw.githubusercontent.com/Nublys/peacock/main/pack/pack.toml
+   "$INST_JAVA" -jar "$INST_MC_DIR/packwiz-installer-bootstrap.jar" https://raw.githubusercontent.com/Nublys/peacock/main/pack/pack.toml
    ```
 
    Every launch now syncs mods and configs to the current `main`.
@@ -52,7 +56,10 @@ docs/                 PLAN.md (phases), DECISIONS.md (why things are the way the
    in the Oculus menu (`O`) once it appears. Leave colored lighting / voxelization off on
    the Mac (macOS has no OpenGL 4.2+).
 
-> The repo must be **public** for the raw.githubusercontent.com URL to work without a token.
+> The repo is public so the raw.githubusercontent.com URL works without a token.
+>
+> Converting an existing instance: packwiz-installer only removes files *it* installed, so delete
+> any old jars it doesn't manage by hand (`ImmediatelyFast-*`, `addonslib-*`, `Villager Comfort-1.1.1.jar`).
 
 ## Server
 
