@@ -1,0 +1,12 @@
+name = "Caravans & Convoys x Village Expansion Compatibility"
+filename = "cacxvecompat-1.0.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "49419926e4d191c58bc81ac810fb356030465129"
+mode = "metadata:curseforge"
+
+[update.curseforge]
+file-id = 8718404
+project-id = 1664499

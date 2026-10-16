@@ -1,0 +1,13 @@
+name = "Illage and Spillage: Respillaged"
+filename = "illageandspillagerespillaged-1.2.8.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/kLoMCc4b/versions/90YOIp4K/illageandspillagerespillaged-1.2.8.jar"
+hash-format = "sha512"
+hash = "b60abe2ee3ed2581020f76a11dc40620f57401be248e6c53820a9f04d6bbdb75704ac7cf972a31d890ebafc231c58120b851c8936cd1d6236ec9cc1d7329cea6"
+mode = "url"
+
+[update.modrinth]
+mod-id = "kLoMCc4b"
+version = "90YOIp4K"

@@ -1,0 +1,12 @@
+name = "Caravans & Convoys - Automatic Trade"
+filename = "caravansconvoys-forge-1.0.8-1.20.1-java17.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "946143bf3a83c77312a913f9ac923147f0f1ded6"
+mode = "metadata:curseforge"
+
+[update.curseforge]
+file-id = 9076023
+project-id = 1599431

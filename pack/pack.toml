@@ -1,0 +1,16 @@
+name = "Peacock"
+author = "Nublys"
+version = "0.2.0"
+pack-format = "packwiz:1.1.0"
+
+[index]
+file = "index.toml"
+hash-format = "sha256"
+hash = "618e2fe0a7e0791228d7a0a0163ff6b7a9c113e11b8641b296d6749ea13c2d33"
+
+[versions]
+forge = "47.4.16"
+minecraft = "1.20.1"
+
+[options]
+acceptable-game-versions = ["1.20.1"]

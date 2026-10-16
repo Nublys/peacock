@@ -1,0 +1,21 @@
+# Minecraft runtime / per-user state — never committed
+*.jar
+*.zip
+saves/
+logs/
+crash-reports/
+screenshots/
+.index/
+usercache.json
+usernamecache.json
+servers.dat
+options.txt
+!pack/config/defaultoptions/options.txt
+# Prism instance exports
+1.20.1/
+*.mrpack
+# packwiz local state
+.packwiz/
+# OS / editor
+.DS_Store
+Thumbs.db

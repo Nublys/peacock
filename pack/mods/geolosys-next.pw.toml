@@ -1,0 +1,13 @@
+name = "Geolosys Next"
+filename = "GeolosysNext-1.20.1-8.0.5-8.0.5.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/X7ZXG9Nu/versions/Qm5Pu2Co/GeolosysNext-1.20.1-8.0.5-8.0.5.jar"
+hash-format = "sha512"
+hash = "32cea544df19deafe9088207f1207960c9b19c9817553f19ab8998e01e705165813ad6e0e5123e37978ef1f8847486cc257044e49e8ac695b47b09bb4b446be4"
+mode = "url"
+
+[update.modrinth]
+mod-id = "X7ZXG9Nu"
+version = "Qm5Pu2Co"

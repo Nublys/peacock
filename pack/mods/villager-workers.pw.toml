@@ -1,0 +1,13 @@
+name = "Villager Workers"
+filename = "workers-1.20.1-2.0.3.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/Pqlv7VM3/versions/49csRXJc/workers-1.20.1-2.0.3.jar"
+hash-format = "sha512"
+hash = "6638b58232ba8f60aecbe4fcae7884f91ec281a6e1f254d6a9b97b95b00c6e8a6f66c368e6539c84afe58b55f4dafee2bedca572c70cd6655f58850a9d4670fd"
+mode = "url"
+
+[update.modrinth]
+mod-id = "Pqlv7VM3"
+version = "49csRXJc"
