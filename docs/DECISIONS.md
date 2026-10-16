@@ -37,7 +37,8 @@ Why things are the way they are. Add an entry when a choice would surprise someo
 - **Better Caravans** — taste; trade should be a trip or a route you built.
 - **Trade Cycling** — hall-adjacent; Restock Balance + Comfort make halls pointless anyway.
 - **Project Atmosphere / Weather2** — TAN already owns temperature; no tornadoes.
-- **Waystones** — fast travel would undercut the "build the route" premise.
+- **Waystones, `/home`, `/tpa`, warps** — fast travel would undercut the "build the route"
+  premise. `/spawn` (to the capital) and `/back` after death are the only teleports.
 - **Simple Clouds, colored lighting** — need OpenGL 4.2+/compute; macOS tops out at 4.1.
 - **Xaero's** — Map Atlases chosen for immersion; one-jar swap if it frustrates.
 - **Simply Swords, Apotheosis, Epic Fight, Ice & Fire** — wrong tone or replace too much.
@@ -67,11 +68,25 @@ Why things are the way they are. Add an entry when a choice would surprise someo
   Backpacked management unbound (reachable from inventory; quiver keeps `V`).
 - Context-scoped shares left alone: Ponder `W`, Create/Railways `Alt`, VS piloting keys.
 
+## Peacock is a server pack
+- Designed for a whole server from the start. The first two players are just the first two.
+- Anything that only works by agreement between a couple of people ("no trading halls",
+  "depots only in towns") is turned into a mechanic (Restock Balance + Comfort, stage-gated
+  town-bound depots). Rules that need a referee do not scale.
+- Everyone spawns at one CTOV village (Village Spawn Point) — the capital. It grows with
+  Village Expansion and is the natural first market, first station, first raid target.
+
 ## Boss gating (Phase 4)
 - Gate *expansion* tech only (brass, trains, ships, diesel, cannons, advanced Create);
   never the homestead (water, crops, animals, andesite Create, wagons, docks).
-- Unlocks are **server-wide**; the boss drop ("Blueprint") is also a one-time ingredient.
-- Material gating (Blueprint as non-consumed ingredient) over hidden recipes — robust on
-  1.20.1 without extra mods; recipes stay visible in EMI with a "requires" tooltip.
+- Unlocks are **per player** (Game Stages), not server-wide — on a server, one player's kill
+  must not hand everyone the technology. Superseded the earlier server-wide decision.
+- The boss drops one **Blueprint** per participant plus one; using it grants the stage and
+  consumes it. Blueprints are tradeable, so knowledge moves through the player economy —
+  which is the story (civilization recovers by sharing what it recovers).
+- Enforcement is per player (Recipe Stages, or KubeJS crafting checks) *and* on the gated
+  blocks themselves, so handing a crafted station to an unstaged player is not a bypass.
+- A priced "charter" fallback recipe exists so a bugged or exhausted boss never blocks a
+  player permanently.
 - Story: village civilization was spread far and wide; the monsters stole its technology;
   the dark age bred the pillagers. Every boss is recovery, not unlocking.
