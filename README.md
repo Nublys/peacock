@@ -96,7 +96,7 @@ Adding a mod: `packwiz modrinth add <slug>` (or `packwiz curseforge add <slug>`)
 | `I` | Village Expansion wiki |
 | `V` | Quiver (Supplementaries) |
 | `Shift+1–4` | Doggy Talents whistles |
-| `,` / `.` | Voice chat menu / mute mic (voice activation by default; `Caps Lock` push-to-talk) |
+| `,` / `.` | Voice chat menu / mute mic (voice activation by default; `Right Alt` push-to-talk) |
 | `Alt` | Create tool menu / toolbelt, Railways bogey menu (context) |
 
 Controlling is installed — search any bind by name in Options → Controls.

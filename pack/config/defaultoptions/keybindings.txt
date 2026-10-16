@@ -64,7 +64,7 @@ key_key.valkyrienskies.ship_down:key.keyboard.v
 key_key.valkyrienskies.ship_cruise:key.keyboard.c
 key_key.voice_chat:key.keyboard.comma
 key_key.voice_chat_settings:key.keyboard.unknown
-key_key.push_to_talk:key.keyboard.caps.lock
+key_key.push_to_talk:key.keyboard.right.alt
 key_key.mute_microphone:key.keyboard.period
 key_key.disable_voice_chat:key.keyboard.unknown
 key_key.hide_icons:key.keyboard.unknown
