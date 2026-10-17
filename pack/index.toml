@@ -457,7 +457,7 @@ hash = "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
 
 [[files]]
 file = "config/villagespawnpoint.json5"
-hash = "a5a9e968d96ebced582b3e84370e0cd4fc63bc35cc602645ee198d5619a0c1bc"
+hash = "243fbb74e725279d7da10a2906b0af2ccaeb6c7fb373843bedb38744bafaa7a2"
 
 [[files]]
 file = "config/visual_workbench.json"
@@ -518,6 +518,10 @@ hash = "ea0797faecd755fe7d6dea5c2ee284aaf40db48cf6a8fe780cf4ea637b0fb7ba"
 [[files]]
 file = "kubejs/data/forge/tags/items/raw_materials/zinc.json"
 hash = "ae4783aba10060491f14f327c00dc9b75fdc4e5b09c6b2064b6e127f0a5c581c"
+
+[[files]]
+file = "kubejs/data/minecraft/worldgen/structure_set/village.json"
+hash = "72bf98034285d5146ae76b14fdf93fbab97464d75b0e71ada2a30480f507b34a"
 
 [[files]]
 file = "kubejs/data/sereneseasons/tags/blocks/autumn_crops.json"
