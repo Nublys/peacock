@@ -13,12 +13,18 @@ Why things are the way they are. Add an entry when a choice would surprise someo
 - **packwiz** so both machines sync from `main`; mods are never committed.
 
 ## Profiles are named by hardware tier, never by OS
-- `low` / `balanced` / `performance` / `ultra`. The OS decides nothing about settings; the GPU,
-  cooling and RAM do. A Windows desktop is `ultra`; a Windows ultrabook is `balanced`.
+- Five tiers: potato, low, medium, high, ultra — the same words Complementary's shader presets use,
+  so what a player sees in the shader menu is what they typed into `PEACOCK_PROFILE`. The 5850U/Vega 8 laptop is `low`
+  (or `potato`), the M5 Air is `medium` -- tonight's HIGH-preset Euphoria on a Vega 8 was the
+  wrong tier, not a bug.
+- `launch.jar` instead of a `.java` source run by `$INST_JAVA`: Prism's downloaded runtimes are
+  JREs (no `jdk.compiler`), so single-file source launch is not dependable.
+- The OS decides nothing about settings; the GPU,
+  cooling and RAM do. A Windows desktop is `ultra`; a Windows ultrabook is `medium`.
 - Launch plumbing is the only OS-sensitive part, so the launcher is Java (available in every
   instance via `$INST_JAVA`) rather than a shell or batch script.
 
-## Client defaults (`balanced`: MacBook Air M5, fanless, 16 GB) are the pack defaults
+## Client defaults (`medium`: MacBook Air M5, fanless, 16 GB) are the pack defaults
 - DH 192 chunks, FAKE transparency, 2 threads; render distance 8; shader render scale
   0.75 is a per-pack setting (set once Euphoria has produced its folder).
 - Client DH generation is **off** — the server generates LODs. Singleplayer test worlds
@@ -65,10 +71,10 @@ Why things are the way they are. Add an entry when a choice would surprise someo
   build its composite pass — `No more available texture units while activating sampler
   shadowcolor1` — so Oculus silently disables shaders on every world join; both MacBook Air
   JVM crashes (2026-10-16) followed that failed pipeline build. Plain CR r5.9.3 fits. The
-  pack default is therefore `ComplementaryReimagined_r5.9.3.zip`; the `performance`/`ultra`
+  pack default is therefore `ComplementaryReimagined_r5.9.3.zip`; the `high`/`ultra`
   profiles (Phase 1b) switch to the Euphoria folder, which Euphoria Patcher still generates.
 - A Ryzen 5850U (Vega 8 iGPU) running Euphoria at the HIGH profile is the "horrible FPS" case:
-  that machine is the `low` tier (shaders Potato/off, DH 128), not `performance`.
+  that machine is the `low` tier (shaders Potato/off, DH 128), not `high`.
 
 ## Pterodactyl startup is one script, never a `&&` chain
 - yolks `java` images run `PARSED=$(… | eval echo "$(cat -)")` then `exec env ${PARSED}`. A startup

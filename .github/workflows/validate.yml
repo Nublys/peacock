@@ -26,3 +26,17 @@ jobs:
             || { echo "::error::index.toml/pack.toml are stale — run 'packwiz refresh' in pack/ and commit"; exit 1; }
       - name: Validate pack
         run: python3 tools/validate.py
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+      - name: launch.jar matches its source
+        run: |
+          sh tools/build-launch.sh
+          git diff --exit-code -- pack/peacock/launch.jar \
+            || { echo "::error::pack/peacock/launch.jar is stale — run tools/build-launch.sh and commit"; exit 1; }
+      - name: Profiles match the generator
+        run: |
+          python3 tools/gen-profiles.py
+          git diff --exit-code -- pack/peacock/profiles \
+            || { echo "::error::pack/peacock/profiles is stale — run tools/gen-profiles.py and commit"; exit 1; }
