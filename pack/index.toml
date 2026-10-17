@@ -1377,7 +1377,7 @@ hash = "1f139b8561336fed8a4fd2830af1989d808425ac6cc603c26028afd49d105899"
 
 [[files]]
 file = "peacock-server/config/DistantHorizons.toml"
-hash = "9a4f666ce77c0d382723766666b11c594598aa3daca04eb1fde0fb06e3610b3a"
+hash = "bb35e8c4a53dfedda72bf50bb8027cd02267509c0c8dcc251e105aa36348ae40"
 
 [[files]]
 file = "peacock-server/config/voicechat/voicechat-server.properties"

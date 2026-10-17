@@ -127,6 +127,14 @@ Why things are the way they are. Add an entry when a choice would surprise someo
 - **Big Cannons:** keep.
 - **Claims:** pending — see the plan doc for the comparison.
 
+## Distant Horizons on the server is throttled, not unleashed
+- 2026-10-17: with nobody online the server sat 2–7 s behind every tick (`Can't keep up`, 320 s to
+  load). DH's FEATURES generator was running Tectonic/Terralith/BOP worldgen on 4 threads at full duty
+  out to 4096 blocks — ~200k chunks of LODs on a node that also has to tick the world.
+- Server override now: 2 threads, `threadRunTimeRatio = 0.5`, generation and sync distance 2048,
+  10 requests/s per client. Distant terrain fills in more slowly; the server keeps 20 TPS. Raise again
+  only with a Spark report showing headroom and a known core count for the container.
+
 ## No Discord bridge
 - Decided 2026-10-17. Voice chat is in-game; chat stays in-game.
 
