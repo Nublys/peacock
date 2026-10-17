@@ -432,6 +432,10 @@ file = "config/paxi/datapacks/peacock/data/minecraft/worldgen/structure_set/vill
 hash = "72bf98034285d5146ae76b14fdf93fbab97464d75b0e71ada2a30480f507b34a"
 
 [[files]]
+file = "config/paxi/datapacks/peacock/data/minecraft/worldgen/structure_set/villages.json"
+hash = "1cde8e7f6740a3bd6770539589936e6de5f6bb8d6c107b08b414eec69b956c18"
+
+[[files]]
 file = "config/paxi/datapacks/peacock/data/sereneseasons/tags/blocks/autumn_crops.json"
 hash = "a5310d4145eefae9ed989d01e717c64365bba38f2eb6847f7e2f438c7f74cda6"
 

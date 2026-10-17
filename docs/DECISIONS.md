@@ -113,7 +113,13 @@ Why things are the way they are. Add an entry when a choice would surprise someo
   (`pack/config/paxi/datapacks/peacock/data/minecraft/worldgen/structure_set/village.json`), so every village — and therefore the
   capital — is CTOV. Tried `#ctov:large_village` for the spawn search: a third of the candidates, and the
   locate on Terralith terrain ran past 4 minutes with the server thread blocked. Back to
-  `#minecraft:village` (now CTOV-only). Spawn is fixed at world creation: needs a world made after this.
+  `#minecraft:village`. Then the vanilla villages kept coming: **Village Recruits overrides vanilla's
+  `minecraft:villages` set** to re-add all five vanilla village types beside its tower spawner. Our
+  datapack now overrides that set too, keeping only the tower spawner (the mod's own
+  `vr_replace_villages` behaviour). Spawn is fixed at world creation: needs a world made after this.
+- **Never `/locate` on this server.** A structure search on Terralith terrain blocks the main thread for
+  minutes; the watchdog killed the server 60 s into one (2026-10-17 13:20). `max-tick-time` raised to
+  180000 so a long chunk operation is not a kill.
 
 ## Boss structures must exist in modded biomes
 - Cataclysm's structure biome tags list only vanilla biomes (`minecraft:desert`, `minecraft:snowy_plains`,

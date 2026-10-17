@@ -1,0 +1,12 @@
+{
+  "_peacock": "Vanilla's own village set, which Village Recruits overrides to re-add the five vanilla villages beside its tower spawner. Peacock keeps only the tower spawner here (Village Recruits' own 'vr_replace_villages' behaviour): every real village comes from CTOV's minecraft:village set.",
+  "structures": [
+    { "structure": "village_recruits:tower_spawner", "weight": 1 }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 10387312,
+    "spacing": 34,
+    "separation": 20
+  }
+}

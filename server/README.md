@@ -30,6 +30,10 @@ right after a push, raw.githubusercontent.com served a cached `pack.toml` — wa
 and restart again. (This output is console-only; it never appears in `logs/latest.log`.)
 Mods removed from the index are deleted on the next sync; nothing needs cleaning by hand.
 
+**Don't run `/locate`** (or anything that searches for structures) on this server: on Terralith terrain it
+blocks the main thread for minutes and the watchdog treats it as a hang. `max-tick-time` is 180000 in
+the template for the same reason.
+
 **Backups & schedules:** use Pterodactyl's. Take a backup before any start that follows a
 pack version bump; a schedule with a daily backup task is enough for a small server.
 
