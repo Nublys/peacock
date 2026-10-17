@@ -78,7 +78,7 @@ Still to do (needs playtest data or Phase 3 scripting):
 - Geolosys spacing (`chunkSkipChance`, deposit weights) once we see how far iron/zinc actually are
   from the capital on a fresh world; spawn weights for Animania / Naturalist / Mowzie's / Cataclysm
 - Structure spacing (Structory thinning, Cataclysm structure sets) via datapack structure_set overrides
-- Big Cannons block damage off near villages → KubeJS (Phase 3); global `damageRestriction` stays default
+- ~~Big Cannons block damage~~ decided: off everywhere, entity damage on (`defaultconfigs/createbigcannons-server.toml`)
 - Villager Comfort / Restock Balance numbers after the first market week
 - Village Spawn Point: confirm the capital has a bell and room (any `#minecraft:village` qualifies now)
 - Create / Valkyrien Skies per-player caps; chunk-loading limits (Phase 5)
@@ -167,9 +167,9 @@ details below as they get exercised.
   Tier 3–4 tuning after the mid game has been played
 
 ## Decisions still open
-1. Season length (default 16 days per sub-season)
-2. Gated recipes visible-but-locked (recommended) or hidden (Item Stages)
-3. Animania cats: keep, or vanilla (Pet Home is gone, so this is now cosmetic)
+1. ~~Season length~~ 16 days per sub-season, crops stop out of season (2026-10-17)
+2. ~~Gated recipes~~ visible but locked (2026-10-17)
+3. ~~Animania cats~~ keep (2026-10-17)
 4. ~~Server-wide unlocks~~ → **per player**, Blueprints tradeable (decided 2026-10-16)
-5. Player grouping: per-player only (default) or FTB Teams for shared progression
+5. ~~Player grouping~~ per player, FTB Teams available for groups (2026-10-17)
 6. Claims: FTB Chunks, or a lighter claim mod (Flan / Open Parties and Claims)

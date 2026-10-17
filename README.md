@@ -19,6 +19,7 @@ pack/                 the packwiz pack — this is what gets installed
   resourcepacks/      Fresh Animations (Modrinth-managed)
   shaderpacks/        Complementary Reimagined + Unbound (Modrinth-managed)
   config/             shipped configs; `preserve = true` files are not overwritten on update
+  defaultconfigs/          server configs copied into new worlds (Big Cannons: no block damage)
   config/defaultoptions/   first-launch options.txt + keybindings.txt (Default Options)
   patchouli_books/         The Settler's Almanac (in-game guide; tools/gen-almanac.py)
   kubejs/                  data overrides + server scripts (almanac hand-out, Geolosys→Create zinc)

@@ -109,6 +109,21 @@ Why things are the way they are. Add an entry when a choice would surprise someo
   recipes take them — no parallel processing chain to maintain. Any Geolosys zinc ingot is folded
   into Create's by KubeJS so EMI shows one zinc.
 
+## Decisions taken 2026-10-17 (Aaron)
+- **Season harshness:** crops stop growing out of season (Greenhouse Glass is the counter). Confirmed.
+- **Gated recipes:** visible but locked; the tooltip names the boss. No Item Stages hiding.
+- **Progression grouping:** per player by default, **FTB Teams** available so a group can share unlocks.
+  Adds FTB Library + FTB Teams in Phase 4; pairs with FTB Chunks for claims if chosen.
+- **Animania cats:** keep.
+- **Geolosys harshness:** medium — iron near the capital, zinc a valley away. Tune after a fresh world.
+- **Structure density:** default spacing for now.
+- **Cannon griefing:** block damage **off everywhere**, explosion damage to entities stays —
+  `defaultconfigs/createbigcannons-server.toml`: `damageRestriction = "NO_DAMAGE"`,
+  `projectilesChangeSurroundings = false`. Applies to worlds created after it shipped. Replaces the
+  earlier "off near bells" idea; no KubeJS needed.
+- **Big Cannons:** keep.
+- **Claims:** pending — see the plan doc for the comparison.
+
 ## No Discord bridge
 - Decided 2026-10-17. Voice chat is in-game; chat stays in-game.
 

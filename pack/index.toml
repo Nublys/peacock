@@ -476,6 +476,10 @@ file = "config/yacl.json5"
 hash = "d26a63d3cdf326412ba86dcc2781060bc53ed6c74ac7808e65325452e264e820"
 
 [[files]]
+file = "defaultconfigs/createbigcannons-server.toml"
+hash = "9756edc8d2c01d836680b4247842eb15ff68f0d664f2ac6597b3369a0879a8e6"
+
+[[files]]
 file = "kubejs/data/create/recipes/filling/purified_water_bucket.json"
 hash = "4c702ebae17c77801f7a960fa6457fa14e7ae1970c2d981a9467cd8e9c8c53e4"
 

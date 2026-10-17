@@ -1,0 +1,11 @@
+# Peacock — Create Big Cannons server defaults. Forge copies defaultconfigs/ into a new world's
+# serverconfig/ at creation, so this applies to worlds created after it shipped (2026-10-17).
+# Decision: shells and shot do not break blocks anywhere, but explosions still hurt whatever is
+# standing in them. Cannons are siege and sea weapons against things, not against builds.
+# Missing keys take the mod's defaults; Forge rewrites the file with them on first load.
+
+[munitions]
+	#ALL_DAMAGE | NO_EXPLOSIVE_DAMAGE | NO_DAMAGE
+	damageRestriction = "NO_DAMAGE"
+	#Projectiles setting fires, breaking glass, extinguishing etc.
+	projectilesChangeSurroundings = false
