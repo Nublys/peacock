@@ -1,0 +1,42 @@
+#!/bin/bash
+# Peacock — Pterodactyl start script. The egg's startup command is exactly: bash peacock-start.sh
+#
+# Why a script: the yolks Java image runs the startup command with `exec env ${PARSED}` after an
+# `eval echo` expansion. A command containing `&&` is *executed by that eval* inside a $(...)
+# capture — the server runs with its console swallowed and the sync step reduced to an echo.
+# One script, with Forge exec'd at the end, keeps stdin/stdout attached to the server.
+#
+# Egg variables arrive as environment variables: PACK_URL, MC_VERSION, FORGE_VERSION.
+# A copy of this file ships inside the pack (pack/peacock-server/peacock-start.sh) and is
+# applied on every sync, so edits in the repo reach the server on its next restart.
+
+cd /home/container || exit 1
+
+PACK_URL="${PACK_URL:-https://raw.githubusercontent.com/Nublys/peacock/main/pack/pack.toml}"
+MC_VERSION="${MC_VERSION:-1.20.1}"
+FORGE_VERSION="${FORGE_VERSION:-47.4.16}"
+ARGS_FILE="libraries/net/minecraftforge/forge/${MC_VERSION}-${FORGE_VERSION}/unix_args.txt"
+
+say() { printf '\033[1;36m[peacock]\033[0m %s\n' "$*"; }
+
+say "syncing pack from ${PACK_URL}"
+if java -jar packwiz-installer-bootstrap.jar -g -s server "${PACK_URL}"; then
+  say "sync ok"
+else
+  say "!! PACK SYNC FAILED — starting with the files already on disk. Clients may see mod mismatches."
+fi
+
+if [ -d peacock-server ]; then
+  say "applying server overrides from peacock-server/"
+  cp -r peacock-server/. .
+fi
+
+if [ ! -f "${ARGS_FILE}" ]; then
+  say "!! ${ARGS_FILE} not found — Forge ${MC_VERSION}-${FORGE_VERSION} is not installed. Reinstall the server."
+  exit 1
+fi
+
+say "starting Forge ${MC_VERSION}-${FORGE_VERSION}"
+exec java -Xms128M -XX:MaxRAMPercentage=90.0 \
+  -Dterminal.jline=false -Dterminal.ansi=true \
+  @user_jvm_args.txt "@${ARGS_FILE}" nogui

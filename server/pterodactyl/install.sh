@@ -22,6 +22,7 @@ rm -f forge-installer.jar forge-installer.jar.log run.bat
 echo "== pack defaults"
 [ -f server.properties ] || curl -fsSL -o server.properties "${REPO_RAW}/server/server.properties"
 curl -fsSL -o user_jvm_args.txt "${REPO_RAW}/server/user_jvm_args.txt"
+curl -fsSL -o peacock-start.sh "${REPO_RAW}/server/pterodactyl/peacock-start.sh"
 echo "eula=true" > eula.txt
 
 echo "== packwiz bootstrap + first sync"

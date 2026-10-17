@@ -1212,6 +1212,10 @@ file = "peacock-server/config/voicechat/voicechat-server.properties"
 hash = "87bad15949ca26d599fd8af9d9c7fcb79b83401280a74bdd102e3968e8f97494"
 
 [[files]]
+file = "peacock-server/peacock-start.sh"
+hash = "576dbd942700b68d6ab3dbdc9461da527c1f1943d0d94462fc03553e3dd82b3d"
+
+[[files]]
 file = "resourcepacks/fresh-animations.pw.toml"
 hash = "6a1556a0e4fcb411b33efafc3382b4abd9a6e671f140dc0d42e9aad2808e24f3"
 metafile = true

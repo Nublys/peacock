@@ -21,8 +21,11 @@ Everything here is for the host. Players never see this folder.
 **Every start** re-syncs the pack from `main` and reapplies `peacock-server/` — a merged PR
 reaches the server on its next restart. The `Pack URL` variable pins a commit for rollback:
 `https://raw.githubusercontent.com/Nublys/peacock/<sha>/pack/pack.toml`.
-After a restart that follows a push, read the first ~20 console lines: packwiz-installer lists
-every file it changed and ends with `Finished successfully!`. If it reports nothing changed
+The startup command is `bash peacock-start.sh` (sync → overrides → `exec` Forge); it must stay a
+single command because the Java image runs it with `exec env`, not a shell — a `&&` chain there
+runs inside the image's `eval echo` expansion with its console captured. After a restart that
+follows a push, read the first console lines: `[peacock] syncing pack`, packwiz-installer's list
+of changed files, `[peacock] sync ok`. If it reports nothing changed
 right after a push, raw.githubusercontent.com served a cached `pack.toml` — wait a few minutes
 and restart again. (This output is console-only; it never appears in `logs/latest.log`.)
 Mods removed from the index are deleted on the next sync; nothing needs cleaning by hand.

@@ -60,6 +60,15 @@ Why things are the way they are. Add an entry when a choice would surprise someo
   terrain; for real-chunk pregen use Speiger's Chunk Pregenerator (DH has no hook into it) or
   re-add Chunky once DH ships the fix.
 
+## Pterodactyl startup is one script, never a `&&` chain
+- yolks `java` images run `PARSED=$(… | eval echo "$(cat -)")` then `exec env ${PARSED}`. A startup
+  command with `&&` is executed *by that eval*, inside the capture: the server ran with no console
+  and no stdin, and the packwiz sync step was only ever echoed (so restarts never updated the pack,
+  while a reinstall — whose install script does sync — did). Found 2026-10-16.
+- Startup is `bash peacock-start.sh`; the script syncs, applies `peacock-server/`, then `exec`s
+  Forge so stdin/stdout belong to the server. The script ships inside the pack too, so it updates
+  itself on every sync.
+
 ## Client-only mods that must also be on the server
 - **Particular Reforged** opens a Forge network channel (`particular:main`) whose version
   predicate rejects an absent server, so Forge refuses the join with a "mod mismatch" when
