@@ -480,6 +480,58 @@ file = "defaultconfigs/createbigcannons-server.toml"
 hash = "9756edc8d2c01d836680b4247842eb15ff68f0d664f2ac6597b3369a0879a8e6"
 
 [[files]]
+file = "kubejs/data/animania/tags/worldgen/biome/amphibian_habitats.json"
+hash = "5ed31f44e733c1bf7ae4192ade7edab3a8167ec29ae505fa7b8a906cf7dcd76e"
+
+[[files]]
+file = "kubejs/data/animania/tags/worldgen/biome/ferret_habitats.json"
+hash = "fd88a3ebc970d7c299d77e823c4b2d7554c940a9380e5d976fe15c1856ec7446"
+
+[[files]]
+file = "kubejs/data/animania/tags/worldgen/biome/fox_dog_habitats.json"
+hash = "68c14ac57d7cffb344f7ac847283d963adf0276c76116ff54ec7e3fea97941ef"
+
+[[files]]
+file = "kubejs/data/animania/tags/worldgen/biome/hamster_habitats.json"
+hash = "72e4ba0c83a8b299bdf1b5a37351933f1366e44d79e1d474eba743a05ea07bbb"
+
+[[files]]
+file = "kubejs/data/animania/tags/worldgen/biome/hedgehog_habitats.json"
+hash = "902f86998b714c07c573d6f95bed787ce1308c92ce23fe28b060b136a15d4777"
+
+[[files]]
+file = "kubejs/data/animania/tags/worldgen/biome/hive_habitats.json"
+hash = "bb417808fed7ba7ac7e8dd5d23f8bfb77d8f633f5ee3fd308f67346fe5b65b9a"
+
+[[files]]
+file = "kubejs/data/animania/tags/worldgen/biome/ocelot_cat_habitats.json"
+hash = "d82468717cf15ea2a8e5bd169eb2c8a0f048ce1a82b6c552718ede4a9f40f91f"
+
+[[files]]
+file = "kubejs/data/animania/tags/worldgen/biome/peafowl_habitats.json"
+hash = "781cf439a9e1151ca3ec200464af7df68d4ad2a50fe3416c156e63e4df9fecd3"
+
+[[files]]
+file = "kubejs/data/animania/tags/worldgen/biome/rabbit_forest_habitats.json"
+hash = "902f86998b714c07c573d6f95bed787ce1308c92ce23fe28b060b136a15d4777"
+
+[[files]]
+file = "kubejs/data/animania/tags/worldgen/biome/rabbit_mountain_habitats.json"
+hash = "312a08b1ae6e3ae4ee4aa702ee477819db39e1fb3a412001896c29733ab45188"
+
+[[files]]
+file = "kubejs/data/animania/tags/worldgen/biome/rabbit_plains_habitats.json"
+hash = "9565a0efa74b952eaa0d1153ab23327c209c765cafb2641f88bcda4895111ff9"
+
+[[files]]
+file = "kubejs/data/animania/tags/worldgen/biome/rabbit_sandy_habitats.json"
+hash = "7868467188932d61fb2c8dfacd933b5e7e53aa78fef4a3bc9338b8006a3744a6"
+
+[[files]]
+file = "kubejs/data/animania/tags/worldgen/biome/rabbit_savanna_habitats.json"
+hash = "fd88a3ebc970d7c299d77e823c4b2d7554c940a9380e5d976fe15c1856ec7446"
+
+[[files]]
 file = "kubejs/data/cataclysm/tags/worldgen/biome/has_structure/burning_arena_biomes.json"
 hash = "fda09f14c4760f8a79d0ccc0e5ce46322b35328fba814e5b0500249fbc5622a1"
 
@@ -518,6 +570,18 @@ hash = "ea0797faecd755fe7d6dea5c2ee284aaf40db48cf6a8fe780cf4ea637b0fb7ba"
 [[files]]
 file = "kubejs/data/forge/tags/items/raw_materials/zinc.json"
 hash = "ae4783aba10060491f14f327c00dc9b75fdc4e5b09c6b2064b6e127f0a5c581c"
+
+[[files]]
+file = "kubejs/data/geolosys/deposits/ore/gold.json"
+hash = "9792e60b7af07426847b3d9f39183288a00fda5f5d23d181e3106a857e68d60f"
+
+[[files]]
+file = "kubejs/data/geolosys/deposits/ore/hematite.json"
+hash = "51b7b19fb8b8e6cb4fd88210b6561523db3bb1559e3250ac91f546c181bd8319"
+
+[[files]]
+file = "kubejs/data/geolosys/deposits/ore/sphalerite.json"
+hash = "a2776f83e6de7d64ea03f62b16a08b6c4714d7ea87fd89561f6d8557731c6a2a"
 
 [[files]]
 file = "kubejs/data/minecraft/worldgen/structure_set/village.json"
@@ -1308,10 +1372,6 @@ file = "patchouli_books/peacock_almanac/en_us/entries/land/terrain.json"
 hash = "0a566850bc91e5bf955c41f05075999dac444506219a372ea5aca7da8a0a7f6a"
 
 [[files]]
-file = "patchouli_books/peacock_almanac/en_us/entries/ore/prospecting.json"
-hash = "bf8ca9df73ce03c670412b07773b089f077f9d7b8db0bfb782a4e3fb65d9d966"
-
-[[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/ore/regional_ore.json"
 hash = "71ef908d2b668cff2632af482b536469267522c70e7a73bf40f2a5eceac70a97"
 
@@ -1338,62 +1398,6 @@ hash = "15a6b85943f7d71cc9340699c6d728fe0857bd6850ff4009710af8763860c593"
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/story/your_part.json"
 hash = "b7189feda42589a7d4b6f4814bcd08425403263dce01227a64b048c3b936334d"
-
-[[files]]
-file = "patchouli_books/peacock_almanac/en_us/entries/tech/how_blueprints_work.json"
-hash = "28b397d44d84ecda52ce010912c24bf909acd73c33df3eb4b44009eaf593e875"
-
-[[files]]
-file = "patchouli_books/peacock_almanac/en_us/entries/tech/tier1.json"
-hash = "7c3e60b79eda046c8f0ae5b85e6a22f4fe39a2a49ee64f500697a61092d538d7"
-
-[[files]]
-file = "patchouli_books/peacock_almanac/en_us/entries/tech/tier2.json"
-hash = "7486e5c0ebc62cd983df0e4cf37a82ef74f531323d154cae5fbe65be7445f5cb"
-
-[[files]]
-file = "patchouli_books/peacock_almanac/en_us/entries/tech/tier3.json"
-hash = "f1fab90514bd8bbb1af62fe2ca0424ad07d893ef22bcdf5608b607b3454a11c0"
-
-[[files]]
-file = "patchouli_books/peacock_almanac/en_us/entries/tech/tier4.json"
-hash = "023ce6b9e50d8d74996437c3223225ff71cb28162a30891d1f06932b0b4dd630"
-
-[[files]]
-file = "patchouli_books/peacock_almanac/en_us/entries/threats/night.json"
-hash = "d8af94219360729b965e5733788baa7d95f61d31354f0c153ef806f4e650ea74"
-
-[[files]]
-file = "patchouli_books/peacock_almanac/en_us/entries/threats/pillagers.json"
-hash = "882cd2143b1c0fb02ee4a810569f4f5b3aaafcbbf127bd7d62059bcc4aa95261"
-
-[[files]]
-file = "patchouli_books/peacock_almanac/en_us/entries/tools/atlas.json"
-hash = "55fcd3e28f7fa9e623f58ece8a0ecd357c0bef251b1f13861373cfaea56c5477"
-
-[[files]]
-file = "patchouli_books/peacock_almanac/en_us/entries/tools/controls.json"
-hash = "cbd6367df9233db37b1b82404e2af24af0ab5658a626a1b1f6a3fbdbf7ad5939"
-
-[[files]]
-file = "patchouli_books/peacock_almanac/en_us/entries/tools/performance.json"
-hash = "614bcc49ea2ba5b271f17860a059091feda4a4a3b4a5c82e1d711f67cb76ef75"
-
-[[files]]
-file = "patchouli_books/peacock_almanac/en_us/entries/tools/voice.json"
-hash = "f1837b952cee8e9194fb07e94bb53dfbcc2bd5e7b4c02f29605b54657d608df9"
-
-[[files]]
-file = "patchouli_books/peacock_almanac/en_us/entries/towns/caravans.json"
-hash = "34db18352d041bd40d6eddd85114d661c000b2f0e61b79d8fbfb5c77bff24874"
-
-[[files]]
-file = "patchouli_books/peacock_almanac/en_us/entries/towns/recruits.json"
-hash = "a055ed40b5fd90b0faa04166573dcb14460d8f9d14439f6820a7fd39823f385d"
-
-[[files]]
-file = "patchouli_books/peacock_almanac/en_us/entries/towns/villagers.json"
-hash = "73545d93642254951a80347ef629939664ae1bc2de4abf4a6226dfa30042b73e"
 
 [[files]]
 file = "peacock-server/README.txt"

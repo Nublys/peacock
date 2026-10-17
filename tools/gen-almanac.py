@@ -117,8 +117,9 @@ ENTRIES = {
         ("prospecting", "The Prospector's Pick", "geolosys:prospectors_pick", [
             T("Craft the $(bold)Prospector's Pick$() early. Right-click stone and it tells you what ore is nearby and roughly where. Walk, tap, walk, tap. It never breaks.",
               "Geolosys hands you its own $(bold)Field Manual$() on first join — it lists every deposit, what it drops, and at what depth."),
-            T("Metals you will need, in order: $(bold)copper and iron$() (homestead), $(bold)zinc$() (sphalerite — brass needs it, and brass needs a Blueprint), $(bold)gold, coal$() in bulk once machines run.",
-              "Mark deposits on your atlas. The first player to find zinc should tell everyone."),
+            T("Metals you will need, in order: $(bold)copper and iron$() (homestead; iron is common and shallow), $(bold)zinc$() (sphalerite — brass needs it), $(bold)gold, coal$() in bulk once machines run.",
+              "Ore is regional: $(bold)zinc lies under mountains$(), $(bold)gold in the dry country$() (desert, badlands, savanna), $(bold)tin in sand$(), $(bold)lead under plains$(), $(bold)limonite iron in marshes$(). Nature's Compass finds the biome; samples find the deposit."),
+            T("Mark deposits on your atlas. The first player to find zinc should tell everyone — and that is a trade route being born."),
         ]),
     ],
     "towns": [
@@ -164,8 +165,8 @@ ENTRIES = {
         ]),
         ("tier1", "Tier 1 — Iron and a Dog", "minecraft:iron_ingot", [
             T("Beatable alone in iron armour with a dog. These are the dark age's fallout, not its masters.",
-              "$(bold)Mutant Zombie$() → $(bold)Brass$(). The dead carried it off. Brass opens the middle of Create.$(br)$(bold)Mutant Skeleton$() → $(bold)Recruiting$(): hire squads, arm guards."),
-            T("$(bold)Mutant Creeper$() → $(bold)Blasting$(): TNT, gunpowder tech, Create's blaze burner.$(br)$(bold)Torte$() (Incendium's skeleton chef, Nether) → $(bold)Advanced cooking$(): Slice & Dice automation, Aquaculture nets. A funny first Nether trip."),
+              "$(bold)Mutant Zombie$() → $(bold)Brass$(). The dead carried it off. Brass opens the middle of Create.$(br)$(bold)Mutant Skeleton$() → $(bold)Recruiting$(): hire squads, arm guards.$(br)$(bold)Mutant Creeper$() → $(bold)Blasting$(): TNT, gunpowder tech, the blaze burner."),
+            T("$(bold)Mutant Snow Golem$() (snowy biomes) → $(bold)Climate control$(): thermoregulators, air conditioners. Wool and leaf clothing are always free.$(br)$(bold)Mutant Enderman$() → ender logistics: Create's chutes across distance.$(br)$(bold)Torte$() (Incendium's skeleton chef, Nether) → $(bold)Advanced cooking$(): Slice & Dice automation, Aquaculture nets."),
         ]),
         ("tier2", "Tier 2 — Bring Recruits", "minecraft:diamond", [
             T("Bosses that guard a place. Bring a squad, or a friend.",
