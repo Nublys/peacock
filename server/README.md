@@ -15,12 +15,17 @@ Everything here is for the host. Players never see this folder.
    ends with `== done`.
 4. Before the first start: Files → `server.properties` (seed, `max-players`), then start once
    and `whitelist add <name>` from the console.
-5. Pregenerate before players arrive (Distant Horizons LODs come from real chunks):
-   `chunky radius 3000` → `chunky start`, then let DH build LODs (it rate-limits itself).
+5. Let Distant Horizons build LODs on its own — the server generates them (`FEATURES` mode)
+   and rate-limits itself. (Chunky was removed: DH 3.3.3 crashes with it on servers.)
 
 **Every start** re-syncs the pack from `main` and reapplies `peacock-server/` — a merged PR
 reaches the server on its next restart. The `Pack URL` variable pins a commit for rollback:
 `https://raw.githubusercontent.com/Nublys/peacock/<sha>/pack/pack.toml`.
+After a restart that follows a push, read the first ~20 console lines: packwiz-installer lists
+every file it changed and ends with `Finished successfully!`. If it reports nothing changed
+right after a push, raw.githubusercontent.com served a cached `pack.toml` — wait a few minutes
+and restart again. (This output is console-only; it never appears in `logs/latest.log`.)
+Mods removed from the index are deleted on the next sync; nothing needs cleaning by hand.
 
 **Backups & schedules:** use Pterodactyl's. Take a backup before any start that follows a
 pack version bump; a schedule with a daily backup task is enough for a small server.
@@ -46,7 +51,6 @@ server's `config/` — the next sync replaces them.
 
 Marked `side = "server"` in `pack/mods/`, so they install here and never on a client:
 
-- **Chunky** — pregen
 - **Spark** — `spark profiler --timeout 60` is the first thing to run when TPS drops
 - **LuckPerms** — permissions; `lp user <name> permission set minecraft.command.* true` for staff
 

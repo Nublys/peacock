@@ -560,11 +560,6 @@ hash = "259d7b1bb82931ccc8438933c6627e14c1176091549e48096a7f62b3fca45041"
 metafile = true
 
 [[files]]
-file = "mods/chunky.pw.toml"
-hash = "2274e08910d949f9962383e2314e8d42490f2e8195782786392614d0f0879629"
-metafile = true
-
-[[files]]
 file = "mods/cloth-config.pw.toml"
 hash = "fd272388d2eb458eb8e96ae4d49fe94231ca5cd3f2a16bd77c4e926e84e73a0e"
 metafile = true

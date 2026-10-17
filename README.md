@@ -68,7 +68,7 @@ docs/                 PLAN.md (phases), DECISIONS.md (why things are the way the
 Pterodactyl: import `server/pterodactyl/egg-peacock.json`, create a server from it, one
 allocation (voice chat shares the game port). Every start syncs the pack from `main`.
 Full runbook in [`server/README.md`](server/README.md) — install, pregen, overrides, rollback;
-bare-metal `server/start.sh` as the alternative. Server-only mods (Chunky, Spark, LuckPerms) carry
+bare-metal `server/start.sh` as the alternative. Server-only mods (Spark, LuckPerms) carry
 `side = "server"` and never reach clients.
 
 ## Updating the pack

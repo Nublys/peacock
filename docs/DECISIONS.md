@@ -52,6 +52,13 @@ Why things are the way they are. Add an entry when a choice would surprise someo
 - **Pet Home** (1.1.2 and 1.1.3) — `MobMixin` shadows `setPathfindingMalus` with no refmap
   entry, so the mixin fails on production Forge and the game exits before the title screen.
   Removed 2026-10-16; re-add when a release ships a correct refmap.
+- **Chunky** (server-only, 1.3.146) — Distant Horizons 3.3.3 binds to Chunky's API from its
+  chunk-load hook (`ChunkyAccessor.bindOnGenerationProgressEvent`) and `ChunkyProvider.get()`
+  throws "Chunky is not loaded"; on a Forge server this surfaces as *Exception during promotion
+  of chunk to FULL status* and kills the server seconds after `Done`. Upstream DH issue #1329.
+  Removed 2026-10-16. DH generates its own LODs server-side, so nothing is lost for distant
+  terrain; for real-chunk pregen use Speiger's Chunk Pregenerator (DH has no hook into it) or
+  re-add Chunky once DH ships the fix.
 
 ## Dogs
 - One dog: **Doggy Talents Next.** Animania's dog breeds are spawn-disabled (cats kept);

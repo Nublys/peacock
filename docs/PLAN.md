@@ -127,7 +127,7 @@ where others have.
 **Pterodactyl egg** (`server/pterodactyl/egg-peacock.json`): install script sets up Forge +
 bootstrap + first sync; startup re-syncs and applies `pack/peacock-server/` overrides. Voice
 chat shares the game port (`port=-1`) so one allocation suffices. Bare-metal `start.sh` kept.
-Chunky/Spark/LuckPerms as `side = "server"`. Remaining: claims decision, Discord bridge, backups on the host, runbook
+Spark/LuckPerms as `side = "server"` (Chunky removed: DH 3.3.3 crashes with it, see DECISIONS). Remaining: claims decision, Discord bridge, backups on the host, runbook
 details below as they get exercised.
 - Server-side packwiz (`-s server`), same datapacks/KubeJS; Forge 47.4.16, Java 17
 - `server.properties`: view-distance 8, simulation-distance 6, whitelist on, max-tick-time
@@ -136,7 +136,7 @@ details below as they get exercised.
   the egg owns install + startup. Overrides travel inside the pack (`pack/peacock-server/`)
   because the container has no repo checkout.
 - **Server-only mods** (`side = "server"` in the pack so clients never see them):
-  - Chunky — pregen (≈3000-block radius) before DH's LOD pass
+  - ~~Chunky~~ — removed (DH 3.3.3 crash). Pregen, if wanted: Chunk Pregenerator (Speiger)
   - Spark — profiling, the first thing to open when TPS drops
   - LuckPerms — permissions for staff; **FTB Essentials** only for `/spawn`, `/back` and
     AFK — no `/home`, `/tpa` or warps (no fast travel is a design rule)
