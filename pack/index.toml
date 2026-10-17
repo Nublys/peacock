@@ -979,6 +979,11 @@ hash = "991c0ff66a07528835c4dae0aac724bd5ef616af93257dca54f43a531bc9b672"
 metafile = true
 
 [[files]]
+file = "mods/jade.pw.toml"
+hash = "5d03d20b037a8b7a4765ded0e25146fc970964be46401dff5f9b1059875084e8"
+metafile = true
+
+[[files]]
 file = "mods/kambrik.pw.toml"
 hash = "5be8bc5bf391069fb1a3c8ab5dab874a65cfa7cf46597bc9f6a0000a4947e86e"
 metafile = true

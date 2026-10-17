@@ -150,6 +150,11 @@ Why things are the way they are. Add an entry when a choice would surprise someo
   10 requests/s per client. Distant terrain fills in more slowly; the server keeps 20 TPS. Raise again
   only with a Spark report showing headroom and a known core count for the container.
 
+## Jade for block/entity tooltips (2026-10-17)
+- Jade 11.13.3, side both (server-side data for container contents). Create, Farmer's Delight,
+  Supplementaries, Doggy Talents and Mowzie's ship their own Jade plugins. Not The One Probe (thinner
+  Create integration) or WTHIT (Fabric-first).
+
 ## No Discord bridge
 - Decided 2026-10-17. Voice chat is in-game; chat stays in-game.
 
