@@ -843,7 +843,7 @@
 	#Set to false to restore the old behaviour: villages founded at night
 	#wait for morning, and remotely founded ones may not appear at all.
 	#
-	nightFoundingNudge = true
+	nightFoundingNudge = false
 	#May a tower spawner found its village ON WATER (a lake, a river, a
 	#pond) instead of being vetoed? Default: true
 	#
@@ -1153,7 +1153,7 @@
 	#remoteTowerMaxPerTick first, then switch to STRUCTURE_ONLY or OFF.
 	#
 	#Allowed Values: OFF, STRUCTURE_ONLY, BOOTSTRAP
-	remoteTowerActivation = "BOOTSTRAP"
+	remoteTowerActivation = "OFF"
 	#Radius, in chunks around every player, in which deterministic
 	#natural tower sites are discovered even beyond render distance.
 	#Default: 64 chunks (1024 blocks)
@@ -1168,7 +1168,7 @@
 	#Lower this if distant terrain generation is too expensive.
 	#
 	#Range: 0 ~ 256
-	remoteTowerDiscoveryRadiusChunks = 64
+	remoteTowerDiscoveryRadiusChunks = 16
 	#Maximum candidate tower chunks requested each remote-tower pass.
 	#The pass runs once per second. Default: 1
 	#

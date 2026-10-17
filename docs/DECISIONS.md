@@ -189,6 +189,21 @@ Why things are the way they are. Add an entry when a choice would surprise someo
   so a changed default reaches existing installs without `PEACOCK_RESET=1` while a player's own edit is
   still kept. Append to `PREVIOUS_DEFAULTS` whenever a shipped default changes.
 
+## The server hang, found (2026-10-17 18:00 watchdog dump)
+- Main thread parked 180 s in `ServerChunkCache.getChunkBlocking` ← `Level.getHeight` ←
+  **Village Recruits Addon** `RoadGround.waterSurfaceY` ← `CityRoadPlanner.layStandaloneCross` ←
+  `VillageFactionManager.ensureFactionExists` ← `VillageFoundingNudge.tick`. Translation: the addon's
+  night "founding nudge" converted a villager at a *remote* tower spawner (BOOTSTRAP activation), minted a
+  faction, and laid the town's first crossroads — reading terrain height in chunks that did not exist yet.
+  That forces chunk generation from inside the tick; on Terralith each chunk is slow, and with Canary's
+  `chunk_access` mixin the wait never drained the main-thread queue. Same mechanism as the 13:43 hang
+  (no dump then; same symptoms, VS physics queue backing up).
+- Fix, three layers: `remoteTowerActivation = "OFF"` (addon villages are founded only inside simulation
+  distance, where the chunks exist), `nightFoundingNudge = false` (the exact code path), discovery radius
+  64 → 16 chunks; and Canary `mixin.world.chunk_access=false` so a blocking load behaves like vanilla.
+  Natural addon villages stay enabled (they are the AI factions), and the tower-spawner exclusion zone
+  keeps them off CTOV towns.
+
 ## First server run of Phases 3–5: two script bugs, one worldgen fix (2026-10-17 17:37 log)
 - KubeJS loads all server scripts into **one scope**: `const SWITCHES`/`const RADIUS` declared in two files
   killed two scripts. Every script now wraps its body in a block and uses file-prefixed names.

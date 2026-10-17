@@ -83,7 +83,7 @@ hash = "54b999cd4b8859787eec9d1b8df99b5e318030961fe7bf444dc31727de8a69f6"
 
 [[files]]
 file = "config/canary.properties"
-hash = "cad85e5f854a87b4e217cb60ac5899167f3375cdfecce7ba8d62e565c496d5e2"
+hash = "11720950bc46f74fff4433c851b0e755aa315f4e64e8be491dad05b8faf01ef9"
 
 [[files]]
 file = "config/caravansconvoys-common.toml"
@@ -609,7 +609,7 @@ hash = "05959bc59c9abe388baae7e214313521cc4f0c5feaa165a8b1358648c0e0ad77"
 
 [[files]]
 file = "config/village_recruits/politics.toml"
-hash = "fcba36e1be51a92aac60e30f4eb232acfc4d08be7917fae32c87dbdfdf418914"
+hash = "8d416a968150558032e624732caf272b7b2e89148d87937e54fa4bce0d187c22"
 
 [[files]]
 file = "config/village_recruits/sky.toml"

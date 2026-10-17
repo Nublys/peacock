@@ -35,6 +35,9 @@ blocks the main thread for minutes and the watchdog treats it as a hang. `max-ti
 the template: long enough for the spawn-village search at world creation (~45 s), short enough that a
 real hang is dumped and killed instead of sitting there.
 
+**The 2026-10-17 hangs** were Village Recruits founding remote villages and reading terrain in ungenerated
+chunks from the main thread; fixed in config (DECISIONS.md). If it happens again:
+
 **When the server hangs** (players time out, console still scrolls but `/` commands do nothing): get a
 thread dump *before* restarting. On the node, with the server's UUID as the container name:
 
