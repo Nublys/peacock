@@ -1,0 +1,60 @@
+name: release
+
+# Tag a commit `vX.Y.Z` (matching pack/pack.toml's version) and this builds the launcher-importable
+# packages and attaches them to a GitHub release:
+#   Peacock-X.Y.Z.mrpack            Prism / ATLauncher / Modrinth App import (CurseForge-hosted mods are
+#                                   embedded as overrides, so --restrictDomains=false; fine for our own
+#                                   distribution, not for a Modrinth listing)
+#   Peacock-X.Y.Z-curseforge.zip    CurseForge App / Overwolf import
+#   Peacock-X.Y.Z-server.zip        server files (mods, configs, datapacks, KubeJS) for a bare-metal start
+# Players on the Prism + launch.jar route (README) never need these; they sync from main directly.
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: "1.24"
+      - name: Install packwiz
+        run: go install github.com/packwiz/packwiz@latest
+      - name: Tag matches pack.toml
+        run: |
+          TAG="${GITHUB_REF_NAME#v}"
+          VER=$(sed -n 's/^version = "\(.*\)"/\1/p' pack/pack.toml)
+          [ "$TAG" = "$VER" ] || { echo "::error::tag v$TAG but pack.toml says $VER"; exit 1; }
+          echo "VER=$VER" >> "$GITHUB_ENV"
+      - name: Export
+        working-directory: pack
+        run: |
+          ~/go/bin/packwiz refresh
+          git diff --exit-code -- index.toml pack.toml
+          ~/go/bin/packwiz modrinth export --restrictDomains=false -o "../Peacock-${VER}.mrpack"
+          ~/go/bin/packwiz curseforge export -o "../Peacock-${VER}-curseforge.zip"
+          ~/go/bin/packwiz curseforge export -s server -o "../Peacock-${VER}-server.zip"
+      - name: Release notes
+        run: |
+          {
+            echo "Peacock ${VER} — Forge 1.20.1 ($(grep -c '^\[\[files\]\]' pack/index.toml) files, $(ls pack/mods | wc -l) mods)"
+            echo
+            echo "Install: see README.md. Prism users with launch.jar need nothing from here; the pack syncs from main."
+            echo
+            echo "Changes since the previous tag:"
+            PREV=$(git describe --tags --abbrev=0 "${GITHUB_REF_NAME}^" 2>/dev/null || true)
+            if [ -n "$PREV" ]; then git log --no-merges --format='- %s' "$PREV..${GITHUB_REF_NAME}"; else git log --no-merges --format='- %s' -20; fi
+          } > notes.md
+      - uses: softprops/action-gh-release@v2
+        with:
+          body_path: notes.md
+          files: |
+            Peacock-${{ env.VER }}.mrpack
+            Peacock-${{ env.VER }}-curseforge.zip
+            Peacock-${{ env.VER }}-server.zip

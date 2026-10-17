@@ -112,6 +112,22 @@ Commit `pack/`, open a PR. CI re-runs `packwiz refresh` and fails if the index i
 Adding a mod: `packwiz modrinth add <slug>` (or `packwiz curseforge add <slug>`), then set
 `side = "client"` in its `.pw.toml` if it is client-only.
 
+### Releasing a version
+
+Players on the Prism + `launch.jar` route sync from `main` on every launch and never need a release.
+Releases are for everyone else (Modrinth App, CurseForge App, bare-metal servers):
+
+```
+# bump version = "X.Y.Z" in pack/pack.toml, commit, then
+git tag vX.Y.Z && git push origin vX.Y.Z
+```
+
+`.github/workflows/release.yml` builds `Peacock-X.Y.Z.mrpack`, `Peacock-X.Y.Z-curseforge.zip` and
+`Peacock-X.Y.Z-server.zip` and attaches them to a GitHub release with the commit log as notes. The
+`.mrpack` embeds CurseForge-hosted mods as overrides (`--restrictDomains=false`), which is fine for our own
+distribution but would be rejected by a public Modrinth listing — publishing there means swapping those
+mods for Modrinth-hosted equivalents first.
+
 ## Keybinds (shipped defaults)
 
 | Key | Action |
@@ -131,4 +147,6 @@ Controlling is installed — search any bind by name in Options → Controls.
 
 ## Status
 
-See `docs/PLAN.md`. Phase 0–1 (reproducible repo, boot-clean baseline) is this branch.
+See `docs/PLAN.md`. As of 2026-10-17 Phases 0–5 are shipped (repo, boot-clean baseline, profiles, world
+config, KubeJS glue, the Blueprint ladder, server rules) and Phase 6 is in progress; the ladder, rumour maps
+and depot rule are shipped but still waiting on their first playtest.

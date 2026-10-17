@@ -197,9 +197,14 @@ details below as they get exercised.
 - Runbook: start/stop, pack update procedure (bump → snapshot → restart), rollback, how to
   read a Spark report
 
-## Phase 6 — Polish
-- Pack name / FancyMenu title, Almanac prose, Cataclysm gear gated and out of early loot,
-  Tier 3–4 tuning after the mid game has been played
+## Phase 6 — Polish  🟡 2026-10-17
+- ✅ Release pipeline: `.github/workflows/release.yml` builds `.mrpack`, CurseForge zip and server zip on a
+  `vX.Y.Z` tag (README "Releasing a version"). Modrinth listing would need the CurseForge-only mods swapped.
+- ✅ Almanac prose (v2, 176 pages) and resource packs (Fresh Animations, Better Leaves, Enhanced Boss Bars,
+  xali's, Low On Fire).
+- Open, after the mid game has been played: Tier 3–4 charter prices and gate lists; Cataclysm gear out of
+  early loot (its items only appear in its own dungeons today, so nothing to do until proven otherwise);
+  an in-game profile picker (wish list); FancyMenu title screen (not in the pack — add only if wanted).
 
 ## Decisions still open
 1. ~~Season length~~ 16 days per sub-season, crops stop out of season (2026-10-17)
