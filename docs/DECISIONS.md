@@ -186,7 +186,9 @@ Why things are the way they are. Add an entry when a choice would surprise someo
 
 ## Boss gating (Phase 4)
 - Gate *expansion* tech only (brass, trains, ships, diesel, cannons, advanced Create);
-  never the homestead (water, crops, animals, andesite Create, wagons, docks).
+  never the homestead (water, crops, animals, andesite Create, wagons, docks, **basic climate
+  clothing** — wool and leaf armour, campfires, Greenhouse Glass). Mutant Snow Golem gates climate
+  *control* instead: TAN Thermoregulator, TAN+ Air Conditioners and Personal Fan (2026-10-17).
 - Unlocks are **per player** (Game Stages), not server-wide — on a server, one player's kill
   must not hand everyone the technology. Superseded the earlier server-wide decision.
 - The boss drops one **Blueprint** per participant plus one; using it grants the stage and
