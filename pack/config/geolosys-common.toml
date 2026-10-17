@@ -45,11 +45,11 @@
 #Mod-Compat Settings
 [compat]
 	#This will make it so that Platinum will drop Platinum AND Osmium
-	enableOsmium = true
+	enableOsmium = false
 	#This will make it so that Platinum will ONLY drop Osmium
-	enableOsmiumExclusively = true
+	enableOsmiumExclusively = false
 	#This will make it so that Autunite will drop Uranium AND Yellorium
-	enableYellorium = true
+	enableYellorium = false
 	#This will make is so that Coal has a rare chance of dropping sulfur
-	enableSulfur = true
+	enableSulfur = false
 

@@ -236,7 +236,7 @@ hash = "ef8aea667f7fc9fa6651c40a9cffab47f1cad1fb1b0039c7eb2307c7651e2b30"
 
 [[files]]
 file = "config/geolosys-common.toml"
-hash = "cdcdb2b87480be5d4f6725cc3bdde277372242e9c1071645c86a7a8ceaab56fa"
+hash = "5c38b21f406a5e213505d5a04d4087516ace3140d474fa8f736966bb255de970"
 
 [[files]]
 file = "config/guardvillagers-client.toml"
@@ -414,6 +414,10 @@ hash = "ea0797faecd755fe7d6dea5c2ee284aaf40db48cf6a8fe780cf4ea637b0fb7ba"
 [[files]]
 file = "config/paxi/datapacks/peacock/data/forge/tags/items/raw_materials/zinc.json"
 hash = "ae4783aba10060491f14f327c00dc9b75fdc4e5b09c6b2064b6e127f0a5c581c"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/geolosys/deposits/ore/autunite.json"
+hash = "0538bd9024259eefb7f768121d5c82bd7d0743467a1fc6f0147a0bd38832a708"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/geolosys/deposits/ore/gold.json"
@@ -681,7 +685,7 @@ hash = "09d333d76904e58dcfc54bac179a809c34e83ece952f11ab110dd5ea81e575f0"
 
 [[files]]
 file = "kubejs/config/peacock.json"
-hash = "4afa1fbeac844f6ce94f8190e7c59f5508a6d568f87f22ac4b9e6ef3879facb7"
+hash = "7127cb4b80f1f9591792b3906fd113864e0796bdf00fcc89ceda4529f6c46f49"
 
 [[files]]
 file = "kubejs/server_scripts/almanac.js"
@@ -690,6 +694,10 @@ hash = "7f9a35a62bf29efa77273ba670e488b8fa0eba600627b728863e9fbc83585ad9"
 [[files]]
 file = "kubejs/server_scripts/blueprints.js"
 hash = "9d12bbf23578d39d0db2c5333afa6399777bca3f8e58db4e13e52aa1a2a9971b"
+
+[[files]]
+file = "kubejs/server_scripts/cave_loot.js"
+hash = "9f660b19693fb963f7a6695f0bc787dada430b22f3fd5477bee72a6eb3ff307c"
 
 [[files]]
 file = "kubejs/server_scripts/geolosys_create.js"
@@ -1496,6 +1504,16 @@ hash = "152c6732da180e958fb29f492bae2e468d4dfd423ce4d3d0d31ef31c2eec6c61"
 metafile = true
 
 [[files]]
+file = "mods/yungs-better-dungeons.pw.toml"
+hash = "3b896ddf7389ad7d403b354cd94966c65f4989c9675ec245681b5c78d5208317"
+metafile = true
+
+[[files]]
+file = "mods/yungs-better-mineshafts.pw.toml"
+hash = "4ce517d9069d08501f48e928692dc2f4617980683a2c4521f22c1ec538f34dcc"
+metafile = true
+
+[[files]]
 file = "patchouli_books/peacock_almanac/book.json"
 hash = "8cbd8ab4fad449a146123c58312b29aa823fa23122165d6786d21b24ff6d77a8"
 
@@ -1604,8 +1622,16 @@ file = "patchouli_books/peacock_almanac/en_us/entries/land/terrain.json"
 hash = "44ea013b259f8eee08f7c81eb120da37da24f333ff3ceb72c6dfc5c272f5f969"
 
 [[files]]
+file = "patchouli_books/peacock_almanac/en_us/entries/ore/caving.json"
+hash = "ebb4da1a915a3c296ddb6db810f731ea692d481612c5e09d7243d55cf32b8438"
+
+[[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/ore/deposits.json"
 hash = "766c34b119376accac9520329a3018a77a28613e06944589dc0d99cf51b54ab6"
+
+[[files]]
+file = "patchouli_books/peacock_almanac/en_us/entries/ore/minerals.json"
+hash = "ecd93f02b53cdbe7dd3c16ccb983b45fda1d7be7c6cd7dd1f0d630906fa8ae74"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/ore/prospecting.json"

@@ -189,6 +189,21 @@ Why things are the way they are. Add an entry when a choice would surprise someo
   so a changed default reaches existing installs without `PEACOCK_RESET=1` while a player's own edit is
   still kept. Append to `PREVIOUS_DEFAULTS` whenever a shipped default changes.
 
+## Caving pays in ore (2026-10-17)
+- Geolosys removes every vanilla ore feature in every dimension (`remove_vanilla_ores` biome modifier on
+  `#geolosys:all_dimensions`), so caves had nothing in their walls. Added **YUNG's Better Mineshafts** and
+  **Better Dungeons** (Terralith-aware biome tags) for places to find, and `kubejs/server_scripts/cave_loot.js`
+  gives every underground chest table — vanilla mineshaft/dungeon/stronghold/ancient city, YUNG's, Stoneholm,
+  Cataclysm ruins — a pool of Geolosys clusters, coal, lapis, redstone, gems and the odd prospector's pick,
+  rolled 1–4 times by depth. Switch `caveLoot`.
+- Geolosys compat flags were on for mods we do not have: platinum dropped **only Osmium** (Mekanism) and
+  autunite dropped Yellorium (Bigger Reactors) — the `forge:raw_materials/yellorium` tag error in every
+  start log. All four compat flags off. Autunite (uranium) has no consumer at all, so its deposit is
+  confined to End biomes via Paxi, where its replacement stone never occurs: effectively gone.
+- The mineral names (hematite, galena, sphalerite…) are Geolosys's: each is the real-world ore of a metal
+  and drops a *cluster* of that metal. Tin/lead/silver/nickel/aluminum/platinum feed Spartan Weaponry's
+  material weapons; the Almanac now has a "Why the Rocks Have Names" entry and a caving entry.
+
 ## The server hang, found (2026-10-17 18:00 watchdog dump)
 - Main thread parked 180 s in `ServerChunkCache.getChunkBlocking` ← `Level.getHeight` ←
   **Village Recruits Addon** `RoadGround.waterSurfaceY` ← `CityRoadPlanner.layStandaloneCross` ←

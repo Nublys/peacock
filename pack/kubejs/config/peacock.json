@@ -4,5 +4,6 @@
   "depotNeedsTown": true,
   "ladder": true,
   "villagerCap": true,
-  "villagerCapCount": 24
+  "villagerCapCount": 24,
+  "caveLoot": true
 }

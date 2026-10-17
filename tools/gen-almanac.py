@@ -261,6 +261,21 @@ ENTRIES = {
             txt(B("Processing:") + " clusters smelt one to one. A " + B("millstone") + " crushes them (slow, iron-free). " + B("Crushing wheels") + " crush faster and " + B("washing") + " (encased fan over water) turns crushed ore into nuggets with a bonus.",
                 "Zinc clusters smelt straight to Create's zinc ingot: there is one zinc in this pack."),
         ]),
+        ("minerals", "Why the Rocks Have Names", "geolosys:hematite_ore", [
+            txt("There is no iron ore block. There is " + B("hematite") + ", which is what iron ore is called in the ground. Geolosys names every deposit after its mineral, and the mineral tells you the metal.",
+                B("Hematite, Limonite") + " = iron$(br)" + B("Malachite, Azurite") + " = copper$(br)" + B("Sphalerite") + " = zinc$(br)" + B("Cassiterite, Teallite") + " = tin"),
+            txt(B("Galena") + " = lead, with silver in it$(br)" + B("Bauxite") + " = aluminum$(br)" + B("Cinnabar") + " = redstone$(br)" + B("Kimberlite") + " = diamond$(br)" + B("Beryl") + " = emerald$(br)" + B("Lignite, Bituminous, Anthracite") + " = coal, soft to hard$(br)" + B("Platinum, Gold, Lapis, Quartz") + " are themselves."),
+            txt("Mine a mineral and you get a " + B("cluster") + " of its metal, never a raw ore. Tin, lead, silver, nickel, aluminum and platinum ingots have no machines of their own here; Spartan Weaponry turns them into spears, blades and shields with their own weights and reach.",
+                "Uranium is not in this world. Anything else you dig up, EMI knows a use for."),
+        ]),
+        ("caving", "What Caves Are For", "minecraft:torch", [
+            txt("Caves have " + B("no ore in the walls") + ": Geolosys took every vanilla vein. So why go down? Two reasons.",
+                "The " + B("deep deposits") + " only exist there: galena, azurite, cinnabar, kimberlite, beryl, limonite, anthracite. Their samples sit on cave floors the way surface samples sit on grass."),
+            txt("And the " + B("places") + ": mineshafts and dungeons (YUNG's, rebuilt for every biome), Stoneholm's underground villages, Cataclysm's ruins and its Ancient Factory.",
+                "Every chest down there carries ore: clusters of iron, copper, zinc, gold and the rarer metals, coal, lapis, redstone, and sometimes a prospector's pick. The deeper the place, the more it pays."),
+            txt("Rumour maps to the deeper bosses turn up in the same chests. A mineshaft is a good first expedition: wood, rails, chests, and the way to the deposits below.",
+                "Bring a bed, torches and a dog. Mobs are smarter here than you remember."),
+        ]),
     ],
     # ===================================================================================== towns
     "towns": [

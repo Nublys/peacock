@@ -1,0 +1,20 @@
+{
+  "name": "What Caves Are For",
+  "icon": "minecraft:torch",
+  "category": "patchouli:ore",
+  "sortnum": 4,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Caves have $(bold)no ore in the walls$(): Geolosys took every vanilla vein. So why go down? Two reasons.$(br2)The $(bold)deep deposits$() only exist there: galena, azurite, cinnabar, kimberlite, beryl, limonite, anthracite. Their samples sit on cave floors the way surface samples sit on grass."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "And the $(bold)places$(): mineshafts and dungeons (YUNG's, rebuilt for every biome), Stoneholm's underground villages, Cataclysm's ruins and its Ancient Factory.$(br2)Every chest down there carries ore: clusters of iron, copper, zinc, gold and the rarer metals, coal, lapis, redstone, and sometimes a prospector's pick. The deeper the place, the more it pays."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Rumour maps to the deeper bosses turn up in the same chests. A mineshaft is a good first expedition: wood, rails, chests, and the way to the deposits below.$(br2)Bring a bed, torches and a dog. Mobs are smarter here than you remember."
+    }
+  ]
+}
