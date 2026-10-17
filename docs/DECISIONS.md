@@ -189,6 +189,21 @@ Why things are the way they are. Add an entry when a choice would surprise someo
   so a changed default reaches existing installs without `PEACOCK_RESET=1` while a player's own edit is
   still kept. Append to `PREVIOUS_DEFAULTS` whenever a shipped default changes.
 
+## The ladder is Recipe Stages + KubeJS, not Item Stages (2026-10-17)
+- **Recipe Stages 8.0** (Forge 1.20.1, Game Stages dep) accepts recipes as JSON (`recipestages:stage`,
+  `recipestages:shaped_stage` wrapping a crafting recipe), so KubeJS can wrap mods' recipes at load time
+  without CraftTweaker. Only crafting-table recipes can be staged — that is the mod's limit and we design
+  around it: gate the *things built from* a material, not the material.
+- **Item Stages rejected**: CraftTweaker-only configuration, and hiding items in a player's inventory is
+  hostile when Blueprints are meant to be traded. Place-gating via `BlockEvents.placed` covers the
+  "handed a machine" case.
+- **One table** (`global.LADDER` in a startup script) feeds server enforcement and client tooltips, so a
+  rung edit is one edit. Named Incendium bosses are matched as `type|name` because they are vanilla mobs.
+- Mutant Enderman left the ladder (its "ender logistics" moved to the Ender Guardian so the End has a
+  prize); "frontier ore" had nothing concrete behind it and became **arcane industry**.
+- Boss participation is tracked by damage (`EntityEvents.hurt` → UUID list on the entity) rather than
+  proximity alone, so a bystander does not get a Blueprint and a kill by recruits still drops two.
+
 ## Old Guns V2 out, Musket Mod in (2026-10-17)
 - "Old Guns V2" turned out to be 20th-century firearms (AKM, MP5, Thompson, Kar98k, Colt 1911 …) with no
   muzzle-loaders at all; "trim the modern guns" would have left a revolver and a Winchester. Replaced by

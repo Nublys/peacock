@@ -1,0 +1,5 @@
+{
+  "item.peacock.blueprint": "Blueprint",
+  "peacock.blueprint.use": "You study the Blueprint. %s is yours to build.",
+  "peacock.blueprint.known": "You already know this. Trade it to someone who does not."
+}

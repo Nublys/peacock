@@ -18,7 +18,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(italic)The first Blueprints arrive with the Dark Age update. Until then nothing is locked, and the ladder below is the plan, not yet the rule.$()$(br2)The ladder is four tiers. Each tier is a kind of fight, not a difficulty number."
+      "text": "A Blueprint is a blue sheet that names its technology. Right-click to learn it; it is used up. Hover any locked item and the tooltip names the Blueprint and the boss.$(br2)The ladder is four tiers. Each tier is a kind of fight, not a difficulty number."
     },
     {
       "type": "patchouli:relations",

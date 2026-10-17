@@ -10,7 +10,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Mutant Snow Golem$() (snow) holds $(bold)Climate control$(): thermoregulators, fans, air conditioners. Wool and leaf clothing stay free.$(br)$(bold)Mutant Enderman$() holds $(bold)Ender logistics$(): Create's long-distance chutes and vaults.$(br)$(bold)Torte$() (Nether) holds $(bold)Advanced cooking$(): Slice & Dice automation."
+      "text": "$(bold)Mutant Snow Golem$() (snow) holds $(bold)Climate control$(): thermoregulators, fans, air conditioners. Wool and leaf clothing stay free.$(br)$(bold)Mutant Enderman$() holds nothing; it is simply dangerous.$(br)$(bold)Torte$() (Nether) holds $(bold)Advanced cooking$(): Slice & Dice automation."
     },
     {
       "type": "patchouli:spotlight",

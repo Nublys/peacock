@@ -29,7 +29,7 @@
     {
       "type": "patchouli:entity",
       "entity": "cataclysm:ignis",
-      "text": "Ignis in the Burning Arena (Nether dunes and ash). A flame knight with a shield you must break. Fire resistance is mandatory. Holds $(bold)Frontier ore$().",
+      "text": "Ignis in the Burning Arena (Nether dunes and ash). A flame knight with a shield to break. Fire resistance is mandatory. Holds $(bold)Arcane industry$() (as does the Harbinger).",
       "scale": 0.55
     },
     {
@@ -53,7 +53,7 @@
     {
       "type": "patchouli:entity",
       "entity": "cataclysm:ender_guardian",
-      "text": "Ender Guardian in the Ruined Citadel (the End). The last fight. What it keeps, the survivors did not write down.",
+      "text": "Ender Guardian in the Ruined Citadel (the End). The last fight. Holds $(bold)Ender logistics$(): the lost capital's last secret.",
       "scale": 0.55
     }
   ]

@@ -6,7 +6,11 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(bold)The Harbinger$() and $(bold)Ignis$() hold $(bold)Frontier ore$().$(br)$(bold)Hovering Inferno$() and the $(bold)totem captains$() hold the $(bold)final rail$().$(br)$(bold)Scylla$() holds the sea.$(br)$(bold)Ender Guardian$() (the End) holds the lost capital's last secret.$(br2)What that is, the survivors did not write down."
+      "text": "$(bold)The Harbinger$() and $(bold)Ignis$() hold $(bold)Arcane industry$(): enchantment as a factory, dragon's breath as a fluid.$(br)$(bold)Ender Guardian$() (the End) holds $(bold)Ender logistics$(): ender chests, portable interfaces, item vaults."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Hovering Inferno$(), the $(bold)totem captains$() and $(bold)Scylla$() hold loot, not knowledge.$(br2)Two Blueprints at the end of the world, and both of them about moving things."
     },
     {
       "type": "patchouli:relations",

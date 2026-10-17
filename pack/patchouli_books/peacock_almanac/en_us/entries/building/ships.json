@@ -21,7 +21,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Ships are Tier 2$(): the Naga hold the knowledge. Until the Dark Age update everything here works; afterwards the helm needs a Blueprint and a hull does not.$(br2)$(bold)Pirates$() sail ships of their own and will board yours. Cannons on a deck are the answer (Tier 3)."
+      "text": "$(bold)Ships are Tier 2$(): the Naga hold the knowledge. The helm, floaters, balloons and engine need the Blueprint; a hull is just blocks.$(br2)$(bold)Pirates$() sail ships of their own and will board yours. Cannons on a deck are the answer (Tier 3)."
     }
   ]
 }

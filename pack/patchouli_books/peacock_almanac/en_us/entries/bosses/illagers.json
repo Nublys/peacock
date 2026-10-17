@@ -22,7 +22,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Totem captains$() (Illage & Spillage, Respillaged): summoned with totems looted from outposts. Spellcasters and brutes with phases. They are summonable, so a full server never waits on worldgen for them.$(br2)They hold the frontier ore and the final rail."
+      "text": "$(bold)Totem captains$() (Illage & Spillage, Respillaged): summoned with totems looted from outposts. Spellcasters and brutes with phases. They are summonable, so a full server never waits on worldgen for them.$(br2)They hold the richest loot in the pack, and nothing a Blueprint needs."
     }
   ]
 }

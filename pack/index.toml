@@ -656,12 +656,28 @@ file = "defaultconfigs/createbigcannons-server.toml"
 hash = "9756edc8d2c01d836680b4247842eb15ff68f0d664f2ac6597b3369a0879a8e6"
 
 [[files]]
+file = "kubejs/assets/peacock/lang/en_us.json"
+hash = "e50a1c9c8636fe92084c3c97b6f0615fbe23d858972acbb9ebb70d3fec2d544f"
+
+[[files]]
+file = "kubejs/assets/peacock/textures/item/blueprint.png"
+hash = "244b616ffc97ccae07006cdbae119954d722f13cc5fbe72b738c0f95d25c7eb3"
+
+[[files]]
+file = "kubejs/client_scripts/blueprint_tooltips.js"
+hash = "09d333d76904e58dcfc54bac179a809c34e83ece952f11ab110dd5ea81e575f0"
+
+[[files]]
 file = "kubejs/config/peacock.json"
-hash = "07ea3ee453df2f6747cb2190bfaaf816e74d79b5fe44d9f1554675ad23448a49"
+hash = "58bf66ca50d7c94211352a837a0cb6a68e830522975eaf7a041ff1dd17235282"
 
 [[files]]
 file = "kubejs/server_scripts/almanac.js"
 hash = "d91c92d37d030cdf637c01682854c02b06a22da47200c8a1007f81179d03149c"
+
+[[files]]
+file = "kubejs/server_scripts/blueprints.js"
+hash = "e678eef716572cc34c231d7e88392c83fe579eb0db9d9b11a370e49e79109c0c"
 
 [[files]]
 file = "kubejs/server_scripts/geolosys_create.js"
@@ -678,6 +694,10 @@ hash = "66999753d56c1c2f33f45ffe9e4a6234ce17b7e31024c9c4f1235cea91e8ea38"
 [[files]]
 file = "kubejs/server_scripts/trading_depot_town.js"
 hash = "cf0fb4318055292299f0c82f862c7b8266ffa649f3355d4153c6f9f085ba55ee"
+
+[[files]]
+file = "kubejs/startup_scripts/peacock_ladder.js"
+hash = "b7f208f8b82076c7908068a37ee89a685701d9c4ceadd172e8185427e8e48b6e"
 
 [[files]]
 file = "mods/3dskinlayers.pw.toml"
@@ -1265,6 +1285,11 @@ hash = "57801dcff00d18cb749be4aeb4cefc4075e9f7c23e328fef7a20cbd609e3613d"
 metafile = true
 
 [[files]]
+file = "mods/recipe-stages.pw.toml"
+hash = "ff94210597f5bf032a675a4be94f4707913d2bfacbe9a02a49b6982adf6b749a"
+metafile = true
+
+[[files]]
 file = "mods/rhino.pw.toml"
 hash = "4a972fdbe2955ff11ac21c689d5e36c39d55231cf7cfc7cb49295d51756efd40"
 metafile = true
@@ -1480,11 +1505,11 @@ hash = "9b88c0024bb690a25375ac2eb4d0182313c8586daf4fe934eebda4c6ff87acb7"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/bosses/cataclysm.json"
-hash = "252ee6b9d1866afea118dcd9f2fc53698feb7582e731ca92818f5528ce5de055"
+hash = "9e0d5fd00dce9b054e4ee318246157bc2e5b9aee3bbf907fe418af5968fed1b4"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/bosses/illagers.json"
-hash = "2cbcfdff25e72898fc2546e9ad1fbb0881df67883672e728936d2ebf7417f042"
+hash = "b0cf6fb14fc90ab877dbda3996b17190131184fa01b9003e6dec147e16c7acce"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/bosses/incendium.json"
@@ -1496,7 +1521,7 @@ hash = "ef76f39d9648c49030198d8f2cae18c4b03b9901f691dcd1970ad9097224a8bf"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/bosses/mutants.json"
-hash = "e3b7ad6879fe4dc748ab009bd2644893e2749170fb80d6c4f84b6a06952b7115"
+hash = "4e3a7b9b4351f3e820bbc47cc3a457fc9be99ceeac7fdad75d97a98a5edd9079"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/bosses/where_they_are.json"
@@ -1512,7 +1537,7 @@ hash = "6db387827a36bafed33c3c0526b713c6c249a4eef870ec804c89f54fa6fb1546"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/building/ships.json"
-hash = "26ec0f6958cd117cbeefefed216234ef6cfb68a95b82d5c59a5da98629e2ff34"
+hash = "0bd8e4b02c6ccc60d411945ad6a84f05d26175b751a65ddc923800769fdfbae3"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/building/trains.json"
@@ -1528,7 +1553,7 @@ hash = "4140615f97b446c93fd6656b38d4f5ade59e0c664ff0f1b099fa516780401fc9"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/land/otherworlds.json"
-hash = "9200d5411a0775bd705d58fcc14222aeff60c16efb09ab50ac11c8563102a17d"
+hash = "08f6e2c96a114844da6995678773188d1b39e846ff4ff766b08192745ad2183b"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/land/seasons.json"
@@ -1592,11 +1617,11 @@ hash = "7927c6fb64e02d1b478ca68f5474261de4d1dcaf9f515662b055a7e5357abf6a"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/tech/how_blueprints_work.json"
-hash = "7a700f9d8cafb36dd8c25c3ef25ebb25829b5be7af43aff369a193f7bb6a3035"
+hash = "3cdbd3bb403a754b165b6fdb0ef715bb58487e1a5ccd98135a9ca3e5142524ee"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/tech/tier1.json"
-hash = "9b2aa7e9ffc596e1e6dd16a4a738b8a450433cecbb15a856c0918a6aa9841c54"
+hash = "07ff58d3e1535869287c4adcf631015609d78ea26ac30b0daeac254f0748a68b"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/tech/tier2.json"
@@ -1608,7 +1633,7 @@ hash = "310cdaf311b1e8487004351954f3e616b98d31916dbe038e81066b81759a1ef4"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/tech/tier4.json"
-hash = "93560917c22299ff29a0aee2796c9a7442e31defd7b60755e76ef932ace8b7e1"
+hash = "9376c000c4e280a97f2ccd557689a0cec67e91e4b3342515e5b8d2f54b5ef289"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/threats/finding.json"

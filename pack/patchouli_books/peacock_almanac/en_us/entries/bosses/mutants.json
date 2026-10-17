@@ -35,7 +35,7 @@
     {
       "type": "patchouli:entity",
       "entity": "mutantmonsters:mutant_enderman",
-      "text": "Mutant Enderman: teleports, throws blocks, clones. Water hurts it; fight by a lake. Holds $(bold)Ender logistics$().",
+      "text": "Mutant Enderman: teleports, throws blocks, clones. Water hurts it; fight by a lake. Holds nothing but pearls: a warning of what the End became.",
       "scale": 0.5
     }
   ]
