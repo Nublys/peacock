@@ -1,0 +1,13 @@
+{
+  "__comment": "Overrides TAN+ 1.4's broken copy of this recipe, which uses 'ingredient' where Tough As Nails' water_purifying serializer requires 'input' (an ItemStack with id/Count). The original crashes datapack loading on any world start. Remove when TAN+ ships a fix.",
+  "type": "toughasnails:water_purifying",
+  "input": {
+    "id": "minecraft:water_bucket",
+    "Count": 1
+  },
+  "purifytime": 600,
+  "result": {
+    "id": "tan_plus:purified_water_bucket",
+    "Count": 1
+  }
+}

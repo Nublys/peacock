@@ -45,6 +45,10 @@ Why things are the way they are. Add an entry when a choice would surprise someo
 - **Fresh Animations pinned to 1.10.4.** 1.10.5's `pack.mcmeta` uses only the 1.21.9+
   `min_format`/`max_format` keys and omits `pack_format`, so 1.20.1 reports "Missing metadata"
   and never loads it. Stay on 1.10.4 until a release restores `pack_format`.
+- **TAN+ 1.4 recipe override.** `data/create/recipes/filling/purified_water_bucket.json` in TAN+
+  is a `toughasnails:water_purifying` recipe using `ingredient` instead of `input`; TAN's
+  serializer NPEs and *every* world load fails ("Failed to load datapacks"). Overridden with a
+  correct copy in `pack/kubejs/data/…`. Drop the override when TAN+ fixes it.
 - **Pet Home** (1.1.2 and 1.1.3) — `MobMixin` shadows `setPathfindingMalus` with no refmap
   entry, so the mixin fails on production Forge and the game exits before the title screen.
   Removed 2026-10-16; re-add when a release ships a correct refmap.

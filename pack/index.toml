@@ -476,6 +476,10 @@ file = "config/yacl.json5"
 hash = "d26a63d3cdf326412ba86dcc2781060bc53ed6c74ac7808e65325452e264e820"
 
 [[files]]
+file = "kubejs/data/create/recipes/filling/purified_water_bucket.json"
+hash = "4c702ebae17c77801f7a960fa6457fa14e7ae1970c2d981a9467cd8e9c8c53e4"
+
+[[files]]
 file = "mods/3dskinlayers.pw.toml"
 hash = "4f80d26afe7fea7c8c6a1444605f6201812674e89541ec5849568cc7cee1975d"
 metafile = true
