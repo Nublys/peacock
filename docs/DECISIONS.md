@@ -51,6 +51,9 @@ Why things are the way they are. Add an entry when a choice would surprise someo
 - **Simple Clouds, colored lighting** — need OpenGL 4.2+/compute; macOS tops out at 4.1.
 - **Xaero's** — Map Atlases chosen for immersion; one-jar swap if it frustrates.
 - **Simply Swords, Apotheosis, Epic Fight, Ice & Fire** — wrong tone or replace too much.
+- **Block physics / structural collapse** (Realistic Block Physics, Physics Mod, Everything Falls) —
+  update-driven physics collides with Create contraptions, Valkyrien Skies and runtime-built villages,
+  and one careless break demolishes a shared build. Decided against 2026-10-17.
 - **Fresh Animations pinned to 1.10.4.** 1.10.5's `pack.mcmeta` uses only the 1.21.9+
   `min_format`/`max_format` keys and omits `pack_format`, so 1.20.1 reports "Missing metadata"
   and never loads it. Stay on 1.10.4 until a release restores `pack_format`.
