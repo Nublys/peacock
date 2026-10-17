@@ -210,6 +210,12 @@ def write(path: Path, data):
     path.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
 def main():
+    # validate every page before touching the output, so a bad page never leaves a half-written book
+    for cid, entries in ENTRIES.items():
+        for eid, name, icon, pages in entries:
+            for pg in pages:
+                if isinstance(pg, str) and len(pg) > 420:
+                    raise SystemExit(f"page too long in {cid}/{eid}: {len(pg)} chars (limit 420)")
     if OUT.exists(): shutil.rmtree(OUT)
     write(OUT / "book.json", BOOK_JSON)
     lang = OUT / "en_us"
