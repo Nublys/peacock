@@ -54,7 +54,8 @@ server's `config/` — the next sync replaces them.
 
 Marked `side = "server"` in `pack/mods/`, so they install here and never on a client:
 
-- **Spark** — `spark profiler --timeout 60` is the first thing to run when TPS drops
+- **Spark** — `spark profiler --timeout 60` is the first thing to run when TPS drops; the 2026-10-17 profile
+  (villager AI = 44%) is why Canary is in the pack and `simulation-distance` is 5
 - **LuckPerms** — permissions; `lp user <name> permission set minecraft.command.* true` for staff
 
 Claims / anti-grief (FTB Chunks vs a lighter mod) is an open decision in `docs/PLAN.md`.

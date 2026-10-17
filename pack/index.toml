@@ -82,6 +82,10 @@ file = "config/blueprint-common.toml"
 hash = "54b999cd4b8859787eec9d1b8df99b5e318030961fe7bf444dc31727de8a69f6"
 
 [[files]]
+file = "config/canary.properties"
+hash = "12305de938308593d2d65eeed47d6652340fc5e4412ab1cafdf6072b400d89aa"
+
+[[files]]
 file = "config/caravansconvoys-common.toml"
 hash = "e765a62d4dfc55bc0a29a2a39fa1c9c37dc9ed8d3adc98690c2938343ae59b53"
 
@@ -674,6 +678,11 @@ metafile = true
 [[files]]
 file = "mods/bountiful.pw.toml"
 hash = "12971220390c277d210e15eb2bb2cfcdf2b696b39118e139f044b6d2c207eb07"
+metafile = true
+
+[[files]]
+file = "mods/canary.pw.toml"
+hash = "14481081a9e233f4ba57df8a77ce028184818143eae1c73b60749ea482c912e9"
 metafile = true
 
 [[files]]

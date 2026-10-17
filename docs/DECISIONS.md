@@ -158,6 +158,16 @@ Why things are the way they are. Add an entry when a choice would surprise someo
   as real datapacks above every mod, for worldgen and everything else. All data overrides moved to
   `pack/config/paxi/datapacks/peacock/`; KubeJS keeps only scripts.
 
+## Server performance: the profile, and what it changed (2026-10-17)
+- Spark on the live server (1 player, 327 entities, TPS 14.9): **77% of the server thread was entity
+  ticking, 44% villagers alone** — vanilla `Brain → AcquirePoi → PathFinder`, villagers hunting beds and
+  job sites across Terralith terrain in a tall CTOV village. Create, DH, VS, worldgen: negligible. The
+  host is a 2013 Xeon E5-2690 v2 (3.0 GHz): the single game thread runs at about half a modern core.
+- Added **Canary 0.3.3** (Lithium for Forge) for its AI/POI/pathing optimizations, with
+  `block_entity_ticking`, `entity.collisions` and `chunk.serialization` disabled in `canary.properties`
+  (Create and Valkyrien Skies friction history). `simulation-distance` 6 → 5 in the server template.
+- Open: cap villager density per town (Village Expansion / Villager Workers keep adding) — count first.
+
 ## Jade for block/entity tooltips (2026-10-17)
 - Jade 11.13.3, side both (server-side data for container contents). Create, Farmer's Delight,
   Supplementaries, Doggy Talents and Mowzie's ship their own Jade plugins. Not The One Probe (thinner
