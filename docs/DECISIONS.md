@@ -189,6 +189,21 @@ Why things are the way they are. Add an entry when a choice would surprise someo
   so a changed default reaches existing installs without `PEACOCK_RESET=1` while a player's own edit is
   still kept. Append to `PREVIOUS_DEFAULTS` whenever a shipped default changes.
 
+## Phase 3 glue: how each rule is enforced (2026-10-17)
+- **Depot is town-bound** by counting block entities in the 5×5 loaded chunks around the placement
+  (bells and beds both have one) instead of scanning blocks or POIs: cheap, no POI predicate plumbing
+  through Rhino, and "loaded chunks" is always true for the chunks around a player placing a block.
+- **Rumour maps are vanilla exploration maps.** The structure search they trigger runs on the server
+  thread when the chest loot rolls — the same class of cost as `/locate`. Mitigation is in the numbers:
+  radius 40 chunks for Mowzie's sets (spacing 25 → ~10 cells), 60 for the illager fort (spacing 42),
+  100–120 for Cataclysm (spacing 80–112 → 1–4 cells). `skip_existing_chunks: false` so a map can point
+  at a structure someone already walked past. Kill switch: `rumourMaps` in `kubejs/config/peacock.json`.
+- **Pack switches live in `kubejs/config/peacock.json`**, read with `JsonIO` at script load, so an admin
+  can turn a rule off with `/reload` instead of editing scripts.
+- **Mowzie's biome gate** opened with `#minecraft:is_overworld` rather than a hand list: the per-boss
+  `biome_tags` in `mowziesmobs-common.toml` (snowy / savanna / peak / not-ocean) already select the
+  right biomes; the `has_mowzie_structure` tag was only a vanilla-biome allowlist.
+
 ## The Mac stays on `low` (2026-10-17)
 - The M5 Air gets 40–50 FPS on `low` (Complementary at Potato preset, DH 128) and Aaron is keeping it
   there rather than `medium`. The README's "MacBook Air = medium" guidance is therefore aspirational;

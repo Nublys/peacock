@@ -1,0 +1,5 @@
+{
+  "_comment": "Peacock pack switches read by kubejs/server_scripts/*.js. Server-side; takes effect on /reload or restart.",
+  "rumourMaps": true,
+  "depotNeedsTown": true
+}

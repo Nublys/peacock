@@ -436,6 +436,50 @@ file = "config/paxi/datapacks/peacock/data/minecraft/worldgen/structure_set/vill
 hash = "1cde8e7f6740a3bd6770539589936e6de5f6bb8d6c107b08b414eec69b956c18"
 
 [[files]]
+file = "config/paxi/datapacks/peacock/data/mowziesmobs/tags/worldgen/biome/has_structure/has_mowzie_structure.json"
+hash = "0ee75ac9e4f5bbcd3fa6ce4f54e081f57590cc6c8831cefcd1870afa88d32ba2"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/tags/worldgen/structure/rumour_acropolis.json"
+hash = "698b730f2994986700d846869b5466b6282b251b8b7196ca245c708f420114d5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/tags/worldgen/structure/rumour_ancient_factory.json"
+hash = "f9686b7ef0548a37838452d8db3fd50c15116c0092a614cf597ca571cc04d5c8"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/tags/worldgen/structure/rumour_cursed_pyramid.json"
+hash = "47a9bbc9d8f51109f2b80c18d6443b99c8689a67340150b5d4912e50d5011a13"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/tags/worldgen/structure/rumour_frosted_prison.json"
+hash = "8cd5623902d28193f28045bbbdb3af8e7e180fcf8a4b8e41dfcccddf30d8e2f9"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/tags/worldgen/structure/rumour_frostmaw.json"
+hash = "2cb63039060e664470eca1d6e233433dbad590d11189dbba7277262dd11cf125"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/tags/worldgen/structure/rumour_illager_fort.json"
+hash = "358c0dcabd3edc3b2e35c709ae44e54fd58f5b6764bebe779bb0ca00695ec2df"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/tags/worldgen/structure/rumour_monastery.json"
+hash = "a9244774f8a2e5a20ac7a8124206dc10fd2b121e7b66718ea3d7272e8e941a54"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/tags/worldgen/structure/rumour_sunken_city.json"
+hash = "a556d4803cd4106fc1329894ac83b5c3f5a8b749062b85af6ad09648976ad5e6"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/tags/worldgen/structure/rumour_umvuthana_grove.json"
+hash = "a8ab5006e77c7fc12ffc11bb86ded9328068d173f39e8408bfbab22a6b37fdbb"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/tags/worldgen/structure/rumour_wrought_chamber.json"
+hash = "491eb8a4899769282cf1aac2d64e6ee7b502cc1ae5f83ef717d74b3f16094b1d"
+
+[[files]]
 file = "config/paxi/datapacks/peacock/data/sereneseasons/tags/blocks/autumn_crops.json"
 hash = "a5310d4145eefae9ed989d01e717c64365bba38f2eb6847f7e2f438c7f74cda6"
 
@@ -612,12 +656,28 @@ file = "defaultconfigs/createbigcannons-server.toml"
 hash = "9756edc8d2c01d836680b4247842eb15ff68f0d664f2ac6597b3369a0879a8e6"
 
 [[files]]
+file = "kubejs/config/peacock.json"
+hash = "07ea3ee453df2f6747cb2190bfaaf816e74d79b5fe44d9f1554675ad23448a49"
+
+[[files]]
 file = "kubejs/server_scripts/almanac.js"
 hash = "d91c92d37d030cdf637c01682854c02b06a22da47200c8a1007f81179d03149c"
 
 [[files]]
 file = "kubejs/server_scripts/geolosys_create.js"
 hash = "32673ee7bf8035b89cd98b41e5860a98d261445d5ae1aaabf776fd96dae6eb2e"
+
+[[files]]
+file = "kubejs/server_scripts/rumour_maps.js"
+hash = "ba61f824c74a714b66b4e22d276bd66ecfbf8fd6175bf6c261cd4ecf2db30f84"
+
+[[files]]
+file = "kubejs/server_scripts/thirst_off.js"
+hash = "66999753d56c1c2f33f45ffe9e4a6234ce17b7e31024c9c4f1235cea91e8ea38"
+
+[[files]]
+file = "kubejs/server_scripts/trading_depot_town.js"
+hash = "cf0fb4318055292299f0c82f862c7b8266ffa649f3355d4153c6f9f085ba55ee"
 
 [[files]]
 file = "mods/3dskinlayers.pw.toml"

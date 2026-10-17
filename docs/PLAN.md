@@ -91,7 +91,19 @@ Still to do (needs playtest data or Phase 3 scripting):
   visible, iron and zinc findable within a session (prospector's pick + samples), a crop planted out
   of season does nothing until under a glass roof
 
-## Phase 3 — Glue (KubeJS)
+## Phase 3 — Glue (KubeJS)  🟡 started 2026-10-17
+Shipped (`pack/kubejs/server_scripts/`, switches in `pack/kubejs/config/peacock.json`):
+- `thirst_off.js` — canteens, purifier, rain collector, water bottles and every TAN/TAN+ juice: recipes
+  removed, hidden from EMI. Temperature items untouched.
+- `trading_depot_town.js` — a trading depot only places with a bell and ≥4 beds within 32 blocks
+  (counted from block entities in the loaded chunks; creative bypasses). Switch `depotNeedsTown`.
+- `rumour_maps.js` — exploration maps to boss structures (Paxi tags `peacock:rumour_*`) in outpost,
+  cartographer, Create-workshop, illager-fort, grove, monastery, labyrinth and Cataclysm treasure chests,
+  tiered so each place points one rung up. Search radii sized per structure-set spacing. Switch `rumourMaps`.
+- Paxi `mowziesmobs:has_structure/has_mowzie_structure = #minecraft:is_overworld` — Mowzie's bosses can
+  now generate in Terralith/BOP biomes (their own biome_tags still decide which).
+Untested in play (no server to run here): watch `logs/latest.log` for `KubeJS` errors on start, place a
+depot outside a village, open an outpost chest.
 - Cross-mod recipes: wagons, canteens, guard/recruit gear, troughs, oil from FD crops,
   rail iron, cannon parts via press
 - Bountiful pools, Caravans & Convoys trades, villager trades, loot tables (Create ruins,
