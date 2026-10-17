@@ -65,7 +65,7 @@ Named by what the machine is, never by its OS. `PEACOCK_PROFILE=` one of:
 
 | profile | for | shaders | Distant Horizons | render dist. |
 |---|---|---|---|---|
-| `potato` | iGPU, old or hot laptop, <16 GB | off (Complementary Potato preset if you turn them on) | 96, no transparency | 6 |
+| `potato` | iGPU, old or hot laptop, <16 GB | off (Complementary Potato preset if you turn them on) | 64, no transparency, no Fresh Animations | 6 |
 | `low` | iGPU with some headroom (Vega 8, Iris Xe) | Complementary Reimagined, Potato preset | 128 | 6 |
 | `medium` *(default)* | fanless thin-and-light, 16 GB (MacBook Air) | Complementary Reimagined, Medium | 192 | 8 |
 | `high` | laptop with a real GPU and cooling | Complementary + Euphoria, High | 256 | 10 |

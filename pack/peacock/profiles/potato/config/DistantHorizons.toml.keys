@@ -1,4 +1,4 @@
-lodChunkRenderDistanceRadius = 96
+lodChunkRenderDistanceRadius = 64
 numberOfThreads = 1
 transparency = "DISABLED"
 verticalQuality = "LOW"

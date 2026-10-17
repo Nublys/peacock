@@ -189,6 +189,14 @@ Why things are the way they are. Add an entry when a choice would surprise someo
   so a changed default reaches existing installs without `PEACOCK_RESET=1` while a player's own edit is
   still kept. Append to `PREVIOUS_DEFAULTS` whenever a shipped default changes.
 
+## Client FPS on the potato tier (2026-10-17)
+- `potato` now: DH radius 64 (was 96), `entityDistanceScaling` 0.5, vanilla clouds off, and **no Fresh
+  Animations** (EMF animates every entity on the render thread; the other packs are free). Shaders off,
+  fast graphics, render distance 6 were already there. Everything else in the pack's client stack
+  (Embeddium, ImmediatelyFast, Entity Culling, ModernFix, FerriteCore, Canary) is already the ceiling of
+  what mods can do; past this it is resolution, Mesa `mesa_glthread=true` on Linux, and JVM flags.
+- Nothing in the pack can scale render resolution; on an iGPU, window size is the single biggest lever.
+
 ## Server performance: the profile, and what it changed (2026-10-17)
 - Spark on the live server (1 player, 327 entities, TPS 14.9): **77% of the server thread was entity
   ticking, 44% villagers alone** — vanilla `Brain → AcquirePoi → PathFinder`, villagers hunting beds and
@@ -198,7 +206,10 @@ Why things are the way they are. Add an entry when a choice would surprise someo
   `block_entity_ticking`, `entity.collisions` and `chunk.serialization` disabled in `canary.properties`
   (Create and Valkyrien Skies friction history), plus `ai.poi` off: its root mixin rewrites
   `PoiManager.getInRange`, which Valkyrien Skies' `MixinPOIManager` hooks — with both on the VS mixin fails
-  and VS stops the server. `simulation-distance` 6 → 5 in the server template.
+  and VS stops the server. `simulation-distance` 6 → 5 in the server template, then **7** (2026-10-17 14:20,
+  Aaron: 5 is too short in play). Ticked area: 5 → 121 chunks, 6 → 169, 7 → 225, 8 → 289; with ~40 ms ticks
+  at 5 and one player, 7 is the experiment and 6 the fallback; FTB Chunks force-loading (Phase 5) is the
+  real answer for bases that must keep running.
 - Open: cap villager density per town (Village Expansion / Villager Workers keep adding) — count first.
 
 ## Client performance stack (2026-10-17)

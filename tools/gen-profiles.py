@@ -33,9 +33,11 @@ RESOURCE_PACKS = '["vanilla","mod_resources","file/Better-Leaves-9.6.zip","file/
 
 #          tier          shaders  pack        preset      DH radius  DH transp.  threads  DH quality  options.txt keys
 TIERS = {
-    "potato":      dict(shaders=False, pack=CR_ZIP,  preset="POTATO",  dh=96,  transp="DISABLED", threads=1, quality="LOW", ssao=False, emb=("FAST","FAST","false"),
+    "potato":      dict(shaders=False, pack=CR_ZIP,  preset="POTATO",  dh=64,  transp="DISABLED", threads=1, quality="LOW", ssao=False, emb=("FAST","FAST","false"),
+                        fresh_animations=False,
                         options={"renderDistance": "6", "simulationDistance": "6", "graphicsMode": "0", "particles": "2",
-                                 "entityShadows": "false", "biomeBlendRadius": "1", "mipmapLevels": "2", "entityDistanceScaling": "0.75"}),
+                                 "entityShadows": "false", "biomeBlendRadius": "1", "mipmapLevels": "2", "entityDistanceScaling": "0.5",
+                                 "renderClouds": "false"}),
     "low":         dict(shaders=True,  pack=CR_ZIP,  preset="POTATO",  dh=128, transp="FAKE",     threads=1, quality="LOW", ssao=False, emb=("FAST","FAST","false"),
                         options={"renderDistance": "6", "simulationDistance": "6", "graphicsMode": "1", "particles": "1",
                                  "entityShadows": "false", "biomeBlendRadius": "2"}),
@@ -110,7 +112,8 @@ def main():
         # settings for the plain pack and for the Euphoria folder, so switching packs in-game keeps the tier's preset
         (d / f"shaderpacks/{CR_ZIP}.txt.keys").write_text(txt)
         (d / f"shaderpacks/{EUPHORIA}.txt.keys").write_text(txt)
-        opts = dict(c["options"], resourcePacks=RESOURCE_PACKS)
+        packs = RESOURCE_PACKS if c.get("fresh_animations", True) else RESOURCE_PACKS.replace(',"file/FreshAnimations_v1.10.4.zip"', "")
+        opts = dict(c["options"], resourcePacks=packs)
         (d / "options.txt.keys").write_text("".join(f"{k}:{v}\n" for k, v in opts.items()))
         print(f"{tier:12s} shaders={'on ' if c['shaders'] else 'off'} {c['pack'][:28]:28s} {c['preset']:7s} DH {c['dh']:>3} {c['transp']:8s} {c['threads']}t")
     for rel, lines in PREVIOUS_DEFAULTS.items():
