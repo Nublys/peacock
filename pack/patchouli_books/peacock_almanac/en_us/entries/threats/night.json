@@ -20,7 +20,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Old Guns$(): flintlocks, muskets and blunderbusses, loud and slow, made at a gun crafting station once you have steel and gunpowder. Gunpowder tech is on the ladder (Mutant Creeper).$(br2)$(bold)Corpses$(): your items wait on your body. Nothing despawns."
+      "text": "$(bold)Muskets$() (Musket Mod): flintlock muskets, pistols and blunderbusses. Loud, slow to load, and they hit like a wall. Cartridges need gunpowder, which is on the ladder (Blasting, Mutant Creeper). Recruits will carry them too.$(br2)$(bold)Corpses$(): your items wait on your body. Nothing despawns."
     },
     {
       "type": "patchouli:text",

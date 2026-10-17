@@ -155,7 +155,7 @@ where others have.
 **Pterodactyl egg** (`server/pterodactyl/egg-peacock.json`): install script sets up Forge +
 bootstrap + first sync; startup re-syncs and applies `pack/peacock-server/` overrides. Voice
 chat shares the game port (`port=-1`) so one allocation suffices. Bare-metal `start.sh` kept.
-Spark/LuckPerms as `side = "server"` (Chunky removed: DH 3.3.3 crashes with it, see DECISIONS). Remaining: claims decision, backups on the host, runbook
+Voice chat port is set by hand on the server (no override). Spark/LuckPerms as `side = "server"` (Chunky removed: DH 3.3.3 crashes with it, see DECISIONS). Remaining: claims decision, backups on the host, runbook
 details below as they get exercised.
 - Server-side packwiz (`-s server`), same datapacks/KubeJS; Forge 47.4.16, Java 17
 - `server.properties`: view-distance 8, simulation-distance 6, whitelist on, max-tick-time
@@ -171,7 +171,7 @@ details below as they get exercised.
     AFK — no `/home`, `/tpa` or warps (no fast travel is a design rule)
   - **FTB Chunks** — claims (anti-grief) and *capped* force-loading (1 chunk/player unless
     a stage raises it); its map/minimap turned **off** so Map Atlases stays the only map
-  - Simple Voice Chat: shares the game port (`port=-1`, Wings opens TCP+UDP); 48-block range, groups on
+  - Simple Voice Chat: own UDP allocation, set by hand in `config/voicechat/voicechat-server.properties`
   - Backups: Pterodactyl backups + a daily schedule; manual backup before a pack version bump
 - Distant Horizons server config: LOD generation on the server, distribution to clients,
   rate limits for many clients

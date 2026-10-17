@@ -15,7 +15,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Server rules:$() shells hurt $(bold)mobs and players$() in their blast but $(bold)do not break blocks$(). You can defend a town and fight a ship; you cannot level a town. Explosions from cannons are AOE only.$(br2)Old Guns are the handheld cousins and follow the Blasting Blueprint, not this one."
+      "text": "$(bold)Server rules:$() shells hurt $(bold)mobs and players$() in their blast but $(bold)do not break blocks$(). You can defend a town and fight a ship; you cannot level a town. Explosions from cannons are AOE only.$(br2)Muskets are the handheld cousins and follow the Blasting Blueprint, not this one."
     }
   ]
 }

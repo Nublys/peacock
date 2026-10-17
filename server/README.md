@@ -57,8 +57,11 @@ the startup command copies them over the server root after each sync:
 
 | file | why |
 |---|---|
-| `config/DistantHorizons.toml` | `chunkGeneratorMode = "FEATURES"` — the server generates LODs (clients: DISABLED); 4 threads |
-| `config/voicechat/voicechat-server.properties` | `port=-1` → voice chat on the game port; 48-block range; groups on |
+| `config/DistantHorizons.toml` | `chunkGeneratorMode = "FEATURES"` — the server generates LODs; 2 threads, request rate limits |
+| `config/dynamicview.json` | Dynamic View: simulation 5–12 / view 8–10 around a 42 ms tick |
+
+Voice chat is **not** overridden: edit `config/voicechat/voicechat-server.properties` on the server by
+hand (`port=` your dedicated UDP allocation, or `-1` to share the game port) and it stays.
 
 Add a file there when something must be server-only. Never hand-edit those paths in the
 server's `config/` — the next sync replaces them.

@@ -1,0 +1,13 @@
+name = "Musket Mod"
+filename = "musketmod-1.20.1-forge-1.5.4.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/967vM4zw/versions/TMhHD4WK/musketmod-1.20.1-forge-1.5.4.jar"
+hash-format = "sha512"
+hash = "769e55dfc704f0b5028ec0bcd2301effced94d22dc83772a601de53da36556b545281565b795d73abcba394d26bd0452a6fc874eac38cb867b585155b79783a3"
+
+[update]
+[update.modrinth]
+mod-id = "967vM4zw"
+version = "TMhHD4WK"

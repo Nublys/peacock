@@ -21,7 +21,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Blasting$() covers TNT, gunpowder recipes, the blaze burner and Old Guns' powder. $(bold)Recruiting$() is hiring from Village Recruits; guards stay free.$(br2)A fresh server should clear Tier 1 in its first week."
+      "text": "$(bold)Blasting$() covers TNT, gunpowder recipes, the blaze burner and musket cartridges. $(bold)Recruiting$() is hiring from Village Recruits; guards stay free.$(br2)A fresh server should clear Tier 1 in its first week."
     },
     {
       "type": "patchouli:relations",

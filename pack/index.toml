@@ -1195,6 +1195,11 @@ hash = "dba63f2ec229a5b0418df3e2de197dcde32fe6b9c60ab3549d61436585e8fef8"
 metafile = true
 
 [[files]]
+file = "mods/musket-mod.pw.toml"
+hash = "5bec5af8168f71eee949cd400802293aed0eb36a1f8fa60ae5abe5713b4f38ae"
+metafile = true
+
+[[files]]
 file = "mods/mutant-monsters.pw.toml"
 hash = "6fc80e0a173243ebf00c00d198dfaa20df5ae4d7f9360f1ef7f6ed1131330631"
 metafile = true
@@ -1232,11 +1237,6 @@ metafile = true
 [[files]]
 file = "mods/oculus.pw.toml"
 hash = "f2ce670820167ff1594c14724c44fb287faaf79d70d18a20162e5d758da84ef5"
-metafile = true
-
-[[files]]
-file = "mods/old-guns.pw.toml"
-hash = "2741d09266c5e4d5bc10be464f59e691280b7fd063b160115761e711b1ad66bd"
 metafile = true
 
 [[files]]
@@ -1504,7 +1504,7 @@ hash = "551fda21733c976f67635d31572889b5983cdda3ceb63827ee040b47fae200cd"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/building/cannons.json"
-hash = "cc4f586bbb251530269a943d6bd1fbe8c03442ef403539c115b8e9ba7ae720d6"
+hash = "a83e449cdfe9cbdcf65f198c3a1731114ac268f8dcd1822e4f122efeecc233d5"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/building/decor.json"
@@ -1596,7 +1596,7 @@ hash = "7a700f9d8cafb36dd8c25c3ef25ebb25829b5be7af43aff369a193f7bb6a3035"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/tech/tier1.json"
-hash = "d460fa6ece02208f0a95641dbaecd78005b742d3b9be40fd8bdd72bf40170972"
+hash = "9b2aa7e9ffc596e1e6dd16a4a738b8a450433cecbb15a856c0918a6aa9841c54"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/tech/tier2.json"
@@ -1616,7 +1616,7 @@ hash = "0b52eda07430f208393f41acf0660bbbaaa137668de0549e7aff4a9a87d51df7"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/threats/night.json"
-hash = "44c85d3b2b12a3d977d51d767e484723b0494ee673939fd341e1ddaac66cb964"
+hash = "e91e41ec1aea3c6a139358ab86dc6b5ee3251ebf75328dc6f8c2237e8e5b6a31"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/threats/pillagers.json"
@@ -1669,10 +1669,6 @@ hash = "bb35e8c4a53dfedda72bf50bb8027cd02267509c0c8dcc251e105aa36348ae40"
 [[files]]
 file = "peacock-server/config/dynamicview.json"
 hash = "4a3644e40aaa44646a2e79c0c0b4f8db57895aa71480110aa0dc8dd9e5a48a23"
-
-[[files]]
-file = "peacock-server/config/voicechat/voicechat-server.properties"
-hash = "87bad15949ca26d599fd8af9d9c7fcb79b83401280a74bdd102e3968e8f97494"
 
 [[files]]
 file = "peacock-server/peacock-start.sh"

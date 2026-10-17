@@ -189,6 +189,14 @@ Why things are the way they are. Add an entry when a choice would surprise someo
   so a changed default reaches existing installs without `PEACOCK_RESET=1` while a player's own edit is
   still kept. Append to `PREVIOUS_DEFAULTS` whenever a shipped default changes.
 
+## Old Guns V2 out, Musket Mod in (2026-10-17)
+- "Old Guns V2" turned out to be 20th-century firearms (AKM, MP5, Thompson, Kar98k, Colt 1911 …) with no
+  muzzle-loaders at all; "trim the modern guns" would have left a revolver and a Winchester. Replaced by
+  **Musket Mod** (ewewukek): flintlock muskets, pistols, blunderbuss; cartridges need gunpowder, which
+  the Blasting rung gates. Village Recruits' addon detects `musketmod` and arms recruits with them.
+- The voice-chat server override was dropped from `pack/peacock-server/`: Aaron assigns Simple Voice
+  Chat its own port on the panel, and a shipped file would overwrite that every start.
+
 ## Phase 3 glue: how each rule is enforced (2026-10-17)
 - **Depot is town-bound** by counting block entities in the 5×5 loaded chunks around the placement
   (bells and beds both have one) instead of scanning blocks or POIs: cheap, no POI predicate plumbing
