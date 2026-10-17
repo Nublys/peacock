@@ -189,6 +189,19 @@ Why things are the way they are. Add an entry when a choice would surprise someo
   so a changed default reaches existing installs without `PEACOCK_RESET=1` while a player's own edit is
   still kept. Append to `PREVIOUS_DEFAULTS` whenever a shipped default changes.
 
+## First server run of Phases 3–5: two script bugs, one worldgen fix (2026-10-17 17:37 log)
+- KubeJS loads all server scripts into **one scope**: `const SWITCHES`/`const RADIUS` declared in two files
+  killed two scripts. Every script now wraps its body in a block and uses file-prefixed names.
+- `JSON.stringify(recipe.json)` on a Gson object dumps the object's Java members, so all 613 staged
+  recipes failed to parse (and had already been removed: brass was uncraftable for everyone). Fixed by
+  `JSON.parse(String(recipe.json))` — Gson's `toString()` is the JSON text.
+- **Buildings on farms**: Village Recruits' Village Expansion plans houses around any bell, including CTOV
+  villages, and its plot test only knew lava/fire/cactus. `plotHazardBlocks` now lists farmland, crops
+  (vanilla + Farmer's Delight), hay, composters, bells, lecterns, chests, paths, rails, water, Create
+  track/belts/depots, the trading depot and bounty boards, so a plot touching a town's working parts is
+  skipped. The tower-spawner structure set also got an exclusion zone (8 chunks) from `minecraft:village`
+  and wider spacing, so a Recruits settlement does not seed itself inside a CTOV town.
+
 ## Claims are FTB Chunks, with its map switched off (2026-10-17)
 - Chosen over Flan / Open Parties and Claims because its force-loading is **capped and team-scoped**
   (`max_force_loaded_chunks`, `hard_team_force_limit`) and because FTB Teams doubles as the grouping layer

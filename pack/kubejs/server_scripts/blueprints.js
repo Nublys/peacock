@@ -13,6 +13,8 @@
 //      the stage. Creative players bypass.
 // Switch: "ladder" in kubejs/config/peacock.json (false = nothing is staged or gated; drops still work).
 
+// KubeJS loads every server script into one shared scope, so the body lives in its own block.
+{
 const SW = (() => { try { return JsonIO.read('kubejs/config/peacock.json') || {} } catch (e) { return {} } })()
 const LADDER_ON = SW.ladder !== false
 const L = global.LADDER
@@ -52,7 +54,8 @@ ServerEvents.recipes(event => {
     if (!id || id.startsWith('peacock:') || id.startsWith('recipestages:') || wrapped[id]) return
     const type = String(recipe.getType())
     if (type !== 'minecraft:crafting_shaped' && type !== 'minecraft:crafting_shapeless') return
-    const json = JSON.parse(JSON.stringify(recipe.json))
+    // recipe.json is a Gson JsonObject: String() gives compact JSON; JSON.stringify would dump its Java members
+    const json = JSON.parse(String(recipe.json))
     const out = json.result && (json.result.item || json.result.id)
     wrapped[id] = rung
     event.remove({ id: id })
@@ -169,3 +172,5 @@ ItemEvents.entityInteracted(event => {
   event.cancel()
   deny(player, 'recruiting', 'Hiring')
 })
+}
+// end-scope

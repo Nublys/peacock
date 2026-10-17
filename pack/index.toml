@@ -433,7 +433,7 @@ hash = "72bf98034285d5146ae76b14fdf93fbab97464d75b0e71ada2a30480f507b34a"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/minecraft/worldgen/structure_set/villages.json"
-hash = "1cde8e7f6740a3bd6770539589936e6de5f6bb8d6c107b08b414eec69b956c18"
+hash = "c0b9e9c962b343621485120d68f08f569dc16ae366e9014a555bd316338bf117"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/mowziesmobs/tags/worldgen/biome/has_structure/has_mowzie_structure.json"
@@ -589,7 +589,7 @@ hash = "ebf692c917bae16435148c20a163a3989920437665f981033fec6fd6aec2ef17"
 
 [[files]]
 file = "config/village_recruits/building.toml"
-hash = "e4b1cc402477352d889fcf9c35ee272347f2e8f5079d6ac62b0c011e965b676e"
+hash = "19f3747e8a34b396a31b1acf94ea41c76eb846cc1f9396f8f110146a7afd2424"
 
 [[files]]
 file = "config/village_recruits/client.toml"
@@ -685,31 +685,31 @@ hash = "4afa1fbeac844f6ce94f8190e7c59f5508a6d568f87f22ac4b9e6ef3879facb7"
 
 [[files]]
 file = "kubejs/server_scripts/almanac.js"
-hash = "d91c92d37d030cdf637c01682854c02b06a22da47200c8a1007f81179d03149c"
+hash = "64693d3390edef117a0ff20e979215d88931270a55c72a08d438ded170707e4f"
 
 [[files]]
 file = "kubejs/server_scripts/blueprints.js"
-hash = "e678eef716572cc34c231d7e88392c83fe579eb0db9d9b11a370e49e79109c0c"
+hash = "8abd87662012cb8a8ee7a205ab4cca94c7bd19fccaace524dcdbae5247268ed6"
 
 [[files]]
 file = "kubejs/server_scripts/geolosys_create.js"
-hash = "32673ee7bf8035b89cd98b41e5860a98d261445d5ae1aaabf776fd96dae6eb2e"
+hash = "0b6dee714a0940919ae3e10d9c793299a1236ac1728942e92524b6d08d0aea85"
 
 [[files]]
 file = "kubejs/server_scripts/rumour_maps.js"
-hash = "ba61f824c74a714b66b4e22d276bd66ecfbf8fd6175bf6c261cd4ecf2db30f84"
+hash = "23c7338f8395845a40f1035e6c5fc61c56386c77907940e3633f0bb1bb085df9"
 
 [[files]]
 file = "kubejs/server_scripts/thirst_off.js"
-hash = "66999753d56c1c2f33f45ffe9e4a6234ce17b7e31024c9c4f1235cea91e8ea38"
+hash = "cfa1522b29f9a25885fa4571a2945f6cf7170cc6e4baea0cf1a0d9a8eec25caf"
 
 [[files]]
 file = "kubejs/server_scripts/trading_depot_town.js"
-hash = "cf0fb4318055292299f0c82f862c7b8266ffa649f3355d4153c6f9f085ba55ee"
+hash = "44b6ebe2324bef1d25a679e5b3c6a36a01f817bc1655bd8b64115573d5bcc766"
 
 [[files]]
 file = "kubejs/server_scripts/villager_cap.js"
-hash = "eaec5c3d88b461b619d2368bf22c3c8a2f37aa26c3457efb8172653de7e8322f"
+hash = "48b64fc91961bd034792900cdac290a1c650028ce919390c059b76b38a53febc"
 
 [[files]]
 file = "kubejs/startup_scripts/peacock_ladder.js"

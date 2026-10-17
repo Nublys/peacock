@@ -11,6 +11,8 @@
 // for the sparse ones (Cataclysm, spacing 80–112), so each search checks only a handful of cells.
 // If outpost chests ever cause visible stalls, set "rumourMaps": false in kubejs/config/peacock.json.
 
+// KubeJS loads every server script into one shared scope, so the body lives in its own block.
+{
 const SWITCHES = (() => { try { return JsonIO.read('kubejs/config/peacock.json') || {} } catch (e) { return {} } })()
 const RUMOUR_MAPS_ON = SWITCHES.rumourMaps !== false
 
@@ -70,3 +72,5 @@ ServerEvents.chestLootTables(event => {
     })
   })
 })
+}
+// end-scope

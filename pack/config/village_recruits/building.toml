@@ -157,7 +157,7 @@
 	#
 	#Empty list turns the test off.
 	#
-	plotHazardBlocks = ["minecraft:lava", "minecraft:fire", "minecraft:soul_fire", "minecraft:magma_block", "minecraft:cactus", "minecraft:sweet_berry_bush", "minecraft:wither_rose", "minecraft:powder_snow", "minecraft:campfire", "minecraft:soul_campfire"]
+	plotHazardBlocks = ["minecraft:lava", "minecraft:fire", "minecraft:soul_fire", "minecraft:magma_block", "minecraft:cactus", "minecraft:sweet_berry_bush", "minecraft:wither_rose", "minecraft:powder_snow", "minecraft:campfire", "minecraft:soul_campfire", "minecraft:farmland", "minecraft:wheat", "minecraft:carrots", "minecraft:potatoes", "minecraft:beetroots", "minecraft:melon_stem", "minecraft:pumpkin_stem", "minecraft:hay_block", "minecraft:composter", "minecraft:bell", "minecraft:lectern", "minecraft:chest", "minecraft:barrel", "minecraft:dirt_path", "minecraft:rail", "minecraft:water", "farmersdelight:rich_soil_farmland", "farmersdelight:cabbages", "farmersdelight:onions", "farmersdelight:tomatoes", "farmersdelight:rice", "farmersdelight:rice_panicles", "create:track", "create:belt", "create:depot", "trading_floor:trading_depot", "bountiful:bountyboard"]
 	#How deep the foundation under a building may be filled in.
 	#
 	#It exists for a building whose floor is above the ground under part of

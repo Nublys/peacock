@@ -7,6 +7,8 @@
 // also fire this event) are never touched. Breeding items are still consumed, so a full town stops
 // growing on its own. Switch: "villagerCap" in kubejs/config/peacock.json.
 
+// KubeJS loads every server script into one shared scope, so the body lives in its own block.
+{
 const SWV = (() => { try { return JsonIO.read('kubejs/config/peacock.json') || {} } catch (e) { return {} } })()
 const VILLAGER_CAP_ON = SWV.villagerCap !== false
 const CAP = typeof SWV.villagerCapCount === 'number' ? SWV.villagerCapCount : 24
@@ -26,3 +28,5 @@ EntityEvents.spawned('minecraft:villager', event => {
     if (p.distanceTo(v) < RADIUS * 2) p.tell(Text.gray('This town is full (' + CAP + ' villagers). Found another one, or grow this one outward.'))
   })
 })
+}
+// end-scope
