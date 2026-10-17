@@ -13,8 +13,9 @@
 //      the stage. Creative players bypass.
 // Switch: "ladder" in kubejs/config/peacock.json (false = nothing is staged or gated; drops still work).
 
-// KubeJS loads every server script into one shared scope, so the body lives in its own block.
-{
+// KubeJS loads every server script into one shared scope; a bare `{}` block does not isolate `const` in
+// its Rhino ("redeclaration of var"), so the body lives in a function scope.
+;(() => {
 const SW = (() => { try { return JsonIO.read('kubejs/config/peacock.json') || {} } catch (e) { return {} } })()
 const LADDER_ON = SW.ladder !== false
 const L = global.LADDER
@@ -172,5 +173,4 @@ ItemEvents.entityInteracted(event => {
   event.cancel()
   deny(player, 'recruiting', 'Hiring')
 })
-}
-// end-scope
+})()

@@ -206,7 +206,9 @@ Why things are the way they are. Add an entry when a choice would surprise someo
 
 ## First server run of Phases 3–5: two script bugs, one worldgen fix (2026-10-17 17:37 log)
 - KubeJS loads all server scripts into **one scope**: `const SWITCHES`/`const RADIUS` declared in two files
-  killed two scripts. Every script now wraps its body in a block and uses file-prefixed names.
+  killed two scripts. First fix (bare `{ }` blocks) made it worse — KubeJS's Rhino reports "redeclaration
+  of var" for any `const` inside a bare block, 5 of 8 scripts failed (18:07 log). Every script body now
+  lives in an IIFE `;(() => { … })()`, which is a real function scope.
 - `JSON.stringify(recipe.json)` on a Gson object dumps the object's Java members, so all 613 staged
   recipes failed to parse (and had already been removed: brass was uncraftable for everyone). Fixed by
   `JSON.parse(String(recipe.json))` — Gson's `toString()` is the JSON text.

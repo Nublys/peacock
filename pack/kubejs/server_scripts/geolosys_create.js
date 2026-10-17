@@ -11,8 +11,9 @@
 //   • if Geolosys registered its own zinc ingot/nugget beside Create's, route every recipe output to
 //     Create's and remove Geolosys' nugget crafting, so there is one zinc in the pack.
 
-// KubeJS loads every server script into one shared scope, so the body lives in its own block.
-{
+// KubeJS loads every server script into one shared scope; a bare `{}` block does not isolate `const` in
+// its Rhino ("redeclaration of var"), so the body lives in a function scope.
+;(() => {
 ServerEvents.recipes(event => {
   const ZINC_CLUSTER = 'geolosys:zinc_cluster'
 
@@ -36,5 +37,4 @@ ServerEvents.tags('item', event => {
     event.add('c:hidden_from_recipe_viewers', 'geolosys:zinc_nugget')
   }
 })
-}
-// end-scope
+})()

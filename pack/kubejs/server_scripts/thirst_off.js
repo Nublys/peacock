@@ -7,8 +7,9 @@
 // The Paxi override of TAN+'s broken purified-water recipe must stay (it prevents a crash while the
 // datapack loads); this script removes that recipe again afterwards, which is fine.
 
-// KubeJS loads every server script into one shared scope, so the body lives in its own block.
-{
+// KubeJS loads every server script into one shared scope; a bare `{}` block does not isolate `const` in
+// its Rhino ("redeclaration of var"), so the body lives in a function scope.
+;(() => {
 const THIRST_ITEMS = [
   // Tough As Nails
   'toughasnails:water_purifier', 'toughasnails:rain_collector',
@@ -49,5 +50,4 @@ ServerEvents.tags('item', event => {
 ServerEvents.tags('fluid', event => {
   THIRST_FLUIDS.forEach(id => event.add('c:hidden_from_recipe_viewers', id))
 })
-}
-// end-scope
+})()

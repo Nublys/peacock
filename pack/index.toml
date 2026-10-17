@@ -685,31 +685,31 @@ hash = "4afa1fbeac844f6ce94f8190e7c59f5508a6d568f87f22ac4b9e6ef3879facb7"
 
 [[files]]
 file = "kubejs/server_scripts/almanac.js"
-hash = "64693d3390edef117a0ff20e979215d88931270a55c72a08d438ded170707e4f"
+hash = "7f9a35a62bf29efa77273ba670e488b8fa0eba600627b728863e9fbc83585ad9"
 
 [[files]]
 file = "kubejs/server_scripts/blueprints.js"
-hash = "8abd87662012cb8a8ee7a205ab4cca94c7bd19fccaace524dcdbae5247268ed6"
+hash = "9d12bbf23578d39d0db2c5333afa6399777bca3f8e58db4e13e52aa1a2a9971b"
 
 [[files]]
 file = "kubejs/server_scripts/geolosys_create.js"
-hash = "0b6dee714a0940919ae3e10d9c793299a1236ac1728942e92524b6d08d0aea85"
+hash = "437073ce1974cd48925c985d6ce079c226555a12e6437ad460b7b6f7ef2fd62c"
 
 [[files]]
 file = "kubejs/server_scripts/rumour_maps.js"
-hash = "23c7338f8395845a40f1035e6c5fc61c56386c77907940e3633f0bb1bb085df9"
+hash = "df89ae7d310496a4be9e1bc5dbd945bf65aa24347650efbe46c9e2549f5ca889"
 
 [[files]]
 file = "kubejs/server_scripts/thirst_off.js"
-hash = "cfa1522b29f9a25885fa4571a2945f6cf7170cc6e4baea0cf1a0d9a8eec25caf"
+hash = "7675c52cbf4acf42e909e5d3bf3ddfa6233a774e420046f557f0dd587f50df77"
 
 [[files]]
 file = "kubejs/server_scripts/trading_depot_town.js"
-hash = "44b6ebe2324bef1d25a679e5b3c6a36a01f817bc1655bd8b64115573d5bcc766"
+hash = "65671ac7cb2ed9b03bc874807880ee4b56d84ef7715edc8c1f6ee660504967e9"
 
 [[files]]
 file = "kubejs/server_scripts/villager_cap.js"
-hash = "48b64fc91961bd034792900cdac290a1c650028ce919390c059b76b38a53febc"
+hash = "a0b8b788b06450f53a96ac9e325bd8c6449edd8ecfd1d5deb50e50a43f34c2d2"
 
 [[files]]
 file = "kubejs/startup_scripts/peacock_ladder.js"

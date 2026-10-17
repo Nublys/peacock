@@ -7,8 +7,9 @@
 //
 // Phase 4 adds the Blueprint requirement on the recipe; this stays as the placement rule.
 
-// KubeJS loads every server script into one shared scope, so the body lives in its own block.
-{
+// KubeJS loads every server script into one shared scope; a bare `{}` block does not isolate `const` in
+// its Rhino ("redeclaration of var"), so the body lives in a function scope.
+;(() => {
 const SWITCHES = (() => { try { return JsonIO.read('kubejs/config/peacock.json') || {} } catch (e) { return {} } })()
 const DEPOT_NEEDS_TOWN = SWITCHES.depotNeedsTown !== false
 
@@ -47,5 +48,4 @@ BlockEvents.placed(DEPOT, event => {
   player.tell(Text.red('A trading depot needs a town: a bell and at least ' + BEDS_REQUIRED + ' beds within ' + RADIUS + ' blocks. ')
     .append(Text.gray('Found ' + town.bells + ' bell(s) and ' + town.beds + ' bed(s).')))
 })
-}
-// end-scope
+})()
