@@ -1,0 +1,16 @@
+{
+  "name": "What Grows When",
+  "icon": "minecraft:wheat",
+  "category": "patchouli:land",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Crops $(bold)do not grow out of season$(). Hover over seeds: the tooltip lists fertile seasons.$(br2)$(bold)Spring:$() carrots, potatoes, cabbage, onions, berries, most saplings$(br)$(bold)Summer:$() wheat, melons, tomatoes, onions, rice, sugar cane, cactus$(br)$(bold)Autumn:$() wheat, pumpkins, beetroot, carrots, cabbage, rice$(br)$(bold)Winter:$() sweet berries, spruce"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Year-round: mushrooms, nether wart, cave vines.$(br2)$(bold)Greenhouse Glass$() (Serene Seasons) makes any crop under it count as in-season. A glass roof over a farm is the winter plan. Below Y=48 fertility is ignored too — deep farms work all year."
+    }
+  ]
+}

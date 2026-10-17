@@ -1232,6 +1232,142 @@ hash = "1157664b81af8fe4b2631bab4b2e2c3740b424bd577600d08bb3bbfe38e5bfa9"
 metafile = true
 
 [[files]]
+file = "patchouli_books/peacock_almanac/book.json"
+hash = "0ce6adbd11f2f737f41e8ec89894acd1840c46a514c5cb47d960b59b3f0cbe6c"
+
+[[files]]
+file = "patchouli_books/peacock_almanac/en_us/categories/land.json"
+hash = "0b7a243528cd17ad1145d35fbb833f37b6f48656a858c9baf806edd342bc337a"
+
+[[files]]
+file = "patchouli_books/peacock_almanac/en_us/categories/ore.json"
+hash = "48bd05b8dbdeaef6f322b2ae2741a4e74ae1911a10b2338013089e00c23aa6a4"
+
+[[files]]
+file = "patchouli_books/peacock_almanac/en_us/categories/start.json"
+hash = "92c70256192b6622198f8e95141e300ec3dcd7cb3896511754ba00e521854762"
+
+[[files]]
+file = "patchouli_books/peacock_almanac/en_us/categories/story.json"
+hash = "e148e503f7c0d7a8ceb1e501dfb9aadbd34c847c4854dd11988ad3b02e753d99"
+
+[[files]]
+file = "patchouli_books/peacock_almanac/en_us/categories/tech.json"
+hash = "24ef4a3527228b952c0f16c70f456ee6001533a2f761ba22874ddebe6850d397"
+
+[[files]]
+file = "patchouli_books/peacock_almanac/en_us/categories/threats.json"
+hash = "8eab834b091bfbb0b00165619979412c5031e17d0d1032ce5c793f7501110964"
+
+[[files]]
+file = "patchouli_books/peacock_almanac/en_us/categories/tools.json"
+hash = "76845476a6bd5b96fb51d2e6dc6121fc52900e1418638b9d13ec5d2f7d5c563d"
+
+[[files]]
+file = "patchouli_books/peacock_almanac/en_us/categories/towns.json"
+hash = "c7b42e76fd014fab2b4ad6668412afd174a96448d5d9b53d2d0782288f61b76a"
+
+[[files]]
+file = "patchouli_books/peacock_almanac/en_us/entries/land/crops.json"
+hash = "25b0c7b8d1c3e9572ff99db5402387e991bc8631603da7d82cd5478cc0df9b62"
+
+[[files]]
+file = "patchouli_books/peacock_almanac/en_us/entries/land/seasons.json"
+hash = "0e7084dfd0f5bac11dd59bd27b532f60293350c3c77eda8c209c50aa8ad67377"
+
+[[files]]
+file = "patchouli_books/peacock_almanac/en_us/entries/land/terrain.json"
+hash = "0a566850bc91e5bf955c41f05075999dac444506219a372ea5aca7da8a0a7f6a"
+
+[[files]]
+file = "patchouli_books/peacock_almanac/en_us/entries/ore/prospecting.json"
+hash = "bf8ca9df73ce03c670412b07773b089f077f9d7b8db0bfb782a4e3fb65d9d966"
+
+[[files]]
+file = "patchouli_books/peacock_almanac/en_us/entries/ore/regional_ore.json"
+hash = "71ef908d2b668cff2632af482b536469267522c70e7a73bf40f2a5eceac70a97"
+
+[[files]]
+file = "patchouli_books/peacock_almanac/en_us/entries/start/first_create.json"
+hash = "d35a116afae7a03212b7a993bb26947d5c0eed6edb33ec0d0227d8d40ed356b0"
+
+[[files]]
+file = "patchouli_books/peacock_almanac/en_us/entries/start/food.json"
+hash = "fd1a90b827a60cf09d8a9b23f65257a840bd9a58097c25d81b71552ef4d06d2a"
+
+[[files]]
+file = "patchouli_books/peacock_almanac/en_us/entries/start/spawn.json"
+hash = "e0eb930e2cb2adc7843730393cd00fef3dd955b92587b27e8f799f5d798f62c2"
+
+[[files]]
+file = "patchouli_books/peacock_almanac/en_us/entries/start/temperature.json"
+hash = "83f7a880269ab4276749e37b5abcf7efb59fc53c834894af02aaf582381deeb3"
+
+[[files]]
+file = "patchouli_books/peacock_almanac/en_us/entries/story/what_happened.json"
+hash = "15a6b85943f7d71cc9340699c6d728fe0857bd6850ff4009710af8763860c593"
+
+[[files]]
+file = "patchouli_books/peacock_almanac/en_us/entries/story/your_part.json"
+hash = "b7189feda42589a7d4b6f4814bcd08425403263dce01227a64b048c3b936334d"
+
+[[files]]
+file = "patchouli_books/peacock_almanac/en_us/entries/tech/how_blueprints_work.json"
+hash = "28b397d44d84ecda52ce010912c24bf909acd73c33df3eb4b44009eaf593e875"
+
+[[files]]
+file = "patchouli_books/peacock_almanac/en_us/entries/tech/tier1.json"
+hash = "7c3e60b79eda046c8f0ae5b85e6a22f4fe39a2a49ee64f500697a61092d538d7"
+
+[[files]]
+file = "patchouli_books/peacock_almanac/en_us/entries/tech/tier2.json"
+hash = "7486e5c0ebc62cd983df0e4cf37a82ef74f531323d154cae5fbe65be7445f5cb"
+
+[[files]]
+file = "patchouli_books/peacock_almanac/en_us/entries/tech/tier3.json"
+hash = "f1fab90514bd8bbb1af62fe2ca0424ad07d893ef22bcdf5608b607b3454a11c0"
+
+[[files]]
+file = "patchouli_books/peacock_almanac/en_us/entries/tech/tier4.json"
+hash = "023ce6b9e50d8d74996437c3223225ff71cb28162a30891d1f06932b0b4dd630"
+
+[[files]]
+file = "patchouli_books/peacock_almanac/en_us/entries/threats/night.json"
+hash = "d8af94219360729b965e5733788baa7d95f61d31354f0c153ef806f4e650ea74"
+
+[[files]]
+file = "patchouli_books/peacock_almanac/en_us/entries/threats/pillagers.json"
+hash = "882cd2143b1c0fb02ee4a810569f4f5b3aaafcbbf127bd7d62059bcc4aa95261"
+
+[[files]]
+file = "patchouli_books/peacock_almanac/en_us/entries/tools/atlas.json"
+hash = "55fcd3e28f7fa9e623f58ece8a0ecd357c0bef251b1f13861373cfaea56c5477"
+
+[[files]]
+file = "patchouli_books/peacock_almanac/en_us/entries/tools/controls.json"
+hash = "cbd6367df9233db37b1b82404e2af24af0ab5658a626a1b1f6a3fbdbf7ad5939"
+
+[[files]]
+file = "patchouli_books/peacock_almanac/en_us/entries/tools/performance.json"
+hash = "614bcc49ea2ba5b271f17860a059091feda4a4a3b4a5c82e1d711f67cb76ef75"
+
+[[files]]
+file = "patchouli_books/peacock_almanac/en_us/entries/tools/voice.json"
+hash = "f1837b952cee8e9194fb07e94bb53dfbcc2bd5e7b4c02f29605b54657d608df9"
+
+[[files]]
+file = "patchouli_books/peacock_almanac/en_us/entries/towns/caravans.json"
+hash = "34db18352d041bd40d6eddd85114d661c000b2f0e61b79d8fbfb5c77bff24874"
+
+[[files]]
+file = "patchouli_books/peacock_almanac/en_us/entries/towns/recruits.json"
+hash = "a055ed40b5fd90b0faa04166573dcb14460d8f9d14439f6820a7fd39823f385d"
+
+[[files]]
+file = "patchouli_books/peacock_almanac/en_us/entries/towns/villagers.json"
+hash = "73545d93642254951a80347ef629939664ae1bc2de4abf4a6226dfa30042b73e"
+
+[[files]]
 file = "peacock-server/README.txt"
 hash = "1f139b8561336fed8a4fd2830af1989d808425ac6cc603c26028afd49d105899"
 

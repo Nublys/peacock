@@ -1,0 +1,16 @@
+{
+  "name": "Ore Is Regional",
+  "icon": "geolosys:hematite_ore",
+  "category": "patchouli:ore",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "There is $(bold)no random ore$(). Geolosys places metal in deposits — plutons — each of one kind, each large, and each somewhere specific. Iron may be a ten-minute walk; zinc may be the next valley over.$(br2)This is deliberate. Ore that is somewhere else is why wagons, ships and eventually trains exist."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Look for $(bold)samples$(): small rock clusters on the surface that show what is below. Dig straight down from a sample and you will find the deposit.$(br2)Ore blocks drop $(bold)clusters$(), not raw ore. Smelt them, or run them through Create's crushing wheels for more."
+    }
+  ]
+}

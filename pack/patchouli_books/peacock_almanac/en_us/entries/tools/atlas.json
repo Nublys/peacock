@@ -1,0 +1,12 @@
+{
+  "name": "The Atlas",
+  "icon": "map_atlases:atlas",
+  "category": "patchouli:tools",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "There is no minimap. $(bold)Map Atlases$() collects maps into one book: craft an atlas, carry it, and it fills as you travel. $(bold)M$() opens it; $(bold)P$() drops a pin where you stand.$(br2)Mark deposits, villages, docks and boss structures. A shared atlas on a lectern in the capital is the server's map room."
+    }
+  ]
+}

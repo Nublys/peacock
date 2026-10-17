@@ -1,0 +1,16 @@
+{
+  "name": "Food & Cooking",
+  "icon": "farmersdelight:cooking_pot",
+  "category": "patchouli:start",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Farmer's Delight runs the kitchen: cutting boards, cooking pots, skillets, and meals that feed you for a long time. Simple meals carry you through the first season; the good stuff needs a stove and ingredients from more than one biome.$(br2)Fish with Aquaculture rods and nets — rivers and oceans have different fish, and some are worth money."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Animals are from Animania: breeds, genders, feed and water troughs. A cow that is fed and watered gives milk; one that is not, will not. Animals need care, and they reward it.$(br2)Season matters: see Land, Seasons & Weather for what grows when, and why a greenhouse is worth building before winter."
+    }
+  ]
+}

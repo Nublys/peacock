@@ -1,0 +1,16 @@
+{
+  "name": "Your First Machines",
+  "icon": "create:andesite_alloy",
+  "category": "patchouli:start",
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Nothing in the homestead tier is locked. Andesite alloy, water wheels, mechanical presses, mixers, saws, belts, funnels, chutes, wagons and docks are yours from day one.$(br2)What you cannot make yet is $(bold)brass$() — and everything brass unlocks. The dead took it. See Blueprints & Recovery."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Create's own book (the ponder screens — hold $(bold)W$() over an item) explains every machine. This almanac only tells you which doors are closed and which bosses hold the keys."
+    }
+  ]
+}

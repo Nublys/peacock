@@ -1,0 +1,20 @@
+{
+  "name": "What Happened",
+  "icon": "minecraft:cracked_stone_bricks",
+  "category": "patchouli:story",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Long before you, villages were spread far and wide, joined by rail and canal. Brass turned in every workshop. Trains ran on schedules. Ships carried grain to towns that never saw a field.$(br2)Then the monsters came for the machines."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "No one agrees on how. The dead carried off the brass. Things from below took the engines apart and kept the parts. The sky over the Nether lit up and never went dark again.$(br2)Without their tools the villages shrank to what you see now: a bell, a few farms, a wall if they were lucky."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Into that gap came the pillagers — people who decided the fall was an opportunity. They hold outposts, fortresses, and much of what was stolen. They would prefer the dark age continued.$(br2)You arrived at its end. Whether it ends is up to you."
+    }
+  ]
+}

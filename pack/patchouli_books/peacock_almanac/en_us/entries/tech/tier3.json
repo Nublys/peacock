@@ -1,0 +1,12 @@
+{
+  "name": "Tier 3 — The Reactor",
+  "icon": "minecraft:netherite_scrap",
+  "category": "patchouli:tech",
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Both of you, with a plan.$(br2)$(bold)Withered Director$() (Nether Reactor) → $(bold)mechanical arms, precision mechanisms$() — the reactor's own parts.$(br)$(bold)Netherite Monstrosity$() → netherite, heavy cannon calibres.$(br)$(bold)Frostmaw$() → $(bold)Cannons$() (Create Big Cannons)."
+    }
+  ]
+}

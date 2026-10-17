@@ -1,0 +1,16 @@
+{
+  "name": "Where You Woke Up",
+  "icon": "minecraft:bell",
+  "category": "patchouli:start",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Everyone spawns in the same village: the $(bold)capital$(). It has a bell, villagers with trades, and beds. It will grow as the server does — it is the first market, the first station, and the first thing raiders come for.$(br2)Set your spawn with a bed early. There is no fast travel in this world; distance is real."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Day one checklist:$()$(br)- Wood, a crafting table, a bed in the capital$(br)- Check the season (calendar, or the sky's colour)$(br)- Food: villager farms are fair game to replant$(br)- A campfire before nightfall if it is cold$(br2)Mobs are harder than you remember. A wolf helps; a dog helps more (see Threats)."
+    }
+  ]
+}

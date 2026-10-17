@@ -109,6 +109,15 @@ Why things are the way they are. Add an entry when a choice would surprise someo
   recipes take them — no parallel processing chain to maintain. Any Geolosys zinc ingot is folded
   into Create's by KubeJS so EMI shows one zinc.
 
+## No Discord bridge
+- Decided 2026-10-17. Voice chat is in-game; chat stays in-game.
+
+## The Almanac is the onboarding
+- Every player gets *The Settler's Almanac* (Patchouli, pack-level book, no extra mod) on first join:
+  story, first days, seasons/crops, prospecting, towns, threats, the Blueprint ladder, controls and
+  profiles. It is generated from `tools/gen-almanac.py` so prose edits are one file. It describes the
+  Phase 4 ladder as designed and says so ("arrives with the Dark Age update") rather than hiding it.
+
 ## Tough As Nails: temperature on, thirst off
 - `thirst.toml: enable_thirst = false` (2026-10-16). Seasons and temperature are the survival layer we
   want (clothing, campfires, shade, the calendar); a second hunger bar is bookkeeping. Canteens and

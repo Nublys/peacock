@@ -1,0 +1,16 @@
+{
+  "name": "The Land Itself",
+  "icon": "minecraft:grass_block",
+  "category": "patchouli:land",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Tectonic and Terralith shape the terrain: real mountain ranges, deep valleys, long rivers. Biomes O' Plenty fills them. Distant Horizons shows the far side of the valley from your door.$(br2)Rivers and coasts matter: Valkyrien Skies ships (Eureka) and wagons from Caravans & Convoys are how goods move before rails exist."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "The Nether is Incendium's: new biomes, new structures, and the Nether Reactor — which in this story is the machine that was stolen. The End is Nullscape. Both are late-game chapters."
+    }
+  ]
+}

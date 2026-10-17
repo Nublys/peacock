@@ -40,3 +40,8 @@ jobs:
           python3 tools/gen-profiles.py
           git diff --exit-code -- pack/peacock/profiles \
             || { echo "::error::pack/peacock/profiles is stale — run tools/gen-profiles.py and commit"; exit 1; }
+      - name: Almanac matches the generator
+        run: |
+          python3 tools/gen-almanac.py
+          git diff --exit-code -- pack/patchouli_books \
+            || { echo "::error::pack/patchouli_books is stale — run tools/gen-almanac.py and commit"; exit 1; }

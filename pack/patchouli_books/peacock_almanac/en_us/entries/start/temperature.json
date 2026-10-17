@@ -1,0 +1,16 @@
+{
+  "name": "Staying Warm (and Cool)",
+  "icon": "toughasnails:wool_helmet",
+  "category": "patchouli:start",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Tough As Nails tracks your $(bold)temperature$(). The bar by your hotbar swings cold in winter nights, snowy biomes, deep water and high altitude; hot in deserts, the Nether, and midsummer noon.$(br2)Thirst is $(bold)off$() in this pack. Temperature is the survival layer."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Counters: wool and leather armor warm you; campfires, torches and lava warm the air near them; shade, water and ice cool you. Climate clothing from TAN is the long-term answer.$(br2)Icy or scorching for too long hurts. Plan the first winter: a roof, a fire, and wool."
+    }
+  ]
+}

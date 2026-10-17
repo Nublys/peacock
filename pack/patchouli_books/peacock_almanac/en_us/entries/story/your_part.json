@@ -1,0 +1,16 @@
+{
+  "name": "Your Part",
+  "icon": "minecraft:writable_book",
+  "category": "patchouli:story",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Every piece of lost technology is held by something that will fight to keep it. Beat it and it drops a $(bold)Blueprint$() — the knowledge of how the thing was made.$(br2)Use the Blueprint and you can build that technology. Nobody else can until they learn it too."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Knowledge is a thing you can hand to someone. Trade Blueprints, gift them, loot them from the fallen. Civilization recovers by sharing what it recovers.$(br2)See $(l:patchouli:tech/how_blueprints_work)Blueprints & Recovery$() for the ladder."
+    }
+  ]
+}

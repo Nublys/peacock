@@ -1,0 +1,12 @@
+{
+  "name": "Tier 4 — The Last Chapter",
+  "icon": "minecraft:end_crystal",
+  "category": "patchouli:tech",
+  "sortnum": 4,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Hovering Inferno$(), $(bold)Ignis$(), the Respillaged totem captains → frontier ore, the final rail.$(br)$(bold)Ender Guardian$() (the End) → the lost capital's last secret.$(br2)What that is, the survivors did not write down."
+    }
+  ]
+}
