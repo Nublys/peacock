@@ -31,8 +31,17 @@ and restart again. (This output is console-only; it never appears in `logs/lates
 Mods removed from the index are deleted on the next sync; nothing needs cleaning by hand.
 
 **Don't run `/locate`** (or anything that searches for structures) on this server: on Terralith terrain it
-blocks the main thread for minutes and the watchdog treats it as a hang. `max-tick-time` is 180000 in
-the template for the same reason.
+blocks the main thread for minutes and the watchdog treats it as a hang. `max-tick-time` is 90000 in
+the template: long enough for the spawn-village search at world creation (~45 s), short enough that a
+real hang is dumped and killed instead of sitting there.
+
+**When the server hangs** (players time out, console still scrolls but `/` commands do nothing): get a
+thread dump *before* restarting. On the node, with the server's UUID as the container name:
+
+    docker exec 59f52550-697a-48ee-8c94-83c2d0a54d7b kill -3 1
+
+The JVM prints every thread's stack to the console; copy it. The watchdog does the same on its own
+after `max-tick-time`, then stops the server. Either dump is what identifies the mod at fault.
 
 **Backups & schedules:** use Pterodactyl's. Take a backup before any start that follows a
 pack version bump; a schedule with a daily backup task is enough for a small server.

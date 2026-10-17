@@ -119,7 +119,9 @@ Why things are the way they are. Add an entry when a choice would surprise someo
   `vr_replace_villages` behaviour). Spawn is fixed at world creation: needs a world made after this.
 - **Never `/locate` on this server.** A structure search on Terralith terrain blocks the main thread for
   minutes; the watchdog killed the server 60 s into one (2026-10-17 13:20). `max-tick-time` raised to
-  180000 so a long chunk operation is not a kill.
+  180000, then settled at **90000** (2026-10-17 13:55) after a main-thread hang with no dump: the spawn
+  search at world creation takes ~45 s, and anything past 90 s is a hang we want dumped and killed.
+  `kill -3` on the container's PID 1 gets the same dump on demand (server/README.md).
 
 ## Boss structures must exist in modded biomes
 - Cataclysm's structure biome tags list only vanilla biomes (`minecraft:desert`, `minecraft:snowy_plains`,
