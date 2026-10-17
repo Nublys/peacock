@@ -1,0 +1,20 @@
+{
+  "name": "How Blueprints Work",
+  "icon": "minecraft:paper",
+  "category": "patchouli:tech",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Technology is unlocked $(bold)per player$(). Killing a boss does not unlock it for the server — it drops $(bold)Blueprints$(): one for every player who fought, plus one spare.$(br2)Use a Blueprint and you learn that technology. The spare is for someone who was not there."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Blueprints are ordinary items: trade them, sell them, gift them, or take them off a corpse. A new player on an old server catches up by trading, not by grinding the same boss.$(br2)Stuck on a boss? Every Blueprint also has a $(bold)charter$() recipe: expensive, emerald-priced, and always available. Slow, but never blocked."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Recipes you have not learned are visible but locked; the tooltip names the boss. The gated $(bold)blocks$() check too — a brass machine handed to someone who has not learned brass will not run for them.$(br2)$(italic)The first Blueprints arrive with the Dark Age update. Until then nothing is locked.$()"
+    }
+  ]
+}

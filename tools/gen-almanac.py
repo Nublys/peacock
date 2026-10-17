@@ -117,8 +117,9 @@ ENTRIES = {
         ("prospecting", "The Prospector's Pick", "geolosys:prospectors_pick", [
             T("Craft the $(bold)Prospector's Pick$() early. Right-click stone and it tells you what ore is nearby and roughly where. Walk, tap, walk, tap. It never breaks.",
               "Geolosys hands you its own $(bold)Field Manual$() on first join — it lists every deposit, what it drops, and at what depth."),
-            T("Metals you will need, in order: $(bold)copper and iron$() (homestead; iron is common and shallow), $(bold)zinc$() (sphalerite — brass needs it), $(bold)gold, coal$() in bulk once machines run.",
-              "Ore is regional: $(bold)zinc lies under mountains$(), $(bold)gold in the dry country$() (desert, badlands, savanna), $(bold)tin in sand$(), $(bold)lead under plains$(), $(bold)limonite iron in marshes$(). Nature's Compass finds the biome; samples find the deposit."),
+            T("Metals you will need, in order: $(bold)copper and iron$() (homestead; iron is common and shallow), $(bold)zinc$() (sphalerite — brass needs it), then $(bold)gold$() and $(bold)coal$() in bulk once machines run."),
+            T("Ore is regional: $(bold)zinc lies under mountains$(), $(bold)gold in the dry country$() (desert, badlands, savanna), $(bold)tin in sand$(), $(bold)lead under plains$(), $(bold)limonite iron in marshes$().",
+              "Nature's Compass finds the biome; samples find the deposit."),
             T("Mark deposits on your atlas. The first player to find zinc should tell everyone — and that is a trade route being born."),
         ]),
     ],

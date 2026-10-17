@@ -1,0 +1,24 @@
+{
+  "name": "The Prospector's Pick",
+  "icon": "geolosys:prospectors_pick",
+  "category": "patchouli:ore",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Craft the $(bold)Prospector's Pick$() early. Right-click stone and it tells you what ore is nearby and roughly where. Walk, tap, walk, tap. It never breaks.$(br2)Geolosys hands you its own $(bold)Field Manual$() on first join — it lists every deposit, what it drops, and at what depth."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Metals you will need, in order: $(bold)copper and iron$() (homestead; iron is common and shallow), $(bold)zinc$() (sphalerite — brass needs it), then $(bold)gold$() and $(bold)coal$() in bulk once machines run."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Ore is regional: $(bold)zinc lies under mountains$(), $(bold)gold in the dry country$() (desert, badlands, savanna), $(bold)tin in sand$(), $(bold)lead under plains$(), $(bold)limonite iron in marshes$().$(br2)Nature's Compass finds the biome; samples find the deposit."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Mark deposits on your atlas. The first player to find zinc should tell everyone — and that is a trade route being born."
+    }
+  ]
+}

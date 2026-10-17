@@ -1,0 +1,16 @@
+{
+  "name": "Caravans, Bounties, Markets",
+  "icon": "minecraft:chest_minecart",
+  "category": "patchouli:towns",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Bountiful$() boards post jobs villages want done; pay is emeralds and goods.$(br2)$(bold)Caravans & Convoys$(): wagons that carry trade between settlements. Build a dock or a wagon post and routes open up. This is the mid-game economy before rail."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Late game, the $(bold)Trading Floor$() lets a train sell on a schedule — a depot in a real town, goods in, emeralds out, while you are elsewhere.$(br2)Depots need a Blueprint and a town with a bell and beds. There is no version that works in a hole in the ground."
+    }
+  ]
+}

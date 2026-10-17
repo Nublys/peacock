@@ -1,0 +1,16 @@
+{
+  "name": "Villagers Worth Keeping",
+  "icon": "minecraft:emerald",
+  "category": "patchouli:towns",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Villagers here are people, not vending machines. $(bold)Villager Comfort$() means a villager without a bed, light and food trades badly; a happy village trades well.$(br2)$(bold)Restock Balance$() means trades run out and restock slowly. Buying out one librarian all day does not work."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Together they make trading halls pointless and towns valuable: the best prices are in a real village with real beds, and the way to more trade is $(bold)more villages$(), not more cells.$(br2)Villages grow (Village Expansion) and hire guards. Villager Workers can be put to farming or hauling."
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "Tier 1 — Iron and a Dog",
+  "icon": "minecraft:iron_ingot",
+  "category": "patchouli:tech",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Beatable alone in iron armour with a dog. These are the dark age's fallout, not its masters.$(br2)$(bold)Mutant Zombie$() → $(bold)Brass$(). The dead carried it off. Brass opens the middle of Create.$(br)$(bold)Mutant Skeleton$() → $(bold)Recruiting$(): hire squads, arm guards.$(br)$(bold)Mutant Creeper$() → $(bold)Blasting$(): TNT, gunpowder tech, the blaze burner."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Mutant Snow Golem$() (snowy biomes) → $(bold)Climate control$(): thermoregulators, air conditioners. Wool and leaf clothing are always free.$(br)$(bold)Mutant Enderman$() → ender logistics: Create's chutes across distance.$(br)$(bold)Torte$() (Incendium's skeleton chef, Nether) → $(bold)Advanced cooking$(): Slice & Dice automation, Aquaculture nets."
+    }
+  ]
+}
