@@ -393,7 +393,7 @@ hash = "394278e2f499d4daec34ae5df3c0000b9caaf805a28c37a41fc89ff9c1026073"
 
 [[files]]
 file = "config/toughasnails/thirst.toml"
-hash = "a2b6e4ee01ae1ea37c8af5668892f3004aa20c9aacfad130b6b9e68046d31c00"
+hash = "30a2d764b3241e99fa4c21e8c605bc54211d3bea3202df3e5eb7d6e68c454841"
 
 [[files]]
 file = "config/underground_village/common.json5"

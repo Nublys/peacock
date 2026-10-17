@@ -68,7 +68,7 @@ two players are simply the first two players. Anything that would only work for 
   the third and fourth settlements have to go)
 - Spawn weights: Animania / Naturalist / Mowzie's / Cataclysm across BOP + Terralith
 - Structure spacing: Structory, Cataclysm (CTOV untouched)
-- TAN soft-start, Illager Invasion raid caps, Big Cannons block damage off near villages
+- ~~TAN soft-start~~ thirst disabled (temperature only); Illager Invasion raid caps, Big Cannons block damage off near villages
 - Villager Comfort / Restock Balance tuning; Every Compat trims
 - Village Spawn Point: everyone spawns at the same CTOV village — it becomes the server's
   capital/hub. Confirm it has a bell and room to grow (Village Expansion).

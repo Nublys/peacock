@@ -15,7 +15,7 @@
 	#Prevent health regeneration when thirsty.
 	thirst_prevent_health_regen = true
 	#Enable or disable thirst.
-	enable_thirst = true
+	enable_thirst = false
 	#Remove source blocks when filling the canteen.
 	remove_source_blocks = false
 	#Enable or disable hand drinking.

@@ -96,6 +96,11 @@ Why things are the way they are. Add an entry when a choice would surprise someo
   Rule for new client mods: if the jar contains `newSimpleChannel`/`ChannelBuilder`, it is
   `both`, whatever Modrinth's side label says.
 
+## Tough As Nails: temperature on, thirst off
+- `thirst.toml: enable_thirst = false` (2026-10-16). Seasons and temperature are the survival layer we
+  want (clothing, campfires, shade, the calendar); a second hunger bar is bookkeeping. Canteens and
+  the water purifier remain craftable but inert; revisit if the pack ever wants a desert/expedition arc.
+
 ## Dogs
 - One dog: **Doggy Talents Next.** Animania's dog breeds are spawn-disabled (cats kept);
   vanilla wolves no longer replaced by Animania; DTN converts tamed wolves (follow-up).
