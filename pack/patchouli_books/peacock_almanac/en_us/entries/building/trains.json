@@ -1,0 +1,26 @@
+{
+  "name": "Trains",
+  "icon": "create:railway_casing",
+  "category": "patchouli:building",
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Create$() tracks, stations, schedules and signals, extended by $(bold)Steam 'n' Rails$(): conductors, handcars, couplers, track switches, fuel tanks, and a locomotive palette.$(br2)Trains are $(bold)Tier 2$() (Ferrous Wroughtnaut). Tracks need brass casing; brass needs Tier 1."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "create:crafting/kinetics/track_station",
+      "text": "A station names a stop; a schedule tells the train where to go and what to wait for. Depots (Trading Floor) let a train trade at a town."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "railways:crafting/handcar",
+      "text": "The handcar is a rail bicycle: no engine, no fuel, two players pumping. The first thing to build on a new line."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "The dream the survivors remembered: a line from the capital to the mountain mine, a dock at the river, a depot in every town, ore moving while everyone sleeps.$(br2)Build the roadbed before the Blueprint. Track is fast to lay once you can."
+    }
+  ]
+}

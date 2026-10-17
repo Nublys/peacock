@@ -23,4 +23,5 @@ Thumbs.db
 # dedicated server runtime (Forge install, world, mods) — never committed
 server/run/
 build/
+!pack/patchouli_books/**
 !pack/peacock/launch.jar

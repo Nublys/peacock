@@ -1,0 +1,21 @@
+{
+  "name": "Cannons",
+  "icon": "createbigcannons:cannon_mount",
+  "category": "patchouli:building",
+  "sortnum": 4,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Create Big Cannons$(): cast or build cannons block by block, mount them, load them, aim with a controller or a contraption. Autocannons for defence, big guns for sieges.$(br2)$(bold)Tier 3$(): the Frostmaw holds the knowledge."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "createbigcannons:cannon_mount",
+      "text": "A mount turns a cannon into a turret. Cannons on a ship or a train are contraptions like any other."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Server rules:$() shells hurt $(bold)mobs and players$() in their blast but $(bold)do not break blocks$(). You can defend a town and fight a ship; you cannot level a town. Explosions from cannons are AOE only.$(br2)Old Guns are the handheld cousins and follow the Blasting Blueprint, not this one."
+    }
+  ]
+}

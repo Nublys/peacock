@@ -25,7 +25,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Cats$() hunt rodents and keep ferrets company; $(bold)ferrets$() and $(bold)hamsters$() are pets. $(bold)Draft horses$() pull wagons (see $(l:patchouli:build/wagons)Wagons$()).$(br2)Wild animals are Naturalist's: deer, boar, bears, big cats, snakes. Bears defend themselves; snakes bite; vultures circle. Hunt deer and boar for meat."
+      "text": "$(bold)Cats$() hunt rodents and keep ferrets company; $(bold)ferrets$() and $(bold)hamsters$() are pets. $(bold)Draft horses$() pull wagons (see $(l:patchouli:building/wagons)Wagons$()).$(br2)Wild animals are Naturalist's: deer, boar, bears, big cats, snakes. Bears defend themselves; snakes bite; vultures circle. Hunt deer and boar for meat."
     },
     {
       "type": "patchouli:entity",

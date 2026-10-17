@@ -1373,7 +1373,7 @@ file = "patchouli_books/peacock_almanac/en_us/categories/bosses.json"
 hash = "9b4be55a0c91e0b357a2ef59d3c8a6eea108f52a75facf55f9bc420cc13b4a93"
 
 [[files]]
-file = "patchouli_books/peacock_almanac/en_us/categories/build.json"
+file = "patchouli_books/peacock_almanac/en_us/categories/building.json"
 hash = "0d5512e1d1ca05860614dc879818ca65273adfff73625e33b9684f8fb243cb29"
 
 [[files]]
@@ -1433,24 +1433,24 @@ file = "patchouli_books/peacock_almanac/en_us/entries/bosses/where_they_are.json
 hash = "551fda21733c976f67635d31572889b5983cdda3ceb63827ee040b47fae200cd"
 
 [[files]]
-file = "patchouli_books/peacock_almanac/en_us/entries/build/cannons.json"
-hash = "1bda17f9695119e7497d1b28447916105e9d7085e40758c6cb3a9244a3d63d20"
+file = "patchouli_books/peacock_almanac/en_us/entries/building/cannons.json"
+hash = "cc4f586bbb251530269a943d6bd1fbe8c03442ef403539c115b8e9ba7ae720d6"
 
 [[files]]
-file = "patchouli_books/peacock_almanac/en_us/entries/build/decor.json"
-hash = "08a2c9488166272673519e76225f17f8555289d47382fe597edc81f59535ade5"
+file = "patchouli_books/peacock_almanac/en_us/entries/building/decor.json"
+hash = "6db387827a36bafed33c3c0526b713c6c249a4eef870ec804c89f54fa6fb1546"
 
 [[files]]
-file = "patchouli_books/peacock_almanac/en_us/entries/build/ships.json"
-hash = "2197980d880db12ae430ba26054f1be886d0c6493c133f327993c38f48927390"
+file = "patchouli_books/peacock_almanac/en_us/entries/building/ships.json"
+hash = "26ec0f6958cd117cbeefefed216234ef6cfb68a95b82d5c59a5da98629e2ff34"
 
 [[files]]
-file = "patchouli_books/peacock_almanac/en_us/entries/build/trains.json"
-hash = "2f7824a0f3bfdb66f1155b06ac0695819d181b02b091b2f0f0485d3337cfbb2b"
+file = "patchouli_books/peacock_almanac/en_us/entries/building/trains.json"
+hash = "86433dd174f87629b6b8ed03c2767d5b7c91586545b2e7592932e14d1f22521a"
 
 [[files]]
-file = "patchouli_books/peacock_almanac/en_us/entries/build/wagons.json"
-hash = "0553c8e38c6344d9d0eca4e79d87ffaa80b460ad41fd5a7e9a97a61215873d2c"
+file = "patchouli_books/peacock_almanac/en_us/entries/building/wagons.json"
+hash = "4381f844ddc4f95a1d60e5d8841bc984bbcfa3120596156a3605c9b79a613204"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/land/crops.json"
@@ -1486,7 +1486,7 @@ hash = "2c2cecf13420521af59b655ff703ce826c35ec416c69e82bc866dfb6527d12fb"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/start/animals.json"
-hash = "d8ae1f7bfd9ea791d1b2bc52e2df4e2f2df0a3987b6dd4083c74212a9ec99ba2"
+hash = "77619c207a4137de35a44489ce154cfe395360301508f992dffab652ddb8f2e6"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/start/carrying.json"

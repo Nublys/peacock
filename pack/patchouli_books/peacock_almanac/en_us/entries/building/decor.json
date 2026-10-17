@@ -1,0 +1,20 @@
+{
+  "name": "Building Blocks",
+  "icon": "mcwroofs:oak_roof",
+  "category": "patchouli:building",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Macaw's$() roofs, doors, windows, fences, bridges, paths, stairs, trapdoors, lights, paintings and furniture: a catalogue of shapes in every wood and stone. Search EMI by wood name.$(br2)$(bold)Supplementaries$() gives the small things: sacks, ropes, pulleys, bellows, notice boards, sign posts, hourglasses, globes, jars, planters, flags, safes."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Create Deco$() and $(bold)Interiors$() cover industrial trim: catwalks, cages, placards, seats, chairs and tables that contraptions can carry.$(br2)$(bold)Every Compat$() makes every wood work with every furniture mod, so a BOP wood roof exists. $(bold)Visual Workbench$() shows the recipe on the table. $(bold)Easy Anvils$() keep items in and never say Too Expensive."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Falling leaves$(), $(bold)Particular$() particles, $(bold)3D skins$() and $(bold)capes$() are cosmetic and free to turn off if frames matter (see $(l:patchouli:tools/performance)Performance$())."
+    }
+  ]
+}

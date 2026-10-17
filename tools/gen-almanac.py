@@ -42,7 +42,7 @@ CATEGORIES = {
     "threats": ("Threats", "The night, the pillager faction, and how to fight.", "minecraft:crossbow", 5),
     "bosses":  ("Bestiary of Bosses", "Every boss, where it lives, and what it holds.", "minecraft:wither_skeleton_skull", 6),
     "tech":    ("Blueprints & Recovery", "How technology comes back, one boss at a time.", "create:brass_ingot", 7),
-    "build":   ("Building & Logistics", "Decor, wagons, ships, trains, cannons.", "mcwroofs:oak_roof", 8),
+    "building": ("Building & Logistics", "Decor, wagons, ships, trains, cannons.", "mcwroofs:oak_roof", 8),
     "tools":   ("Controls, Map & Settings", "Keys, the atlas, EMI and Jade, voice chat, performance profiles.", "map_atlases:atlas", 9),
 }
 
@@ -169,7 +169,7 @@ ENTRIES = {
             craft("animania:salt_lick", "Salt licks keep livestock healthy; nests collect the eggs.", recipe2="animania:block_nest"),
             txt(B("Milk") + " needs a fed, watered cow or goat and a bucket; cheese comes from milk in a cheese mold. " + B("Wool") + " and " + B("eggs") + " come on their own schedule.",
                 B("Breeding") + " needs a male and a female of the same kind, both fed. Young take time to grow."),
-            txt(B("Cats") + " hunt rodents and keep ferrets company; " + B("ferrets") + " and " + B("hamsters") + " are pets. " + B("Draft horses") + " pull wagons (see " + L("build/wagons", "Wagons") + ").",
+            txt(B("Cats") + " hunt rodents and keep ferrets company; " + B("ferrets") + " and " + B("hamsters") + " are pets. " + B("Draft horses") + " pull wagons (see " + L("building/wagons", "Wagons") + ").",
                 "Wild animals are Naturalist's: deer, boar, bears, big cats, snakes. Bears defend themselves; snakes bite; vultures circle. Hunt deer and boar for meat."),
             ent("animania:cow_holstein", "A Holstein: the dairy breed. Every breed has a look and a temper; the field manual in your inventory (Animania's) lists them.", scale=0.9),
         ]),
@@ -424,7 +424,7 @@ ENTRIES = {
         ]),
     ],
     # ===================================================================================== build
-    "build": [
+    "building": [
         ("decor", "Building Blocks", "mcwroofs:oak_roof", [
             txt(B("Macaw's") + " roofs, doors, windows, fences, bridges, paths, stairs, trapdoors, lights, paintings and furniture: a catalogue of shapes in every wood and stone. Search EMI by wood name.",
                 B("Supplementaries") + " gives the small things: sacks, ropes, pulleys, bellows, notice boards, sign posts, hourglasses, globes, jars, planters, flags, safes."),
