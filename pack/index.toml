@@ -124,7 +124,7 @@ hash = "8dbd7ed422d8cd88d8ac7ca47a8308c5a0d40d4db1a6af5cf46e989c3a5a4129"
 
 [[files]]
 file = "config/defaultoptions/keybindings.txt"
-hash = "aa75de9bd07d9fc039fc1e02f01d794439e6d39e01d8feb0c15181ff754b984b"
+hash = "7e59e2d86bf7ed0b4d418ae539a41f8d85333e28f4a0e26c1c2778ff96031b43"
 
 [[files]]
 file = "config/defaultoptions/options.txt"
@@ -656,6 +656,18 @@ file = "defaultconfigs/createbigcannons-server.toml"
 hash = "9756edc8d2c01d836680b4247842eb15ff68f0d664f2ac6597b3369a0879a8e6"
 
 [[files]]
+file = "defaultconfigs/ftbchunks/client-config.snbt"
+hash = "9a7028f15f20deaecff2121c94ec53931ddfaf4cb06c7c8ee04b9c504d30091f"
+
+[[files]]
+file = "defaultconfigs/ftbchunks/ftbchunks-world.snbt"
+hash = "c1b2a785a0a581d83b8c97414704736a6f08bea8e4d26353c51793653e05f120"
+
+[[files]]
+file = "defaultconfigs/ftbessentials-server.snbt"
+hash = "4b37d469babdcddb3554454d93631737c8b1ff2866dc99b005e996b0b4e78ed1"
+
+[[files]]
 file = "kubejs/assets/peacock/lang/en_us.json"
 hash = "e50a1c9c8636fe92084c3c97b6f0615fbe23d858972acbb9ebb70d3fec2d544f"
 
@@ -669,7 +681,7 @@ hash = "09d333d76904e58dcfc54bac179a809c34e83ece952f11ab110dd5ea81e575f0"
 
 [[files]]
 file = "kubejs/config/peacock.json"
-hash = "58bf66ca50d7c94211352a837a0cb6a68e830522975eaf7a041ff1dd17235282"
+hash = "4afa1fbeac844f6ce94f8190e7c59f5508a6d568f87f22ac4b9e6ef3879facb7"
 
 [[files]]
 file = "kubejs/server_scripts/almanac.js"
@@ -694,6 +706,10 @@ hash = "66999753d56c1c2f33f45ffe9e4a6234ce17b7e31024c9c4f1235cea91e8ea38"
 [[files]]
 file = "kubejs/server_scripts/trading_depot_town.js"
 hash = "cf0fb4318055292299f0c82f862c7b8266ffa649f3355d4153c6f9f085ba55ee"
+
+[[files]]
+file = "kubejs/server_scripts/villager_cap.js"
+hash = "eaec5c3d88b461b619d2368bf22c3c8a2f37aa26c3457efb8172653de7e8322f"
 
 [[files]]
 file = "kubejs/startup_scripts/peacock_ladder.js"
@@ -726,7 +742,7 @@ metafile = true
 
 [[files]]
 file = "mods/architectury-api.pw.toml"
-hash = "0fbce5343fcf3c74b3a4bfedcb04fcc0e456c29780049ab52cc3a35f13c7c87e"
+hash = "5e9edd1fd2395f14a0c8a4acbdbdd61e1047be1f0033deb3140d2ce0d093e9d8"
 metafile = true
 
 [[files]]
@@ -1037,6 +1053,26 @@ metafile = true
 [[files]]
 file = "mods/framework.pw.toml"
 hash = "dafc3fc86f7bacc8a5bd2d5f80c16dde47d2f051afde6d08a7185f87b99a2baf"
+metafile = true
+
+[[files]]
+file = "mods/ftb-chunks-forge.pw.toml"
+hash = "3e76939f890545ba722d145aee2e44bbac1c658b5e907d9f69d6e8299fe73127"
+metafile = true
+
+[[files]]
+file = "mods/ftb-essentials.pw.toml"
+hash = "8a185af41fb24e83e4497c9362943723b6afee585cf8a3bf280ac155d29bf593"
+metafile = true
+
+[[files]]
+file = "mods/ftb-library-forge.pw.toml"
+hash = "efa75ee4aae90dea11316b6e61aecaf9433eeb3d0821f78b4eca41acbbd73e8f"
+metafile = true
+
+[[files]]
+file = "mods/ftb-teams-forge.pw.toml"
+hash = "efda76423b21f9bfab4ad8d0411f0b06a199ab7e3e12ca16dc0586c1828b8f07"
 metafile = true
 
 [[files]]
@@ -1725,7 +1761,7 @@ hash = "8b4ac3411ce4558a2b9b1825b2362e35b714c0b374e5871438d393b465ce39ca"
 
 [[files]]
 file = "peacock/profiles/high/options.txt.keys"
-hash = "e6ca0497911d97934c73643fd843d3513a13fbf5e32edd2bf9ecf7171c82313e"
+hash = "49244c74c10f099fc46abaed1a67e1241643bbd6a8330b8193082e3fa562aff7"
 
 [[files]]
 file = "peacock/profiles/high/shaderpacks/ComplementaryReimagined_r5.9.3 + EuphoriaPatches_1.10.5.txt.keys"
@@ -1749,7 +1785,7 @@ hash = "ecdc47e26c1b274613251b8935d35c7225b4e1b12b7671388999dacd0f7178cb"
 
 [[files]]
 file = "peacock/profiles/low/options.txt.keys"
-hash = "d5294188dfbb2067b68545219025b242eb049f89694c18f2a550f8fade115e23"
+hash = "0afc0a7b45e3aba8caf300ddce39888cfd3a4fba6f693c01f654cf3481fd9149"
 
 [[files]]
 file = "peacock/profiles/low/shaderpacks/ComplementaryReimagined_r5.9.3 + EuphoriaPatches_1.10.5.txt.keys"
@@ -1773,7 +1809,7 @@ hash = "ecdc47e26c1b274613251b8935d35c7225b4e1b12b7671388999dacd0f7178cb"
 
 [[files]]
 file = "peacock/profiles/medium/options.txt.keys"
-hash = "c5bdbfdfd1f02630627c2c4f82a197ec65d47dc175ee309bc23b6e8842db322a"
+hash = "ec0860c9a007b2fd60324ff316e4bf6c40436a127e83fa66dc69c0babdb6c761"
 
 [[files]]
 file = "peacock/profiles/medium/shaderpacks/ComplementaryReimagined_r5.9.3 + EuphoriaPatches_1.10.5.txt.keys"
@@ -1797,7 +1833,7 @@ hash = "3679e644386b40bf6bf9c612b40b6dbac157398edf6cc87dda142f1b1c72efde"
 
 [[files]]
 file = "peacock/profiles/potato/options.txt.keys"
-hash = "fa0e0a764c9d8508da63ae177e70361fb29934030b8b0ef0aee881bace2d9d5a"
+hash = "5efa579102cd405ee3685702502e8b56656a8cef765ebd56b37a7585249a2ac7"
 
 [[files]]
 file = "peacock/profiles/potato/shaderpacks/ComplementaryReimagined_r5.9.3 + EuphoriaPatches_1.10.5.txt.keys"
@@ -1821,7 +1857,7 @@ hash = "8b4ac3411ce4558a2b9b1825b2362e35b714c0b374e5871438d393b465ce39ca"
 
 [[files]]
 file = "peacock/profiles/ultra/options.txt.keys"
-hash = "ca6a8698e65c6b98bd7a165ca57698110df965ad6438efb1bf9c1c184a09d6e7"
+hash = "ae5a6cadaf92fd9fab9768d51155c417495823cad287a8dffab56f9484f613d8"
 
 [[files]]
 file = "peacock/profiles/ultra/shaderpacks/ComplementaryReimagined_r5.9.3 + EuphoriaPatches_1.10.5.txt.keys"

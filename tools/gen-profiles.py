@@ -60,6 +60,16 @@ PREVIOUS_DEFAULTS = {
     ],
 }
 
+# Settings every tier writes into options.txt (keys the launcher adds when missing): keybinds that
+# would otherwise collide. FTB Chunks' large map defaults to M (Map Atlases); its claim manager goes on J.
+COMMON_KEYS = {
+    "key_key.ftbchunks.map": "key.keyboard.unknown",
+    "key_key.ftbchunks.claim_manager": "key.keyboard.j",
+    "key_key.ftbchunks.toggle_minimap": "key.keyboard.unknown",
+    "key_key.ftbchunks.add_waypoint": "key.keyboard.unknown",
+    "key_key.ftbchunks.waypoint_manager": "key.keyboard.unknown",
+}
+
 def load_presets():
     data = urllib.request.urlopen(CR_URL, timeout=60).read()
     props = zipfile.ZipFile(io.BytesIO(data)).read("shaders/shaders.properties").decode("utf-8", "replace")
@@ -113,7 +123,7 @@ def main():
         (d / f"shaderpacks/{CR_ZIP}.txt.keys").write_text(txt)
         (d / f"shaderpacks/{EUPHORIA}.txt.keys").write_text(txt)
         packs = RESOURCE_PACKS if c.get("fresh_animations", True) else RESOURCE_PACKS.replace(',"file/FreshAnimations_v1.10.4.zip"', "")
-        opts = dict(c["options"], resourcePacks=packs)
+        opts = dict(c["options"], resourcePacks=packs, **COMMON_KEYS)
         (d / "options.txt.keys").write_text("".join(f"{k}:{v}\n" for k, v in opts.items()))
         print(f"{tier:12s} shaders={'on ' if c['shaders'] else 'off'} {c['pack'][:28]:28s} {c['preset']:7s} DH {c['dh']:>3} {c['transp']:8s} {c['threads']}t")
     for rel, lines in PREVIOUS_DEFAULTS.items():

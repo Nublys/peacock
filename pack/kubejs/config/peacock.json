@@ -2,5 +2,7 @@
   "_comment": "Peacock pack switches read by kubejs/server_scripts/*.js. Server-side; takes effect on /reload or restart. ladder=false disables recipe staging and place/hire gates (Blueprints still drop).",
   "rumourMaps": true,
   "depotNeedsTown": true,
-  "ladder": true
+  "ladder": true,
+  "villagerCap": true,
+  "villagerCapCount": 24
 }

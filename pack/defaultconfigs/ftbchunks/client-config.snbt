@@ -1,0 +1,11 @@
+# Peacock — FTB Chunks client defaults (copied to local/ftbchunks/client-config.snbt on first run).
+# No minimap, no floating waypoints: the atlas is the map and the Corpse mod marks deaths.
+{
+	minimap: {
+		enabled: false
+	}
+	waypoints: {
+		in_world_waypoints: false
+		death_waypoints: false
+	}
+}

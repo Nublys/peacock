@@ -79,7 +79,18 @@ Marked `side = "server"` in `pack/mods/`, so they install here and never on a cl
   `server.properties` only sets the starting values. It logs each change to the console; if it sits at the
   minimum with two players on, the server is out of headroom and the fix is below, not a bigger number.
 
-Claims / anti-grief (FTB Chunks vs a lighter mod) is an open decision in `docs/PLAN.md`.
+- **FTB Chunks + FTB Teams + FTB Library** (both sides) — claims and capped force-loading. Defaults ship in
+  `defaultconfigs/ftbchunks/` and are copied into the world's `serverconfig/` on first start: 200 claimed
+  chunks per team, **4 force-loaded** (ALWAYS mode: they keep running while the owner is offline), minimap
+  forced off for every client, explosions and mob griefing off inside claims. Players claim with `J`.
+- **FTB Essentials** (server) — `defaultconfigs/ftbessentials-server.snbt`: only `/spawn` (60 s cooldown,
+  5 s warm-up) and `/back` after a death. Homes, warps, tpa, rtp and the virtual crafting/ender-chest
+  commands are off: no fast travel is a design rule. Admin commands (`/tpl`, `/fly`, `/invsee`…) stay.
+- **Villager cap** — `kubejs/server_scripts/villager_cap.js`: a town stops breeding at 24 villagers within
+  48 blocks (`villagerCapCount` in `kubejs/config/peacock.json`). Existing villagers are never removed.
+
+To change a shipped default after the world exists, edit the file under the world's `serverconfig/`;
+`defaultconfigs/` is only read when that file is missing.
 
 **Tick budget.** The game thread is one core of a 2013 Xeon (E5-2690 v2, 3.0 GHz): roughly half of a
 modern desktop core. Everything in a ticked chunk — entities, Create block entities, random ticks —

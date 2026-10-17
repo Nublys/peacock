@@ -1,0 +1,16 @@
+# Peacock — FTB Chunks world defaults (copied to <world>/serverconfig/ftbchunks-world.snbt on first start).
+# Claims are anti-grief for towns and bases. Force-loading is capped hard: a team may keep 4 chunks
+# (a 2x2) running while nobody is online, enough for a farm or a Create line, not a factory.
+# The minimap is disabled for every client: Map Atlases is the only map in this pack.
+{
+	max_claimed_chunks: 200
+	max_force_loaded_chunks: 4
+	force_load_mode: "ALWAYS"
+	force_disable_minimap: true
+	protect_unknown_explosions: true
+	team_prop_defaults: {
+		def_allow_explosions: false
+		def_mob_griefing: false
+		def_claim_visibility: "PUBLIC"
+	}
+}

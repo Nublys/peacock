@@ -189,6 +189,19 @@ Why things are the way they are. Add an entry when a choice would surprise someo
   so a changed default reaches existing installs without `PEACOCK_RESET=1` while a player's own edit is
   still kept. Append to `PREVIOUS_DEFAULTS` whenever a shipped default changes.
 
+## Claims are FTB Chunks, with its map switched off (2026-10-17)
+- Chosen over Flan / Open Parties and Claims because its force-loading is **capped and team-scoped**
+  (`max_force_loaded_chunks`, `hard_team_force_limit`) and because FTB Teams doubles as the grouping layer
+  the Blueprint ladder may later use. Its map is the price: `force_disable_minimap: true` on the world,
+  the large map unbound, in-world and death waypoints off, and the **claim manager** (a plain grid, no
+  terrain) on `J`. Map Atlases remains the only map.
+- Force-load cap is 4 chunks per team in `ALWAYS` mode: enough for one farm or one Create line to keep
+  running while everyone sleeps, deliberately not enough for a factory. Raise per team with FTB Ranks /
+  LuckPerms `ftbchunks.max_force_loaded` if a server vote wants it.
+- FTB Essentials for `/spawn` and `/back` only; everything that is fast travel is off.
+- Villager cap (24 per town) via `EntityEvents.spawned` on *babies without our seen-tag*, so chunk reloads
+  never delete anyone; Villager Workers' workers are other entity types and are not counted.
+
 ## The ladder is Recipe Stages + KubeJS, not Item Stages (2026-10-17)
 - **Recipe Stages 8.0** (Forge 1.20.1, Game Stages dep) accepts recipes as JSON (`recipestages:stage`,
   `recipestages:shaped_stage` wrapping a crafting recipe), so KubeJS can wrap mods' recipes at load time

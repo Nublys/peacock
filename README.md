@@ -119,6 +119,7 @@ Adding a mod: `packwiz modrinth add <slug>` (or `packwiz curseforge add <slug>`)
 | `B` | Backpack |
 | `K` / `O` | Toggle shaders / shader menu (shader preset per profile; Macs: plain Complementary only) |
 | `M` | Atlas · `P` place atlas pin |
+| `J` | FTB Chunks claim manager (claims only — the FTB map and minimap are off; the atlas is the map) |
 | `R` / `U` / `N` | Recruits: command / team / map |
 | `I` | Village Expansion wiki |
 | `V` | Quiver (Supplementaries) |

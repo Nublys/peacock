@@ -1,0 +1,38 @@
+# Peacock — FTB Essentials defaults (copied to <world>/serverconfig/ftbessentials.snbt on first start).
+# No fast travel is a design rule: /spawn (to the capital) and /back after a death only. No homes,
+# warps, tpa, rtp, or virtual crafting/ender chests. Admin commands stay for staff.
+{
+	teleportation: {
+		back: {
+			enabled: true
+			cooldown: 30
+			warmup: 0
+			max: 10
+			only_on_death: true
+		}
+		spawn: {
+			enabled: true
+			cooldown: 60
+			warmup: 5
+		}
+		playerspawn: { enabled: false }
+		warp: { enabled: false }
+		home: { enabled: false }
+		tpa: { enabled: false }
+		rtp: { enabled: false }
+	}
+	misc: {
+		kickme: { enabled: true }
+		trashcan: { enabled: false }
+		rec: { enabled: false }
+		hat: { enabled: false }
+		nick: { enabled: false }
+		enderchest: { enabled: false }
+		crafting: { enabled: false }
+		stonecutter: { enabled: false }
+		anvil: { enabled: false }
+		smithing: { enabled: false }
+		leaderboard: { enabled: true }
+		near: { enabled: false }
+	}
+}

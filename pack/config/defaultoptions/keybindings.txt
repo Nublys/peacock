@@ -72,3 +72,10 @@ key_key.voice_chat_group:key.keyboard.unknown
 key_key.whisper:key.keyboard.unknown
 key_key.voice_chat_toggle_recording:key.keyboard.unknown
 key_key.voice_chat_adjust_volumes:key.keyboard.unknown
+key_key.ftbchunks.map:key.keyboard.unknown
+key_key.ftbchunks.claim_manager:key.keyboard.j
+key_key.ftbchunks.toggle_minimap:key.keyboard.unknown
+key_key.ftbchunks.minimap.zoomIn:key.keyboard.unknown
+key_key.ftbchunks.minimap.zoomOut:key.keyboard.unknown
+key_key.ftbchunks.add_waypoint:key.keyboard.unknown
+key_key.ftbchunks.waypoint_manager:key.keyboard.unknown

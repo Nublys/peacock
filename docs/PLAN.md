@@ -167,7 +167,7 @@ where others have.
   B cannot; A hands B the second Blueprint; B uses it and can; B's Almanac chapter opens;
   the charter recipe works for a third player who has neither.
 
-## Phase 5 — Server (a real multiplayer server)  🟡 scaffold done 2026-10-16
+## Phase 5 — Server (a real multiplayer server)  ✅ 2026-10-17 (FTB Chunks/Teams/Essentials shipped; caps and runbook below)
 **Pterodactyl egg** (`server/pterodactyl/egg-peacock.json`): install script sets up Forge +
 bootstrap + first sync; startup re-syncs and applies `pack/peacock-server/` overrides. Voice
 chat shares the game port (`port=-1`) so one allocation suffices. Bare-metal `start.sh` kept.
@@ -183,16 +183,17 @@ details below as they get exercised.
   - ~~Chunky~~ — removed (DH 3.3.3 crash). Pregen, if wanted: Chunk Pregenerator (Speiger)
   - Spark — profiling, the first thing to open when TPS drops
   - Dynamic View and Simulation Distances (+Cupboard) — floats simulation 5–12 / view 8–10 on tick time
-  - LuckPerms — permissions for staff; **FTB Essentials** only for `/spawn`, `/back` and
-    AFK — no `/home`, `/tpa` or warps (no fast travel is a design rule)
-  - **FTB Chunks** — claims (anti-grief) and *capped* force-loading (1 chunk/player unless
-    a stage raises it); its map/minimap turned **off** so Map Atlases stays the only map
+  - LuckPerms — permissions for staff; **FTB Essentials** only for `/spawn` and `/back`-after-death —
+    homes, warps, tpa, rtp off (`defaultconfigs/ftbessentials-server.snbt`, shipped 2026-10-17)
+  - **FTB Chunks** (+Teams, Library) — claims (anti-grief) and *capped* force-loading (4 chunks per team,
+    ALWAYS mode); minimap forced off server-side, map key unbound, claim manager on `J` (shipped 2026-10-17)
   - Simple Voice Chat: own UDP allocation, set by hand in `config/voicechat/voicechat-server.properties`
   - Backups: Pterodactyl backups + a daily schedule; manual backup before a pack version bump
 - Distant Horizons server config: LOD generation on the server, distribution to clients,
   rate limits for many clients
-- Valkyrien Skies: per-player ship caps; Create: contraption size limits; Illager Invasion:
-  raid cap scaling; Mutant Monsters: spawn rate per loaded chunk (more players = more chunks)
+- Villager breeding cap per town: 24 within 48 blocks (`villager_cap.js`, shipped 2026-10-17)
+- Still open, needs play data: Valkyrien Skies per-player ship caps; Create contraption size limits;
+  Mutant Monsters spawn rate per loaded chunk (more players = more chunks)
 - Runbook: start/stop, pack update procedure (bump → snapshot → restart), rollback, how to
   read a Spark report
 
@@ -206,4 +207,4 @@ details below as they get exercised.
 3. ~~Animania cats~~ keep (2026-10-17)
 4. ~~Server-wide unlocks~~ → **per player**, Blueprints tradeable (decided 2026-10-16)
 5. ~~Player grouping~~ per player, FTB Teams available for groups (2026-10-17)
-6. Claims: FTB Chunks, or a lighter claim mod (Flan / Open Parties and Claims)
+6. ~~Claims~~ FTB Chunks (2026-10-17): claims + a hard 4-chunk force-load cap; minimap off, atlas stays the map
