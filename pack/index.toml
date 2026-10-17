@@ -128,7 +128,7 @@ hash = "aa75de9bd07d9fc039fc1e02f01d794439e6d39e01d8feb0c15181ff754b984b"
 
 [[files]]
 file = "config/defaultoptions/options.txt"
-hash = "406714fdfb288e7e88bee658d1384858e997afc3231a9907d9198e5498689893"
+hash = "34465c268feeb699987106a5c314d68355b30756cdc31d120215cae7d17e6f79"
 
 [[files]]
 file = "config/distraction_free_recipes-client.toml"
@@ -1566,7 +1566,7 @@ hash = "8c73dccfc0b9c5fa91485af595f54d502d4626913ab6eebd10c62da07f04bc96"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/tools/performance.json"
-hash = "847a522827a186bbea968f8df1a614311ae307d9bf31037789ee48c497f7047d"
+hash = "fb49b0019aef7ab32c871f18f99e4b4b989757e8c52c28ec26bd4eef584bdbc4"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/tools/voice.json"
@@ -1610,7 +1610,11 @@ hash = "81438bc5091328fd136fdff895660ea35308c941e4cce8b897eb7f53dc6ebc37"
 
 [[files]]
 file = "peacock/profiles/README.txt"
-hash = "456fb9af0d4ce438d8699f1983bc0825e0822596fe0787eb1be950072e19a271"
+hash = "0c276d5e0e7deb8ef9d43546ce274ef2f42696b31c10cd4cdb210228f50b1e93"
+
+[[files]]
+file = "peacock/profiles/_previous/options.txt.keys"
+hash = "b3d1ab72659f5419a0209f81a678b112cc0598d6f44da6c76bc4f9195285061d"
 
 [[files]]
 file = "peacock/profiles/high/config/DistantHorizons.toml.keys"
@@ -1626,7 +1630,7 @@ hash = "8b4ac3411ce4558a2b9b1825b2362e35b714c0b374e5871438d393b465ce39ca"
 
 [[files]]
 file = "peacock/profiles/high/options.txt.keys"
-hash = "23390d5356c777cf2e3f9cd96ebb729fd52fe94d2b5b519d144bd2d67e42dadb"
+hash = "e6ca0497911d97934c73643fd843d3513a13fbf5e32edd2bf9ecf7171c82313e"
 
 [[files]]
 file = "peacock/profiles/high/shaderpacks/ComplementaryReimagined_r5.9.3 + EuphoriaPatches_1.10.5.txt.keys"
@@ -1650,7 +1654,7 @@ hash = "ecdc47e26c1b274613251b8935d35c7225b4e1b12b7671388999dacd0f7178cb"
 
 [[files]]
 file = "peacock/profiles/low/options.txt.keys"
-hash = "41dcd540fcdaf9cb499e96ebd8f90f48993c17233c20a5fe4fff438fa8f78509"
+hash = "d5294188dfbb2067b68545219025b242eb049f89694c18f2a550f8fade115e23"
 
 [[files]]
 file = "peacock/profiles/low/shaderpacks/ComplementaryReimagined_r5.9.3 + EuphoriaPatches_1.10.5.txt.keys"
@@ -1674,7 +1678,7 @@ hash = "ecdc47e26c1b274613251b8935d35c7225b4e1b12b7671388999dacd0f7178cb"
 
 [[files]]
 file = "peacock/profiles/medium/options.txt.keys"
-hash = "7cba04babf09278a2f02c1dfdd6b13e69889ee58e935b6aee8574ab99cd23b29"
+hash = "c5bdbfdfd1f02630627c2c4f82a197ec65d47dc175ee309bc23b6e8842db322a"
 
 [[files]]
 file = "peacock/profiles/medium/shaderpacks/ComplementaryReimagined_r5.9.3 + EuphoriaPatches_1.10.5.txt.keys"
@@ -1698,7 +1702,7 @@ hash = "3679e644386b40bf6bf9c612b40b6dbac157398edf6cc87dda142f1b1c72efde"
 
 [[files]]
 file = "peacock/profiles/potato/options.txt.keys"
-hash = "d2d15e6b94664fac6b384810b870d5e016981a75c4c8cfc280b60a0051961d7e"
+hash = "d264233295fe7cc89dd53d681048ef52bf69a444d6bb32f57064d1159268fa67"
 
 [[files]]
 file = "peacock/profiles/potato/shaderpacks/ComplementaryReimagined_r5.9.3 + EuphoriaPatches_1.10.5.txt.keys"
@@ -1722,7 +1726,7 @@ hash = "8b4ac3411ce4558a2b9b1825b2362e35b714c0b374e5871438d393b465ce39ca"
 
 [[files]]
 file = "peacock/profiles/ultra/options.txt.keys"
-hash = "a88eecccf70d3089326f275e7207e34a0675151cb940f2cc668e7661f27258f2"
+hash = "ca6a8698e65c6b98bd7a165ca57698110df965ad6438efb1bf9c1c184a09d6e7"
 
 [[files]]
 file = "peacock/profiles/ultra/shaderpacks/ComplementaryReimagined_r5.9.3 + EuphoriaPatches_1.10.5.txt.keys"
@@ -1733,8 +1737,33 @@ file = "peacock/profiles/ultra/shaderpacks/ComplementaryReimagined_r5.9.3.zip.tx
 hash = "1253953f4942dcd9cc5dd6fc2ee4f3d951c8a2aec55f48a00e1460baaa2d64a5"
 
 [[files]]
+file = "resourcepacks/better-leaves.pw.toml"
+hash = "eb0b5f269171cd5b891d9bdf2c5da89698e21a71ffec1172ead75bc19411cbdc"
+metafile = true
+
+[[files]]
+file = "resourcepacks/enhanced-boss-bars.pw.toml"
+hash = "fad11585397af61bcba766b5ca20de5ed0b9e95bd4ffc734b93aad5a348a7b71"
+metafile = true
+
+[[files]]
 file = "resourcepacks/fresh-animations.pw.toml"
 hash = "6a1556a0e4fcb411b33efafc3382b4abd9a6e671f140dc0d42e9aad2808e24f3"
+metafile = true
+
+[[files]]
+file = "resourcepacks/low-on-fire.pw.toml"
+hash = "70130b75ad199e1090231f079466eca8fad8159080055d7a9fea771df394cdb5"
+metafile = true
+
+[[files]]
+file = "resourcepacks/xalis-enchanted-books.pw.toml"
+hash = "79c884c9a671d7eae64af9fa1a0a90482ad8df02600fc99b2e17abdc34df38df"
+metafile = true
+
+[[files]]
+file = "resourcepacks/xalis-potions.pw.toml"
+hash = "6a36ef1d71dcda03ca5ec5634b9636dc9997ce39cb1e43dd22d246a6c0c1477c"
 metafile = true
 
 [[files]]

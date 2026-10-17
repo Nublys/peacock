@@ -174,6 +174,21 @@ Why things are the way they are. Add an entry when a choice would surprise someo
   server LODs beyond render distance. Now `FEATURES` (`SURFACE` on potato/low) via the profiles — the
   pack's DH file is `preserve`d, so a profile key is how it reaches existing installs.
 
+## Resource packs (2026-10-17)
+- Shipped in `pack/resourcepacks/` (client side), enabled for every tier through `options.txt`
+  (`config/defaultoptions/options.txt` for new installs, the `resourcePacks` profile key for existing
+  ones): Fresh Animations, Motschen's Better Leaves, Enhanced Boss Bars, xali's Enchanted Books,
+  xali's Potions, Low On Fire. All vanilla-faithful 16x; full retextures (Faithful, Stay True, Jicklus)
+  were rejected because they leave Create/FD/Macaw's in the default style and the mismatch reads worse.
+- Animania has no retexture anywhere and Fresh Animations cannot reach it (its animals are its own
+  entities, not vanilla). Accepted: Animania stays for its gameplay; the rest of the world carries the look.
+- Filenames are forced space-free in the `.pw.toml` (`filename` is independent of the download URL) —
+  the validator rejects spaces, and the Low On Fire upstream name contains a `§`.
+- **Previous defaults** (`pack/peacock/profiles/_previous/*.keys`, written by gen-profiles.py): values an
+  older pack version wrote as defaults. The launcher treats a setting equal to one of them as untouched,
+  so a changed default reaches existing installs without `PEACOCK_RESET=1` while a player's own edit is
+  still kept. Append to `PREVIOUS_DEFAULTS` whenever a shipped default changes.
+
 ## Server performance: the profile, and what it changed (2026-10-17)
 - Spark on the live server (1 player, 327 entities, TPS 14.9): **77% of the server thread was entity
   ticking, 44% villagers alone** — vanilla `Brain → AcquirePoi → PathFinder`, villagers hunting beds and

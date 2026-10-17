@@ -18,6 +18,7 @@ pack/                 the packwiz pack — this is what gets installed
   mods/*.pw.toml      one file per mod (149; 2 server-only)
   resourcepacks/      Fresh Animations (Modrinth-managed)
   shaderpacks/        Complementary Reimagined + Unbound (Modrinth-managed)
+  resourcepacks/      Fresh Animations, Better Leaves, Enhanced Boss Bars, xali's books/potions, Low On Fire (on by default)
   config/             shipped configs; `preserve = true` files are not overwritten on update
   defaultconfigs/          server configs copied into new worlds (Big Cannons: no block damage)
   config/defaultoptions/   first-launch options.txt + keybindings.txt (Default Options)

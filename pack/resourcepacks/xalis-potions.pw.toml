@@ -1,0 +1,13 @@
+name = "xali's Potions"
+filename = "xalis-potions-1.2.0.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/yFn9hTiq/versions/NIeabPaR/xali%27s%20potion%20v1.2.0.zip"
+hash-format = "sha512"
+hash = "a98135129287309e7bafc38e16e3652edbad909d962461e3348d286b857ded87f36914db25865e80be695c82576c35b6c4037456ab09e38bf723922c094c417c"
+
+[update]
+[update.modrinth]
+mod-id = "yFn9hTiq"
+version = "NIeabPaR"
