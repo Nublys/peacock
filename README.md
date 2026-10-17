@@ -16,7 +16,6 @@ pack/                 the packwiz pack — this is what gets installed
   pack.toml           name, versions, index hash
   index.toml          every file below, hashed (regenerate with `packwiz refresh`)
   mods/*.pw.toml      one file per mod (149; 2 server-only)
-  resourcepacks/      Fresh Animations (Modrinth-managed)
   shaderpacks/        Complementary Reimagined + Unbound (Modrinth-managed)
   resourcepacks/      Fresh Animations, Better Leaves, Enhanced Boss Bars, xali's books/potions, Low On Fire (on by default)
   config/             shipped configs; `preserve = true` files are not overwritten on update
