@@ -60,7 +60,12 @@ two players are simply the first two players. Anything that would only work for 
   and shader preset match the table; switch the variable, relaunch, confirm; edit a setting in-game,
   relaunch, confirm it survives.
 
-## Phase 2 — World and balance config  🟡 first pass 2026-10-16 (needs a fresh world to show)
+## Phase 2 — World and balance config  ✅ 2026-10-17 (playtested on a fresh world)
+Playtest results (Aaron, 2026-10-17 14:49): everyone spawns in a CTOV village ✅; iron found near the capital
+and zinc in the mountains with the prospector's pick ✅; server Distant Horizons LODs visible ✅; Mac on
+`low` at 40–50 FPS (staying on low) ✅. Out-of-season crops: config-level (`out_of_season_crop_behavior = 1`),
+not yet watched in play — first winter will show it. Remaining items below are tuning that needs more
+play hours, or belong to Phase 3/5, and do not block Phase 3.
 Done in the first pass:
 - Serene Seasons: `sub_season_duration = 16` (192-day year); out-of-season crops **don't grow**
   (`out_of_season_crop_behavior = 1`) — Greenhouse Glass is the counter. Farmer's Delight crops
@@ -80,12 +85,8 @@ Still to do (needs playtest data or Phase 3 scripting):
 - Structure spacing (Structory thinning, Cataclysm structure sets) via datapack structure_set overrides
 - ~~Big Cannons block damage~~ decided: off everywhere, entity damage on (`defaultconfigs/createbigcannons-server.toml`)
 - Villager Comfort / Restock Balance numbers after the first market week
-- Village Spawn Point: confirm the capital has a bell and room (any `#minecraft:village` qualifies now)
 - Create / Valkyrien Skies per-player caps; chunk-loading limits (Phase 5)
-- **Mowzie's bosses in modded biomes**: Mowzie's only generates its structures in vanilla biomes unless
-  the biome is in `mowziesmobs:has_structure/has_mowzie_structure`. With Terralith + BOP most snow,
-  savanna and peak biomes are modded, so Frostmaw/Umvuthi/Sculptor are rarer than intended. Add a Paxi
-  tag listing the relevant Terralith/BOP biomes (same treatment Cataclysm already got).
+- ~~Mowzie's bosses in modded biomes~~ → Phase 3 (Paxi `has_mowzie_structure` tag)
 - **Test:** fresh world on the server — all players spawn in the same CTOV village, server DH LODs
   visible, iron and zinc findable within a session (prospector's pick + samples), a crop planted out
   of season does nothing until under a glass roof

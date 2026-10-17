@@ -189,6 +189,12 @@ Why things are the way they are. Add an entry when a choice would surprise someo
   so a changed default reaches existing installs without `PEACOCK_RESET=1` while a player's own edit is
   still kept. Append to `PREVIOUS_DEFAULTS` whenever a shipped default changes.
 
+## The Mac stays on `low` (2026-10-17)
+- The M5 Air gets 40–50 FPS on `low` (Complementary at Potato preset, DH 128) and Aaron is keeping it
+  there rather than `medium`. The README's "MacBook Air = medium" guidance is therefore aspirational;
+  `low` is the honest recommendation for fanless Macs until a profile with shaders at Potato *and*
+  medium's DH radius proves itself.
+
 ## Client FPS on the potato tier (2026-10-17)
 - `potato` now: DH radius 64 (was 96), `entityDistanceScaling` 0.5, vanilla clouds off, and **no Fresh
   Animations** (EMF animates every entity on the render thread; the other packs are free). Shaders off,
