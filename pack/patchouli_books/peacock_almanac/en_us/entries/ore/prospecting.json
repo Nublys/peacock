@@ -6,19 +6,22 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Craft the $(bold)Prospector's Pick$() early. Right-click stone and it tells you what ore is nearby and roughly where. Walk, tap, walk, tap. It never breaks.$(br2)Geolosys hands you its own $(bold)Field Manual$() on first join — it lists every deposit, what it drops, and at what depth."
+      "text": "Craft the pick early. Right-click stone and it tells you what ore is nearby and roughly where. Walk, tap, walk, tap. It never breaks.$(br2)Geolosys hands you its own $(bold)Field Manual$() on first join. It lists every deposit, what it drops and at what depth."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "geolosys:crafting/prospectors_pick_from_crafting",
+      "text": "Tap exposed stone, not dirt. In deepslate it reads deeper deposits. Pair it with a depth meter."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "geolosys:crafting/field_manual_from_crafting",
+      "recipe2": "geolosys:crafting/depth_meter",
+      "text": "Lost the manual? Craft one. The depth meter reads your Y."
     },
     {
       "type": "patchouli:text",
-      "text": "Metals you will need, in order: $(bold)copper and iron$() (homestead; iron is common and shallow), $(bold)zinc$() (sphalerite — brass needs it), then $(bold)gold$() and $(bold)coal$() in bulk once machines run."
-    },
-    {
-      "type": "patchouli:text",
-      "text": "Ore is regional: $(bold)zinc lies under mountains$(), $(bold)gold in the dry country$() (desert, badlands, savanna), $(bold)tin in sand$(), $(bold)lead under plains$(), $(bold)limonite iron in marshes$().$(br2)Nature's Compass finds the biome; samples find the deposit."
-    },
-    {
-      "type": "patchouli:text",
-      "text": "Mark deposits on your atlas. The first player to find zinc should tell everyone — and that is a trade route being born."
+      "text": "$(bold)Metals you will need, in order:$() copper and iron (homestead; iron is common and shallow), then $(bold)zinc$() (brass needs it, and brass needs a Blueprint), then gold and coal in bulk once machines run.$(br2)The first player to find zinc should tell everyone. That is a trade route being born."
     }
   ]
 }

@@ -1,0 +1,16 @@
+{
+  "name": "Nether & End",
+  "icon": "minecraft:obsidian",
+  "category": "patchouli:land",
+  "sortnum": 4,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "The Nether is Incendium's: new biomes, piglin villages, a quartz kitchen with a chef in it, a reactor that still runs. Portals link up sensibly (Nether Portal Fix) so a portal in your town comes back to your town.$(br2)The Nether holds two Blueprints and the summoning altar of a third. It is a mid-game place, not a shortcut."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "The End is Nullscape's: islands, pillars, crystal peaks and shadowlands. Cataclysm's Ruined Citadel stands in its highlands with the $(bold)Ender Guardian$() inside.$(br2)What the Guardian keeps is the last chapter. See $(l:patchouli:tech/tier4)Tier 4$()."
+    }
+  ]
+}

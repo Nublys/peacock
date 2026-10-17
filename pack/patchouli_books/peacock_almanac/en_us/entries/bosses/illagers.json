@@ -1,0 +1,28 @@
+{
+  "name": "The Illager Masters",
+  "icon": "minecraft:white_banner",
+  "category": "patchouli:bosses",
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Illager bosses are fought with their armies. They are the social tier: a squad of recruits and a friend are the intended answer.$(br2)The Invoker is $(l:patchouli:tech/tier2)Tier 2$(); the totem captains of Respillaged are $(l:patchouli:tech/tier4)Tier 4$()."
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "illagerinvasion:invoker",
+      "text": "The Invoker in the Illager Fort. Shields itself, calls fangs, blinks. Kill the fort's garrison first or it never ends. Holds the $(bold)Trading Floor$().",
+      "scale": 0.8
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "illagerinvasion:necromancer",
+      "text": "Necromancers raise the dead you have already killed. In a raid they are the first target. Not a boss, but the reason raids end badly.",
+      "scale": 0.8
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Totem captains$() (Illage & Spillage, Respillaged): summoned with totems looted from outposts. Spellcasters and brutes with phases. They are summonable, so a full server never waits on worldgen for them.$(br2)They hold the frontier ore and the final rail."
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "name": "The Mutants",
+  "icon": "mutantmonsters:mutant_skeleton_rib_cage",
+  "category": "patchouli:bosses",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Mutant Monsters are what the dark age did to ordinary mobs. They spawn rarely wherever their lesser kind does, so the first one you meet will be near home. Iron armor, a dog and a bed nearby are enough.$(br2)They are Tier 1 of the $(l:patchouli:tech/tier1)ladder$()."
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "mutantmonsters:mutant_zombie",
+      "text": "Mutant Zombie: slams, throws, and gets back up once. Kite it, hit it while it recovers, finish it while it is down. Holds $(bold)Brass$().",
+      "scale": 0.55
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "mutantmonsters:mutant_skeleton",
+      "text": "Mutant Skeleton: a long-range archer that melees when you close. Shields matter. Holds $(bold)Recruiting$().",
+      "scale": 0.55
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "mutantmonsters:mutant_creeper",
+      "text": "Mutant Creeper: charges and explodes, spawning minions. Fight it away from anything you like; a spear and distance. Holds $(bold)Blasting$().",
+      "scale": 0.6
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "mutantmonsters:mutant_snow_golem",
+      "text": "Mutant Snow Golem: snowy biomes only, hurls ice and freezes the ground. Wool armor and a fire nearby. Holds $(bold)Climate control$().",
+      "scale": 0.6
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "mutantmonsters:mutant_enderman",
+      "text": "Mutant Enderman: teleports, throws blocks, clones. Water hurts it; fight by a lake. Holds $(bold)Ender logistics$().",
+      "scale": 0.5
+    }
+  ]
+}

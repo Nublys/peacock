@@ -6,7 +6,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Technology is unlocked $(bold)per player$(). Killing a boss does not unlock it for the server — it drops $(bold)Blueprints$(): one for every player who fought, plus one spare.$(br2)Use a Blueprint and you learn that technology. The spare is for someone who was not there."
+      "text": "Technology is unlocked $(bold)per player$(). Killing a boss does not unlock it for the server: it drops $(bold)Blueprints$(), one for every player who fought, plus one spare.$(br2)Use a Blueprint and you learn that technology. The spare is for someone who was not there."
     },
     {
       "type": "patchouli:text",
@@ -14,7 +14,21 @@
     },
     {
       "type": "patchouli:text",
-      "text": "Recipes you have not learned are visible but locked; the tooltip names the boss. The gated $(bold)blocks$() check too — a brass machine handed to someone who has not learned brass will not run for them.$(br2)$(italic)The first Blueprints arrive with the Dark Age update. Until then nothing is locked.$()"
+      "text": "Recipes you have not learned are $(bold)visible but locked$(): EMI shows them, the tooltip names the boss. Gated blocks check too: a brass machine handed to someone who has not learned brass will not run for them.$(br2)Players who want to share progress can form a team; a team's Blueprint teaches the team."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(italic)The first Blueprints arrive with the Dark Age update. Until then nothing is locked, and the ladder below is the plan, not yet the rule.$()$(br2)The ladder is four tiers. Each tier is a kind of fight, not a difficulty number."
+    },
+    {
+      "type": "patchouli:relations",
+      "entries": [
+        "patchouli:tech/tier1",
+        "patchouli:tech/tier2",
+        "patchouli:tech/tier3",
+        "patchouli:tech/tier4"
+      ],
+      "title": "The ladder"
     }
   ]
 }

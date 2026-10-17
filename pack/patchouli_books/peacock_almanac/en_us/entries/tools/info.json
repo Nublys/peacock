@@ -1,0 +1,16 @@
+{
+  "name": "Finding Things Out",
+  "icon": "minecraft:spyglass",
+  "category": "patchouli:tools",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Jade$() names whatever you look at, with its health, contents or progress. Hold $(bold)Shift$() for more. Numpad 0 toggles it.$(br2)$(bold)EMI$() is the recipe book: $(bold)R$() for recipes, $(bold)U$() for uses, $(bold)A$() to favourite, drag to the side to pin. It knows Create, Farmer's Delight, loot tables and enchantments."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Create$() ponders with $(bold)W$(). $(bold)Geolosys$() and $(bold)Animania$() give you their own books on first join. $(bold)Village Recruits$() has a wiki on $(bold)I$().$(br2)This almanac links to the others where they exist, and does not repeat them."
+    }
+  ]
+}

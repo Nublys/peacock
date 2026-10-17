@@ -1,0 +1,16 @@
+{
+  "name": "The Nether's Keepers",
+  "icon": "minecraft:blaze_powder",
+  "category": "patchouli:bosses",
+  "sortnum": 5,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Incendium's bosses are vanilla mobs rebuilt, so they do not pose for a portrait. They are found by structure.$(br2)$(bold)Torte$(), the skeleton chef, in the $(bold)Quartz Kitchen$() of the quartz flats. Fast, throws cake, deadly cake. Holds $(bold)Advanced cooking$() (Tier 1)."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Radiation Director$() in the $(bold)Nether Reactor$() of the toxic heap: a wither skeleton overseer in a maze of radiation. Holds the reactor's $(bold)precision parts$() (Tier 3).$(br2)$(bold)Hovering Inferno$(): summoned at an $(bold)Infernal Altar$() in the dunes with a nether star. You do not kill it; you survive it. Tier 4."
+    }
+  ]
+}

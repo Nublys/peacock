@@ -2,11 +2,18 @@
   "name": "The Atlas",
   "icon": "map_atlases:atlas",
   "category": "patchouli:tools",
-  "sortnum": 1,
+  "sortnum": 2,
   "pages": [
     {
+      "type": "patchouli:spotlight",
+      "item": "map_atlases:atlas",
+      "text": "There is no minimap. $(bold)Map Atlases$() collects maps into one book: craft an atlas from a book and a compass, feed it empty maps, carry it, and it fills as you travel. $(bold)M$() opens it; $(bold)P$() drops a pin where you stand.",
+      "link_recipe": false,
+      "title": "The atlas"
+    },
+    {
       "type": "patchouli:text",
-      "text": "There is no minimap. $(bold)Map Atlases$() collects maps into one book: craft an atlas, carry it, and it fills as you travel. $(bold)M$() opens it; $(bold)P$() drops a pin where you stand.$(br2)Mark deposits, villages, docks and boss structures. A shared atlas on a lectern in the capital is the server's map room."
+      "text": "Mark deposits, villages, docks and boss structures. Different map scales zoom the atlas. A shared atlas on a lectern in the capital is the server's map room.$(br2)Supplementaries' $(bold)globe$() and Create's $(bold)schematics$() are the other two kinds of map: the world's shape, and a build's."
     }
   ]
 }

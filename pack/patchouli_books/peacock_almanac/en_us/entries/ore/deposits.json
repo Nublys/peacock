@@ -1,0 +1,28 @@
+{
+  "name": "Where Each Metal Lies",
+  "icon": "geolosys:sphalerite_ore",
+  "category": "patchouli:ore",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "By depth, from the Field Manual. Shallow first.$(br2)$(bold)Malachite$() (copper) Y -16 to 90$(br)$(bold)Coal$() Y 34 to 78$(br)$(bold)Cassiterite$() (tin) Y 44 to 68$(br)$(bold)Bauxite$() (aluminum) Y 48 to 65$(br)$(bold)Hematite$() (iron) Y 32 to 60$(br)$(bold)Sphalerite$() (zinc) Y 37 to 46, mountains"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Lignite$() (soft coal) Y -4 to 32$(br)$(bold)Galena$() (lead and silver) Y -16 to 32$(br)$(bold)Autunite$() (uranium) Y 8 to 33$(br)$(bold)Gold$() Y -64 to 32, dry biomes$(br)$(bold)Azurite$() (copper) Y -49 to 13$(br)$(bold)Cinnabar$() (redstone) Y -60 to 15"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Lapis$() Y -64 to 64$(br)$(bold)Platinum$() Y -25 to 19$(br)$(bold)Beryl$() (emerald) Y -56 to 19$(br)$(bold)Bituminous coal$() Y -32 to -16$(br)$(bold)Limonite$() (iron, deep) Y -48 to -32$(br)$(bold)Teallite$() (tin, with emerald) Y -52 to -40$(br)$(bold)Kimberlite$() (diamond) Y -64 to 10$(br)$(bold)Anthracite$() Y -64 to -52"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Nether:$() gold Y 10 to 40, ancient debris Y 8 to 22 (both as Geolosys deposits, both with samples).$(br2)Peat lies in swamps and burns. Granite, diorite and andesite come in plutons too, which is why a hillside is sometimes one stone."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Processing:$() clusters smelt one to one. A $(bold)millstone$() crushes them (slow, iron-free). $(bold)Crushing wheels$() crush faster and $(bold)washing$() (encased fan over water) turns crushed ore into nuggets with a bonus.$(br2)Zinc clusters smelt straight to Create's zinc ingot: there is one zinc in this pack."
+    }
+  ]
+}

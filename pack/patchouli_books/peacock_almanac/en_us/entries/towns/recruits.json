@@ -6,7 +6,17 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Villages arm $(bold)Guard Villagers$() to hold a wall. $(bold)Village Recruits$() lets you hire a squad: command them with $(bold)R$(), teams with $(bold)U$(), their map with $(bold)N$(). Press $(bold)I$() for the Recruits wiki.$(br2)Hiring is locked until the Mutant Skeleton falls — the drill was lost with it."
+      "text": "Villages arm $(bold)Guard Villagers$() to hold a wall: hand a villager a sword or crossbow and they take the post. $(bold)Village Recruits$() lets you hire a squad: command them with $(bold)R$(), teams with $(bold)U$(), their map with $(bold)N$(), the wiki with $(bold)I$()."
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "recruits:recruit",
+      "text": "Recruits follow, hold, patrol and guard. They eat from their own inventory, so give them food, and they die for good, so give them armor. Pay is emeralds per hire.",
+      "scale": 0.9
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Hiring is $(bold)locked$() until the Mutant Skeleton falls: the drill that made soldiers of farmers was lost with it ($(l:patchouli:tech/tier1)Tier 1$()). Guards are not locked; a wall can always be manned.$(br2)Recruits ride horses, crew ships and man cannons. They are how two players hold a town against a raid."
     }
   ]
 }

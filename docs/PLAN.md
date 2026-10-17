@@ -82,9 +82,13 @@ Still to do (needs playtest data or Phase 3 scripting):
 - Villager Comfort / Restock Balance numbers after the first market week
 - Village Spawn Point: confirm the capital has a bell and room (any `#minecraft:village` qualifies now)
 - Create / Valkyrien Skies per-player caps; chunk-loading limits (Phase 5)
+- **Mowzie's bosses in modded biomes**: Mowzie's only generates its structures in vanilla biomes unless
+  the biome is in `mowziesmobs:has_structure/has_mowzie_structure`. With Terralith + BOP most snow,
+  savanna and peak biomes are modded, so Frostmaw/Umvuthi/Sculptor are rarer than intended. Add a Paxi
+  tag listing the relevant Terralith/BOP biomes (same treatment Cataclysm already got).
 - **Test:** fresh world on the server — all players spawn in the same CTOV village, server DH LODs
   visible, iron and zinc findable within a session (prospector's pick + samples), a crop planted out
-  of season does nothing until under Greenhouse Glass
+  of season does nothing until under a glass roof
 
 ## Phase 3 — Glue (KubeJS)
 - Cross-mod recipes: wagons, canteens, guard/recruit gear, troughs, oil from FD crops,

@@ -1,12 +1,25 @@
 {
-  "name": "Tier 3 — The Reactor",
+  "name": "Tier 3: The Reactor",
   "icon": "minecraft:netherite_scrap",
   "category": "patchouli:tech",
   "sortnum": 3,
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Both of you, with a plan.$(br2)$(bold)Withered Director$() (Nether Reactor) → $(bold)mechanical arms, precision mechanisms$() — the reactor's own parts.$(br)$(bold)Netherite Monstrosity$() → netherite, heavy cannon calibres.$(br)$(bold)Frostmaw$() → $(bold)Cannons$() (Create Big Cannons)."
+      "text": "Two or more, with a plan, in the Nether and the deep. Netherite is the armour the tier after this one assumes.$(br2)$(bold)Radiation Director$() and the $(bold)Leviathan$() hold $(bold)Precision mechanisms$(): mechanical arms, the reactor's own parts.$(br)$(bold)Netherite Monstrosity$() holds $(bold)Netherite$() and heavy cannon calibres."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Frostmaw$() holds $(bold)Cannons$() (Big Cannons).$(br)$(bold)Maledictus$() and the $(bold)Ancient Remnant$() hold the $(bold)Ancient Factory's$() door: its Eye drops from them.$(br2)Cannons are a server rule as much as a technology: they damage $(bold)mobs and players$() but not the land. Griefing is off; sieges are on."
+    },
+    {
+      "type": "patchouli:relations",
+      "entries": [
+        "patchouli:bosses/cataclysm",
+        "patchouli:bosses/mowzies",
+        "patchouli:bosses/incendium"
+      ],
+      "title": "Who to fight"
     }
   ]
 }

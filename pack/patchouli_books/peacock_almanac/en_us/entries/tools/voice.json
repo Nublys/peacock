@@ -2,11 +2,11 @@
   "name": "Voice Chat",
   "icon": "minecraft:note_block",
   "category": "patchouli:tools",
-  "sortnum": 2,
+  "sortnum": 3,
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Simple Voice Chat is built in and uses the server's port — nothing to set up. Voice carries 48 blocks and fades with distance; use groups ($(bold),$() menu) to talk across the map.$(br2)Default is voice activation; $(bold)Right Alt$() is push-to-talk if you switch. Mac: allow the microphone for Prism when asked."
+      "text": "Simple Voice Chat is built in and uses the server's port: nothing to set up. Voice carries 48 blocks and fades with distance; use groups ($(bold),$() menu) to talk across the map.$(br2)Default is voice activation; $(bold)Right Alt$() is push-to-talk if you switch. Mac: allow the microphone for Prism when asked."
     }
   ]
 }

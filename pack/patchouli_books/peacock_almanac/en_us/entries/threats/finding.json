@@ -1,0 +1,20 @@
+{
+  "name": "Finding Them",
+  "icon": "minecraft:map",
+  "category": "patchouli:threats",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Bosses live in places. Finding the place is most of the fight, and the pack never lets you type a command for it.$(br2)$(bold)Biomes:$() Nature's Compass finds snow, savanna, desert, peaks. Half the ladder is biome-bound ($(l:patchouli:bosses/where_they_are)where they are$())."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Rumour maps:$() outposts, forts, Create workshops and underground villages carry maps in their chests that point at a boss structure. Loot an outpost, read the map, go.$(br2)$(bold)Cartographers$() will sell the same maps once a town knows the way. Ask in the capital first."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Eyes$() (Cataclysm): each dungeon has an Eye that points to it. Eyes are loot from other dungeons and from the lesser ruins (abandoned spires, temples, villages). The Harbinger's factory is underground; its Eye waits in the pyramid and the prison.$(br2)Mark everything on the atlas. One shared atlas on a lectern in the capital is the server's map room."
+    }
+  ]
+}

@@ -2,15 +2,19 @@
   "name": "Performance Profiles",
   "icon": "minecraft:redstone_torch",
   "category": "patchouli:tools",
-  "sortnum": 3,
+  "sortnum": 4,
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "The pack ships graphics profiles by $(bold)hardware$(), applied by the launcher from the PEACOCK_PROFILE setting in Prism:$(br2)$(bold)potato$() iGPU, shaders off · $(bold)low$() iGPU, Complementary at Potato · $(bold)medium$() thin laptops like a MacBook Air · $(bold)high$() laptop with a real GPU · $(bold)ultra$() desktop"
+      "text": "The pack ships graphics profiles by $(bold)hardware$(), applied by the launcher from the PEACOCK_PROFILE setting in Prism:$(br2)$(bold)potato$() iGPU, shaders off$(br)$(bold)low$() iGPU, Complementary at Potato$(br)$(bold)medium$() thin laptops, a MacBook Air$(br)$(bold)high$() laptop with a real GPU$(br)$(bold)ultra$() desktop"
     },
     {
       "type": "patchouli:text",
-      "text": "Anything you change in the video or shader menus is kept; the profile only sets defaults. Shaders toggle with $(bold)K$(). If frames drop, lower Distant Horizons' radius first, shaders second, render distance last.$(br2)Macs stay on plain Complementary — the Euphoria variant exceeds what macOS OpenGL offers."
+      "text": "Anything you change in the video or shader menus is kept; the profile only sets defaults. Shaders toggle with $(bold)K$(). If frames drop: lower Distant Horizons' radius first, shaders second, render distance last.$(br2)Macs stay on plain Complementary; the Euphoria variant exceeds what macOS OpenGL offers."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Distant Horizons$() draws the far terrain from a low-detail copy the server builds as players explore. On a fresh world the horizon fills in over the first hour; a reset world starts over.$(br2)Embeddium, ImmediatelyFast, Entity Culling, ModernFix and FerriteCore are the quiet half of the frame rate; leave them on."
     }
   ]
 }

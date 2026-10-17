@@ -6,11 +6,41 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Farmer's Delight runs the kitchen: cutting boards, cooking pots, skillets, and meals that feed you for a long time. Simple meals carry you through the first season; the good stuff needs a stove and ingredients from more than one biome.$(br2)Fish with Aquaculture rods and nets — rivers and oceans have different fish, and some are worth money."
+      "text": "Farmer's Delight runs the kitchen. Raw food still works, but real meals feed you longer, give $(bold)Nourishment$() (slow natural regen) and $(bold)Comfort$() (faster healing).$(br2)Start with a knife and a cutting board; the pot and skillet come once you have iron."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "farmersdelight:cutting_board",
+      "text": "Right-click food onto it, then right-click with a knife. Cabbage into leaves, meat into cuts, rice into grains."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "farmersdelight:cooking_pot",
+      "text": "Sits on a heat source: campfire, stove, fire, magma. Soups, stews and rice dishes come out of here. A bowl in the left slot serves them."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "farmersdelight:skillet",
+      "text": "Fries meat and eggs in your hand or on a stove. The stove below is the kitchen's heart: a campfire you can cook several things on at once."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "farmersdelight:stove",
+      "text": "Build the stove under a cooking pot. Rich soil (compost) grows crops faster in any season that allows them."
     },
     {
       "type": "patchouli:text",
-      "text": "Animals are from Animania: breeds, genders, feed and water troughs. A cow that is fed and watered gives milk; one that is not, will not. Animals need care, and they reward it.$(br2)Season matters: see Land, Seasons & Weather for what grows when, and why a greenhouse is worth building before winter."
+      "text": "$(bold)Fish:$() Aquaculture gives rods, hooks and bait. Rivers, lakes and oceans hold different fish; some are heavy, some are worth emeralds. A worm farm turns dirt and seeds into bait.$(br2)$(bold)Aquaculture Delight$() adds the recipes that turn a catch into a meal."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "aquaculture:iron_fishing_rod",
+      "recipe2": "aquaculture:worm_farm",
+      "text": "Rods take a hook and bait; a worm farm breeds the bait."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Season matters: see $(l:patchouli:land/crops)What Grows When$(). Out of season, crops stop; a greenhouse roof or a deep farm keeps the pot full.$(br2)Animals are from Animania and are a chapter of their own: $(l:patchouli:start/animals)Animals$()"
     }
   ]
 }

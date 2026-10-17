@@ -6,11 +6,37 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Tough As Nails tracks your $(bold)temperature$(). The bar by your hotbar swings cold in winter nights, snowy biomes, deep water and high altitude; hot in deserts, the Nether, and midsummer noon.$(br2)Thirst is $(bold)off$() in this pack. Temperature is the survival layer."
+      "text": "Tough As Nails tracks your $(bold)temperature$(): five bands, Icy, Cold, Neutral, Warm, Hot. The gauge is by your hotbar. Winter nights, snow, deep water and altitude pull it down; deserts, the Nether and summer noon push it up.$(br2)Thirst is $(bold)off$(). Temperature is the survival layer."
     },
     {
       "type": "patchouli:text",
-      "text": "Counters: wool and leather armor warm you; campfires, torches and lava warm the air near them; shade, water and ice cool you. Climate clothing from TAN is the long-term answer.$(br2)Icy or scorching for too long hurts. Plan the first winter: a roof, a fire, and wool."
+      "text": "$(bold)Icy$() and $(bold)Hot$() hurt you over time. $(bold)Cold$() and $(bold)Warm$() are warnings. The shift takes a while, so you can cross a cold valley; you cannot camp in it unprepared.$(br2)Heat sources (campfires, torches, lava, furnaces) warm the air nearby; water, ice and shade cool it."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "toughasnails:wool_helmet",
+      "text": "Wool warms, leaves cool. Every two pieces move you one band toward Neutral; armor never pushes you into Hot or Icy."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "toughasnails:leaf_helmet",
+      "text": "Leaf armor for deserts and the Nether. Both sets are cheap and always craftable; they are the basic climate clothing and they are free."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "toughasnails:thermometer",
+      "text": "A thermometer reads the air where you stand; a temperature gauge is a block that reads a room. Build one before you build a greenhouse."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "toughasnails:thermoregulator",
+      "text": "The thermoregulator is a block that heats or cools a room, fed with fuel or ice. Fans and air conditioners (TAN+) go further. These are $(bold)advanced climate control$() and are part of the Blueprint ladder; wool and leaves never are.",
+      "link_recipe": false,
+      "title": "Advanced climate control"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Thermal Tuning$() is an armor enchantment that holds you at Neutral. Rare, and worth a slot.$(br2)Plan the first winter: a roof, a fire, wool, and food that gives Comfort. Plan the first summer: shade and water near the fields."
     }
   ]
 }

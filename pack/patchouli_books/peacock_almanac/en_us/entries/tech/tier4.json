@@ -1,12 +1,21 @@
 {
-  "name": "Tier 4 — The Last Chapter",
+  "name": "Tier 4: The Last Chapter",
   "icon": "minecraft:end_crystal",
   "category": "patchouli:tech",
   "sortnum": 4,
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(bold)Hovering Inferno$(), $(bold)Ignis$(), the Respillaged totem captains → frontier ore, the final rail.$(br)$(bold)Ender Guardian$() (the End) → the lost capital's last secret.$(br2)What that is, the survivors did not write down."
+      "text": "$(bold)The Harbinger$() and $(bold)Ignis$() hold $(bold)Frontier ore$().$(br)$(bold)Hovering Inferno$() and the $(bold)totem captains$() hold the $(bold)final rail$().$(br)$(bold)Scylla$() holds the sea.$(br)$(bold)Ender Guardian$() (the End) holds the lost capital's last secret.$(br2)What that is, the survivors did not write down."
+    },
+    {
+      "type": "patchouli:relations",
+      "entries": [
+        "patchouli:bosses/cataclysm",
+        "patchouli:bosses/illagers",
+        "patchouli:bosses/incendium"
+      ],
+      "title": "Who to fight"
     }
   ]
 }

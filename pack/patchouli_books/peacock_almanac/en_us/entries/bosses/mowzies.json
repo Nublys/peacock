@@ -1,0 +1,42 @@
+{
+  "name": "Mowzie's Guardians",
+  "icon": "mowziesmobs:wrought_helmet",
+  "category": "patchouli:bosses",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Mowzie's Mobs bosses stay where they are born and defend a place. Each has its own rules; the structure tells you the rules before the fight does.$(br2)Ferrous Wroughtnaut and Naga are $(l:patchouli:tech/tier2)Tier 2$(); Umvuthi is Tier 2; Frostmaw is $(l:patchouli:tech/tier3)Tier 3$()."
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "mowziesmobs:ferrous_wroughtnaut",
+      "text": "Ferrous Wroughtnaut: an armoured knight in a chamber under the ground. Only its back is weak, and only after it swings. Patience, not damage. Holds $(bold)Trains$().",
+      "scale": 0.55
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "mowziesmobs:naga",
+      "text": "Naga: coastal cliff flyers that spit acid and dive. Shoot them while they hover; they land when hurt. Holds $(bold)Ships$().",
+      "scale": 0.6
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "mowziesmobs:umvuthi",
+      "text": "Umvuthi: the sun chief of an Umvuthana grove in the savanna. His followers come first; he fights with solar fire. Holds $(bold)Diesel$().",
+      "scale": 0.6
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "mowziesmobs:frostmaw",
+      "text": "Frostmaw: a sleeping giant on an ice crystal in the snow. Wake it and it charges, freezes, slams. Warm clothes and a wall to hide behind. Holds $(bold)Cannons$().",
+      "scale": 0.45
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "mowziesmobs:sculptor",
+      "text": "The Sculptor on the peaks is not a fight but a test of climbing. Pass it and it gives a tool. Not on the ladder, worth the climb.",
+      "scale": 0.8
+    }
+  ]
+}

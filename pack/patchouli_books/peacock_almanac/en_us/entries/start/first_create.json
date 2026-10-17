@@ -2,15 +2,44 @@
   "name": "Your First Machines",
   "icon": "create:andesite_alloy",
   "category": "patchouli:start",
-  "sortnum": 3,
+  "sortnum": 4,
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Nothing in the homestead tier is locked. Andesite alloy, water wheels, mechanical presses, mixers, saws, belts, funnels, chutes, wagons and docks are yours from day one.$(br2)What you cannot make yet is $(bold)brass$() — and everything brass unlocks. The dead took it. See Blueprints & Recovery."
+      "text": "Nothing in the homestead tier is locked. Andesite alloy, water wheels, presses, mixers, saws, millstones, belts, funnels and chutes are yours from day one.$(br2)What you cannot make yet is $(bold)brass$(), and everything brass unlocks. The dead took it. See $(l:patchouli:tech/how_blueprints_work)Blueprints & Recovery$()."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "create:crafting/materials/andesite_alloy",
+      "text": "Andesite alloy is the first material. Andesite is everywhere; iron nuggets come from iron clusters (see Ore)."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "create:crafting/kinetics/water_wheel",
+      "recipe2": "create:crafting/kinetics/large_water_wheel",
+      "text": "Free power from flowing water. Large wheels give more."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "create:crafting/kinetics/millstone",
+      "recipe2": "create:crafting/kinetics/mechanical_press",
+      "text": "Millstone grinds flour and crushes clusters; the press makes sheets."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "create:crafting/kinetics/mechanical_mixer",
+      "recipe2": "create:crafting/kinetics/encased_fan",
+      "text": "Mixer over a basin: dough, alloy, one day brass. Fans blow and smelt."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "create:crafting/kinetics/wrench",
+      "recipe2": "create:crafting/kinetics/goggles",
+      "text": "Wrench: rotate and pick up machines. Goggles: see stress and speed."
     },
     {
       "type": "patchouli:text",
-      "text": "Create's own book (the ponder screens — hold $(bold)W$() over an item) explains every machine. This almanac only tells you which doors are closed and which bosses hold the keys."
+      "text": "Create explains itself: hold $(bold)W$() over any Create item for a ponder scene. This almanac only says which doors are closed.$(br2)$(bold)Closed for now:$() brass and everything on it (mechanical crafters, arms, deployers, trains), blaze burners, cannons, diesel, precision mechanisms."
     }
   ]
 }

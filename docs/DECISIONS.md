@@ -206,6 +206,15 @@ Why things are the way they are. Add an entry when a choice would surprise someo
   story, first days, seasons/crops, prospecting, towns, threats, the Blueprint ladder, controls and
   profiles. It is generated from `tools/gen-almanac.py` so prose edits are one file. It describes the
   Phase 4 ladder as designed and says so ("arrives with the Dark Age update") rather than hiding it.
+- v2 (2026-10-17): 10 chapters, 45 entries, 174 pages. The first cut was text-only and one page per
+  topic, which read as unfinished. Now uses crafting/smelting/spotlight/entity/relations pages; every
+  recipe, item and entity id is checked against the mod jars, every internal link against the entry
+  list, and every page against a per-type character budget before the book is written. New chapters:
+  *Bestiary of Bosses* (every boss, structure and biome — the findability promise) and *Building &
+  Logistics*. Corrections made while writing: Incendium's reactor boss is the **Radiation Director**
+  (not "Withered Director"); the fort boss is Illager Invasion's **Invoker**; Serene Seasons 9 has no
+  greenhouse-glass item — any `#forge:glass` a few blocks above a crop counts; only hematite,
+  sphalerite and gold are biome-bound in our Geolosys overrides, the rest follow depth.
 
 ## Tough As Nails: temperature on, thirst off
 - `thirst.toml: enable_thirst = false` (2026-10-16). Seasons and temperature are the survival layer we

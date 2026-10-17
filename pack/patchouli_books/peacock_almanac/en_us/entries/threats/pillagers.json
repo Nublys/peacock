@@ -1,16 +1,26 @@
 {
-  "name": "Pillagers",
+  "name": "The Pillager Faction",
   "icon": "minecraft:crossbow",
   "category": "patchouli:threats",
   "sortnum": 1,
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Pillagers are the faction that profited from the fall. Outposts, fortresses and camps hold stolen goods and some Blueprints. Illager Invasion adds new kinds — illusioners, sorcerers, basher, provokers — the longer a raid runs.$(br2)Raids come from Bad Omen; a village with guards and walls holds, one without does not."
+      "text": "Pillagers profited from the fall. Outposts, forts, towers, huts and labyrinths hold stolen goods, and the ledgers of the old trade.$(br2)$(bold)Illager Invasion$() adds the ranks: basher, provoker, sorcerer, alchemist, firecaller, necromancer, archivist, inquisitor, marauder, and the $(bold)Invoker$() who commands a fort."
     },
     {
       "type": "patchouli:text",
-      "text": "Savage & Ravage and Respillaged make outposts and raids worth the fight: loot, totems, and the way to summon a captain when you are ready for one.$(br2)The $(bold)Fortress Illusioner$() holds the trading ledgers. See Blueprints & Recovery."
+      "text": "$(bold)Raids$() come from Bad Omen (kill a captain, carry the curse into a town) and from the illagers themselves, who grow bolder as the server does. A village with guards and walls holds; one without does not.$(br2)$(bold)Savage & Ravage$() and $(bold)Respillaged$() make outposts worth the fight: loot, totems, creepers you did not expect."
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "illagerinvasion:invoker",
+      "text": "The Invoker: the fort's master. Summons, shields, teleports, and does not fight alone. Bring recruits. It holds the trading ledgers: the Trading Floor Blueprint.",
+      "scale": 0.8
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Totems$() (Respillaged) summon captains when you are ready, which is how late Blueprints stay available on a busy server: nobody waits on worldgen for a boss that can be called.$(br2)Pirates (Valkyrien Pirates) hold the sea the way illagers hold the land: ships that fight back, and loot in the hold."
     }
   ]
 }

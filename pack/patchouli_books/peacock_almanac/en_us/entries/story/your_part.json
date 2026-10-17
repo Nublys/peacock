@@ -2,15 +2,19 @@
   "name": "Your Part",
   "icon": "minecraft:writable_book",
   "category": "patchouli:story",
-  "sortnum": 1,
+  "sortnum": 2,
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Every piece of lost technology is held by something that will fight to keep it. Beat it and it drops a $(bold)Blueprint$() — the knowledge of how the thing was made.$(br2)Use the Blueprint and you can build that technology. Nobody else can until they learn it too."
+      "text": "Every piece of lost technology is held by something that will fight to keep it. Beat it and it drops a $(bold)Blueprint$(): the knowledge of how the thing was made.$(br2)Use the Blueprint and you can build that technology. Nobody else can until they learn it too."
     },
     {
       "type": "patchouli:text",
-      "text": "Knowledge is a thing you can hand to someone. Trade Blueprints, gift them, loot them from the fallen. Civilization recovers by sharing what it recovers.$(br2)See $(l:patchouli:tech/how_blueprints_work)Blueprints & Recovery$() for the ladder."
+      "text": "Knowledge is a thing you can hand to someone. Trade Blueprints, gift them, loot them from the fallen. Civilization recovers by sharing what it recovers.$(br2)You are not expected to do this alone. Towns, recruits, dogs and other settlers are all part of the plan."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)What this almanac is not:$() a manual for every mod. Create has ponder scenes (hold $(bold)W$() over any of its items). EMI shows every recipe ($(bold)R$() over an item). Jade names whatever you look at.$(br2)This book tells you how the pieces fit, which doors are closed, and which bosses hold the keys."
     }
   ]
 }

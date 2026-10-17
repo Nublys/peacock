@@ -6,11 +6,22 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Crops $(bold)do not grow out of season$(). Hover over seeds: the tooltip lists fertile seasons.$(br2)$(bold)Spring:$() carrots, potatoes, cabbage, onions, berries, most saplings$(br)$(bold)Summer:$() wheat, melons, tomatoes, onions, rice, sugar cane, cactus$(br)$(bold)Autumn:$() wheat, pumpkins, beetroot, carrots, cabbage, rice$(br)$(bold)Winter:$() sweet berries, spruce"
+      "text": "Crops $(bold)do not grow out of season$(). Hover seeds for their fertile seasons.$(br2)$(bold)Spring:$() carrots, potatoes, cabbage, onions, berries, most saplings$(br)$(bold)Summer:$() wheat, melons, tomatoes, onions, rice, sugar cane, cactus$(br)$(bold)Autumn:$() wheat, pumpkins, beetroot, carrots, cabbage, rice$(br)$(bold)Winter:$() sweet berries, spruce"
     },
     {
       "type": "patchouli:text",
-      "text": "Year-round: mushrooms, nether wart, cave vines.$(br2)$(bold)Greenhouse Glass$() (Serene Seasons) makes any crop under it count as in-season. A glass roof over a farm is the winter plan. Below Y=48 fertility is ignored too — deep farms work all year."
+      "text": "Year-round: mushrooms, nether wart, cave vines.$(br2)Below $(bold)Y=48$() season is ignored: deep farms work all year. So does anything under a $(bold)glass roof$()."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "minecraft:glass",
+      "text": "Any glass counts as greenhouse glass here: a crop with glass a few blocks above it grows as if in season. A glass roof over a lit, walled field is the winter plan. Build it in autumn and the pot stays full.",
+      "link_recipe": false,
+      "title": "Greenhouses"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Harvest Moon$() nights (see $(l:patchouli:land/sky)The Sky$()) give extra yield. $(bold)Rich soil$() (Farmer's Delight) speeds growth. Slice & Dice can automate the kitchen later; a sprinkler waters a field.$(br2)Trees ignore seasons. Berries, mushrooms and fish are the winter calories."
     }
   ]
 }

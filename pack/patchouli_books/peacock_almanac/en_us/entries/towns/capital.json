@@ -1,0 +1,20 @@
+{
+  "name": "The Capital",
+  "icon": "minecraft:bell",
+  "category": "patchouli:towns",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "The capital is the village you spawned in. It is deliberately the only shared spawn: new settlers arrive there, raids are drawn to it, and it is where the server's first station, dock and market will be.$(br2)It belongs to everyone. Build in it, but build with the town, not over it."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)What makes a town a town$() here: a bell, beds, and villagers who sleep in them. Several mods check for exactly that. Trading depots, bounty boards and caravan stops all want a real settlement around them.$(br2)A hole in the ground with one librarian is not a town, and the pack will tell you so."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Growing it:$() more beds and workstations draw more villagers; Village Expansion lets a town build itself out; guards hold the wall; workers tend the fields.$(br2)Villagers have names (Villager Names). Learn them. The one who sells the thing you need will be gone if the raid gets through."
+    }
+  ]
+}

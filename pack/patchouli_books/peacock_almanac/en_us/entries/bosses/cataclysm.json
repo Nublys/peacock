@@ -1,0 +1,60 @@
+{
+  "name": "Cataclysm's Titans",
+  "icon": "cataclysm:ignitium_ingot",
+  "category": "patchouli:bosses",
+  "sortnum": 4,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "L_Ender's Cataclysm bosses live in dungeons that are fights in themselves. Each dungeon drops an Eye that points to the next. They are Tier 3 and 4.$(br2)Bring two people and a plan. These are not soloed in iron."
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "cataclysm:ancient_remnant",
+      "text": "Ancient Remnant in the Cursed Pyramid (deserts). A desert king with charges and sandstorms. The pyramid's traps are half the fight.",
+      "scale": 0.45
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "cataclysm:maledictus",
+      "text": "Maledictus in the Frosted Prison (snow). A knight with a halberd and lightning phases. Fought in a ring; do not leave it.",
+      "scale": 0.55
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "cataclysm:the_harbinger",
+      "text": "The Harbinger in the Ancient Factory (underground). A machine of lasers and missiles. Fight it in the open floor; the walls shoot back.",
+      "scale": 0.4
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "cataclysm:ignis",
+      "text": "Ignis in the Burning Arena (Nether dunes and ash). A flame knight with a shield you must break. Fire resistance is mandatory. Holds $(bold)Frontier ore$().",
+      "scale": 0.55
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "cataclysm:netherite_monstrosity",
+      "text": "Netherite Monstrosity in the Soul Blacksmith (withered forest). Lava, slams, a magma bombardment. Holds $(bold)Netherite$() and heavy calibres.",
+      "scale": 0.35
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "cataclysm:the_leviathan",
+      "text": "The Leviathan in the Sunken City (deep ocean). Invincible outside water; fight it in its element with water breathing. Shares the $(bold)precision parts$() with the Director.",
+      "scale": 0.3
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "cataclysm:scylla",
+      "text": "Scylla in the Acropolis (warm ocean). Storm and sea. Late Tier 4.",
+      "scale": 0.4
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "cataclysm:ender_guardian",
+      "text": "Ender Guardian in the Ruined Citadel (the End). The last fight. What it keeps, the survivors did not write down.",
+      "scale": 0.55
+    }
+  ]
+}

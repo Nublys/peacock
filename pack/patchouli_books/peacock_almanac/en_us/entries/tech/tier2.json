@@ -1,12 +1,24 @@
 {
-  "name": "Tier 2 — Bring Recruits",
+  "name": "Tier 2: Bring Recruits",
   "icon": "minecraft:diamond",
   "category": "patchouli:tech",
   "sortnum": 2,
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Bosses that guard a place. Bring a squad, or a friend.$(br2)$(bold)Ferrous Wroughtnaut$() → $(bold)Trains$() (Steam 'n' Rails).$(br)$(bold)Naga$() → $(bold)Ships$() (Eureka).$(br)$(bold)Fortress Illusioner$() → the $(bold)Trading Floor$() — the illagers held the ledgers.$(br)$(bold)Umvuthi$() → $(bold)Diesel$()."
+      "text": "Bosses that guard a place. Bring a squad, or a friend. Diamond or good iron with enchantments; food with Comfort; a way home.$(br2)$(bold)Ferrous Wroughtnaut$() holds $(bold)Trains$() (Steam 'n' Rails).$(br)$(bold)Naga$() holds $(bold)Ships$() (Eureka).$(br)$(bold)The Invoker$() holds the $(bold)Trading Floor$().$(br)$(bold)Umvuthi$() holds $(bold)Diesel$()."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Trains and ships are the two ways to move ore between regions that do not involve a horse. Diesel is the engine that does not need a river. The Trading Floor is the market that runs without you.$(br2)Tier 2 is where a server's economy stops being one person's chest."
+    },
+    {
+      "type": "patchouli:relations",
+      "entries": [
+        "patchouli:bosses/mowzies",
+        "patchouli:bosses/illagers"
+      ],
+      "title": "Who to fight"
     }
   ]
 }

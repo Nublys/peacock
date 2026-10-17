@@ -6,11 +6,19 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Everyone spawns in the same village: the $(bold)capital$(). It has a bell, villagers with trades, and beds. It will grow as the server does — it is the first market, the first station, and the first thing raiders come for.$(br2)Set your spawn with a bed early. There is no fast travel in this world; distance is real."
+      "text": "Everyone spawns in the same village: the $(bold)capital$(). It has a bell, villagers with trades, beds, and usually a wall. It is the first market, the first station, and the first thing raiders come for.$(br2)Claim a bed early. There is no fast travel in this world; distance is real, and the way home matters."
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Day one checklist:$()$(br)- Wood, a crafting table, a bed in the capital$(br)- Check the season (calendar, or the sky's colour)$(br)- Food: villager farms are fair game to replant$(br)- A campfire before nightfall if it is cold$(br2)Mobs are harder than you remember. A wolf helps; a dog helps more (see Threats)."
+      "text": "$(bold)Day one checklist:$()$(br)- Wood, a crafting table, a bed in the capital$(br)- Check the season (sky colour, or craft a calendar)$(br)- Food: villager farms are fair game, replant what you take$(br)- A campfire before nightfall if it is cold$(br)- Read $(l:patchouli:start/temperature)Staying Warm$() if it is autumn or winter"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)First night:$() stay inside the wall. Mobs here are tougher and smarter than you remember, and the village guards will not chase them for you.$(br2)Mark the capital on your $(l:patchouli:tools/atlas)atlas$() before you leave it. The capital will grow as the server does; nothing you build there is wasted."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Dying$() leaves a corpse holding everything you carried. Walk back and right-click it. Nothing despawns, but somebody else can loot it, so tell a friend where you fell.$(br2)Hunger is vanilla plus AppleSkin (hover food to see what it restores). Thirst is $(bold)off$() in this pack."
     }
   ]
 }

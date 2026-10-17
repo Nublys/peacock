@@ -6,11 +6,21 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Serene Seasons runs the calendar: four seasons, each in three parts (early, mid, late), each part $(bold)16 days$(). A year is 192 days. The world was born in early spring.$(br2)Grass and leaves change colour; snow falls and stays in winter and melts in spring; storms are seasonal."
+      "text": "Serene Seasons runs the calendar: four seasons, each in three parts (early, mid, late), each part $(bold)16 days$(). A year is 192 days. The world was born in early spring.$(br2)Grass and leaves change colour. Snow falls and stays in winter, and melts in spring. Storms are seasonal."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "sereneseasons:calendar",
+      "text": "The calendar shows the date and season. Keep one in your inventory; the capital keeps one by the bell."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "sereneseasons:season_sensor",
+      "text": "A season sensor emits redstone by season: greenhouse shutters, a bell that rings on the first day of spring."
     },
     {
       "type": "patchouli:text",
-      "text": "Craft a $(bold)calendar$() to see the date. Villages keep one in the capital.$(br2)Animals, fish and crops all follow the year. Plan around it or fight it with glass."
+      "text": "$(bold)Spring:$() thaw, planting, breeding.$(br)$(bold)Summer:$() long days, heat, the main harvest.$(br)$(bold)Autumn:$() second harvest, pumpkins, storing.$(br)$(bold)Winter:$() snow, cold, dark early; berries and whatever is under glass.$(br2)Animals, fish and crops all follow the year. Plan around it, or fight it with glass."
     }
   ]
 }

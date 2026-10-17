@@ -2,15 +2,24 @@
   "name": "The Land Itself",
   "icon": "minecraft:grass_block",
   "category": "patchouli:land",
-  "sortnum": 2,
+  "sortnum": 3,
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Tectonic and Terralith shape the terrain: real mountain ranges, deep valleys, long rivers. Biomes O' Plenty fills them. Distant Horizons shows the far side of the valley from your door.$(br2)Rivers and coasts matter: Valkyrien Skies ships (Eureka) and wagons from Caravans & Convoys are how goods move before rails exist."
+      "text": "Tectonic and Terralith shape the terrain: real mountain ranges, deep valleys, long rivers, high plateaus. Biomes O' Plenty fills them. Distant Horizons shows the far side of the valley from your door.$(br2)The capital sits in a lowland. Mountains are where the zinc is; dry country is where the gold is."
     },
     {
       "type": "patchouli:text",
-      "text": "The Nether is Incendium's: new biomes, new structures, and the Nether Reactor — which in this story is the machine that was stolen. The End is Nullscape. Both are late-game chapters."
+      "text": "Rivers and coasts matter: ships (Eureka) and wagons are how goods move before rails exist. Build towns where water and road meet.$(br2)Structory and Stoneholm scatter ruins and underground villages; Create Structures leave old workshops with parts in them. Pirates hold the coasts."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Nature's Compass$() finds a biome by name: the way to the nearest snowy peak, savanna or desert. It is how you find the places bosses live.$(br2)Craft one before the first long trip."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "naturescompass:natures_compass",
+      "text": "Right-click to open the biome list, pick one, follow the needle. It cannot find structures; that is what rumours and maps are for."
     }
   ]
 }

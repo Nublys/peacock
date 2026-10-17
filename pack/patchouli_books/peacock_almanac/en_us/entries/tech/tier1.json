@@ -1,16 +1,35 @@
 {
-  "name": "Tier 1 — Iron and a Dog",
+  "name": "Tier 1: Iron and a Dog",
   "icon": "minecraft:iron_ingot",
   "category": "patchouli:tech",
   "sortnum": 1,
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Beatable alone in iron armour with a dog. These are the dark age's fallout, not its masters.$(br2)$(bold)Mutant Zombie$() → $(bold)Brass$(). The dead carried it off. Brass opens the middle of Create.$(br)$(bold)Mutant Skeleton$() → $(bold)Recruiting$(): hire squads, arm guards.$(br)$(bold)Mutant Creeper$() → $(bold)Blasting$(): TNT, gunpowder tech, the blaze burner."
+      "text": "Beatable alone in iron armour with a dog. These are the dark age's fallout, not its masters. They wander near home and you will meet them whether you look or not.$(br2)$(bold)Mutant Zombie$() holds $(bold)Brass$().$(br)$(bold)Mutant Skeleton$() holds $(bold)Recruiting$().$(br)$(bold)Mutant Creeper$() holds $(bold)Blasting$()."
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Mutant Snow Golem$() (snowy biomes) → $(bold)Climate control$(): thermoregulators, air conditioners. Wool and leaf clothing are always free.$(br)$(bold)Mutant Enderman$() → ender logistics: Create's chutes across distance.$(br)$(bold)Torte$() (Incendium's skeleton chef, Nether) → $(bold)Advanced cooking$(): Slice & Dice automation, Aquaculture nets."
+      "text": "$(bold)Mutant Snow Golem$() (snow) holds $(bold)Climate control$(): thermoregulators, fans, air conditioners. Wool and leaf clothing stay free.$(br)$(bold)Mutant Enderman$() holds $(bold)Ender logistics$(): Create's long-distance chutes and vaults.$(br)$(bold)Torte$() (Nether) holds $(bold)Advanced cooking$(): Slice & Dice automation."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "create:brass_ingot",
+      "text": "Brass is the hinge of the whole tree: mechanical crafters, deployers, arms, trains, the smart funnels and filters that make a factory think. Zinc plus copper in a mixer over a blaze burner. The dead took the knowledge; the Mutant Zombie carries it.",
+      "link_recipe": false,
+      "title": "Why brass"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Blasting$() covers TNT, gunpowder recipes, the blaze burner and Old Guns' powder. $(bold)Recruiting$() is hiring from Village Recruits; guards stay free.$(br2)A fresh server should clear Tier 1 in its first week."
+    },
+    {
+      "type": "patchouli:relations",
+      "entries": [
+        "patchouli:bosses/mutants",
+        "patchouli:bosses/incendium"
+      ],
+      "title": "Who to fight"
     }
   ]
 }

@@ -1,0 +1,20 @@
+{
+  "name": "The Ledger of Losses",
+  "icon": "minecraft:book",
+  "category": "patchouli:story",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "The survivors kept a ledger of what was taken and by whom. It is the spine of this almanac, and of the $(l:patchouli:tech/how_blueprints_work)Blueprint ladder$().$(br2)$(bold)Brass$() went with the dead. $(bold)Gunpowder$() with the creepers. The $(bold)drill$() that made soldiers of farmers went with the skeletons."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Trains$() rusted in a chamber under the hills, guarded by an iron thing that will not leave. $(bold)Ships$() sank off the stony shores where the nagas nest. The $(bold)trading ledgers$() went to the illager fort.$(br2)$(bold)Diesel$() burns in a savanna shrine. $(bold)Cannons$() froze with the frostmaw. The reactor's $(bold)precision parts$() glow in the Nether."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "And something was taken to the End that no one has named. The ledger's last line is blank.$(br2)$(italic)Every entry in this list is a boss in the $()$(l:patchouli:bosses/where_they_are)Bestiary$()$(italic).$()"
+    }
+  ]
+}

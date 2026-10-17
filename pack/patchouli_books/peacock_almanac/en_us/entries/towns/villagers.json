@@ -2,15 +2,19 @@
   "name": "Villagers Worth Keeping",
   "icon": "minecraft:emerald",
   "category": "patchouli:towns",
-  "sortnum": 0,
+  "sortnum": 1,
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Villagers here are people, not vending machines. $(bold)Villager Comfort$() means a villager without a bed, light and food trades badly; a happy village trades well.$(br2)$(bold)Restock Balance$() means trades run out and restock slowly. Buying out one librarian all day does not work."
+      "text": "Villagers here are people, not vending machines. $(bold)Villager Comfort$(): a villager without a bed, light and food trades badly; a happy village trades well.$(br2)$(bold)Restock Balance$(): trades run out and restock slowly. Buying out one librarian all day does not work."
     },
     {
       "type": "patchouli:text",
-      "text": "Together they make trading halls pointless and towns valuable: the best prices are in a real village with real beds, and the way to more trade is $(bold)more villages$(), not more cells.$(br2)Villages grow (Village Expansion) and hire guards. Villager Workers can be put to farming or hauling."
+      "text": "Together they make trading halls pointless and towns valuable: the best prices are in a real village with real beds, and the way to more trade is $(bold)more villages$(), not more cells.$(br2)$(bold)Create Better Villagers$() gives them Create goods to sell and buy. Villager trades are also how Blueprints spread once towns learn them."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Workers$() (Villager Workers): hire a farmer, miner, lumberjack, fisherman or shepherd with emeralds. Give them a chest, a bed and food and they work the area you set. They are the first labour you can buy.$(br2)Press the keys they tell you on hire; their own wiki is in the mod's screen."
     }
   ]
 }

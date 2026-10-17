@@ -6,11 +6,20 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "There is $(bold)no random ore$(). Geolosys places metal in deposits — plutons — each of one kind, each large, and each somewhere specific. Iron may be a ten-minute walk; zinc may be the next valley over.$(br2)This is deliberate. Ore that is somewhere else is why wagons, ships and eventually trains exist."
+      "text": "There is $(bold)no random ore$(). Geolosys places metal in deposits: each of one kind, each large, each at its own depth. Iron may be a ten-minute walk; zinc may be the next valley over.$(br2)This is deliberate. Ore that is somewhere else is why wagons, ships and eventually trains exist."
     },
     {
       "type": "patchouli:text",
-      "text": "Look for $(bold)samples$(): small rock clusters on the surface that show what is below. Dig straight down from a sample and you will find the deposit.$(br2)Ore blocks drop $(bold)clusters$(), not raw ore. Smelt them, or run them through Create's crushing wheels for more."
+      "text": "Look for $(bold)samples$(): small rock clusters lying on the surface that show what is below. Dig straight down from a sample and you reach the deposit.$(br2)Ore blocks drop $(bold)clusters$(), not raw ore. Smelt them, or crush and wash them in Create for more."
+    },
+    {
+      "type": "patchouli:smelting",
+      "recipe": "geolosys:smelting/iron_ingot_from_cluster_smelting",
+      "text": "One cluster, one ingot in a furnace. Create's crushing wheels and washing give more per cluster once you have them."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Three metals are tied to terrain$() in this pack:$(br)$(bold)Iron (hematite)$(): everywhere, Y 32 to 60, the most common deposit$(br)$(bold)Zinc (sphalerite)$(): under mountains only, Y 37 to 46$(br)$(bold)Gold$(): dry country only (desert, badlands, savanna), Y -64 to 32$(br2)Everything else follows depth, not biome."
     }
   ]
 }

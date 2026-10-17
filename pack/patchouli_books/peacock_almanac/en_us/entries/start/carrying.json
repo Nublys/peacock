@@ -1,0 +1,24 @@
+{
+  "name": "Carrying Things",
+  "icon": "backpacked:backpack",
+  "category": "patchouli:start",
+  "sortnum": 5,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "backpacked:backpack",
+      "text": "A backpack goes in your back slot and opens with $(bold)B$(). It can be upgraded and dyed, and stays on your corpse like everything else. Supplementaries' sacks are the cheap alternative: a block of storage you can carry.",
+      "link_recipe": false,
+      "title": "Backpack"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Shulker boxes$() are late. Before them: sacks, backpacks, chest minecarts, wagons, ships. Create's chutes and belts move things between machines; wagons move them between towns.$(br2)A $(bold)toolbox$() (Create) holds tools and swaps them into your hand."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "create:crafting/curiosities/brown_toolbox",
+      "text": "Toolboxes are shared within range: open one and your hotbar can pull from it."
+    }
+  ]
+}
