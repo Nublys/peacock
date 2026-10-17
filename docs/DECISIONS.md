@@ -60,6 +60,16 @@ Why things are the way they are. Add an entry when a choice would surprise someo
   terrain; for real-chunk pregen use Speiger's Chunk Pregenerator (DH has no hook into it) or
   re-add Chunky once DH ships the fix.
 
+## Shader default is plain Complementary Reimagined, not the Euphoria variant
+- On macOS (OpenGL 4.1, 16 texture units) `ComplementaryReimagined + EuphoriaPatches` fails to
+  build its composite pass — `No more available texture units while activating sampler
+  shadowcolor1` — so Oculus silently disables shaders on every world join; both MacBook Air
+  JVM crashes (2026-10-16) followed that failed pipeline build. Plain CR r5.9.3 fits. The
+  pack default is therefore `ComplementaryReimagined_r5.9.3.zip`; the `performance`/`ultra`
+  profiles (Phase 1b) switch to the Euphoria folder, which Euphoria Patcher still generates.
+- A Ryzen 5850U (Vega 8 iGPU) running Euphoria at the HIGH profile is the "horrible FPS" case:
+  that machine is the `low` tier (shaders Potato/off, DH 128), not `performance`.
+
 ## Pterodactyl startup is one script, never a `&&` chain
 - yolks `java` images run `PARSED=$(… | eval echo "$(cat -)")` then `exec env ${PARSED}`. A startup
   command with `&&` is executed *by that eval*, inside the capture: the server ran with no console

@@ -53,10 +53,10 @@ docs/                 PLAN.md (phases), DECISIONS.md (why things are the way the
 5. Mac only: `tools/apply-profile.sh mac <instance>/minecraft` — this is already the
    pack default, so this step is only needed if the Linux profile was applied first.
    Linux: `tools/apply-profile.sh linux <instance>/minecraft` for 256-chunk LODs.
-6. Shaders: Oculus is pre-set to Complementary Reimagined r5.9.3. Euphoria Patcher will
-   produce the patched "Euphoria Patches" variant beside it on first launch; select that
-   in the Oculus menu (`O`) once it appears. Leave colored lighting / voxelization off on
-   the Mac (macOS has no OpenGL 4.2+).
+6. Shaders: Oculus is pre-set to plain Complementary Reimagined r5.9.3. Euphoria Patcher
+   generates the "+ EuphoriaPatches" variant beside it; pick that in the Oculus menu (`O`)
+   only on a machine with a real GPU — on macOS it exceeds the 16-texture-unit limit and
+   Oculus disables shaders. On an iGPU (Vega 8, Iris Xe) set the CR profile to Potato/Low.
 
 > The repo is public so the raw.githubusercontent.com URL works without a token.
 >

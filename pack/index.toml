@@ -308,7 +308,7 @@ hash = "45121987f8bbbb948bd5096ffb02b1361c762b3e34836b3f9097a9a4ef7222d4"
 
 [[files]]
 file = "config/oculus.properties"
-hash = "575fb1dce240114bf1529c650bc091a366215d360d0bf4cee6f4fa888f94d8ac"
+hash = "064398b6c586c07c0121656e1a42172352accf9e940cfde1ef679bcc1cd39ff9"
 preserve = true
 
 [[files]]
