@@ -73,6 +73,24 @@ Marked `side = "server"` in `pack/mods/`, so they install here and never on a cl
 
 Claims / anti-grief (FTB Chunks vs a lighter mod) is an open decision in `docs/PLAN.md`.
 
+## Distant Horizons on the server
+
+The server builds LODs for every chunk it loads and, on request from a client, generates terrain
+beyond that (`chunkGeneratorMode = "FEATURES"`, 2 threads, `pack/peacock-server/config/DistantHorizons.toml`).
+Clients request generation only while DH is rendering on their side and the session's generator plan
+is enabled; a new world therefore has **no** far LODs until either players have requested them or you
+pre-generate. Commands (console, or an op in game; the console needs absolute coordinates):
+
+    dh debug                                      # state of the DH server: levels, players, queues
+    dh pregen start minecraft:overworld <x> <z> 32   # LODs for a 65x65-chunk square around x,z (block coords)
+    dh pregen status
+    dh pregen stop
+    dh config <key> [value]                       # read or change a DH config value live
+
+Pregen runs on DH's own threads and is throttled by `limitIfServerUnhealthy`; progress prints in the
+console. Clients receive what exists when they join (`synchronizeOnLoad`), so pregen is the quickest
+way to prove the pipeline. The LOD database lives in `world/data/` and dies with the world.
+
 ## Bare-metal alternative
 
 Not on Pterodactyl? `./server/start.sh --install` once, then `./server/start.sh` to sync and
