@@ -4,7 +4,9 @@
 // deep deposits (galena, kimberlite, azurite, cinnabar, limonite, beryl...) and for structures: YUNG's
 // Better Mineshafts and Dungeons, Stoneholm's underground villages, Cataclysm's Ancient Factory and
 // abandoned ruins. This script makes their chests pay in ore: every underground chest gets an extra
-// pool of clusters (the same items the deposits drop), coal, and now and then a prospector's pick.
+// pool of clusters (the same items the deposits drop), coal, and now and then a prospector's pick, plus
+// a smaller pool of supplies (torches, rope, rails, bread, powder) so a chest is never only ore. The
+// tables' own pools (tools, books, golden apples, horse armor...) are untouched.
 // Switch: "caveLoot" in kubejs/config/peacock.json.
 
 ;(() => {
@@ -31,6 +33,25 @@ const ORE_POOL = [
   ['geolosys:prospectors_pick', 2, [1, 1]],
 ]
 
+// A second pool so a chest is never only ore: the things a settler actually wants underground.
+// item, weight, [min, max]
+const SUPPLY_POOL = [
+  ['minecraft:torch', 20, [4, 12]],
+  ['minecraft:bread', 14, [1, 4]],
+  ['supplementaries:rope', 12, [2, 6]],
+  ['minecraft:rail', 10, [4, 10]],
+  ['minecraft:lantern', 8, [1, 2]],
+  ['create:andesite_alloy', 8, [1, 3]],
+  ['minecraft:gunpowder', 6, [1, 3]],
+  ['musketmod:cartridge', 5, [2, 6]],
+  ['minecraft:string', 6, [2, 5]],
+  ['minecraft:arrow', 6, [4, 12]],
+  ['minecraft:bucket', 3, [1, 1]],
+  ['farmersdelight:cooking_pot', 2, [1, 1]],
+  ['minecraft:name_tag', 2, [1, 1]],
+  ['geolosys:field_manual', 1, [1, 1]],
+]
+
 // table -> [rolls min, rolls max]; deeper and rarer places roll more
 const CAVE_CHESTS = {
   'minecraft:chests/abandoned_mineshaft': [1, 3],
@@ -43,7 +64,7 @@ const CAVE_CHESTS = {
   'betterdungeons:zombie_dungeon/chests/common': [1, 2],
   'betterdungeons:zombie_dungeon/chests/special': [2, 3],
   'betterdungeons:zombie_dungeon/chests/tombstone': [1, 2],
-  'betterdungeons:small_dungeon/chests/loot_piles': [1, 1],
+  'betterdungeons:small_dungeon/chests/loot_piles': [0, 1],
   'betterdungeons:spider_dungeon/chests/egg_room': [1, 2],
   'stoneholm:miner': [2, 4],
   'stoneholm:armorer': [1, 2],
@@ -61,6 +82,12 @@ ServerEvents.chestLootTables(event => {
       table.addPool(pool => {
         pool.setUniformRolls(rolls[0], rolls[1])
         ORE_POOL.forEach(e => {
+          pool.addItem(e[0], e[1]).addFunction({ function: 'minecraft:set_count', count: { type: 'minecraft:uniform', min: e[2][0], max: e[2][1] } })
+        })
+      })
+      table.addPool(pool => {
+        pool.setUniformRolls(0, 2)
+        SUPPLY_POOL.forEach(e => {
           pool.addItem(e[0], e[1]).addFunction({ function: 'minecraft:set_count', count: { type: 'minecraft:uniform', min: e[2][0], max: e[2][1] } })
         })
       })

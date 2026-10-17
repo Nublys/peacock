@@ -697,7 +697,7 @@ hash = "9d12bbf23578d39d0db2c5333afa6399777bca3f8e58db4e13e52aa1a2a9971b"
 
 [[files]]
 file = "kubejs/server_scripts/cave_loot.js"
-hash = "9f660b19693fb963f7a6695f0bc787dada430b22f3fd5477bee72a6eb3ff307c"
+hash = "03aa157f43fb12a09129cb57ffe9c6eb1b82208fdd0d5c72c63d5b0d4000624f"
 
 [[files]]
 file = "kubejs/server_scripts/geolosys_create.js"
