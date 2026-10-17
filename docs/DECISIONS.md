@@ -60,6 +60,14 @@ Why things are the way they are. Add an entry when a choice would surprise someo
   terrain; for real-chunk pregen use Speiger's Chunk Pregenerator (DH has no hook into it) or
   re-add Chunky once DH ships the fix.
 
+## Client-only mods that must also be on the server
+- **Particular Reforged** opens a Forge network channel (`particular:main`) whose version
+  predicate rejects an absent server, so Forge refuses the join with a "mod mismatch" when
+  the server lacks it. Shipped `side = "both"`; its common init only registers particle types.
+  Audit of the other 22 client-only jars (2026-10-16): none open a channel, so they join freely.
+  Rule for new client mods: if the jar contains `newSimpleChannel`/`ChannelBuilder`, it is
+  `both`, whatever Modrinth's side label says.
+
 ## Dogs
 - One dog: **Doggy Talents Next.** Animania's dog breeds are spawn-disabled (cats kept);
   vanilla wolves no longer replaced by Animania; DTN converts tamed wolves (follow-up).
