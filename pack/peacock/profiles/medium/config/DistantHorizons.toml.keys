@@ -1,0 +1,5 @@
+lodChunkRenderDistanceRadius = 192
+numberOfThreads = 2
+transparency = "FAKE"
+verticalQuality = "MEDIUM"
+horizontalQuality = "MEDIUM"

@@ -1,0 +1,6 @@
+renderDistance:10
+simulationDistance:8
+graphicsMode:2
+particles:0
+entityShadows:true
+biomeBlendRadius:5

@@ -17,6 +17,9 @@ Why things are the way they are. Add an entry when a choice would surprise someo
   so what a player sees in the shader menu is what they typed into `PEACOCK_PROFILE`. The 5850U/Vega 8 laptop is `low`
   (or `potato`), the M5 Air is `medium` -- tonight's HIGH-preset Euphoria on a Vega 8 was the
   wrong tier, not a bug.
+- Profiles patch individual settings, not files. First version hashed whole files and kept
+  everything as "edited by you" on the very first real machine: Oculus and DH rewrite their configs on
+  each start. Per-setting with a recorded last-written value is the only rule that survives that.
 - `launch.jar` instead of a `.java` source run by `$INST_JAVA`: Prism's downloaded runtimes are
   JREs (no `jdk.compiler`), so single-file source launch is not dependable.
 - The OS decides nothing about settings; the GPU,

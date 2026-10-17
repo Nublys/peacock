@@ -1217,110 +1217,110 @@ hash = "576dbd942700b68d6ab3dbdc9461da527c1f1943d0d94462fc03553e3dd82b3d"
 
 [[files]]
 file = "peacock/launch.jar"
-hash = "9a351529edb630dfdc6dc15d54d9e38a5cea5bb0204a6b3f427ced6f6bc48688"
+hash = "71ceb2f03316d9924b37a8be1ce846938ecddd02c9db4f2bebf039b856a4c8e3"
 
 [[files]]
 file = "peacock/profiles/README.txt"
 hash = "456fb9af0d4ce438d8699f1983bc0825e0822596fe0787eb1be950072e19a271"
 
 [[files]]
-file = "peacock/profiles/high/config/DistantHorizons.toml"
-hash = "806e28f407f8e34443d44ec68227243da20360311535adace854f7e5475c9adf"
+file = "peacock/profiles/high/config/DistantHorizons.toml.keys"
+hash = "7f9f648f75f3d2e49bf883d77325eb80e821f31765adc621081d7730ce760aa5"
 
 [[files]]
-file = "peacock/profiles/high/config/oculus.properties"
-hash = "575fb1dce240114bf1529c650bc091a366215d360d0bf4cee6f4fa888f94d8ac"
+file = "peacock/profiles/high/config/oculus.properties.keys"
+hash = "8b4ac3411ce4558a2b9b1825b2362e35b714c0b374e5871438d393b465ce39ca"
 
 [[files]]
-file = "peacock/profiles/high/options.properties"
-hash = "d22bf482786b2f6bc62294d95818fc843a812cb6a61bc4f307f91007c92bc603"
+file = "peacock/profiles/high/options.txt.keys"
+hash = "23390d5356c777cf2e3f9cd96ebb729fd52fe94d2b5b519d144bd2d67e42dadb"
 
 [[files]]
-file = "peacock/profiles/high/shaderpacks/ComplementaryReimagined_r5.9.3 + EuphoriaPatches_1.10.5.txt"
+file = "peacock/profiles/high/shaderpacks/ComplementaryReimagined_r5.9.3 + EuphoriaPatches_1.10.5.txt.keys"
 hash = "ed50d1efb065f355b9a58b4bbb47b662a33a124f1a48b740cf5e4152365953b2"
 
 [[files]]
-file = "peacock/profiles/high/shaderpacks/ComplementaryReimagined_r5.9.3.zip.txt"
+file = "peacock/profiles/high/shaderpacks/ComplementaryReimagined_r5.9.3.zip.txt.keys"
 hash = "ed50d1efb065f355b9a58b4bbb47b662a33a124f1a48b740cf5e4152365953b2"
 
 [[files]]
-file = "peacock/profiles/low/config/DistantHorizons.toml"
-hash = "8560149c4ef0ee576676f661ddc56a5b68576052ddee51ead02d396085ff53d7"
+file = "peacock/profiles/low/config/DistantHorizons.toml.keys"
+hash = "3dab3bf09f2880c5444de1cfa64eb8ade89a68f5c69cf2273e23e8a8dc3051fc"
 
 [[files]]
-file = "peacock/profiles/low/config/oculus.properties"
-hash = "064398b6c586c07c0121656e1a42172352accf9e940cfde1ef679bcc1cd39ff9"
+file = "peacock/profiles/low/config/oculus.properties.keys"
+hash = "ecdc47e26c1b274613251b8935d35c7225b4e1b12b7671388999dacd0f7178cb"
 
 [[files]]
-file = "peacock/profiles/low/options.properties"
-hash = "931d4b595e30aa05721ed46bdde70c9debdacfb252735427e6b6b0dfbcdca604"
+file = "peacock/profiles/low/options.txt.keys"
+hash = "41dcd540fcdaf9cb499e96ebd8f90f48993c17233c20a5fe4fff438fa8f78509"
 
 [[files]]
-file = "peacock/profiles/low/shaderpacks/ComplementaryReimagined_r5.9.3 + EuphoriaPatches_1.10.5.txt"
+file = "peacock/profiles/low/shaderpacks/ComplementaryReimagined_r5.9.3 + EuphoriaPatches_1.10.5.txt.keys"
 hash = "6faeeac70e8bedbca9a3978ff0ead50bb03e13d9d9dd869bd85a181523f87972"
 
 [[files]]
-file = "peacock/profiles/low/shaderpacks/ComplementaryReimagined_r5.9.3.zip.txt"
+file = "peacock/profiles/low/shaderpacks/ComplementaryReimagined_r5.9.3.zip.txt.keys"
 hash = "6faeeac70e8bedbca9a3978ff0ead50bb03e13d9d9dd869bd85a181523f87972"
 
 [[files]]
-file = "peacock/profiles/medium/config/DistantHorizons.toml"
-hash = "edcc8536171ebbd9381c227712b51c6998fda7c3df315cf7cd7abd53ff0974b9"
+file = "peacock/profiles/medium/config/DistantHorizons.toml.keys"
+hash = "4503613b9d9a3aee80944e08684ab4a7938ddf72c48f62d145fed00d0e6f4831"
 
 [[files]]
-file = "peacock/profiles/medium/config/oculus.properties"
-hash = "064398b6c586c07c0121656e1a42172352accf9e940cfde1ef679bcc1cd39ff9"
+file = "peacock/profiles/medium/config/oculus.properties.keys"
+hash = "ecdc47e26c1b274613251b8935d35c7225b4e1b12b7671388999dacd0f7178cb"
 
 [[files]]
-file = "peacock/profiles/medium/options.properties"
-hash = "8b66499ef30c3a88a9264528dba1fcff24361961e1ef11183e71b4ee63fa910d"
+file = "peacock/profiles/medium/options.txt.keys"
+hash = "7cba04babf09278a2f02c1dfdd6b13e69889ee58e935b6aee8574ab99cd23b29"
 
 [[files]]
-file = "peacock/profiles/medium/shaderpacks/ComplementaryReimagined_r5.9.3 + EuphoriaPatches_1.10.5.txt"
+file = "peacock/profiles/medium/shaderpacks/ComplementaryReimagined_r5.9.3 + EuphoriaPatches_1.10.5.txt.keys"
 hash = "084ce2b07765a4674a2886cd6f0ecd5a91049f92eb88396d2a745dc2c2831597"
 
 [[files]]
-file = "peacock/profiles/medium/shaderpacks/ComplementaryReimagined_r5.9.3.zip.txt"
+file = "peacock/profiles/medium/shaderpacks/ComplementaryReimagined_r5.9.3.zip.txt.keys"
 hash = "084ce2b07765a4674a2886cd6f0ecd5a91049f92eb88396d2a745dc2c2831597"
 
 [[files]]
-file = "peacock/profiles/potato/config/DistantHorizons.toml"
-hash = "3f9a7ab0101ac43b451370e6ca85c642e8e9a4763699ce47aabaf1642cc25e35"
+file = "peacock/profiles/potato/config/DistantHorizons.toml.keys"
+hash = "f067011a7565c032124307c04556f6b2a6206290528bbd2acae40f52e20e9ab1"
 
 [[files]]
-file = "peacock/profiles/potato/config/oculus.properties"
-hash = "9dcb541b49cdca9b0fdb1e1c5040093a32ea230007ee93aa9bc2fd2a05299579"
+file = "peacock/profiles/potato/config/oculus.properties.keys"
+hash = "3679e644386b40bf6bf9c612b40b6dbac157398edf6cc87dda142f1b1c72efde"
 
 [[files]]
-file = "peacock/profiles/potato/options.properties"
-hash = "0ad85cfa46fda2529ddece337b3f7eb7fb038338e7b6bf563a6be65c75243679"
+file = "peacock/profiles/potato/options.txt.keys"
+hash = "d2d15e6b94664fac6b384810b870d5e016981a75c4c8cfc280b60a0051961d7e"
 
 [[files]]
-file = "peacock/profiles/potato/shaderpacks/ComplementaryReimagined_r5.9.3 + EuphoriaPatches_1.10.5.txt"
+file = "peacock/profiles/potato/shaderpacks/ComplementaryReimagined_r5.9.3 + EuphoriaPatches_1.10.5.txt.keys"
 hash = "6faeeac70e8bedbca9a3978ff0ead50bb03e13d9d9dd869bd85a181523f87972"
 
 [[files]]
-file = "peacock/profiles/potato/shaderpacks/ComplementaryReimagined_r5.9.3.zip.txt"
+file = "peacock/profiles/potato/shaderpacks/ComplementaryReimagined_r5.9.3.zip.txt.keys"
 hash = "6faeeac70e8bedbca9a3978ff0ead50bb03e13d9d9dd869bd85a181523f87972"
 
 [[files]]
-file = "peacock/profiles/ultra/config/DistantHorizons.toml"
-hash = "3c5e74d8333dd752f678d86dda18eae4d1f4a72c7ef4f266c9a796b791a9cb73"
+file = "peacock/profiles/ultra/config/DistantHorizons.toml.keys"
+hash = "b83201b3544033a3111a2c0e4f8bc58b6844f1c1eb96bb999d0bf3e9543ef887"
 
 [[files]]
-file = "peacock/profiles/ultra/config/oculus.properties"
-hash = "575fb1dce240114bf1529c650bc091a366215d360d0bf4cee6f4fa888f94d8ac"
+file = "peacock/profiles/ultra/config/oculus.properties.keys"
+hash = "8b4ac3411ce4558a2b9b1825b2362e35b714c0b374e5871438d393b465ce39ca"
 
 [[files]]
-file = "peacock/profiles/ultra/options.properties"
-hash = "78296699bb3ac9430582a63d98a9edc617ed9b5be08d3d4a1d244237b751e453"
+file = "peacock/profiles/ultra/options.txt.keys"
+hash = "a88eecccf70d3089326f275e7207e34a0675151cb940f2cc668e7661f27258f2"
 
 [[files]]
-file = "peacock/profiles/ultra/shaderpacks/ComplementaryReimagined_r5.9.3 + EuphoriaPatches_1.10.5.txt"
+file = "peacock/profiles/ultra/shaderpacks/ComplementaryReimagined_r5.9.3 + EuphoriaPatches_1.10.5.txt.keys"
 hash = "1253953f4942dcd9cc5dd6fc2ee4f3d951c8a2aec55f48a00e1460baaa2d64a5"
 
 [[files]]
-file = "peacock/profiles/ultra/shaderpacks/ComplementaryReimagined_r5.9.3.zip.txt"
+file = "peacock/profiles/ultra/shaderpacks/ComplementaryReimagined_r5.9.3.zip.txt.keys"
 hash = "1253953f4942dcd9cc5dd6fc2ee4f3d951c8a2aec55f48a00e1460baaa2d64a5"
 
 [[files]]

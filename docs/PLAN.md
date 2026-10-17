@@ -49,8 +49,10 @@ two players are simply the first two players. Anything that would only work for 
   ```
   "$INST_JAVA" -jar "$INST_MC_DIR/peacock/launch.jar" https://raw.githubusercontent.com/Nublys/peacock/main/pack/pack.toml
   ```
-- Overwrite rule: a profile file (or `options.txt` key) is written only if missing, or still equal to
-  what a profile last wrote (`peacock/.state.properties`), or equal to any shipped profile's copy.
+- Profiles are `*.keys` files (one setting per line, target file's syntax) applied **per setting** —
+  mods rewrite their config files on every start, so whole-file hashes never match. A setting is
+  written only if missing, still equal to what a profile last wrote (`peacock/.state.properties`),
+  or — on first adoption — equal to any shipped profile's value.
   In-game edits are never overwritten (`PEACOCK_RESET=1` for one launch overrides this). Replaces the
   `preserve = true` dead end. `PEACOCK_OFFLINE=1` skips the sync.
 - Retired `profiles/mac`, `profiles/linux`, `tools/apply-profile.sh`.

@@ -5,16 +5,23 @@
 //   "$INST_JAVA" -jar "$INST_MC_DIR/peacock/launch.jar" https://raw.githubusercontent.com/Nublys/peacock/main/pack/pack.toml
 //
 // Profile selection: environment variable PEACOCK_PROFILE = potato | low | medium | high | ultra
-// (default: medium). Set it per instance in Prism: Edit → Settings → Environment variables.
+// (default: medium). Set it per instance in Prism: Edit -> Settings -> Environment variables.
+//
+// A profile folder (peacock/profiles/<name>/) holds *.keys files. "config/oculus.properties.keys"
+// patches config/oculus.properties, one setting per line, in the target file's own syntax
+// (key=value for .properties and Iris .txt, key = value for TOML, key:value for options.txt).
+// Working per setting rather than per file matters because mods rewrite their config files on
+// every start, so a file is never byte-identical to anything the pack shipped.
 //
 // Rules:
-//   • packwiz-installer-bootstrap.jar is downloaded if missing, then run; a failed sync aborts the launch
-//     (Prism stops when the pre-launch command exits non-zero) — better than joining with a stale mod set.
-//   • A profile file is written only if the target is missing, or still equal to what a profile last
-//     wrote (hash in peacock/.state.properties), or equal to any shipped profile's copy. A file you have
-//     changed in-game is yours; the profile stops touching it. Same rule per key for options.txt.
-//   • PEACOCK_RESET=1 for one launch re-applies the whole profile over your own edits.
-//   • PEACOCK_OFFLINE=1 skips the sync (play with what is installed when GitHub/Modrinth are unreachable).
+//   * packwiz-installer-bootstrap.jar is downloaded if missing, then run; a failed sync aborts the launch
+//     (Prism stops when the pre-launch command exits non-zero) -- better than joining with a stale mod set.
+//   * A setting is written only if it is missing, or still equal to what a profile last wrote
+//     (peacock/.state.properties) -- or, on first adoption when nothing was recorded yet, equal to any
+//     shipped profile's value for it. A setting you changed in-game is yours; the profile stops touching it.
+//   * PEACOCK_RESET=1 for one launch re-applies the whole profile over your own edits.
+//   * PEACOCK_OFFLINE=1 skips the sync (play with what is installed when GitHub/Modrinth are unreachable).
+//   * Any non-.keys file in a profile is copied whole with the same three-way rule (by hash).
 //
 // The jar ships inside the pack and updates itself through packwiz like everything else.
 
@@ -27,6 +34,8 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.*;
 import java.security.MessageDigest;
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -35,6 +44,7 @@ public class Launch {
     static final String BOOTSTRAP_URL =
         "https://github.com/packwiz/packwiz-installer-bootstrap/releases/latest/download/packwiz-installer-bootstrap.jar";
     static final String DEFAULT_PROFILE = "medium";
+    static final String KEYS = ".keys";
 
     static Path mcDir, peacockDir, stateFile;
     static Properties state = new Properties();
@@ -43,8 +53,7 @@ public class Launch {
     public static void main(String[] args) throws Exception {
         if (args.length < 1) { log("usage: java -jar peacock/launch.jar <pack.toml url> [extra packwiz-installer args]"); System.exit(2); }
 
-        // Locate ourselves: <mcDir>/peacock/launch.jar
-        Path self = findSelf();
+        Path self = findSelf();                 // <mcDir>/peacock/launch.jar
         peacockDir = self.getParent();
         mcDir = peacockDir.getParent();
         stateFile = peacockDir.resolve(".state.properties");
@@ -86,30 +95,95 @@ public class Launch {
         if (code != 0) { log("!! packwiz-installer exited with " + code + " -- not launching with a stale pack. (Set PEACOCK_OFFLINE=1 to play with what is installed.)"); System.exit(code); }
     }
 
-    // ---------------------------------------------------------------- profile files
+    // ---------------------------------------------------------------- profile
     static void applyProfile(String profile, Path profileDir, Path profilesDir) throws IOException {
         List<Path> files;
-        try (Stream<Path> s = Files.walk(profileDir)) { files = s.filter(Files::isRegularFile).collect(Collectors.toList()); }
-        int written = 0, kept = 0;
+        try (Stream<Path> s = Files.walk(profileDir)) { files = s.filter(Files::isRegularFile).sorted().collect(Collectors.toList()); }
+        int set = 0, kept = 0;
         for (Path src : files) {
             String rel = profileDir.relativize(src).toString().replace('\\', '/');
-            if (rel.equals("options.properties")) { applyOptions(src, profilesDir); continue; }
-            Path dst = mcDir.resolve(rel);
-            String want = sha256(Files.readAllBytes(src));
-            String key = "file." + rel;
-            if (Files.exists(dst)) {
-                String have = sha256(Files.readAllBytes(dst));
-                if (have.equals(want)) { state.setProperty(key, have); continue; }
-                boolean untouched = reset || have.equals(state.getProperty(key)) || anyProfileHas(profilesDir, rel, have);
-                if (!untouched) { log("keep  " + rel + " (edited by you; PEACOCK_RESET=1 to overwrite)"); kept++; continue; }
-            }
-            Files.createDirectories(dst.getParent());
-            Files.copy(src, dst, StandardCopyOption.REPLACE_EXISTING);
-            state.setProperty(key, want);
-            log("write " + rel);
-            written++;
+            int[] r = rel.endsWith(KEYS) ? applyKeys(src, rel.substring(0, rel.length() - KEYS.length()), profilesDir)
+                                         : applyWholeFile(src, rel, profilesDir);
+            set += r[0]; kept += r[1];
         }
-        log("profile " + profile + ": " + written + " file(s) written, " + kept + " kept");
+        log("profile " + profile + ": " + set + " setting(s) written, " + kept + " kept as your own");
+    }
+
+    /** One line of a .keys file: indent, key, separator (as written), value. */
+    static final Pattern LINE = Pattern.compile("^(\\s*)([A-Za-z0-9_.\\-]+)(\\s*[=:]\\s*)(.*?)\\s*$");
+
+    static List<String[]> parseKeys(Path f) throws IOException {
+        List<String[]> out = new ArrayList<>();
+        for (String line : Files.readAllLines(f, StandardCharsets.UTF_8)) {
+            if (line.isBlank() || line.trim().startsWith("#")) continue;
+            Matcher m = LINE.matcher(line);
+            if (m.matches()) out.add(new String[] { m.group(2), m.group(3), m.group(4) });
+        }
+        return out;
+    }
+
+    /** Every value any profile assigns to (target, key) counts as "not the player's own". */
+    static Map<String, Set<String>> profileValues(Path profilesDir, String keysRel) throws IOException {
+        Map<String, Set<String>> all = new HashMap<>();
+        try (Stream<Path> s = Files.list(profilesDir)) {
+            for (Path p : s.filter(Files::isDirectory).collect(Collectors.toList())) {
+                Path f = p.resolve(keysRel);
+                if (Files.isRegularFile(f)) for (String[] kv : parseKeys(f)) all.computeIfAbsent(kv[0], x -> new HashSet<>()).add(kv[2]);
+            }
+        }
+        return all;
+    }
+
+    static int[] applyKeys(Path keysFile, String targetRel, Path profilesDir) throws IOException {
+        Path target = mcDir.resolve(targetRel);
+        List<String[]> want = parseKeys(keysFile);
+        Map<String, Set<String>> anyProfile = profileValues(profilesDir, targetRel + KEYS);
+        boolean exists = Files.exists(target);
+        if (!exists && targetRel.endsWith(".toml")) { log("skip  " + targetRel + " (not present yet; the mod creates it, keys apply next launch)"); return new int[] {0, 0}; }
+        if (!exists && targetRel.equals("options.txt")) { log("skip  options.txt (first launch; Default Options creates it, keys apply next launch)"); return new int[] {0, 0}; }
+        List<String> lines = exists ? new ArrayList<>(Files.readAllLines(target, StandardCharsets.UTF_8)) : new ArrayList<>();
+        int set = 0, kept = 0;
+        List<String> changed = new ArrayList<>();
+        for (String[] kv : want) {
+            String key = kv[0], sep = kv[1], value = kv[2], stateKey = "key." + targetRel + "#" + key;
+            int idx = -1; Matcher found = null;
+            for (int i = 0; i < lines.size(); i++) {
+                Matcher m = LINE.matcher(lines.get(i));
+                if (m.matches() && m.group(2).equals(key)) { idx = i; found = m; break; }
+            }
+            if (idx < 0) { lines.add(key + sep + value); state.setProperty(stateKey, value); set++; changed.add(key); continue; }
+            String cur = found.group(4);
+            if (same(cur, value)) { state.setProperty(stateKey, value); continue; }
+            String last = state.getProperty(stateKey);
+            // Known to us: untouched only if still what we last wrote. Never seen: untouched if it is any profile's value.
+            boolean untouched = reset || (last != null ? same(cur, last) : anyProfile.getOrDefault(key, Set.of()).stream().anyMatch(v -> same(cur, v)));
+            if (!untouched) { kept++; continue; }
+            lines.set(idx, found.group(1) + key + found.group(3) + value);   // keep the file's own indent and spacing
+            state.setProperty(stateKey, value); set++; changed.add(key);
+        }
+        if (!changed.isEmpty()) {
+            Files.createDirectories(target.getParent());
+            Files.write(target, lines, StandardCharsets.UTF_8);
+            log("set   " + targetRel + ": " + String.join(", ", changed));
+        }
+        if (kept > 0) log("keep  " + targetRel + ": " + kept + " setting(s) you changed (PEACOCK_RESET=1 to overwrite)");
+        return new int[] {set, kept};
+    }
+
+    static int[] applyWholeFile(Path src, String rel, Path profilesDir) throws IOException {
+        Path dst = mcDir.resolve(rel);
+        String want = sha256(Files.readAllBytes(src)), key = "file." + rel;
+        if (Files.exists(dst)) {
+            String have = sha256(Files.readAllBytes(dst));
+            if (have.equals(want)) { state.setProperty(key, have); return new int[] {0, 0}; }
+            boolean untouched = reset || have.equals(state.getProperty(key)) || anyProfileHas(profilesDir, rel, have);
+            if (!untouched) { log("keep  " + rel + " (edited by you; PEACOCK_RESET=1 to overwrite)"); return new int[] {0, 1}; }
+        }
+        Files.createDirectories(dst.getParent());
+        Files.copy(src, dst, StandardCopyOption.REPLACE_EXISTING);
+        state.setProperty(key, want);
+        log("write " + rel);
+        return new int[] {1, 0};
     }
 
     static boolean anyProfileHas(Path profilesDir, String rel, String hash) throws IOException {
@@ -122,50 +196,21 @@ public class Launch {
         return false;
     }
 
-    // ---------------------------------------------------------------- options.txt keys
-    static void applyOptions(Path fragment, Path profilesDir) throws IOException {
-        Path options = mcDir.resolve("options.txt");
-        if (!Files.exists(options)) { log("options.txt not present yet (first launch) - Default Options creates it; profile keys apply next launch"); return; }
-        Properties want = new Properties();
-        try (var in = Files.newInputStream(fragment)) { want.load(in); }
-        // every value any profile uses for a key counts as "untouched"
-        Map<String, Set<String>> profileValues = new HashMap<>();
-        try (Stream<Path> s = Files.list(profilesDir)) {
-            for (Path p : s.filter(Files::isDirectory).collect(Collectors.toList())) {
-                Path f = p.resolve("options.properties");
-                if (!Files.isRegularFile(f)) continue;
-                Properties pp = new Properties();
-                try (var in = Files.newInputStream(f)) { pp.load(in); }
-                pp.forEach((k, v) -> profileValues.computeIfAbsent((String) k, x -> new HashSet<>()).add((String) v));
-            }
-        }
-        List<String> lines = new ArrayList<>(Files.readAllLines(options, StandardCharsets.UTF_8));
-        int changed = 0;
-        for (String k : want.stringPropertyNames()) {
-            String v = want.getProperty(k), stateKey = "option." + k;
-            int idx = -1;
-            for (int i = 0; i < lines.size(); i++) if (lines.get(i).startsWith(k + ":")) { idx = i; break; }
-            if (idx < 0) { lines.add(k + ":" + v); state.setProperty(stateKey, v); changed++; continue; }
-            String cur = lines.get(idx).substring(k.length() + 1);
-            if (cur.equals(v)) { state.setProperty(stateKey, v); continue; }
-            boolean untouched = reset || cur.equals(state.getProperty(stateKey)) || profileValues.getOrDefault(k, Set.of()).contains(cur);
-            if (!untouched) continue;   // player changed it in-game
-            lines.set(idx, k + ":" + v);
-            state.setProperty(stateKey, v);
-            changed++;
-        }
-        if (changed > 0) { Files.write(options, lines, StandardCharsets.UTF_8); log("options.txt: " + changed + " key(s) set"); }
-    }
-
     // ---------------------------------------------------------------- util
     static Path findSelf() throws Exception {
         Path p = Paths.get(Launch.class.getProtectionDomain().getCodeSource().getLocation().toURI()).toAbsolutePath().normalize();
-        if (Files.isRegularFile(p)) return p;                 // the jar
+        if (Files.isRegularFile(p)) return p;
         throw new IllegalStateException("cannot locate peacock/launch.jar - run it with -jar by its full path");
     }
 
     static String listProfiles(Path dir) throws IOException {
         try (Stream<Path> s = Files.list(dir)) { return s.filter(Files::isDirectory).map(p -> p.getFileName().toString()).sorted().collect(Collectors.joining(", ")); }
+    }
+
+    /** Equal as text, or as numbers (mods rewrite 64 as 64.0, 0.75 as 0.750). */
+    static boolean same(String a, String b) {
+        if (a.equals(b)) return true;
+        try { return Double.parseDouble(a) == Double.parseDouble(b); } catch (NumberFormatException e) { return false; }
     }
 
     static String sha256(byte[] b) throws IOException {

@@ -1,0 +1,5 @@
+lodChunkRenderDistanceRadius = 384
+numberOfThreads = 6
+transparency = "COMPLETE"
+verticalQuality = "HIGH"
+horizontalQuality = "HIGH"
