@@ -167,7 +167,7 @@ Why things are the way they are. Add an entry when a choice would surprise someo
   host is a 2013 Xeon E5-2690 v2 (3.0 GHz): the single game thread runs at about half a modern core.
 - Added **Canary 0.3.3** (Lithium for Forge) for its AI/POI/pathing optimizations, with
   `block_entity_ticking`, `entity.collisions` and `chunk.serialization` disabled in `canary.properties`
-  (Create and Valkyrien Skies friction history), plus `ai.poi.fast_retrieval` off: it rewrites
+  (Create and Valkyrien Skies friction history), plus `ai.poi` off: its root mixin rewrites
   `PoiManager.getInRange`, which Valkyrien Skies' `MixinPOIManager` hooks — with both on the VS mixin fails
   and VS stops the server. `simulation-distance` 6 → 5 in the server template.
 - Open: cap villager density per town (Village Expansion / Villager Workers keep adding) — count first.

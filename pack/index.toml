@@ -83,7 +83,7 @@ hash = "54b999cd4b8859787eec9d1b8df99b5e318030961fe7bf444dc31727de8a69f6"
 
 [[files]]
 file = "config/canary.properties"
-hash = "ede964adb69b9051a378d9a495f57bdfb3a02a622caba215483f6159c5d8f437"
+hash = "cad85e5f854a87b4e217cb60ac5899167f3375cdfecce7ba8d62e565c496d5e2"
 
 [[files]]
 file = "config/caravansconvoys-common.toml"
