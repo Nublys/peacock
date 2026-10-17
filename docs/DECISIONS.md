@@ -197,6 +197,15 @@ Why things are the way they are. Add an entry when a choice would surprise someo
   what mods can do; past this it is resolution, Mesa `mesa_glthread=true` on Linux, and JVM flags.
 - Nothing in the pack can scale render resolution; on an iGPU, window size is the single biggest lever.
 
+## Simulation distance is dynamic (2026-10-17)
+- Aaron wants 10–12; the Xeon cannot promise that at all times. **Dynamic View and Simulation Distances**
+  (someaddon, server-only, with Cupboard) now floats `simulation-distance` 5–12 and `view-distance` 8–10
+  around a 42 ms mean tick, re-evaluated every 60 s with console logging. Quiet server = big radius, busy
+  server = smaller radius, TPS stays ~20 either way. `server.properties` keeps 7/8 as the starting point.
+- Aikar's G1 flags added to `peacock-start.sh` (shorter GC pauses; no effect on average tick cost).
+- Rejected for now: Let Me Despawn / mob-cap cuts (gameplay change — hostile mobs were ~14% of the tick;
+  revisit with two players' data), Farsight (client; hides view-distance changes, DH already does that job).
+
 ## Server performance: the profile, and what it changed (2026-10-17)
 - Spark on the live server (1 player, 327 entities, TPS 14.9): **77% of the server thread was entity
   ticking, 44% villagers alone** — vanilla `Brain → AcquirePoi → PathFinder`, villagers hunting beds and

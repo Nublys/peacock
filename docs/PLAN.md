@@ -153,6 +153,7 @@ details below as they get exercised.
 - **Server-only mods** (`side = "server"` in the pack so clients never see them):
   - ~~Chunky~~ — removed (DH 3.3.3 crash). Pregen, if wanted: Chunk Pregenerator (Speiger)
   - Spark — profiling, the first thing to open when TPS drops
+  - Dynamic View and Simulation Distances (+Cupboard) — floats simulation 5–12 / view 8–10 on tick time
   - LuckPerms — permissions for staff; **FTB Essentials** only for `/spawn`, `/back` and
     AFK — no `/home`, `/tpa` or warps (no fast travel is a design rule)
   - **FTB Chunks** — claims (anti-grief) and *capped* force-loading (1 chunk/player unless

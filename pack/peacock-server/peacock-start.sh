@@ -37,6 +37,13 @@ if [ ! -f "${ARGS_FILE}" ]; then
 fi
 
 say "starting Forge ${MC_VERSION}-${FORGE_VERSION}"
-exec java -Xms128M -XX:MaxRAMPercentage=90.0 \
+# Aikar's G1 flags: shorter, more predictable GC pauses on a busy modded server.
+GC_FLAGS="-XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions
+  -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40
+  -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4
+  -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5
+  -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1"
+
+exec java -Xms128M -XX:MaxRAMPercentage=90.0 ${GC_FLAGS} \
   -Dterminal.jline=false -Dterminal.ansi=true \
   @user_jvm_args.txt "@${ARGS_FILE}" nogui

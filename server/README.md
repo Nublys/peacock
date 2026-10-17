@@ -71,8 +71,18 @@ Marked `side = "server"` in `pack/mods/`, so they install here and never on a cl
   (villager AI = 44%) is why Canary is in the pack; `simulation-distance` is 7 (5 felt too short in play —
   ticked chunks scale with the square of it, so watch TPS with two players and fall back to 6 if needed)
 - **LuckPerms** — permissions; `lp user <name> permission set minecraft.command.* true` for staff
+- **Dynamic View and Simulation Distances** (+ its library Cupboard) — rebalances `view-distance` (8–10) and
+  `simulation-distance` (5–12) every 60 s around a 42 ms average tick (`pack/peacock-server/config/dynamicview.json`).
+  `server.properties` only sets the starting values. It logs each change to the console; if it sits at the
+  minimum with two players on, the server is out of headroom and the fix is below, not a bigger number.
 
 Claims / anti-grief (FTB Chunks vs a lighter mod) is an open decision in `docs/PLAN.md`.
+
+**Tick budget.** The game thread is one core of a 2013 Xeon (E5-2690 v2, 3.0 GHz): roughly half of a
+modern desktop core. Everything in a ticked chunk — entities, Create block entities, random ticks —
+competes for its 50 ms. Levers, in order of return: fewer entities (mob caps / Let Me Despawn, villager
+density per town), Canary's optimizations (already on), Aikar GC flags (in `peacock-start.sh`), and
+finally faster single-thread hardware, which is the only thing that moves the ceiling itself.
 
 ## Distant Horizons on the server
 

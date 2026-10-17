@@ -815,6 +815,11 @@ hash = "15efd86c60c30586961bbebb23da229cd276bb3c7b0c877e44ef16aaac74925f"
 metafile = true
 
 [[files]]
+file = "mods/cupboard.pw.toml"
+hash = "d115e9f7f8096ded8d0761539823fd8748cdd09e0e41ee22dc3f997a1956955d"
+metafile = true
+
+[[files]]
 file = "mods/curios.pw.toml"
 hash = "84a210b44f4eb1bcf234a1b7735bf55ec50a7ac609f5e2efa8f590f060bf4c9f"
 metafile = true
@@ -842,6 +847,11 @@ metafile = true
 [[files]]
 file = "mods/doggy-talents-next.pw.toml"
 hash = "8cb59cce53fce52cebb51e59591f5cce2f46d63198738139267e36a5d2a51bd9"
+metafile = true
+
+[[files]]
+file = "mods/dynamic-view.pw.toml"
+hash = "18783d9086008a42af3ceb78864d066d39721070965699ac29d2ed0a7cfbf576"
 metafile = true
 
 [[files]]
@@ -1597,12 +1607,16 @@ file = "peacock-server/config/DistantHorizons.toml"
 hash = "bb35e8c4a53dfedda72bf50bb8027cd02267509c0c8dcc251e105aa36348ae40"
 
 [[files]]
+file = "peacock-server/config/dynamicview.json"
+hash = "4a3644e40aaa44646a2e79c0c0b4f8db57895aa71480110aa0dc8dd9e5a48a23"
+
+[[files]]
 file = "peacock-server/config/voicechat/voicechat-server.properties"
 hash = "87bad15949ca26d599fd8af9d9c7fcb79b83401280a74bdd102e3968e8f97494"
 
 [[files]]
 file = "peacock-server/peacock-start.sh"
-hash = "576dbd942700b68d6ab3dbdc9461da527c1f1943d0d94462fc03553e3dd82b3d"
+hash = "6da7c3170335c1005cf4fca934a821028d63e1b76b2344b01497d98c1c272700"
 
 [[files]]
 file = "peacock/launch.jar"
