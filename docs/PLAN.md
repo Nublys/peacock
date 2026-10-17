@@ -17,8 +17,8 @@ two players are simply the first two players. Anything that would only work for 
 - Removed `ImmediatelyFast` (only a +1.20.4 build was present) and orphaned `AddonsLib`
 - `Villager Comfort-1.1.1.jar` → `villager-comfort-1.1.1.jar`
 - Default Options: `options.txt` graphics defaults, de-conflicted keybinds
-- Distant Horizons: client generation off (server generates); 192 chunks, FAKE transparency,
-  2 threads as pack default (= the `medium` profile)
+- Distant Horizons: 192 chunks, FAKE transparency, 2 threads as pack default (= the `medium` profile);
+  client generation mode FEATURES (DISABLED would stop the client requesting server LODs)
 - Oculus pre-set to Complementary Reimagined r5.9.3; FML early window off (macOS)
 - Dogs: Animania dog spawns off (cats kept), vanilla wolves no longer replaced
 - **Test:** both machines boot to title; shaders on; log shows Colorwheel on its own

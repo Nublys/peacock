@@ -166,6 +166,12 @@ Why things are the way they are. Add an entry when a choice would surprise someo
   as real datapacks above every mod, for worldgen and everything else. All data overrides moved to
   `pack/config/paxi/datapacks/peacock/`; KubeJS keeps only scripts.
 
+## Distant Horizons client generation mode must not be DISABLED (2026-10-17)
+- Day-one config set the client's `chunkGeneratorMode = "DISABLED"` ("the server generates"). In DH 3.x
+  that switch also decides whether the client *requests* LODs from a DH server, so nobody ever saw
+  server LODs beyond render distance. Now `FEATURES` (`SURFACE` on potato/low) via the profiles — the
+  pack's DH file is `preserve`d, so a profile key is how it reaches existing installs.
+
 ## Server performance: the profile, and what it changed (2026-10-17)
 - Spark on the live server (1 player, 327 entities, TPS 14.9): **77% of the server thread was entity
   ticking, 44% villagers alone** — vanilla `Brain → AcquirePoi → PathFinder`, villagers hunting beds and

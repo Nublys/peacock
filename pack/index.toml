@@ -2,7 +2,7 @@ hash-format = "sha256"
 
 [[files]]
 file = "config/DistantHorizons.toml"
-hash = "edcc8536171ebbd9381c227712b51c6998fda7c3df315cf7cd7abd53ff0974b9"
+hash = "aa6514faf56fccea8b1be34148afb426e34d2450cb3b18870cad2a43b7c0e2f9"
 preserve = true
 
 [[files]]
@@ -1526,7 +1526,7 @@ hash = "456fb9af0d4ce438d8699f1983bc0825e0822596fe0787eb1be950072e19a271"
 
 [[files]]
 file = "peacock/profiles/high/config/DistantHorizons.toml.keys"
-hash = "8e327f5534604018610d8d0ba150971f0140ce0d57af4cafb4c7d6463cc6a9f5"
+hash = "c92440b22adbe167e2e4dc6387b6cba02f9f2680d412088fc34aeaad4243f59a"
 
 [[files]]
 file = "peacock/profiles/high/config/embeddium-options.json.keys"
@@ -1550,7 +1550,7 @@ hash = "ed50d1efb065f355b9a58b4bbb47b662a33a124f1a48b740cf5e4152365953b2"
 
 [[files]]
 file = "peacock/profiles/low/config/DistantHorizons.toml.keys"
-hash = "05e36af24385a5aef2a165278fdadf7283362161f00c6fd092c2741cd3a495bd"
+hash = "9902ae2b2c1e34cc7ddff7477a218e1c68f9b1c8d76fff5619d3e978ea3d44fb"
 
 [[files]]
 file = "peacock/profiles/low/config/embeddium-options.json.keys"
@@ -1574,7 +1574,7 @@ hash = "6faeeac70e8bedbca9a3978ff0ead50bb03e13d9d9dd869bd85a181523f87972"
 
 [[files]]
 file = "peacock/profiles/medium/config/DistantHorizons.toml.keys"
-hash = "b7a06abdf5bd70fa609b5232cef02cd26576658426ae26773eda6343714b9372"
+hash = "9c815c17da78b206b966e2198c4d9581e8c0fe3a8f320caa96c11c2d8a59644c"
 
 [[files]]
 file = "peacock/profiles/medium/config/embeddium-options.json.keys"
@@ -1598,7 +1598,7 @@ hash = "084ce2b07765a4674a2886cd6f0ecd5a91049f92eb88396d2a745dc2c2831597"
 
 [[files]]
 file = "peacock/profiles/potato/config/DistantHorizons.toml.keys"
-hash = "b5997679b492a02e3c5fe8b00c86058f0a1eecf78799ac9e80c8eca90cacee7b"
+hash = "7538ad6b267937a461f5d1feb1321b6cb79de0db88f671bed77a7420deeef9bc"
 
 [[files]]
 file = "peacock/profiles/potato/config/embeddium-options.json.keys"
@@ -1622,7 +1622,7 @@ hash = "6faeeac70e8bedbca9a3978ff0ead50bb03e13d9d9dd869bd85a181523f87972"
 
 [[files]]
 file = "peacock/profiles/ultra/config/DistantHorizons.toml.keys"
-hash = "f8c8bf40358d4e4b5b60f3d29e223c30a6379770c50c25697e76491bd9b7061a"
+hash = "2197f67c63ea77dbd4d15babe84e50c7876735aaa60dd6d56c0bb85108d892b4"
 
 [[files]]
 file = "peacock/profiles/ultra/config/embeddium-options.json.keys"

@@ -71,9 +71,12 @@ def preset_to_iris_txt(tokens):
     return "\n".join(sorted(out)) + "\n"
 
 def dh_keys(dh, transp, threads, quality, ssao):
+    # chunkGeneratorMode must not be DISABLED on the client: in DH 3.x it also governs whether the client
+    # requests LODs from a DH server. In singleplayer it is the local generator; SURFACE is the light one.
+    gen = "SURFACE" if threads <= 1 else "FEATURES"
     lines = [f"lodChunkRenderDistanceRadius = {dh}", f"numberOfThreads = {threads}",
              f'transparency = "{transp}"', f'verticalQuality = "{quality}"', f'horizontalQuality = "{quality}"',
-             f"enableSsao = {'true' if ssao else 'false'}"]
+             f"enableSsao = {'true' if ssao else 'false'}", f'chunkGeneratorMode = "{gen}"']
     return "\n".join(lines) + "\n"
 
 def embeddium_keys(weather, leaves, vignette):

@@ -4,3 +4,4 @@ transparency = "COMPLETE"
 verticalQuality = "HIGH"
 horizontalQuality = "HIGH"
 enableSsao = true
+chunkGeneratorMode = "FEATURES"

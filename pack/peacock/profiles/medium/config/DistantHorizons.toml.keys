@@ -4,3 +4,4 @@ transparency = "FAKE"
 verticalQuality = "MEDIUM"
 horizontalQuality = "MEDIUM"
 enableSsao = true
+chunkGeneratorMode = "FEATURES"

@@ -4,3 +4,4 @@ transparency = "DISABLED"
 verticalQuality = "LOW"
 horizontalQuality = "LOW"
 enableSsao = false
+chunkGeneratorMode = "SURFACE"
