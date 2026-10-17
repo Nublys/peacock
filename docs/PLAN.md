@@ -64,7 +64,7 @@ two players are simply the first two players. Anything that would only work for 
 Done in the first pass:
 - Serene Seasons: `sub_season_duration = 16` (192-day year); out-of-season crops **don't grow**
   (`out_of_season_crop_behavior = 1`) — Greenhouse Glass is the counter. Farmer's Delight crops
-  tagged by season (`pack/kubejs/data/sereneseasons/tags/blocks/`): cabbage spring+autumn, onion
+  tagged by season (`pack/config/paxi/datapacks/peacock/data/sereneseasons/tags/blocks/`): cabbage spring+autumn, onion
   spring+summer, tomato summer, rice summer+autumn.
 - Geolosys is the only ore source: Create's own worldgen off (`disableWorldGen = true`); sphalerite
   deposits supply zinc. Clusters tagged `forge:raw_materials/<metal>` so Create crushing/washing

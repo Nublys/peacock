@@ -60,7 +60,7 @@ Why things are the way they are. Add an entry when a choice would surprise someo
 - **TAN+ 1.4 recipe override.** `data/create/recipes/filling/purified_water_bucket.json` in TAN+
   is a `toughasnails:water_purifying` recipe using `ingredient` instead of `input`; TAN's
   serializer NPEs and *every* world load fails ("Failed to load datapacks"). Overridden with a
-  correct copy in `pack/kubejs/data/…`. Drop the override when TAN+ fixes it.
+  correct copy in `pack/config/paxi/datapacks/peacock/data/…`. Drop the override when TAN+ fixes it.
 - **Pet Home** (1.1.2 and 1.1.3) — `MobMixin` shadows `setPathfindingMalus` with no refmap
   entry, so the mixin fails on production Forge and the game exits before the title screen.
   Removed 2026-10-16; re-add when a release ships a correct refmap.
@@ -108,7 +108,7 @@ Why things are the way they are. Add an entry when a choice would surprise someo
 ## The capital is a large CTOV village; vanilla villages are gone
 - CTOV keeps the five vanilla villages in rotation at low weight, so `#minecraft:village` could land spawn
   in a vanilla one. Vanilla villages are removed from the `minecraft:village` structure set
-  (`pack/kubejs/data/minecraft/worldgen/structure_set/village.json`), so every village — and therefore the
+  (`pack/config/paxi/datapacks/peacock/data/minecraft/worldgen/structure_set/village.json`), so every village — and therefore the
   capital — is CTOV. Tried `#ctov:large_village` for the spawn search: a third of the candidates, and the
   locate on Terralith terrain ran past 4 minutes with the server thread blocked. Back to
   `#minecraft:village` (now CTOV-only). Spawn is fixed at world creation: needs a world made after this.
@@ -117,7 +117,7 @@ Why things are the way they are. Add an entry when a choice would surprise someo
 - Cataclysm's structure biome tags list only vanilla biomes (`minecraft:desert`, `minecraft:snowy_plains`,
   `minecraft:nether_wastes`...). With Terralith + BOP most of the overworld and with Incendium most of the
   Nether is modded, so the Cursed Pyramid, Frosted Prison, Burning Arena and Soul Blacksmith were
-  near-absent. Overridden in `pack/kubejs/data/cataclysm/tags/worldgen/biome/has_structure/` with
+  near-absent. Overridden in `pack/config/paxi/datapacks/peacock/data/cataclysm/tags/worldgen/biome/has_structure/` with
   `#forge:is_desert`, `#forge:is_snowy` (both populated by Terralith and BOP) and Incendium/Nullscape
   biomes. Mowzie's tags already include all overworld biomes. 2026-10-17.
 
@@ -150,6 +150,13 @@ Why things are the way they are. Add an entry when a choice would surprise someo
 - Server override now: 2 threads, `threadRunTimeRatio = 0.5`, generation and sync distance 2048,
   10 requests/s per client. Distant terrain fills in more slowly; the server keeps 20 TPS. Raise again
   only with a Spark report showing headroom and a known core count for the container.
+
+## Datapack overrides ship through Paxi, not kubejs/data (2026-10-17)
+- KubeJS's `kubejs/data` folder is injected at resource-reload time: recipes, tags and loot tables took,
+  but the `minecraft:village` structure-set override did not — the world still rolled a vanilla village,
+  because worldgen registries are read earlier. Paxi (+ YUNG's API) loads `config/paxi/datapacks/*`
+  as real datapacks above every mod, for worldgen and everything else. All data overrides moved to
+  `pack/config/paxi/datapacks/peacock/`; KubeJS keeps only scripts.
 
 ## Jade for block/entity tooltips (2026-10-17)
 - Jade 11.13.3, side both (server-side data for container contents). Create, Farmer's Delight,

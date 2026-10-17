@@ -320,6 +320,130 @@ file = "config/patchouli-client.toml"
 hash = "3b6236845f6a5ff8804487b63b0d74305b91316dc9a008362838607b0be3bd8e"
 
 [[files]]
+file = "config/paxi/datapacks/peacock/data/animania/tags/worldgen/biome/amphibian_habitats.json"
+hash = "5ed31f44e733c1bf7ae4192ade7edab3a8167ec29ae505fa7b8a906cf7dcd76e"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/animania/tags/worldgen/biome/ferret_habitats.json"
+hash = "fd88a3ebc970d7c299d77e823c4b2d7554c940a9380e5d976fe15c1856ec7446"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/animania/tags/worldgen/biome/fox_dog_habitats.json"
+hash = "68c14ac57d7cffb344f7ac847283d963adf0276c76116ff54ec7e3fea97941ef"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/animania/tags/worldgen/biome/hamster_habitats.json"
+hash = "72e4ba0c83a8b299bdf1b5a37351933f1366e44d79e1d474eba743a05ea07bbb"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/animania/tags/worldgen/biome/hedgehog_habitats.json"
+hash = "902f86998b714c07c573d6f95bed787ce1308c92ce23fe28b060b136a15d4777"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/animania/tags/worldgen/biome/hive_habitats.json"
+hash = "bb417808fed7ba7ac7e8dd5d23f8bfb77d8f633f5ee3fd308f67346fe5b65b9a"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/animania/tags/worldgen/biome/ocelot_cat_habitats.json"
+hash = "d82468717cf15ea2a8e5bd169eb2c8a0f048ce1a82b6c552718ede4a9f40f91f"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/animania/tags/worldgen/biome/peafowl_habitats.json"
+hash = "781cf439a9e1151ca3ec200464af7df68d4ad2a50fe3416c156e63e4df9fecd3"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/animania/tags/worldgen/biome/rabbit_forest_habitats.json"
+hash = "902f86998b714c07c573d6f95bed787ce1308c92ce23fe28b060b136a15d4777"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/animania/tags/worldgen/biome/rabbit_mountain_habitats.json"
+hash = "312a08b1ae6e3ae4ee4aa702ee477819db39e1fb3a412001896c29733ab45188"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/animania/tags/worldgen/biome/rabbit_plains_habitats.json"
+hash = "9565a0efa74b952eaa0d1153ab23327c209c765cafb2641f88bcda4895111ff9"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/animania/tags/worldgen/biome/rabbit_sandy_habitats.json"
+hash = "7868467188932d61fb2c8dfacd933b5e7e53aa78fef4a3bc9338b8006a3744a6"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/animania/tags/worldgen/biome/rabbit_savanna_habitats.json"
+hash = "fd88a3ebc970d7c299d77e823c4b2d7554c940a9380e5d976fe15c1856ec7446"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/cataclysm/tags/worldgen/biome/has_structure/burning_arena_biomes.json"
+hash = "fda09f14c4760f8a79d0ccc0e5ce46322b35328fba814e5b0500249fbc5622a1"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/cataclysm/tags/worldgen/biome/has_structure/cursed_pyramid_biomes.json"
+hash = "e99a03e980f17c61848bb744de5776c1219ec05e4afd48133f192fba63d098d9"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/cataclysm/tags/worldgen/biome/has_structure/frosted_prison_biomes.json"
+hash = "ff8b8294524fa534026a810d70dc4567bc35486a261772ad0911e0416a859b49"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/cataclysm/tags/worldgen/biome/has_structure/ruined_citadel_biomes.json"
+hash = "ca61c0f6583ba266d80f0e8e5a421b9021e70b4569ee17d2c908dc08a7321beb"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/cataclysm/tags/worldgen/biome/has_structure/soul_black_smith_biomes.json"
+hash = "e9e6fd232618545626af37a1239915ed3f009527d41f1ba891ef14cefd0c9cac"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/create/recipes/filling/purified_water_bucket.json"
+hash = "4c702ebae17c77801f7a960fa6457fa14e7ae1970c2d981a9467cd8e9c8c53e4"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/forge/tags/items/raw_materials/copper.json"
+hash = "111f88de8f3766d333bc9873fbbb88ab633880b34a12b5e51d243eede0d34009"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/forge/tags/items/raw_materials/gold.json"
+hash = "4e143295ed4f02cb9280dcdd396894bb05f3253e37904f86eff7e22630fe2e74"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/forge/tags/items/raw_materials/iron.json"
+hash = "ea0797faecd755fe7d6dea5c2ee284aaf40db48cf6a8fe780cf4ea637b0fb7ba"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/forge/tags/items/raw_materials/zinc.json"
+hash = "ae4783aba10060491f14f327c00dc9b75fdc4e5b09c6b2064b6e127f0a5c581c"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/geolosys/deposits/ore/gold.json"
+hash = "9792e60b7af07426847b3d9f39183288a00fda5f5d23d181e3106a857e68d60f"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/geolosys/deposits/ore/hematite.json"
+hash = "51b7b19fb8b8e6cb4fd88210b6561523db3bb1559e3250ac91f546c181bd8319"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/geolosys/deposits/ore/sphalerite.json"
+hash = "a2776f83e6de7d64ea03f62b16a08b6c4714d7ea87fd89561f6d8557731c6a2a"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/minecraft/worldgen/structure_set/village.json"
+hash = "72bf98034285d5146ae76b14fdf93fbab97464d75b0e71ada2a30480f507b34a"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/sereneseasons/tags/blocks/autumn_crops.json"
+hash = "a5310d4145eefae9ed989d01e717c64365bba38f2eb6847f7e2f438c7f74cda6"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/sereneseasons/tags/blocks/spring_crops.json"
+hash = "d14b8b90146bc2314d099619b7f41eca393e2502226c45c8474c95eb52d72839"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/sereneseasons/tags/blocks/summer_crops.json"
+hash = "7647c90009d8faf64df6efd2ad77a14f0923f0d605cc4e3148a835b587df30eb"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/pack.mcmeta"
+hash = "d95489181581732e809992e3756ad554f6bf0fa3e4fc1edff1a02b143d152e3a"
+
+[[files]]
 file = "config/pirates/config.acfg"
 hash = "9bfc31d8f3c53bb6ca982bab64125232870f5657fc2145b2c04f2b51a64b3060"
 
@@ -480,128 +604,12 @@ file = "defaultconfigs/createbigcannons-server.toml"
 hash = "9756edc8d2c01d836680b4247842eb15ff68f0d664f2ac6597b3369a0879a8e6"
 
 [[files]]
-file = "kubejs/data/animania/tags/worldgen/biome/amphibian_habitats.json"
-hash = "5ed31f44e733c1bf7ae4192ade7edab3a8167ec29ae505fa7b8a906cf7dcd76e"
-
-[[files]]
-file = "kubejs/data/animania/tags/worldgen/biome/ferret_habitats.json"
-hash = "fd88a3ebc970d7c299d77e823c4b2d7554c940a9380e5d976fe15c1856ec7446"
-
-[[files]]
-file = "kubejs/data/animania/tags/worldgen/biome/fox_dog_habitats.json"
-hash = "68c14ac57d7cffb344f7ac847283d963adf0276c76116ff54ec7e3fea97941ef"
-
-[[files]]
-file = "kubejs/data/animania/tags/worldgen/biome/hamster_habitats.json"
-hash = "72e4ba0c83a8b299bdf1b5a37351933f1366e44d79e1d474eba743a05ea07bbb"
-
-[[files]]
-file = "kubejs/data/animania/tags/worldgen/biome/hedgehog_habitats.json"
-hash = "902f86998b714c07c573d6f95bed787ce1308c92ce23fe28b060b136a15d4777"
-
-[[files]]
-file = "kubejs/data/animania/tags/worldgen/biome/hive_habitats.json"
-hash = "bb417808fed7ba7ac7e8dd5d23f8bfb77d8f633f5ee3fd308f67346fe5b65b9a"
-
-[[files]]
-file = "kubejs/data/animania/tags/worldgen/biome/ocelot_cat_habitats.json"
-hash = "d82468717cf15ea2a8e5bd169eb2c8a0f048ce1a82b6c552718ede4a9f40f91f"
-
-[[files]]
-file = "kubejs/data/animania/tags/worldgen/biome/peafowl_habitats.json"
-hash = "781cf439a9e1151ca3ec200464af7df68d4ad2a50fe3416c156e63e4df9fecd3"
-
-[[files]]
-file = "kubejs/data/animania/tags/worldgen/biome/rabbit_forest_habitats.json"
-hash = "902f86998b714c07c573d6f95bed787ce1308c92ce23fe28b060b136a15d4777"
-
-[[files]]
-file = "kubejs/data/animania/tags/worldgen/biome/rabbit_mountain_habitats.json"
-hash = "312a08b1ae6e3ae4ee4aa702ee477819db39e1fb3a412001896c29733ab45188"
-
-[[files]]
-file = "kubejs/data/animania/tags/worldgen/biome/rabbit_plains_habitats.json"
-hash = "9565a0efa74b952eaa0d1153ab23327c209c765cafb2641f88bcda4895111ff9"
-
-[[files]]
-file = "kubejs/data/animania/tags/worldgen/biome/rabbit_sandy_habitats.json"
-hash = "7868467188932d61fb2c8dfacd933b5e7e53aa78fef4a3bc9338b8006a3744a6"
-
-[[files]]
-file = "kubejs/data/animania/tags/worldgen/biome/rabbit_savanna_habitats.json"
-hash = "fd88a3ebc970d7c299d77e823c4b2d7554c940a9380e5d976fe15c1856ec7446"
-
-[[files]]
-file = "kubejs/data/cataclysm/tags/worldgen/biome/has_structure/burning_arena_biomes.json"
-hash = "fda09f14c4760f8a79d0ccc0e5ce46322b35328fba814e5b0500249fbc5622a1"
-
-[[files]]
-file = "kubejs/data/cataclysm/tags/worldgen/biome/has_structure/cursed_pyramid_biomes.json"
-hash = "e99a03e980f17c61848bb744de5776c1219ec05e4afd48133f192fba63d098d9"
-
-[[files]]
-file = "kubejs/data/cataclysm/tags/worldgen/biome/has_structure/frosted_prison_biomes.json"
-hash = "ff8b8294524fa534026a810d70dc4567bc35486a261772ad0911e0416a859b49"
-
-[[files]]
-file = "kubejs/data/cataclysm/tags/worldgen/biome/has_structure/ruined_citadel_biomes.json"
-hash = "ca61c0f6583ba266d80f0e8e5a421b9021e70b4569ee17d2c908dc08a7321beb"
-
-[[files]]
-file = "kubejs/data/cataclysm/tags/worldgen/biome/has_structure/soul_black_smith_biomes.json"
-hash = "e9e6fd232618545626af37a1239915ed3f009527d41f1ba891ef14cefd0c9cac"
-
-[[files]]
-file = "kubejs/data/create/recipes/filling/purified_water_bucket.json"
-hash = "4c702ebae17c77801f7a960fa6457fa14e7ae1970c2d981a9467cd8e9c8c53e4"
-
-[[files]]
-file = "kubejs/data/forge/tags/items/raw_materials/copper.json"
-hash = "111f88de8f3766d333bc9873fbbb88ab633880b34a12b5e51d243eede0d34009"
-
-[[files]]
-file = "kubejs/data/forge/tags/items/raw_materials/gold.json"
-hash = "4e143295ed4f02cb9280dcdd396894bb05f3253e37904f86eff7e22630fe2e74"
-
-[[files]]
-file = "kubejs/data/forge/tags/items/raw_materials/iron.json"
-hash = "ea0797faecd755fe7d6dea5c2ee284aaf40db48cf6a8fe780cf4ea637b0fb7ba"
-
-[[files]]
-file = "kubejs/data/forge/tags/items/raw_materials/zinc.json"
-hash = "ae4783aba10060491f14f327c00dc9b75fdc4e5b09c6b2064b6e127f0a5c581c"
-
-[[files]]
-file = "kubejs/data/geolosys/deposits/ore/gold.json"
-hash = "9792e60b7af07426847b3d9f39183288a00fda5f5d23d181e3106a857e68d60f"
-
-[[files]]
-file = "kubejs/data/geolosys/deposits/ore/hematite.json"
-hash = "51b7b19fb8b8e6cb4fd88210b6561523db3bb1559e3250ac91f546c181bd8319"
-
-[[files]]
-file = "kubejs/data/geolosys/deposits/ore/sphalerite.json"
-hash = "a2776f83e6de7d64ea03f62b16a08b6c4714d7ea87fd89561f6d8557731c6a2a"
-
-[[files]]
-file = "kubejs/data/minecraft/worldgen/structure_set/village.json"
-hash = "72bf98034285d5146ae76b14fdf93fbab97464d75b0e71ada2a30480f507b34a"
-
-[[files]]
-file = "kubejs/data/sereneseasons/tags/blocks/autumn_crops.json"
-hash = "a5310d4145eefae9ed989d01e717c64365bba38f2eb6847f7e2f438c7f74cda6"
-
-[[files]]
-file = "kubejs/data/sereneseasons/tags/blocks/spring_crops.json"
-hash = "d14b8b90146bc2314d099619b7f41eca393e2502226c45c8474c95eb52d72839"
-
-[[files]]
-file = "kubejs/data/sereneseasons/tags/blocks/summer_crops.json"
-hash = "7647c90009d8faf64df6efd2ad77a14f0923f0d605cc4e3148a835b587df30eb"
+file = "kubejs/server_scripts/almanac.js"
+hash = "d91c92d37d030cdf637c01682854c02b06a22da47200c8a1007f81179d03149c"
 
 [[files]]
 file = "kubejs/server_scripts/geolosys_create.js"
-hash = "718f70cece2f5ae8da173df32628cb238a1bd461c6664c257785ad1929c06a9d"
+hash = "32673ee7bf8035b89cd98b41e5860a98d261445d5ae1aaabf776fd96dae6eb2e"
 
 [[files]]
 file = "mods/3dskinlayers.pw.toml"
@@ -1154,6 +1162,11 @@ hash = "2c5f9c46337d69d5b63766d19a005ffcf9656b4a61480fc4362e06f34ea6e430"
 metafile = true
 
 [[files]]
+file = "mods/paxi.pw.toml"
+hash = "be48890d990e03c639c5636c79bfa74bbd531c49a80487507984899c386a0bd9"
+metafile = true
+
+[[files]]
 file = "mods/playeranimator.pw.toml"
 hash = "294d960c31eb9ba6072eba973af52cf85257cc4ffffb193d9b014fa0185dd46b"
 metafile = true
@@ -1326,6 +1339,11 @@ metafile = true
 [[files]]
 file = "mods/yacl.pw.toml"
 hash = "1157664b81af8fe4b2631bab4b2e2c3740b424bd577600d08bb3bbfe38e5bfa9"
+metafile = true
+
+[[files]]
+file = "mods/yungs-api.pw.toml"
+hash = "152c6732da180e958fb29f492bae2e468d4dfd423ce4d3d0d31ef31c2eec6c61"
 metafile = true
 
 [[files]]

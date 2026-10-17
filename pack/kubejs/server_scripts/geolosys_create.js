@@ -2,7 +2,7 @@
 //
 // Create's own ore generation is off (create-common.toml: disableWorldGen = true); zinc comes from
 // Geolosys sphalerite deposits as `geolosys:zinc_cluster`. Clusters are tagged into
-// forge:raw_materials/<metal> (pack/kubejs/data/forge/tags/items/raw_materials/*.json), which is
+// forge:raw_materials/<metal> (pack/config/paxi/datapacks/peacock/data/forge/tags/items/raw_materials/*.json), which is
 // what Create's crushing and washing recipes already accept — so no custom processing chain here.
 //
 // What this script does:
