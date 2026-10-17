@@ -1,0 +1,7 @@
+lodChunkRenderDistanceRadius = 384
+numberOfThreads = 6
+transparency = "COMPLETE"
+verticalQuality = "HIGH"
+horizontalQuality = "HIGH"
+enableSsao = true
+chunkGeneratorMode = "FEATURES"
