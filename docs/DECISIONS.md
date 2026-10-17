@@ -105,6 +105,14 @@ Why things are the way they are. Add an entry when a choice would surprise someo
   Greenhouse Glass is the deliberate escape hatch (glass = a build, not a toggle).
 - Farmer's Delight crops are tagged into seasons by hand; Serene Seasons ships no FD compat.
 
+## Boss structures must exist in modded biomes
+- Cataclysm's structure biome tags list only vanilla biomes (`minecraft:desert`, `minecraft:snowy_plains`,
+  `minecraft:nether_wastes`...). With Terralith + BOP most of the overworld and with Incendium most of the
+  Nether is modded, so the Cursed Pyramid, Frosted Prison, Burning Arena and Soul Blacksmith were
+  near-absent. Overridden in `pack/kubejs/data/cataclysm/tags/worldgen/biome/has_structure/` with
+  `#forge:is_desert`, `#forge:is_snowy` (both populated by Terralith and BOP) and Incendium/Nullscape
+  biomes. Mowzie's tags already include all overworld biomes. 2026-10-17.
+
 ## One ore source, one zinc
 - Create's worldgen is off; Geolosys deposits (incl. sphalerite for zinc) are the only ore. Regional
   ore is the whole reason for trains and wagons.

@@ -480,6 +480,26 @@ file = "defaultconfigs/createbigcannons-server.toml"
 hash = "9756edc8d2c01d836680b4247842eb15ff68f0d664f2ac6597b3369a0879a8e6"
 
 [[files]]
+file = "kubejs/data/cataclysm/tags/worldgen/biome/has_structure/burning_arena_biomes.json"
+hash = "fda09f14c4760f8a79d0ccc0e5ce46322b35328fba814e5b0500249fbc5622a1"
+
+[[files]]
+file = "kubejs/data/cataclysm/tags/worldgen/biome/has_structure/cursed_pyramid_biomes.json"
+hash = "e99a03e980f17c61848bb744de5776c1219ec05e4afd48133f192fba63d098d9"
+
+[[files]]
+file = "kubejs/data/cataclysm/tags/worldgen/biome/has_structure/frosted_prison_biomes.json"
+hash = "ff8b8294524fa534026a810d70dc4567bc35486a261772ad0911e0416a859b49"
+
+[[files]]
+file = "kubejs/data/cataclysm/tags/worldgen/biome/has_structure/ruined_citadel_biomes.json"
+hash = "ca61c0f6583ba266d80f0e8e5a421b9021e70b4569ee17d2c908dc08a7321beb"
+
+[[files]]
+file = "kubejs/data/cataclysm/tags/worldgen/biome/has_structure/soul_black_smith_biomes.json"
+hash = "e9e6fd232618545626af37a1239915ed3f009527d41f1ba891ef14cefd0c9cac"
+
+[[files]]
 file = "kubejs/data/create/recipes/filling/purified_water_bucket.json"
 hash = "4c702ebae17c77801f7a960fa6457fa14e7ae1970c2d981a9467cd8e9c8c53e4"
 
