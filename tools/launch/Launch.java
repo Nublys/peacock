@@ -109,15 +109,16 @@ public class Launch {
         log("profile " + profile + ": " + set + " setting(s) written, " + kept + " kept as your own");
     }
 
-    /** One line of a .keys file: indent, key, separator (as written), value. */
-    static final Pattern LINE = Pattern.compile("^(\\s*)([A-Za-z0-9_.\\-]+)(\\s*[=:]\\s*)(.*?)\\s*$");
+    /** One setting line: indent, optional quote, key, separator (as written), value, optional trailing comma.
+     *  Covers key=value (.properties, Iris .txt), key = value (TOML), key:value (options.txt) and "key": value, (JSON). */
+    static final Pattern LINE = Pattern.compile("^(\\s*)(\"?)([A-Za-z0-9_.\\-]+)\\2(\\s*[=:]\\s*)(.*?)(,?)\\s*$");
 
     static List<String[]> parseKeys(Path f) throws IOException {
         List<String[]> out = new ArrayList<>();
         for (String line : Files.readAllLines(f, StandardCharsets.UTF_8)) {
             if (line.isBlank() || line.trim().startsWith("#")) continue;
             Matcher m = LINE.matcher(line);
-            if (m.matches()) out.add(new String[] { m.group(2), m.group(3), m.group(4) });
+            if (m.matches()) out.add(new String[] { m.group(3), m.group(4), m.group(5) });
         }
         return out;
     }
@@ -149,16 +150,16 @@ public class Launch {
             int idx = -1; Matcher found = null;
             for (int i = 0; i < lines.size(); i++) {
                 Matcher m = LINE.matcher(lines.get(i));
-                if (m.matches() && m.group(2).equals(key)) { idx = i; found = m; break; }
+                if (m.matches() && m.group(3).equals(key)) { idx = i; found = m; break; }
             }
             if (idx < 0) { lines.add(key + sep + value); state.setProperty(stateKey, value); set++; changed.add(key); continue; }
-            String cur = found.group(4);
+            String cur = found.group(5);
             if (same(cur, value)) { state.setProperty(stateKey, value); continue; }
             String last = state.getProperty(stateKey);
             // Known to us: untouched only if still what we last wrote. Never seen: untouched if it is any profile's value.
             boolean untouched = reset || (last != null ? same(cur, last) : anyProfile.getOrDefault(key, Set.of()).stream().anyMatch(v -> same(cur, v)));
             if (!untouched) { kept++; continue; }
-            lines.set(idx, found.group(1) + key + found.group(3) + value);   // keep the file's own indent and spacing
+            lines.set(idx, found.group(1) + found.group(2) + key + found.group(2) + found.group(4) + value + found.group(6));   // keep indent, quoting, spacing, trailing comma
             state.setProperty(stateKey, value); set++; changed.add(key);
         }
         if (!changed.isEmpty()) {

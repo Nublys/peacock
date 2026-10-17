@@ -39,8 +39,10 @@ Why things are the way they are. Add an entry when a choice would surprise someo
 - FML `earlyWindowControl = false` — the early loading window misbehaves on macOS.
 
 ## Removed / not added, deliberately
-- **ImmediatelyFast** — only a +1.20.4 build was ever present; small gain, not worth a
-  wrong-version jar. Re-add only with a `+1.20.1` file.
+- ~~ImmediatelyFast~~ **re-added 2026-10-17.** The `+1.20.4` Forge jar is a multi-version build whose
+  `mods.toml` declares `minecraft [1.20,1.20.4]`; removing it on the filename was a mistake. Client-only;
+  batches HUD/text/map/entity rendering — relevant with Map Atlases and Jade on screen. The validator
+  allowlists it by name (`MULTI_VERSION_OK`).
 - **Create: Design n' Decor 0.4.0b** — Create 0.5.1 build; crashed on construct.
 - **Explorify, Macaw's BOP addon** — redundant with Structory / Every Compat.
 - **Better Caravans** — taste; trade should be a trip or a route you built.
@@ -167,6 +169,15 @@ Why things are the way they are. Add an entry when a choice would surprise someo
   `block_entity_ticking`, `entity.collisions` and `chunk.serialization` disabled in `canary.properties`
   (Create and Valkyrien Skies friction history). `simulation-distance` 6 → 5 in the server template.
 - Open: cap villager density per town (Village Expansion / Villager Workers keep adding) — count first.
+
+## Client performance stack (2026-10-17)
+- Embeddium + Oculus, FerriteCore, ModernFix, Entity Culling, ImmediatelyFast, Colorwheel. Profiles now
+  also carry Embeddium's weather/leaves quality and vignette, and Distant Horizons SSAO — `potato`/`low`
+  take the FAST path. Not added: More Culling (Create block-entity culling risk), Nvidium (NVIDIA +
+  Sodium 0.5 only), Embeddium Extras (no 1.20.1 build on Modrinth).
+- Publishing: profiles live inside the pack so the Modrinth App gets them via its pre-launch hook; the
+  CurseForge app has no hooks and gets `medium` by default. An in-game profile picker (a tiny companion
+  mod applying a profile on next start) is the wish-list answer.
 
 ## Jade for block/entity tooltips (2026-10-17)
 - Jade 11.13.3, side both (server-side data for container contents). Create, Farmer's Delight,

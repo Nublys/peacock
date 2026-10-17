@@ -3,3 +3,4 @@ numberOfThreads = 1
 transparency = "DISABLED"
 verticalQuality = "LOW"
 horizontalQuality = "LOW"
+enableSsao = false

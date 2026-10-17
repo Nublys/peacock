@@ -986,6 +986,11 @@ hash = "3ecfb9b320877ff9244557c178cd4c675a90da1bcc9dfa48aea74fea661c2ebc"
 metafile = true
 
 [[files]]
+file = "mods/immediatelyfast.pw.toml"
+hash = "1a9564ded8e9cd1f843f9de7fc87ffbf73033aab51494205458b0e58cc0ab194"
+metafile = true
+
+[[files]]
 file = "mods/incendium.pw.toml"
 hash = "056c7524894e53defe772e01b74238044ff1b3caa78a9cad94e1a26f965a2d47"
 metafile = true
@@ -1509,7 +1514,7 @@ hash = "576dbd942700b68d6ab3dbdc9461da527c1f1943d0d94462fc03553e3dd82b3d"
 
 [[files]]
 file = "peacock/launch.jar"
-hash = "71ceb2f03316d9924b37a8be1ce846938ecddd02c9db4f2bebf039b856a4c8e3"
+hash = "81438bc5091328fd136fdff895660ea35308c941e4cce8b897eb7f53dc6ebc37"
 
 [[files]]
 file = "peacock/profiles/README.txt"
@@ -1517,7 +1522,11 @@ hash = "456fb9af0d4ce438d8699f1983bc0825e0822596fe0787eb1be950072e19a271"
 
 [[files]]
 file = "peacock/profiles/high/config/DistantHorizons.toml.keys"
-hash = "7f9f648f75f3d2e49bf883d77325eb80e821f31765adc621081d7730ce760aa5"
+hash = "8e327f5534604018610d8d0ba150971f0140ce0d57af4cafb4c7d6463cc6a9f5"
+
+[[files]]
+file = "peacock/profiles/high/config/embeddium-options.json.keys"
+hash = "6888171d79f75c6800cecb1e2918532d0bcaff876d20c985f6abb3aca7c273a0"
 
 [[files]]
 file = "peacock/profiles/high/config/oculus.properties.keys"
@@ -1537,7 +1546,11 @@ hash = "ed50d1efb065f355b9a58b4bbb47b662a33a124f1a48b740cf5e4152365953b2"
 
 [[files]]
 file = "peacock/profiles/low/config/DistantHorizons.toml.keys"
-hash = "3dab3bf09f2880c5444de1cfa64eb8ade89a68f5c69cf2273e23e8a8dc3051fc"
+hash = "05e36af24385a5aef2a165278fdadf7283362161f00c6fd092c2741cd3a495bd"
+
+[[files]]
+file = "peacock/profiles/low/config/embeddium-options.json.keys"
+hash = "3b525e855da59a2c64278c73210699e88a599fe6979a79840d75cf8356759ec4"
 
 [[files]]
 file = "peacock/profiles/low/config/oculus.properties.keys"
@@ -1557,7 +1570,11 @@ hash = "6faeeac70e8bedbca9a3978ff0ead50bb03e13d9d9dd869bd85a181523f87972"
 
 [[files]]
 file = "peacock/profiles/medium/config/DistantHorizons.toml.keys"
-hash = "4503613b9d9a3aee80944e08684ab4a7938ddf72c48f62d145fed00d0e6f4831"
+hash = "b7a06abdf5bd70fa609b5232cef02cd26576658426ae26773eda6343714b9372"
+
+[[files]]
+file = "peacock/profiles/medium/config/embeddium-options.json.keys"
+hash = "931c5424e81f89213d30aeebe3aaab3c3b2d355f654fac890b9df8997c8a1828"
 
 [[files]]
 file = "peacock/profiles/medium/config/oculus.properties.keys"
@@ -1577,7 +1594,11 @@ hash = "084ce2b07765a4674a2886cd6f0ecd5a91049f92eb88396d2a745dc2c2831597"
 
 [[files]]
 file = "peacock/profiles/potato/config/DistantHorizons.toml.keys"
-hash = "f067011a7565c032124307c04556f6b2a6206290528bbd2acae40f52e20e9ab1"
+hash = "b5997679b492a02e3c5fe8b00c86058f0a1eecf78799ac9e80c8eca90cacee7b"
+
+[[files]]
+file = "peacock/profiles/potato/config/embeddium-options.json.keys"
+hash = "3b525e855da59a2c64278c73210699e88a599fe6979a79840d75cf8356759ec4"
 
 [[files]]
 file = "peacock/profiles/potato/config/oculus.properties.keys"
@@ -1597,7 +1618,11 @@ hash = "6faeeac70e8bedbca9a3978ff0ead50bb03e13d9d9dd869bd85a181523f87972"
 
 [[files]]
 file = "peacock/profiles/ultra/config/DistantHorizons.toml.keys"
-hash = "b83201b3544033a3111a2c0e4f8bc58b6844f1c1eb96bb999d0bf3e9543ef887"
+hash = "f8c8bf40358d4e4b5b60f3d29e223c30a6379770c50c25697e76491bd9b7061a"
+
+[[files]]
+file = "peacock/profiles/ultra/config/embeddium-options.json.keys"
+hash = "6888171d79f75c6800cecb1e2918532d0bcaff876d20c985f6abb3aca7c273a0"
 
 [[files]]
 file = "peacock/profiles/ultra/config/oculus.properties.keys"

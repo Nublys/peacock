@@ -3,3 +3,4 @@ numberOfThreads = 6
 transparency = "COMPLETE"
 verticalQuality = "HIGH"
 horizontalQuality = "HIGH"
+enableSsao = true

@@ -15,7 +15,7 @@ installer fetches them. Everything you can edit lives in `pack/`.
 pack/                 the packwiz pack — this is what gets installed
   pack.toml           name, versions, index hash
   index.toml          every file below, hashed (regenerate with `packwiz refresh`)
-  mods/*.pw.toml      one file per mod (148; 2 server-only)
+  mods/*.pw.toml      one file per mod (149; 2 server-only)
   resourcepacks/      Fresh Animations (Modrinth-managed)
   shaderpacks/        Complementary Reimagined + Unbound (Modrinth-managed)
   config/             shipped configs; `preserve = true` files are not overwritten on update
@@ -76,6 +76,14 @@ default; once you change something in-game it is yours. Change the variable and 
 re-apply the profile over your own edits. `PEACOCK_OFFLINE=1` launches without syncing.
 macOS note: the Euphoria variant needs more texture units than Apple's OpenGL 4.1 offers, so Macs
 stay on plain Complementary (`low`/`medium`).
+
+**Other launchers.** The profiles and `launch.jar` ship inside the pack (and inside the Modrinth/CurseForge
+export), so the same command works anywhere a launcher can run a pre-launch command — the **Modrinth App**
+has one under the instance's Options → Hooks (pre-launch), with the same `PEACOCK_PROFILE` variable. The
+**CurseForge app** has no pre-launch hooks: those installs get the pack defaults, which are the `medium`
+tier; to use another tier, copy the files from `peacock/profiles/<tier>/` by hand or run the jar once from
+a terminal in the instance folder:
+`java -jar peacock/launch.jar <pack url>` with `PEACOCK_PROFILE` set. An in-game profile picker is on the wish list.
 
 > Converting an instance that used the old pre-launch command: just replace the command (step 3)
 > and add the variable (step 4); `packwiz-installer-bootstrap.jar` already being present is fine.

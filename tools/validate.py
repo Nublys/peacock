@@ -68,7 +68,9 @@ def check_pw_tomls() -> None:
         fn = d.get("filename", "")
         if " " in fn:
             err(f"{rel}: filename contains a space: {fn!r}")
-        if re.search(r"\+1\.20\.[2-9]", fn) or re.search(r"1\.21", fn):
+        # Multi-version jars whose mods.toml declares a range that includes 1.20.1 (checked by hand):
+        MULTI_VERSION_OK = {"immediatelyfast"}   # ImmediatelyFast-Forge-1.5.5+1.20.4: minecraft [1.20,1.20.4]
+        if (re.search(r"\+1\.20\.[2-9]", fn) or re.search(r"1\.21", fn)) and p.stem.removesuffix(".pw") not in MULTI_VERSION_OK:
             err(f"{rel}: filename looks like a non-1.20.1 build: {fn}")
         if fn in seen_files:
             err(f"{rel}: duplicate filename {fn} (also {seen_files[fn]})")

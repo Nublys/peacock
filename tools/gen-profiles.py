@@ -5,6 +5,7 @@ Profiles are named by hardware tier, never by OS. Each folder holds *.keys files
 line in the target file's own syntax -- applied per setting by peacock/launch.jar:
   config/DistantHorizons.toml.keys     radius, threads, transparency, quality (TOML `key = value`)
   config/oculus.properties.keys        shader pack + on/off
+  config/embeddium-options.json.keys   weather/leaves quality, vignette ("key": value lines)
   shaderpacks/<pack>.txt.keys          Iris per-pack options = one of Complementary's own presets
   options.txt.keys                     render distance etc. (`key:value`)
 Per-setting patching is required because mods rewrite their config files on every start.
@@ -28,19 +29,19 @@ EUPHORIA = f"{CR_NAME} + EuphoriaPatches_1.10.5"   # folder Euphoria Patcher gen
 
 #          tier          shaders  pack        preset      DH radius  DH transp.  threads  DH quality  options.txt keys
 TIERS = {
-    "potato":      dict(shaders=False, pack=CR_ZIP,  preset="POTATO",  dh=96,  transp="DISABLED", threads=1, quality="LOW",
+    "potato":      dict(shaders=False, pack=CR_ZIP,  preset="POTATO",  dh=96,  transp="DISABLED", threads=1, quality="LOW", ssao=False, emb=("FAST","FAST","false"),
                         options={"renderDistance": "6", "simulationDistance": "6", "graphicsMode": "0", "particles": "2",
                                  "entityShadows": "false", "biomeBlendRadius": "1", "mipmapLevels": "2", "entityDistanceScaling": "0.75"}),
-    "low":         dict(shaders=True,  pack=CR_ZIP,  preset="POTATO",  dh=128, transp="FAKE",     threads=1, quality="LOW",
+    "low":         dict(shaders=True,  pack=CR_ZIP,  preset="POTATO",  dh=128, transp="FAKE",     threads=1, quality="LOW", ssao=False, emb=("FAST","FAST","false"),
                         options={"renderDistance": "6", "simulationDistance": "6", "graphicsMode": "1", "particles": "1",
                                  "entityShadows": "false", "biomeBlendRadius": "2"}),
-    "medium":      dict(shaders=True,  pack=CR_ZIP,  preset="MEDIUM",  dh=192, transp="FAKE",     threads=2, quality="MEDIUM",
+    "medium":      dict(shaders=True,  pack=CR_ZIP,  preset="MEDIUM",  dh=192, transp="FAKE",     threads=2, quality="MEDIUM", ssao=True, emb=("DEFAULT","DEFAULT","true"),
                         options={"renderDistance": "8", "simulationDistance": "8", "graphicsMode": "1", "particles": "0",
                                  "entityShadows": "true", "biomeBlendRadius": "3"}),
-    "high":        dict(shaders=True,  pack=EUPHORIA, preset="HIGH",   dh=256, transp="COMPLETE", threads=4, quality="MEDIUM",
+    "high":        dict(shaders=True,  pack=EUPHORIA, preset="HIGH",   dh=256, transp="COMPLETE", threads=4, quality="MEDIUM", ssao=True, emb=("FANCY","FANCY","true"),
                         options={"renderDistance": "10", "simulationDistance": "8", "graphicsMode": "2", "particles": "0",
                                  "entityShadows": "true", "biomeBlendRadius": "5"}),
-    "ultra":       dict(shaders=True,  pack=EUPHORIA, preset="ULTRA",  dh=384, transp="COMPLETE", threads=6, quality="HIGH",
+    "ultra":       dict(shaders=True,  pack=EUPHORIA, preset="ULTRA",  dh=384, transp="COMPLETE", threads=6, quality="HIGH", ssao=True, emb=("FANCY","FANCY","true"),
                         options={"renderDistance": "12", "simulationDistance": "10", "graphicsMode": "2", "particles": "0",
                                  "entityShadows": "true", "biomeBlendRadius": "7"}),
 }
@@ -69,10 +70,16 @@ def preset_to_iris_txt(tokens):
             out.append(f"{tok}=true")
     return "\n".join(sorted(out)) + "\n"
 
-def dh_keys(dh, transp, threads, quality):
+def dh_keys(dh, transp, threads, quality, ssao):
     lines = [f"lodChunkRenderDistanceRadius = {dh}", f"numberOfThreads = {threads}",
-             f'transparency = "{transp}"', f'verticalQuality = "{quality}"', f'horizontalQuality = "{quality}"']
+             f'transparency = "{transp}"', f'verticalQuality = "{quality}"', f'horizontalQuality = "{quality}"',
+             f"enableSsao = {'true' if ssao else 'false'}"]
     return "\n".join(lines) + "\n"
+
+def embeddium_keys(weather, leaves, vignette):
+    # JSON-style lines: launch.jar matches "key": value and keeps quoting and trailing commas
+    return f'"weather_quality": "{weather}"\n"leaves_quality": "{leaves}"\n"enable_vignette": {vignette}\n'
+
 
 def main():
     presets = load_presets()
@@ -80,7 +87,8 @@ def main():
         d = OUT / tier
         (d / "config").mkdir(parents=True, exist_ok=True)
         (d / "shaderpacks").mkdir(parents=True, exist_ok=True)
-        (d / "config/DistantHorizons.toml.keys").write_text(dh_keys(c["dh"], c["transp"], c["threads"], c["quality"]))
+        (d / "config/DistantHorizons.toml.keys").write_text(dh_keys(c["dh"], c["transp"], c["threads"], c["quality"], c["ssao"]))
+        (d / "config/embeddium-options.json.keys").write_text(embeddium_keys(*c["emb"]))
         (d / "config/oculus.properties.keys").write_text(
             f"shaderPack={c['pack']}\nenableShaders={'true' if c['shaders'] else 'false'}\n")
         txt = preset_to_iris_txt(presets[c["preset"]])
