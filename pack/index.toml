@@ -457,7 +457,7 @@ hash = "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
 
 [[files]]
 file = "config/villagespawnpoint.json5"
-hash = "243fbb74e725279d7da10a2906b0af2ccaeb6c7fb373843bedb38744bafaa7a2"
+hash = "a5a9e968d96ebced582b3e84370e0cd4fc63bc35cc602645ee198d5619a0c1bc"
 
 [[files]]
 file = "config/visual_workbench.json"

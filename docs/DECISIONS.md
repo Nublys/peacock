@@ -106,11 +106,12 @@ Why things are the way they are. Add an entry when a choice would surprise someo
 - Farmer's Delight crops are tagged into seasons by hand; Serene Seasons ships no FD compat.
 
 ## The capital is a large CTOV village; vanilla villages are gone
-- Village Spawn Point was set to `#minecraft:village`, which includes the five vanilla villages CTOV keeps
-  at low weight, so spawn could land in a vanilla one. Now `#ctov:large_village` — the capital has a bell
-  and room to grow by construction. Vanilla villages removed from the `minecraft:village` structure set
-  (`pack/kubejs/data/minecraft/worldgen/structure_set/village.json`) so every town is CTOV. Spawn is fixed
-  at world creation: this needs a world made after 2026-10-17 12:15.
+- CTOV keeps the five vanilla villages in rotation at low weight, so `#minecraft:village` could land spawn
+  in a vanilla one. Vanilla villages are removed from the `minecraft:village` structure set
+  (`pack/kubejs/data/minecraft/worldgen/structure_set/village.json`), so every village — and therefore the
+  capital — is CTOV. Tried `#ctov:large_village` for the spawn search: a third of the candidates, and the
+  locate on Terralith terrain ran past 4 minutes with the server thread blocked. Back to
+  `#minecraft:village` (now CTOV-only). Spawn is fixed at world creation: needs a world made after this.
 
 ## Boss structures must exist in modded biomes
 - Cataclysm's structure biome tags list only vanilla biomes (`minecraft:desert`, `minecraft:snowy_plains`,
