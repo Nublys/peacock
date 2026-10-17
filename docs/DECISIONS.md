@@ -96,6 +96,19 @@ Why things are the way they are. Add an entry when a choice would surprise someo
   Rule for new client mods: if the jar contains `newSimpleChannel`/`ChannelBuilder`, it is
   `both`, whatever Modrinth's side label says.
 
+## Seasons are long and crops obey them
+- 16 days per sub-season (48-day seasons, 192-day year): a planting is a commitment, winter is a
+  season you prepare for, not a weekend. Out-of-season crops do not grow at all; Serene Seasons'
+  Greenhouse Glass is the deliberate escape hatch (glass = a build, not a toggle).
+- Farmer's Delight crops are tagged into seasons by hand; Serene Seasons ships no FD compat.
+
+## One ore source, one zinc
+- Create's worldgen is off; Geolosys deposits (incl. sphalerite for zinc) are the only ore. Regional
+  ore is the whole reason for trains and wagons.
+- Geolosys clusters are tagged `forge:raw_materials/<metal>` so Create's existing crushing/washing
+  recipes take them — no parallel processing chain to maintain. Any Geolosys zinc ingot is folded
+  into Create's by KubeJS so EMI shows one zinc.
+
 ## Tough As Nails: temperature on, thirst off
 - `thirst.toml: enable_thirst = false` (2026-10-16). Seasons and temperature are the survival layer we
   want (clothing, campfires, shade, the calendar); a second hunger bar is bookkeeping. Canteens and

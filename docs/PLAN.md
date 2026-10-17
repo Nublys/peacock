@@ -60,26 +60,31 @@ two players are simply the first two players. Anything that would only work for 
   and shader preset match the table; switch the variable, relaunch, confirm; edit a setting in-game,
   relaunch, confirm it survives.
 
-## Phase 2 — World and balance config
-- Serene Seasons: season length (default 16 days/sub-season), fertility datapack for
-  Farmer's Delight + Aquaculture
-- Geolosys: zinc pluton + surface samples; Create zinc worldgen off; pluton density and size
-  for a server (many players share deposits — deposits are large, but spacing decides how far
-  the third and fourth settlements have to go)
-- Spawn weights: Animania / Naturalist / Mowzie's / Cataclysm across BOP + Terralith
-- Structure spacing: Structory, Cataclysm (CTOV untouched)
-- ~~TAN soft-start~~ thirst disabled (temperature only); Illager Invasion raid caps, Big Cannons block damage off near villages
-- Villager Comfort / Restock Balance tuning; Every Compat trims
-- Village Spawn Point: everyone spawns at the same CTOV village — it becomes the server's
-  capital/hub. Confirm it has a bell and room to grow (Village Expansion).
-- Server-scale balance: Illager Invasion raid size scales with players present; Mowzie's and
-  Cataclysm bosses are one-per-structure, so structure spacing also sets how many bosses a
-  server has — keep boss structures findable (cartographer maps / structure compass)
-- Create and Valkyrien Skies tick budget: per-player caps on VS ships and contraption size
-  (VS config), chunk-loading limits (Phase 5)
-- **Test:** fresh world on the server — all players spawn in the same CTOV village, server DH
-  LODs visible, zinc or iron findable within a session, raid with 3+ players present stays
-  under the tick budget
+## Phase 2 — World and balance config  🟡 first pass 2026-10-16 (needs a fresh world to show)
+Done in the first pass:
+- Serene Seasons: `sub_season_duration = 16` (192-day year); out-of-season crops **don't grow**
+  (`out_of_season_crop_behavior = 1`) — Greenhouse Glass is the counter. Farmer's Delight crops
+  tagged by season (`pack/kubejs/data/sereneseasons/tags/blocks/`): cabbage spring+autumn, onion
+  spring+summer, tomato summer, rice summer+autumn.
+- Geolosys is the only ore source: Create's own worldgen off (`disableWorldGen = true`); sphalerite
+  deposits supply zinc. Clusters tagged `forge:raw_materials/<metal>` so Create crushing/washing
+  accepts them; `kubejs/server_scripts/geolosys_create.js` smelts zinc clusters to Create's ingot and
+  collapses any duplicate Geolosys zinc.
+- Every Compat: Cataclysm chorus wood off (its generated recipes referenced missing items).
+- Resolved without changes: Doggy Talents converts a tamed wolf with a Training Treat by default;
+  Simple Voice Chat's "migrated config" line was a one-off; Illager Invasion has no raid cap —
+  raids are Bad-Omen-triggered and Village Recruits already has natural raids off.
+Still to do (needs playtest data or Phase 3 scripting):
+- Geolosys spacing (`chunkSkipChance`, deposit weights) once we see how far iron/zinc actually are
+  from the capital on a fresh world; spawn weights for Animania / Naturalist / Mowzie's / Cataclysm
+- Structure spacing (Structory thinning, Cataclysm structure sets) via datapack structure_set overrides
+- Big Cannons block damage off near villages → KubeJS (Phase 3); global `damageRestriction` stays default
+- Villager Comfort / Restock Balance numbers after the first market week
+- Village Spawn Point: confirm the capital has a bell and room (any `#minecraft:village` qualifies now)
+- Create / Valkyrien Skies per-player caps; chunk-loading limits (Phase 5)
+- **Test:** fresh world on the server — all players spawn in the same CTOV village, server DH LODs
+  visible, iron and zinc findable within a session (prospector's pick + samples), a crop planted out
+  of season does nothing until under Greenhouse Glass
 
 ## Phase 3 — Glue (KubeJS)
 - Cross-mod recipes: wagons, canteens, guard/recruit gear, troughs, oil from FD crops,

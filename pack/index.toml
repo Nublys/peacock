@@ -104,7 +104,7 @@ hash = "5b9ee8bee23d0f12b926567309802eed6f1f46a195726b2b034d692deb833b65"
 
 [[files]]
 file = "config/create-common.toml"
-hash = "6c0f6254798808bce8079a1cfafe4d6c082cead42c51d1e3121f3580f8a44eca"
+hash = "679e3eb1366b748e91af6d137f1a9f52a3a3a02373c0e454015dc504df4bf6fa"
 
 [[files]]
 file = "config/create_better_villagers-common.toml"
@@ -187,7 +187,7 @@ hash = "6f6d67e493c8ff573df151015640bad166cebf9603b74a4eb978a30942ec6780"
 
 [[files]]
 file = "config/everycomp-entries.toml"
-hash = "93141b770f07416190d4612e0ed6952de5e9670ee14d8cd0f5ffeb818a4dfd8a"
+hash = "ec56cb9a42b8e4a39fbebe9260ec3e281306d935074435f5704fcc6e47f6f337"
 
 [[files]]
 file = "config/everycomp-hazardous.toml"
@@ -349,11 +349,11 @@ hash = "3b29029db858298eaafde1911228d033c1aca00929cce040275af467585696b9"
 
 [[files]]
 file = "config/sereneseasons/fertility.toml"
-hash = "e67138d1168068fa5a5ab66f90f9583b87dea826b7e6c0bb77730fe76b275c06"
+hash = "6c488379f8d2919ccf67064bef974e70dca5d72e96eb473bd747184c4d4833ff"
 
 [[files]]
 file = "config/sereneseasons/seasons.toml"
-hash = "1b3980ce09639eb97021a8bed9472dd0f760e78c24fb359399bde1bbdb0cc721"
+hash = "1ec418a7d4b769acae0e04686b41536dc0676629e54b6a8db8cf0031ef66c9f6"
 
 [[files]]
 file = "config/skinlayers.json"
@@ -478,6 +478,38 @@ hash = "d26a63d3cdf326412ba86dcc2781060bc53ed6c74ac7808e65325452e264e820"
 [[files]]
 file = "kubejs/data/create/recipes/filling/purified_water_bucket.json"
 hash = "4c702ebae17c77801f7a960fa6457fa14e7ae1970c2d981a9467cd8e9c8c53e4"
+
+[[files]]
+file = "kubejs/data/forge/tags/items/raw_materials/copper.json"
+hash = "111f88de8f3766d333bc9873fbbb88ab633880b34a12b5e51d243eede0d34009"
+
+[[files]]
+file = "kubejs/data/forge/tags/items/raw_materials/gold.json"
+hash = "4e143295ed4f02cb9280dcdd396894bb05f3253e37904f86eff7e22630fe2e74"
+
+[[files]]
+file = "kubejs/data/forge/tags/items/raw_materials/iron.json"
+hash = "ea0797faecd755fe7d6dea5c2ee284aaf40db48cf6a8fe780cf4ea637b0fb7ba"
+
+[[files]]
+file = "kubejs/data/forge/tags/items/raw_materials/zinc.json"
+hash = "ae4783aba10060491f14f327c00dc9b75fdc4e5b09c6b2064b6e127f0a5c581c"
+
+[[files]]
+file = "kubejs/data/sereneseasons/tags/blocks/autumn_crops.json"
+hash = "a5310d4145eefae9ed989d01e717c64365bba38f2eb6847f7e2f438c7f74cda6"
+
+[[files]]
+file = "kubejs/data/sereneseasons/tags/blocks/spring_crops.json"
+hash = "d14b8b90146bc2314d099619b7f41eca393e2502226c45c8474c95eb52d72839"
+
+[[files]]
+file = "kubejs/data/sereneseasons/tags/blocks/summer_crops.json"
+hash = "7647c90009d8faf64df6efd2ad77a14f0923f0d605cc4e3148a835b587df30eb"
+
+[[files]]
+file = "kubejs/server_scripts/geolosys_create.js"
+hash = "718f70cece2f5ae8da173df32628cb238a1bd461c6664c257785ad1929c06a9d"
 
 [[files]]
 file = "mods/3dskinlayers.pw.toml"

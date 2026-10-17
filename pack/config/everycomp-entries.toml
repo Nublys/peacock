@@ -7,6 +7,9 @@
 		[types.wood_type.createdieselgenerators]
 			chip_wood = true
 
+		[types.wood_type.cataclysm]
+			chorus = true
+
 		[types.wood_type.biomesoplenty]
 			fir = true
 			pine = true
