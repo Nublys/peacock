@@ -2193,7 +2193,7 @@ hash = "5a2ec56b77a366cc85aabd7cc2509ae6b23e83567b5cc9765feb2d06f6d0e445"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/start/spawn.json"
-hash = "7d1d2eb393db8c49c33c4e2fb0d95ba43cfdf3f9878d9ba6638c25d1e2b7e0de"
+hash = "566c0aeceb2d80d15ff570c54de60485bd9c92b018a80cbbaa4e1b2f774d7638"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/start/temperature.json"
@@ -2201,7 +2201,7 @@ hash = "edb00ce45260efc5c140bf751d3ae6a5de5c59a71b4653e0837e5cfc53a5d640"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/story/dead_towns.json"
-hash = "48b54287e2be6db4fdd9e144f92e2d6dfee86bfd1d978068de0217a2df8fc070"
+hash = "7fe0acd9297a1fac716c55149a7c935b580a00b901e37d3b9647ddc16dcf484b"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/story/found_writings.json"

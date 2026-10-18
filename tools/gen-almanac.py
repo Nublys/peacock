@@ -133,7 +133,7 @@ ENTRIES = {
                 "Most are " + B("abandoned") + ": roofs open, glass gone, the dead owners still in the cellars, a little left in the chests and sometimes a journal. The rest are " + B("held") + ": pillagers camp in them, and the chests hold what they took from every town they emptied."),
             txt("An abandoned village is a quarry, a shelter and a story. A held one is a fight with real loot at the end. Neither has a bell that works, a board that posts, or a villager who trades.",
                 "Cure the zombie villagers, or bring villagers of your own, put down a recruit table and ring a bell: the survivors will found a new town on the old bones (" + L("towns/new_towns", "The New Towns") + ")."),
-            txt("The only old town alive is the " + B("capital") + ", where you woke: a walled castle town with a keep, deepslate streets, a church and a library. It is neutral ground: no faction can take it, and nobody can turn it into one. Raids are its only threat, and the moment you are needed.",
+            txt("The only old town alive is the " + B("capital") + ", where you woke: a walled castle town with a keep and a church. It is neutral ground: no faction can take it or found one in it. Raids are its only threat, and the moment you are needed.",
                 "Smaller things litter the land between: fallen logs, cairns, a derailed cart, a platform where the morning engine never came. Read them. They are the same story told in blocks."),
         ]),
         ("painted_ones", "The Painted Ones", "minecraft:crossbow", [
