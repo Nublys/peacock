@@ -227,11 +227,13 @@ ARCHIVIST_REWS = pool({
     "xp_bottle": entry("minecraft:experience_bottle", 700, 2, 6, "UNCOMMON"),
     **{f"journal_{j['id']}": entry("minecraft:written_book", TIER[j["tier"]][0], 1, 1, TIER[j["tier"]][1],
                                    rep=TIER[j["tier"]][2], nbt=book_nbt(j)) for j in JOURNALS},
+    # display names go through snbt_str: an apostrophe inside a single-quoted SNBT string broke the whole pool
+    # ("Expected '}' at position 48: ...Archivist'<--[HERE]", 2026-10-18) and the Archivist decree had no rewards
     "warden_sword": entry("minecraft:iron_sword", 18000, 1, 1, "LEGENDARY", rep=30, nbt=(
-        '{Damage:0,display:{Name:\'{"text":"Warden of the Capital","italic":false,"color":"gold"}\'},'
+        '{Damage:0,display:{Name:' + snbt_str(json.dumps({"text": "Warden of the Capital", "italic": False, "color": "gold"})) + '},'
         'Enchantments:[{id:"minecraft:sharpness",lvl:4s},{id:"minecraft:unbreaking",lvl:3s},{id:"minecraft:mending",lvl:1s}]}')),
     "warden_bow": entry("minecraft:crossbow", 18000, 1, 1, "LEGENDARY", rep=30, nbt=(
-        '{Damage:0,display:{Name:\'{"text":"The Archivist\'s Answer","italic":false,"color":"gold"}\'},'
+        '{Damage:0,display:{Name:' + snbt_str(json.dumps({"text": "The Archivist's Answer", "italic": False, "color": "gold"})) + '},'
         'Enchantments:[{id:"minecraft:quick_charge",lvl:3s},{id:"minecraft:piercing",lvl:3s},{id:"minecraft:mending",lvl:1s}]}')),
 })
 

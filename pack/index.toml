@@ -421,7 +421,7 @@ hash = "6f713b1aa5e04578e71cc5854b73c594a9bdc74dd559a5b3f5fa5cedace69e72"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/bountiful/bounty_pools/peacock/archivist_rews.json"
-hash = "5de415fa2b6ed7261f9ae9be06f56e4d2c03c9aab4ec000802e52ea08592e2ed"
+hash = "e06d9d56b50e02918d23bdd1c9529cc8e14ba0274173175662b9668f34d471ae"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/cataclysm/tags/worldgen/biome/has_structure/burning_arena_biomes.json"

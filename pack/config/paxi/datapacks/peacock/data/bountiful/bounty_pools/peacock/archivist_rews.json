@@ -248,7 +248,7 @@
    "unitWorth": 18000,
    "rarity": "LEGENDARY",
    "repRequired": 30,
-   "nbt": "{Damage:0,display:{Name:'{\"text\":\"Warden of the Capital\",\"italic\":false,\"color\":\"gold\"}'},Enchantments:[{id:\"minecraft:sharpness\",lvl:4s},{id:\"minecraft:unbreaking\",lvl:3s},{id:\"minecraft:mending\",lvl:1s}]}"
+   "nbt": "{Damage:0,display:{Name:\"{\\\"text\\\": \\\"Warden of the Capital\\\", \\\"italic\\\": false, \\\"color\\\": \\\"gold\\\"}\"},Enchantments:[{id:\"minecraft:sharpness\",lvl:4s},{id:\"minecraft:unbreaking\",lvl:3s},{id:\"minecraft:mending\",lvl:1s}]}"
   },
   "warden_bow": {
    "type": "item",
@@ -260,7 +260,7 @@
    "unitWorth": 18000,
    "rarity": "LEGENDARY",
    "repRequired": 30,
-   "nbt": "{Damage:0,display:{Name:'{\"text\":\"The Archivist's Answer\",\"italic\":false,\"color\":\"gold\"}'},Enchantments:[{id:\"minecraft:quick_charge\",lvl:3s},{id:\"minecraft:piercing\",lvl:3s},{id:\"minecraft:mending\",lvl:1s}]}"
+   "nbt": "{Damage:0,display:{Name:\"{\\\"text\\\": \\\"The Archivist's Answer\\\", \\\"italic\\\": false, \\\"color\\\": \\\"gold\\\"}\"},Enchantments:[{id:\"minecraft:quick_charge\",lvl:3s},{id:\"minecraft:piercing\",lvl:3s},{id:\"minecraft:mending\",lvl:1s}]}"
   }
  }
 }
