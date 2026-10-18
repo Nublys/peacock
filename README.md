@@ -65,7 +65,8 @@ The year is four seasons of three sub-seasons, sixteen days each. Crops grow onl
 in spring and summer, nothing in winter without a greenhouse. Winter snow piles up in layers and melts
 back in spring. Cold and heat hurt (the gauge is by your hotbar): wool armour warms, leather cools,
 campfires warm the air around them. There is no thirst. A calendar (Serene Seasons) shows the season;
-the chat tells you too, every time you log in.
+the chat tells you too, every time you log in. The calendar only moves while someone is online, so an empty
+server does not turn winter into winter again behind your back.
 
 ### Ore is regional
 Ore does not spread evenly through the stone. **Geolosys** puts it in large deposits by region: iron near

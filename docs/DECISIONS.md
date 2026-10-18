@@ -475,3 +475,8 @@ Why things are the way they are. Add an entry when a choice would surprise someo
 - One CurseForge zip per tier, because that app has no pre-launch hook; `tools/apply-profile.py` bakes the
   tier's `*.keys` into the config files with the same per-setting rule as the launcher.
 
+## Seasons stop when nobody is online (2026-10-18)
+- `progress_season_while_offline = false`. Aaron: a player who keeps logging in during winter five times in a
+  row starves. The calendar now only moves while someone is playing, so the season anyone sees is one the
+  group actually lived through. The day/night cycle is vanilla and unaffected.
+

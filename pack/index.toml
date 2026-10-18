@@ -849,7 +849,7 @@ hash = "6c488379f8d2919ccf67064bef974e70dca5d72e96eb473bd747184c4d4833ff"
 
 [[files]]
 file = "config/sereneseasons/seasons.toml"
-hash = "1ec418a7d4b769acae0e04686b41536dc0676629e54b6a8db8cf0031ef66c9f6"
+hash = "588529bffa05786d8864664bc20e85c6c763d1b88c9767cac6b1f7f69d67b754"
 
 [[files]]
 file = "config/skinlayers.json"
