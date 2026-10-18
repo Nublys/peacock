@@ -237,7 +237,7 @@ and nature answered with sickness and monsters — is never stated in-game; the 
   via profile key), Snow! Real Magic! (+Kiwi); MOTD "Year One. The capital still stands."; `welcome.js`
   first-join line and the Serene Seasons season on every join.
 - ✅ **Performance for 6–8 players** — Dynamic View 36 ms / sim 5–10; heap 75% (`PEACOCK_HEAP_PERCENT`);
-  Clumps; Let Me Despawn; Chunky (server-only) with the pregen runbook in `server/README.md`;
+  Clumps; Let Me Despawn; (Chunky was added and removed the same day — DH 3.3.3 crashes with it, see server/README.md);
   `entity-broadcast-range-percentage` 75, `network-compression-threshold` 512.
 - ✅ **In-game profile picker** — `/peacock profile <tier> [reset]` (server command → `player.sendData` →
   client writes `kubejs/config/peacock-profile.json`); `launch.jar` reads the file first, `PEACOCK_PROFILE` second.

@@ -8,7 +8,7 @@ Everything here is for the host. Players never see this folder.
    `server/pterodactyl/egg-peacock.json`.
 2. **Create the server** from that egg. Allocation: one port (default 25565). Wings opens it
    for TCP **and** UDP, and Simple Voice Chat is configured to share the game port, so no
-   second allocation is needed. Memory: 10–12 GB; the startup uses `MaxRAMPercentage=90`.
+   second allocation is needed. Memory: 10–12 GB; the startup gives Java 75% of it (`PEACOCK_HEAP_PERCENT` to change).
    Docker image: `ghcr.io/pterodactyl/yolks:java_17`.
 3. **Install** runs automatically (Forge 1.20.1-47.4.16, `eula.txt`, the `server.properties`
    template, JVM args, packwiz bootstrap, first server-side sync). Watch the install log; it
@@ -90,17 +90,12 @@ Marked `side = "server"` in `pack/mods/`, so they install here and never on a cl
 - **FTB Essentials** (server) — `defaultconfigs/ftbessentials-server.snbt`: only `/spawn` (60 s cooldown,
   5 s warm-up) and `/back` after a death. Homes, warps, tpa, rtp and the virtual crafting/ender-chest
   commands are off: no fast travel is a design rule. Admin commands (`/tpl`, `/fly`, `/invsee`…) stay.
-- **Chunky** (server) — pre-generates terrain so nobody pays worldgen while playing. Before opening the server
-  to more players, run once from the console, with nobody on, and let it finish (a few hours on this CPU):
-  ```
-  chunky world minecraft:overworld
-  chunky center 0 0
-  chunky radius 3000
-  chunky start
-  ```
-  `chunky progress` to watch, `chunky pause` / `chunky continue` if players need the server. Then `dh pregen start
-  minecraft:overworld 0 0 3000` for the Distant Horizons LODs over the same area. Chunky can be removed from the
-  pack afterwards (`packwiz remove chunky`); it does nothing while idle.
+- **No terrain pre-generation.** Chunky was tried twice and is out for good: DH 3.3.3 crashes the server when
+  Chunky drives generation (2026-10-17), and the second attempt (2026-10-18) was reverted before it reached a
+  server for that reason. Distant Horizons generates its own LODs (`dh pregen start minecraft:overworld 0 0 3000`
+  from the console builds them ahead of players — LODs only, not world chunks) and Dynamic View trims
+  simulation distance while people explore. If exploration lag becomes the problem with eight players, the
+  honest fix is a short "exploration evening" with the view distance floor lowered, not a pregen mod.
 - **Clumps** (both sides) — merges XP orbs. **Let Me Despawn** (+ its library Almanac) — despawns mobs sooner once
   they are far from every player and were never fought or named; the entity count is what eight players'
   loaded areas accumulate.
