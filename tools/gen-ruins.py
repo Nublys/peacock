@@ -421,16 +421,24 @@ def main() -> None:
                {"structures": set_entries, "placement": placement})
 
     # ---------------------------------------------------------------- the capital
-    # Terralith ships a walled castle town, `terralith:fortified_village` (its own houses, church, library,
-    # deepslate streets, a keep) in its `rare_village` set. CTOV's "fortified" variants turned out to be a keep
-    # without a wall, so since 2026-10-18 the capital IS Terralith's fortified village: one concentric-ring
+    # Terralith ships a castle town, `terralith:fortified_village` (a 40-block castle, its own houses, church,
+    # library, deepslate streets) in its `rare_village` set. Neither it nor CTOV's "fortified" variants has a
+    # perimeter wall — kubejs/server_scripts/capital_wall.js builds that. Since 2026-10-18 the capital IS
+    # Terralith's fortified village: one concentric-ring
     # position near the origin, and the structure overridden to accept any village-able biome so that one roll
     # cannot fail. Terralith's own set is silenced (frequency 0) so the capital stays the only living old town.
     tj = terralith_jar()
     cap = json.loads(tj.read("data/terralith/worldgen/structure/fortified_village.json"))
     cap["biomes"] = "#peacock:capital_biomes"
     cap["spawn_overrides"] = {}
+    cap["size"] = 7                       # Terralith's 6: a larger capital
+    cap["max_distance_from_center"] = 116
     write_json("data/terralith/worldgen/structure/fortified_village.json", cap)
+    # Terralith's start pool is 1 empty : 3 castle — one capital in four would be nothing at all (and Village
+    # Spawn Point would then fall back to the nearest ruin: "the spawn village has no walls and is tiny").
+    starts = json.loads(tj.read("data/terralith/worldgen/template_pool/village/fortified/starts.json"))
+    starts["elements"] = [e for e in starts["elements"] if e["element"].get("element_type") != "minecraft:empty_pool_element"]
+    write_json("data/terralith/worldgen/template_pool/village/fortified/starts.json", starts)
     cap_ids = ["terralith:fortified_village"]
     write_json("data/peacock/worldgen/structure_set/capital.json", {
         "structures": [{"structure": s, "weight": 1} for s in cap_ids],

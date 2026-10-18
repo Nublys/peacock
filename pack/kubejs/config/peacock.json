@@ -1,5 +1,5 @@
 {
-  "_comment": "Peacock pack switches read by kubejs/server_scripts/*.js. Server-side; takes effect on /reload or restart. ladder=false disables recipe staging and place/hire gates (Blueprints still drop). sleepPercent: players (%) that must sleep to skip the night (-1 = vanilla rule untouched). afkMinutes: minutes without moving before a name greys out in the tab list (0 = off). capitalWall: build an extra stone wall ring around the capital on first load (off: the capital is already walled; /peacock wall builds one on demand).",
+  "_comment": "Peacock pack switches read by kubejs/server_scripts/*.js. Server-side; takes effect on /reload or restart. ladder=false disables recipe staging and place/hire gates (Blueprints still drop). sleepPercent: players (%) that must sleep to skip the night (-1 = vanilla rule untouched). afkMinutes: minutes without moving before a name greys out in the tab list (0 = off). capitalWall: build the stone wall around the capital on first load (/peacock wall reruns it).",
   "rumourMaps": true,
   "depotNeedsTown": true,
   "ladder": true,
@@ -8,5 +8,5 @@
   "caveLoot": true,
   "sleepPercent": 50,
   "afkMinutes": 5,
-  "capitalWall": false
+  "capitalWall": true
 }

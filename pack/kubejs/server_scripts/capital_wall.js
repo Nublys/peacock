@@ -7,16 +7,17 @@
 // every eight blocks, towers on the corners, and a gate in the middle of each side. It follows the terrain
 // column by column and fills its own foundation down to solid ground.
 //
-// Since the capital became Terralith's fortified village (walled by design) this is OFF unless
-// `capitalWall: true` is set in kubejs/config/peacock.json; `/peacock wall` (operator) builds it on demand.
+// It runs 10 s after the server loads if it has not run before (server persistentData), and can be rerun
+// by an operator with `/peacock wall` (rebuilds in place; harmless). `capitalWall: false` in
+// kubejs/config/peacock.json disables it.
 //
 // KubeJS loads every server script into one shared scope; a bare `{}` block does not isolate `const` in
 // its Rhino ("redeclaration of var"), so the body lives in a function scope.
 ;(() => {
 const SWITCHES = (() => { try { return JsonIO.read('kubejs/config/peacock.json') || {} } catch (e) { return {} } })()
-const ON = SWITCHES.capitalWall === true
-// the capital is Terralith's fortified village since 2026-10-18 — walled by design, so this script is off by
-// default (capitalWall: true in peacock.json, or /peacock wall, puts an outer ring around it anyway)
+const ON = SWITCHES.capitalWall !== false
+// the capital is Terralith's fortified village since 2026-10-18: a castle town, but — like CTOV's "fortified"
+// variants — without a perimeter wall. This script is the wall.
 const CAPITALS = [['terralith', 'fortified_village'], ['peacock', 'capital/plains'], ['peacock', 'capital/taiga']]
 const MARGIN = 6          // blocks outside the structure's bounding box
 const HEIGHT = 3          // wall body; crenellations on top
