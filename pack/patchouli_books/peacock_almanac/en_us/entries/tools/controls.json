@@ -11,6 +11,10 @@
     {
       "type": "patchouli:text",
       "text": "$(bold)K$() shaders on/off, $(bold)O$() shader menu$(br)$(bold)R$() recipes for the hovered item, $(bold)U$() its uses (EMI)$(br)$(bold),$() voice chat menu, $(bold).$() mute mic$(br)$(bold)Right Alt$() push-to-talk$(br2)Controlling is installed: Options, Controls has a search box, so any bind can be found by name."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "The bar above your hotbar is the $(bold)locator bar$(): a dot per player, by direction, like the newer game. It is not a map; it is where your friends are.$(br2)$(bold)J$() opens the claim manager (FTB Chunks), the only map-shaped screen in the pack, and it shows claims, not terrain."
     }
   ]
 }

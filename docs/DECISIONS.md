@@ -189,6 +189,19 @@ Why things are the way they are. Add an entry when a choice would surprise someo
   so a changed default reaches existing installs without `PEACOCK_RESET=1` while a player's own edit is
   still kept. Append to `PREVIOUS_DEFAULTS` whenever a shipped default changes.
 
+## Quality of life, round two (2026-10-17 night, Aaron's list)
+- **Locator Bar** (reworked-locator-bar): the newer game's player bar — a dot per player by direction above
+  the hotbar. Both sides so it sees everyone on the server.
+- **Crafting from chests:** *Workshop for handsome adventurer* — its crafting tables (every wood type)
+  read the chests and barrels around them and ship an EMI recipe handler, so EMI's "craftable" filter
+  counts what is in the room. For storerooms, *Tom's Simple Storage*: inventory connector + crafting
+  terminal across any number of chests/barrels, EMI plugin built in. *Storage Drawers* + its Create compat
+  are the "barrel mod that works with Create". Tom's Storage Creatified came along as a dependency
+  (Create-style recipes for Tom's blocks) — kept, it fits.
+- **Smaller tooltips:** Jade's overlay is the thing in the way in play. Every profile now writes
+  `config/jade/jade.json` keys `overlayScale 0.7`, `alpha 0.6`, `itemModNameTooltip false` (the mod-name
+  line on every item tooltip). GUI scale is untouched on purpose: the hotbar stays the same size.
+
 ## Caving pays in ore (2026-10-17)
 - Geolosys removes every vanilla ore feature in every dimension (`remove_vanilla_ores` biome modifier on
   `#geolosys:all_dimensions`), so caves had nothing in their walls. Added **YUNG's Better Mineshafts** and

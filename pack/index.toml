@@ -1334,6 +1334,11 @@ hash = "ff94210597f5bf032a675a4be94f4707913d2bfacbe9a02a49b6982adf6b749a"
 metafile = true
 
 [[files]]
+file = "mods/reworked-locator-bar.pw.toml"
+hash = "fa4e90bb84c3abe05b2336172e3536234a7adff9d07a9c9269d4d088a98bbdb0"
+metafile = true
+
+[[files]]
 file = "mods/rhino.pw.toml"
 hash = "4a972fdbe2955ff11ac21c689d5e36c39d55231cf7cfc7cb49295d51756efd40"
 metafile = true
@@ -1384,6 +1389,16 @@ hash = "45dcb8ee33bf1fad8b3857441246faea8384875c95d183f42e57118b78184799"
 metafile = true
 
 [[files]]
+file = "mods/storage-drawers-create-compat.pw.toml"
+hash = "4514e495c19d9631ad325bc94d0b6ed86085dcda4b3ce46f533a86dce3240143"
+metafile = true
+
+[[files]]
+file = "mods/storagedrawers.pw.toml"
+hash = "7d8f3a08fd4332475ce3930c7fd775c6cfc044ef8c81b8368fbd7bd19ead2012"
+metafile = true
+
+[[files]]
 file = "mods/structory.pw.toml"
 hash = "55ec888a1557983f5746ab4520744583d8861a3b26d0d9528a41b3d72101090b"
 metafile = true
@@ -1406,6 +1421,16 @@ metafile = true
 [[files]]
 file = "mods/terralith.pw.toml"
 hash = "df31d74a4c6de11c09fbcfaead84ca299188ab186a4f58dfff9099696541443f"
+metafile = true
+
+[[files]]
+file = "mods/toms-storage.pw.toml"
+hash = "131c818cca79586fdca0535062a63581e7c438efd108be4403ab8faea92e6368"
+metafile = true
+
+[[files]]
+file = "mods/toms_storage_create_recipes.pw.toml"
+hash = "0092d556d915173f5d9e1fa9b6314ee38cddbacf5b21631e11851c015182f0d8"
 metafile = true
 
 [[files]]
@@ -1491,6 +1516,11 @@ metafile = true
 [[files]]
 file = "mods/wavey-capes.pw.toml"
 hash = "9066030f560c338dbc6c4067159fbcf1e37185da25ec5b29a77d3b484272059c"
+metafile = true
+
+[[files]]
+file = "mods/workshop-for-handsome-adventurer.pw.toml"
+hash = "d76b5786ce8680cf96da26a78c20add2a2e4cd5a8dd43ea3592d242760bd5dc8"
 metafile = true
 
 [[files]]
@@ -1647,7 +1677,7 @@ hash = "77619c207a4137de35a44489ce154cfe395360301508f992dffab652ddb8f2e6"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/start/carrying.json"
-hash = "afd14a20db7a203acf163a553cd818210471aa1f195edb49f3f7f216b4875489"
+hash = "bb2b624d8841249a1377f5a6f6cea1321f27f05aed149e36c697bf023e555615"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/start/first_create.json"
@@ -1715,7 +1745,7 @@ hash = "61c056d160131c41f63a1ed46c185902d3b06e22a8a58ee7c85fb8bcfdc0fadb"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/tools/controls.json"
-hash = "82dd432e8654a4091949f720fcd2ef6eb1d4b8414d74d1eaa86f2c2b0791f66a"
+hash = "8af6e7df1bc47cdf1a506af7d62baa94bc71561b8040e413090212065e7fa1a9"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/tools/info.json"
@@ -1782,6 +1812,10 @@ file = "peacock/profiles/high/config/embeddium-options.json.keys"
 hash = "6888171d79f75c6800cecb1e2918532d0bcaff876d20c985f6abb3aca7c273a0"
 
 [[files]]
+file = "peacock/profiles/high/config/jade/jade.json.keys"
+hash = "271a064a707881f47cd6213cfec07dc1be5cb19b0c3440f88b5a40557d8f446c"
+
+[[files]]
 file = "peacock/profiles/high/config/oculus.properties.keys"
 hash = "8b4ac3411ce4558a2b9b1825b2362e35b714c0b374e5871438d393b465ce39ca"
 
@@ -1804,6 +1838,10 @@ hash = "9902ae2b2c1e34cc7ddff7477a218e1c68f9b1c8d76fff5619d3e978ea3d44fb"
 [[files]]
 file = "peacock/profiles/low/config/embeddium-options.json.keys"
 hash = "3b525e855da59a2c64278c73210699e88a599fe6979a79840d75cf8356759ec4"
+
+[[files]]
+file = "peacock/profiles/low/config/jade/jade.json.keys"
+hash = "271a064a707881f47cd6213cfec07dc1be5cb19b0c3440f88b5a40557d8f446c"
 
 [[files]]
 file = "peacock/profiles/low/config/oculus.properties.keys"
@@ -1830,6 +1868,10 @@ file = "peacock/profiles/medium/config/embeddium-options.json.keys"
 hash = "931c5424e81f89213d30aeebe3aaab3c3b2d355f654fac890b9df8997c8a1828"
 
 [[files]]
+file = "peacock/profiles/medium/config/jade/jade.json.keys"
+hash = "271a064a707881f47cd6213cfec07dc1be5cb19b0c3440f88b5a40557d8f446c"
+
+[[files]]
 file = "peacock/profiles/medium/config/oculus.properties.keys"
 hash = "ecdc47e26c1b274613251b8935d35c7225b4e1b12b7671388999dacd0f7178cb"
 
@@ -1854,6 +1896,10 @@ file = "peacock/profiles/potato/config/embeddium-options.json.keys"
 hash = "3b525e855da59a2c64278c73210699e88a599fe6979a79840d75cf8356759ec4"
 
 [[files]]
+file = "peacock/profiles/potato/config/jade/jade.json.keys"
+hash = "271a064a707881f47cd6213cfec07dc1be5cb19b0c3440f88b5a40557d8f446c"
+
+[[files]]
 file = "peacock/profiles/potato/config/oculus.properties.keys"
 hash = "3679e644386b40bf6bf9c612b40b6dbac157398edf6cc87dda142f1b1c72efde"
 
@@ -1876,6 +1922,10 @@ hash = "2197f67c63ea77dbd4d15babe84e50c7876735aaa60dd6d56c0bb85108d892b4"
 [[files]]
 file = "peacock/profiles/ultra/config/embeddium-options.json.keys"
 hash = "6888171d79f75c6800cecb1e2918532d0bcaff876d20c985f6abb3aca7c273a0"
+
+[[files]]
+file = "peacock/profiles/ultra/config/jade/jade.json.keys"
+hash = "271a064a707881f47cd6213cfec07dc1be5cb19b0c3440f88b5a40557d8f446c"
 
 [[files]]
 file = "peacock/profiles/ultra/config/oculus.properties.keys"

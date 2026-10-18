@@ -1,0 +1,13 @@
+name = "Locator Bar"
+filename = "LocatorBar-forge-1.2.4+1.20.1.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/BD7N7OcY/versions/NpxoocNY/LocatorBar-forge-1.2.4%2B1.20.1.jar"
+hash-format = "sha512"
+hash = "0aca8494b81870b77ce4b2f8a3ee03e1e1ec13c41a2ccf483e532dba18219121f05f3e2ae9c01b60f7f41fbd2b6f5d525f78895815d544075d034dd819067fec"
+
+[update]
+[update.modrinth]
+mod-id = "BD7N7OcY"
+version = "NpxoocNY"

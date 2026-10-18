@@ -70,6 +70,12 @@ COMMON_KEYS = {
     "key_key.ftbchunks.waypoint_manager": "key.keyboard.unknown",
 }
 
+# Extra *.keys files written into every tier (same content). Jade: a smaller, quieter block/entity overlay
+# and no mod-name line on item tooltips (Aaron, 2026-10-17: tooltips get in the way; the hotbar stays).
+COMMON_FILES = {
+    "config/jade/jade.json.keys": '"overlayScale": 0.7\n"alpha": 0.6\n"itemModNameTooltip": false\n',
+}
+
 def load_presets():
     data = urllib.request.urlopen(CR_URL, timeout=60).read()
     props = zipfile.ZipFile(io.BytesIO(data)).read("shaders/shaders.properties").decode("utf-8", "replace")
@@ -125,6 +131,9 @@ def main():
         packs = RESOURCE_PACKS if c.get("fresh_animations", True) else RESOURCE_PACKS.replace(',"file/FreshAnimations_v1.10.4.zip"', "")
         opts = dict(c["options"], resourcePacks=packs, **COMMON_KEYS)
         (d / "options.txt.keys").write_text("".join(f"{k}:{v}\n" for k, v in opts.items()))
+        for rel, content in COMMON_FILES.items():
+            (d / rel).parent.mkdir(parents=True, exist_ok=True)
+            (d / rel).write_text(content)
         print(f"{tier:12s} shaders={'on ' if c['shaders'] else 'off'} {c['pack'][:28]:28s} {c['preset']:7s} DH {c['dh']:>3} {c['transp']:8s} {c['threads']}t")
     for rel, lines in PREVIOUS_DEFAULTS.items():
         f = OUT / "_previous" / rel

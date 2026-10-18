@@ -189,6 +189,8 @@ ENTRIES = {
             txt(B("Shulker boxes") + " are late. Before them: sacks, backpacks, chest minecarts, wagons, ships. Create's chutes and belts move things between machines; wagons move them between towns.",
                 "A " + B("toolbox") + " (Create) holds tools and swaps them into your hand."),
             craft("create:crafting/curiosities/brown_toolbox", "Toolboxes are shared within range: open one and your hotbar can pull from it."),
+            txt(B("Crafting from your chests:") + " the Workshop's crafting tables (any wood) see the chests and barrels around them, and EMI's craftable filter counts what is in them. For a whole storeroom, Tom's Simple Storage: an inventory connector touching the chests, a crafting terminal on it.",
+                B("Storage Drawers") + " hold one item each in bulk, show it on the front, and feed Create funnels and belts directly."),
         ]),
     ],
     # ===================================================================================== land
@@ -484,6 +486,8 @@ ENTRIES = {
             txt(B("B") + " backpack$(br)" + B("M") + " atlas, " + B("P") + " place a pin$(br)" + B("V") + " quiver$(br)" + B("R / U / N") + " Recruits: command / team / map$(br)" + B("I") + " Recruits wiki$(br)" + B("Shift+1..4") + " dog whistles$(br)" + B("Alt") + " (hold) Create tool menu$(br)" + B("W") + " (hold, over a Create item) ponder"),
             txt(B("K") + " shaders on/off, " + B("O") + " shader menu$(br)" + B("R") + " recipes for the hovered item, " + B("U") + " its uses (EMI)$(br)" + B(",") + " voice chat menu, " + B(".") + " mute mic$(br)" + B("Right Alt") + " push-to-talk",
                 "Controlling is installed: Options, Controls has a search box, so any bind can be found by name."),
+            txt("The bar above your hotbar is the " + B("locator bar") + ": a dot per player, by direction, like the newer game. It is not a map; it is where your friends are.",
+                B("J") + " opens the claim manager (FTB Chunks), the only map-shaped screen in the pack, and it shows claims, not terrain."),
         ]),
         ("info", "Finding Things Out", "minecraft:spyglass", [
             txt(B("Jade") + " names whatever you look at, with its health, contents or progress. Hold " + B("Shift") + " for more. Numpad 0 toggles it.",

@@ -1,0 +1,13 @@
+name = "Workshop for handsome adventurer"
+filename = "workshop_for_handsome_adventurer--mc1.20.1--1.34.6.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/6lu9blWp/versions/EmZy2SKs/workshop_for_handsome_adventurer--mc1.20.1--1.34.6.jar"
+hash-format = "sha512"
+hash = "e4a73745f2d0434cee755ff38d745beb7fc5f1923ce292f55f13a418b8f45fc2f3f6e3e7b5cc59521d18db6b3bf4c34bdf287e1efc52dc5b866e9ecc4fb551d7"
+
+[update]
+[update.modrinth]
+mod-id = "6lu9blWp"
+version = "EmZy2SKs"
