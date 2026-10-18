@@ -22,7 +22,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Crafting from your chests:$() the Workshop's crafting tables (any wood) see the chests and barrels around them, and EMI's craftable filter counts what is in them. For a whole storeroom, Tom's Simple Storage: an inventory connector touching the chests, a crafting terminal on it.$(br2)$(bold)Storage Drawers$() hold one item each in bulk, show it on the front, and feed Create funnels and belts directly."
+      "text": "$(bold)Crafting from your chests:$() the Workshop's crafting tables (any wood) see the chests and barrels around them, and EMI's craftable filter counts what is in them. For a whole storeroom, build the storeroom: vaults, funnels, drawers, and a table in the middle.$(br2)$(bold)Storage Drawers$() hold one item each in bulk, show it on the front, and feed Create funnels and belts directly."
     }
   ]
 }

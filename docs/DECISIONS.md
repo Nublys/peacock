@@ -194,10 +194,11 @@ Why things are the way they are. Add an entry when a choice would surprise someo
   the hotbar. Both sides so it sees everyone on the server.
 - **Crafting from chests:** *Workshop for handsome adventurer* — its crafting tables (every wood type)
   read the chests and barrels around them and ship an EMI recipe handler, so EMI's "craftable" filter
-  counts what is in the room. For storerooms, *Tom's Simple Storage*: inventory connector + crafting
-  terminal across any number of chests/barrels, EMI plugin built in. *Storage Drawers* + its Create compat
-  are the "barrel mod that works with Create". Tom's Storage Creatified came along as a dependency
-  (Create-style recipes for Tom's blocks) — kept, it fits.
+  counts what is in the room. *Storage Drawers* + its Create compat are the "barrel mod that works with
+  Create". **Tom's Simple Storage was added and removed the same night** (Aaron, 23:23): a terminal over
+  every connected chest deletes the reason to build sorting lines, and its wireless terminal is fast travel
+  for items — the pack's premise is that moving and sorting things is the game. Workshop covers crafting
+  from the room; Create vaults, funnels and drawers are the storeroom.
 - **Smaller tooltips:** Jade's overlay is the thing in the way in play. Every profile now writes
   `config/jade/jade.json` keys `overlayScale 0.7`, `alpha 0.6`, `itemModNameTooltip false` (the mod-name
   line on every item tooltip). GUI scale is untouched on purpose: the hotbar stays the same size.

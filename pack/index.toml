@@ -1424,16 +1424,6 @@ hash = "df31d74a4c6de11c09fbcfaead84ca299188ab186a4f58dfff9099696541443f"
 metafile = true
 
 [[files]]
-file = "mods/toms-storage.pw.toml"
-hash = "131c818cca79586fdca0535062a63581e7c438efd108be4403ab8faea92e6368"
-metafile = true
-
-[[files]]
-file = "mods/toms_storage_create_recipes.pw.toml"
-hash = "0092d556d915173f5d9e1fa9b6314ee38cddbacf5b21631e11851c015182f0d8"
-metafile = true
-
-[[files]]
 file = "mods/tough-as-nails.pw.toml"
 hash = "43770400ceec7a777c867cd25dfa87fbccb943e46a391a0337f1ca1a4b016943"
 metafile = true
@@ -1677,7 +1667,7 @@ hash = "77619c207a4137de35a44489ce154cfe395360301508f992dffab652ddb8f2e6"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/start/carrying.json"
-hash = "bb2b624d8841249a1377f5a6f6cea1321f27f05aed149e36c697bf023e555615"
+hash = "ed95b323cf40f1a2ced454d669ac7d7e3f90b3893de66e1bcc1c9d87fa425769"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/start/first_create.json"

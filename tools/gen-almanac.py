@@ -189,7 +189,7 @@ ENTRIES = {
             txt(B("Shulker boxes") + " are late. Before them: sacks, backpacks, chest minecarts, wagons, ships. Create's chutes and belts move things between machines; wagons move them between towns.",
                 "A " + B("toolbox") + " (Create) holds tools and swaps them into your hand."),
             craft("create:crafting/curiosities/brown_toolbox", "Toolboxes are shared within range: open one and your hotbar can pull from it."),
-            txt(B("Crafting from your chests:") + " the Workshop's crafting tables (any wood) see the chests and barrels around them, and EMI's craftable filter counts what is in them. For a whole storeroom, Tom's Simple Storage: an inventory connector touching the chests, a crafting terminal on it.",
+            txt(B("Crafting from your chests:") + " the Workshop's crafting tables (any wood) see the chests and barrels around them, and EMI's craftable filter counts what is in them. For a whole storeroom, build the storeroom: vaults, funnels, drawers, and a table in the middle.",
                 B("Storage Drawers") + " hold one item each in bulk, show it on the front, and feed Create funnels and belts directly."),
         ]),
     ],
