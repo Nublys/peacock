@@ -417,7 +417,7 @@ hash = "6f713b1aa5e04578e71cc5854b73c594a9bdc74dd559a5b3f5fa5cedace69e72"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/bountiful/bounty_pools/peacock/archivist_rews.json"
-hash = "50f41031f9152a431836c1876026cf70d88ad5edcbf470b6094e8721404ce92b"
+hash = "5de415fa2b6ed7261f9ae9be06f56e4d2c03c9aab4ec000802e52ea08592e2ed"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/cataclysm/tags/worldgen/biome/has_structure/burning_arena_biomes.json"
@@ -1013,7 +1013,7 @@ hash = "790ca47319e01bea9825530c9f7c75eec00246719d1b7460626229386e12a2f0"
 
 [[files]]
 file = "kubejs/config/journals.json"
-hash = "6d37df1a6079c3045fd451dba9db070cfdd205c3dac6f050102e2f2f82bceb67"
+hash = "b5d72b6da9c50a6a18cd9bbec34c01e09a4bf8ebebaf71cb03ec093bbaafbeba"
 
 [[files]]
 file = "kubejs/config/peacock.json"
@@ -2185,7 +2185,7 @@ hash = "6cd3d3f420171bfde07d4477b13150090f33106cc8d8512a098025e473884801"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/story/what_happened.json"
-hash = "8dca8e5015bd1feb729a5041d05bc7fc70c314f993ef8a66cf6d28acf186cceb"
+hash = "92a3af334a0dfc85bfbcc2cea784ea51572f48be5f634e1962255dc08270673a"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/story/what_was_lost.json"

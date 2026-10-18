@@ -106,7 +106,7 @@ ENTRIES = {
     "story": [
         ("what_happened", "What Happened", "minecraft:cracked_stone_bricks", [
             txt("Long before you, villages were spread far and wide, joined by rail and canal. Brass turned in every workshop. Trains ran on schedules. Ships carried grain to towns that never saw a field.",
-                "They did very well. For four centuries they did very, very well."),
+                "They did very well. For centuries they did very, very well."),
             txt("Then the towns built past their walls, onto the fields that fed them, and the Guild dug below the old marks for more zinc and more brass. A sickness came up out of the lowest shafts and travelled the rail lines. The monsters followed it.",
                 "Nobody agrees what they woke. The survivors' own words are scattered in the ruins; see " + L("story/found_writings", "Found Writings") + "."),
             txt("The machines were lost with the towns: the dead carried off the brass, things from below took the engines apart, the sky over the Nether lit up and never went dark. Every piece is now held by something that will fight to keep it.",
