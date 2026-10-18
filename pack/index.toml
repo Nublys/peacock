@@ -324,6 +324,10 @@ file = "config/patchouli-client.toml"
 hash = "3b6236845f6a5ff8804487b63b0d74305b91316dc9a008362838607b0be3bd8e"
 
 [[files]]
+file = "config/paxi/datapacks/peacock-ruins.zip"
+hash = "743ad0914b86b3d49487e13daa7d15877080fd89a307766ec6493cee0aada9a7"
+
+[[files]]
 file = "config/paxi/datapacks/peacock/data/animania/tags/worldgen/biome/amphibian_habitats.json"
 hash = "5ed31f44e733c1bf7ae4192ade7edab3a8167ec29ae505fa7b8a906cf7dcd76e"
 
@@ -374,6 +378,42 @@ hash = "7868467188932d61fb2c8dfacd933b5e7e53aa78fef4a3bc9338b8006a3744a6"
 [[files]]
 file = "config/paxi/datapacks/peacock/data/animania/tags/worldgen/biome/rabbit_savanna_habitats.json"
 hash = "fd88a3ebc970d7c299d77e823c4b2d7554c940a9380e5d976fe15c1856ec7446"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/bountiful/bounty_decrees/peacock/archivist.json"
+hash = "13f7e543aef10672c4481b15dea47491b57de458254bfba43335bfa7556234cd"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/bountiful/bounty_pools/bountiful/_all_objs.json"
+hash = "b2aa9e907dc46257181226cc0bfd35646d673be0357bfb1f7166e1d56acb60fc"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/bountiful/bounty_pools/bountiful/_all_rews.json"
+hash = "792bbc53acbbbde8900397e53f28d05d1b9a69830a1462a3f614c093ef2f107c"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/bountiful/bounty_pools/bountiful/_equip_rews.json"
+hash = "5a88e9dee4e08a2d66709af6204da533cb108f87031183323c2dcb2687936181"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/bountiful/bounty_pools/bountiful/cleric_rews.json"
+hash = "b90b52ce2e60dc76c354bf7f33f8cfc59fa8d1aec091c9b994f50fdeebeb268f"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/bountiful/bounty_pools/bountiful/librarian_rews.json"
+hash = "6c639786fffc249394cff720b711947fca0c172a1211f87daa73eeaa50d2a72c"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/bountiful/bounty_pools/bountiful/mapper_rews.json"
+hash = "b84d2a737dc039324c61f46db3d5fbfd48e5492a34a7cda3cf8545b99bb81a2f"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/bountiful/bounty_pools/peacock/archivist_objs.json"
+hash = "6f713b1aa5e04578e71cc5854b73c594a9bdc74dd559a5b3f5fa5cedace69e72"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/bountiful/bounty_pools/peacock/archivist_rews.json"
+hash = "822ec32a26990318720e8a3f40982c31604efcf7003702308a034e72bdb4e40e"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/cataclysm/tags/worldgen/biome/has_structure/burning_arena_biomes.json"
@@ -444,6 +484,130 @@ file = "config/paxi/datapacks/peacock/data/mowziesmobs/tags/worldgen/biome/has_s
 hash = "0ee75ac9e4f5bbcd3fa6ce4f54e081f57590cc6c8831cefcd1870afa88d32ba2"
 
 [[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/loot_tables/chests/plunder.json"
+hash = "6f1867630e1bb7c475bb7c8bfb00342138bcffeb747fe2ded3ea2e710d5e9f52"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/loot_tables/chests/ruin_house.json"
+hash = "e537f66db35fc5bd6943da1d3a6ccd63f996fbfd61c9230a05f4e29c8bb0ec28"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/loot_tables/rumour/acropolis.json"
+hash = "4a1db523d3384db5cf504701d2634f49244c2ad8949dbb5d297899ecb4b29d97"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/loot_tables/rumour/ancient_factory.json"
+hash = "04311b2813cf6963cd600651878dc359ccb6a30ca9c1f9fed6c9d2f8708c5f03"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/loot_tables/rumour/cursed_pyramid.json"
+hash = "07df43fd46c61bc5f2b5a1ca66ed2a4d8577921d7b96d08db82247a29b238561"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/loot_tables/rumour/frosted_prison.json"
+hash = "061fd6cb3b049bdd0600c11aa0cf4b1efee0a45d966afb7239932807da5e4b52"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/loot_tables/rumour/frostmaw.json"
+hash = "080a26e90d5c55ca2a2a1bb7d97b45513ccda2f1f429d2d8c1b05d76775d377e"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/loot_tables/rumour/illager_fort.json"
+hash = "ab6733ddc84dce90e687a451f8e99af180f8bff21811ff3c194ff54136ca39fe"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/loot_tables/rumour/monastery.json"
+hash = "cfee599dc085692aa081e73303f2ec222bb09ba6a06bdc789b6444ead4dfb0ee"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/loot_tables/rumour/sunken_city.json"
+hash = "95ebda44eb196a3bbf3015c3c275575634a38c58c6d86eb0265e3a6202acdb1a"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/loot_tables/rumour/umvuthana_grove.json"
+hash = "5878bf938c089dd78926d5936a86dffe495a211e843d27052297ca383c56caee"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/loot_tables/rumour/wrought_chamber.json"
+hash = "72a51ce8ebcfce2a87192a14335a9c0bfb6d1876a97b583234be636fb4fb3119"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/structures/nature/boulder_large.nbt"
+hash = "879a19a5261592f2204be93be8a71f533dfef93edccd42f3366e8e9d6a8837c9"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/structures/nature/boulder_small.nbt"
+hash = "206f093ddba8cbae6532b98407d209798c0ac1db5c44cef151bc079db96935c6"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/structures/nature/fallen_oak.nbt"
+hash = "e6329b8ad81a03bf0a7ed392746b30cc095f6b0f3cf15485b9c5a2f6f97da057"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/structures/nature/fallen_spruce.nbt"
+hash = "53fc9c238d54e9c4da4ec963aa3b00d0761e5f8b7c407bd142dc3d7069c8218e"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/structures/nature/woodcutters_rest.nbt"
+hash = "52b4bbca08ff1f928e9d4ac2013491dcd70aa68e7c7bf35ea68603b8ac859279"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/structures/rust_belt/boarded_well.nbt"
+hash = "411a8ff33113ea83c8be81d64be761b5ada9eaac84a764dca888ada44286c8ef"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/structures/rust_belt/cairn.nbt"
+hash = "9e366b1a73d3c9f1f11c96ab92f0e658d7752c43914e2fa901c0a936c2ac6558"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/structures/rust_belt/cracked_chapel.nbt"
+hash = "2ec8da416a06576ba4515c70d1c780a8d451775902cc955fa117296ca8db67d9"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/structures/rust_belt/dead_fan.nbt"
+hash = "1324760c233f130bf54dfad36c1322b3421bcef1c66fe8f951948c9c8d1b4dc7"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/structures/rust_belt/derailed_cart.nbt"
+hash = "6cd8ca0e17bb2944271b12c9e5abb5560eb5265daf3f79121e3fb9a14e869329"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/structures/rust_belt/drill_crater.nbt"
+hash = "5fe979ac7e5b5a7bab873773d9534b6302a60d45981a39c7b67202b8eb08e444"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/structures/rust_belt/grave_wall.nbt"
+hash = "c7ac4edf3bb8ae56e14525323843063c36d34cd605586297d6505ee1b007e5f9"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/structures/rust_belt/signal_post.nbt"
+hash = "a58b264a4379ae9b6fb3738220da51d0cc304735f60ce33d898c8303ebf3e8f2"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/structures/rust_belt/station_platform.nbt"
+hash = "664603b42cb1d8dc4e2b4950af75e6c0da9449a6b91638c57ed71b15cd55af24"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/structures/rust_belt/toppled_wheel.nbt"
+hash = "e26667fcb8da9a2ba6aec0de7b5ac4b29d2e043f1b6841670b80a4b12b1babc7"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/structures/war_camp/war_camp.nbt"
+hash = "b2035d6182493a1672ebdfded407a0ea0cd8b6d4bdcb4fe4f7aed72847679a14"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/tags/worldgen/biome/nature.json"
+hash = "8f9c86e8b11aa64ad2f55ca9f01e5a1b13d436d1c8d74d96a5f8d8dd63dad901"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/tags/worldgen/biome/rust_belt.json"
+hash = "514947a809fb74b47d44db9ea99811d57c39fdd3fb63a458b9c7021812b47036"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/tags/worldgen/structure/nature.json"
+hash = "dd1184a5ee780b01f7e1a1205b342bb9b6c052ad340b691a3f006f9989e0ce22"
+
+[[files]]
 file = "config/paxi/datapacks/peacock/data/peacock/tags/worldgen/structure/rumour_acropolis.json"
 hash = "698b730f2994986700d846869b5466b6282b251b8b7196ca245c708f420114d5"
 
@@ -482,6 +646,154 @@ hash = "a8ab5006e77c7fc12ffc11bb86ded9328068d173f39e8408bfbab22a6b37fdbb"
 [[files]]
 file = "config/paxi/datapacks/peacock/data/peacock/tags/worldgen/structure/rumour_wrought_chamber.json"
 hash = "491eb8a4899769282cf1aac2d64e6ee7b502cc1ae5f83ef717d74b3f16094b1d"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/tags/worldgen/structure/rust_belt.json"
+hash = "1babbdce850c4876a426a5d974d88bd0c3f8c8bb88f332d384a33151d7e34033"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/tags/worldgen/structure/war_camp.json"
+hash = "78c8b822bd3869a8866af2a4b02c74d1bb265d5cd26f209f75fa3f20aa3450d1"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/worldgen/structure/nature/boulder_large.json"
+hash = "abb57b1414078bc84d579f76df240262bbb512487d349b053267fb61e554d0c6"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/worldgen/structure/nature/boulder_small.json"
+hash = "800e90a1e5b49dd3f5785faa8b47b80942280146a2a6a8052487b8d589e703af"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/worldgen/structure/nature/fallen_oak.json"
+hash = "06e70b718b88b1924fa96ad545a9c552a5fce18dd2e7b8bc2ef568a05355a333"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/worldgen/structure/nature/fallen_spruce.json"
+hash = "fca4b2c1c3a888f6464a4519282f74e0cee476cfd4b46d7edafcc202fc9ee1c4"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/worldgen/structure/nature/woodcutters_rest.json"
+hash = "c32a10d074a61927936597dec32702d5e454c032c0b041b25ec7464168f4cef2"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/worldgen/structure/rust_belt/boarded_well.json"
+hash = "0519f9df98e8ea54a83e4dfbc6e5a35b0ef8ac6ac95ff580a59bd97b41c02fda"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/worldgen/structure/rust_belt/cairn.json"
+hash = "892b7b1d72579da25a2d6768a8534a88b2c23d65923601d4d8530d60e04245ef"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/worldgen/structure/rust_belt/cracked_chapel.json"
+hash = "b38168af741784824587445feefabffcdf0c2cb3980b476514e51e699f23bf97"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/worldgen/structure/rust_belt/dead_fan.json"
+hash = "52bd2736e48b7bd5e5ed0fb40c7f8ef5e2d812c8df6d3284f42f1d1582c86fb6"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/worldgen/structure/rust_belt/derailed_cart.json"
+hash = "149c1dd89342f58ba9980a578ee3bccf59413e04feb65ddb92e348bd512dd6d6"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/worldgen/structure/rust_belt/drill_crater.json"
+hash = "1fbaae436e8f2c9dc8fb873204c8b8e10b27eb0fa7f71272454592eef6b70e44"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/worldgen/structure/rust_belt/grave_wall.json"
+hash = "f29a2a5fd91fc0842ee414507d15e84a673f708e2f50a43811f538c5f24c375e"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/worldgen/structure/rust_belt/signal_post.json"
+hash = "8432620aad7c4e838691978a848be6b5216314ae8c0f117e19a4b3f57b40718f"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/worldgen/structure/rust_belt/station_platform.json"
+hash = "85167122c7b55af99ca0a1d759f7dd5316411484a7acb8cff7126793ca6c2883"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/worldgen/structure/rust_belt/toppled_wheel.json"
+hash = "1b3a27920180d66100fe09ed861e3b3d733b7eb4c3276debb86a2cb2b5b64499"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/worldgen/structure/war_camp/war_camp.json"
+hash = "d68497c7cbc6b884293576a341ccba3a039d927e665603288c5e9d4eb1d411f2"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/worldgen/structure_set/nature.json"
+hash = "1b40f214fad732e34aaf04a50d85b13c89dfcb7b08d77bdf83695f7b3b038a3b"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/worldgen/structure_set/rust_belt.json"
+hash = "4052e08a6d0a9b3a52f4a73989623e55c33816f44769d4b35007ac545c8ba3e4"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/worldgen/structure_set/war_camp.json"
+hash = "f932e08137fd5fb0e0cf748a66def155af4f361431eb37eebc717ca7e2fc0c7a"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/worldgen/template_pool/nature/boulder_large.json"
+hash = "c8150a8d283dad02c3fdb9045e90cd1538af21da717f7ac7e3887dfb042aa637"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/worldgen/template_pool/nature/boulder_small.json"
+hash = "128092999d5396f84393745627fc861c66d2b86295a174239472e5d796ee22aa"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/worldgen/template_pool/nature/fallen_oak.json"
+hash = "0a6daf9340e847316a073469fbc549f43b54ac7f2a7cdc567bca68857fd892ab"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/worldgen/template_pool/nature/fallen_spruce.json"
+hash = "636867a68a06d9f6734127943802cbcc8626476f2793a9ad9037bdc5beb8350b"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/worldgen/template_pool/nature/woodcutters_rest.json"
+hash = "9764fe5ec1fd787208ed249ca5db9493629b9df48bab664793ed1e55ba54edeb"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/worldgen/template_pool/rust_belt/boarded_well.json"
+hash = "6bc91dc3be993eb82170d7acead2cce9c87a5a74f56d71bd8ea59dca07481007"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/worldgen/template_pool/rust_belt/cairn.json"
+hash = "bcbe7966304e14784e86d152be2e16642eddbdb5af39cb6cb4a3ab2b2705a839"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/worldgen/template_pool/rust_belt/cracked_chapel.json"
+hash = "07ffa6afa9fa7c08644e68427a078570a83894e5fd7e01f60007b96198d01834"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/worldgen/template_pool/rust_belt/dead_fan.json"
+hash = "9fe14c50e023af9dccb703f0934b0b7d2aca5eed492c75f8e4b0513ecaaf5f07"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/worldgen/template_pool/rust_belt/derailed_cart.json"
+hash = "737db4fe8a687f2020768a0c01f95e9d42da92873a9a7cf925f359a66efe0596"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/worldgen/template_pool/rust_belt/drill_crater.json"
+hash = "dddacf7e9939fe59c2109c91a18f434cbf9df08a164aa910de86db4d749b2320"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/worldgen/template_pool/rust_belt/grave_wall.json"
+hash = "d1dd0ef4a86dd10dd9bf1d3c5bdf47ee7e1dcb11e9d2964500359cca4b626d91"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/worldgen/template_pool/rust_belt/signal_post.json"
+hash = "d950f57dc413804834acd113088337e9a267fe3140b079c40afca2daf9a74341"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/worldgen/template_pool/rust_belt/station_platform.json"
+hash = "d43b591cf64b5d4cc2f0bb167936c7c84ea705889c084e103ddcb9a2bd157094"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/worldgen/template_pool/rust_belt/toppled_wheel.json"
+hash = "adaddf6df31596003aa03fcac5dec6e755ef4523c92aef4984835de683eb7c26"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/worldgen/template_pool/war_camp/war_camp.json"
+hash = "b9dcb578a13c41c95a7e4823ecca2b624b8fcd3cfef81aecbfbf13243b4a5063"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/sereneseasons/tags/blocks/autumn_crops.json"
@@ -613,7 +925,7 @@ hash = "05959bc59c9abe388baae7e214313521cc4f0c5feaa165a8b1358648c0e0ad77"
 
 [[files]]
 file = "config/village_recruits/politics.toml"
-hash = "8d416a968150558032e624732caf272b7b2e89148d87937e54fa4bce0d187c22"
+hash = "3ece7af1d52e3a487a6d8b45ce1fd2577e5e148f97a519674e6143be5cf0147c"
 
 [[files]]
 file = "config/village_recruits/sky.toml"
@@ -637,7 +949,7 @@ hash = "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
 
 [[files]]
 file = "config/villagespawnpoint.json5"
-hash = "a5a9e968d96ebced582b3e84370e0cd4fc63bc35cc602645ee198d5619a0c1bc"
+hash = "b6b9ce0f6fd9c06bb66a42197ed9cd5ad7fbbd800d0e7c01efccae889378abb0"
 
 [[files]]
 file = "config/visual_workbench.json"
@@ -673,15 +985,31 @@ hash = "4b37d469babdcddb3554454d93631737c8b1ff2866dc99b005e996b0b4e78ed1"
 
 [[files]]
 file = "kubejs/assets/peacock/lang/en_us.json"
-hash = "e50a1c9c8636fe92084c3c97b6f0615fbe23d858972acbb9ebb70d3fec2d544f"
+hash = "1023af26f93f06e6336a29b66af3916a1f6901c6a6037b8050fbca97cb3d2804"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/blueprint.png"
 hash = "244b616ffc97ccae07006cdbae119954d722f13cc5fbe72b738c0f95d25c7eb3"
 
 [[files]]
+file = "kubejs/assets/peacock/textures/item/rumour_voucher.png"
+hash = "038d08aac0a5023226a000b920991bd5076a741c9402f0411ec9c1de5c8c7e3c"
+
+[[files]]
 file = "kubejs/client_scripts/blueprint_tooltips.js"
 hash = "09d333d76904e58dcfc54bac179a809c34e83ece952f11ab110dd5ea81e575f0"
+
+[[files]]
+file = "kubejs/client_scripts/profile_client.js"
+hash = "a02ab44dfc207563c7c8400b5027b0320326329e6628989320b8892e81655806"
+
+[[files]]
+file = "kubejs/client_scripts/rumour_tooltips.js"
+hash = "790ca47319e01bea9825530c9f7c75eec00246719d1b7460626229386e12a2f0"
+
+[[files]]
+file = "kubejs/config/journals.json"
+hash = "e784ebdbb4f61761eea5b400a818bfd09a60b7a7b0d14a1d8d5ba2f195cc739e"
 
 [[files]]
 file = "kubejs/config/peacock.json"
@@ -704,6 +1032,14 @@ file = "kubejs/server_scripts/geolosys_create.js"
 hash = "437073ce1974cd48925c985d6ce079c226555a12e6437ad460b7b6f7ef2fd62c"
 
 [[files]]
+file = "kubejs/server_scripts/journals.js"
+hash = "9272595c2a161681619923c44d3275fe7d52945a5c4376435502b560cf5086aa"
+
+[[files]]
+file = "kubejs/server_scripts/profile_command.js"
+hash = "f080acf86837aa66c9bc9ead68ef864af9b88aafe9769e6fc0f81f25af5cbe04"
+
+[[files]]
 file = "kubejs/server_scripts/rumour_maps.js"
 hash = "df89ae7d310496a4be9e1bc5dbd945bf65aa24347650efbe46c9e2549f5ca889"
 
@@ -720,12 +1056,26 @@ file = "kubejs/server_scripts/villager_cap.js"
 hash = "a0b8b788b06450f53a96ac9e325bd8c6449edd8ecfd1d5deb50e50a43f34c2d2"
 
 [[files]]
+file = "kubejs/server_scripts/welcome.js"
+hash = "a7dcbc0e0ecc1e5b5849e654b74a4388dfb506bc7382ed5f08e170a50ca6b0d2"
+
+[[files]]
 file = "kubejs/startup_scripts/peacock_ladder.js"
-hash = "b7f208f8b82076c7908068a37ee89a685701d9c4ceadd172e8185427e8e48b6e"
+hash = "6725a69ee6e62cf7f45318a66270973472dfa5dc824f5aae6a9222063fa98548"
 
 [[files]]
 file = "mods/3dskinlayers.pw.toml"
 hash = "4f80d26afe7fea7c8c6a1444605f6201812674e89541ec5849568cc7cee1975d"
+metafile = true
+
+[[files]]
+file = "mods/almanac.pw.toml"
+hash = "8792ca49f7af7cbc4131d28777c5051f66d8cc021db5c2827b7ffc7506da0e54"
+metafile = true
+
+[[files]]
+file = "mods/ambientsounds.pw.toml"
+hash = "5c006ca7823c362a9b21d5408749d057e2daa885e902d0d97f409101f2ea9bf3"
 metafile = true
 
 [[files]]
@@ -809,8 +1159,18 @@ hash = "259d7b1bb82931ccc8438933c6627e14c1176091549e48096a7f62b3fca45041"
 metafile = true
 
 [[files]]
+file = "mods/chunky.pw.toml"
+hash = "2274e08910d949f9962383e2314e8d42490f2e8195782786392614d0f0879629"
+metafile = true
+
+[[files]]
 file = "mods/cloth-config.pw.toml"
 hash = "fd272388d2eb458eb8e96ae4d49fe94231ca5cd3f2a16bd77c4e926e84e73a0e"
+metafile = true
+
+[[files]]
+file = "mods/clumps.pw.toml"
+hash = "903352ffbd84d4b95fed905893f4715d9c3f88ec9fff6fb06f6e359e0b839dc3"
 metafile = true
 
 [[files]]
@@ -896,6 +1256,11 @@ metafile = true
 [[files]]
 file = "mods/create.pw.toml"
 hash = "3e7b358c74751209a9f9b9a1703dabbb3511aba7f08744dbc50b4dc4507d5c61"
+metafile = true
+
+[[files]]
+file = "mods/creativecore.pw.toml"
+hash = "8abfbd1b229655786c40602f908fece95007ab6c3e04e7a05fa3e785301cbaee"
 metafile = true
 
 [[files]]
@@ -1149,6 +1514,11 @@ hash = "5be8bc5bf391069fb1a3c8ab5dab874a65cfa7cf46597bc9f6a0000a4947e86e"
 metafile = true
 
 [[files]]
+file = "mods/kiwi.pw.toml"
+hash = "9124261ff2f214a18d4b10255eb5a8aeefc19a2a25278fae95629def76eef42a"
+metafile = true
+
+[[files]]
 file = "mods/kotlin-for-forge.pw.toml"
 hash = "2a48fbc73a38253b89251abb6573c0a03785a53d4c521e814a2ed6d60d5fa614"
 metafile = true
@@ -1171,6 +1541,11 @@ metafile = true
 [[files]]
 file = "mods/lithostitched.pw.toml"
 hash = "96d02e3bc38dabe9256640345030d355ba104edc5a3f323b24c960520d58e9a7"
+metafile = true
+
+[[files]]
+file = "mods/lmd.pw.toml"
+hash = "45925d59957f5937d476e967779ecca82b1c50415ac7068168294a535a54caa6"
 metafile = true
 
 [[files]]
@@ -1374,6 +1749,16 @@ hash = "20b871a55bfdf89334c6d8c174bd0c9ddc81a1a2806a44a406dc1a88b917c6a0"
 metafile = true
 
 [[files]]
+file = "mods/snow-real-magic.pw.toml"
+hash = "1be3f2d08a1454a32fdba9010e3f11d7722de36e45083a4b73c3e55c6f708407"
+metafile = true
+
+[[files]]
+file = "mods/sound-physics-remastered.pw.toml"
+hash = "aa662713661e95a7fdd6bd4fc3bb8231a615dc144b7825fde504355dc0698a31"
+metafile = true
+
+[[files]]
 file = "mods/spark.pw.toml"
 hash = "0ef2a47f506c83478052262348c105c307d970fbff3f6b0917e46d67f61d8953"
 metafile = true
@@ -1535,7 +1920,7 @@ metafile = true
 
 [[files]]
 file = "patchouli_books/peacock_almanac/book.json"
-hash = "8cbd8ab4fad449a146123c58312b29aa823fa23122165d6786d21b24ff6d77a8"
+hash = "0d69598bd68aeebf7d6c63e4e9bd14bc91a37adca8ad3173b90919c86867adf5"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/categories/bosses.json"
@@ -1655,7 +2040,7 @@ hash = "a62bb2417b3118457f0759f46c8b5b3ca51a8ec5f28e0614f52eae0dcbf90ec1"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/faq/fps.json"
-hash = "0246c70d7e20cf5553c7a9beae5f3a0522e4f2b0d92f964bf905b4d96ef82ddd"
+hash = "623600aac1fae3c94d9b265ce898407cd34f672d8f2068a7fb5706b85ba6f325"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/faq/hire.json"
@@ -1767,15 +2152,27 @@ hash = "5a2ec56b77a366cc85aabd7cc2509ae6b23e83567b5cc9765feb2d06f6d0e445"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/start/spawn.json"
-hash = "ac2328287935ef556d38d9cd2923365a7296f3566215a5cf157e35d30f43fe2d"
+hash = "7d1d2eb393db8c49c33c4e2fb0d95ba43cfdf3f9878d9ba6638c25d1e2b7e0de"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/start/temperature.json"
 hash = "edb00ce45260efc5c140bf751d3ae6a5de5c59a71b4653e0837e5cfc53a5d640"
 
 [[files]]
+file = "patchouli_books/peacock_almanac/en_us/entries/story/dead_towns.json"
+hash = "48b54287e2be6db4fdd9e144f92e2d6dfee86bfd1d978068de0217a2df8fc070"
+
+[[files]]
+file = "patchouli_books/peacock_almanac/en_us/entries/story/found_writings.json"
+hash = "7bc5a6693f04a8b5ca72e662ac036be00aabd6e47da57f596a7b7aaff6f90177"
+
+[[files]]
+file = "patchouli_books/peacock_almanac/en_us/entries/story/painted_ones.json"
+hash = "6cd3d3f420171bfde07d4477b13150090f33106cc8d8512a098025e473884801"
+
+[[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/story/what_happened.json"
-hash = "eb3be429e0f6dc507ff9bf75705afa86f327e2beff4b9d0d321e0705a5d36a50"
+hash = "03c947a49916a6b6b9b7ce40e90518b12d705b15ea4c6293c16b708362c6b557"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/story/what_was_lost.json"
@@ -1823,7 +2220,7 @@ hash = "c89b14252ba8a41c626481b091eed2e4a5450ce26a07513f3ea89b0fe65fcaa0"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/threats/pillagers.json"
-hash = "8100a1196faf2d52258f3e905cac2d1dadcf9540d34b357ee59d379b50e66c44"
+hash = "77feb6c198254196487914b3071c2a9c0aaaa329501c2b0140e0d1ed67d97515"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/tools/atlas.json"
@@ -1839,7 +2236,7 @@ hash = "8c73dccfc0b9c5fa91485af595f54d502d4626913ab6eebd10c62da07f04bc96"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/tools/performance.json"
-hash = "fb49b0019aef7ab32c871f18f99e4b4b989757e8c52c28ec26bd4eef584bdbc4"
+hash = "731d9d68d8b08671bbf545ae68c123b4d48c498c41ac6613555ff39ba31a071f"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/tools/voice.json"
@@ -1847,11 +2244,15 @@ hash = "8b170b12e24414da8c4356402655e08914b4bf20a8bf06f2afbdf6b171961a91"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/towns/capital.json"
-hash = "6f4edc29af71380621305f183fcd71252c32bc19b3cde29a018dbc8142bf22ba"
+hash = "3d58f961d5a710e96c60215fe34deb40f89f7277bcfe3f02ec2b076b92918177"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/towns/caravans.json"
-hash = "7771ce8e46163594de04085833da6865496514f5bfb75adf89476ffef3b39a7b"
+hash = "fc1d8d4a6202142df8156bebd883ad2b2ce18ef476db14f769c6da587ac0e565"
+
+[[files]]
+file = "patchouli_books/peacock_almanac/en_us/entries/towns/new_towns.json"
+hash = "b96e0216a15977253f788f41667c9de9605fbae58e7cad811df4ecca0e7e8950"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/towns/recruits.json"
@@ -1871,15 +2272,15 @@ hash = "bb35e8c4a53dfedda72bf50bb8027cd02267509c0c8dcc251e105aa36348ae40"
 
 [[files]]
 file = "peacock-server/config/dynamicview.json"
-hash = "4a3644e40aaa44646a2e79c0c0b4f8db57895aa71480110aa0dc8dd9e5a48a23"
+hash = "f22cac22f221bc51031e15445a077a41a468774497bdcf46d8397370924024de"
 
 [[files]]
 file = "peacock-server/peacock-start.sh"
-hash = "6da7c3170335c1005cf4fca934a821028d63e1b76b2344b01497d98c1c272700"
+hash = "5127116c22fcfb1d88dbdc8103add51b10390d5c4991b9de8bdeda33d1eaea27"
 
 [[files]]
 file = "peacock/launch.jar"
-hash = "81438bc5091328fd136fdff895660ea35308c941e4cce8b897eb7f53dc6ebc37"
+hash = "d83ef78da6b16f8c5c54aaa212665ce4d5adbfdb44cd82d77169f4647586adba"
 
 [[files]]
 file = "peacock/profiles/README.txt"
@@ -1904,6 +2305,10 @@ hash = "271a064a707881f47cd6213cfec07dc1be5cb19b0c3440f88b5a40557d8f446c"
 [[files]]
 file = "peacock/profiles/high/config/oculus.properties.keys"
 hash = "8b4ac3411ce4558a2b9b1825b2362e35b714c0b374e5871438d393b465ce39ca"
+
+[[files]]
+file = "peacock/profiles/high/config/soundphysics/soundphysics.properties.keys"
+hash = "f6a2565056ed10ba270da94e671fa5d7ced8ade044fc8b31a851840f7bce654f"
 
 [[files]]
 file = "peacock/profiles/high/options.txt.keys"
@@ -1934,6 +2339,10 @@ file = "peacock/profiles/low/config/oculus.properties.keys"
 hash = "ecdc47e26c1b274613251b8935d35c7225b4e1b12b7671388999dacd0f7178cb"
 
 [[files]]
+file = "peacock/profiles/low/config/soundphysics/soundphysics.properties.keys"
+hash = "f6a2565056ed10ba270da94e671fa5d7ced8ade044fc8b31a851840f7bce654f"
+
+[[files]]
 file = "peacock/profiles/low/options.txt.keys"
 hash = "0afc0a7b45e3aba8caf300ddce39888cfd3a4fba6f693c01f654cf3481fd9149"
 
@@ -1960,6 +2369,10 @@ hash = "271a064a707881f47cd6213cfec07dc1be5cb19b0c3440f88b5a40557d8f446c"
 [[files]]
 file = "peacock/profiles/medium/config/oculus.properties.keys"
 hash = "ecdc47e26c1b274613251b8935d35c7225b4e1b12b7671388999dacd0f7178cb"
+
+[[files]]
+file = "peacock/profiles/medium/config/soundphysics/soundphysics.properties.keys"
+hash = "f6a2565056ed10ba270da94e671fa5d7ced8ade044fc8b31a851840f7bce654f"
 
 [[files]]
 file = "peacock/profiles/medium/options.txt.keys"
@@ -1990,6 +2403,10 @@ file = "peacock/profiles/potato/config/oculus.properties.keys"
 hash = "3679e644386b40bf6bf9c612b40b6dbac157398edf6cc87dda142f1b1c72efde"
 
 [[files]]
+file = "peacock/profiles/potato/config/soundphysics/soundphysics.properties.keys"
+hash = "fb5ff1984232edecfce6fbfa6deb6374bcd7bf898f58d2c51b9e46cbbbbb78fe"
+
+[[files]]
 file = "peacock/profiles/potato/options.txt.keys"
 hash = "5efa579102cd405ee3685702502e8b56656a8cef765ebd56b37a7585249a2ac7"
 
@@ -2016,6 +2433,10 @@ hash = "271a064a707881f47cd6213cfec07dc1be5cb19b0c3440f88b5a40557d8f446c"
 [[files]]
 file = "peacock/profiles/ultra/config/oculus.properties.keys"
 hash = "8b4ac3411ce4558a2b9b1825b2362e35b714c0b374e5871438d393b465ce39ca"
+
+[[files]]
+file = "peacock/profiles/ultra/config/soundphysics/soundphysics.properties.keys"
+hash = "f6a2565056ed10ba270da94e671fa5d7ced8ade044fc8b31a851840f7bce654f"
 
 [[files]]
 file = "peacock/profiles/ultra/options.txt.keys"

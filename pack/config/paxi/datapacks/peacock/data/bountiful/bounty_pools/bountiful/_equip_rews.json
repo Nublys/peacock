@@ -1,0 +1,71 @@
+{
+ "content": {
+  "shield": {
+   "type": "item",
+   "content": "minecraft:shield",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 1200,
+   "rarity": "UNCOMMON",
+   "nbt": "{Damage:0,Enchantments:[{id:\"minecraft:unbreaking\",lvl:2s}]}"
+  },
+  "iron_pick": {
+   "type": "item",
+   "content": "minecraft:iron_pickaxe",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 2500,
+   "rarity": "UNCOMMON",
+   "nbt": "{Damage:0,Enchantments:[{id:\"minecraft:efficiency\",lvl:2s}]}"
+  },
+  "iron_axe": {
+   "type": "item",
+   "content": "minecraft:iron_axe",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 2500,
+   "rarity": "UNCOMMON",
+   "nbt": "{Damage:0,Enchantments:[{id:\"minecraft:sharpness\",lvl:2s}]}"
+  },
+  "crossbow": {
+   "type": "item",
+   "content": "minecraft:crossbow",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 3500,
+   "rarity": "RARE",
+   "nbt": "{Damage:0,Enchantments:[{id:\"minecraft:quick_charge\",lvl:2s}]}"
+  },
+  "bow": {
+   "type": "item",
+   "content": "minecraft:bow",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 3500,
+   "rarity": "RARE",
+   "nbt": "{Damage:0,Enchantments:[{id:\"minecraft:power\",lvl:3s}]}"
+  },
+  "diamond_pick": {
+   "type": "item",
+   "content": "minecraft:diamond_pickaxe",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 14000,
+   "rarity": "EPIC",
+   "repRequired": 12,
+   "nbt": "{Damage:0,Enchantments:[{id:\"minecraft:efficiency\",lvl:3s},{id:\"minecraft:unbreaking\",lvl:2s}]}"
+  }
+ }
+}

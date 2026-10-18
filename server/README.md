@@ -78,7 +78,8 @@ Marked `side = "server"` in `pack/mods/`, so they install here and never on a cl
   ticked chunks scale with the square of it, so watch TPS with two players and fall back to 6 if needed)
 - **LuckPerms** — permissions; `lp user <name> permission set minecraft.command.* true` for staff
 - **Dynamic View and Simulation Distances** (+ its library Cupboard) — rebalances `view-distance` (8–10) and
-  `simulation-distance` (5–12) every 60 s around a 42 ms average tick (`pack/peacock-server/config/dynamicview.json`).
+  `simulation-distance` (5–10) every 60 s around a 36 ms average tick (`pack/peacock-server/config/dynamicview.json`;
+  42 ms / 12 chunks floated fine with two players, but at six to eight spread out that left 8 ms before TPS dropped).
   `server.properties` only sets the starting values. It logs each change to the console; if it sits at the
   minimum with two players on, the server is out of headroom and the fix is below, not a bigger number.
 
@@ -89,11 +90,30 @@ Marked `side = "server"` in `pack/mods/`, so they install here and never on a cl
 - **FTB Essentials** (server) — `defaultconfigs/ftbessentials-server.snbt`: only `/spawn` (60 s cooldown,
   5 s warm-up) and `/back` after a death. Homes, warps, tpa, rtp and the virtual crafting/ender-chest
   commands are off: no fast travel is a design rule. Admin commands (`/tpl`, `/fly`, `/invsee`…) stay.
+- **Chunky** (server) — pre-generates terrain so nobody pays worldgen while playing. Before opening the server
+  to more players, run once from the console, with nobody on, and let it finish (a few hours on this CPU):
+  ```
+  chunky world minecraft:overworld
+  chunky center 0 0
+  chunky radius 3000
+  chunky start
+  ```
+  `chunky progress` to watch, `chunky pause` / `chunky continue` if players need the server. Then `dh pregen start
+  minecraft:overworld 0 0 3000` for the Distant Horizons LODs over the same area. Chunky can be removed from the
+  pack afterwards (`packwiz remove chunky`); it does nothing while idle.
+- **Clumps** (both sides) — merges XP orbs. **Let Me Despawn** (+ its library Almanac) — despawns mobs sooner once
+  they are far from every player and were never fought or named; the entity count is what eight players'
+  loaded areas accumulate.
 - **Villager cap** — `kubejs/server_scripts/villager_cap.js`: a town stops breeding at 24 villagers within
   48 blocks (`villagerCapCount` in `kubejs/config/peacock.json`). Existing villagers are never removed.
 
 To change a shipped default after the world exists, edit the file under the world's `serverconfig/`;
 `defaultconfigs/` is only read when that file is missing.
+
+**Heap.** `peacock-start.sh` gives Java 75% of the container (`PEACOCK_HEAP_PERCENT` to change). It was 90%:
+Netty buffers, Valkyrien Skies' physics, metaspace and the JVM itself live outside the heap, and at 90% a
+busy evening gets the container OOM-killed instead of a GC pause. 8 GB container → ~6 GB heap, which is right
+for this mod count; below 8 GB, lower the container's player expectations rather than the percentage.
 
 **Tick budget.** The game thread is one core of a 2013 Xeon (E5-2690 v2, 3.0 GHz): roughly half of a
 modern desktop core. Everything in a ticked chunk — entities, Create block entities, random ticks —

@@ -1,0 +1,10 @@
+{
+ "objectives": [
+  "archivist_objs",
+  "_all_objs"
+ ],
+ "rewards": [
+  "archivist_rews",
+  "_all_rews"
+ ]
+}

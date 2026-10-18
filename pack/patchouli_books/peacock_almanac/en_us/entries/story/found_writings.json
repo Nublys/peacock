@@ -1,0 +1,16 @@
+{
+  "name": "Found Writings",
+  "icon": "minecraft:written_book",
+  "category": "patchouli:story",
+  "sortnum": 5,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "The survivors left books: a guild ledger, a physician's casebook, a stationmaster's log, a child's drawings, a pamphlet from beyond the river. Each blames something different. Read enough and you will know what happened; they never did.$(br2)They are not reprinted here. Look in the dead towns' chests, in mineshafts and dungeons, and in the pillagers' plunder."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "The deeper pages are a reward: a town's bounty board under the $(bold)Archivist's Records$() decree pays in journals once the board trusts you ($(l:patchouli:towns/caravans)Bounties$()).$(br2)Keep what you find in a lectern at the capital. Someone else will want to read it."
+    }
+  ]
+}

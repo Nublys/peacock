@@ -1,0 +1,20 @@
+{
+  "name": "The New Towns",
+  "icon": "recruits:recruit_block",
+  "category": "patchouli:towns",
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Every living settlement besides the capital is new: a $(bold)tower$() the survivors raised, a bell, a recruit table, and a town that builds itself out from there. Village Recruits runs them. They are small, rough and growing, and they have names.$(br2)When you walk into one the chat tells you whose it is. Write the coordinates down. They are far apart and worth finding."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Each town is a $(bold)faction$(): a leader, a garrison, a treasury, a merchant. They farm, trade, send convoys down the roads, found new towns when rich and go to war when not. They defend themselves; you are needed for raids and bad days.$(br2)Take paid work from a town's $(bold)Noble$() (sneak-click him): cull monsters, stand a night watch, haul a material. Standing lets you join, hire recruits, and one day lead."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Trade:$() a town's villagers trade like any villager once they have workstations, and the faction merchant sells its surplus (ingots, leather, food, equipment) in bulk.$(br2)$(bold)Reclaiming:$() a recruit table placed in a dead village founds a new town there, far enough from other towns. The builders will put the new over the old."
+    }
+  ]
+}

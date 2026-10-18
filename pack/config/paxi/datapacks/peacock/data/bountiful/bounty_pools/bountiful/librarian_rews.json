@@ -1,0 +1,197 @@
+{
+ "content": {
+  "bookshelf": {
+   "type": "item",
+   "content": "minecraft:bookshelf",
+   "amount": {
+    "min": 2,
+    "max": 6
+   },
+   "unitWorth": 1200
+  },
+  "book": {
+   "type": "item",
+   "content": "minecraft:book",
+   "amount": {
+    "min": 2,
+    "max": 6
+   },
+   "unitWorth": 300
+  },
+  "lantern": {
+   "type": "item",
+   "content": "minecraft:lantern",
+   "amount": {
+    "min": 1,
+    "max": 3
+   },
+   "unitWorth": 500
+  },
+  "xp_bottle": {
+   "type": "item",
+   "content": "minecraft:experience_bottle",
+   "amount": {
+    "min": 2,
+    "max": 6
+   },
+   "unitWorth": 700
+  },
+  "name_tag": {
+   "type": "item",
+   "content": "minecraft:name_tag",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 3000,
+   "rarity": "UNCOMMON"
+  },
+  "b_unbreaking": {
+   "type": "item",
+   "content": "minecraft:enchanted_book",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 7000,
+   "rarity": "UNCOMMON",
+   "nbt": "{StoredEnchantments:[{id:\"minecraft:unbreaking\",lvl:3s}]}"
+  },
+  "b_efficiency": {
+   "type": "item",
+   "content": "minecraft:enchanted_book",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 7000,
+   "rarity": "UNCOMMON",
+   "nbt": "{StoredEnchantments:[{id:\"minecraft:efficiency\",lvl:4s}]}"
+  },
+  "b_sharpness": {
+   "type": "item",
+   "content": "minecraft:enchanted_book",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 7000,
+   "rarity": "UNCOMMON",
+   "nbt": "{StoredEnchantments:[{id:\"minecraft:sharpness\",lvl:4s}]}"
+  },
+  "b_protection": {
+   "type": "item",
+   "content": "minecraft:enchanted_book",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 7000,
+   "rarity": "UNCOMMON",
+   "nbt": "{StoredEnchantments:[{id:\"minecraft:protection\",lvl:4s}]}"
+  },
+  "b_feather": {
+   "type": "item",
+   "content": "minecraft:enchanted_book",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 5000,
+   "rarity": "UNCOMMON",
+   "nbt": "{StoredEnchantments:[{id:\"minecraft:feather_falling\",lvl:4s}]}"
+  },
+  "b_respiration": {
+   "type": "item",
+   "content": "minecraft:enchanted_book",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 4500,
+   "rarity": "UNCOMMON",
+   "nbt": "{StoredEnchantments:[{id:\"minecraft:respiration\",lvl:3s}]}"
+  },
+  "b_aqua": {
+   "type": "item",
+   "content": "minecraft:enchanted_book",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 3500,
+   "rarity": "UNCOMMON",
+   "nbt": "{StoredEnchantments:[{id:\"minecraft:aqua_affinity\",lvl:1s}]}"
+  },
+  "b_fortune": {
+   "type": "item",
+   "content": "minecraft:enchanted_book",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 10000,
+   "rarity": "RARE",
+   "repRequired": 8,
+   "nbt": "{StoredEnchantments:[{id:\"minecraft:fortune\",lvl:3s}]}"
+  },
+  "b_silk": {
+   "type": "item",
+   "content": "minecraft:enchanted_book",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 9000,
+   "rarity": "RARE",
+   "repRequired": 8,
+   "nbt": "{StoredEnchantments:[{id:\"minecraft:silk_touch\",lvl:1s}]}"
+  },
+  "b_looting": {
+   "type": "item",
+   "content": "minecraft:enchanted_book",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 9000,
+   "rarity": "RARE",
+   "repRequired": 8,
+   "nbt": "{StoredEnchantments:[{id:\"minecraft:looting\",lvl:3s}]}"
+  },
+  "b_infinity": {
+   "type": "item",
+   "content": "minecraft:enchanted_book",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 9000,
+   "rarity": "RARE",
+   "repRequired": 8,
+   "nbt": "{StoredEnchantments:[{id:\"minecraft:infinity\",lvl:1s}]}"
+  },
+  "b_mending": {
+   "type": "item",
+   "content": "minecraft:enchanted_book",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 15000,
+   "rarity": "EPIC",
+   "repRequired": 15,
+   "nbt": "{StoredEnchantments:[{id:\"minecraft:mending\",lvl:1s}]}"
+  },
+  "clock": {
+   "type": "item",
+   "content": "minecraft:clock",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 3000,
+   "rarity": "RARE"
+  }
+ }
+}

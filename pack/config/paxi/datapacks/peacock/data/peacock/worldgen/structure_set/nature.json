@@ -1,0 +1,30 @@
+{
+ "structures": [
+  {
+   "structure": "peacock:nature/fallen_oak",
+   "weight": 1
+  },
+  {
+   "structure": "peacock:nature/fallen_spruce",
+   "weight": 1
+  },
+  {
+   "structure": "peacock:nature/boulder_small",
+   "weight": 1
+  },
+  {
+   "structure": "peacock:nature/boulder_large",
+   "weight": 1
+  },
+  {
+   "structure": "peacock:nature/woodcutters_rest",
+   "weight": 1
+  }
+ ],
+ "placement": {
+  "type": "minecraft:random_spread",
+  "spacing": 7,
+  "separation": 3,
+  "salt": 20261018
+ }
+}

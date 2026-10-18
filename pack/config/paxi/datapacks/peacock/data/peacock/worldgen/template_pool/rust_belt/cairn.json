@@ -1,0 +1,15 @@
+{
+ "name": "peacock:rust_belt/cairn",
+ "fallback": "minecraft:empty",
+ "elements": [
+  {
+   "weight": 1,
+   "element": {
+    "element_type": "minecraft:single_pool_element",
+    "projection": "rigid",
+    "location": "peacock:rust_belt/cairn",
+    "processors": "minecraft:empty"
+   }
+  }
+ ]
+}

@@ -1,0 +1,18 @@
+{
+ "structures": [
+  {
+   "structure": "peacock:war_camp/war_camp",
+   "weight": 1
+  }
+ ],
+ "placement": {
+  "type": "minecraft:random_spread",
+  "spacing": 64,
+  "separation": 30,
+  "salt": 20261020,
+  "exclusion_zone": {
+   "other_set": "peacock:capital",
+   "chunk_count": 14
+  }
+ }
+}

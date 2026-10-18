@@ -21,7 +21,7 @@ OUT = ROOT / "pack" / "patchouli_books" / "peacock_almanac"
 
 BOOK_JSON = {
     "name": "The Settler's Almanac",
-    "landing_text": "Village civilization once reached every valley. Then the monsters took its machines, the long dark came, and the pillagers rose in the gap. You are a settler at the end of that dark age. This almanac is what the survivors remembered.$(br2)Open a chapter on the left. Blue text is a link.",
+    "landing_text": "Village civilization once reached every valley. It built past its walls and dug below the old marks, and the world answered with sickness and monsters. The towns emptied. You are a settler in Year One after that, in the one old town still standing. This almanac is what the survivors remembered.$(br2)Open a chapter on the left. Blue text is a link.",
     "version": 2,
     "model": "patchouli:book_brown",
     "book_texture": "patchouli:textures/gui/book_brown.png",
@@ -106,11 +106,11 @@ ENTRIES = {
     "story": [
         ("what_happened", "What Happened", "minecraft:cracked_stone_bricks", [
             txt("Long before you, villages were spread far and wide, joined by rail and canal. Brass turned in every workshop. Trains ran on schedules. Ships carried grain to towns that never saw a field.",
-                "Then the monsters came for the machines."),
-            txt("No one agrees on how. The dead carried off the brass. Things from below took the engines apart and kept the parts. The sky over the Nether lit up and never went dark again.",
-                "Without their tools the villages shrank to what you see now: a bell, a few farms, a wall if they were lucky."),
-            txt("Into that gap came the pillagers: people who decided the fall was an opportunity. They hold outposts, forts and labyrinths, and much of what was stolen. They would prefer the dark age continued.",
-                "You arrived at its end. Whether it ends is up to you."),
+                "They did very well. For forty years they did very, very well."),
+            txt("Then the towns built past their walls, onto the fields that fed them, and the Guild dug below the old marks for more zinc and more brass. A sickness came up out of the lowest shafts and travelled the rail lines. The monsters followed it.",
+                "Nobody agrees what they woke. The survivors' own words are scattered in the ruins; see " + L("story/found_writings", "Found Writings") + "."),
+            txt("The machines were lost with the towns: the dead carried off the brass, things from below took the engines apart, the sky over the Nether lit up and never went dark. Every piece is now held by something that will fight to keep it.",
+                "You arrived in Year One after the fall, in the one old town still standing. Whether anything comes back is up to you."),
         ]),
         ("what_was_lost", "The Ledger of Losses", "minecraft:book", [
             txt("The survivors kept a ledger of what was taken and by whom. It is the spine of this almanac, and of the " + L("tech/how_blueprints_work", "Blueprint ladder") + ".",
@@ -128,12 +128,32 @@ ENTRIES = {
             txt(B("What this almanac is not:") + " a manual for every mod. Create has ponder scenes (hold " + B("W") + " over any of its items). EMI shows every recipe (" + B("R") + " over an item). Jade names whatever you look at.",
                 "This book tells you how the pieces fit, which doors are closed, and which bosses hold the keys."),
         ]),
+        ("dead_towns", "The Dead Towns", "minecraft:mossy_stone_bricks", [
+            txt("Every old stone village you find is dead. Learn the rule early: " + B("old stone means dead; a tower means people") + ".",
+                "Most are " + B("abandoned") + ": roofs open, glass gone, the dead owners still in the cellars, a little left in the chests and sometimes a journal. The rest are " + B("held") + ": pillagers camp in them, and the chests hold what they took from every town they emptied."),
+            txt("An abandoned village is a quarry, a shelter and a story. A held one is a fight with real loot at the end. Neither has a bell that works, a board that posts, or a villager who trades.",
+                "Cure the zombie villagers, or bring villagers of your own, put down a recruit table and ring a bell: the survivors will found a new town on the old bones (" + L("towns/new_towns", "The New Towns") + ")."),
+            txt("The only old town alive is the " + B("capital") + ", where you woke. It is walled, guarded and neutral ground: no faction can take it, and nobody can turn it into one. Raids are its only threat, and the moment you are needed.",
+                "Smaller things litter the land between: fallen logs, cairns, a derailed cart, a platform where the morning engine never came. Read them. They are the same story told in blocks."),
+        ]),
+        ("painted_ones", "The Painted Ones", "minecraft:crossbow", [
+            txt("Pillagers are villagers. The desperate, the criminal, the opportunists, the sick who walked out of the gates at night and were seen again only in paint. Since the fall their numbers have grown beyond counting.",
+                "They never held the old machines. They steal, and they are good at it."),
+            txt("Their camps and outposts are built from what they took: a bell for a cookpot, a lectern for a chopping block, town fences for a palisade, and cages for the people they took along with the goods.",
+                "Their chests are the best ordinary loot in the world. Their captains carry the stolen ledgers. The capital's bounty boards will pay you to thin them; see " + L("threats/pillagers", "The Pillager Faction") + "."),
+        ]),
+        ("found_writings", "Found Writings", "minecraft:written_book", [
+            txt("The survivors left books: a guild ledger, a physician's casebook, a stationmaster's log, a child's drawings, a pamphlet from beyond the river. Each blames something different. Read enough and you will know what happened; they never did.",
+                "They are not reprinted here. Look in the dead towns' chests, in mineshafts and dungeons, and in the pillagers' plunder."),
+            txt("The deeper pages are a reward: a town's bounty board under the " + B("Archivist's Records") + " decree pays in journals once the board trusts you (" + L("towns/caravans", "Bounties") + ").",
+                "Keep what you find in a lectern at the capital. Someone else will want to read it."),
+        ]),
     ],
     # ===================================================================================== start
     "start": [
         ("spawn", "Where You Woke Up", "minecraft:bell", [
-            txt("Everyone spawns in the same village: the " + B("capital") + ". It has a bell, villagers with trades, beds, and usually a wall. It is the first market, the first station, and the first thing raiders come for.",
-                "Claim a bed early. There is no fast travel in this world; distance is real, and the way home matters."),
+            txt("Everyone spawns in the same village: the " + B("capital") + ", the last old town standing. It has a bell, villagers with trades, beds, a bounty board and a wall. It is the first market and the first thing raiders come for.",
+                "Claim a bed early. There is no fast travel; the way home matters. Every other old stone village is a ruin (" + L("story/dead_towns", "The Dead Towns") + ")."),
             txt(B("Day one checklist:") + "$(br)- Wood, a crafting table, a bed in the capital$(br)- Check the season (sky colour, or craft a calendar)$(br)- Food: villager farms are fair game, replant what you take$(br)- A campfire before nightfall if it is cold$(br)- Read " + L("start/temperature", "Staying Warm") + " if it is autumn or winter"),
             txt(B("First night:") + " stay inside the wall. Mobs here are tougher and smarter than you remember, and the village guards will not chase them for you.",
                 "Mark the capital on your " + L("tools/atlas", "atlas") + " before you leave it. The capital will grow as the server does; nothing you build there is wasted."),
@@ -287,8 +307,8 @@ ENTRIES = {
     # ===================================================================================== towns
     "towns": [
         ("capital", "The Capital", "minecraft:bell", [
-            txt("The capital is the village you spawned in. It is deliberately the only shared spawn: new settlers arrive there, raids are drawn to it, and it is where the server's first station, dock and market will be.",
-                "It belongs to everyone. Build in it, but build with the town, not over it."),
+            txt("The capital is the village you spawned in and the only old town alive. It is the one shared spawn: settlers arrive there, raids are drawn to it, and the first station, dock and market will be there.",
+                "It belongs to everyone; no faction can claim it or found a town in it. Build in it, but build with the town, not over it."),
             txt(B("What makes a town a town") + " here: a bell, beds, and villagers who sleep in them. Several mods check for exactly that. Trading depots, bounty boards and caravan stops all want a real settlement around them.",
                 "A hole in the ground with one librarian is not a town, and the pack will tell you so."),
             txt(B("Growing it:") + " more beds and workstations draw more villagers; Village Expansion lets a town build itself out; guards hold the wall; workers tend the fields.",
@@ -312,10 +332,18 @@ ENTRIES = {
             txt(B("Upkeep:") + " recruits eat from their own inventory and die for good. Give them food, armour, a shield and a bow. They gain levels and better aim with experience.",
                 B("Factions:") + " towns have names, leaders and allegiances. They ally, feud and go to war; the chat tells you when. Your own village, once founded, is a faction too. Press " + B("I") + " for the full wiki."),
         ]),
+        ("new_towns", "The New Towns", "recruits:recruit_block", [
+            txt("Every living settlement besides the capital is new: a " + B("tower") + " the survivors raised, a bell, a recruit table, and a town that builds itself out from there. Village Recruits runs them. They are small, rough and growing, and they have names.",
+                "When you walk into one the chat tells you whose it is. Write the coordinates down. They are far apart and worth finding."),
+            txt("Each town is a " + B("faction") + ": a leader, a garrison, a treasury, a merchant. They farm, trade, send convoys down the roads, found new towns when rich and go to war when not. They defend themselves; you are needed for raids and bad days.",
+                "Take paid work from a town's " + B("Noble") + " (sneak-click him): cull monsters, stand a night watch, haul a material. Standing lets you join, hire recruits, and one day lead."),
+            txt(B("Trade:") + " a town's villagers trade like any villager once they have workstations, and the faction merchant sells its surplus (ingots, leather, food, equipment) in bulk.",
+                B("Reclaiming:") + " a recruit table placed in a dead village founds a new town there, far enough from other towns. The builders will put the new over the old."),
+        ]),
         ("caravans", "Caravans, Bounties, Markets", "bountiful:bountyboard", [
-            txt(B("Bountiful") + " boards post jobs a village wants done: bring wheat, kill zombies, deliver a thing. Pay is emeralds, goods, and standing with that town.",
-                "Each town has its own board. Travelling between them is the point."),
-            craft("bountiful:crafting/bountyboard", "Place a board in a town. Bounties refresh on their own. Decrees bias what a board asks for."),
+            txt(B("Bountiful") + " boards post jobs a town wants done: bring brass, kill pillagers, clear a ruin. Pay is emerald blocks, golden apples, saddles, real enchanted books, and standing with that board.",
+                "Trust pays better: at ten reputation, " + B("sealed rumours") + " (right-click: a map to a boss's home); at fifteen, deeper journals and totems; at thirty, a named weapon."),
+            craft("bountiful:crafting/bountyboard", "The capital's board works for everyone; a new town can craft its own. Decrees set what a board asks for; Archivist's Records pays in writings."),
             txt(B("Caravans & Convoys") + ": merchant caravans travel between settlements with wagons, and you can run your own. Build a stop and routes open. This is the mid-game economy before rail.",
                 "Pirates and raiders know the roads too."),
             txt("Late game, the " + B("Trading Floor") + " lets a train sell on a schedule: a depot in a real town, goods in, emeralds out, while you are elsewhere.",
@@ -339,7 +367,7 @@ ENTRIES = {
             craft("doggytalents:training_treat", "Treat a tamed wolf; a stick on the dog opens its talents.", recipe2="doggytalents:dog_bed"),
         ]),
         ("pillagers", "The Pillager Faction", "minecraft:crossbow", [
-            txt("Pillagers profited from the fall. Outposts, forts, towers, huts and labyrinths hold stolen goods, and the ledgers of the old trade.",
+            txt("Pillagers are villagers who left (" + L("story/painted_ones", "The Painted Ones") + "). Outposts, forts, camps and the villages they hold are full of what they took, and their captains carry the ledgers of the old trade.",
                 B("Illager Invasion") + " adds the ranks: basher, provoker, sorcerer, alchemist, firecaller, necromancer, archivist, inquisitor, marauder, and the " + B("Invoker") + " who commands a fort."),
             txt(B("Raids") + " come from Bad Omen (kill a captain, carry the curse into a town) and from the illagers themselves, who grow bolder as the server does. A village with guards and walls holds; one without does not.",
                 B("Savage & Ravage") + " and " + B("Respillaged") + " make outposts worth the fight: loot, totems, creepers you did not expect."),
@@ -566,12 +594,12 @@ ENTRIES = {
                 "Default is voice activation; " + B("Right Alt") + " is push-to-talk if you switch. Mac: allow the microphone for Prism when asked."),
         ]),
         ("performance", "Performance Profiles", "minecraft:redstone_torch", [
-            txt("The pack ships graphics profiles by " + B("hardware") + ", applied by the launcher from the PEACOCK_PROFILE setting in Prism:",
+            txt("The pack ships graphics profiles by " + B("hardware") + ". Pick yours in-game with " + B("/peacock profile <tier>") + " and relaunch; the launcher applies it (the PEACOCK_PROFILE variable in Prism still works as a fallback):",
                 B("potato") + " iGPU, shaders off$(br)" + B("low") + " iGPU, Complementary at Potato$(br)" + B("medium") + " thin laptops, a MacBook Air$(br)" + B("high") + " laptop with a real GPU$(br)" + B("ultra") + " desktop"),
             txt("Anything you change in the video or shader menus is kept; the profile only sets defaults. Shaders toggle with " + B("K") + ". If frames drop: lower Distant Horizons' radius first, shaders second, render distance last.",
                 "Macs stay on plain Complementary; the Euphoria variant exceeds what macOS OpenGL offers."),
             txt(B("Distant Horizons") + " draws the far terrain from a low-detail copy the server builds as players explore. On a fresh world the horizon fills in over the first hour; a reset world starts over.",
-                "Embeddium, ImmediatelyFast, Entity Culling, ModernFix and FerriteCore are the quiet half of the frame rate; leave them on."),
+                "Embeddium, ImmediatelyFast, Entity Culling, ModernFix and FerriteCore are the quiet half of the frame rate; leave them on. Sound Physics (cave echo) is off on potato; AmbientSounds has its own menu."),
             txt(B("Resource packs") + " ship with the pack and are on by default: Fresh Animations (vanilla mobs and villagers move like living things), Better Leaves, Enhanced Boss Bars, xali's enchanted books and potions, Low on Fire.",
                 "All optional: Options, Resource Packs. Fresh Animations is the only one that costs anything, and only in a crowd."),
         ]),
@@ -633,7 +661,7 @@ ENTRIES = {
             txt("Distant Horizons needs the server to have generated the land first; a new world fills in over an hour or so, faster where people have walked. If it never appears: Options, Video, Distant Horizons, rendering on, and check your profile's radius (potato is 64 chunks)."),
         ]),
         ("fps", "...get more frames?", "minecraft:redstone_torch", [
-            txt("Shaders off (" + B("K") + ") is the big one. Then Distant Horizons radius, then render distance. Profiles are set in the launcher (PEACOCK_PROFILE); the " + L("tools/performance", "Performance") + " entry has the table. Macs: plain Complementary only, and " + B("low") + " is the honest tier."),
+            txt("Shaders off (" + B("K") + ") is the big one. Then Distant Horizons radius, then render distance. Profiles are picked with /peacock profile <tier> and applied on relaunch; the " + L("tools/performance", "Performance") + " entry has the table. Macs: plain Complementary only, and " + B("low") + " is the honest tier."),
         ]),
         ("lost_items", "...find my things after dying?", "minecraft:skeleton_skull", [
             txt("Your corpse holds everything where you fell. Walk back (" + B("/back") + " works once) and right-click it. Nothing despawns, but anyone can loot it. Mark the spot in the atlas before you log off."),

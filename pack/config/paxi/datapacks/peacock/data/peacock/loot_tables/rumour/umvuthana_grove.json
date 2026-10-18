@@ -1,0 +1,32 @@
+{
+ "type": "minecraft:chest",
+ "pools": [
+  {
+   "rolls": 1,
+   "entries": [
+    {
+     "type": "minecraft:item",
+     "name": "minecraft:map",
+     "functions": [
+      {
+       "function": "minecraft:exploration_map",
+       "destination": "peacock:rumour_umvuthana_grove",
+       "decoration": "red_x",
+       "zoom": 1,
+       "search_radius": 40,
+       "skip_existing_chunks": false
+      },
+      {
+       "function": "minecraft:set_name",
+       "name": {
+        "text": "Rumour: the sun chief's grove",
+        "italic": false,
+        "color": "gold"
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

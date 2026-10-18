@@ -6,7 +6,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Pillagers profited from the fall. Outposts, forts, towers, huts and labyrinths hold stolen goods, and the ledgers of the old trade.$(br2)$(bold)Illager Invasion$() adds the ranks: basher, provoker, sorcerer, alchemist, firecaller, necromancer, archivist, inquisitor, marauder, and the $(bold)Invoker$() who commands a fort."
+      "text": "Pillagers are villagers who left ($(l:patchouli:story/painted_ones)The Painted Ones$()). Outposts, forts, camps and the villages they hold are full of what they took, and their captains carry the ledgers of the old trade.$(br2)$(bold)Illager Invasion$() adds the ranks: basher, provoker, sorcerer, alchemist, firecaller, necromancer, archivist, inquisitor, marauder, and the $(bold)Invoker$() who commands a fort."
     },
     {
       "type": "patchouli:text",

@@ -98,4 +98,10 @@ StartupEvents.registry('item', event => {
     .texture('peacock:item/blueprint')
     .maxStackSize(16)
     .rarity('rare')
+  // A Sealed Rumour: a bounty-board reward that unseals (right-click) into a rumour map.
+  // NBT {rumour:"<id>"} names the loot table peacock:rumour/<id>; see server_scripts/journals.js.
+  event.create('peacock:rumour_voucher')
+    .texture('peacock:item/rumour_voucher')
+    .maxStackSize(16)
+    .rarity('uncommon')
 })

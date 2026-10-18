@@ -206,6 +206,47 @@ details below as they get exercised.
   early loot (its items only appear in its own dungeons today, so nothing to do until proven otherwise);
   an in-game profile picker (wish list); FancyMenu title screen (not in the pack — add only if wanted).
 
+## Phase 7 — The dead world  🟡 shipped 2026-10-18, untested in play
+The story made concrete (Aaron, 2026-10-18: "most towns found are abandoned, this is an apocalypse after all";
+one living settlement type so players are never confused). The cause — the villagers overbuilt, dug too deep,
+and nature answered with sickness and monsters — is never stated in-game; the journals each blame something else.
+- ✅ **Ruin states** — `tools/gen-ruins.py` reads CTOV (+ its compat jars) and writes `peacock-ruins.zip`
+  (Paxi): every CTOV village is dead. `ruin_a` abandoned (60%: decay processors, zombie villagers for owners,
+  `peacock:chests/ruin_house`), `ruin_h` pillager-held (40%: lighter decay, no villagers, illager spawn
+  overrides, `peacock:chests/plunder`). NBTs are copied because CTOV's jigsaw blocks name their pools inside
+  the .nbt files. Underground village and outposts excluded (they keep their own sets).
+- ✅ **The capital** — one living CTOV village (fortified centre where CTOV has one, size 7) placed 8–10 chunks
+  from the origin by a `concentric_rings` set; Village Spawn Point targets `#peacock:capital`; the ruin set and
+  the Rust Belt sets keep an exclusion zone around it. Village Recruits' spawn keep-out widened to 17 chunks
+  (`worldSpawnKeepoutChunks`) so no faction claim can reach it; the addon already refuses to found a town in
+  spawn chunks, so the capital is permanent neutral ground.
+- ✅ **Living towns are Village Recruits towns only** — no change to the tower set; `maxCentersPerFaction = 4`.
+  Guard Villagers changes dropped: the addon's garrison is the villagers' own defence.
+- ✅ **Bounty boards** — `tools/gen-bounties.py` overrides Bountiful's shared/librarian/mapper/cleric pools
+  (filler out; emerald blocks, golden apples, saddles, real enchants, horse armour; totems/Mending/Notch apples
+  behind `repRequired`), adds the **Archivist's Records** decree (journals as rewards, tiered by reputation
+  4/14/24, a named weapon at 30) and **Sealed Rumours** (`peacock:rumour_voucher`, right-click → exploration
+  map via `loot give` server-side, `peacock:rumour/<id>` tables).
+- ✅ **Journals** — 16 written books in `tools/data/journals.json` → `kubejs/config/journals.json`;
+  `journals.js` adds them to ruin, plunder, mineshaft, dungeon, outpost and fort chests by tier weight.
+- ✅ **Rust Belt** — `tools/gen-rustbelt.py`: 5 nature pieces (fallen oak/spruce, boulders, woodcutter's rest;
+  spacing 7), 10 rail-age ruins (derailed cart, toppled wheel, dead fan, Halt 9 platform, cairn, signal post,
+  Gallery 7 drill crater, boarded well, cracked-bell chapel, grave wall; spacing 22), and the pillager
+  **war camp** (spacing 64, caged villagers, plunder, pillager spawns). Authored as voxels, emitted as NBT.
+- ✅ **Atmosphere** — AmbientSounds (+CreativeCore, client), Sound Physics Remastered (client; off in `potato`
+  via profile key), Snow! Real Magic! (+Kiwi); MOTD "Year One. The capital still stands."; `welcome.js`
+  first-join line and the Serene Seasons season on every join.
+- ✅ **Performance for 6–8 players** — Dynamic View 36 ms / sim 5–10; heap 75% (`PEACOCK_HEAP_PERCENT`);
+  Clumps; Let Me Despawn; Chunky (server-only) with the pregen runbook in `server/README.md`;
+  `entity-broadcast-range-percentage` 75, `network-compression-threshold` 512.
+- ✅ **In-game profile picker** — `/peacock profile <tier> [reset]` (server command → `player.sendData` →
+  client writes `kubejs/config/peacock-profile.json`); `launch.jar` reads the file first, `PEACOCK_PROFILE` second.
+- Open: first play of all of the above (do the ruins' chests roll? does the capital land in a sensible biome?
+  do Rust Belt pieces sit flush — `start_height` assumes the heightmap is the first air block); Snow! Real
+  Magic! on Create tracks (blacklist if it accumulates); whether `bountiful.decree.archivist.name` or the
+  namespaced key is the one Bountiful reads (both are in the lang file); feeding CTOV houses into the Village
+  Recruits builder (the addon has a datapack structure loader — untested).
+
 ## Decisions still open
 1. ~~Season length~~ 16 days per sub-season, crops stop out of season (2026-10-17)
 2. ~~Gated recipes~~ visible but locked (2026-10-17)

@@ -1,5 +1,13 @@
 {
   "item.peacock.blueprint": "Blueprint",
   "peacock.blueprint.use": "You study the Blueprint. %s is yours to build.",
-  "peacock.blueprint.known": "You already know this. Trade it to someone who does not."
+  "peacock.blueprint.known": "You already know this. Trade it to someone who does not.",
+  "item.peacock.rumour_voucher": "Sealed Rumour",
+  "peacock.rumour.tooltip": "A town archivist's sealed note. Right-click to unseal it into a map.",
+  "peacock.rumour.unsealed": "You break the seal. The note is a map: %s.",
+  "peacock.rumour.blank": "The seal is blank. Nothing inside.",
+  "bountiful.decree.archivist.name": "Archivist's Records",
+  "bountiful.decree.peacock:archivist.name": "Archivist's Records",
+  "peacock.join.first": "Year One. The capital still stands. Everything else is the question.",
+  "peacock.join.season": "It is %s. Mind the season."
 }

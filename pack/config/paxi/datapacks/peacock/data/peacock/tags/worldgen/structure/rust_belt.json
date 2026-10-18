@@ -1,0 +1,15 @@
+{
+ "replace": false,
+ "values": [
+  "peacock:rust_belt/derailed_cart",
+  "peacock:rust_belt/toppled_wheel",
+  "peacock:rust_belt/dead_fan",
+  "peacock:rust_belt/station_platform",
+  "peacock:rust_belt/cairn",
+  "peacock:rust_belt/signal_post",
+  "peacock:rust_belt/drill_crater",
+  "peacock:rust_belt/boarded_well",
+  "peacock:rust_belt/cracked_chapel",
+  "peacock:rust_belt/grave_wall"
+ ]
+}

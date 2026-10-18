@@ -6,15 +6,15 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Long before you, villages were spread far and wide, joined by rail and canal. Brass turned in every workshop. Trains ran on schedules. Ships carried grain to towns that never saw a field.$(br2)Then the monsters came for the machines."
+      "text": "Long before you, villages were spread far and wide, joined by rail and canal. Brass turned in every workshop. Trains ran on schedules. Ships carried grain to towns that never saw a field.$(br2)They did very well. For forty years they did very, very well."
     },
     {
       "type": "patchouli:text",
-      "text": "No one agrees on how. The dead carried off the brass. Things from below took the engines apart and kept the parts. The sky over the Nether lit up and never went dark again.$(br2)Without their tools the villages shrank to what you see now: a bell, a few farms, a wall if they were lucky."
+      "text": "Then the towns built past their walls, onto the fields that fed them, and the Guild dug below the old marks for more zinc and more brass. A sickness came up out of the lowest shafts and travelled the rail lines. The monsters followed it.$(br2)Nobody agrees what they woke. The survivors' own words are scattered in the ruins; see $(l:patchouli:story/found_writings)Found Writings$()."
     },
     {
       "type": "patchouli:text",
-      "text": "Into that gap came the pillagers: people who decided the fall was an opportunity. They hold outposts, forts and labyrinths, and much of what was stolen. They would prefer the dark age continued.$(br2)You arrived at its end. Whether it ends is up to you."
+      "text": "The machines were lost with the towns: the dead carried off the brass, things from below took the engines apart, the sky over the Nether lit up and never went dark. Every piece is now held by something that will fight to keep it.$(br2)You arrived in Year One after the fall, in the one old town still standing. Whether anything comes back is up to you."
     }
   ]
 }

@@ -1,0 +1,141 @@
+{
+  "_comment": "Peacock's found writings. Source of truth for tools/gen-bounties.py (Bountiful rewards) and kubejs/config/journals.json (chest loot). Pages are plain text, kept under ~230 characters so a written book shows them without cutting. 'tier' is how deep the page sits in the story: 1 = anyone finds it, 2 = mid-reputation reward, 3 = high-reputation reward. Nobody states the cause outright; each voice blames something else.",
+  "journals": [
+    {
+      "id": "guild_ledger", "tier": 2,
+      "title": "Ledger of the Brass Works", "author": "Oswin, ledger-keeper",
+      "pages": [
+        "Year 41 of the Works. Output up a fifth again. Six new galleries below the old marks. The Guild says the marks were a superstition of the first diggers and I write what the Guild says.",
+        "Year 41, autumn. The forty-fathom gallery opened. Zinc like I have never seen it. The men came up quiet. Master Tolland says the air is thin that deep, nothing more.",
+        "Year 42. Lamps will not stay lit on the lowest level. Three times relit, three times out. Tolland has ordered the shafts worked by feel. Output up again. I write what the Guild says.",
+        "Year 42, late. Nine men from the lower shafts in the physician's house. Tolland has sealed nothing. The Guild has ordered a seventh gallery. I have stopped writing what the Guild says."
+      ]
+    },
+    {
+      "id": "physician", "tier": 2,
+      "title": "Casebook", "author": "Ysolde, physician",
+      "pages": [
+        "Nine admitted this week, all from the Works, all from the lowest shafts. A grey pallor and a cough that does not loosen. I have no name for it. I have written to the capital for one.",
+        "It is in the rail towns now. It travels the way the ore travels. The stationmaster at Halt Nine says he has stopped counting the empty seats on the morning engine.",
+        "The sick do not stay in their beds. Four walked out of the gate in the night and were seen a week later in paint and rags beyond the river, with others of their kind. They did not answer their names.",
+        "The capital has not written back. I am keeping the records in the order I would want them found. If you are reading this, the question is not what we caught. It is what we woke."
+      ]
+    },
+    {
+      "id": "sermon", "tier": 1,
+      "title": "Sermon Notes", "author": "Elder Brannock",
+      "pages": [
+        "On the new wall. We have built past the wall three times in my life. The fields that fed my father's house are under the Guild's counting-rooms. A town that eats its fields will eat something else next.",
+        "On the shafts. I am told it is only stone down there. Everything is only stone until you take enough of it away.",
+        "On the sickness. They ask me what we did. I say: we did very well. For forty years we did very, very well."
+      ]
+    },
+    {
+      "id": "almanac_hedda", "tier": 1,
+      "title": "Hedda Marl's Almanac", "author": "Hedda Marl",
+      "pages": [
+        "Spring, late by a month. The thaw came and went and came again. Lost the early wheat. The swallows did not return to the Works chimney. First year I can remember that.",
+        "Summer, if that is what it was. Frost on the twelfth. The cattle will not graze the low field by the shaft head. The dog will not cross it either.",
+        "Autumn. Harvested what the season allowed, which was little, and I have stopped arguing with the season. A thing that will not be argued with is a thing that has made up its mind."
+      ]
+    },
+    {
+      "id": "broadsheet", "tier": 1,
+      "title": "EAT FIRST", "author": "a friend beyond the river",
+      "pages": [
+        "THE TOWNS FED YOU TO THE SHAFTS. They counted the ore and did not count you. The wall was for keeping you in. Beyond the river nobody counts anything but the mouths at the fire.",
+        "Bring what you carry. Bring your sickness, it is welcome here, half of us have it. Bring your anger, we have use for that too. There is a camp north of the old station. Come at night. Eat first, for once."
+      ]
+    },
+    {
+      "id": "stationmaster", "tier": 1,
+      "title": "Log, Halt Nine", "author": "Stationmaster Vell",
+      "pages": [
+        "Morning engine late forty minutes. Fourteen aboard. Ore cars full. Passenger car half. The usual now.",
+        "No morning engine. Wire from the Works says the crew did not report. Have chalked DELAYED on the board. The cat has left the station house and I do not blame it.",
+        "Third day, no engine. Chalked SUSPENDED. A man in paint stood on the far platform for an hour and did not come across. I knew him. He drove the evening engine for eleven years. He did not know me."
+      ]
+    },
+    {
+      "id": "pip", "tier": 1,
+      "title": "Pip's Book", "author": "Pip, age 7",
+      "pages": [
+        "Papa says the engine will come back in spring. I drew it. It has the brass front. Mama says do not draw so near the window.",
+        "Spring is here. The snow went. Papa is not back from the Works yet. I drew the engine again with more smoke so it can go faster."
+      ]
+    },
+    {
+      "id": "surveyor", "tier": 3,
+      "title": "Field Notes, Lower Survey", "author": "Surveyor Adaire",
+      "pages": [
+        "Forty fathoms. Stone here is not the stone of the upper galleries. Warm to the hand. The compass needle drifts and settles pointing down.",
+        "Found a worked face at forty-two fathoms. Not ours. Older than the Guild, older than the capital's charter. Whoever cut it stopped cleanly and went back up. They left tools behind, which miners do not do.",
+        "I have advised the Guild to stop at the old marks. Tolland asked me to put a number on the zinc below them instead. I put the number. I am ashamed of the number. It was very large."
+      ]
+    },
+    {
+      "id": "quartermaster", "tier": 1,
+      "title": "Stores, Last Count", "author": "Quartermaster Brisk",
+      "pages": [
+        "Flour, nine sacks. Lamp oil, none, the Works took it. Rail spikes, two crates. Bandages, out. Coffins, out since the autumn, using doors.",
+        "Have issued the last of the crossbows to men who have never held one. Have locked the strongroom with the ledgers inside, which seems a foolish thing to protect and I have done it anyway."
+      ]
+    },
+    {
+      "id": "letter_unsent", "tier": 2,
+      "title": "A Letter", "author": "Maren, to her son",
+      "pages": [
+        "You said the capital would hold and I believe you, because the capital has always held. But the engine has not come for a week and your father coughs in the night and says it is the dust.",
+        "If the road is open come and get us. If the road is not open do not come. Stay behind the old wall, not the new one. The old one was built by people who were afraid of the right things."
+      ]
+    },
+    {
+      "id": "engine_house", "tier": 2,
+      "title": "Engine-house Watch", "author": "Watch-keeper Dunstan",
+      "pages": [
+        "Boilers banked. Nine engines in the house, crews for two. The diesel generator runs on fumes and spite. The Director has ordered the furnace kept lit whatever happens. I asked why. He said: so they know we are still here.",
+        "Something came up the ore chute in the night. Not a man. The furnace is still lit. I am writing this in case the Director's reasoning was wrong and someone later needs to know exactly how."
+      ]
+    },
+    {
+      "id": "cartographer", "tier": 2,
+      "title": "Cartographer's Marginalia", "author": "unsigned",
+      "pages": [
+        "Three new marks this month, all to the north: a tower with no door, a lit pit that is not a mine, a shrine with the bell rung backwards. The map is getting fuller as the towns get emptier.",
+        "A thought I will not say aloud in the shop. Every mark on this map is something that was always there. We did not find them. They stopped hiding."
+      ]
+    },
+    {
+      "id": "watchman", "tier": 1,
+      "title": "Wall Roster", "author": "Captain of the Watch",
+      "pages": [
+        "New wall: eighteen men. Old wall: four, and the old wall now runs through the middle of the market. Have asked for the old gate to be bricked up. Was told it is a landmark.",
+        "Eleven on the new wall tonight. Seven did not report. Six of the seven were at the Works last week. Have stopped asking for men. Have started asking for doors."
+      ]
+    },
+    {
+      "id": "trade_manifest", "tier": 2,
+      "title": "Manifest, Capital Trading Floor", "author": "Factor Hollis",
+      "pages": [
+        "Out: brass sheet, four hundred; rail, two miles; lamp oil, sixty casks. In: grain, one third of contract. The towns cannot pay in grain because the towns cannot grow grain. I have noted this before.",
+        "The ledgers are to be moved to the floor's vault tonight. Men in paint were seen on the trade road. They were not after the brass. They were after the ledgers. I do not understand what they want with numbers."
+      ]
+    },
+    {
+      "id": "gravedigger", "tier": 1,
+      "title": "Tally", "author": "Hob, sexton",
+      "pages": [
+        "Autumn: nineteen. Winter: forty-one. Have run out of the old ground and started on the Guild's field, which is the first thing the Guild has given back.",
+        "Spring: I have stopped the tally. Not from grief. From arithmetic. Some of the ones I buried are not where I put them."
+      ]
+    },
+    {
+      "id": "recruit_letter", "tier": 1,
+      "title": "Letter from a Tower", "author": "Tam, recruit",
+      "pages": [
+        "Dear all. The tower is up. Forty of us, a bell, a table, and a man who says he is the leader because he had the table. It is not the capital. It is not trying to be.",
+        "We do not dig. We agreed that first, before the roof was on. We plant, we trade, we keep a watch, and when the painted ones come we stand together on the road. Come and find us. Follow the roads that are new."
+      ]
+    }
+  ]
+}

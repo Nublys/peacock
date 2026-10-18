@@ -1,0 +1,10 @@
+{
+ "replace": false,
+ "values": [
+  "peacock:nature/fallen_oak",
+  "peacock:nature/fallen_spruce",
+  "peacock:nature/boulder_small",
+  "peacock:nature/boulder_large",
+  "peacock:nature/woodcutters_rest"
+ ]
+}

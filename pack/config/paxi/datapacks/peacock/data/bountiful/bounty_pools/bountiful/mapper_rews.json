@@ -1,0 +1,192 @@
+{
+ "content": {
+  "map": {
+   "type": "item",
+   "content": "minecraft:map",
+   "amount": {
+    "min": 1,
+    "max": 2
+   },
+   "unitWorth": 800
+  },
+  "item_frame": {
+   "type": "item",
+   "content": "minecraft:item_frame",
+   "amount": {
+    "min": 2,
+    "max": 6
+   },
+   "unitWorth": 300
+  },
+  "paper": {
+   "type": "item",
+   "content": "minecraft:paper",
+   "amount": {
+    "min": 8,
+    "max": 24
+   },
+   "unitWorth": 60
+  },
+  "compass": {
+   "type": "item",
+   "content": "minecraft:compass",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 2500,
+   "rarity": "UNCOMMON"
+  },
+  "spyglass": {
+   "type": "item",
+   "content": "minecraft:spyglass",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 3500,
+   "rarity": "UNCOMMON"
+  },
+  "banner_globe": {
+   "type": "item",
+   "content": "minecraft:globe_banner_pattern",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 3000,
+   "rarity": "RARE"
+  },
+  "recovery": {
+   "type": "item",
+   "content": "minecraft:recovery_compass",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 8000,
+   "rarity": "EPIC",
+   "repRequired": 12
+  },
+  "rumour_wrought_chamber": {
+   "type": "item",
+   "content": "peacock:rumour_voucher",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 6000,
+   "rarity": "RARE",
+   "repRequired": 10,
+   "nbt": "{rumour:\"wrought_chamber\"}"
+  },
+  "rumour_frostmaw": {
+   "type": "item",
+   "content": "peacock:rumour_voucher",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 6000,
+   "rarity": "RARE",
+   "repRequired": 10,
+   "nbt": "{rumour:\"frostmaw\"}"
+  },
+  "rumour_umvuthana_grove": {
+   "type": "item",
+   "content": "peacock:rumour_voucher",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 6000,
+   "rarity": "RARE",
+   "repRequired": 10,
+   "nbt": "{rumour:\"umvuthana_grove\"}"
+  },
+  "rumour_monastery": {
+   "type": "item",
+   "content": "peacock:rumour_voucher",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 6000,
+   "rarity": "RARE",
+   "repRequired": 10,
+   "nbt": "{rumour:\"monastery\"}"
+  },
+  "rumour_illager_fort": {
+   "type": "item",
+   "content": "peacock:rumour_voucher",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 6000,
+   "rarity": "RARE",
+   "repRequired": 10,
+   "nbt": "{rumour:\"illager_fort\"}"
+  },
+  "rumour_cursed_pyramid": {
+   "type": "item",
+   "content": "peacock:rumour_voucher",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 9000,
+   "rarity": "EPIC",
+   "repRequired": 20,
+   "nbt": "{rumour:\"cursed_pyramid\"}"
+  },
+  "rumour_frosted_prison": {
+   "type": "item",
+   "content": "peacock:rumour_voucher",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 9000,
+   "rarity": "EPIC",
+   "repRequired": 20,
+   "nbt": "{rumour:\"frosted_prison\"}"
+  },
+  "rumour_ancient_factory": {
+   "type": "item",
+   "content": "peacock:rumour_voucher",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 9000,
+   "rarity": "EPIC",
+   "repRequired": 20,
+   "nbt": "{rumour:\"ancient_factory\"}"
+  },
+  "rumour_sunken_city": {
+   "type": "item",
+   "content": "peacock:rumour_voucher",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 9000,
+   "rarity": "EPIC",
+   "repRequired": 20,
+   "nbt": "{rumour:\"sunken_city\"}"
+  },
+  "rumour_acropolis": {
+   "type": "item",
+   "content": "peacock:rumour_voucher",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 9000,
+   "rarity": "EPIC",
+   "repRequired": 20,
+   "nbt": "{rumour:\"acropolis\"}"
+  }
+ }
+}

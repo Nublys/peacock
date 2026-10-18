@@ -6,7 +6,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "The capital is the village you spawned in. It is deliberately the only shared spawn: new settlers arrive there, raids are drawn to it, and it is where the server's first station, dock and market will be.$(br2)It belongs to everyone. Build in it, but build with the town, not over it."
+      "text": "The capital is the village you spawned in and the only old town alive. It is the one shared spawn: settlers arrive there, raids are drawn to it, and the first station, dock and market will be there.$(br2)It belongs to everyone; no faction can claim it or found a town in it. Build in it, but build with the town, not over it."
     },
     {
       "type": "patchouli:text",

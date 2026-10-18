@@ -1,0 +1,54 @@
+{
+ "structures": [
+  {
+   "structure": "peacock:rust_belt/derailed_cart",
+   "weight": 1
+  },
+  {
+   "structure": "peacock:rust_belt/toppled_wheel",
+   "weight": 1
+  },
+  {
+   "structure": "peacock:rust_belt/dead_fan",
+   "weight": 1
+  },
+  {
+   "structure": "peacock:rust_belt/station_platform",
+   "weight": 1
+  },
+  {
+   "structure": "peacock:rust_belt/cairn",
+   "weight": 1
+  },
+  {
+   "structure": "peacock:rust_belt/signal_post",
+   "weight": 1
+  },
+  {
+   "structure": "peacock:rust_belt/drill_crater",
+   "weight": 1
+  },
+  {
+   "structure": "peacock:rust_belt/boarded_well",
+   "weight": 1
+  },
+  {
+   "structure": "peacock:rust_belt/cracked_chapel",
+   "weight": 1
+  },
+  {
+   "structure": "peacock:rust_belt/grave_wall",
+   "weight": 1
+  }
+ ],
+ "placement": {
+  "type": "minecraft:random_spread",
+  "spacing": 22,
+  "separation": 9,
+  "salt": 20261019,
+  "exclusion_zone": {
+   "other_set": "peacock:capital",
+   "chunk_count": 6
+  }
+ }
+}

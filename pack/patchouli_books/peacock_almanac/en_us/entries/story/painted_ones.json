@@ -1,0 +1,16 @@
+{
+  "name": "The Painted Ones",
+  "icon": "minecraft:crossbow",
+  "category": "patchouli:story",
+  "sortnum": 4,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Pillagers are villagers. The desperate, the criminal, the opportunists, the sick who walked out of the gates at night and were seen again only in paint. Since the fall their numbers have grown beyond counting.$(br2)They never held the old machines. They steal, and they are good at it."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Their camps and outposts are built from what they took: a bell for a cookpot, a lectern for a chopping block, town fences for a palisade, and cages for the people they took along with the goods.$(br2)Their chests are the best ordinary loot in the world. Their captains carry the stolen ledgers. The capital's bounty boards will pay you to thin them; see $(l:patchouli:threats/pillagers)The Pillager Faction$()."
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "The Dead Towns",
+  "icon": "minecraft:mossy_stone_bricks",
+  "category": "patchouli:story",
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Every old stone village you find is dead. Learn the rule early: $(bold)old stone means dead; a tower means people$().$(br2)Most are $(bold)abandoned$(): roofs open, glass gone, the dead owners still in the cellars, a little left in the chests and sometimes a journal. The rest are $(bold)held$(): pillagers camp in them, and the chests hold what they took from every town they emptied."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "An abandoned village is a quarry, a shelter and a story. A held one is a fight with real loot at the end. Neither has a bell that works, a board that posts, or a villager who trades.$(br2)Cure the zombie villagers, or bring villagers of your own, put down a recruit table and ring a bell: the survivors will found a new town on the old bones ($(l:patchouli:towns/new_towns)The New Towns$())."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "The only old town alive is the $(bold)capital$(), where you woke. It is walled, guarded and neutral ground: no faction can take it, and nobody can turn it into one. Raids are its only threat, and the moment you are needed.$(br2)Smaller things litter the land between: fallen logs, cairns, a derailed cart, a platform where the morning engine never came. Read them. They are the same story told in blocks."
+    }
+  ]
+}

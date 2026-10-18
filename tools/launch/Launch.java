@@ -4,7 +4,9 @@
 // Prism pre-launch command (identical on macOS, Linux, Windows):
 //   "$INST_JAVA" -jar "$INST_MC_DIR/peacock/launch.jar" https://raw.githubusercontent.com/Nublys/peacock/main/pack/pack.toml
 //
-// Profile selection: environment variable PEACOCK_PROFILE = potato | low | medium | high | ultra
+// Profile selection, in order: kubejs/config/peacock-profile.json {"tier":"low"} (written in-game by `/peacock profile <tier>`),
+// then the environment variable PEACOCK_PROFILE, then DEFAULT_PROFILE. Tiers: potato | low | medium | high | ultra.
+// {"tier":"low","reset":true} re-applies the whole profile once (same as PEACOCK_RESET=1) and clears the flag.
 // (default: medium). Set it per instance in Prism: Edit -> Settings -> Environment variables.
 //
 // A profile folder (peacock/profiles/<name>/) holds *.keys files. "config/oculus.properties.keys"
@@ -61,19 +63,43 @@ public class Launch {
 
         if ("1".equals(System.getenv("PEACOCK_OFFLINE"))) log("PEACOCK_OFFLINE=1: skipping pack sync"); else syncPack(args);
 
-        String profile = Optional.ofNullable(System.getenv("PEACOCK_PROFILE")).map(String::trim)
-            .filter(s -> !s.isEmpty()).orElse(DEFAULT_PROFILE).toLowerCase(Locale.ROOT);
+        String profile = readProfileFile().or(() -> Optional.ofNullable(System.getenv("PEACOCK_PROFILE")).map(String::trim)
+            .filter(s -> !s.isEmpty())).orElse(DEFAULT_PROFILE).toLowerCase(Locale.ROOT);
         Path profilesDir = peacockDir.resolve("profiles");
         Path profileDir = profilesDir.resolve(profile);
         if (!Files.isDirectory(profileDir)) {
-            log("!! unknown PEACOCK_PROFILE '" + profile + "'. Available: " + listProfiles(profilesDir));
+            log("!! unknown profile '" + profile + "'. Available: " + listProfiles(profilesDir));
             System.exit(1);
         }
         if (reset) log("PEACOCK_RESET=1: re-applying the full profile over local edits");
         applyProfile(profile, profileDir, profilesDir);
 
         try (var out = Files.newOutputStream(stateFile)) { state.store(out, "peacock profile state (what the profile last wrote)"); }
+        // record what is in force (so `/peacock profile` in-game can show it) and clear a one-shot reset flag
+        try {
+            Path pf = mcDir.resolve("kubejs/config/peacock-profile.json");
+            Files.createDirectories(pf.getParent());
+            Files.writeString(pf, "{\"tier\":\"" + profile + "\"}\n");
+        } catch (IOException e) { log("!! could not record the profile: " + e.getMessage()); }
         log("ready (profile " + profile + ")");
+    }
+
+    /** kubejs/config/peacock-profile.json, written by the in-game command: {"tier":"low"} with an optional "reset":true. */
+    static Optional<String> readProfileFile() {
+        Path f = mcDir.resolve("kubejs/config/peacock-profile.json");
+        if (!Files.exists(f)) return Optional.empty();
+        try {
+            String json = Files.readString(f);
+            var m = java.util.regex.Pattern.compile("\"tier\"\\s*:\\s*\"([A-Za-z]+)\"").matcher(json);
+            if (java.util.regex.Pattern.compile("\"reset\"\\s*:\\s*true").matcher(json).find()) {
+                reset = true; log("profile.json asks for a one-time reset: re-applying the full profile over local edits");
+            }
+            if (m.find()) { log("profile from kubejs/config/peacock-profile.json: " + m.group(1)); return Optional.of(m.group(1).trim()); }
+            log("!! kubejs/config/peacock-profile.json has no \"tier\"; ignoring it");
+        } catch (IOException e) {
+            log("!! could not read kubejs/config/peacock-profile.json: " + e.getMessage());
+        }
+        return Optional.empty();
     }
 
     // ---------------------------------------------------------------- packwiz sync

@@ -8,6 +8,7 @@ line in the target file's own syntax -- applied per setting by peacock/launch.ja
   config/embeddium-options.json.keys   weather/leaves quality, vignette ("key": value lines)
   shaderpacks/<pack>.txt.keys          Iris per-pack options = one of Complementary's own presets
   options.txt.keys                     render distance etc. (`key:value`)
+  config/soundphysics/soundphysics.properties.keys   Sound Physics on/off (off on potato)
 Per-setting patching is required because mods rewrite their config files on every start.
 
 Run after changing pack/config/DistantHorizons.toml, the shader pack version, or TIERS below:
@@ -131,6 +132,10 @@ def main():
         packs = RESOURCE_PACKS if c.get("fresh_animations", True) else RESOURCE_PACKS.replace(',"file/FreshAnimations_v1.10.4.zip"', "")
         opts = dict(c["options"], resourcePacks=packs, **COMMON_KEYS)
         (d / "options.txt.keys").write_text("".join(f"{k}:{v}\n" for k, v in opts.items()))
+        # Sound Physics Remastered (cave echo, muffling through walls) costs CPU per sound; off on potato only
+        (d / "config/soundphysics").mkdir(parents=True, exist_ok=True)
+        (d / "config/soundphysics/soundphysics.properties.keys").write_text(
+            f"enabled={'false' if tier == 'potato' else 'true'}\n")
         for rel, content in COMMON_FILES.items():
             (d / rel).parent.mkdir(parents=True, exist_ok=True)
             (d / rel).write_text(content)

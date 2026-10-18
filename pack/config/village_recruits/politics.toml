@@ -959,7 +959,7 @@
 	#120 blocks (7-8 chunks) into it, so about 17 covers that too.
 	#
 	#Range: 0 ~ 64
-	worldSpawnKeepoutChunks = 9
+	worldSpawnKeepoutChunks = 17
 	#Minimum distance (in blocks) a NATURALLY generated tower spawner
 	#must keep from an already existing village center before it is
 	#allowed to build its village. 0 = disabled (old behaviour).
@@ -1100,7 +1100,7 @@
 	#expansion). 0 = unlimited. Default: 0
 	#
 	#Range: 0 ~ 1000
-	maxCentersPerFaction = 0
+	maxCentersPerFaction = 4
 	#Only expand when the faction is not under net military threat.
 	#Prevents factions from founding new villages while losing wars.
 	#Default: true

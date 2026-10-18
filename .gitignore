@@ -25,3 +25,6 @@ server/run/
 build/
 !pack/patchouli_books/**
 !pack/peacock/launch.jar
+
+# generated ruins datapack (tools/gen-ruins.py) ships as one zip
+!pack/config/paxi/datapacks/peacock-ruins.zip

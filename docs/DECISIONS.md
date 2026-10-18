@@ -430,3 +430,29 @@ Why things are the way they are. Add an entry when a choice would surprise someo
   player permanently.
 - Story: village civilization was spread far and wide; the monsters stole its technology;
   the dark age bred the pillagers. Every boss is recovery, not unlocking.
+
+## The dead world (2026-10-18)
+- **One living settlement type.** Aaron: two kinds of living village "seems to confuse players". So every CTOV
+  village is a ruin (abandoned or pillager-held), the capital is the single living exception, and every other
+  living place is a Village Recruits town. Rule for players: old stone means dead, a tower means people.
+- **CTOV kept, as ruins.** Its 900 hand-built pieces are the visual of the old world; the addon's 13 houses plus
+  procedural production buildings are the look of the new. The contrast is the story. A possible later step is
+  feeding CTOV houses into the addon's datapack building loader.
+- **The cause is never stated.** Overbuilt, dug too deep, nature answered — but each journal blames something
+  else and the Almanac only says "nobody agrees what they woke". The pillager pamphlet is the one voice that says
+  it plainly, so it cannot be trusted.
+- **Pillagers are villagers** — the desperate, the criminal, the opportunists; numbers grown since the fall. They
+  never held tech. The Invoker's Trading Floor Blueprint stays, reframed as stolen ledgers.
+- **Capital is neutral ground.** The addon refuses to found a town in spawn chunks and can only conquer towers,
+  so no faction can ever own the capital; keep-out widened to 17 chunks so no claim reaches it either.
+- **Bounty boards pay in things worth walking back for.** Bountiful's worth system is sound; its default rewards
+  were arrows and glass. Rewards never include Blueprints (boss-only) or gated outputs; objectives may ask for
+  gated items (a reason to have brass).
+- **Sealed Rumour over a command reward.** Bountiful has a `command` reward type, but whether it runs with the
+  player's permission level is unknown; an item that the server redeems via `loot give` is certain and reads
+  better.
+- **No dynamic lights.** Complementary's handheld lighting already covers every shader tier; potato (the only
+  tier without shaders) does not need its own.
+- **Guard Villagers left at defaults.** With CTOV villages dead, guards only matter in the capital; the addon's
+  garrisons defend the new towns.
+

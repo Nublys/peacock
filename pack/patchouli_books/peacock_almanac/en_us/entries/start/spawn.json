@@ -6,7 +6,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Everyone spawns in the same village: the $(bold)capital$(). It has a bell, villagers with trades, beds, and usually a wall. It is the first market, the first station, and the first thing raiders come for.$(br2)Claim a bed early. There is no fast travel in this world; distance is real, and the way home matters."
+      "text": "Everyone spawns in the same village: the $(bold)capital$(), the last old town standing. It has a bell, villagers with trades, beds, a bounty board and a wall. It is the first market and the first thing raiders come for.$(br2)Claim a bed early. There is no fast travel; the way home matters. Every other old stone village is a ruin ($(l:patchouli:story/dead_towns)The Dead Towns$())."
     },
     {
       "type": "patchouli:text",

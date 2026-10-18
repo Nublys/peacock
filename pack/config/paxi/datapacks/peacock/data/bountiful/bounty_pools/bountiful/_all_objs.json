@@ -1,0 +1,239 @@
+{
+ "content": {
+  "emerald": {
+   "type": "item",
+   "content": "minecraft:emerald",
+   "amount": {
+    "min": 2,
+    "max": 16
+   },
+   "unitWorth": 1000
+  },
+  "iron_ingot": {
+   "type": "item",
+   "content": "minecraft:iron_ingot",
+   "amount": {
+    "min": 4,
+    "max": 16
+   },
+   "unitWorth": 350
+  },
+  "copper_ingot": {
+   "type": "item",
+   "content": "minecraft:copper_ingot",
+   "amount": {
+    "min": 8,
+    "max": 32
+   },
+   "unitWorth": 150
+  },
+  "coal": {
+   "type": "item",
+   "content": "minecraft:coal",
+   "amount": {
+    "min": 16,
+    "max": 48
+   },
+   "unitWorth": 70
+  },
+  "bread": {
+   "type": "item",
+   "content": "minecraft:bread",
+   "amount": {
+    "min": 8,
+    "max": 24
+   },
+   "unitWorth": 80
+  },
+  "leather": {
+   "type": "item",
+   "content": "minecraft:leather",
+   "amount": {
+    "min": 4,
+    "max": 16
+   },
+   "unitWorth": 150
+  },
+  "string": {
+   "type": "item",
+   "content": "minecraft:string",
+   "amount": {
+    "min": 8,
+    "max": 32
+   },
+   "unitWorth": 60
+  },
+  "torch": {
+   "type": "item",
+   "content": "minecraft:torch",
+   "amount": {
+    "min": 16,
+    "max": 64
+   },
+   "unitWorth": 40
+  },
+  "oak_log": {
+   "type": "item_tag",
+   "content": "minecraft:logs",
+   "amount": {
+    "min": 32,
+    "max": 64
+   },
+   "unitWorth": 30
+  },
+  "wool": {
+   "type": "item_tag",
+   "content": "minecraft:wool",
+   "amount": {
+    "min": 8,
+    "max": 24
+   },
+   "unitWorth": 90
+  },
+  "gold_ingot": {
+   "type": "item",
+   "content": "minecraft:gold_ingot",
+   "amount": {
+    "min": 2,
+    "max": 8
+   },
+   "unitWorth": 700,
+   "rarity": "UNCOMMON"
+  },
+  "iron_block": {
+   "type": "item",
+   "content": "minecraft:iron_block",
+   "amount": {
+    "min": 1,
+    "max": 4
+   },
+   "unitWorth": 3300,
+   "rarity": "RARE"
+  },
+  "andesite_alloy": {
+   "type": "item",
+   "content": "create:andesite_alloy",
+   "amount": {
+    "min": 8,
+    "max": 32
+   },
+   "unitWorth": 350,
+   "rarity": "UNCOMMON"
+  },
+  "brass_ingot": {
+   "type": "item",
+   "content": "create:brass_ingot",
+   "amount": {
+    "min": 4,
+    "max": 12
+   },
+   "unitWorth": 1500,
+   "rarity": "RARE"
+  },
+  "cooking_pot": {
+   "type": "item",
+   "content": "farmersdelight:cooking_pot",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 2500,
+   "rarity": "RARE"
+  },
+  "k_zombie": {
+   "type": "entity",
+   "content": "minecraft:zombie",
+   "amount": {
+    "min": 4,
+    "max": 12
+   },
+   "unitWorth": 250
+  },
+  "k_skeleton": {
+   "type": "entity",
+   "content": "minecraft:skeleton",
+   "amount": {
+    "min": 4,
+    "max": 10
+   },
+   "unitWorth": 300
+  },
+  "k_spider": {
+   "type": "entity",
+   "content": "minecraft:spider",
+   "amount": {
+    "min": 3,
+    "max": 8
+   },
+   "unitWorth": 275
+  },
+  "k_creeper": {
+   "type": "entity",
+   "content": "minecraft:creeper",
+   "amount": {
+    "min": 2,
+    "max": 6
+   },
+   "unitWorth": 550
+  },
+  "k_drowned": {
+   "type": "entity",
+   "content": "minecraft:drowned",
+   "amount": {
+    "min": 2,
+    "max": 6
+   },
+   "unitWorth": 350
+  },
+  "k_zombie_villager": {
+   "type": "entity",
+   "content": "minecraft:zombie_villager",
+   "amount": {
+    "min": 2,
+    "max": 6
+   },
+   "unitWorth": 500,
+   "rarity": "UNCOMMON"
+  },
+  "k_pillager": {
+   "type": "entity",
+   "content": "minecraft:pillager",
+   "amount": {
+    "min": 3,
+    "max": 8
+   },
+   "unitWorth": 600,
+   "rarity": "UNCOMMON"
+  },
+  "k_vindicator": {
+   "type": "entity",
+   "content": "minecraft:vindicator",
+   "amount": {
+    "min": 1,
+    "max": 4
+   },
+   "unitWorth": 1100,
+   "rarity": "RARE"
+  },
+  "k_witch": {
+   "type": "entity",
+   "content": "minecraft:witch",
+   "amount": {
+    "min": 1,
+    "max": 3
+   },
+   "unitWorth": 900,
+   "rarity": "RARE"
+  },
+  "k_evoker": {
+   "type": "entity",
+   "content": "minecraft:evoker",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 4000,
+   "rarity": "EPIC"
+  }
+ }
+}

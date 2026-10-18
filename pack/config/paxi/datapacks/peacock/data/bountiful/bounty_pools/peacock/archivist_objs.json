@@ -1,0 +1,116 @@
+{
+ "content": {
+  "paper": {
+   "type": "item",
+   "content": "minecraft:paper",
+   "amount": {
+    "min": 12,
+    "max": 48
+   },
+   "unitWorth": 50
+  },
+  "book": {
+   "type": "item",
+   "content": "minecraft:book",
+   "amount": {
+    "min": 2,
+    "max": 8
+   },
+   "unitWorth": 300
+  },
+  "ink_sac": {
+   "type": "item",
+   "content": "minecraft:ink_sac",
+   "amount": {
+    "min": 4,
+    "max": 12
+   },
+   "unitWorth": 120
+  },
+  "candle": {
+   "type": "item",
+   "content": "minecraft:candle",
+   "amount": {
+    "min": 4,
+    "max": 12
+   },
+   "unitWorth": 150
+  },
+  "lantern": {
+   "type": "item",
+   "content": "minecraft:lantern",
+   "amount": {
+    "min": 2,
+    "max": 6
+   },
+   "unitWorth": 500
+  },
+  "feather": {
+   "type": "item",
+   "content": "minecraft:feather",
+   "amount": {
+    "min": 8,
+    "max": 24
+   },
+   "unitWorth": 40
+  },
+  "glass_pane": {
+   "type": "item",
+   "content": "minecraft:glass_pane",
+   "amount": {
+    "min": 8,
+    "max": 32
+   },
+   "unitWorth": 90
+  },
+  "iron_bars": {
+   "type": "item",
+   "content": "minecraft:iron_bars",
+   "amount": {
+    "min": 8,
+    "max": 24
+   },
+   "unitWorth": 220,
+   "rarity": "UNCOMMON"
+  },
+  "brass_sheet": {
+   "type": "item",
+   "content": "create:brass_sheet",
+   "amount": {
+    "min": 2,
+    "max": 8
+   },
+   "unitWorth": 1600,
+   "rarity": "RARE"
+  },
+  "k_zombie_villager": {
+   "type": "entity",
+   "content": "minecraft:zombie_villager",
+   "amount": {
+    "min": 3,
+    "max": 8
+   },
+   "unitWorth": 500
+  },
+  "k_pillager": {
+   "type": "entity",
+   "content": "minecraft:pillager",
+   "amount": {
+    "min": 4,
+    "max": 10
+   },
+   "unitWorth": 600,
+   "rarity": "UNCOMMON"
+  },
+  "k_vindicator": {
+   "type": "entity",
+   "content": "minecraft:vindicator",
+   "amount": {
+    "min": 2,
+    "max": 4
+   },
+   "unitWorth": 1100,
+   "rarity": "RARE"
+  }
+ }
+}

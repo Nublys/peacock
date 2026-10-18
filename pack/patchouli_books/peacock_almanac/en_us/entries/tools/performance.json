@@ -6,7 +6,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "The pack ships graphics profiles by $(bold)hardware$(), applied by the launcher from the PEACOCK_PROFILE setting in Prism:$(br2)$(bold)potato$() iGPU, shaders off$(br)$(bold)low$() iGPU, Complementary at Potato$(br)$(bold)medium$() thin laptops, a MacBook Air$(br)$(bold)high$() laptop with a real GPU$(br)$(bold)ultra$() desktop"
+      "text": "The pack ships graphics profiles by $(bold)hardware$(). Pick yours in-game with $(bold)/peacock profile <tier>$() and relaunch; the launcher applies it (the PEACOCK_PROFILE variable in Prism still works as a fallback):$(br2)$(bold)potato$() iGPU, shaders off$(br)$(bold)low$() iGPU, Complementary at Potato$(br)$(bold)medium$() thin laptops, a MacBook Air$(br)$(bold)high$() laptop with a real GPU$(br)$(bold)ultra$() desktop"
     },
     {
       "type": "patchouli:text",
@@ -14,7 +14,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Distant Horizons$() draws the far terrain from a low-detail copy the server builds as players explore. On a fresh world the horizon fills in over the first hour; a reset world starts over.$(br2)Embeddium, ImmediatelyFast, Entity Culling, ModernFix and FerriteCore are the quiet half of the frame rate; leave them on."
+      "text": "$(bold)Distant Horizons$() draws the far terrain from a low-detail copy the server builds as players explore. On a fresh world the horizon fills in over the first hour; a reset world starts over.$(br2)Embeddium, ImmediatelyFast, Entity Culling, ModernFix and FerriteCore are the quiet half of the frame rate; leave them on. Sound Physics (cave echo) is off on potato; AmbientSounds has its own menu."
     },
     {
       "type": "patchouli:text",

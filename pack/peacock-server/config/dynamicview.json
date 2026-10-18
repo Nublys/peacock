@@ -9,7 +9,7 @@
   },
   "meanAvgTickTime": {
     "desc:": "The average tick time to stabilize the distances around. Setting it higher than 50ms is not advised, as after 50ms the TPS will go below 20. Default: 45ms, min: 10, max:100",
-    "meanAvgTickTime": 42
+    "meanAvgTickTime": 36
   },
   "viewDistanceUpdateRate": {
     "desc:": "The change frequency of distances in seconds. Default: 30, min:1, max:1000",
@@ -21,7 +21,7 @@
   },
   "maxSimulationDist": {
     "desc:": "The maximum simulation distance allowed to use. Default: 10, minimum 1, maximum 200",
-    "maxSimulationDist": 12
+    "maxSimulationDist": 10
   },
   "adjustSimulationDistance": {
     "desc:": "Enables automatic simulation distance adjustment. Default: true",
