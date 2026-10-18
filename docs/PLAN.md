@@ -250,8 +250,16 @@ and nature answered with sickness and monsters — is never stated in-game; the 
 - ✅ **Manners** (2026-10-18, asked by Aaron): sleep vote via `playersSleepingPercentage` 50 set on every start
   (`sleepPercent`); AFK fade via a grey `peacock_afk` scoreboard team after 5 idle minutes (`afkMinutes`);
   Better Tab Info (client) for TPS and ping in the tab list — TabTPS has no Forge build.
-- ✅ **First flight** (2026-10-18): capital walled-only + bounty posts, Jade under the locator bar, locator bar at
-  half size, Chunk Pregenerator (server) runbook, FallingTree, seasons paused while nobody is on, DH 3 threads.
+- ✅ **First flight** (2026-10-18): Jade under the locator bar, locator bar at half size, Chunk Pregenerator
+  (server) runbook, FallingTree, seasons paused while nobody is on; DH moved to `INTERNAL_SERVER` after a
+  worldgen deadlock; Noisium.
+- ✅ **Second flight** (2026-10-18): the capital is now **Terralith's `fortified_village`** — a genuinely walled
+  castle town found live near spawn (Terralith's `rare_village` set, which nobody had accounted for). CTOV's
+  "fortified" was a keep without a wall. Terralith's own set is silenced (`frequency` 0) so the capital stays the
+  only living old town; the structure accepts any village-able biome so the one ring roll cannot fail; bounty
+  posts sit in its house pool with the `minecraft:entrance` jigsaw its streets expect. The script wall
+  (`capital_wall.js`) stays as an optional outer ring (`capitalWall`, off). The ruins' zombie-owner pieces got
+  the jigsaw block they were missing.
 - Open: first play of all of the above (do the ruins' chests roll? does the capital land in a sensible biome?
   do Rust Belt pieces sit flush — `start_height` assumes the heightmap is the first air block); Snow! Real
   Magic! on Create tracks (blacklist if it accumulates); whether `bountiful.decree.archivist.name` or the

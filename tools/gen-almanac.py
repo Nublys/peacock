@@ -133,7 +133,7 @@ ENTRIES = {
                 "Most are " + B("abandoned") + ": roofs open, glass gone, the dead owners still in the cellars, a little left in the chests and sometimes a journal. The rest are " + B("held") + ": pillagers camp in them, and the chests hold what they took from every town they emptied."),
             txt("An abandoned village is a quarry, a shelter and a story. A held one is a fight with real loot at the end. Neither has a bell that works, a board that posts, or a villager who trades.",
                 "Cure the zombie villagers, or bring villagers of your own, put down a recruit table and ring a bell: the survivors will found a new town on the old bones (" + L("towns/new_towns", "The New Towns") + ")."),
-            txt("The only old town alive is the " + B("capital") + ", where you woke. It is walled, guarded and neutral ground: no faction can take it, and nobody can turn it into one. Raids are its only threat, and the moment you are needed.",
+            txt("The only old town alive is the " + B("capital") + ", where you woke: a walled castle town with a keep, deepslate streets, a church and a library. It is neutral ground: no faction can take it, and nobody can turn it into one. Raids are its only threat, and the moment you are needed.",
                 "Smaller things litter the land between: fallen logs, cairns, a derailed cart, a platform where the morning engine never came. Read them. They are the same story told in blocks."),
         ]),
         ("painted_ones", "The Painted Ones", "minecraft:crossbow", [
@@ -152,7 +152,7 @@ ENTRIES = {
     # ===================================================================================== start
     "start": [
         ("spawn", "Where You Woke Up", "minecraft:bell", [
-            txt("Everyone spawns in the same village: the " + B("capital") + ", the last old town standing. It has a bell, villagers with trades, beds, a bounty board and a wall. It is the first market and the first thing raiders come for.",
+            txt("Everyone spawns in the same village: the " + B("capital") + ", the last old town standing — a walled castle town with a keep. It has a bell, villagers with trades, beds and bounty boards. It is the first market and the first thing raiders come for.",
                 "Claim a bed early. There is no fast travel; the way home matters. Every other old stone village is a ruin (" + L("story/dead_towns", "The Dead Towns") + ")."),
             txt(B("Day one checklist:") + "$(br)- Wood, a crafting table, a bed in the capital$(br)- Check the season (sky colour, or craft a calendar)$(br)- Food: villager farms are fair game, replant what you take$(br)- A campfire before nightfall if it is cold$(br)- Read " + L("start/temperature", "Staying Warm") + " if it is autumn or winter"),
             txt(B("First night:") + " stay inside the wall. Mobs here are tougher and smarter than you remember, and the village guards will not chase them for you.",

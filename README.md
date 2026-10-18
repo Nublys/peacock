@@ -36,8 +36,8 @@ workshop, ships carrying grain to towns that never saw a field. They did very we
 their walls, onto the fields that fed them, and dug deeper than anyone had before. A sickness came up
 out of the lowest shafts and travelled the rail lines. The monsters followed it. The towns emptied.
 
-You arrive in **Year One** after that, in the **capital** — the one old town still standing. It has a
-wall, guards, a bell, traders and a bounty board. It belongs to everyone and nobody can take it.
+You arrive in **Year One** after that, in the **capital** — the one old town still standing: a walled castle
+town with a keep, a church, a library, traders and bounty boards. It belongs to everyone and nobody can take it.
 
 Everything else you find is one of three things:
 

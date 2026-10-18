@@ -9,10 +9,9 @@ Reads ChoiceTheorem's Overhauled Village jar and writes a Paxi datapack
   ruin_h  — pillager-held: lighter decay, no villagers, pillagers / vindicators /
             evokers spawning inside the bounds, chests swapped to plunder.
 
-plus the CAPITAL: one living CTOV village placed 5–10 chunks from the world
-origin by a concentric_rings set (count 1), using CTOV's untouched pieces and,
-where CTOV ships one, the fortified town centre.  Village Spawn Point sends
-every new player there (#peacock:capital).
+plus the CAPITAL: Terralith's walled `fortified_village` placed 5–10 chunks from
+the world origin by a concentric_rings set (count 1); Terralith's own placements of
+it are silenced.  Village Spawn Point sends every new player there (#peacock:capital).
 
 Why NBTs are copied: CTOV's jigsaw blocks name their target pools INSIDE the
 .nbt files (ctov:village/plains/house …), so a ruin that only changed JSON would
@@ -53,11 +52,6 @@ STATES = {
 SIZES = ("small", "medium", "large")
 BIOMES = ("beach", "dark_forest", "jungle", "mesa", "mountain", "mushroom",
           "swamp", "desert", "plains", "savanna", "snowy", "taiga")
-# CTOV biome start pool -> fortified town centre exists
-FORTIFIED = {"plains", "mesa", "swamp", "taiga"}
-# the capital is always walled: only CTOV's fortified variants (plains, taiga, swamp, mesa) are candidates,
-# and since 2026-10-18 every variant accepts any village-able biome, so this costs nothing
-CAPITAL_BIOMES = ["plains", "taiga", "swamp", "mesa"]
 # vanilla villager pool -> zombie villager type
 VILLAGER_TYPES = {"plains": "plains", "desert": "desert", "savanna": "savanna",
                   "snowy": "snow", "taiga": "taiga"}
@@ -86,6 +80,16 @@ def jar_paths(arg: str | None) -> list[Path]:
             urllib.request.urlretrieve(meta["download"]["url"], dest)
         out.append(dest)
     return out
+
+
+def terralith_jar() -> zipfile.ZipFile:
+    with open(PACK / "mods" / "terralith.pw.toml", "rb") as f:
+        meta = tomllib.load(f)
+    dest = CACHE / meta["filename"]
+    if not dest.exists():
+        print(f"downloading {meta['download']['url']}")
+        urllib.request.urlretrieve(meta["download"]["url"], dest)
+    return zipfile.ZipFile(dest)
 
 
 class Merged:
@@ -271,10 +275,11 @@ def bounty_post_piece() -> bytes:
     blocks = []
     for x in range(3):
         for z in range(3):
-            if (x, z) != (1, 0):
-                blocks.append({"pos": [x, 0, z], "state": 0})
-    # the street's jigsaw targets `building_entrance`; ours faces north out of the plaza's front edge
-    blocks.append({"pos": [1, 0, 0], "state": 5, "nbt": jigsaw_nbt("minecraft:building_entrance", final_state="minecraft:dirt_path")})
+            blocks.append({"pos": [x, 0, z], "state": 0})
+    # Terralith's fortified streets carry their house jigsaws one block above the road surface and target
+    # `minecraft:entrance` (CTOV's use `building_entrance` at road level); ours sits at y=1 on the plaza's
+    # front edge, facing north out of it
+    blocks.append({"pos": [1, 1, 0], "state": 5, "nbt": jigsaw_nbt("minecraft:entrance", final_state="minecraft:air")})
     blocks += [{"pos": [1, 1, 1], "state": 1}, {"pos": [2, 1, 2], "state": 2}, {"pos": [2, 2, 2], "state": 3},
                {"pos": [0, 1, 2], "state": 4}]
     f = nbtlib.File({
@@ -416,61 +421,46 @@ def main() -> None:
                {"structures": set_entries, "placement": placement})
 
     # ---------------------------------------------------------------- the capital
-    cap_ids = []
-    for biome in CAPITAL_BIOMES:
-        src = json.loads(z.read(f"data/ctov/worldgen/structure/large/village_{biome}.json"))
-        if biome in FORTIFIED:
-            bp = json.loads(z.read(f"data/ctov/worldgen/template_pool/village/biome/{biome}.json"))
-            bp["name"] = f"peacock:capital/biome/{biome}"
-            bp["elements"] = [el for el in bp["elements"] if "fortified" in el["element"].get("location", "")] or bp["elements"]
-            write_json(f"data/peacock/worldgen/template_pool/capital/biome/{biome}.json", bp)
-            src["start_pool"] = f"peacock:capital/biome/{biome}"
-        src["size"] = 7
-        src["max_distance_from_center"] = 116
-        src["spawn_overrides"] = {}
-        # One ring position, one roll of the set: if the rolled variant only accepted its own biome the capital
-        # would simply fail to generate most of the time (2026-10-18: "I did not spawn at a village"). Every
-        # variant therefore accepts any village-able biome; the ring placement itself steers the position into
-        # one, and the weights below make the plains and taiga walled centres the usual result.
-        src["biomes"] = "#peacock:capital_biomes"
-        write_json(f"data/peacock/worldgen/structure/capital/{biome}.json", src)
-        cap_ids.append(f"peacock:capital/{biome}")
-    CAPITAL_WEIGHTS = {"plains": 6, "taiga": 4, "swamp": 1, "mesa": 1}
+    # Terralith ships a walled castle town, `terralith:fortified_village` (its own houses, church, library,
+    # deepslate streets, a keep) in its `rare_village` set. CTOV's "fortified" variants turned out to be a keep
+    # without a wall, so since 2026-10-18 the capital IS Terralith's fortified village: one concentric-ring
+    # position near the origin, and the structure overridden to accept any village-able biome so that one roll
+    # cannot fail. Terralith's own set is silenced (frequency 0) so the capital stays the only living old town.
+    tj = terralith_jar()
+    cap = json.loads(tj.read("data/terralith/worldgen/structure/fortified_village.json"))
+    cap["biomes"] = "#peacock:capital_biomes"
+    cap["spawn_overrides"] = {}
+    write_json("data/terralith/worldgen/structure/fortified_village.json", cap)
+    cap_ids = ["terralith:fortified_village"]
     write_json("data/peacock/worldgen/structure_set/capital.json", {
-        "structures": [{"structure": s, "weight": CAPITAL_WEIGHTS.get(s.rsplit("/", 1)[1], 1)} for s in cap_ids],
+        "structures": [{"structure": s, "weight": 1} for s in cap_ids],
         "placement": {"type": "minecraft:concentric_rings", "distance": 2, "spread": 1, "count": 1,
-                      "preferred_biomes": "#peacock:capital_biomes", "salt": 20260918},
+                      "preferred_biomes": "#terralith:has_structure/fortified_village", "salt": 20260918},
     })
+    rare = json.loads(tj.read("data/terralith/worldgen/structure_set/rare_village.json"))
+    rare["placement"]["frequency"] = 0.0
+    write_json("data/terralith/worldgen/structure_set/rare_village.json", rare)
     biome_tags = set()
     for biome in [b for b in BIOMES if b != "mushroom"]:
         src = json.loads(z.read(f"data/ctov/worldgen/structure/large/village_{biome}.json"))
         biome_tags.add(src["biomes"])
+    biome_tags.add("#terralith:has_structure/fortified_village")
     write_json("data/peacock/tags/worldgen/biome/capital_biomes.json",
                {"replace": False, "values": sorted(biome_tags)})
     write_json("data/peacock/tags/worldgen/structure/capital.json", {"replace": False, "values": cap_ids})
 
-    # Bounty posts: CTOV only places Bountiful's gazebo off the town centre, and that one piece often fails to
-    # fit. A small board-on-a-plaza piece is added to every CTOV *house* pool — the streets draw their buildings
-    # from `house`, not `deco` (the first attempt went into the deco pools, which the plains streets never use)
-    # — at ~3% of the pool's weight, so a size-7 capital ends up with two or three boards along its streets.
-    # These overrides of CTOV's own pools only reach the capital — the ruins are copies made from the jars
-    # above, and a dead town posts nothing.
+    # Bounty posts: a small board-on-a-plaza piece (with the `building_entrance` jigsaw a street piece needs to
+    # attach it) added to the capital's house pool at ~5% weight, so a capital has two or three boards along
+    # its streets. Only Terralith's fortified pool is touched; a dead town posts nothing.
     (OUT / "data/peacock/structures/capital").mkdir(parents=True, exist_ok=True)
     (OUT / "data/peacock/structures/capital/bounty_post.nbt").write_bytes(bounty_post_piece())
-    write_json("data/peacock/worldgen/template_pool/capital/bounty_post.json", {
-        "name": "peacock:capital/bounty_post", "fallback": "minecraft:empty",
-        "elements": [{"weight": 1, "element": {"element_type": "minecraft:single_pool_element", "projection": "rigid",
-                                                "processors": "minecraft:empty", "location": "peacock:capital/bounty_post"}}]})
-    house_pools = [n for n in names if re.fullmatch(r"data/ctov/worldgen/template_pool/village/[a-z_]+/houses?\.json", n)
-                   and not any(k in n for k in ("/underground/", "/christmas/", "/halloween/"))]
-    for n in house_pools:
-        pool = json.loads(z.read(n))
-        total = sum(int(e.get("weight", 1)) for e in pool.get("elements", []))
-        pool["elements"] = list(pool.get("elements", [])) + [{"weight": max(3, round(total * 0.03)), "element": {
-            "element_type": "minecraft:single_pool_element", "projection": "rigid",
-            "processors": "minecraft:empty", "location": "peacock:capital/bounty_post"}}]
-        write_json(n, pool)
-    print(f"bounty posts added to {len(house_pools)} CTOV house pools (capital only)")
+    houses = json.loads(tj.read("data/terralith/worldgen/template_pool/village/fortified/houses.json"))
+    total = sum(int(e.get("weight", 1)) for e in houses.get("elements", []))
+    houses["elements"] = list(houses.get("elements", [])) + [{"weight": max(1, round(total * 0.05)), "element": {
+        "element_type": "minecraft:single_pool_element", "projection": "rigid",
+        "processors": "minecraft:empty", "location": "peacock:capital/bounty_post"}}]
+    write_json("data/terralith/worldgen/template_pool/village/fortified/houses.json", houses)
+    print("capital: terralith:fortified_village (biomes widened, rare_village silenced, bounty posts in its house pool)")
     ruin_ids = [e["structure"] for e in set_entries]
     write_json("data/peacock/tags/worldgen/structure/ruins.json", {"replace": False, "values": ruin_ids})
     write_json("data/minecraft/tags/worldgen/structure/village.json",
@@ -482,7 +472,7 @@ def main() -> None:
             if f.is_file():
                 zout.write(f, f.relative_to(OUT).as_posix())
     print(f"wrote {ZIP.relative_to(ROOT)} ({ZIP.stat().st_size // 1024} KiB): "
-          f"{len(set_entries)} ruin structures, {len(cap_ids)} capital variants")
+          f"{len(set_entries)} ruin structures, capital = {cap_ids[0]}")
 
 
 if __name__ == "__main__":

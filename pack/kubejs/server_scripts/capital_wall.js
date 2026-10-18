@@ -7,16 +7,17 @@
 // every eight blocks, towers on the corners, and a gate in the middle of each side. It follows the terrain
 // column by column and fills its own foundation down to solid ground.
 //
-// It runs 10 s after the server loads if it has not run before (server persistentData), and can be rerun
-// by an operator with `/peacock wall` (rebuilds in place; harmless). `capitalWall: false` in
-// kubejs/config/peacock.json disables it.
+// Since the capital became Terralith's fortified village (walled by design) this is OFF unless
+// `capitalWall: true` is set in kubejs/config/peacock.json; `/peacock wall` (operator) builds it on demand.
 //
 // KubeJS loads every server script into one shared scope; a bare `{}` block does not isolate `const` in
 // its Rhino ("redeclaration of var"), so the body lives in a function scope.
 ;(() => {
 const SWITCHES = (() => { try { return JsonIO.read('kubejs/config/peacock.json') || {} } catch (e) { return {} } })()
-const ON = SWITCHES.capitalWall !== false
-const VARIANTS = ['plains', 'taiga', 'swamp', 'mesa']
+const ON = SWITCHES.capitalWall === true
+// the capital is Terralith's fortified village since 2026-10-18 — walled by design, so this script is off by
+// default (capitalWall: true in peacock.json, or /peacock wall, puts an outer ring around it anyway)
+const CAPITALS = [['terralith', 'fortified_village'], ['peacock', 'capital/plains'], ['peacock', 'capital/taiga']]
 const MARGIN = 6          // blocks outside the structure's bounding box
 const HEIGHT = 3          // wall body; crenellations on top
 const PILLAR_EVERY = 8
@@ -28,11 +29,11 @@ function findCapital(level) {
   const reg = level.registryAccess().registryOrThrow(Registries.STRUCTURE)
   const sm = level.structureManager()
   const spawn = level.getSharedSpawnPos()
-  for (let i = 0; i < VARIANTS.length; i++) {
-    const structure = reg.get(new ResourceLocation('peacock', 'capital/' + VARIANTS[i]))
+  for (let i = 0; i < CAPITALS.length; i++) {
+    const structure = reg.get(new ResourceLocation(CAPITALS[i][0], CAPITALS[i][1]))
     if (!structure) continue
     const start = sm.getStructureAt(spawn, structure)
-    if (start && start.isValid()) return { variant: VARIANTS[i], bb: start.getBoundingBox(), spawn: spawn }
+    if (start && start.isValid()) return { variant: CAPITALS[i].join(':'), bb: start.getBoundingBox(), spawn: spawn }
   }
   return null
 }

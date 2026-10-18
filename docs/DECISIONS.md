@@ -523,3 +523,13 @@ Why things are the way they are. Add an entry when a choice would surprise someo
   which a pool element needs to attach to anything — so neither had ever been placed. Both carry one now
   (`building_entrance` facing out of the plaza; `minecraft:bottom` facing down, as vanilla's villager pieces).
 
+## The capital is Terralith's fortified village (2026-10-18, second flight)
+- Aaron found a living, normal-looking village near the capital. It was Terralith's `fortified_village` from
+  its `rare_village` structure set — a walled castle town with its own houses, church, library and deepslate
+  streets — which no part of the ruin work had touched. It is a better capital than anything CTOV offers (CTOV's
+  "fortified" is a keep, not a wall), so it now *is* the capital: one concentric-ring position near the origin,
+  biomes widened to `#peacock:capital_biomes`, Terralith's own placements silenced with `frequency: 0`.
+- Jigsaw naming differs by mod: Terralith's streets target `minecraft:entrance` one block above the road,
+  CTOV's `minecraft:building_entrance` at road level. The bounty post carries Terralith's.
+- The CTOV-based capital variants are gone; the script wall remains available but off.
+
