@@ -259,6 +259,10 @@ file = "config/lithostitched.json"
 hash = "d8a63933ec4757186a594debea59dd35724a0a895fe601b324f96217c28312df"
 
 [[files]]
+file = "config/locatorbar.json"
+hash = "815115a2eb0d11c6324eed10befd147fc37f1ea18473531f563d61c13d951ebf"
+
+[[files]]
 file = "config/map_atlases-client.toml"
 hash = "5f036aa48ae41857b3a8c74ed2e3bfd1ef53dd2b4eab649e25f758f07eeed74c"
 
@@ -325,7 +329,7 @@ hash = "3b6236845f6a5ff8804487b63b0d74305b91316dc9a008362838607b0be3bd8e"
 
 [[files]]
 file = "config/paxi/datapacks/peacock-ruins.zip"
-hash = "743ad0914b86b3d49487e13daa7d15877080fd89a307766ec6493cee0aada9a7"
+hash = "043cf1c87b01bc7574a6b12a31e2cc9aa905affa7043011481cb28a78e732c3a"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/animania/tags/worldgen/biome/amphibian_habitats.json"
@@ -2277,7 +2281,7 @@ hash = "1f139b8561336fed8a4fd2830af1989d808425ac6cc603c26028afd49d105899"
 
 [[files]]
 file = "peacock-server/config/DistantHorizons.toml"
-hash = "bb35e8c4a53dfedda72bf50bb8027cd02267509c0c8dcc251e105aa36348ae40"
+hash = "7ccbdf28f08b1f8bea49ae2bfe5a75627c9d3068b2af0fbfc97a88d765d05e31"
 
 [[files]]
 file = "peacock-server/config/dynamicview.json"
@@ -2312,6 +2316,10 @@ file = "peacock/profiles/high/config/jade/jade.json.keys"
 hash = "271a064a707881f47cd6213cfec07dc1be5cb19b0c3440f88b5a40557d8f446c"
 
 [[files]]
+file = "peacock/profiles/high/config/locatorbar.json.keys"
+hash = "70161cc8005458f284e31b4934e2893dbbf5aa9625b16b03527267fc4b8e10e3"
+
+[[files]]
 file = "peacock/profiles/high/config/oculus.properties.keys"
 hash = "8b4ac3411ce4558a2b9b1825b2362e35b714c0b374e5871438d393b465ce39ca"
 
@@ -2342,6 +2350,10 @@ hash = "3b525e855da59a2c64278c73210699e88a599fe6979a79840d75cf8356759ec4"
 [[files]]
 file = "peacock/profiles/low/config/jade/jade.json.keys"
 hash = "271a064a707881f47cd6213cfec07dc1be5cb19b0c3440f88b5a40557d8f446c"
+
+[[files]]
+file = "peacock/profiles/low/config/locatorbar.json.keys"
+hash = "70161cc8005458f284e31b4934e2893dbbf5aa9625b16b03527267fc4b8e10e3"
 
 [[files]]
 file = "peacock/profiles/low/config/oculus.properties.keys"
@@ -2376,6 +2388,10 @@ file = "peacock/profiles/medium/config/jade/jade.json.keys"
 hash = "271a064a707881f47cd6213cfec07dc1be5cb19b0c3440f88b5a40557d8f446c"
 
 [[files]]
+file = "peacock/profiles/medium/config/locatorbar.json.keys"
+hash = "70161cc8005458f284e31b4934e2893dbbf5aa9625b16b03527267fc4b8e10e3"
+
+[[files]]
 file = "peacock/profiles/medium/config/oculus.properties.keys"
 hash = "ecdc47e26c1b274613251b8935d35c7225b4e1b12b7671388999dacd0f7178cb"
 
@@ -2408,6 +2424,10 @@ file = "peacock/profiles/potato/config/jade/jade.json.keys"
 hash = "271a064a707881f47cd6213cfec07dc1be5cb19b0c3440f88b5a40557d8f446c"
 
 [[files]]
+file = "peacock/profiles/potato/config/locatorbar.json.keys"
+hash = "70161cc8005458f284e31b4934e2893dbbf5aa9625b16b03527267fc4b8e10e3"
+
+[[files]]
 file = "peacock/profiles/potato/config/oculus.properties.keys"
 hash = "3679e644386b40bf6bf9c612b40b6dbac157398edf6cc87dda142f1b1c72efde"
 
@@ -2438,6 +2458,10 @@ hash = "6888171d79f75c6800cecb1e2918532d0bcaff876d20c985f6abb3aca7c273a0"
 [[files]]
 file = "peacock/profiles/ultra/config/jade/jade.json.keys"
 hash = "271a064a707881f47cd6213cfec07dc1be5cb19b0c3440f88b5a40557d8f446c"
+
+[[files]]
+file = "peacock/profiles/ultra/config/locatorbar.json.keys"
+hash = "70161cc8005458f284e31b4934e2893dbbf5aa9625b16b03527267fc4b8e10e3"
 
 [[files]]
 file = "peacock/profiles/ultra/config/oculus.properties.keys"

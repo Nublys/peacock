@@ -75,6 +75,8 @@ COMMON_KEYS = {
 # and no mod-name line on item tooltips (Aaron, 2026-10-17: tooltips get in the way; the hotbar stays).
 COMMON_FILES = {
     "config/jade/jade.json.keys": '"overlayScale": 0.7\n"alpha": 0.6\n"itemModNameTooltip": false\n',
+    # the locator bar at half size (Aaron, 2026-10-18); the shipped config/locatorbar.json carries the same
+    "config/locatorbar.json.keys": '"scale": 0.5\n',
 }
 
 def load_presets():

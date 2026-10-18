@@ -386,10 +386,17 @@ def main() -> None:
         src["size"] = 7
         src["max_distance_from_center"] = 116
         src["spawn_overrides"] = {}
+        # One ring position, one roll of the set: if the rolled variant only accepted its own biome the capital
+        # would simply fail to generate most of the time (2026-10-18: "I did not spawn at a village"). Every
+        # variant therefore accepts any village-able biome; the ring placement itself steers the position into
+        # one, and the weights below make the plains and taiga walled centres the usual result.
+        src["biomes"] = "#peacock:capital_biomes"
         write_json(f"data/peacock/worldgen/structure/capital/{biome}.json", src)
         cap_ids.append(f"peacock:capital/{biome}")
+    CAPITAL_WEIGHTS = {"plains": 8, "taiga": 4, "savanna": 2, "snowy": 1, "desert": 2, "swamp": 1, "mesa": 1,
+                       "mountain": 1, "beach": 1, "dark_forest": 1, "jungle": 1}
     write_json("data/peacock/worldgen/structure_set/capital.json", {
-        "structures": [{"structure": s, "weight": 1} for s in cap_ids],
+        "structures": [{"structure": s, "weight": CAPITAL_WEIGHTS.get(s.rsplit("/", 1)[1], 1)} for s in cap_ids],
         "placement": {"type": "minecraft:concentric_rings", "distance": 2, "spread": 1, "count": 1,
                       "preferred_biomes": "#peacock:capital_biomes", "salt": 20260918},
     })
