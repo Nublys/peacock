@@ -28,3 +28,6 @@ build/
 
 # generated ruins datapack (tools/gen-ruins.py) ships as one zip
 !pack/config/paxi/datapacks/peacock-ruins.zip
+
+# the importable Prism instance (tools/build-instance.py)
+!dist/Peacock-Prism.zip
