@@ -18,6 +18,8 @@ ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "dist" / "Peacock-Prism.zip"
 PACK_URL = "https://raw.githubusercontent.com/Nublys/peacock/main/pack/pack.toml"
 
+# instance.cfg is a Qt INI file: a value with quotes inside must be one quoted string with \" escapes,
+# or the parser drops the spaces between the pieces ("java-jar …launch.jarhttps://…", seen 2026-10-18).
 INSTANCE_CFG = f"""[General]
 ConfigVersion=1.3
 InstanceType=OneSix
@@ -30,7 +32,7 @@ MaxMemAlloc=6144
 OverrideJavaArgs=true
 JvmArgs=-XX:+UseG1GC -XX:MaxGCPauseMillis=50
 OverrideCommands=true
-PreLaunchCommand="$INST_JAVA" -jar "$INST_MC_DIR/peacock/launch.jar" {PACK_URL}
+PreLaunchCommand="\\"$INST_JAVA\\" -jar \\"$INST_MC_DIR/peacock/launch.jar\\" {PACK_URL}"
 notes=Peacock — the pack syncs itself from GitHub on every launch (peacock/launch.jar). Pick a graphics tier in-game with /peacock profile <tier>. Guide: https://github.com/Nublys/peacock
 """
 
