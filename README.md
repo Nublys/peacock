@@ -11,35 +11,21 @@ reference is in-game — every new player is handed **The Settler's Almanac** on
 
 ## Getting in
 
-You need [Prism Launcher](https://prismlauncher.org) and Java 17. The pack installs and updates itself
-on every launch; you set it up once.
+**Prism Launcher** (recommended — the pack updates itself every launch):
 
-1. **Make an instance.** Add Instance → Minecraft **1.20.1** → Mod loader **Forge 47.4.16**.
-   - Java: Prism → Settings → Java → *Download Java* → **17**, newest build (the one Prism bundles crashes
-     on new macOS). On a Mac, `java -version` must say `aarch64`.
-   - Memory: **6 GB** (`-Xmx6G`) on a 16 GB machine, 8 GB if you have 32 GB. Leave the minimum low.
-   - JVM arguments: `-XX:+UseG1GC -XX:MaxGCPauseMillis=50`
-2. **Drop in the launcher.** Right-click the instance → *Minecraft Folder* (not the instance folder one level
-   up). Make a folder called `peacock` in there and download
-   [`launch.jar`](https://raw.githubusercontent.com/Nublys/peacock/main/pack/peacock/launch.jar) into it.
-   In a terminal that is:
-   ```
-   mkdir -p "<minecraft folder>/peacock" && curl -L -o "<minecraft folder>/peacock/launch.jar" \
-     https://raw.githubusercontent.com/Nublys/peacock/main/pack/peacock/launch.jar
-   ```
-3. **Pre-launch command.** Instance → Edit → Settings → *Custom commands* → **Pre-launch command**:
-   ```
-   "$INST_JAVA" -jar "$INST_MC_DIR/peacock/launch.jar" https://raw.githubusercontent.com/Nublys/peacock/main/pack/pack.toml
-   ```
-4. **Launch.** The first run downloads the pack (a few minutes). Every later launch checks for updates
-   first, so you are always on the current version without doing anything.
-5. **Pick your graphics profile.** In-game, type `/peacock profile <tier>` and relaunch. If you do nothing
-   you are on `low`, which is right for most laptops. See [Performance](#performance) for the tiers.
-6. **Join.** The server address is in the group chat. Voice chat is built in (`,` opens its menu; it is
-   voice-activated by default). Macs: allow the microphone for Prism when asked.
+1. Install [Prism](https://prismlauncher.org/download/) and, in its Settings → Java, download **Java 17** (newest build; Apple Silicon build on a Mac).
+2. Add Instance → **Import** → paste `https://raw.githubusercontent.com/Nublys/peacock/main/dist/Peacock-Prism.zip`.
+3. Launch. The first run downloads the pack (a few minutes); later launches just check for changes.
+4. In-game, `/peacock profile <tier>` and relaunch — `low` if you do nothing. Tiers under [Performance](#performance).
+5. Add the server from the group chat. Voice chat is built in (`,` for its menu).
 
-> Other launchers work too — anything with a pre-launch hook (Modrinth App: Options → Hooks). The
-> CurseForge app has no hooks and gets the `low` defaults without updates; use Prism if you can.
+Full walkthrough, the by-hand route and the Modrinth App: **[docs/INSTALL-PRISM.md](docs/INSTALL-PRISM.md)**.
+
+**CurseForge app**: download the zip for your hardware tier from the
+[latest release](https://github.com/Nublys/peacock/releases/latest) and import it as a custom profile; new
+versions mean importing the new zip. **[docs/INSTALL-CURSEFORGE.md](docs/INSTALL-CURSEFORGE.md)**.
+
+Either way: 6 GB of memory on a 16 GB machine, 8 GB if you have 32; more is not faster.
 
 ---
 

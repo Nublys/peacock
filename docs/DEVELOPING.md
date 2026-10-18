@@ -45,7 +45,9 @@ Several parts of the pack are generated; edit the generator, not the output, and
 | `tools/gen-ruins.py` | `pack/config/paxi/datapacks/peacock-ruins.zip` | CTOV's jar + its compat jars (downloaded, cached in `~/.cache/peacock`) |
 | `tools/gen-bounties.py` | Bountiful pool overrides, the Archivist decree, rumour loot tables, `kubejs/config/journals.json` | `tools/data/journals.json` + the tables in the script |
 | `tools/gen-rustbelt.py` | Rust Belt / nature / war-camp NBTs, structures and structure sets | the voxel functions in the script |
-| `tools/build-launch.sh` | `pack/peacock/launch.jar` | `tools/launch/Launch.java` (needs a JDK ≥ 17) |
+| `tools/build-launch.sh` | `pack/peacock/launch.jar`, then `dist/Peacock-Prism.zip` via `tools/build-instance.py` | `tools/launch/Launch.java` (needs a JDK ≥ 17) |
+| `tools/build-instance.py` | `dist/Peacock-Prism.zip` — the importable Prism instance (instance.cfg, mmc-pack.json, launch.jar) | the constants in the script |
+| `tools/apply-profile.py` | a pack copy with one tier's `*.keys` baked into its config files (release workflow, CurseForge zips) | `pack/peacock/profiles/<tier>/` |
 
 After any of them: `cd pack && packwiz refresh && cd .. && python3 tools/validate.py`.
 
@@ -81,8 +83,11 @@ Releases are for everyone else (Modrinth App, CurseForge App, bare-metal servers
 git tag vX.Y.Z && git push origin vX.Y.Z
 ```
 
-`.github/workflows/release.yml` builds `Peacock-X.Y.Z.mrpack`, `Peacock-X.Y.Z-curseforge.zip` and
-`Peacock-X.Y.Z-server.zip` and attaches them to a GitHub release with the commit log as notes. The
+`.github/workflows/release.yml` builds `Peacock-Prism.zip` (the importable instance), `Peacock-X.Y.Z.mrpack`,
+five `Peacock-X.Y.Z-curseforge-<tier>.zip` (one per hardware tier, profile baked in with `tools/apply-profile.py`)
+and `Peacock-X.Y.Z-server.zip`, and attaches them to a GitHub release with the commit log as notes.
+The Prism zip is also committed as `dist/Peacock-Prism.zip` so `raw.githubusercontent.com` serves it without a
+release; `tools/build-launch.sh` rebuilds it whenever `launch.jar` changes. The
 `.mrpack` embeds CurseForge-hosted mods as overrides (`--restrictDomains=false`), which is fine for our own
 distribution but would be rejected by a public Modrinth listing — publishing there means swapping those
 mods for Modrinth-hosted equivalents first.

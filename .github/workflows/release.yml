@@ -2,12 +2,17 @@ name: release
 
 # Tag a commit `vX.Y.Z` (matching pack/pack.toml's version) and this builds the launcher-importable
 # packages and attaches them to a GitHub release:
-#   Peacock-X.Y.Z.mrpack            Prism / ATLauncher / Modrinth App import (CurseForge-hosted mods are
-#                                   embedded as overrides, so --restrictDomains=false; fine for our own
-#                                   distribution, not for a Modrinth listing)
-#   Peacock-X.Y.Z-curseforge.zip    CurseForge App / Overwolf import
-#   Peacock-X.Y.Z-server.zip        server files (mods, configs, datapacks, KubeJS) for a bare-metal start
-# Players on the Prism + launch.jar route (README) never need these; they sync from main directly.
+#   Peacock-Prism.zip                      Prism Launcher instance (Add Instance → Import): Forge, memory, JVM flags
+#                                          and the launch.jar pre-launch command preset; syncs from main on launch.
+#                                          Also committed as dist/Peacock-Prism.zip so it has a stable raw URL.
+#   Peacock-X.Y.Z.mrpack                   Modrinth App / ATLauncher import (CurseForge-hosted mods are embedded as
+#                                          overrides, so --restrictDomains=false; fine for our own distribution,
+#                                          not for a Modrinth listing). Ships the `low` defaults.
+#   Peacock-X.Y.Z-curseforge-<tier>.zip    CurseForge App import, one per hardware tier (potato, low, medium, high,
+#                                          ultra) with that tier's profile baked in (tools/apply-profile.py),
+#                                          because the CurseForge app has no pre-launch hook to run launch.jar.
+#   Peacock-X.Y.Z-server.zip               server files (mods, configs, datapacks, KubeJS) for a bare-metal start
+# Players on the Prism + launch.jar route never need a release; they sync from main directly.
 
 on:
   push:
@@ -38,14 +43,24 @@ jobs:
           ~/go/bin/packwiz refresh
           git diff --exit-code -- index.toml pack.toml
           ~/go/bin/packwiz modrinth export --restrictDomains=false -o "../Peacock-${VER}.mrpack"
-          ~/go/bin/packwiz curseforge export -o "../Peacock-${VER}-curseforge.zip"
           ~/go/bin/packwiz curseforge export -s server -o "../Peacock-${VER}-server.zip"
+      - name: CurseForge zips, one per hardware tier
+        run: |
+          for tier in potato low medium high ultra; do
+            rm -rf /tmp/tier && cp -r pack /tmp/tier
+            python3 tools/apply-profile.py "$tier" /tmp/tier
+            (cd /tmp/tier && ~/go/bin/packwiz refresh && ~/go/bin/packwiz curseforge export -o "${GITHUB_WORKSPACE}/Peacock-${VER}-curseforge-${tier}.zip")
+          done
+      - name: Prism instance
+        run: |
+          python3 tools/build-instance.py
+          cp dist/Peacock-Prism.zip Peacock-Prism.zip
       - name: Release notes
         run: |
           {
             echo "Peacock ${VER} — Forge 1.20.1 ($(grep -c '^\[\[files\]\]' pack/index.toml) files, $(ls pack/mods | wc -l) mods)"
             echo
-            echo "Install: see README.md. Prism users with launch.jar need nothing from here; the pack syncs from main."
+            echo "Install guides: docs/INSTALL-PRISM.md (Peacock-Prism.zip) and docs/INSTALL-CURSEFORGE.md (pick the zip for your hardware tier). Prism users sync from main and never need a new release."
             echo
             echo "Changes since the previous tag:"
             PREV=$(git describe --tags --abbrev=0 "${GITHUB_REF_NAME}^" 2>/dev/null || true)
@@ -55,6 +70,11 @@ jobs:
         with:
           body_path: notes.md
           files: |
+            Peacock-Prism.zip
             Peacock-${{ env.VER }}.mrpack
-            Peacock-${{ env.VER }}-curseforge.zip
+            Peacock-${{ env.VER }}-curseforge-potato.zip
+            Peacock-${{ env.VER }}-curseforge-low.zip
+            Peacock-${{ env.VER }}-curseforge-medium.zip
+            Peacock-${{ env.VER }}-curseforge-high.zip
+            Peacock-${{ env.VER }}-curseforge-ultra.zip
             Peacock-${{ env.VER }}-server.zip

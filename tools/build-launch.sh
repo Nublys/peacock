@@ -9,3 +9,5 @@ printf 'Main-Class: Launch\n' > build/launch/MANIFEST.MF
 find build/launch -exec touch -t 202001010000 {} +
 jar --create --file pack/peacock/launch.jar --manifest build/launch/MANIFEST.MF --date=2020-01-01T00:00:00Z -C build/launch Launch.class
 ls -l pack/peacock/launch.jar
+# the importable Prism instance carries a copy of the jar
+python3 tools/build-instance.py
