@@ -17,8 +17,8 @@ Everything here is for the host. Players never see this folder.
    ends with `== done`.
 4. Before the first start: Files → `server.properties` (seed, `max-players`), then start once
    and `whitelist add <name>` from the console.
-5. Let Distant Horizons build LODs on its own — the server generates them (`FEATURES` mode)
-   and rate-limits itself. (Chunky was removed: DH 3.3.3 crashes with it on servers.)
+5. Pre-generate 2 km with Chunk Pregenerator (below); Distant Horizons builds LODs from generated chunks
+   only (`PRE_EXISTING_ONLY`). (Chunky was removed: DH 3.3.3 crashes with it on servers.)
 
 **Every start** re-syncs the pack from `main` and reapplies `peacock-server/` — a merged PR
 reaches the server on its next restart. The `Pack URL` variable pins a commit for rollback:
@@ -62,7 +62,7 @@ the startup command copies them over the server root after each sync:
 
 | file | why |
 |---|---|
-| `config/DistantHorizons.toml` | `chunkGeneratorMode = "FEATURES"` — the server generates LODs; 3 threads (for 8 vCores; 2 on 6), request rate limits |
+| `config/DistantHorizons.toml` | `chunkGeneratorMode = "PRE_EXISTING_ONLY"` — LODs only from chunks that exist (see the 2026-10-18 hang in DECISIONS); request rate limits |
 | `config/dynamicview.json` | Dynamic View: simulation 5–10 / view 8–10 around a 36 ms tick |
 
 Voice chat is **not** overridden: edit `config/voicechat/voicechat-server.properties` on the server by
@@ -92,15 +92,17 @@ Marked `side = "server"` in `pack/mods/`, so they install here and never on a cl
 - **FTB Essentials** (server) — `defaultconfigs/ftbessentials-server.snbt`: only `/spawn` (60 s cooldown,
   5 s warm-up) and `/back` after a death. Homes, warps, tpa, rtp and the virtual crafting/ender-chest
   commands are off: no fast travel is a design rule. Admin commands (`/tpl`, `/fly`, `/invsee`…) stay.
-- **Chunk Pregenerator** (server) — real-chunk pre-generation. Chunky is out for good (Distant Horizons 3.3.3 binds to
-  Chunky's API and crashes the server); DH has no hook into this one. With nobody on, from the console:
+- **Chunk Pregenerator** (server) — real-chunk pre-generation, and since 2026-10-18 the only source of far terrain:
+  Distant Horizons runs in `PRE_EXISTING_ONLY` mode on the server (LODs are built from chunks that exist; DH never
+  generates terrain on its own threads). Chunky is out for good (DH 3.3.3 binds to Chunky's API and crashes);
+  DH has no hook into this one. With nobody on, from the console:
   ```
   pregen start gen radius peacock SQUARE 0 0 128 minecraft:overworld
   ```
   (radius in **chunks**: 128 = 2 km each way, ~65k chunks, a few hours on 8 cores; `pregen taskList` to watch,
-  `pregen stop peacock` to stop, `pregen help` for the exact syntax of the installed version). Run it **before**
-  the DH pregen: `dh pregen start minecraft:overworld 0 0 128` then only reads chunks instead of generating them
-  and finishes in a fraction of the time. The mod idles when no task runs; it can stay in the pack.
+  `pregen stop peacock` to stop, `pregen help` for the exact syntax of the installed version). DH builds the
+  LODs for those chunks as they are generated, so no separate `dh pregen` is needed or possible in this mode.
+  Beyond the pregenerated area the horizon fills in as players explore. The mod idles when no task runs.
 - **Clumps** (both sides) — merges XP orbs. **Let Me Despawn** (+ its library Almanac) — despawns mobs sooner once
   they are far from every player and were never fought or named; the entity count is what eight players'
   loaded areas accumulate.

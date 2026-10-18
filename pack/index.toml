@@ -2300,7 +2300,7 @@ hash = "1f139b8561336fed8a4fd2830af1989d808425ac6cc603c26028afd49d105899"
 
 [[files]]
 file = "peacock-server/config/DistantHorizons.toml"
-hash = "7ccbdf28f08b1f8bea49ae2bfe5a75627c9d3068b2af0fbfc97a88d765d05e31"
+hash = "8ecfa17837c6f5d9cc1ebe5f024191627bfe3c8a49d29f760cdb3d05bb9a60d1"
 
 [[files]]
 file = "peacock-server/config/dynamicview.json"

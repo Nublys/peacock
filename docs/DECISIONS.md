@@ -493,3 +493,17 @@ Why things are the way they are. Add an entry when a choice would surprise someo
   (DH binds to its API and crashes). The tab list covering the locator bar while Tab is held is left alone.
 - **FallingTree** for whole-tree felling (Aaron asked for a timber mod); both sides, defaults.
 
+## Distant Horizons no longer generates terrain on the server (2026-10-18)
+- The 16:58 watchdog crash: the server thread sat 90 s in `getChunk` for the chunk a creative-flying player
+  entered, while `Worker-Main-2` was parked on a `PalettedContainer` semaphore (`ThreadingDetector`) that no
+  running thread released — a worldgen deadlock between two generators touching the same chunk section.
+  DH's own config says of `FEATURES`: "may cause world generator bugs or instability when paired with certain
+  world generator mods". Terralith, Tectonic, CTOV and three structure mods are those mods.
+- Server DH is `PRE_EXISTING_ONLY`: LODs come from chunks the server generated (by play or by Chunk
+  Pregenerator). No off-thread terrain generation, so this class of deadlock is gone. Cost: the far horizon
+  only exists where chunks exist, which the 2 km pregen covers around spawn. If the hang recurs in this mode
+  the generator race was not the cause and the next suspect is the worker pool itself (thread dump again).
+- Chunk generation speed itself: there is no multithreaded-worldgen mod for Forge 1.20.1 (C2ME is Fabric);
+  pregen, 8 cores, and not flying into fresh land at creative speed are the levers. Canary and ModernFix are
+  already in.
+
