@@ -439,6 +439,17 @@ def main() -> None:
     starts = json.loads(tj.read("data/terralith/worldgen/template_pool/village/fortified/starts.json"))
     starts["elements"] = [e for e in starts["elements"] if e["element"].get("element_type") != "minecraft:empty_pool_element"]
     write_json("data/terralith/worldgen/template_pool/village/fortified/starts.json", starts)
+    # Terralith's road pool ends more often than it continues (straight2 and bend2 carry houses but no onward
+    # road, and are the heaviest entries): from the castle's four roads that averages a castle and four houses
+    # (2026-10-18, "tiny"). Re-weight toward continuing roads; size 7 above gives them room to run.
+    roads = json.loads(tj.read("data/terralith/worldgen/template_pool/village/fortified/roads.json"))
+    REWEIGHT = {"straight2": 8, "bend2": 4, "term1": 1, "term2": 1, "term3": 1, "term4": 1,
+                "straight1": 22, "bend1": 18, "t1": 9, "t2": 9, "inter1": 9, "intersection_big": 2}
+    for e in roads["elements"]:
+        key = e["element"].get("location", "").rsplit("/", 1)[-1]
+        if key in REWEIGHT:
+            e["weight"] = REWEIGHT[key]
+    write_json("data/terralith/worldgen/template_pool/village/fortified/roads.json", roads)
     cap_ids = ["terralith:fortified_village"]
     write_json("data/peacock/worldgen/structure_set/capital.json", {
         "structures": [{"structure": s, "weight": 1} for s in cap_ids],
