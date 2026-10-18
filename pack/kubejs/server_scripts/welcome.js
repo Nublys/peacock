@@ -18,10 +18,12 @@ function seasonName(level) {
 PlayerEvents.loggedIn(event => {
   const player = event.player
   const season = seasonName(player.level)
+  // one line, ever, on a player's first join; one short line on later joins. Nothing else from the pack.
   if (!player.persistentData.getBoolean('peacock_welcomed')) {
     player.persistentData.putBoolean('peacock_welcomed', true)
-    player.tell(Text.gold(Text.translate('peacock.join.first')))
+    player.tell(Text.gold(Text.translate('peacock.join.first')).append(Text.gray(' The Settler\'s Almanac in your inventory explains the rest.')))
+  } else if (season) {
+    player.tell(Text.gray(Text.translate('peacock.join.season', Text.green(season))))
   }
-  if (season) player.tell(Text.gray(Text.translate('peacock.join.season', Text.green(season))))
 })
 })()

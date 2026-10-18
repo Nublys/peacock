@@ -925,7 +925,7 @@ hash = "4110a59d379ace514ab2e7655f5b8c5184744591f67f133e24b13dcb088e5928"
 
 [[files]]
 file = "config/village_recruits/general.toml"
-hash = "80f04f7854ef47515fb2eea9c02d526c2e7aee4bb9ac80b0c83ac129911d8fef"
+hash = "9803c235b6d9ec3359c7584a39542dd0ece3305614ce06c30c4b8793345b1d24"
 
 [[files]]
 file = "config/village_recruits/military.toml"
@@ -1025,7 +1025,7 @@ hash = "029369d0195920111aebae8376047bc7676146903e7e950144fa1d538954d2ef"
 
 [[files]]
 file = "kubejs/server_scripts/almanac.js"
-hash = "7f9a35a62bf29efa77273ba670e488b8fa0eba600627b728863e9fbc83585ad9"
+hash = "6c16de3bde6076f6ec0da4ebd480c8735ccf8fa032f4e85e95190172687d008b"
 
 [[files]]
 file = "kubejs/server_scripts/blueprints.js"
@@ -1073,7 +1073,7 @@ hash = "a0b8b788b06450f53a96ac9e325bd8c6449edd8ecfd1d5deb50e50a43f34c2d2"
 
 [[files]]
 file = "kubejs/server_scripts/welcome.js"
-hash = "a7dcbc0e0ecc1e5b5849e654b74a4388dfb506bc7382ed5f08e170a50ca6b0d2"
+hash = "e96838c71a0c3cd315c1e86557f2b28073fea465d711378e89c67f8f04615532"
 
 [[files]]
 file = "kubejs/startup_scripts/peacock_ladder.js"

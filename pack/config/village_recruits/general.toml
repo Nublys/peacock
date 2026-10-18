@@ -57,7 +57,7 @@
 	#Announce in chat every time two factions change their relationship
 	#(declare war, form an alliance or make peace). Default: true
 	#
-	announceDiplomacy = true
+	announceDiplomacy = false
 	#Announce in chat every time a village launches an assault on an enemy
 	#village. Default: true
 	#
@@ -71,12 +71,12 @@
 	#Announce in chat every time two AI villages complete a trade.
 	#Default: true
 	#
-	announceTrade = true
+	announceTrade = false
 	#Append a small greyed-out hint ("you can disable these messages in
 	#the config") to every announcement above, so players know the
 	#messages can be turned off. Default: true
 	#
-	showDisableHint = true
+	showDisableHint = false
 	#Warn players in chat when a village of THEIR OWN faction spots an
 	#enemy nearby: what the enemy is, which faction it belongs to (if any)
 	#and where it is. The enemy also starts glowing for a few seconds so it
@@ -172,7 +172,7 @@
 	#The key it names is read on the CLIENT, so a player who rebound it is
 	#told the key they actually use. Default: true
 	#
-	wikiReminderEnabled = true
+	wikiReminderEnabled = false
 	#How many logins a player who never opens the wiki is reminded, before
 	#the reminder gives up on them permanently. Somebody who is simply not
 	#interested should not be nagged for the life of the world.

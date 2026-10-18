@@ -10,6 +10,6 @@ PlayerEvents.loggedIn(event => {
   if (player.persistentData.getBoolean('peacock_almanac_given')) return
   player.give(Item.of('patchouli:guide_book', '{"patchouli:book":"patchouli:peacock_almanac"}'))
   player.persistentData.putBoolean('peacock_almanac_given', true)
-  player.tell(Text.gold('The Settler\'s Almanac is in your inventory. It explains the world, the seasons, where ore is, and how technology comes back.'))
+  // the one-line welcome in welcome.js mentions the book; no second message here
 })
 })()
