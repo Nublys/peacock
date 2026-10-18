@@ -56,7 +56,7 @@
    "unitWorth": 6500,
    "rarity": "RARE",
    "repRequired": 14,
-   "nbt": "{title:\"Ledger of the Brass Works\",author:\"Oswin, ledger-keeper\",generation:1,resolved:1b,pages:[\"{\\\"text\\\": \\\"Year 41 of the Works. Output up a fifth again. Six new galleries below the old marks. The Guild says the marks were a superstition of the first diggers and I write what the Guild says.\\\"}\",\"{\\\"text\\\": \\\"Year 41, autumn. The forty-fathom gallery opened. Zinc like I have never seen it. The men came up quiet. Master Tolland says the air is thin that deep, nothing more.\\\"}\",\"{\\\"text\\\": \\\"Year 42. Lamps will not stay lit on the lowest level. Three times relit, three times out. Tolland has ordered the shafts worked by feel. Output up again. I write what the Guild says.\\\"}\",\"{\\\"text\\\": \\\"Year 42, late. Nine men from the lower shafts in the physician's house. Tolland has sealed nothing. The Guild has ordered a seventh gallery. I have stopped writing what the Guild says.\\\"}\"]}"
+   "nbt": "{title:\"Ledger of the Brass Works\",author:\"Oswin, ledger-keeper\",generation:1,resolved:1b,pages:[\"{\\\"text\\\": \\\"Year 412 of the Works. Output up a fifth again. Six new galleries below the old marks. The Guild says the marks were a superstition of the first diggers, four centuries dead, and I write what the Guild says.\\\"}\",\"{\\\"text\\\": \\\"Year 412, autumn. The forty-fathom gallery opened. Zinc like I have never seen it. The men came up quiet. Master Tolland says the air is thin that deep, nothing more.\\\"}\",\"{\\\"text\\\": \\\"Year 413. Lamps will not stay lit on the lowest level. Three times relit, three times out. Tolland has ordered the shafts worked by feel. Output up again. I write what the Guild says.\\\"}\",\"{\\\"text\\\": \\\"Year 413, late. Nine men from the lower shafts in the physician's house. Tolland has sealed nothing. The Guild has ordered a seventh gallery. I have stopped writing what the Guild says.\\\"}\"]}"
   },
   "journal_physician": {
    "type": "item",
@@ -80,7 +80,7 @@
    "unitWorth": 3500,
    "rarity": "UNCOMMON",
    "repRequired": 4,
-   "nbt": "{title:\"Sermon Notes\",author:\"Elder Brannock\",generation:1,resolved:1b,pages:[\"{\\\"text\\\": \\\"On the new wall. We have built past the wall three times in my life. The fields that fed my father's house are under the Guild's counting-rooms. A town that eats its fields will eat something else next.\\\"}\",\"{\\\"text\\\": \\\"On the shafts. I am told it is only stone down there. Everything is only stone until you take enough of it away.\\\"}\",\"{\\\"text\\\": \\\"On the sickness. They ask me what we did. I say: we did very well. For forty years we did very, very well.\\\"}\"]}"
+   "nbt": "{title:\"Sermon Notes\",author:\"Elder Brannock\",generation:1,resolved:1b,pages:[\"{\\\"text\\\": \\\"On the new wall. We have built past the wall three times in my life. The fields that fed my father's house are under the Guild's counting-rooms. A town that eats its fields will eat something else next.\\\"}\",\"{\\\"text\\\": \\\"On the shafts. I am told it is only stone down there. Everything is only stone until you take enough of it away.\\\"}\",\"{\\\"text\\\": \\\"On the sickness. They ask me what we did. I say: we did very well. For four hundred years we did very, very well.\\\"}\"]}"
   },
   "journal_almanac_hedda": {
    "type": "item",
