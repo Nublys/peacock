@@ -512,3 +512,14 @@ Why things are the way they are. Add an entry when a choice would surprise someo
   Noisium is the Forge option, commonly run with Terralith/Tectonic/Lithostitched, and deterministic. First
   suspect to remove if worldgen misbehaves.
 
+## The capital's wall is built by script; the pieces that never appeared (2026-10-18, second flight)
+- CTOV's `*_fortified` variants are a 28-block stone keep in the town centre, not a perimeter wall — my
+  assumption, twice wrong in play. Nothing on Forge 1.20.1 walls a village, so `capital_wall.js` does: it
+  reads the capital's structure bounding box at world spawn, and 10 s after the first load raises a
+  terrain-following stone-brick wall six blocks outside it with lantern pillars, corner towers and a gate per
+  side. `/peacock wall` (op) reruns it; `capitalWall: false` disables it.
+- The bounty posts went into the `deco` pools, which the plains streets never reference; they are now in the
+  `house` pools at ~3% weight. And both the posts and the ruins' zombie-owner pieces lacked a jigsaw block,
+  which a pool element needs to attach to anything — so neither had ever been placed. Both carry one now
+  (`building_entrance` facing out of the plaza; `minecraft:bottom` facing down, as vanilla's villager pieces).
+

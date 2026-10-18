@@ -224,8 +224,18 @@ def rewrite_nbt(data: bytes, mapper) -> bytes:
     return buf.getvalue()
 
 
+def jigsaw_nbt(name: str, target: str = "minecraft:empty", final_state: str = "minecraft:air") -> T.Compound:
+    """A jigsaw block entity. A pool element can only attach to its parent through a jigsaw block whose `name`
+    equals the parent jigsaw's `target` and whose front faces the parent — a template without one is never
+    placed (the first ruin build shipped villager and bounty pieces without jigsaws, and nothing appeared)."""
+    return T.Compound({"id": T.String("minecraft:jigsaw"), "name": T.String(name), "target": T.String(target),
+                       "pool": T.String("minecraft:empty"), "final_state": T.String(final_state), "joint": T.String("rollable")})
+
+
 def zombie_piece(vtype: str) -> bytes:
-    """A 1x2x1 template holding one persistent zombie villager (the house's dead owner)."""
+    """A 1x2x1 template holding one persistent zombie villager (the house's dead owner). CTOV's houses call
+    their villager pools from a jigsaw facing up with target `minecraft:bottom`, so the piece carries a
+    jigsaw named `minecraft:bottom` facing down, as vanilla's villager templates do."""
     ent = T.Compound({
         "pos": T.List[T.Double]([T.Double(0.5), T.Double(0.0), T.Double(0.5)]),
         "blockPos": T.List[T.Int]([T.Int(0), T.Int(0), T.Int(0)]),
@@ -242,8 +252,10 @@ def zombie_piece(vtype: str) -> bytes:
     f = nbtlib.File({
         "size": T.List[T.Int]([T.Int(1), T.Int(2), T.Int(1)]),
         "entities": T.List[T.Compound]([ent]),
-        "blocks": T.List[T.Compound]([]),
-        "palette": T.List[T.Compound]([T.Compound({"Name": T.String("minecraft:air")})]),
+        "blocks": T.List[T.Compound]([T.Compound({"pos": T.List[T.Int]([T.Int(0), T.Int(0), T.Int(0)]), "state": T.Int(1),
+                                                  "nbt": jigsaw_nbt("minecraft:bottom")})]),
+        "palette": T.List[T.Compound]([T.Compound({"Name": T.String("minecraft:air")}),
+                                       T.Compound({"Name": T.String("minecraft:jigsaw"), "Properties": T.Compound({"orientation": T.String("down_north")})})]),
         "DataVersion": T.Int(3465),
     })
     buf = io.BytesIO()
@@ -255,18 +267,22 @@ def bounty_post_piece() -> bytes:
     """A 3x3 plaza: a bounty board on a dirt-path square with a lantern post, for the capital's streets."""
     pal = [{"Name": "minecraft:dirt_path"}, {"Name": "bountiful:bountyboard"},
            {"Name": "minecraft:oak_fence", "Properties": {}}, {"Name": "minecraft:lantern", "Properties": {"hanging": "false"}},
-           {"Name": "minecraft:potted_dandelion"}]
+           {"Name": "minecraft:potted_dandelion"}, {"Name": "minecraft:jigsaw", "Properties": {"orientation": "north_up"}}]
     blocks = []
     for x in range(3):
         for z in range(3):
-            blocks.append({"pos": [x, 0, z], "state": 0})
+            if (x, z) != (1, 0):
+                blocks.append({"pos": [x, 0, z], "state": 0})
+    # the street's jigsaw targets `building_entrance`; ours faces north out of the plaza's front edge
+    blocks.append({"pos": [1, 0, 0], "state": 5, "nbt": jigsaw_nbt("minecraft:building_entrance", final_state="minecraft:dirt_path")})
     blocks += [{"pos": [1, 1, 1], "state": 1}, {"pos": [2, 1, 2], "state": 2}, {"pos": [2, 2, 2], "state": 3},
                {"pos": [0, 1, 2], "state": 4}]
     f = nbtlib.File({
         "size": T.List[T.Int]([T.Int(3), T.Int(3), T.Int(3)]),
         "palette": T.List[T.Compound]([T.Compound({k: (T.String(v) if isinstance(v, str) else T.Compound({a: T.String(b) for a, b in v.items()}))
                                                    for k, v in p.items()}) for p in pal]),
-        "blocks": T.List[T.Compound]([T.Compound({"pos": T.List[T.Int]([T.Int(i) for i in b["pos"]]), "state": T.Int(b["state"])}) for b in blocks]),
+        "blocks": T.List[T.Compound]([T.Compound({"pos": T.List[T.Int]([T.Int(i) for i in b["pos"]]), "state": T.Int(b["state"]),
+                                                  **({"nbt": b["nbt"]} if "nbt" in b else {})}) for b in blocks]),
         "entities": T.List[T.Compound]([]),
         "DataVersion": T.Int(3465),
     })
@@ -434,24 +450,27 @@ def main() -> None:
     write_json("data/peacock/tags/worldgen/structure/capital.json", {"replace": False, "values": cap_ids})
 
     # Bounty posts: CTOV only places Bountiful's gazebo off the town centre, and that one piece often fails to
-    # fit. A small board-on-a-plaza piece is added to every CTOV deco pool (weight 3 against ~25) so the capital
-    # ends up with a few boards along its streets. These overrides of CTOV's own pools only reach the capital —
-    # the ruins are copies made from the jars above, and a dead town posts nothing.
+    # fit. A small board-on-a-plaza piece is added to every CTOV *house* pool — the streets draw their buildings
+    # from `house`, not `deco` (the first attempt went into the deco pools, which the plains streets never use)
+    # — at ~3% of the pool's weight, so a size-7 capital ends up with two or three boards along its streets.
+    # These overrides of CTOV's own pools only reach the capital — the ruins are copies made from the jars
+    # above, and a dead town posts nothing.
     (OUT / "data/peacock/structures/capital").mkdir(parents=True, exist_ok=True)
     (OUT / "data/peacock/structures/capital/bounty_post.nbt").write_bytes(bounty_post_piece())
     write_json("data/peacock/worldgen/template_pool/capital/bounty_post.json", {
         "name": "peacock:capital/bounty_post", "fallback": "minecraft:empty",
         "elements": [{"weight": 1, "element": {"element_type": "minecraft:single_pool_element", "projection": "rigid",
                                                 "processors": "minecraft:empty", "location": "peacock:capital/bounty_post"}}]})
-    deco_pools = [n for n in names if re.fullmatch(r"data/ctov/worldgen/template_pool/village/[a-z_]+/decos?\.json", n)
-                  and not any(k in n for k in ("/underground/", "/christmas/", "/halloween/"))]
-    for n in deco_pools:
+    house_pools = [n for n in names if re.fullmatch(r"data/ctov/worldgen/template_pool/village/[a-z_]+/houses?\.json", n)
+                   and not any(k in n for k in ("/underground/", "/christmas/", "/halloween/"))]
+    for n in house_pools:
         pool = json.loads(z.read(n))
-        pool["elements"] = list(pool.get("elements", [])) + [{"weight": 3, "element": {
+        total = sum(int(e.get("weight", 1)) for e in pool.get("elements", []))
+        pool["elements"] = list(pool.get("elements", [])) + [{"weight": max(3, round(total * 0.03)), "element": {
             "element_type": "minecraft:single_pool_element", "projection": "rigid",
             "processors": "minecraft:empty", "location": "peacock:capital/bounty_post"}}]
         write_json(n, pool)
-    print(f"bounty posts added to {len(deco_pools)} CTOV deco pools (capital only)")
+    print(f"bounty posts added to {len(house_pools)} CTOV house pools (capital only)")
     ruin_ids = [e["structure"] for e in set_entries]
     write_json("data/peacock/tags/worldgen/structure/ruins.json", {"replace": False, "values": ruin_ids})
     write_json("data/minecraft/tags/worldgen/structure/village.json",
