@@ -1,0 +1,16 @@
+{
+  "name": "World",
+  "icon": "minecraft:grass_block",
+  "category": "patchouli:mods",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Tectonic, Terralith, Biomes O' Plenty$() shape and fill the land. $(bold)Incendium$() is the Nether, $(bold)Nullscape$() the End. $(bold)Serene Seasons$() runs the year, $(bold)Tough As Nails$() (+TAN+) the temperature, $(bold)Enhanced Celestials$() the moons.$(br2)$(bold)Geolosys$() places ore in regional deposits. $(bold)Paxi$() loads the pack's own datapack over everything else."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Distant Horizons$() draws the far terrain. $(bold)ChoiceTheorem's Overhauled Village$() builds the villages; $(bold)Stoneholm$() the underground ones; $(bold)YUNG's$() mineshafts, dungeons and API; $(bold)Structory$() ruins; $(bold)Create Structures$() old workshops.$(br2)$(bold)Village Spawn Point$() puts everyone in the capital."
+    }
+  ]
+}

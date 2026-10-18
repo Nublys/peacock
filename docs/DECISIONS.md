@@ -189,6 +189,19 @@ Why things are the way they are. Add an entry when a choice would surprise someo
   so a changed default reaches existing installs without `PEACOCK_RESET=1` while a player's own edit is
   still kept. Append to `PREVIOUS_DEFAULTS` whenever a shipped default changes.
 
+## The Almanac is the wiki; a quest book would be the guide (2026-10-18)
+- v3: 13 chapters, 68 entries, 232 pages. New chapters **Server Rules & Claims** (claiming, teams,
+  force-load cap, the two commands, what we do not do, playing together), **What Is in the Pack** (every
+  mod by purpose, five pages) and **Why Can't I…** (ten FAQ entries that link into the chapters). Tech
+  gained **Charters** (every charter recipe as a crafting page — KubeJS recipes render in Patchouli) and
+  **What Exactly Is Locked** (the gate list in plain words). Recruits, combat and food got mechanics pages.
+- The page-budget check now measures *visible* text (formatting codes stripped), so bold-heavy pages are
+  judged by what fits, not by source length.
+- Patchouli stays the reference ("what is this, how does it work, why"). If the server wants a guided
+  path with progress tracking and rewards, that is **FTB Quests** (FTB Library is already in): chapters per
+  tier, tasks like "kill a Mutant Zombie", "use a Blueprint", rewards in charter emeralds. Not added — it
+  is a second book to maintain, and the ladder already tells players what to do next through tooltips.
+
 ## Quality of life, round two (2026-10-17 night, Aaron's list)
 - **Locator Bar** (reworked-locator-bar): the newer game's player bar — a dot per player by direction above
   the hotbar. Both sides so it sees everyone on the server.

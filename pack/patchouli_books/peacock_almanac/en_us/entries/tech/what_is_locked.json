@@ -1,0 +1,28 @@
+{
+  "name": "What Exactly Is Locked",
+  "icon": "minecraft:iron_door",
+  "category": "patchouli:tech",
+  "sortnum": 6,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Only $(bold)crafting-table recipes$() can be locked, so the rule is: the things built $(italic)from$() a material are locked, the material is not. Anyone can mix brass in a basin; nobody without the Blueprint can make a casing or a funnel from it.$(br2)Everything whose recipe is locked is also locked to $(bold)place$(): a brass machine handed to you will not go down until you have learned it."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Brass:$() every recipe with brass in it or brass out of it, and the mechanical crafter.$(br)$(bold)Blasting:$() everything made with gunpowder, TNT, the empty blaze burner, muskets and cartridges, powder charges.$(br)$(bold)Climate:$() thermoregulator, fans, air conditioners.$(br)$(bold)Cooking:$() Slice & Dice slicer and sprinkler."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Trains:$() track, stations, controls, schedules, signals, train doors, railway casing, all of Steam 'n' Rails.$(br)$(bold)Ships:$() all of Eureka: helms, floaters, ballast, balloons, engines.$(br)$(bold)Trading Floor:$() the depot.$(br)$(bold)Diesel:$() all of Create Diesel Generators."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Precision:$() everything made with a precision mechanism: arms, speed controllers, sequenced gearshifts, extendo grips.$(br)$(bold)Netherite:$() ingots and anything crafted from them (smithing is not locked).$(br)$(bold)Cannons:$() all of Create Big Cannons.$(br)$(bold)Arcane:$() Enchantment Industry and Dragons Plus.$(br)$(bold)Ender:$() ender chests, portable interfaces, item vaults, smart chutes, stockpile switches."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Recruiting$() locks the act of hiring, not an item: emeralds on a recruit do nothing until you have learned it. Guards and your own dogs are never locked.$(br2)Hover anything grey in EMI: the tooltip names the Blueprint and the boss that holds it."
+    }
+  ]
+}

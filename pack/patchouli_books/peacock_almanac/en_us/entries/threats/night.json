@@ -24,6 +24,10 @@
     },
     {
       "type": "patchouli:text",
+      "text": "$(bold)How fighting works:$() hold the attack button and you keep swinging. Each weapon has an arc and a reach: a dagger is a stab, a greatsword sweeps three mobs, a spear hits two blocks out. Two-handed weapons empty your off hand. There is no attack cooldown to time; there is distance and timing.$(br2)Shields block in a cone; a parrying dagger blocks fast. Fire from a musket breaks a shield."
+    },
+    {
+      "type": "patchouli:text",
       "text": "$(bold)Dogs:$() tame a wolf, then feed it a $(bold)Training Treat$() to make it a dog (Doggy Talents). Dogs learn talents, carry things, fight well and come back. Whistle commands are on $(bold)Shift+1..4$().$(br2)A dog bed is a home; a dog with Pack Puppy is a backpack with teeth."
     },
     {

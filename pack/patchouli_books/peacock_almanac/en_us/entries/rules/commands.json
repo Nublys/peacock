@@ -1,0 +1,16 @@
+{
+  "name": "Commands You Have",
+  "icon": "minecraft:command_block",
+  "category": "patchouli:rules",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)/spawn$() walks you to the capital after a five-second warm-up; one use a minute. $(bold)/back$() returns you to where you died, once, within a while of dying. That is all the teleporting there is.$(br2)No /home, /tpa, /rtp or warps, and none will be added: distance is the game. Build a dock."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)/ftbteams$() party commands (see Claiming Land). $(bold)/kubejs errors$() if the server tells you scripts failed: paste the result to the admin.$(br2)Chat is plain chat; voice is in-game ($(l:patchouli:tools/voice)Voice Chat$())."
+    }
+  ]
+}

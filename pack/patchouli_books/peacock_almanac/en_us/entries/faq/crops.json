@@ -1,0 +1,12 @@
+{
+  "name": "...grow anything?",
+  "icon": "minecraft:wheat_seeds",
+  "category": "patchouli:faq",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Out of season. Hover the seeds for their seasons; put a glass roof a few blocks over the field, or farm below Y 48, and the season stops mattering. See $(l:patchouli:land/crops)What Grows When$()."
+    }
+  ]
+}

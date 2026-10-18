@@ -1,0 +1,12 @@
+{
+  "name": "...see the far terrain?",
+  "icon": "minecraft:spyglass",
+  "category": "patchouli:faq",
+  "sortnum": 7,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Distant Horizons needs the server to have generated the land first; a new world fills in over an hour or so, faster where people have walked. If it never appears: Options, Video, Distant Horizons, rendering on, and check your profile's radius (potato is 64 chunks)."
+    }
+  ]
+}

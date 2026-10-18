@@ -1,0 +1,12 @@
+{
+  "name": "...craft this?",
+  "icon": "create:brass_casing",
+  "category": "patchouli:faq",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "The recipe shows in EMI but the table gives nothing, or the tooltip is gold: it needs a $(bold)Blueprint$() you have not learned. The tooltip names which, and who holds it. Fight the boss, trade for the sheet, or buy a $(l:patchouli:tech/charters)charter$().$(br2)Brass itself mixes fine; it is the things made from brass that are locked."
+    }
+  ]
+}

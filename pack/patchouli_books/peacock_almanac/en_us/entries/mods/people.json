@@ -1,0 +1,16 @@
+{
+  "name": "People & Towns",
+  "icon": "minecraft:emerald",
+  "category": "patchouli:mods",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Village Recruits$() (the base mod) hires soldiers; its $(bold)Village Expansion$() addon gives towns names, factions, politics and growth. $(bold)Guard Villagers$() man the walls. $(bold)Villager Workers$() are hired labour. $(bold)Villager Comfort$(), $(bold)Restock Balance$() and $(bold)Villager Names$() make villagers people."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Bountiful$() posts jobs. $(bold)Doggy Talents$() makes dogs. $(bold)Animania$() makes farm animals; $(bold)Naturalist$() wild ones; $(bold)Aquaculture$() (+Delight) fish; $(bold)Farmer's Delight$() the kitchen."
+    }
+  ]
+}

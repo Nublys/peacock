@@ -1,0 +1,12 @@
+{
+  "name": "Fights",
+  "icon": "minecraft:iron_sword",
+  "category": "patchouli:mods",
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Better Combat$() is how swinging works. $(bold)Spartan Weaponry$() and $(bold)Spartan Shields$() are the arsenal; $(bold)Musket Mod$() the guns.$(br2)$(bold)Mutant Monsters$(), $(bold)Mowzie's Mobs$(), $(bold)L_Ender's Cataclysm$(), $(bold)Illager Invasion$(), $(bold)Savage & Ravage$(), $(bold)Illage & Spillage Respillaged$() are the bosses and the raids. $(bold)Corpse$() keeps your things when you fall."
+    }
+  ]
+}

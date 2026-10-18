@@ -1,0 +1,12 @@
+{
+  "name": "...get more frames?",
+  "icon": "minecraft:redstone_torch",
+  "category": "patchouli:faq",
+  "sortnum": 8,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Shaders off ($(bold)K$()) is the big one. Then Distant Horizons radius, then render distance. Profiles are set in the launcher (PEACOCK_PROFILE); the $(l:patchouli:tools/performance)Performance$() entry has the table. Macs: plain Complementary only, and $(bold)low$() is the honest tier."
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Machines & Logistics",
+  "icon": "create:cogwheel",
+  "category": "patchouli:mods",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Create$() and its family: $(bold)Steam 'n' Rails$() (trains), $(bold)Big Cannons$(), $(bold)Diesel Generators$(), $(bold)Enchantment Industry$(), $(bold)Dragons Plus$(), $(bold)Trading Floor$() (depots), $(bold)Create Deco$() and $(bold)Interiors$() (looks), $(bold)Create Better Villagers$() (trades), $(bold)Slice & Dice$() (kitchen).$(br2)$(bold)Valkyrien Skies$() + $(bold)Eureka$() are ships; $(bold)Valkyrien Pirates$() sail them against you."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Trotting Wagons$() and $(bold)Caravans & Convoys$() move goods by horse. $(bold)Storage Drawers$() (+Create compat) are visible bulk storage. $(bold)Workshop$() tables craft from the chests around them. $(bold)Backpacked$() is the backpack; $(bold)Supplementaries$() the sacks, ropes, pulleys and a hundred small things."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Macaw's$() nine mods are doors, roofs, windows, fences, bridges, paths, stairs, trapdoors, lights, paintings and furniture; $(bold)Every Compat$() makes every wood work with all of it."
+    }
+  ]
+}

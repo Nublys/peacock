@@ -1,0 +1,16 @@
+{
+  "name": "Playing Together",
+  "icon": "minecraft:cake",
+  "category": "patchouli:rules",
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Two settlers today; a server tomorrow. The habits that scale:$(br2)Claim before you build. Mark deposits and towns on the shared atlas. Leave the capital's farms replanted. Do not force-load what you are not using. Kill a boss with friends: a Blueprint drops for every fighter, plus a spare for someone who could not come."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "If the server stalls: note the time and what you were doing, and tell the admin. The watchdog keeps a dump; the time is what finds the cause.$(br2)If something looks wrong in a recipe or a tooltip, $(bold)/kubejs errors$() and a screenshot."
+    }
+  ]
+}

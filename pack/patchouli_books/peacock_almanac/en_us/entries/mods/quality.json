@@ -1,0 +1,20 @@
+{
+  "name": "Quality of Life",
+  "icon": "minecraft:spyglass",
+  "category": "patchouli:mods",
+  "sortnum": 4,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)EMI$() (recipes), $(bold)Jade$() (what am I looking at), $(bold)AppleSkin$(), $(bold)Mouse Tweaks$(), $(bold)Controlling$(), $(bold)Easy Anvils$(), $(bold)Visual Workbench$(), $(bold)Map Atlases$(), $(bold)Nature's Compass$(), $(bold)Locator Bar$(), $(bold)Patchouli$() (this book), $(bold)Simple Voice Chat$(), $(bold)Chat Animation$(), $(bold)No Chat Reports$().$(br2)$(bold)FTB Chunks / Teams / Essentials$() are claims, parties, /spawn and /back."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Performance:$() Embeddium, Oculus (shaders), ImmediatelyFast, Entity Culling, ModernFix, FerriteCore, Canary (server). $(bold)Looks:$() Fresh Animations, Better Leaves, Enhanced Boss Bars, xali's, Low On Fire, Falling Leaves, Particular, Wavey Capes, 3D Skin Layers, Not Enough Animations, Entity Model and Texture Features."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Under the hood:$() KubeJS runs the pack's rules; Game Stages and Recipe Stages hold the ladder; Paxi carries the datapack; Default Options sets first-run settings; the launcher jar applies your hardware profile."
+    }
+  ]
+}

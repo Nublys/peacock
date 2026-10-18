@@ -1,0 +1,58 @@
+{
+  "name": "Charters: Buying a Blueprint",
+  "icon": "minecraft:emerald_block",
+  "category": "patchouli:tech",
+  "sortnum": 5,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Every Blueprint can be $(bold)bought$() instead of fought for: paper, one key item, and emerald blocks by tier (2, 4, 6, 8). Slow, expensive, never blocked. The recipes are below; EMI has them too.$(br2)A charter is how a new player on an old server catches up, and how a stuck server routes around a boss nobody can beat yet."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "peacock:charter/brass",
+      "text": "Brass: zinc is the key. Tier 1."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "peacock:charter/recruiting",
+      "recipe2": "peacock:charter/blasting",
+      "text": "Recruiting: an iron sword. Tier 1."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "peacock:charter/climate",
+      "recipe2": "peacock:charter/cooking",
+      "text": "Climate control: snow. Tier 1."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "peacock:charter/trains",
+      "recipe2": "peacock:charter/ships",
+      "text": "Trains: a rail. Tier 2."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "peacock:charter/trade",
+      "recipe2": "peacock:charter/diesel",
+      "text": "Trading Floor: a lectern. Tier 2."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "peacock:charter/precision",
+      "recipe2": "peacock:charter/netherite",
+      "text": "Precision: a cogwheel. Tier 3."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "peacock:charter/cannons",
+      "text": "Cannons: TNT, which itself needs Blasting. Tier 3."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "peacock:charter/arcane",
+      "recipe2": "peacock:charter/ender",
+      "text": "Arcane industry: an enchanting table. Tier 4."
+    }
+  ]
+}

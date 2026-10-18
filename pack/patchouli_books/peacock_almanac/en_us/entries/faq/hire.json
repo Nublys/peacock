@@ -1,0 +1,12 @@
+{
+  "name": "...hire this recruit?",
+  "icon": "minecraft:emerald",
+  "category": "patchouli:faq",
+  "sortnum": 5,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Recruiting is a Blueprint (the Mutant Skeleton's). Until you have it, emeralds do nothing. Guards (give a villager a weapon) work for everyone."
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Claiming Land",
+  "icon": "minecraft:oak_fence",
+  "category": "patchouli:rules",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Press $(bold)J$() for the claim manager (FTB Chunks). Left-click a chunk to claim it for your team, right-click to unclaim. Claimed land cannot be broken, opened or blown up by anyone outside your team or its allies.$(br2)The capital is claimed by the server. Claim your own place as soon as you have one worth keeping."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Teams:$() you are your own team until you make a party. $(bold)/ftbteams party create$() then $(bold)/ftbteams party invite <name>$() shares claims and chests. Allies see and can use your things; they can also be set to only see.$(br2)Up to 200 chunks per team. Nobody needs that many; if you do, you have built a city."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Force-loading$() (shift-click a claimed chunk) keeps it running while nobody is online: crops grow, machines turn, animals eat. $(bold)Four chunks per team$(), hard cap. Enough for one farm or one Create line; not enough for a factory, on purpose.$(br2)The server has one game thread. What you keep loaded while asleep, everybody pays for."
+    }
+  ]
+}

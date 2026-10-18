@@ -40,6 +40,10 @@
     },
     {
       "type": "patchouli:text",
+      "text": "$(bold)Nourishment$() comes from full meals (anything made in a pot or on a stove): slow natural regeneration even when your hunger bar is not full. $(bold)Comfort$() comes from warm dishes (soups, stews): faster healing. Both show as potion effects.$(br2)Raw and roasted food keeps you alive; meals make the difference in a fight."
+    },
+    {
+      "type": "patchouli:text",
       "text": "Season matters: see $(l:patchouli:land/crops)What Grows When$(). Out of season, crops stop; a greenhouse roof or a deep farm keeps the pot full.$(br2)Animals are from Animania and are a chapter of their own: $(l:patchouli:start/animals)Animals$()"
     }
   ]

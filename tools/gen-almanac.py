@@ -13,7 +13,7 @@ Give command (what kubejs/server_scripts/almanac.js does on first join):
 Recipe, item and entity ids used on crafting/spotlight/entity pages were checked against the mod
 jars; a wrong id renders as a missing-recipe page, so re-check when a mod is swapped.
 """
-import json, shutil
+import json, re, shutil
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -43,7 +43,10 @@ CATEGORIES = {
     "bosses":  ("Bestiary of Bosses", "Every boss, where it lives, and what it holds.", "minecraft:wither_skeleton_skull", 6),
     "tech":    ("Blueprints & Recovery", "How technology comes back, one boss at a time.", "create:brass_ingot", 7),
     "building": ("Building & Logistics", "Decor, wagons, ships, trains, cannons.", "mcwroofs:oak_roof", 8),
-    "tools":   ("Controls, Map & Settings", "Keys, the atlas, EMI and Jade, voice chat, performance profiles.", "map_atlases:atlas", 9),
+    "rules":   ("Server Rules & Claims", "Claims, force-loading, commands, and the few things we do not do.", "minecraft:oak_fence", 9),
+    "tools":   ("Controls, Map & Settings", "Keys, the atlas, EMI and Jade, voice chat, performance profiles.", "map_atlases:atlas", 10),
+    "mods":    ("What Is in the Pack", "Every mod by what it does for you.", "minecraft:bookshelf", 11),
+    "faq":     ("Why Can't I...", "The questions every new settler asks, answered.", "minecraft:oak_sign", 12),
 }
 
 # ---------- page helpers (each returns a page dict; limits are checked in main) ----------
@@ -147,6 +150,8 @@ ENTRIES = {
             txt(B("Fish:") + " Aquaculture gives rods, hooks and bait. Rivers, lakes and oceans hold different fish; some are heavy, some are worth emeralds. A worm farm turns dirt and seeds into bait.",
                 B("Aquaculture Delight") + " adds the recipes that turn a catch into a meal."),
             craft("aquaculture:iron_fishing_rod", "Rods take a hook and bait; a worm farm breeds the bait.", recipe2="aquaculture:worm_farm"),
+            txt(B("Nourishment") + " comes from full meals (anything made in a pot or on a stove): slow natural regeneration even when your hunger bar is not full. " + B("Comfort") + " comes from warm dishes (soups, stews): faster healing. Both show as potion effects.",
+                "Raw and roasted food keeps you alive; meals make the difference in a fight."),
             txt("Season matters: see " + L("land/crops", "What Grows When") + ". Out of season, crops stop; a greenhouse roof or a deep farm keeps the pot full.",
                 "Animals are from Animania and are a chapter of their own: " + L("start/animals", "Animals")),
         ]),
@@ -302,6 +307,10 @@ ENTRIES = {
             ent("recruits:recruit", "Recruits follow, hold, patrol and guard. They eat from their own inventory, so give them food, and they die for good, so give them armor. Pay is emeralds per hire.", scale=0.9),
             txt("Hiring is " + B("locked") + " until the Mutant Skeleton falls: the drill that made soldiers of farmers was lost with it (" + L("tech/tier1", "Tier 1") + "). Guards are not locked; a wall can always be manned.",
                 "Recruits ride horses, crew ships and man cannons. They are how two players hold a town against a raid."),
+            txt(B("Hiring:") + " right-click a recruit with emeralds in hand; the price is on the screen. " + B("R") + " opens the command screen for everyone you own: follow, hold position, wander, aggressive or passive stance, formations. " + B("U") + " is the team screen; " + B("N") + " the recruit map.",
+                "Shift-right-click a single recruit for his own screen: inventory, equipment, upkeep."),
+            txt(B("Upkeep:") + " recruits eat from their own inventory and die for good. Give them food, armour, a shield and a bow. They gain levels and better aim with experience.",
+                B("Factions:") + " towns have names, leaders and allegiances. They ally, feud and go to war; the chat tells you when. Your own village, once founded, is a faction too. Press " + B("I") + " for the full wiki."),
         ]),
         ("caravans", "Caravans, Bounties, Markets", "bountiful:bountyboard", [
             txt(B("Bountiful") + " boards post jobs a village wants done: bring wheat, kill zombies, deliver a thing. Pay is emeralds, goods, and standing with that town.",
@@ -323,6 +332,8 @@ ENTRIES = {
             craft("spartanweaponry:iron_spear", "Reach keeps a creeper where it belongs. Pair it with a shield.", recipe2="spartanshields:iron_basic_shield"),
             txt(B("Muskets") + " (Musket Mod): flintlock muskets, pistols and blunderbusses. Loud, slow to load, and they hit like a wall. Cartridges need gunpowder, which is on the ladder (Blasting, Mutant Creeper). Recruits will carry them too.",
                 B("Corpses") + ": your items wait on your body. Nothing despawns."),
+            txt(B("How fighting works:") + " hold the attack button and you keep swinging. Each weapon has an arc and a reach: a dagger is a stab, a greatsword sweeps three mobs, a spear hits two blocks out. Two-handed weapons empty your off hand. There is no attack cooldown to time; there is distance and timing.",
+                "Shields block in a cone; a parrying dagger blocks fast. Fire from a musket breaks a shield."),
             txt(B("Dogs:") + " tame a wolf, then feed it a " + B("Training Treat") + " to make it a dog (Doggy Talents). Dogs learn talents, carry things, fight well and come back. Whistle commands are on " + B("Shift+1..4") + ".",
                 "A dog bed is a home; a dog with Pack Puppy is a backpack with teeth."),
             craft("doggytalents:training_treat", "Treat a tamed wolf; a stick on the dog opens its talents.", recipe2="doggytalents:dog_bed"),
@@ -440,6 +451,27 @@ ENTRIES = {
                 "Two Blueprints at the end of the world, and both of them about moving things."),
             rel(["bosses/cataclysm", "bosses/illagers", "bosses/incendium"], title="Who to fight"),
         ]),
+        ("charters", "Charters: Buying a Blueprint", "minecraft:emerald_block", [
+            txt("Every Blueprint can be " + B("bought") + " instead of fought for: paper, one key item, and emerald blocks by tier (2, 4, 6, 8). Slow, expensive, never blocked. The recipes are below; EMI has them too.",
+                "A charter is how a new player on an old server catches up, and how a stuck server routes around a boss nobody can beat yet."),
+            craft("peacock:charter/brass", "Brass: zinc is the key. Tier 1."),
+            craft("peacock:charter/recruiting", "Recruiting: an iron sword. Tier 1.", recipe2="peacock:charter/blasting"),
+            craft("peacock:charter/climate", "Climate control: snow. Tier 1.", recipe2="peacock:charter/cooking"),
+            craft("peacock:charter/trains", "Trains: a rail. Tier 2.", recipe2="peacock:charter/ships"),
+            craft("peacock:charter/trade", "Trading Floor: a lectern. Tier 2.", recipe2="peacock:charter/diesel"),
+            craft("peacock:charter/precision", "Precision: a cogwheel. Tier 3.", recipe2="peacock:charter/netherite"),
+            craft("peacock:charter/cannons", "Cannons: TNT, which itself needs Blasting. Tier 3."),
+            craft("peacock:charter/arcane", "Arcane industry: an enchanting table. Tier 4.", recipe2="peacock:charter/ender"),
+        ]),
+        ("what_is_locked", "What Exactly Is Locked", "minecraft:iron_door", [
+            txt("Only " + B("crafting-table recipes") + " can be locked, so the rule is: the things built " + I("from") + " a material are locked, the material is not. Anyone can mix brass in a basin; nobody without the Blueprint can make a casing or a funnel from it.",
+                "Everything whose recipe is locked is also locked to " + B("place") + ": a brass machine handed to you will not go down until you have learned it."),
+            txt(B("Brass:") + " every recipe with brass in it or brass out of it, and the mechanical crafter.$(br)" + B("Blasting:") + " everything made with gunpowder, TNT, the empty blaze burner, muskets and cartridges, powder charges.$(br)" + B("Climate:") + " thermoregulator, fans, air conditioners.$(br)" + B("Cooking:") + " Slice & Dice slicer and sprinkler."),
+            txt(B("Trains:") + " track, stations, controls, schedules, signals, train doors, railway casing, all of Steam 'n' Rails.$(br)" + B("Ships:") + " all of Eureka: helms, floaters, ballast, balloons, engines.$(br)" + B("Trading Floor:") + " the depot.$(br)" + B("Diesel:") + " all of Create Diesel Generators."),
+            txt(B("Precision:") + " everything made with a precision mechanism: arms, speed controllers, sequenced gearshifts, extendo grips.$(br)" + B("Netherite:") + " ingots and anything crafted from them (smithing is not locked).$(br)" + B("Cannons:") + " all of Create Big Cannons.$(br)" + B("Arcane:") + " Enchantment Industry and Dragons Plus.$(br)" + B("Ender:") + " ender chests, portable interfaces, item vaults, smart chutes, stockpile switches."),
+            txt(B("Recruiting") + " locks the act of hiring, not an item: emeralds on a recruit do nothing until you have learned it. Guards and your own dogs are never locked.",
+                "Hover anything grey in EMI: the tooltip names the Blueprint and the boss that holds it."),
+        ]),
     ],
     # ===================================================================================== build
     "building": [
@@ -480,6 +512,35 @@ ENTRIES = {
                 "Muskets are the handheld cousins and follow the Blasting Blueprint, not this one."),
         ]),
     ],
+    # ===================================================================================== rules
+    "rules": [
+        ("claims", "Claiming Land", "minecraft:oak_fence", [
+            txt("Press " + B("J") + " for the claim manager (FTB Chunks). Left-click a chunk to claim it for your team, right-click to unclaim. Claimed land cannot be broken, opened or blown up by anyone outside your team or its allies.",
+                "The capital is claimed by the server. Claim your own place as soon as you have one worth keeping."),
+            txt(B("Teams:") + " you are your own team until you make a party. " + B("/ftbteams party create") + " then " + B("/ftbteams party invite <name>") + " shares claims and chests. Allies see and can use your things; they can also be set to only see.",
+                "Up to 200 chunks per team. Nobody needs that many; if you do, you have built a city."),
+            txt(B("Force-loading") + " (shift-click a claimed chunk) keeps it running while nobody is online: crops grow, machines turn, animals eat. " + B("Four chunks per team") + ", hard cap. Enough for one farm or one Create line; not enough for a factory, on purpose.",
+                "The server has one game thread. What you keep loaded while asleep, everybody pays for."),
+        ]),
+        ("commands", "Commands You Have", "minecraft:command_block", [
+            txt(B("/spawn") + " walks you to the capital after a five-second warm-up; one use a minute. " + B("/back") + " returns you to where you died, once, within a while of dying. That is all the teleporting there is.",
+                "No /home, /tpa, /rtp or warps, and none will be added: distance is the game. Build a dock."),
+            txt(B("/ftbteams") + " party commands (see Claiming Land). " + B("/kubejs errors") + " if the server tells you scripts failed: paste the result to the admin.",
+                "Chat is plain chat; voice is in-game (" + L("tools/voice", "Voice Chat") + ")."),
+        ]),
+        ("what_we_dont_do", "What We Do Not Do", "minecraft:barrier", [
+            txt(B("No minimap.") + " The atlas is the map.$(br)" + B("No fast travel.") + " Rails, ships, wagons and roads.$(br)" + B("No trading halls.") + " Villagers trade well where they live well.$(br)" + B("No block griefing from cannons.") + " They hurt mobs and players; the land stays.",
+                B("No thirst.") + " Temperature is the survival layer."),
+            txt(B("Towns are capped") + " at about two dozen villagers; breeding stops when a town is full. Found another.$(br)" + B("Depots need towns:") + " a bell and four beds within 32 blocks.$(br)" + B("Technology is personal:") + " your Blueprints are yours. Trade them.",
+                "Everything on this page is enforced by the pack, not by trust. The admin can switch any of it in " + B("kubejs/config/peacock.json") + "."),
+        ]),
+        ("manners", "Playing Together", "minecraft:cake", [
+            txt("Two settlers today; a server tomorrow. The habits that scale:",
+                "Claim before you build. Mark deposits and towns on the shared atlas. Leave the capital's farms replanted. Do not force-load what you are not using. Kill a boss with friends: a Blueprint drops for every fighter, plus a spare for someone who could not come."),
+            txt("If the server stalls: note the time and what you were doing, and tell the admin. The watchdog keeps a dump; the time is what finds the cause.",
+                "If something looks wrong in a recipe or a tooltip, " + B("/kubejs errors") + " and a screenshot."),
+        ]),
+    ],
     # ===================================================================================== tools
     "tools": [
         ("controls", "Keys", "minecraft:lever", [
@@ -515,6 +576,69 @@ ENTRIES = {
                 "All optional: Options, Resource Packs. Fresh Animations is the only one that costs anything, and only in a crowd."),
         ]),
     ],
+    # ===================================================================================== mods
+    "mods": [
+        ("world", "World", "minecraft:grass_block", [
+            txt(B("Tectonic, Terralith, Biomes O' Plenty") + " shape and fill the land. " + B("Incendium") + " is the Nether, " + B("Nullscape") + " the End. " + B("Serene Seasons") + " runs the year, " + B("Tough As Nails") + " (+TAN+) the temperature, " + B("Enhanced Celestials") + " the moons.",
+                B("Geolosys") + " places ore in regional deposits. " + B("Paxi") + " loads the pack's own datapack over everything else."),
+            txt(B("Distant Horizons") + " draws the far terrain. " + B("ChoiceTheorem's Overhauled Village") + " builds the villages; " + B("Stoneholm") + " the underground ones; " + B("YUNG's") + " mineshafts, dungeons and API; " + B("Structory") + " ruins; " + B("Create Structures") + " old workshops.",
+                B("Village Spawn Point") + " puts everyone in the capital."),
+        ]),
+        ("machines", "Machines & Logistics", "create:cogwheel", [
+            txt(B("Create") + " and its family: " + B("Steam 'n' Rails") + " (trains), " + B("Big Cannons") + ", " + B("Diesel Generators") + ", " + B("Enchantment Industry") + ", " + B("Dragons Plus") + ", " + B("Trading Floor") + " (depots), " + B("Create Deco") + " and " + B("Interiors") + " (looks), " + B("Create Better Villagers") + " (trades), " + B("Slice & Dice") + " (kitchen).",
+                B("Valkyrien Skies") + " + " + B("Eureka") + " are ships; " + B("Valkyrien Pirates") + " sail them against you."),
+            txt(B("Trotting Wagons") + " and " + B("Caravans & Convoys") + " move goods by horse. " + B("Storage Drawers") + " (+Create compat) are visible bulk storage. " + B("Workshop") + " tables craft from the chests around them. " + B("Backpacked") + " is the backpack; " + B("Supplementaries") + " the sacks, ropes, pulleys and a hundred small things."),
+            txt(B("Macaw's") + " nine mods are doors, roofs, windows, fences, bridges, paths, stairs, trapdoors, lights, paintings and furniture; " + B("Every Compat") + " makes every wood work with all of it."),
+        ]),
+        ("people", "People & Towns", "minecraft:emerald", [
+            txt(B("Village Recruits") + " (the base mod) hires soldiers; its " + B("Village Expansion") + " addon gives towns names, factions, politics and growth. " + B("Guard Villagers") + " man the walls. " + B("Villager Workers") + " are hired labour. " + B("Villager Comfort") + ", " + B("Restock Balance") + " and " + B("Villager Names") + " make villagers people."),
+            txt(B("Bountiful") + " posts jobs. " + B("Doggy Talents") + " makes dogs. " + B("Animania") + " makes farm animals; " + B("Naturalist") + " wild ones; " + B("Aquaculture") + " (+Delight) fish; " + B("Farmer's Delight") + " the kitchen."),
+        ]),
+        ("fights", "Fights", "minecraft:iron_sword", [
+            txt(B("Better Combat") + " is how swinging works. " + B("Spartan Weaponry") + " and " + B("Spartan Shields") + " are the arsenal; " + B("Musket Mod") + " the guns.",
+                B("Mutant Monsters") + ", " + B("Mowzie's Mobs") + ", " + B("L_Ender's Cataclysm") + ", " + B("Illager Invasion") + ", " + B("Savage & Ravage") + ", " + B("Illage & Spillage Respillaged") + " are the bosses and the raids. " + B("Corpse") + " keeps your things when you fall."),
+        ]),
+        ("quality", "Quality of Life", "minecraft:spyglass", [
+            txt(B("EMI") + " (recipes), " + B("Jade") + " (what am I looking at), " + B("AppleSkin") + ", " + B("Mouse Tweaks") + ", " + B("Controlling") + ", " + B("Easy Anvils") + ", " + B("Visual Workbench") + ", " + B("Map Atlases") + ", " + B("Nature's Compass") + ", " + B("Locator Bar") + ", " + B("Patchouli") + " (this book), " + B("Simple Voice Chat") + ", " + B("Chat Animation") + ", " + B("No Chat Reports") + ".",
+                B("FTB Chunks / Teams / Essentials") + " are claims, parties, /spawn and /back."),
+            txt(B("Performance:") + " Embeddium, Oculus (shaders), ImmediatelyFast, Entity Culling, ModernFix, FerriteCore, Canary (server). " + B("Looks:") + " Fresh Animations, Better Leaves, Enhanced Boss Bars, xali's, Low On Fire, Falling Leaves, Particular, Wavey Capes, 3D Skin Layers, Not Enough Animations, Entity Model and Texture Features."),
+            txt(B("Under the hood:") + " KubeJS runs the pack's rules; Game Stages and Recipe Stages hold the ladder; Paxi carries the datapack; Default Options sets first-run settings; the launcher jar applies your hardware profile."),
+        ]),
+    ],
+    # ===================================================================================== faq
+    "faq": [
+        ("cant_craft", "...craft this?", "create:brass_casing", [
+            txt("The recipe shows in EMI but the table gives nothing, or the tooltip is gold: it needs a " + B("Blueprint") + " you have not learned. The tooltip names which, and who holds it. Fight the boss, trade for the sheet, or buy a " + L("tech/charters", "charter") + ".",
+                "Brass itself mixes fine; it is the things made from brass that are locked."),
+        ]),
+        ("crops", "...grow anything?", "minecraft:wheat_seeds", [
+            txt("Out of season. Hover the seeds for their seasons; put a glass roof a few blocks over the field, or farm below Y 48, and the season stops mattering. See " + L("land/crops", "What Grows When") + "."),
+        ]),
+        ("ore", "...find any ore?", "geolosys:prospectors_pick", [
+            txt("Because it is not everywhere. Look for small rock clusters on the surface (samples), craft the prospector's pick and tap stone, and read " + L("ore/deposits", "where each metal lies") + ". Iron is shallow and common; zinc is under mountains; gold in dry land. Caves have deposits deep down and chests full of clusters."),
+        ]),
+        ("minimap", "...see a minimap?", "map_atlases:atlas", [
+            txt("There is none, on purpose. Craft an atlas (" + B("M") + "), pin things (" + B("P") + "), and read the land. The locator bar shows your friends; " + B("J") + " shows claims. See " + L("rules/what_we_dont_do", "What We Do Not Do") + "."),
+        ]),
+        ("depot", "...place my trading depot?", "trading_floor:trading_depot", [
+            txt("It needs a town: a bell and at least four beds within 32 blocks. The message tells you what it found. Build the depot in a village, or make your place a village first."),
+        ]),
+        ("hire", "...hire this recruit?", "minecraft:emerald", [
+            txt("Recruiting is a Blueprint (the Mutant Skeleton's). Until you have it, emeralds do nothing. Guards (give a villager a weapon) work for everyone."),
+        ]),
+        ("cold", "...stop freezing?", "toughasnails:wool_chestplate", [
+            txt("Wool armour, two pieces per band toward Neutral; a campfire or torches nearby; stay out of deep water and off the peaks at night. Winter is three sub-seasons long. See " + L("start/temperature", "Staying Warm") + "."),
+        ]),
+        ("far_terrain", "...see the far terrain?", "minecraft:spyglass", [
+            txt("Distant Horizons needs the server to have generated the land first; a new world fills in over an hour or so, faster where people have walked. If it never appears: Options, Video, Distant Horizons, rendering on, and check your profile's radius (potato is 64 chunks)."),
+        ]),
+        ("fps", "...get more frames?", "minecraft:redstone_torch", [
+            txt("Shaders off (" + B("K") + ") is the big one. Then Distant Horizons radius, then render distance. Profiles are set in the launcher (PEACOCK_PROFILE); the " + L("tools/performance", "Performance") + " entry has the table. Macs: plain Complementary only, and " + B("low") + " is the honest tier."),
+        ]),
+        ("lost_items", "...find my things after dying?", "minecraft:skeleton_skull", [
+            txt("Your corpse holds everything where you fell. Walk back (" + B("/back") + " works once) and right-click it. Nothing despawns, but anyone can loot it. Mark the spot in the atlas before you log off."),
+        ]),
+    ],
 }
 
 def write(path: Path, data):
@@ -533,7 +657,7 @@ def check():
     for cid, entries in ENTRIES.items():
         for eid, name, icon, pages in entries:
             for i, pg in enumerate(pages):
-                text = pg.get("text", "")
+                text = re.sub(r"\$\([^)]*\)", "", pg.get("text", ""))   # formatting codes take no space on the page
                 lim = budget(pg, i == 0)
                 if pg.get("title") and pg["type"] == "patchouli:text": lim -= 40
                 if len(text) > lim:

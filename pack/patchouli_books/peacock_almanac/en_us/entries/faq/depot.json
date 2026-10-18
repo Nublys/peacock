@@ -1,0 +1,12 @@
+{
+  "name": "...place my trading depot?",
+  "icon": "trading_floor:trading_depot",
+  "category": "patchouli:faq",
+  "sortnum": 4,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "It needs a town: a bell and at least four beds within 32 blocks. The message tells you what it found. Build the depot in a village, or make your place a village first."
+    }
+  ]
+}
