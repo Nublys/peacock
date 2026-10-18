@@ -107,6 +107,10 @@ Marked `side = "server"` in `pack/mods/`, so they install here and never on a cl
   generator into the 16:58 deadlock. The cost: those chunks are real and saved (≈1–2 GB per 2 km radius of
   horizon), and exploring generates terrain for the whole DH radius over time, not just the render distance.
   Pregen first so the area around spawn is already done.
+- **Noisium** (server) — optimises the noise and surface stages of chunk generation, the part Terralith and
+  Tectonic make expensive; the only real worldgen optimiser on Forge 1.20.1 (C2ME is Fabric-only). Terrain is
+  identical with or without it. If generation ever looks wrong or a worldgen crash names `noisium`, remove it
+  first (`packwiz remove noisium`); nothing depends on it.
 - **Clumps** (both sides) — merges XP orbs. **Let Me Despawn** (+ its library Almanac) — despawns mobs sooner once
   they are far from every player and were never fought or named; the entity count is what eight players'
   loaded areas accumulate.

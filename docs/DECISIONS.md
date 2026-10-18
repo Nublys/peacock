@@ -508,4 +508,7 @@ Why things are the way they are. Add an entry when a choice would surprise someo
 - Chunk generation speed itself: there is no multithreaded-worldgen mod for Forge 1.20.1 (C2ME is Fabric);
   pregen, 8 cores, and not flying into fresh land at creative speed are the levers. Canary and ModernFix are
   already in.
+- **Noisium** added (server-only) after Aaron asked for C2ME-class chunk generation speed: C2ME is Fabric-only;
+  Noisium is the Forge option, commonly run with Terralith/Tectonic/Lithostitched, and deterministic. First
+  suspect to remove if worldgen misbehaves.
 
