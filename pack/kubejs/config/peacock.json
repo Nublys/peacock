@@ -1,9 +1,11 @@
 {
-  "_comment": "Peacock pack switches read by kubejs/server_scripts/*.js. Server-side; takes effect on /reload or restart. ladder=false disables recipe staging and place/hire gates (Blueprints still drop).",
+  "_comment": "Peacock pack switches read by kubejs/server_scripts/*.js. Server-side; takes effect on /reload or restart. ladder=false disables recipe staging and place/hire gates (Blueprints still drop). sleepPercent: players (%) that must sleep to skip the night (-1 = vanilla rule untouched). afkMinutes: minutes without moving before a name greys out in the tab list (0 = off).",
   "rumourMaps": true,
   "depotNeedsTown": true,
   "ladder": true,
   "villagerCap": true,
   "villagerCapCount": 24,
-  "caveLoot": true
+  "caveLoot": true,
+  "sleepPercent": 50,
+  "afkMinutes": 5
 }

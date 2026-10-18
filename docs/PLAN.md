@@ -241,6 +241,9 @@ and nature answered with sickness and monsters — is never stated in-game; the 
   `entity-broadcast-range-percentage` 75, `network-compression-threshold` 512.
 - ✅ **In-game profile picker** — `/peacock profile <tier> [reset]` (server command → `player.sendData` →
   client writes `kubejs/config/peacock-profile.json`); `launch.jar` reads the file first, `PEACOCK_PROFILE` second.
+- ✅ **Manners** (2026-10-18, asked by Aaron): sleep vote via `playersSleepingPercentage` 50 set on every start
+  (`sleepPercent`); AFK fade via a grey `peacock_afk` scoreboard team after 5 idle minutes (`afkMinutes`);
+  Better Tab Info (client) for TPS and ping in the tab list — TabTPS has no Forge build.
 - Open: first play of all of the above (do the ruins' chests roll? does the capital land in a sensible biome?
   do Rust Belt pieces sit flush — `start_height` assumes the heightmap is the first air block); Snow! Real
   Magic! on Create tracks (blacklist if it accumulates); whether `bountiful.decree.archivist.name` or the

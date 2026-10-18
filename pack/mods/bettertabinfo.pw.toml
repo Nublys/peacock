@@ -1,0 +1,13 @@
+name = "Better Tab Info"
+filename = "better_tab-2.2.1+1.20.1-forge.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/LS20Llnw/versions/BDQjNw8O/better_tab-2.2.1%2B1.20.1-forge.jar"
+hash-format = "sha512"
+hash = "91ea41e7bc613df09574a53cc1f9c35e555b899bf8c0c2059041fd5b21c26b6a5aeefb8f4b4f89fa7b33251c9338252cf7285da2e03ea2665a5648aad5fdb2c0"
+
+[update]
+[update.modrinth]
+mod-id = "LS20Llnw"
+version = "BDQjNw8O"

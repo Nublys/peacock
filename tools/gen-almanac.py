@@ -559,6 +559,8 @@ ENTRIES = {
         ("what_we_dont_do", "What We Do Not Do", "minecraft:barrier", [
             txt(B("No minimap.") + " The atlas is the map.$(br)" + B("No fast travel.") + " Rails, ships, wagons and roads.$(br)" + B("No trading halls.") + " Villagers trade well where they live well.$(br)" + B("No block griefing from cannons.") + " They hurt mobs and players; the land stays.",
                 B("No thirst.") + " Temperature is the survival layer."),
+            txt(B("Sleep is a vote:") + " when half the players online are in bed, the night skips; the action bar counts who is sleeping. " + B("Away:") + " five minutes without moving greys your name in the tab list with an [AFK] tag; move or talk and it clears.",
+                B("Tab") + " shows the server's TPS and everyone's ping. Twenty is healthy; if it sits below fifteen while nobody is doing anything unusual, tell the admin what everyone was doing."),
             txt(B("Towns are capped") + " at about two dozen villagers; breeding stops when a town is full. Found another.$(br)" + B("Depots need towns:") + " a bell and four beds within 32 blocks.$(br)" + B("Technology is personal:") + " your Blueprints are yours. Trade them.",
                 "Everything on this page is enforced by the pack, not by trust. The admin can switch any of it in " + B("kubejs/config/peacock.json") + "."),
         ]),

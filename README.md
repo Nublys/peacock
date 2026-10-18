@@ -136,6 +136,11 @@ hard cap — enough for a farm or one Create line while you sleep, not a factory
 No minimap. The **Atlas** (`M`) is the map, and it is shared: mark deposits, ruins and towns on it for
 everyone. The player locator bar shows friends' direction above the hotbar.
 
+### Sleeping, AFK and the tab list
+Sleep is a vote: when **half** the players online are in bed the night skips, and the action bar counts who is
+sleeping. Five minutes without moving greys your name in the tab list with an `[AFK]` tag; move or talk and it
+clears. The tab list also shows the server's TPS and everyone's ping — 20 is healthy.
+
 ### Dying
 You leave a corpse holding everything. Walk back and right-click it. Nothing despawns, but someone else
 can loot it, so say where you fell.
