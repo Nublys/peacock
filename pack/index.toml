@@ -2,7 +2,7 @@ hash-format = "sha256"
 
 [[files]]
 file = "config/DistantHorizons.toml"
-hash = "aa6514faf56fccea8b1be34148afb426e34d2450cb3b18870cad2a43b7c0e2f9"
+hash = "96cf9e06cb4278d04623e6d48062dfbc87ce87817805d4c33c5ea32aeb4e4330"
 preserve = true
 
 [[files]]
@@ -128,7 +128,7 @@ hash = "7e59e2d86bf7ed0b4d418ae539a41f8d85333e28f4a0e26c1c2778ff96031b43"
 
 [[files]]
 file = "config/defaultoptions/options.txt"
-hash = "34465c268feeb699987106a5c314d68355b30756cdc31d120215cae7d17e6f79"
+hash = "b558cccc6c78ed739c17d72a44047bb14fd9adc7bd2cb09fb27b0dc06aecb980"
 
 [[files]]
 file = "config/distraction_free_recipes-client.toml"
@@ -148,7 +148,7 @@ hash = "09ff183e061d93b79514bc171bf9118497578757e7a5c45946039487656e2619"
 
 [[files]]
 file = "config/embeddium-options.json"
-hash = "b4b0aaec74cd2c37a2d0d384a4195768d8d7cbc9f86c7d993694e394fa35664d"
+hash = "fd6d25f4e941db66fb0ded4e9a810cca9a22bfb4b3f6342bc62ebcd1970f21c5"
 preserve = true
 
 [[files]]
@@ -2275,7 +2275,7 @@ hash = "5127116c22fcfb1d88dbdc8103add51b10390d5c4991b9de8bdeda33d1eaea27"
 
 [[files]]
 file = "peacock/launch.jar"
-hash = "d83ef78da6b16f8c5c54aaa212665ce4d5adbfdb44cd82d77169f4647586adba"
+hash = "a55c354e0f08e2cd44166655891c8c46fe47bb06482dcb3068e8414b319dcc97"
 
 [[files]]
 file = "peacock/profiles/README.txt"

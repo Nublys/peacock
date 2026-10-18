@@ -45,7 +45,7 @@ public class Launch {
     static final String BOOTSTRAP = "packwiz-installer-bootstrap.jar";
     static final String BOOTSTRAP_URL =
         "https://github.com/packwiz/packwiz-installer-bootstrap/releases/latest/download/packwiz-installer-bootstrap.jar";
-    static final String DEFAULT_PROFILE = "medium";
+    static final String DEFAULT_PROFILE = "low";
     static final String KEYS = ".keys";
 
     static Path mcDir, peacockDir, stateFile;
