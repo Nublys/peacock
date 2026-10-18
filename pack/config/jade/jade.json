@@ -1,0 +1,13 @@
+{
+  "general": {
+    "itemModNameTooltip": false
+  },
+  "overlay": {
+    "overlayPosX": 0.5,
+    "overlayPosY": 0.9,
+    "overlayScale": 0.7,
+    "overlayAnchorX": 0.5,
+    "overlayAnchorY": 0.0,
+    "alpha": 0.6
+  }
+}

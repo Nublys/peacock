@@ -74,7 +74,9 @@ COMMON_KEYS = {
 # Extra *.keys files written into every tier (same content). Jade: a smaller, quieter block/entity overlay
 # and no mod-name line on item tooltips (Aaron, 2026-10-17: tooltips get in the way; the hotbar stays).
 COMMON_FILES = {
-    "config/jade/jade.json.keys": '"overlayScale": 0.7\n"alpha": 0.6\n"itemModNameTooltip": false\n',
+    # overlayPosY 0.9 (1.0 is the top edge) keeps the overlay clear of the locator bar; pack/config/jade/jade.json
+    # ships the same values in Jade's nested layout so a flat keys-only file never has to stand in for it
+    "config/jade/jade.json.keys": '"overlayScale": 0.7\n"alpha": 0.6\n"overlayPosY": 0.9\n"itemModNameTooltip": false\n',
     # the locator bar at half size (Aaron, 2026-10-18); the shipped config/locatorbar.json carries the same
     "config/locatorbar.json.keys": '"scale": 0.5\n',
 }

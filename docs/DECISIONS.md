@@ -480,3 +480,16 @@ Why things are the way they are. Add an entry when a choice would surprise someo
   row starves. The calendar now only moves while someone is playing, so the season anyone sees is one the
   group actually lived through. The day/night cycle is vanilla and unaffected.
 
+## First flight fixes (2026-10-18, Aaron's test world)
+- **Capital is always walled.** Only CTOV's four fortified variants (plains, taiga, swamp, mesa) are capital
+  candidates; the roll that gave an unwalled savanna capital cannot happen again. Variants accept any
+  village-able biome, so a plains-walled capital in a savanna is intended.
+- **Bounty posts** along the capital's streets (weight 3 in every CTOV deco pool): the single gazebo off the
+  town centre often fails to fit, and "I can't find a bounty board" was the result.
+- **Jade sits below the locator bar** (`overlayPosY` 0.9) and ships as a nested `config/jade/jade.json` so the
+  flat keys file is only ever an update, never the whole config.
+- **Chunk Pregenerator** (Speiger, CurseForge, server-only) for real-chunk pregen: chunk loading on fresh
+  terrain is the complaint; DH's own pregen then reads chunks instead of generating them. Chunky stays out
+  (DH binds to its API and crashes). The tab list covering the locator bar while Tab is held is left alone.
+- **FallingTree** for whole-tree felling (Aaron asked for a timber mod); both sides, defaults.
+

@@ -110,7 +110,8 @@ each boss lives; **rumour maps** from outposts, cartographers and bounty boards 
 ### Building and getting around
 There is **no fast travel** — no /home, /tpa or warps, only `/spawn` back to the capital (slowly) and
 `/back` after a death. Distance is the game: roads, wagons, ships (Valkyrien Skies — ships actually
-sail), and eventually trains. Create is the industrial backbone; Macaw's furniture, roofs, bridges and
+sail), and eventually trains. Trees fall whole when you chop the bottom log (FallingTree; sneak to take a
+single log). Create is the industrial backbone; Macaw's furniture, roofs, bridges and
 paths are for making places look like places. Cannons hurt mobs and players, never the land.
 
 ### Claims and keeping things running

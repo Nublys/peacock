@@ -92,14 +92,15 @@ Marked `side = "server"` in `pack/mods/`, so they install here and never on a cl
 - **FTB Essentials** (server) — `defaultconfigs/ftbessentials-server.snbt`: only `/spawn` (60 s cooldown,
   5 s warm-up) and `/back` after a death. Homes, warps, tpa, rtp and the virtual crafting/ender-chest
   commands are off: no fast travel is a design rule. Admin commands (`/tpl`, `/fly`, `/invsee`…) stay.
-- **No terrain pre-generation.** Chunky was tried twice and is out for good: DH 3.3.3 crashes the server when
-  Chunky drives generation (2026-10-17), and the second attempt (2026-10-18) was reverted before it reached a
-  server for that reason. Distant Horizons generates its own LODs (`dh pregen start minecraft:overworld 0 0 128`
-  from the console builds them ahead of players — LODs only, not world chunks; the **radius is in chunks**, so
-  128 is 2 km each way, about 65k chunks, roughly a night at the 3–5 chunks/s this CPU manages. `dh pregen status`
-  / `dh pregen stop`. A radius of 3000 means 48 km and a 2,800-hour ETA — stop it and restart with 128.) and Dynamic View trims
-  simulation distance while people explore. If exploration lag becomes the problem with eight players, the
-  honest fix is a short "exploration evening" with the view distance floor lowered, not a pregen mod.
+- **Chunk Pregenerator** (server) — real-chunk pre-generation. Chunky is out for good (Distant Horizons 3.3.3 binds to
+  Chunky's API and crashes the server); DH has no hook into this one. With nobody on, from the console:
+  ```
+  pregen start gen radius peacock SQUARE 0 0 128 minecraft:overworld
+  ```
+  (radius in **chunks**: 128 = 2 km each way, ~65k chunks, a few hours on 8 cores; `pregen taskList` to watch,
+  `pregen stop peacock` to stop, `pregen help` for the exact syntax of the installed version). Run it **before**
+  the DH pregen: `dh pregen start minecraft:overworld 0 0 128` then only reads chunks instead of generating them
+  and finishes in a fraction of the time. The mod idles when no task runs; it can stay in the pack.
 - **Clumps** (both sides) — merges XP orbs. **Let Me Despawn** (+ its library Almanac) — despawns mobs sooner once
   they are far from every player and were never fought or named; the entity count is what eight players'
   loaded areas accumulate.

@@ -250,6 +250,8 @@ and nature answered with sickness and monsters — is never stated in-game; the 
 - ✅ **Manners** (2026-10-18, asked by Aaron): sleep vote via `playersSleepingPercentage` 50 set on every start
   (`sleepPercent`); AFK fade via a grey `peacock_afk` scoreboard team after 5 idle minutes (`afkMinutes`);
   Better Tab Info (client) for TPS and ping in the tab list — TabTPS has no Forge build.
+- ✅ **First flight** (2026-10-18): capital walled-only + bounty posts, Jade under the locator bar, locator bar at
+  half size, Chunk Pregenerator (server) runbook, FallingTree, seasons paused while nobody is on, DH 3 threads.
 - Open: first play of all of the above (do the ruins' chests roll? does the capital land in a sensible biome?
   do Rust Belt pieces sit flush — `start_height` assumes the heightmap is the first air block); Snow! Real
   Magic! on Create tracks (blacklist if it accumulates); whether `bountiful.decree.archivist.name` or the

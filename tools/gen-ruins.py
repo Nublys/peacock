@@ -55,7 +55,9 @@ BIOMES = ("beach", "dark_forest", "jungle", "mesa", "mountain", "mushroom",
           "swamp", "desert", "plains", "savanna", "snowy", "taiga")
 # CTOV biome start pool -> fortified town centre exists
 FORTIFIED = {"plains", "mesa", "swamp", "taiga"}
-CAPITAL_BIOMES = [b for b in BIOMES if b != "mushroom"]
+# the capital is always walled: only CTOV's fortified variants (plains, taiga, swamp, mesa) are candidates,
+# and since 2026-10-18 every variant accepts any village-able biome, so this costs nothing
+CAPITAL_BIOMES = ["plains", "taiga", "swamp", "mesa"]
 # vanilla villager pool -> zombie villager type
 VILLAGER_TYPES = {"plains": "plains", "desert": "desert", "savanna": "savanna",
                   "snowy": "snow", "taiga": "taiga"}
@@ -417,15 +419,14 @@ def main() -> None:
         src["biomes"] = "#peacock:capital_biomes"
         write_json(f"data/peacock/worldgen/structure/capital/{biome}.json", src)
         cap_ids.append(f"peacock:capital/{biome}")
-    CAPITAL_WEIGHTS = {"plains": 8, "taiga": 4, "savanna": 2, "snowy": 1, "desert": 2, "swamp": 1, "mesa": 1,
-                       "mountain": 1, "beach": 1, "dark_forest": 1, "jungle": 1}
+    CAPITAL_WEIGHTS = {"plains": 6, "taiga": 4, "swamp": 1, "mesa": 1}
     write_json("data/peacock/worldgen/structure_set/capital.json", {
         "structures": [{"structure": s, "weight": CAPITAL_WEIGHTS.get(s.rsplit("/", 1)[1], 1)} for s in cap_ids],
         "placement": {"type": "minecraft:concentric_rings", "distance": 2, "spread": 1, "count": 1,
                       "preferred_biomes": "#peacock:capital_biomes", "salt": 20260918},
     })
     biome_tags = set()
-    for biome in CAPITAL_BIOMES:
+    for biome in [b for b in BIOMES if b != "mushroom"]:
         src = json.loads(z.read(f"data/ctov/worldgen/structure/large/village_{biome}.json"))
         biome_tags.add(src["biomes"])
     write_json("data/peacock/tags/worldgen/biome/capital_biomes.json",

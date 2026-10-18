@@ -255,6 +255,10 @@ file = "config/illageandspillage-common.toml"
 hash = "34fe7a49b3d394d48bba9fd2fbb69d1cf2d15773f18d22ca1357a21c4c6657a6"
 
 [[files]]
+file = "config/jade/jade.json"
+hash = "d23e1950130af620dcb9c926efe7a7483fb08f4de1f5897b6cb5c1e984bdfea8"
+
+[[files]]
 file = "config/lithostitched.json"
 hash = "d8a63933ec4757186a594debea59dd35724a0a895fe601b324f96217c28312df"
 
@@ -329,7 +333,7 @@ hash = "3b6236845f6a5ff8804487b63b0d74305b91316dc9a008362838607b0be3bd8e"
 
 [[files]]
 file = "config/paxi/datapacks/peacock-ruins.zip"
-hash = "20c29643a285f9c93499faedd6d4a6ecd078fbf09e42699e1178edc87c048778"
+hash = "9547769a7aec6c2bd14180fa318367b029ee9f920d3b2cdb7f77c5438677cf60"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/animania/tags/worldgen/biome/amphibian_habitats.json"
@@ -1167,8 +1171,18 @@ hash = "46772a253f1b7ba2ba9424716bc87dec5fd9da5aa781e8074047d42484b8bceb"
 metafile = true
 
 [[files]]
+file = "mods/carbon-config.pw.toml"
+hash = "7de04ff833cd43e27843accf8a000dbf5d40f437e2673ce54b795a9e121f1db1"
+metafile = true
+
+[[files]]
 file = "mods/chatanimation.pw.toml"
 hash = "259d7b1bb82931ccc8438933c6627e14c1176091549e48096a7f62b3fca45041"
+metafile = true
+
+[[files]]
+file = "mods/chunkpregenerator.pw.toml"
+hash = "2c06550d2a1462f84c928af2a8fb4bd8f612da387aca06681dc46d2b6231bb24"
 metafile = true
 
 [[files]]
@@ -1424,6 +1438,11 @@ metafile = true
 [[files]]
 file = "mods/fallingleavesforge.pw.toml"
 hash = "9806aa317db69a173965d07d543ac69420713e7c6460641175ba26b68a416729"
+metafile = true
+
+[[files]]
+file = "mods/fallingtree.pw.toml"
+hash = "c3855a5011cc263726532999f35c8691db9fa60b9d470758dd826d25c29ed4cb"
 metafile = true
 
 [[files]]
@@ -2313,7 +2332,7 @@ hash = "6888171d79f75c6800cecb1e2918532d0bcaff876d20c985f6abb3aca7c273a0"
 
 [[files]]
 file = "peacock/profiles/high/config/jade/jade.json.keys"
-hash = "271a064a707881f47cd6213cfec07dc1be5cb19b0c3440f88b5a40557d8f446c"
+hash = "446a3fc3204cbed5d80279cbd735dfaa57208689ae83602185062172d776f1f1"
 
 [[files]]
 file = "peacock/profiles/high/config/locatorbar.json.keys"
@@ -2349,7 +2368,7 @@ hash = "3b525e855da59a2c64278c73210699e88a599fe6979a79840d75cf8356759ec4"
 
 [[files]]
 file = "peacock/profiles/low/config/jade/jade.json.keys"
-hash = "271a064a707881f47cd6213cfec07dc1be5cb19b0c3440f88b5a40557d8f446c"
+hash = "446a3fc3204cbed5d80279cbd735dfaa57208689ae83602185062172d776f1f1"
 
 [[files]]
 file = "peacock/profiles/low/config/locatorbar.json.keys"
@@ -2385,7 +2404,7 @@ hash = "931c5424e81f89213d30aeebe3aaab3c3b2d355f654fac890b9df8997c8a1828"
 
 [[files]]
 file = "peacock/profiles/medium/config/jade/jade.json.keys"
-hash = "271a064a707881f47cd6213cfec07dc1be5cb19b0c3440f88b5a40557d8f446c"
+hash = "446a3fc3204cbed5d80279cbd735dfaa57208689ae83602185062172d776f1f1"
 
 [[files]]
 file = "peacock/profiles/medium/config/locatorbar.json.keys"
@@ -2421,7 +2440,7 @@ hash = "3b525e855da59a2c64278c73210699e88a599fe6979a79840d75cf8356759ec4"
 
 [[files]]
 file = "peacock/profiles/potato/config/jade/jade.json.keys"
-hash = "271a064a707881f47cd6213cfec07dc1be5cb19b0c3440f88b5a40557d8f446c"
+hash = "446a3fc3204cbed5d80279cbd735dfaa57208689ae83602185062172d776f1f1"
 
 [[files]]
 file = "peacock/profiles/potato/config/locatorbar.json.keys"
@@ -2457,7 +2476,7 @@ hash = "6888171d79f75c6800cecb1e2918532d0bcaff876d20c985f6abb3aca7c273a0"
 
 [[files]]
 file = "peacock/profiles/ultra/config/jade/jade.json.keys"
-hash = "271a064a707881f47cd6213cfec07dc1be5cb19b0c3440f88b5a40557d8f446c"
+hash = "446a3fc3204cbed5d80279cbd735dfaa57208689ae83602185062172d776f1f1"
 
 [[files]]
 file = "peacock/profiles/ultra/config/locatorbar.json.keys"
