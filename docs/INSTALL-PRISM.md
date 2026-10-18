@@ -18,8 +18,9 @@ Add Instance → **Import** → paste this URL (or download the file and browse 
 https://raw.githubusercontent.com/Nublys/peacock/main/dist/Peacock-Prism.zip
 ```
 
-That gives you an instance called **Peacock** with Minecraft 1.20.1, Forge 47.4.16, 6 GB of memory, the
-right Java flags, and the pre-launch step that keeps the pack current. It contains no mods yet.
+That gives you an instance (Prism names it after the zip, `Peacock-Prism`; rename it if you like) with
+Minecraft 1.20.1, Forge 47.4.16, 6 GB of memory, the right Java flags, and the pre-launch step that keeps the
+pack current. It contains no mods yet.
 
 If you have **32 GB** of RAM, right-click the instance → Edit → Settings → Memory → maximum **8192** MiB.
 Leave 6144 on a 16 GB machine; more is not faster.

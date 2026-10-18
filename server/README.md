@@ -8,7 +8,9 @@ Everything here is for the host. Players never see this folder.
    `server/pterodactyl/egg-peacock.json`.
 2. **Create the server** from that egg. Allocation: one port (default 25565). Wings opens it
    for TCP **and** UDP, and Simple Voice Chat is configured to share the game port, so no
-   second allocation is needed. Memory: 10–12 GB; the startup gives Java 75% of it (`PEACOCK_HEAP_PERCENT` to change).
+   second allocation is needed. Resources for 6–8 players: **8 vCores** (worldgen, DH, physics and GC run beside the
+   one game thread) and **16 GB**, of which the startup gives Java 75% (`PEACOCK_HEAP_PERCENT` to change); a 24 GB
+   container should pin the heap at 12 GB with `PEACOCK_HEAP_PERCENT=50` — a bigger heap only lengthens GC pauses.
    Docker image: `ghcr.io/pterodactyl/yolks:java_17`.
 3. **Install** runs automatically (Forge 1.20.1-47.4.16, `eula.txt`, the `server.properties`
    template, JVM args, packwiz bootstrap, first server-side sync). Watch the install log; it
@@ -61,7 +63,7 @@ the startup command copies them over the server root after each sync:
 | file | why |
 |---|---|
 | `config/DistantHorizons.toml` | `chunkGeneratorMode = "FEATURES"` — the server generates LODs; 2 threads, request rate limits |
-| `config/dynamicview.json` | Dynamic View: simulation 5–12 / view 8–10 around a 42 ms tick |
+| `config/dynamicview.json` | Dynamic View: simulation 5–10 / view 8–10 around a 36 ms tick |
 
 Voice chat is **not** overridden: edit `config/voicechat/voicechat-server.properties` on the server by
 hand (`port=` your dedicated UDP allocation, or `-1` to share the game port) and it stays.
