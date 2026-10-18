@@ -249,6 +249,30 @@ def zombie_piece(vtype: str) -> bytes:
     return buf.getvalue()
 
 
+def bounty_post_piece() -> bytes:
+    """A 3x3 plaza: a bounty board on a dirt-path square with a lantern post, for the capital's streets."""
+    pal = [{"Name": "minecraft:dirt_path"}, {"Name": "bountiful:bountyboard"},
+           {"Name": "minecraft:oak_fence", "Properties": {}}, {"Name": "minecraft:lantern", "Properties": {"hanging": "false"}},
+           {"Name": "minecraft:potted_dandelion"}]
+    blocks = []
+    for x in range(3):
+        for z in range(3):
+            blocks.append({"pos": [x, 0, z], "state": 0})
+    blocks += [{"pos": [1, 1, 1], "state": 1}, {"pos": [2, 1, 2], "state": 2}, {"pos": [2, 2, 2], "state": 3},
+               {"pos": [0, 1, 2], "state": 4}]
+    f = nbtlib.File({
+        "size": T.List[T.Int]([T.Int(3), T.Int(3), T.Int(3)]),
+        "palette": T.List[T.Compound]([T.Compound({k: (T.String(v) if isinstance(v, str) else T.Compound({a: T.String(b) for a, b in v.items()}))
+                                                   for k, v in p.items()}) for p in pal]),
+        "blocks": T.List[T.Compound]([T.Compound({"pos": T.List[T.Int]([T.Int(i) for i in b["pos"]]), "state": T.Int(b["state"])}) for b in blocks]),
+        "entities": T.List[T.Compound]([]),
+        "DataVersion": T.Int(3465),
+    })
+    buf = io.BytesIO()
+    f.save(buf, gzipped=True)
+    return buf.getvalue()
+
+
 def spawn_overrides(state: str):
     if state == "ruin_a":
         return {"monster": {"bounding_box": "full", "spawns": [
@@ -407,6 +431,26 @@ def main() -> None:
     write_json("data/peacock/tags/worldgen/biome/capital_biomes.json",
                {"replace": False, "values": sorted(biome_tags)})
     write_json("data/peacock/tags/worldgen/structure/capital.json", {"replace": False, "values": cap_ids})
+
+    # Bounty posts: CTOV only places Bountiful's gazebo off the town centre, and that one piece often fails to
+    # fit. A small board-on-a-plaza piece is added to every CTOV deco pool (weight 3 against ~25) so the capital
+    # ends up with a few boards along its streets. These overrides of CTOV's own pools only reach the capital —
+    # the ruins are copies made from the jars above, and a dead town posts nothing.
+    (OUT / "data/peacock/structures/capital").mkdir(parents=True, exist_ok=True)
+    (OUT / "data/peacock/structures/capital/bounty_post.nbt").write_bytes(bounty_post_piece())
+    write_json("data/peacock/worldgen/template_pool/capital/bounty_post.json", {
+        "name": "peacock:capital/bounty_post", "fallback": "minecraft:empty",
+        "elements": [{"weight": 1, "element": {"element_type": "minecraft:single_pool_element", "projection": "rigid",
+                                                "processors": "minecraft:empty", "location": "peacock:capital/bounty_post"}}]})
+    deco_pools = [n for n in names if re.fullmatch(r"data/ctov/worldgen/template_pool/village/[a-z_]+/decos?\.json", n)
+                  and not any(k in n for k in ("/underground/", "/christmas/", "/halloween/"))]
+    for n in deco_pools:
+        pool = json.loads(z.read(n))
+        pool["elements"] = list(pool.get("elements", [])) + [{"weight": 3, "element": {
+            "element_type": "minecraft:single_pool_element", "projection": "rigid",
+            "processors": "minecraft:empty", "location": "peacock:capital/bounty_post"}}]
+        write_json(n, pool)
+    print(f"bounty posts added to {len(deco_pools)} CTOV deco pools (capital only)")
     ruin_ids = [e["structure"] for e in set_entries]
     write_json("data/peacock/tags/worldgen/structure/ruins.json", {"replace": False, "values": ruin_ids})
     write_json("data/minecraft/tags/worldgen/structure/village.json",
