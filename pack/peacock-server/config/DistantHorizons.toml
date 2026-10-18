@@ -37,7 +37,7 @@ _version = 5
 	#
 	# How many LOD generation requests per second should a client send? 
 	# Also limits the number of client requests allowed to stay in the server's queue.
-	generationRequestRateLimit = 10
+	generationRequestRateLimit = 6
 	#
 	# How many LOD sync requests per second should a client send? 
 	# Also limits the amount of player's requests allowed to stay in the server's queue.
@@ -278,7 +278,7 @@ _version = 5
 		# but may cause server/simulation lag. 
 		# Note: unlike other modes this option DOES save generated chunks to 
 		# Minecraft's region files.
-		chunkGeneratorMode = "PRE_EXISTING_ONLY"
+		chunkGeneratorMode = "INTERNAL_SERVER"
 		#
 		# Defines how LODs will be generated 
 		# outside the vanilla render distance. 

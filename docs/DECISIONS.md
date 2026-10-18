@@ -499,10 +499,12 @@ Why things are the way they are. Add an entry when a choice would surprise someo
   running thread released — a worldgen deadlock between two generators touching the same chunk section.
   DH's own config says of `FEATURES`: "may cause world generator bugs or instability when paired with certain
   world generator mods". Terralith, Tectonic, CTOV and three structure mods are those mods.
-- Server DH is `PRE_EXISTING_ONLY`: LODs come from chunks the server generated (by play or by Chunk
-  Pregenerator). No off-thread terrain generation, so this class of deadlock is gone. Cost: the far horizon
-  only exists where chunks exist, which the 2 km pregen covers around spawn. If the hang recurs in this mode
-  the generator race was not the cause and the next suspect is the worker pool itself (thread dump again).
+- Server DH is `INTERNAL_SERVER` (Aaron vetoed `PRE_EXISTING_ONLY`: "DH needs to be able to see out if players
+  explore"). DH asks the server to generate the chunks the horizon needs — one generator, the vanilla worker
+  pool, so the cross-thread race is gone — rate-limited to 6 requests/s per player with back-off when TPS
+  drops. Those chunks are real and saved, so the world grows to the DH radius around wherever people go
+  (≈1–2 GB per 2 km of horizon). If the hang recurs in this mode the generator race was not the cause and
+  the next suspect is the worker pool itself (thread dump again).
 - Chunk generation speed itself: there is no multithreaded-worldgen mod for Forge 1.20.1 (C2ME is Fabric);
   pregen, 8 cores, and not flying into fresh land at creative speed are the levers. Canary and ModernFix are
   already in.
