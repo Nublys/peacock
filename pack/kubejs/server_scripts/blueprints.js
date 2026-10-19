@@ -41,7 +41,7 @@ ServerEvents.recipes(event => {
   Object.keys(L).forEach(rung => {
     const r = L[rung]
     const ingredients = ['minecraft:paper', r.key]
-    for (let i = 0; i < global.LADDER_TIER_PRICE[r.tier]; i++) ingredients.push('minecraft:emerald_block')
+    for (var i = 0; i < global.LADDER_TIER_PRICE[r.tier]; i++) ingredients.push('minecraft:emerald_block')
     event.shapeless(blueprint(rung), ingredients).id('peacock:charter/' + rung)
   })
 

@@ -7,8 +7,8 @@
 ;(() => {
 function seasonName(level) {
   try {
-    const helper = Java.loadClass('sereneseasons.api.season.SeasonHelper')
-    const sub = String(helper.getSeasonState(level).getSubSeason())      // e.g. EARLY_SPRING
+    var helper = Java.loadClass('sereneseasons.api.season.SeasonHelper')
+    var sub = String(helper.getSeasonState(level).getSubSeason())      // e.g. EARLY_SPRING
     return sub.toLowerCase().split('_').join(' ')
   } catch (e) {
     return null

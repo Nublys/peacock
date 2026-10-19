@@ -22,8 +22,8 @@ function countTown(level, center) {
   const r2 = RADIUS * RADIUS
   const minCx = (center.x - RADIUS) >> 4, maxCx = (center.x + RADIUS) >> 4
   const minCz = (center.z - RADIUS) >> 4, maxCz = (center.z + RADIUS) >> 4
-  for (let cx = minCx; cx <= maxCx; cx++) {
-    for (let cz = minCz; cz <= maxCz; cz++) {
+  for (var cx = minCx; cx <= maxCx; cx++) {
+    for (var cz = minCz; cz <= maxCz; cz++) {
       if (!level.hasChunk(cx, cz)) continue
       level.getChunk(cx, cz).getBlockEntities().values().forEach(be => {
         const p = be.getBlockPos()

@@ -1017,7 +1017,7 @@ hash = "6c16de3bde6076f6ec0da4ebd480c8735ccf8fa032f4e85e95190172687d008b"
 
 [[files]]
 file = "kubejs/server_scripts/blueprints.js"
-hash = "7970e178f45aca6cdaf4de24ee36e806505d03534a5f567e97e535c107a34535"
+hash = "3124630fabe5d255e997dfb4b00c9a823506380dec19fee7e23404fab6f2fa4d"
 
 [[files]]
 file = "kubejs/server_scripts/capital_wall.js"
@@ -1049,7 +1049,7 @@ hash = "48bf7aaeaaf72d70b2e35a0df124c892d67e49906b4ca89a1dd25bed79e03c83"
 
 [[files]]
 file = "kubejs/server_scripts/trading_depot_town.js"
-hash = "65671ac7cb2ed9b03bc874807880ee4b56d84ef7715edc8c1f6ee660504967e9"
+hash = "967b7eb67f207c89ac60e1ded0ac0ac1c8498eb3ef46f2f169bdac518a33d304"
 
 [[files]]
 file = "kubejs/server_scripts/villager_cap.js"
@@ -1057,7 +1057,7 @@ hash = "a0b8b788b06450f53a96ac9e325bd8c6449edd8ecfd1d5deb50e50a43f34c2d2"
 
 [[files]]
 file = "kubejs/server_scripts/welcome.js"
-hash = "e96838c71a0c3cd315c1e86557f2b28073fea465d711378e89c67f8f04615532"
+hash = "0e9b4adad084519d84321cd28c1352242c4b2d33efc06ffbd07b4e0afd52de40"
 
 [[files]]
 file = "kubejs/startup_scripts/peacock_ladder.js"
