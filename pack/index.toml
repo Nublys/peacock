@@ -2902,3 +2902,23 @@ metafile = true
 file = "shaderpacks/complementary-unbound.pw.toml"
 hash = "418cc4915cc477c39e2081a15a3c388cbd9d9e5983072eeb47fbb6910d866ba4"
 metafile = true
+
+[[files]]
+file = "shaderpacks/makeup-ultra-fast-shaders.pw.toml"
+hash = "992fb67acaae4657efbe62d17dd405b5f05f95d63b63eaa902a09010991bff99"
+metafile = true
+
+[[files]]
+file = "shaderpacks/miniature-shader.pw.toml"
+hash = "ef5725a80fad1f9ffe4715a36772e12bf1ca0415894016fc834b0014beba1455"
+metafile = true
+
+[[files]]
+file = "shaderpacks/sildurs-vibrant-lite.pw.toml"
+hash = "9c0c29f2737f6f3cc37a290bd139a76825a4afec35b2e6598d2d3debcf3ce8f1"
+metafile = true
+
+[[files]]
+file = "shaderpacks/sildurs-vibrant-medium.pw.toml"
+hash = "3bd069ff29e6ee9429ba16e4aeb7c810ede30ae68b5fc7ae02af4333b54076fe"
+metafile = true

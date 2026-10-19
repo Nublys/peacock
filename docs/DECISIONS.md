@@ -706,3 +706,11 @@ armour, waterskins, Serene Seasons integration (±15 °C summer/winter by defaul
   (`keepDefaultVillageTagBackup: false`): without a capital the spawn stays at the origin, and on a new world the
   reroll takes over. The "crash" on stopping was Forge failing to save `world/serverconfig/valkyrienskies/
   vs_eureka.toml` because the world folder had already been deleted while the server was still running — harmless.
+
+## Lighter shader packs shipped for testing (2026-10-19)
+Aaron: "Just install them all and let me play around with them". Added, client-only, selectable in the shader menu
+(O) — no tier uses them yet: **MakeUp – Ultra Fast 9.5g** (every effect optional; Distant Horizons programs in its
+source), **Sildur's Vibrant 2.02 Lite** and **Medium** (Distant Horizons support listed), and **Miniature Shader
+2.19** (very light; no sign of Distant Horizons support, so far terrain may look wrong with it). Sildur's files are
+renamed without spaces (validate.py rule). Once a winner is picked, the low tier's `oculus.properties` shader pack
+and its per-pack settings go into tools/gen-profiles.py like the Complementary presets.
