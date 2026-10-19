@@ -1009,7 +1009,7 @@ hash = "b5d72b6da9c50a6a18cd9bbec34c01e09a4bf8ebebaf71cb03ec093bbaafbeba"
 
 [[files]]
 file = "kubejs/config/peacock.json"
-hash = "7d5db68b86a2461b0bcb1ffdbb49d196d970998c166f8c5e53aaa2f698c40807"
+hash = "054d0e82b7e5e1f66c7fac46805aee4c327b7b4ef52271d116a94e1eef6103d5"
 
 [[files]]
 file = "kubejs/server_scripts/almanac.js"

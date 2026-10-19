@@ -607,3 +607,11 @@ existing installs get it too:
   before any height, samples heights on a 3×3 grid with early exits, and logs progress (spots, heights, ms per
   height) every 5 s. Only one founding runs at a time. Tested in the Rhino harness with a stub scheduler and 5 ms
   height reads: 6 ticks, longest slice 60 ms.
+- **Ninth run (22:18): the sliced survey worked, the build did not.** Survey: 47 s in 138 ticks, but each terrain
+  height read took **77 ms** (spawn prep ran at 2.7 chunks/s the same boot — the host looks CPU-starved), so a
+  "slice" was up to ~0.7 s and the server fell 28 s behind; it also found 0/25 gentle biomes anywhere, because it
+  read biomes at y≈68, which under Tectonic's raised terrain is underground (Terralith cave biomes). Then the
+  jigsaw layout took 41.7 s in one tick, and `/forceload add` generated the 225-chunk footprint *synchronously*
+  on the server thread — the watchdog killed the server at 60 s. The founder no longer runs at boot
+  (`capitalFound: false`); the same y=0 problem is why vanilla's ring placement never nudges the capital onto
+  `preferred_biomes` in this pack (it searches biomes at y=0, which Terralith fills with cave biomes).
