@@ -468,18 +468,9 @@ def main() -> None:
                {"replace": False, "values": sorted(biome_tags)})
     write_json("data/peacock/tags/worldgen/structure/capital.json", {"replace": False, "values": cap_ids})
 
-    # Bounty posts: a small board-on-a-plaza piece (with the `building_entrance` jigsaw a street piece needs to
-    # attach it) added to the capital's house pool at ~5% weight, so a capital has two or three boards along
-    # its streets. Only Terralith's fortified pool is touched; a dead town posts nothing.
-    (OUT / "data/peacock/structures/capital").mkdir(parents=True, exist_ok=True)
-    (OUT / "data/peacock/structures/capital/bounty_post.nbt").write_bytes(bounty_post_piece())
-    houses = json.loads(tj.read("data/terralith/worldgen/template_pool/village/fortified/houses.json"))
-    total = sum(int(e.get("weight", 1)) for e in houses.get("elements", []))
-    houses["elements"] = list(houses.get("elements", [])) + [{"weight": max(1, round(total * 0.05)), "element": {
-        "element_type": "minecraft:single_pool_element", "projection": "rigid",
-        "processors": "minecraft:empty", "location": "peacock:capital/bounty_post"}}]
-    write_json("data/terralith/worldgen/template_pool/village/fortified/houses.json", houses)
-    print("capital: terralith:fortified_village (biomes widened, rare_village silenced, bounty posts in its house pool)")
+    # (Bounty boards are NOT pool-injected: a 3x3 board piece fits wherever a house does not, so it won most
+    # contested slots and the capital had twenty boards. capital_wall.js places one inside each gate instead.)
+    print("capital: terralith:fortified_village (biomes widened, rare_village silenced)")
     ruin_ids = [e["structure"] for e in set_entries]
     write_json("data/peacock/tags/worldgen/structure/ruins.json", {"replace": False, "values": ruin_ids})
     write_json("data/minecraft/tags/worldgen/structure/village.json",
