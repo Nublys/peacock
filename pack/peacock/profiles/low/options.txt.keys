@@ -10,3 +10,8 @@ key_key.ftbchunks.claim_manager:key.keyboard.j
 key_key.ftbchunks.toggle_minimap:key.keyboard.unknown
 key_key.ftbchunks.add_waypoint:key.keyboard.unknown
 key_key.ftbchunks.waypoint_manager:key.keyboard.unknown
+onboardAccessibility:false
+skipMultiplayerWarning:true
+joinedFirstServer:true
+tutorialStep:none
+realmsNotifications:false

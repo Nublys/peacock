@@ -345,7 +345,7 @@
 	#for the file. Turn this off to make the addon never touch the network.
 	#Default: true
 	#
-	updateCheckEnabled = true
+	updateCheckEnabled = false
 	#Where to read the version file from. This is the SAME file Forge's own
 	#mod-list update indicator uses (the 'updateJSONURL' format), so one file
 	#serves both.

@@ -583,3 +583,19 @@ Why things are the way they are. Add an entry when a choice would surprise someo
   world; fixed with a literal `TAU`. The same harness confirmed the earlier trap: a `const`/`let` inside a `try`
   block throws "redeclaration of var" at run time. `tools/validate.py` now fails on both patterns in any KubeJS
   script (CI runs it).
+
+## Boot popups, join chat, boss bars (2026-10-18, late)
+"Lots of pop ups to click through" at boot, "spammed with things from mods" on join, "a boss bar covered a
+quarter of the screen". Turned off, in the shipped file and — for `preserve = true` files — as profile keys so
+existing installs get it too:
+- Distant Horizons: the auto-updater (an update popup at boot; players get DH through the pack) and the startup
+  chat warnings (low memory, mod compatibility, vanilla render distance, pool memory, GC, slow world gen, replay).
+- Embeddium's donation prompt; Euphoria Patcher's popup, shader in-game message and update checker; Reworked
+  Locator Bar's one-time "unsupported version" warning; Colorwheel's "incompatible shaderpack" chat line; EMF's
+  reload-error toast; No Chat Reports' Realms warning and signing-request chat line; vanilla Realms notifications
+  (and the accessibility/multiplayer-warning/tutorial first-launch screens, already off, now also profile keys).
+- Update notices to ops on join: Animania, Collective, Village Recruits.
+- Boss bars: no scaling mod exists for Forge 1.20.1, so `kubejs/startup_scripts/bossbar_scale.js` scales Forge's
+  boss-bar HUD layer (vanilla and modded bars draw inside it) about the top centre, `bossBarScale` 0.5.
+- Not touched: Village Recruits' walk-into-a-village hints (gameplay, once per village) and the pack's own one
+  welcome line. Anything still appearing on join shows up as `[CHAT]` lines in the *client's* `logs/latest.log`.

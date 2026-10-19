@@ -3,7 +3,7 @@
 	#Foods give bonus effects
 	foodsGiveBonusEffects = true
 	#Show mod update notification at startup
-	showModUpdateNotification = true
+	showModUpdateNotification = false
 	#Show male parts (modesty flag)
 	showParts = false
 	#Show particles when animals are hungry or thirsty

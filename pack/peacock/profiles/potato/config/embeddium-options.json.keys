@@ -1,3 +1,4 @@
 "weather_quality": "FAST"
 "leaves_quality": "FAST"
 "enable_vignette": false
+"force_disable_donation_prompts": true

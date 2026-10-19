@@ -69,6 +69,9 @@ COMMON_KEYS = {
     "key_key.ftbchunks.toggle_minimap": "key.keyboard.unknown",
     "key_key.ftbchunks.add_waypoint": "key.keyboard.unknown",
     "key_key.ftbchunks.waypoint_manager": "key.keyboard.unknown",
+    # first-launch screens and toasts (only added when missing: a player's own choice stands)
+    "onboardAccessibility": "false", "skipMultiplayerWarning": "true", "joinedFirstServer": "true",
+    "tutorialStep": "none", "realmsNotifications": "false",
 }
 
 # Extra *.keys files written into every tier (same content). Jade: a smaller, quieter block/entity overlay
@@ -78,7 +81,11 @@ COMMON_FILES = {
     # ships the same values in Jade's nested layout so a flat keys-only file never has to stand in for it
     "config/jade/jade.json.keys": '"overlayScale": 0.7\n"alpha": 0.6\n"overlayPosY": 0.9\n"itemModNameTooltip": false\n',
     # the locator bar at half size (Aaron, 2026-10-18); the shipped config/locatorbar.json carries the same
-    "config/locatorbar.json.keys": '"scale": 0.5\n',
+    "config/locatorbar.json.keys": '"scale": 0.5\n"unsupportedVersionWarningShown": true\n',
+    # boot/join noise, in files that are `preserve = true` (so the shipped copy never reaches an existing install):
+    # Colorwheel's "incompatible shaderpack" chat line, EMF's reload-error toast
+    "config/colorwheel-client.toml.keys": "alertIncompatiblePack = false\nalertBrokenPack = false\n",
+    "config/entity_model_features.json.keys": '"showReloadErrorToast": false\n',
 }
 
 def load_presets():
@@ -111,12 +118,19 @@ def dh_keys(dh, transp, threads, quality, ssao):
     gen = "SURFACE" if threads <= 1 else "FEATURES"
     lines = [f"lodChunkRenderDistanceRadius = {dh}", f"numberOfThreads = {threads}",
              f'transparency = "{transp}"', f'verticalQuality = "{quality}"', f'horizontalQuality = "{quality}"',
-             f"enableSsao = {'true' if ssao else 'false'}", f'chunkGeneratorMode = "{gen}"']
+             f"enableSsao = {'true' if ssao else 'false'}", f'chunkGeneratorMode = "{gen}"',
+             # no update popup at boot and no chat warnings on join (2026-10-18: "lots of pop ups to click through");
+             # players get DH updates through the pack, and the warnings are about settings the profile already chose
+             "enableAutoUpdater = false", "showLowMemoryWarningOnStartup = false", "showReplayWarningOnStartup = false",
+             "showModCompatibilityWarningsOnStartup = false", "showHighVanillaRenderDistanceWarning = false",
+             "showPoolInsufficientMemoryWarning = false", "showGarbageCollectorWarning = false",
+             "showSlowWorldGenSettingWarnings = false"]
     return "\n".join(lines) + "\n"
 
 def embeddium_keys(weather, leaves, vignette):
     # JSON-style lines: launch.jar matches "key": value and keeps quoting and trailing commas
-    return f'"weather_quality": "{weather}"\n"leaves_quality": "{leaves}"\n"enable_vignette": {vignette}\n'
+    return (f'"weather_quality": "{weather}"\n"leaves_quality": "{leaves}"\n"enable_vignette": {vignette}\n'
+            '"force_disable_donation_prompts": true\n')
 
 
 def main():

@@ -2,7 +2,7 @@ hash-format = "sha256"
 
 [[files]]
 file = "config/DistantHorizons.toml"
-hash = "96cf9e06cb4278d04623e6d48062dfbc87ce87817805d4c33c5ea32aeb4e4330"
+hash = "c2442b4e9eb341cb5cdfd705f1cd14be7ff0d1aadd3d589fd6fa584afbc14626"
 preserve = true
 
 [[files]]
@@ -11,7 +11,7 @@ hash = "4069ce1a439d8c37453c1b1e9f2037e0942674c7e48723a39b37eab245792ad4"
 
 [[files]]
 file = "config/NoChatReports/NCR-Client.json"
-hash = "edfe78d985fe67dce28104f3d87673e94c89134144451c291ecedcd2e2c3b480"
+hash = "8fb205371363a1f87798034ae95c284366da75687d9c11f4b0b51036d0a5fbd0"
 
 [[files]]
 file = "config/NoChatReports/NCR-Common.json"
@@ -35,7 +35,7 @@ hash = "ac9f092d18d4c2d6d813df8329085a6301cc97bc45113362c6ea10070f13972e"
 
 [[files]]
 file = "config/animania-server.toml"
-hash = "4512ab8636dfc60e138e465db729b65086f506db313d12f22e53daa578cdda37"
+hash = "a2a569b9e28d738fede7643661b0cf7c90aaa93d80e92f74d8e1e4af03203a0a"
 
 [[files]]
 file = "config/animania_cats_dogs-server.toml"
@@ -95,11 +95,11 @@ hash = "b0fa9ec5d41f666fa2c770bb2bde4753cbeeef76909f4765d6ebbf5683c4ae58"
 
 [[files]]
 file = "config/collective.json5"
-hash = "92809d098b5efeca95c37ec4fef9184bd169160d18efecf81f395c4030c0f83f"
+hash = "efbd0e91cb2429b6b3370c1e13dfed6515aaeb8406db1c9adcccbe643eeda4bf"
 
 [[files]]
 file = "config/colorwheel-client.toml"
-hash = "2a3310bef440627d1ed0753e60114d0529471933d31ba47b960bb194a3e36544"
+hash = "a363a174dd9d0dd196d9e565b257a5630aa2d499ca57f4dc57ce10427342570c"
 preserve = true
 
 [[files]]
@@ -128,7 +128,7 @@ hash = "7e59e2d86bf7ed0b4d418ae539a41f8d85333e28f4a0e26c1c2778ff96031b43"
 
 [[files]]
 file = "config/defaultoptions/options.txt"
-hash = "b558cccc6c78ed739c17d72a44047bb14fd9adc7bd2cb09fb27b0dc06aecb980"
+hash = "44ed4655ec395798facb61162f4899846c1192b763e9a32bf9a62f682419a105"
 
 [[files]]
 file = "config/distraction_free_recipes-client.toml"
@@ -148,7 +148,7 @@ hash = "09ff183e061d93b79514bc171bf9118497578757e7a5c45946039487656e2619"
 
 [[files]]
 file = "config/embeddium-options.json"
-hash = "fd6d25f4e941db66fb0ded4e9a810cca9a22bfb4b3f6342bc62ebcd1970f21c5"
+hash = "4a9c3c577ee7ee027604c91d8eee71f2441ea36c2ac944c8c9239d86e34a6b93"
 preserve = true
 
 [[files]]
@@ -165,7 +165,7 @@ hash = "36b0d118a1924aa3f2436fa16cc46a366c9a7f138765ae86caec05977be98bd5"
 
 [[files]]
 file = "config/entity_model_features.json"
-hash = "4e089e86197a91fb87f83820b9b4451c8f066b471b89f1d1783c95284862ac43"
+hash = "eb65e7bc516df06c1b0de51edb25924c7e700f1e65b8eb6d162b8f36b4b668ee"
 preserve = true
 
 [[files]]
@@ -179,7 +179,7 @@ hash = "4a6d510b7e0157027b1cf2022184567fd5387aa09d08db108cb0369ba371ddbe"
 
 [[files]]
 file = "config/euphoria_patcher/settings.toml"
-hash = "9e32f003a7d8eecb4af11d557aca88afe0761e77db69e416df3b68316dd6ce39"
+hash = "dbc79ee1f267fb4ca86e0cf7593ab33d5c5a0db6d39e7e8a806d12b78c668596"
 
 [[files]]
 file = "config/everycomp-client.toml"
@@ -264,7 +264,7 @@ hash = "d8a63933ec4757186a594debea59dd35724a0a895fe601b324f96217c28312df"
 
 [[files]]
 file = "config/locatorbar.json"
-hash = "815115a2eb0d11c6324eed10befd147fc37f1ea18473531f563d61c13d951ebf"
+hash = "0ed2fe8a47509d7a07c406c210cdfdea8e9e6f1e55a62845f8e64f76233bc6cd"
 
 [[files]]
 file = "config/map_atlases-client.toml"
@@ -913,7 +913,7 @@ hash = "4110a59d379ace514ab2e7655f5b8c5184744591f67f133e24b13dcb088e5928"
 
 [[files]]
 file = "config/village_recruits/general.toml"
-hash = "9803c235b6d9ec3359c7584a39542dd0ece3305614ce06c30c4b8793345b1d24"
+hash = "061c371cb2e1f1f2e83312acbf4a29754c5205667f68429742061f27553a492c"
 
 [[files]]
 file = "config/village_recruits/military.toml"
@@ -1009,7 +1009,7 @@ hash = "b5d72b6da9c50a6a18cd9bbec34c01e09a4bf8ebebaf71cb03ec093bbaafbeba"
 
 [[files]]
 file = "kubejs/config/peacock.json"
-hash = "00e78307762fed7a9693b642da9337de93cefd62d06e0ccfbee5d0dc98671f5a"
+hash = "7d5db68b86a2461b0bcb1ffdbb49d196d970998c166f8c5e53aaa2f698c40807"
 
 [[files]]
 file = "kubejs/server_scripts/almanac.js"
@@ -1058,6 +1058,10 @@ hash = "a0b8b788b06450f53a96ac9e325bd8c6449edd8ecfd1d5deb50e50a43f34c2d2"
 [[files]]
 file = "kubejs/server_scripts/welcome.js"
 hash = "0e9b4adad084519d84321cd28c1352242c4b2d33efc06ffbd07b4e0afd52de40"
+
+[[files]]
+file = "kubejs/startup_scripts/bossbar_scale.js"
+hash = "c98a3376d1b26ab97751a81735558691508336384f994c69849eebbbbae4cf3a"
 
 [[files]]
 file = "kubejs/startup_scripts/peacock_ladder.js"
@@ -2299,11 +2303,19 @@ hash = "b3d1ab72659f5419a0209f81a678b112cc0598d6f44da6c76bc4f9195285061d"
 
 [[files]]
 file = "peacock/profiles/high/config/DistantHorizons.toml.keys"
-hash = "c92440b22adbe167e2e4dc6387b6cba02f9f2680d412088fc34aeaad4243f59a"
+hash = "e1b0204fedcda0b7840500ecae6eb914767c42c147b2ec76837ab27c2fef25ba"
+
+[[files]]
+file = "peacock/profiles/high/config/colorwheel-client.toml.keys"
+hash = "889fc627d8b0e2dcf715950f5bdfebca08b4d3f202630bebaee13021f7ab0d95"
 
 [[files]]
 file = "peacock/profiles/high/config/embeddium-options.json.keys"
-hash = "6888171d79f75c6800cecb1e2918532d0bcaff876d20c985f6abb3aca7c273a0"
+hash = "977251778e7ebcc8d19351e5e1675bab4cecb2daee2c194c70d7bfa9ef8db44e"
+
+[[files]]
+file = "peacock/profiles/high/config/entity_model_features.json.keys"
+hash = "5ea1cc25b2543ce6cbde59a08580cda7656b59ceac7d70a3da9853dd3b61ff10"
 
 [[files]]
 file = "peacock/profiles/high/config/jade/jade.json.keys"
@@ -2311,7 +2323,7 @@ hash = "446a3fc3204cbed5d80279cbd735dfaa57208689ae83602185062172d776f1f1"
 
 [[files]]
 file = "peacock/profiles/high/config/locatorbar.json.keys"
-hash = "70161cc8005458f284e31b4934e2893dbbf5aa9625b16b03527267fc4b8e10e3"
+hash = "cafa6e6f53897b122c90517c20550af4b7ebb812333e75e7826a18b9d34dcbf7"
 
 [[files]]
 file = "peacock/profiles/high/config/oculus.properties.keys"
@@ -2323,7 +2335,7 @@ hash = "f6a2565056ed10ba270da94e671fa5d7ced8ade044fc8b31a851840f7bce654f"
 
 [[files]]
 file = "peacock/profiles/high/options.txt.keys"
-hash = "49244c74c10f099fc46abaed1a67e1241643bbd6a8330b8193082e3fa562aff7"
+hash = "e477da0a901568ad7862178de55e8e75159511f118ee8b3d822b870710fb0e8d"
 
 [[files]]
 file = "peacock/profiles/high/shaderpacks/ComplementaryReimagined_r5.9.3 + EuphoriaPatches_1.10.5.txt.keys"
@@ -2335,11 +2347,19 @@ hash = "ed50d1efb065f355b9a58b4bbb47b662a33a124f1a48b740cf5e4152365953b2"
 
 [[files]]
 file = "peacock/profiles/low/config/DistantHorizons.toml.keys"
-hash = "9902ae2b2c1e34cc7ddff7477a218e1c68f9b1c8d76fff5619d3e978ea3d44fb"
+hash = "5d7b6488363b84de2050c7c811d3aed8de62a210625724487ce219f889fbec2a"
+
+[[files]]
+file = "peacock/profiles/low/config/colorwheel-client.toml.keys"
+hash = "889fc627d8b0e2dcf715950f5bdfebca08b4d3f202630bebaee13021f7ab0d95"
 
 [[files]]
 file = "peacock/profiles/low/config/embeddium-options.json.keys"
-hash = "3b525e855da59a2c64278c73210699e88a599fe6979a79840d75cf8356759ec4"
+hash = "7fdcb9fa54e9d5173aa01eca48df7c1f4d489ca436a6aaf49b47e5264ce9a9b4"
+
+[[files]]
+file = "peacock/profiles/low/config/entity_model_features.json.keys"
+hash = "5ea1cc25b2543ce6cbde59a08580cda7656b59ceac7d70a3da9853dd3b61ff10"
 
 [[files]]
 file = "peacock/profiles/low/config/jade/jade.json.keys"
@@ -2347,7 +2367,7 @@ hash = "446a3fc3204cbed5d80279cbd735dfaa57208689ae83602185062172d776f1f1"
 
 [[files]]
 file = "peacock/profiles/low/config/locatorbar.json.keys"
-hash = "70161cc8005458f284e31b4934e2893dbbf5aa9625b16b03527267fc4b8e10e3"
+hash = "cafa6e6f53897b122c90517c20550af4b7ebb812333e75e7826a18b9d34dcbf7"
 
 [[files]]
 file = "peacock/profiles/low/config/oculus.properties.keys"
@@ -2359,7 +2379,7 @@ hash = "f6a2565056ed10ba270da94e671fa5d7ced8ade044fc8b31a851840f7bce654f"
 
 [[files]]
 file = "peacock/profiles/low/options.txt.keys"
-hash = "0afc0a7b45e3aba8caf300ddce39888cfd3a4fba6f693c01f654cf3481fd9149"
+hash = "4d8701b0b1ca15c2ca77bb50d0c2e744c82f5c7b17dd025cfe89e2a56f388a4e"
 
 [[files]]
 file = "peacock/profiles/low/shaderpacks/ComplementaryReimagined_r5.9.3 + EuphoriaPatches_1.10.5.txt.keys"
@@ -2371,11 +2391,19 @@ hash = "6faeeac70e8bedbca9a3978ff0ead50bb03e13d9d9dd869bd85a181523f87972"
 
 [[files]]
 file = "peacock/profiles/medium/config/DistantHorizons.toml.keys"
-hash = "9c815c17da78b206b966e2198c4d9581e8c0fe3a8f320caa96c11c2d8a59644c"
+hash = "a47487cde40eb05dae56160e1325dc81ed18c0c370b731f068d0eadc9b4e38d3"
+
+[[files]]
+file = "peacock/profiles/medium/config/colorwheel-client.toml.keys"
+hash = "889fc627d8b0e2dcf715950f5bdfebca08b4d3f202630bebaee13021f7ab0d95"
 
 [[files]]
 file = "peacock/profiles/medium/config/embeddium-options.json.keys"
-hash = "931c5424e81f89213d30aeebe3aaab3c3b2d355f654fac890b9df8997c8a1828"
+hash = "d961347c9c12cb6723b2ca815d648c58c7bfe46e247ae48620eaf915a877ab86"
+
+[[files]]
+file = "peacock/profiles/medium/config/entity_model_features.json.keys"
+hash = "5ea1cc25b2543ce6cbde59a08580cda7656b59ceac7d70a3da9853dd3b61ff10"
 
 [[files]]
 file = "peacock/profiles/medium/config/jade/jade.json.keys"
@@ -2383,7 +2411,7 @@ hash = "446a3fc3204cbed5d80279cbd735dfaa57208689ae83602185062172d776f1f1"
 
 [[files]]
 file = "peacock/profiles/medium/config/locatorbar.json.keys"
-hash = "70161cc8005458f284e31b4934e2893dbbf5aa9625b16b03527267fc4b8e10e3"
+hash = "cafa6e6f53897b122c90517c20550af4b7ebb812333e75e7826a18b9d34dcbf7"
 
 [[files]]
 file = "peacock/profiles/medium/config/oculus.properties.keys"
@@ -2395,7 +2423,7 @@ hash = "f6a2565056ed10ba270da94e671fa5d7ced8ade044fc8b31a851840f7bce654f"
 
 [[files]]
 file = "peacock/profiles/medium/options.txt.keys"
-hash = "ec0860c9a007b2fd60324ff316e4bf6c40436a127e83fa66dc69c0babdb6c761"
+hash = "3ab2649e2b420d3523da3f23092f5a3ba8fca00002d4dd905e257613ae6bb291"
 
 [[files]]
 file = "peacock/profiles/medium/shaderpacks/ComplementaryReimagined_r5.9.3 + EuphoriaPatches_1.10.5.txt.keys"
@@ -2407,11 +2435,19 @@ hash = "084ce2b07765a4674a2886cd6f0ecd5a91049f92eb88396d2a745dc2c2831597"
 
 [[files]]
 file = "peacock/profiles/potato/config/DistantHorizons.toml.keys"
-hash = "690f504c9e86ed75062c47efffd9479bf785a0f140c481a542a49e474fb37909"
+hash = "2677668653e471233d8fb3bca299a3fdbef926ddc98b1758e2f6c39a5e00a76e"
+
+[[files]]
+file = "peacock/profiles/potato/config/colorwheel-client.toml.keys"
+hash = "889fc627d8b0e2dcf715950f5bdfebca08b4d3f202630bebaee13021f7ab0d95"
 
 [[files]]
 file = "peacock/profiles/potato/config/embeddium-options.json.keys"
-hash = "3b525e855da59a2c64278c73210699e88a599fe6979a79840d75cf8356759ec4"
+hash = "7fdcb9fa54e9d5173aa01eca48df7c1f4d489ca436a6aaf49b47e5264ce9a9b4"
+
+[[files]]
+file = "peacock/profiles/potato/config/entity_model_features.json.keys"
+hash = "5ea1cc25b2543ce6cbde59a08580cda7656b59ceac7d70a3da9853dd3b61ff10"
 
 [[files]]
 file = "peacock/profiles/potato/config/jade/jade.json.keys"
@@ -2419,7 +2455,7 @@ hash = "446a3fc3204cbed5d80279cbd735dfaa57208689ae83602185062172d776f1f1"
 
 [[files]]
 file = "peacock/profiles/potato/config/locatorbar.json.keys"
-hash = "70161cc8005458f284e31b4934e2893dbbf5aa9625b16b03527267fc4b8e10e3"
+hash = "cafa6e6f53897b122c90517c20550af4b7ebb812333e75e7826a18b9d34dcbf7"
 
 [[files]]
 file = "peacock/profiles/potato/config/oculus.properties.keys"
@@ -2431,7 +2467,7 @@ hash = "fb5ff1984232edecfce6fbfa6deb6374bcd7bf898f58d2c51b9e46cbbbbb78fe"
 
 [[files]]
 file = "peacock/profiles/potato/options.txt.keys"
-hash = "5efa579102cd405ee3685702502e8b56656a8cef765ebd56b37a7585249a2ac7"
+hash = "1e56767cfe77f1ad26f96dd05ae59bcf988670749bfcfaa0e23e1a740d4ca0c9"
 
 [[files]]
 file = "peacock/profiles/potato/shaderpacks/ComplementaryReimagined_r5.9.3 + EuphoriaPatches_1.10.5.txt.keys"
@@ -2443,11 +2479,19 @@ hash = "6faeeac70e8bedbca9a3978ff0ead50bb03e13d9d9dd869bd85a181523f87972"
 
 [[files]]
 file = "peacock/profiles/ultra/config/DistantHorizons.toml.keys"
-hash = "2197f67c63ea77dbd4d15babe84e50c7876735aaa60dd6d56c0bb85108d892b4"
+hash = "5e2cd57039f1df71cdd4aef983a8afa5691a33b08719a8b46f5154e5c24c1efd"
+
+[[files]]
+file = "peacock/profiles/ultra/config/colorwheel-client.toml.keys"
+hash = "889fc627d8b0e2dcf715950f5bdfebca08b4d3f202630bebaee13021f7ab0d95"
 
 [[files]]
 file = "peacock/profiles/ultra/config/embeddium-options.json.keys"
-hash = "6888171d79f75c6800cecb1e2918532d0bcaff876d20c985f6abb3aca7c273a0"
+hash = "977251778e7ebcc8d19351e5e1675bab4cecb2daee2c194c70d7bfa9ef8db44e"
+
+[[files]]
+file = "peacock/profiles/ultra/config/entity_model_features.json.keys"
+hash = "5ea1cc25b2543ce6cbde59a08580cda7656b59ceac7d70a3da9853dd3b61ff10"
 
 [[files]]
 file = "peacock/profiles/ultra/config/jade/jade.json.keys"
@@ -2455,7 +2499,7 @@ hash = "446a3fc3204cbed5d80279cbd735dfaa57208689ae83602185062172d776f1f1"
 
 [[files]]
 file = "peacock/profiles/ultra/config/locatorbar.json.keys"
-hash = "70161cc8005458f284e31b4934e2893dbbf5aa9625b16b03527267fc4b8e10e3"
+hash = "cafa6e6f53897b122c90517c20550af4b7ebb812333e75e7826a18b9d34dcbf7"
 
 [[files]]
 file = "peacock/profiles/ultra/config/oculus.properties.keys"
@@ -2467,7 +2511,7 @@ hash = "f6a2565056ed10ba270da94e671fa5d7ced8ade044fc8b31a851840f7bce654f"
 
 [[files]]
 file = "peacock/profiles/ultra/options.txt.keys"
-hash = "ae5a6cadaf92fd9fab9768d51155c417495823cad287a8dffab56f9484f613d8"
+hash = "fc650d766c72f13c6806a1f993d72a5d46a6afdf668b085447f999096c88d2be"
 
 [[files]]
 file = "peacock/profiles/ultra/shaderpacks/ComplementaryReimagined_r5.9.3 + EuphoriaPatches_1.10.5.txt.keys"

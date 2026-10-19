@@ -29,7 +29,7 @@
   "enforceOptiFineAnimSyntaxLimits": true,
   "allowOptifineFallbackProperties": true,
   "enforceOptiFineFloorUVs": true,
-  "showReloadErrorToast": true,
+  "showReloadErrorToast": false,
   "exportRotations": false,
   "asmMaths": true,
   "logASM": false,
