@@ -552,3 +552,28 @@ Why things are the way they are. Add an entry when a choice would surprise someo
   `#minecraft:is_overworld`; `preferred_biomes` (village tags + forests, taigas, savannas, hills) still pulls the
   position onto sensible land when any is within reach.
 
+
+## The capital is founded by script when worldgen cannot place it well (2026-10-19, sixth world)
+- The sixth world spawned in mid-ocean. Vanilla's concentric-ring placement has one position eight-odd chunks
+  from the origin and a fixed 112-block search for `preferred_biomes`; with `biomes` widened to any overworld
+  biome (the fix for the fifth world's *no* capital) a position with no gentle land in reach simply builds the
+  castle in the sea. Nothing in data can say "dry, flat, not mountains".
+- Now the structure and the ring placement both use a strict hand-picked `#peacock:capital_biomes`: plains,
+  sunflower plains, meadow, forests (oak, flower, birch), savanna, taiga, cherry grove, and Terralith's brushland,
+  highlands (temperate/forested), lavender/blooming/sakura/lush/moonlight valleys, steppe, shrublands, birch taiga,
+  valley clearing. No oceans, rivers, beaches, swamps, jungles, deserts, badlands, peaks, cliffs or snow
+  ("avoid biomes with aggressive or crazy terrain"). CTOV's village tags were dropped from the list: they put
+  villages in all of those.
+- A bad seed therefore gets *no* worldgen capital — and `capital_wall.js` founds one. Ten seconds after load,
+  with no capital at spawn, it walks rings of candidate chunks outward from the origin (6 to 62 chunks), reads
+  the biome and the generator's own terrain height on a 5×5 grid (±88 blocks) around each — no chunks are
+  loaded for that — and takes the flattest spot in the nearest ring where nearly every sample is a gentle biome,
+  all are dry, the height spread is ≤16 and no ruin placement lies within 8 chunks. Fallback: the flattest dry
+  land in reach. It then force-loads the footprint (two `/forceload` tickets, polled every second), generates
+  the Terralith fortified village there with the game's jigsaw code (the `/place structure` path, so villagers
+  spawn with it), moves the world spawn onto it, remembers the bounds in persistentData (the start is not
+  registered, so `/locate` will not know it) and builds the wall. `/peacock found` (op) runs the same by hand,
+  `/peacock found here` at your feet, `force` founds beside an existing one. `capitalFound: false` disables it.
+- Log lines to look for on a new world: `[peacock] found: gentle land at chunk …`, `generating N chunks …`,
+  `placed the capital over N chunks`, `world spawn moved to …`, then `wall: … columns`. Or, with a good seed,
+  Spawn Point's "Village found!" and straight to `wall:`.

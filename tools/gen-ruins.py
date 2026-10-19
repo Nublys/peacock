@@ -429,11 +429,14 @@ def main() -> None:
     # cannot fail. Terralith's own set is silenced (frequency 0) so the capital stays the only living old town.
     tj = terralith_jar()
     cap = json.loads(tj.read("data/terralith/worldgen/structure/fortified_village.json"))
-    # Any overworld biome: the ring placement has exactly one position, and a seed that puts it in a forest,
-    # a cherry grove or a Terralith biome outside the village tags produced no capital at all (2026-10-18,
-    # fifth world: spawn at 0,72,0 and `/locate` found nothing). `preferred_biomes` below still steers the
-    # position onto village-friendly land when there is any within reach; this is the catch-all beneath it.
-    cap["biomes"] = "#minecraft:is_overworld"
+    # Gentle land only. The ring placement has exactly one position; `preferred_biomes` nudges it onto a
+    # #peacock:capital_biomes biome if one lies within 112 blocks (vanilla's fixed search radius), and this
+    # field decides whether the structure then generates at all. A catch-all here (`#minecraft:is_overworld`,
+    # 2026-10-18) put the sixth world's capital in mid-ocean; a strict list means a bad seed gets no worldgen
+    # capital — and then kubejs/server_scripts/capital_wall.js founds one on surveyed gentle land instead
+    # (the founder, 2026-10-19). Either way the capital stands on plains, meadows, forests or savanna, never
+    # in water, mountains, jungle, swamp or badlands ("avoid biomes with aggressive or crazy terrain").
+    cap["biomes"] = "#peacock:capital_biomes"
     cap["spawn_overrides"] = {}
     cap["size"] = 7                       # Terralith's 6: a larger capital
     cap["max_distance_from_center"] = 116
@@ -463,20 +466,26 @@ def main() -> None:
     rare = json.loads(tj.read("data/terralith/worldgen/structure_set/rare_village.json"))
     rare["placement"]["frequency"] = 0.0
     write_json("data/terralith/worldgen/structure_set/rare_village.json", rare)
-    biome_tags = set()
-    for biome in [b for b in BIOMES if b != "mushroom"]:
-        src = json.loads(z.read(f"data/ctov/worldgen/structure/large/village_{biome}.json"))
-        biome_tags.add(src["biomes"])
-    biome_tags.add("#terralith:has_structure/fortified_village")
-    biome_tags.update(["#minecraft:is_forest", "#minecraft:is_taiga", "#minecraft:is_savanna", "#minecraft:is_hill",
-                       "#minecraft:has_structure/pillager_outpost", "#minecraft:has_structure/ruined_portal_standard"])
-    write_json("data/peacock/tags/worldgen/biome/capital_biomes.json",
-               {"replace": False, "values": sorted(biome_tags)})
+    # The capital's land: flat-to-rolling, temperate, dry. Hand-picked rather than built from CTOV's village tags,
+    # which include jungles, swamps, deserts, beaches and mountains. Terralith names checked against the jar
+    # below so a renamed biome fails the generator, not the world.
+    terralith_biomes = {n.rsplit("/", 1)[-1][:-5] for n in tj.namelist()
+                        if n.startswith("data/terralith/worldgen/biome/") and n.endswith(".json")}
+    gentle_terralith = ["brushland", "temperate_highlands", "forested_highlands", "lavender_forest", "lavender_valley",
+                        "blooming_valley", "blooming_plateau", "steppe", "shrubland", "hot_shrubland", "birch_taiga",
+                        "valley_clearing", "lush_valley", "sakura_grove", "sakura_valley", "moonlight_valley"]
+    missing = [b for b in gentle_terralith if b not in terralith_biomes]
+    if missing:
+        sys.exit(f"capital_biomes: Terralith no longer has {missing}")
+    capital_biomes = ["minecraft:plains", "minecraft:sunflower_plains", "minecraft:meadow", "minecraft:forest",
+                      "minecraft:flower_forest", "minecraft:birch_forest", "minecraft:old_growth_birch_forest",
+                      "minecraft:savanna", "minecraft:taiga", "minecraft:cherry_grove"] + [f"terralith:{b}" for b in gentle_terralith]
+    write_json("data/peacock/tags/worldgen/biome/capital_biomes.json", {"replace": False, "values": capital_biomes})
     write_json("data/peacock/tags/worldgen/structure/capital.json", {"replace": False, "values": cap_ids})
 
     # (Bounty boards are NOT pool-injected: a 3x3 board piece fits wherever a house does not, so it won most
     # contested slots and the capital had twenty boards. capital_wall.js places one inside each gate instead.)
-    print("capital: terralith:fortified_village (biomes widened, rare_village silenced)")
+    print("capital: terralith:fortified_village (gentle biomes only, rare_village silenced; founder script covers bad seeds)")
     ruin_ids = [e["structure"] for e in set_entries]
     write_json("data/peacock/tags/worldgen/structure/ruins.json", {"replace": False, "values": ruin_ids})
     write_json("data/minecraft/tags/worldgen/structure/village.json",

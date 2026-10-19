@@ -333,7 +333,7 @@ hash = "3b6236845f6a5ff8804487b63b0d74305b91316dc9a008362838607b0be3bd8e"
 
 [[files]]
 file = "config/paxi/datapacks/peacock-ruins.zip"
-hash = "694af4dde5a382e9480448b4f3545aaf7dd48f56aae8f86b10e2f1593afadcd6"
+hash = "200ecc4c570402dab631bc25bd51065c025f039a59b5019bd1bbcfd673c784e6"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/animania/tags/worldgen/biome/amphibian_habitats.json"
@@ -1009,7 +1009,7 @@ hash = "b5d72b6da9c50a6a18cd9bbec34c01e09a4bf8ebebaf71cb03ec093bbaafbeba"
 
 [[files]]
 file = "kubejs/config/peacock.json"
-hash = "029369d0195920111aebae8376047bc7676146903e7e950144fa1d538954d2ef"
+hash = "00e78307762fed7a9693b642da9337de93cefd62d06e0ccfbee5d0dc98671f5a"
 
 [[files]]
 file = "kubejs/server_scripts/almanac.js"
@@ -1021,7 +1021,7 @@ hash = "7970e178f45aca6cdaf4de24ee36e806505d03534a5f567e97e535c107a34535"
 
 [[files]]
 file = "kubejs/server_scripts/capital_wall.js"
-hash = "d7586dfefcb2e9c5475d40050fc393c506b69a2488e4b29a0cf19de28b936338"
+hash = "bfd9370f9aa0e1be3eb7ee09feb6f6566a57420503269b51ab46ebb3eac0ef26"
 
 [[files]]
 file = "kubejs/server_scripts/cave_loot.js"

@@ -256,11 +256,12 @@ and nature answered with sickness and monsters — is never stated in-game; the 
 - ✅ **Second flight** (2026-10-18): the capital is now **Terralith's `fortified_village`** — a genuinely walled
   castle town found live near spawn (Terralith's `rare_village` set, which nobody had accounted for). CTOV's
   "fortified" was a keep without a wall. Terralith's own set is silenced (`frequency` 0) so the capital stays the
-  only living old town; the structure accepts any village-able biome so the one ring roll cannot fail; bounty
-  posts sit in its house pool with the `minecraft:entrance` jigsaw its streets expect. The script wall
-  (`capital_wall.js`) stays as an optional outer ring (`capitalWall`, off). The ruins' zombie-owner pieces got
+  only living old town; bounty boards stand inside the gates of the script wall (`capital_wall.js`, `capitalWall` on).
+  The structure only generates on gentle land (`#peacock:capital_biomes`); when the seed's one ring position
+  has none in reach, the same script founds the capital on surveyed flat, dry land near the origin and moves
+  spawn there (`capitalFound`, 2026-10-19 — the sixth world had spawned in mid-ocean). The ruins' zombie-owner pieces got
   the jigsaw block they were missing.
-- Open: first play of all of the above (do the ruins' chests roll? does the capital land in a sensible biome?
+- Open: first play of all of the above (do the ruins' chests roll? does the founder fire and place cleanly when the seed is bad (`[peacock] found:` lines)?
   do Rust Belt pieces sit flush — `start_height` assumes the heightmap is the first air block); Snow! Real
   Magic! on Create tracks (blacklist if it accumulates); whether `bountiful.decree.archivist.name` or the
   namespaced key is the one Bountiful reads (both are in the lang file); feeding CTOV houses into the Village
