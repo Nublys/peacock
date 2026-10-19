@@ -700,3 +700,9 @@ armour, waterskins, Serene Seasons integration (±15 °C summer/winter by defaul
   server's code, as before), deletes the world folder only if its `playerdata/` is empty and `level.dat` exists,
   clears `level-seed`, and starts again. 15 tries in a row, then it keeps the world. Simulated locally with a stand-in
   `java` (reroll path and the playerdata guard). Thread dumps now go to Java's PID, not 1 (server/README).
+- **Tenth world (23:00)** ran the commit before the reroll (it synced at 23:00; the reroll was pushed after), so no
+  reroll happened. Village Spawn Point found no capital and fell back to `#minecraft:village` — a ruin in hot
+  country at 0,108,-272 ("spawned in a hot biome with no village"). The fallback is off now
+  (`keepDefaultVillageTagBackup: false`): without a capital the spawn stays at the origin, and on a new world the
+  reroll takes over. The "crash" on stopping was Forge failing to save `world/serverconfig/valkyrienskies/
+  vs_eureka.toml` because the world folder had already been deleted while the server was still running — harmless.
