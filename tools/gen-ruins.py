@@ -429,7 +429,11 @@ def main() -> None:
     # cannot fail. Terralith's own set is silenced (frequency 0) so the capital stays the only living old town.
     tj = terralith_jar()
     cap = json.loads(tj.read("data/terralith/worldgen/structure/fortified_village.json"))
-    cap["biomes"] = "#peacock:capital_biomes"
+    # Any overworld biome: the ring placement has exactly one position, and a seed that puts it in a forest,
+    # a cherry grove or a Terralith biome outside the village tags produced no capital at all (2026-10-18,
+    # fifth world: spawn at 0,72,0 and `/locate` found nothing). `preferred_biomes` below still steers the
+    # position onto village-friendly land when there is any within reach; this is the catch-all beneath it.
+    cap["biomes"] = "#minecraft:is_overworld"
     cap["spawn_overrides"] = {}
     cap["size"] = 7                       # Terralith's 6: a larger capital
     cap["max_distance_from_center"] = 116
@@ -454,7 +458,7 @@ def main() -> None:
     write_json("data/peacock/worldgen/structure_set/capital.json", {
         "structures": [{"structure": s, "weight": 1} for s in cap_ids],
         "placement": {"type": "minecraft:concentric_rings", "distance": 2, "spread": 1, "count": 1,
-                      "preferred_biomes": "#terralith:has_structure/fortified_village", "salt": 20260918},
+                      "preferred_biomes": "#peacock:capital_biomes", "salt": 20260918},
     })
     rare = json.loads(tj.read("data/terralith/worldgen/structure_set/rare_village.json"))
     rare["placement"]["frequency"] = 0.0
@@ -464,6 +468,8 @@ def main() -> None:
         src = json.loads(z.read(f"data/ctov/worldgen/structure/large/village_{biome}.json"))
         biome_tags.add(src["biomes"])
     biome_tags.add("#terralith:has_structure/fortified_village")
+    biome_tags.update(["#minecraft:is_forest", "#minecraft:is_taiga", "#minecraft:is_savanna", "#minecraft:is_hill",
+                       "#minecraft:has_structure/pillager_outpost", "#minecraft:has_structure/ruined_portal_standard"])
     write_json("data/peacock/tags/worldgen/biome/capital_biomes.json",
                {"replace": False, "values": sorted(biome_tags)})
     write_json("data/peacock/tags/worldgen/structure/capital.json", {"replace": False, "values": cap_ids})

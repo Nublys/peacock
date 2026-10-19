@@ -546,4 +546,9 @@ Why things are the way they are. Add an entry when a choice would surprise someo
   before it has its server reference. The team commands run 3 s later now.
 - `blueprints.js`: `event.source.getEntity()` is not exposed by KubeJS; `event.source.actual` is. Boss fighters
   were never recorded, so no Blueprint would have dropped for anyone.
+- **Fifth world (20:47): no capital at all.** Spawn at 0,72,0, Spawn Point never logged "Village found", `/locate`
+  empty. The datapack was identical to the fourth world's (which had a 141×155 capital); only the seed differed:
+  the one ring position landed in a biome outside the village tags. The capital structure now accepts
+  `#minecraft:is_overworld`; `preferred_biomes` (village tags + forests, taigas, savannas, hills) still pulls the
+  position onto sensible land when any is within reach.
 
