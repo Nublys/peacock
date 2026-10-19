@@ -14,7 +14,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Workers$() (Villager Workers): hire a farmer, miner, lumberjack, fisherman or shepherd with emeralds. Give them a chest, a bed and food and they work the area you set. They are the first labour you can buy.$(br2)Press the keys they tell you on hire; their own wiki is in the mod's screen."
+      "text": "$(bold)Workers$() (Villager Workers): hire a farmer, miner, lumberjack, fisherman or shepherd with emeralds. Give them a chest, a bed and food and they work the area you set. They are the first labour you can buy.$(br2)In a town, workers earn the town its income ($(l:patchouli:towns/town_life)How a Town Lives$())."
     }
   ]
 }

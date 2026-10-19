@@ -1,0 +1,24 @@
+{
+  "name": "How a Town Lives",
+  "icon": "minecraft:hay_block",
+  "category": "patchouli:towns",
+  "sortnum": 5,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Money:$() villagers and workers earn a town its income: some to the treasury, some to a fund for founding new towns, some to buying blocks for its builder. The builder lays out a plan and builds it one house at a time, paying in materials it really has.$(br2)Those materials sit in the town's chests. They can be stolen, and the town notices."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Food:$() every soldier carries rations from the town's granary, filled by wheat farms and animal pens. A town without a farm can arm an army but not keep it fighting. An empty granary is how rebellions start.$(br2)$(bold)Sleep:$() off-duty soldiers go to bed, one per bed, and heal while they sleep. A quarter stay on watch. They wake for any real attack."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Mines:$() every town mine sits on its own deposit. All have coal, iron and copper; each also has a few seams of rarer ore, and they differ. A town chooses its soldiers' gear from what its own mines can keep supplying.$(br2)So a neighbour in armour you do not recognise is sitting on a seam you lack. Trade for it, escort it, or take it."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Leave a metal in a town's chests and it counts as that town's supply: keep a friendly town stocked and its soldiers re-arm in that metal. Stop, and over the next hour they fall back to what they mine.$(br2)The capital of every faction trickles a little wood, stone, sand and wool on its own, so no town is ever completely stuck."
+    }
+  ]
+}

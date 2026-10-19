@@ -10,7 +10,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Create$() ponders with $(bold)W$(). $(bold)Geolosys$() and $(bold)Animania$() give you their own books on first join. $(bold)Village Recruits$() has a wiki on $(bold)I$().$(br2)This almanac links to the others where they exist, and does not repeat them."
+      "text": "$(bold)Create$() ponders with $(bold)W$(). $(bold)Geolosys$() and $(bold)Animania$() give you their own books on first join. Village Recruits is explained in $(l:patchouli:towns/new_towns)Towns & Trade$().$(br2)This almanac links to the others where they exist, and does not repeat them."
     }
   ]
 }

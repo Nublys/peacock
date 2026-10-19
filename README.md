@@ -104,6 +104,9 @@ each boss lives; **rumour maps** from outposts, cartographers and bounty boards 
   you are needed for raids and bad days. Sneak-click a town's **Noble** for paid work; standing lets you
   join, hire **recruits** (soldiers who follow, hold and patrol — once you hold the Recruiting
   Blueprint), and one day lead. A recruit table placed in a dead village founds a new town there.
+  To enlist, stand by a town's bell and say in chat: *I would like to join your army*. The Almanac's
+  **Towns & Trade** chapter covers all of it — joining, recruits, merchants, contracts, war and leading a
+  faction (there is no separate Village Recruits book).
 - **Caravans** run between towns and you can run your own. Late game, a **Trading Floor** depot lets a
   train sell on a schedule — in a real town, with a bell and beds.
 
@@ -144,7 +147,6 @@ can loot it, so say where you fell.
 | `J` | Claim manager (FTB Chunks) |
 | `K` / `O` | Shaders on/off / shader menu |
 | `R` / `U` / `N` | Recruits: command / team / map |
-| `I` | Towns and factions wiki (Village Recruits) |
 | `V` | Quiver |
 | `Shift+1–4` | Dog whistles (Doggy Talents) |
 | `,` / `.` | Voice chat menu / mute mic (`Right Alt` push-to-talk if you switch) |

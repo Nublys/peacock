@@ -1,0 +1,20 @@
+{
+  "name": "Merchants & Contracts",
+  "icon": "minecraft:emerald_block",
+  "category": "patchouli:towns",
+  "sortnum": 6,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)The merchant$() trades both ways: he buys what his town needs for emeralds, and his Buy tab sells what it has to spare. A town only sells above what it wants to keep, so a rich neighbour's shelf tells you what it is sitting on.$(br2)Buying back always costs more than you sold for. What a merchant wants to buy shows what the town is planning."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)The Noble$() keeps a contract board (sneak-click him): cull monsters, stand a night watch, haul a material. Finished work pays emeralds and $(bold)standing$() with that faction, and only that one.$(br2)Standing opens a faction's better contracts, its shop and eventually its gates."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Losing standing:$() killing a faction's people costs it. Far enough down and it posts a $(bold)bounty$() on you that other players can take, and its soldiers attack on sight. A player-run faction's leader can pardon you; a town run by the villagers never forgets.$(br2)Check where you stand with /vrcontracts standing."
+    }
+  ]
+}

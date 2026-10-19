@@ -1,0 +1,20 @@
+{
+  "name": "Joining a Town",
+  "icon": "minecraft:white_banner",
+  "category": "patchouli:towns",
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "You never have to join anything. Staying $(bold)factionless$() is a real way to play: you can take work from any town, trade with all of them and pick sides in their wars as you like.$(br2)To enlist, stand near a town's centre (its bell) and say in chat:$(br)$(bold)I would like to join your army$()"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "The nearest town within 40 blocks answers. Walking into a town that would have you prints the invitation once. You belong to one faction at a time.$(br2)A member can speak to the town's leader (right-click) for the leader's screen, and stands with the town in its wars from then on."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Useful commands:$()$(br)/vrcontracts standing: what every faction thinks of you, and why$(br)/vrintel: what your faction knows about its neighbours$(br)/vrconvoy: convoys on the road$(br)/vrconfig: what this server has switched on"
+    }
+  ]
+}

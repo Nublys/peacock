@@ -1,0 +1,24 @@
+{
+  "name": "Leading a Faction",
+  "icon": "minecraft:golden_helmet",
+  "category": "patchouli:towns",
+  "sortnum": 8,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Found a town ($(l:patchouli:towns/new_towns)Reclaiming$()) and you lead a faction. Nothing declares war, accepts an alliance or answers a call to arms without you: the town proposes, you decide. Refusing an ally's call breaks the alliance; ignoring it does not.$(br2)A faction holds at most $(bold)four$() towns here."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Scouting:$() open the map ($(bold)N$()), enter command mode, right-click one of your towns, Send scouts, then click where to look. A report shows the defenders and their gear as they were that day, and puts the town's borders on your map.$(br2)Each town can send a party every couple of minutes."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Your shop:$() the merchant's Offers tab sets what all your merchants buy and sell, and at what price. The Stock tab sets a $(bold)reserve$() per material that nothing will spend below. The Goods tab tells your towns to make an item, keep so many in stock and sell it.$(br2)Your soldiers are always supplied first."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Armoury:$() your loadouts are yours: change one and your troops re-equip at once. Towns you lead keep researching on the tech tree in their own screen.$(br2)$(bold)Moving troops:$() a convoy between two of your own towns carries soldiers, who walk the road and can be met on it. Goods only travel to allies."
+    }
+  ]
+}

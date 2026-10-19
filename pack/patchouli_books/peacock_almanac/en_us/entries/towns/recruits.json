@@ -2,29 +2,29 @@
   "name": "Recruits & Guards",
   "icon": "minecraft:iron_sword",
   "category": "patchouli:towns",
-  "sortnum": 2,
+  "sortnum": 4,
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Villages arm $(bold)Guard Villagers$() to hold a wall: hand a villager a sword or crossbow and they take the post. $(bold)Village Recruits$() lets you hire a squad: command them with $(bold)R$(), teams with $(bold)U$(), their map with $(bold)N$(), the wiki with $(bold)I$()."
+      "text": "Villages arm $(bold)Guard Villagers$() to hold a wall: hand a villager a sword or crossbow and they take the post. $(bold)Recruits$() are soldiers you hire and own: command them with $(bold)R$(), teams with $(bold)U$(), their map with $(bold)N$()."
     },
     {
       "type": "patchouli:entity",
       "entity": "recruits:recruit",
-      "text": "Recruits follow, hold, patrol and guard. They eat from their own inventory, so give them food, and they die for good, so give them armor. Pay is emeralds per hire.",
+      "text": "Recruits follow, hold, patrol and guard. They die for good, so give them armour. Pay is emeralds per hire.",
       "scale": 0.9
     },
     {
       "type": "patchouli:text",
-      "text": "Hiring is $(bold)locked$() until the Mutant Skeleton falls: the drill that made soldiers of farmers was lost with it ($(l:patchouli:tech/tier1)Tier 1$()). Guards are not locked; a wall can always be manned.$(br2)Recruits ride horses, crew ships and man cannons. They are how two players hold a town against a raid."
+      "text": "Hiring is $(bold)locked$() until the Mutant Skeleton falls: the drill that made soldiers of farmers was lost with it ($(l:patchouli:tech/tier1)Tier 1$()). Guards are not locked; a wall can always be manned.$(br2)$(bold)Hiring:$() right-click a recruit with emeralds in hand; the price is on the screen. Shift-right-click one for his own screen: inventory, equipment, upkeep."
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Hiring:$() right-click a recruit with emeralds in hand; the price is on the screen. $(bold)R$() opens the command screen for everyone you own: follow, hold position, wander, aggressive or passive stance, formations. $(bold)U$() is the team screen; $(bold)N$() the recruit map.$(br2)Shift-right-click a single recruit for his own screen: inventory, equipment, upkeep."
+      "text": "$(bold)Food is how they heal.$() A recruit has a hunger bar like yours; a full belly heals him fast, an empty one not at all. Fighting and healing make him hungry; standing and marching do not. A loaf of bread is worth about seven hit points.$(br2)Cooked food heals faster than raw."
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Upkeep:$() recruits eat from their own inventory and die for good. Give them food, armour, a shield and a bow. They gain levels and better aim with experience.$(br2)$(bold)Factions:$() towns have names, leaders and allegiances. They ally, feud and go to war; the chat tells you when. Your own village, once founded, is a faction too. Press $(bold)I$() for the full wiki."
+      "text": "At a quarter health a recruit with food in his pack breaks off, eats, and goes back in. One with an empty pack fights on. The $(bold)Hold the line$() button on his screen stops him ever withdrawing: for the man on the gate.$(br2)Starving never kills a recruit; it leaves him useless until fed. They gain levels and better aim with experience."
     }
   ]
 }

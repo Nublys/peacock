@@ -2,19 +2,32 @@
   "name": "The New Towns",
   "icon": "recruits:recruit_block",
   "category": "patchouli:towns",
-  "sortnum": 3,
+  "sortnum": 2,
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Every living settlement besides the capital is new: a $(bold)tower$() the survivors raised, a bell, a recruit table, and a town that builds itself out from there. Village Recruits runs them. They are small, rough and growing, and they have names.$(br2)When you walk into one the chat tells you whose it is. Write the coordinates down. They are far apart and worth finding."
+      "text": "Every living settlement besides the capital is new: a $(bold)tower$() the survivors raised, a bell, a recruit table, and a town that builds itself out from there. They are small, rough and growing, and they have names.$(br2)Walk into one and the chat tells you whose it is. Write the coordinates down. They are far apart and worth finding."
     },
     {
       "type": "patchouli:text",
-      "text": "Each town is a $(bold)faction$(): a leader, a garrison, a treasury, a merchant. They farm, trade, send convoys down the roads, found new towns when rich and go to war when not. They defend themselves; you are needed for raids and bad days.$(br2)Take paid work from a town's $(bold)Noble$() (sneak-click him): cull monsters, stand a night watch, haul a material. Standing lets you join, hire recruits, and one day lead."
+      "text": "Each town is a $(bold)faction$(): a leader, a garrison, a treasury, a merchant and a Noble. It farms, mines, trades, sends convoys down the roads, founds new towns when rich and goes to war when it must, whether or not you take part.$(br2)Villagers and soldiers belong to the town whose $(bold)bed$() they sleep in. Everything else follows from that."
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Trade:$() a town's villagers trade like any villager once they have workstations, and the faction merchant sells its surplus (ingots, leather, food, equipment) in bulk.$(br2)$(bold)Reclaiming:$() a recruit table placed in a dead village founds a new town there, far enough from other towns. The builders will put the new over the old."
+      "text": "$(bold)Reclaiming:$() a recruit table and a bell in a dead village found a new town there, far enough from other towns. The builders put the new over the old.$(br2)No town can be founded or claimed near the capital: it is neutral ground, for everyone."
+    },
+    {
+      "type": "patchouli:relations",
+      "entries": [
+        "patchouli:towns/joining",
+        "patchouli:towns/recruits",
+        "patchouli:towns/town_life",
+        "patchouli:towns/town_trade",
+        "patchouli:towns/war",
+        "patchouli:towns/leading"
+      ],
+      "title": "The Towns",
+      "text": "Everything about the towns, in order."
     }
   ]
 }

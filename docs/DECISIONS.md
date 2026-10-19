@@ -626,3 +626,15 @@ current desktop. Aaron chose "rare" over removal: the datapack overrides `pirate
 separation 48 (16× fewer) and `pirates:wrecks` to 80 / 40 (4× fewer; the set includes the friendly raft). The
 `pirates_sails` and `pirates_sky` sets are not overridden: they live in the jar's optional datapacks, which are not
 loaded, and a set naming an unregistered structure would break world loading. Applies to newly generated chunks.
+
+## The Almanac explains Village Recruits; its manual is removed (2026-10-18)
+Aaron: "remove the Villager Recruits book and just explain all of that in yours". The addon gives every new player a
+written "Village Recruits Manual" on first login (`VillageJoinGuide`, no config switch). `no_vr_manual.js` marks
+`PlayerPersisted.village_recruits_received_book` at login and removes any copy two seconds later (covers players
+who already have one). The Almanac's Towns & Trade chapter grew from two Village Recruits entries to seven — The
+New Towns, Joining a Town, Recruits & Guards (incl. food-as-healing, Hold the line), How a Town Lives (funds,
+builders, granary, sleep, mines and seams), Merchants & Contracts (standing, bounties, pardon), War, Scouts & Sides
+(scouting first, chain of command, picking a side, restless nights, perish notices) and Leading a Faction (scouting
+from the map, Offers/Stock/Goods tabs, reserves, armoury, troop convoys, four towns per faction) — written from the
+addon's own wiki text and this pack's settings. The `I` key (the addon's wiki screen) still works but is no longer
+advertised; the README key table and the Almanac's Keys page dropped it.

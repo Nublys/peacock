@@ -1,0 +1,28 @@
+{
+  "name": "War, Scouts & Sides",
+  "icon": "minecraft:crossbow",
+  "category": "patchouli:towns",
+  "sortnum": 7,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Towns choose their own friends and enemies from strength, wealth and distance. They cannot attack a place they have never found: first they send a $(bold)scout$() and four escorts. Kill the party and the attack never comes until they try again.$(br2)A town that loses its capital may split; a badly run one may see a village rebel."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)A town fights as an army.$() Commanders count the enemy by its gear, not its heads, and the leader orders each group: close in, stand off and shoot, hold the line, or keep away. The wounded are pulled out to heal; a man in a lost fight may run for good.$(br2)Your own recruits take orders only from you."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Picking a side:$() in a battle between two towns you belong to neither, the $(bold)first soldier you hit$() decides: you have joined the other side. Your new side cannot hurt you, nor you them. Civilians take three swings to count.$(br2)A bar at the top of the screen shows the two sides."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "If your side wins and you are still there, that faction remembers it: standing, paid once per fight, never per kill. Backing the loser costs nothing. The commitment ends with the battle.$(br2)$(bold)Anger a town$() and it sends a scout to size you up, then a party. It will not follow you into someone else's town."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Restless nights:$() kill a town's villager or soldier and your bed refuses you for the rest of that day, in war or peace. A war fought without a pause is a war fought in the dark.$(br2)When a town loses most of its people the chat says so. A town with nobody left has perished; its buildings stay, and it can be resettled."
+    }
+  ]
+}
