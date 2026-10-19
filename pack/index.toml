@@ -1274,7 +1274,7 @@ hash = "3124630fabe5d255e997dfb4b00c9a823506380dec19fee7e23404fab6f2fa4d"
 
 [[files]]
 file = "kubejs/server_scripts/capital_reroll.js"
-hash = "20a29824d1c11e21d6cbabba6a63734b00442de20e714ab01a29a23cc1d06bb1"
+hash = "3a2f2761f6e0a9bb458d71c15b6ed34a22c939f7894c71b636441a23228a5f33"
 
 [[files]]
 file = "kubejs/server_scripts/capital_wall.js"
@@ -2618,7 +2618,7 @@ hash = "f22cac22f221bc51031e15445a077a41a468774497bdcf46d8397370924024de"
 
 [[files]]
 file = "peacock-server/peacock-start.sh"
-hash = "1d4bed845e8e685cc0a133b04035c8e7c2af32c3265ae8f2d70c3b641bd54ac3"
+hash = "9f0efa312c466d68aad7eeecbff81aafb6eaf1d6436e8db7612ae1e0539824e6"
 
 [[files]]
 file = "peacock/launch.jar"

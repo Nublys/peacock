@@ -758,3 +758,14 @@ A pass over every structure set in the pack against the dead-world plan (Aaron a
   is false. Its chest tables are gone from `cave_loot.js`, `journals.js` and `rumour_maps.js`, and from the Almanac.
 - Noted, unchanged: vanilla's and CTOV's pillager outposts both generate, so outposts are roughly twice as common
   as vanilla. That suits a world the pillagers won.
+
+## The reroll never ran: `getGameTime` is not reachable from KubeJS here (2026-10-19, two fresh worlds)
+Both 16:00 and 16:08 worlds logged `[peacock] reroll: failed — TypeError: Cannot find function getGameTime in object
+ServerLevel[world]` — the first line of the check, so no world was ever rerolled (and, reading back, none had been
+since the reroll was added). Village Spawn Point found no capital on either seed and was not in the way: it runs
+once at world creation, only looks for `#peacock:capital`, and leaves spawn alone when there is none. Other Level
+calls work (`getSharedSpawnPos`, `structureManager`, the generator and structure-placement calls the founder used),
+so only this name is missing from KubeJS's remapping. Fix: "brand new" is now a first-boot flag saved with the world
+(`peacock_booted`), AND-ed with the world's age when any route to the clock works (`worldAge()` tries
+`getGameTime`, the SRG names, and `levelData`); the console line `[peacock] reroll: first boot: …; world age: …`
+shows which route worked. The player-has-joined, nobody-online and start-script `playerdata/` guards are unchanged.

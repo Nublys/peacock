@@ -7,9 +7,14 @@
 // kubejs/config/peacock-reroll.json and stops the server. peacock-start.sh sees the file, deletes that world folder
 // (only if it holds no player data at all), clears level-seed, and starts again on a fresh random seed.
 //
-// "Brand new" is checked three ways: the world's own clock is under two minutes (an old world has hours), nobody
-// has ever logged in to it (a flag set on first login), and nobody is online. The start script adds a fourth: the
-// world folder's playerdata/ is empty. After 15 tries in a row it stops rerolling and keeps the world.
+// "Brand new" is checked several ways: this is the world's first boot with this script (a flag saved with the world),
+// its clock is under two minutes when the clock can be read (an old world has hours), nobody has ever logged in to it
+// (a flag set on first login), and nobody is online. The start script adds one more: the world folder's playerdata/
+// is empty. After 15 tries in a row it stops rerolling and keeps the world.
+//
+// The clock: `level.getGameTime()` is not reachable from KubeJS on this server ("Cannot find function getGameTime in
+// object ServerLevel", every boot through 2026-10-19 16:13 — so the reroll never once ran). worldAge() tries the
+// other names for it and returns null when none work; the first-boot flag alone then decides.
 //
 // A capital with a Village Recruits tower beside it is rerolled too (village review, 2026-10-19). The tower set can
 // keep clear of only one other set and that is the ruins, so on roughly one seed in ten a tower can generate within
@@ -76,11 +81,30 @@ function moveSpawnTo(server, pos, log) {
   var level = server.overworld()
   var Heightmap = Java.loadClass('net.minecraft.world.level.levelgen.Heightmap$Types')
   var BlockPos = Java.loadClass('net.minecraft.core.BlockPos')
-  var y = level.getHeight(Heightmap.MOTION_BLOCKING_NO_LEAVES, pos.getX(), pos.getZ())
+  var y = pos.getY()
+  try { y = level.getHeight(Heightmap.MOTION_BLOCKING_NO_LEAVES, pos.getX(), pos.getZ()) } catch (e) { }   // players land on the surface anyway
   level.setDefaultSpawnPos(new BlockPos(pos.getX(), y, pos.getZ()), 0.0)
   log('the capital is at ' + pos.getX() + ',' + pos.getZ() + ' but spawn was not in it — spawn moved there; walling it in 30 s')
   // the wall reads the capital at spawn; give the new spawn chunks time to load first
   server.scheduleInTicks(600, () => server.runCommandSilent('peacock wall'))
+}
+
+// game ticks since the world was created, or null if no route to the clock works here (see the header)
+function worldAge(level) {
+  var routes = [
+    ['getGameTime', () => level.getGameTime()],
+    ['m_46467_', () => level.m_46467_()],
+    ['levelData.getGameTime', () => level.getLevelData().getGameTime()],
+    ['levelData.m_6793_', () => level.getLevelData().m_6793_()],
+    ['gameTime', () => level.gameTime],
+  ]
+  for (var i = 0; i < routes.length; i++) {
+    try {
+      var v = routes[i][1]()
+      if (v !== undefined && v !== null && !isNaN(Number(v))) return { ticks: Number(v), via: routes[i][0] }
+    } catch (e) { }
+  }
+  return null
 }
 
 function tries() {
@@ -95,8 +119,13 @@ ServerEvents.loaded(event => {
   server.scheduleInTicks(300, () => {
     try {
       var log = m => console.info('[peacock] reroll: ' + m)
-      var age = server.overworld().getGameTime()
-      var fresh = age <= NEW_WORLD_TICKS
+      var pd = server.persistentData
+      var firstBoot = !pd.getBoolean('peacock_booted')
+      pd.putBoolean('peacock_booted', true)
+      var clock = worldAge(server.overworld())
+      var age = clock ? clock.ticks : -1
+      var fresh = firstBoot && (!clock || age <= NEW_WORLD_TICKS)
+      log('first boot: ' + firstBoot + '; world age: ' + (clock ? age + ' ticks (' + clock.via + ')' : 'unreadable') + ' — ' + (fresh ? 'a new world' : 'an existing world'))
       var cap = capitalAtSpawn(server)
       if (!cap && fresh) {
         var found = null
@@ -124,7 +153,7 @@ ServerEvents.loaded(event => {
       var n = tries()
       if (n >= MAX_TRIES) { keep(n + ' rerolls in a row'); JsonIO.write(COUNT, { tries: 0 }); return }
       JsonIO.write(MARKER, { reroll: true, attempt: n + 1, worldTicks: Number(age) })
-      log(why + ' (world ' + age + ' ticks old, never joined) — attempt ' + (n + 1) + ' of ' + MAX_TRIES + ', stopping for a new seed')
+      log(why + ' (new world, never joined) — attempt ' + (n + 1) + ' of ' + MAX_TRIES + ', stopping for a new seed')
       server.runCommandSilent('stop')
     } catch (e) { console.error('[peacock] reroll: failed — ' + e) }
   })

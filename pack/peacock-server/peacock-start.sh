@@ -74,7 +74,7 @@ while true; do
     say "!! reroll requested but ${LEVEL}/level.dat is missing — not deleting anything"
     exit "${code}"
   fi
-  say "reroll ${ATTEMPT:-?}: no capital on this seed — deleting ${LEVEL} and starting on a new seed"
+  say "reroll ${ATTEMPT:-?}: this seed does not suit the capital — deleting ${LEVEL} and starting on a new seed"
   rm -rf "${LEVEL}"
   sed -i 's/^level-seed=.*/level-seed=/' server.properties
   printf '{"tries": %s}\n' "${ATTEMPT:-1}" > "${COUNT}"
