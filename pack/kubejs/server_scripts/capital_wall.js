@@ -150,6 +150,7 @@ function runWall(server, log) {
 const GRID = 5, GRID_STEP = 44          // 5x5 samples, ±88 blocks: most of the capital's footprint
 const STRICT_SPREAD = 16, LOOSE_SPREAD = 30   // max height difference across the grid, in blocks
 const RING_FROM = 6, RING_TO = 62, RING_STEP = 4   // candidate rings, in chunks from the origin
+const TAU = 6.283185307179586                    // KubeJS' Rhino has no Math.PI (nor Math.E …): undefined, so NaN
 
 function biomeTag(ns, path) {
   var Registries = J('net.minecraft.core.registries.Registries')
@@ -231,10 +232,10 @@ function survey(S, x, z) {
 function scan(S, log) {
   var loose = null, seen = 0, wetCentres = 0, surveyed = 0, samples = []
   for (var R = RING_FROM; R <= RING_TO; R += RING_STEP) {
-    var n = Math.max(8, Math.round(2 * Math.PI * R / 6))
+    var n = Math.max(8, Math.round(TAU * R / 6))
     var best = null
     for (var k = 0; k < n; k++) {
-      var a = 2 * Math.PI * k / n + R * 0.37      // rotate each ring so candidates do not line up
+      var a = TAU * k / n + R * 0.37      // rotate each ring so candidates do not line up
       var cx = Math.round(Math.cos(a) * R), cz = Math.round(Math.sin(a) * R)
       var x = cx * 16 + 8, z = cz * 16 + 8
       var centre = S.idAt(x, z)

@@ -577,3 +577,9 @@ Why things are the way they are. Add an entry when a choice would surprise someo
 - Log lines to look for on a new world: `[peacock] found: gentle land at chunk …`, `generating N chunks …`,
   `placed the capital over N chunks`, `world spawn moved to …`, then `wall: … columns`. Or, with a good seed,
   Spawn Point's "Village found!" and straight to `wall:`.
+- **Seventh run (21:54): the survey looked at 0 spots.** KubeJS' Rhino (rhino-forge 2001.2.3) has no `Math.PI` —
+  it is `undefined`, so every ring's spot count was `NaN` and the loop body never ran. Reproduced off-server by
+  loading the pack's own Rhino jar (+ Gson) in a 10-line Java harness and running the real `scan()` against a stub
+  world; fixed with a literal `TAU`. The same harness confirmed the earlier trap: a `const`/`let` inside a `try`
+  block throws "redeclaration of var" at run time. `tools/validate.py` now fails on both patterns in any KubeJS
+  script (CI runs it).

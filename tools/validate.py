@@ -107,10 +107,34 @@ def check_index() -> None:
         err("pack.toml index hash is stale (run `packwiz refresh`)")
 
 
+def check_kubejs() -> None:
+    """KubeJS 2001's Rhino (rhino-forge 2001.2.3) traps that have each cost a test world, checked by hand-run harness:
+    Math.PI / Math.E / … are undefined (NaN arithmetic, no error); a `const`/`let` inside a try block throws
+    "redeclaration of var" at run time. Inside functions use `var` (and a literal for pi)."""
+    import re
+    for f in sorted((PACK / "kubejs").rglob("*.js")):
+        code = [re.sub(r"//.*", "", l) for l in f.read_text(encoding="utf-8").splitlines()]
+        for i, line in enumerate(code, 1):
+            m = re.search(r"\bMath\.([A-Z][A-Z0-9_]*)\b", line)
+            if m:
+                err(f"{f.relative_to(ROOT)}:{i}: Math.{m.group(1)} is undefined in KubeJS' Rhino; use a literal")
+        depth_try = []
+        depth = 0
+        for i, line in enumerate(code, 1):
+            if re.search(r"\btry\s*\{", line):
+                depth_try.append(depth + line[: line.index("try")].count("{") - line[: line.index("try")].count("}") + 1)
+            if depth_try and re.match(r"\s*(const|let)\s", line) and depth >= depth_try[-1]:
+                err(f"{f.relative_to(ROOT)}:{i}: const/let inside a try block throws 'redeclaration of var' in KubeJS' Rhino; use var")
+            depth += line.count("{") - line.count("}")
+            while depth_try and depth < depth_try[-1]:
+                depth_try.pop()
+
+
 def main() -> int:
     print("parsing TOML/JSON …"); parse_all()
     print("checking .pw.toml entries …"); check_pw_tomls()
     print("checking index …"); check_index()
+    print("checking KubeJS scripts for Rhino traps …"); check_kubejs()
     n_mods = len(list((PACK / "mods").glob("*.pw.toml")))
     if errors:
         print(f"\n{len(errors)} problem(s).")
