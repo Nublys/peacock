@@ -21,9 +21,8 @@
     },
     {
       "type": "patchouli:crafting",
-      "recipe": "peacock:charter/climate",
-      "recipe2": "peacock:charter/cooking",
-      "text": "Climate control: snow. Tier 1."
+      "recipe": "peacock:charter/cooking",
+      "text": "Advanced cooking: a cooking pot. Tier 1."
     },
     {
       "type": "patchouli:crafting",

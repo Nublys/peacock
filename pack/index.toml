@@ -884,18 +884,6 @@ file = "config/terrablender.toml"
 hash = "c73292a81a8409d74edb12b0bb9226bda03f39e11afc8abfe6bff52cc30ef480"
 
 [[files]]
-file = "config/toughasnails/client.toml"
-hash = "8437167002a3f6fc23fefe6daaccd4b3d1a8a8f8ada7494c5890f3e36bae9533"
-
-[[files]]
-file = "config/toughasnails/temperature.toml"
-hash = "394278e2f499d4daec34ae5df3c0000b9caaf805a28c37a41fc89ff9c1026073"
-
-[[files]]
-file = "config/toughasnails/thirst.toml"
-hash = "30a2d764b3241e99fa4c21e8c605bc54211d3bea3202df3e5eb7d6e68c454841"
-
-[[files]]
 file = "config/underground_village/common.json5"
 hash = "0dda603d61b039d6eef9b75283bcf9990895f248faaa3628cde3431aae39ed4b"
 
@@ -1029,11 +1017,11 @@ hash = "6c16de3bde6076f6ec0da4ebd480c8735ccf8fa032f4e85e95190172687d008b"
 
 [[files]]
 file = "kubejs/server_scripts/blueprints.js"
-hash = "9d12bbf23578d39d0db2c5333afa6399777bca3f8e58db4e13e52aa1a2a9971b"
+hash = "7970e178f45aca6cdaf4de24ee36e806505d03534a5f567e97e535c107a34535"
 
 [[files]]
 file = "kubejs/server_scripts/capital_wall.js"
-hash = "bbd386642e4396191c87a786b6d1ffe8831230b7b4230a9c275703428cc4652b"
+hash = "d7586dfefcb2e9c5475d40050fc393c506b69a2488e4b29a0cf19de28b936338"
 
 [[files]]
 file = "kubejs/server_scripts/cave_loot.js"
@@ -1057,11 +1045,7 @@ hash = "df89ae7d310496a4be9e1bc5dbd945bf65aa24347650efbe46c9e2549f5ca889"
 
 [[files]]
 file = "kubejs/server_scripts/sleep_afk.js"
-hash = "d8734440b88ca8fabbf2518314ea24645cb0f4f16c498b28af2ce0cb51d1bd16"
-
-[[files]]
-file = "kubejs/server_scripts/thirst_off.js"
-hash = "7675c52cbf4acf42e909e5d3bf3ddfa6233a774e420046f557f0dd587f50df77"
+hash = "48bf7aaeaaf72d70b2e35a0df124c892d67e49906b4ca89a1dd25bed79e03c83"
 
 [[files]]
 file = "kubejs/server_scripts/trading_depot_town.js"
@@ -1077,7 +1061,7 @@ hash = "e96838c71a0c3cd315c1e86557f2b28073fea465d711378e89c67f8f04615532"
 
 [[files]]
 file = "kubejs/startup_scripts/peacock_ladder.js"
-hash = "6725a69ee6e62cf7f45318a66270973472dfa5dc824f5aae6a9222063fa98548"
+hash = "f88687a47f6dbb34cd7eaabe33adc9f745a9fa0031b1c868c319eef2ec9618cc"
 
 [[files]]
 file = "mods/3dskinlayers.pw.toml"
@@ -1850,16 +1834,6 @@ hash = "df31d74a4c6de11c09fbcfaead84ca299188ab186a4f58dfff9099696541443f"
 metafile = true
 
 [[files]]
-file = "mods/tough-as-nails.pw.toml"
-hash = "43770400ceec7a777c867cd25dfa87fbccb943e46a391a0337f1ca1a4b016943"
-metafile = true
-
-[[files]]
-file = "mods/toughasnails-plus.pw.toml"
-hash = "3d0d51d21902650a44ca8c6de08ae759ec95e3975a48ce673602a47f0fe82c9b"
-metafile = true
-
-[[files]]
 file = "mods/trotting-wagons.pw.toml"
 hash = "f56d02109831397a2e68d136e3e3174c48653aefb0b68c71562e17e9ce642466"
 metafile = true
@@ -1993,7 +1967,7 @@ hash = "56a91f031fccb563df1bda5cfca3d5dfff9467b9c3a42f3e0cf48e80b9141852"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/categories/start.json"
-hash = "d9b04d940d551185dd2708c42428cd7c6de96ef78c186139f89cc4e3ac7eea82"
+hash = "2082f6a698e6e11c324737d647380f944d84c42a026ce7e7bcc18e15a61432eb"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/categories/story.json"
@@ -2064,10 +2038,6 @@ file = "patchouli_books/peacock_almanac/en_us/entries/faq/cant_craft.json"
 hash = "438b4dda2a25d23d18a34777de65e6e5821322295cb21152aae259532701160e"
 
 [[files]]
-file = "patchouli_books/peacock_almanac/en_us/entries/faq/cold.json"
-hash = "c6c1d234d561b02d80dee9cb3715028848b468b811537b843d81c194c4736ee3"
-
-[[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/faq/crops.json"
 hash = "6d9138c78b6980ffaefd7edbba26df08296fe0f59a92263a4d91668bcdd0e692"
 
@@ -2077,11 +2047,11 @@ hash = "afda04b2dd8a1f0e531c9951d900c4bbe97ea0b096bf13aa17a4ae79eaf1be50"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/faq/far_terrain.json"
-hash = "a62bb2417b3118457f0759f46c8b5b3ca51a8ec5f28e0614f52eae0dcbf90ec1"
+hash = "6a1f8c16144ccf0761eabe896f9958f6e88154f48e76ab3572cb5e546157552b"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/faq/fps.json"
-hash = "623600aac1fae3c94d9b265ce898407cd34f672d8f2068a7fb5706b85ba6f325"
+hash = "149db793968ed369828d7834239e42fb8558292697a3412875fc41c2348e36db"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/faq/hire.json"
@@ -2089,7 +2059,7 @@ hash = "2f8d5b43bef0eea46b12372a5be3cb945af947ec41edffd09a8112d42823441d"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/faq/lost_items.json"
-hash = "67e95612499583cb4be15e8ee7f6d6f2c7f86e03db99b8c8d61bce61d4defc04"
+hash = "3884585e3c025c14d8694fe7901a2c70dcb24d43493f19f773cf4107b4d8f3f9"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/faq/minimap.json"
@@ -2173,19 +2143,19 @@ hash = "b9853a45bef072affcbd161da8418f1c0825bfa43e55a6db5473d89111f261da"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/rules/what_we_dont_do.json"
-hash = "c3415a1dc0137610028786abe386355c1bc1f90e5a6f12abf55d46b68c0508fb"
+hash = "4951ca4aa5b9260c346fe919affad3b848fe19b215ab2a044e054b7ab03ba0b1"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/start/animals.json"
-hash = "77619c207a4137de35a44489ce154cfe395360301508f992dffab652ddb8f2e6"
+hash = "fd215a2db3f95005d725a08342a24477c18ad1e0e736ee359c7dc57ec1b9bca7"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/start/carrying.json"
-hash = "ed95b323cf40f1a2ced454d669ac7d7e3f90b3893de66e1bcc1c9d87fa425769"
+hash = "19ca7655f3f8d9bf2bd32b1b3b8e48612523fc632d2a02efcd37236cb0bd8373"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/start/first_create.json"
-hash = "503e8f047cd3a1cc262b6e08e44fb07fa3471f9e594efaffe311aaf6fa664ece"
+hash = "ecf0b9a6a8ebf027bc18eedf2a77fcacf3e9e51efc3411497d51bd5b1d032d89"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/start/food.json"
@@ -2193,11 +2163,7 @@ hash = "5a2ec56b77a366cc85aabd7cc2509ae6b23e83567b5cc9765feb2d06f6d0e445"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/start/spawn.json"
-hash = "566c0aeceb2d80d15ff570c54de60485bd9c92b018a80cbbaa4e1b2f774d7638"
-
-[[files]]
-file = "patchouli_books/peacock_almanac/en_us/entries/start/temperature.json"
-hash = "edb00ce45260efc5c140bf751d3ae6a5de5c59a71b4653e0837e5cfc53a5d640"
+hash = "631eec89bb79cb67b5ba11dd72f108a630149043cfc85c7b9fdcf20415f72c35"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/story/dead_towns.json"
@@ -2225,7 +2191,7 @@ hash = "7927c6fb64e02d1b478ca68f5474261de4d1dcaf9f515662b055a7e5357abf6a"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/tech/charters.json"
-hash = "945b0030b293b95ef1e18b31c8613673d7a513e4d91ee9855fc2436143ed0c4f"
+hash = "2cc29f23e7f5241243cdbbdf418c9ec9040169fddf6b17a533117012ecf891c8"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/tech/how_blueprints_work.json"
@@ -2233,7 +2199,7 @@ hash = "3cdbd3bb403a754b165b6fdb0ef715bb58487e1a5ccd98135a9ca3e5142524ee"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/tech/tier1.json"
-hash = "07ff58d3e1535869287c4adcf631015609d78ea26ac30b0daeac254f0748a68b"
+hash = "0693618988e924ff29fa6cce55ba8c0df1da2f6118af21985a68b30cb45273d7"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/tech/tier2.json"

@@ -102,7 +102,7 @@ Object.keys(L).forEach(rung => L[rung].bosses.forEach(b => { BOSS_TYPES[b.split(
 EntityEvents.hurt(event => {
   const boss = event.entity
   if (!BOSS_TYPES[String(boss.type)]) return
-  const attacker = event.source.getEntity()
+  const attacker = event.source.actual          // KubeJS: the entity behind the damage (getEntity() is not exposed)
   if (!attacker || !attacker.isPlayer()) return
   const uuid = String(attacker.uuid)
   const list = boss.persistentData.getString('peacock_fighters')

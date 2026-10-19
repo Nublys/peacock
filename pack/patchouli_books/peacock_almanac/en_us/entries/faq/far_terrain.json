@@ -2,7 +2,7 @@
   "name": "...see the far terrain?",
   "icon": "minecraft:spyglass",
   "category": "patchouli:faq",
-  "sortnum": 7,
+  "sortnum": 6,
   "pages": [
     {
       "type": "patchouli:text",

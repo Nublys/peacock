@@ -2,7 +2,7 @@
   "name": "Animals",
   "icon": "animania:trough",
   "category": "patchouli:start",
-  "sortnum": 3,
+  "sortnum": 2,
   "pages": [
     {
       "type": "patchouli:text",

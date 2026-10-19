@@ -10,7 +10,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Day one checklist:$()$(br)- Wood, a crafting table, a bed in the capital$(br)- Check the season (sky colour, or craft a calendar)$(br)- Food: villager farms are fair game, replant what you take$(br)- A campfire before nightfall if it is cold$(br)- Read $(l:patchouli:start/temperature)Staying Warm$() if it is autumn or winter"
+      "text": "$(bold)Day one checklist:$()$(br)- Wood, a crafting table, a bed in the capital$(br)- Check the season (sky colour, or craft a calendar)$(br)- Food: villager farms are fair game, replant what you take$(br)- A campfire before nightfall; the nights are long in winter"
     },
     {
       "type": "patchouli:text",
@@ -18,7 +18,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Dying$() leaves a corpse holding everything you carried. Walk back and right-click it. Nothing despawns, but somebody else can loot it, so tell a friend where you fell.$(br2)Hunger is vanilla plus AppleSkin (hover food to see what it restores). Thirst is $(bold)off$() in this pack."
+      "text": "$(bold)Dying$() leaves a corpse holding everything you carried. Walk back and right-click it. Nothing despawns, but somebody else can loot it, so tell a friend where you fell.$(br2)Hunger is vanilla plus AppleSkin (hover food to see what it restores). There is no thirst and no temperature: the seasons are felt in the fields, not on your skin."
     }
   ]
 }

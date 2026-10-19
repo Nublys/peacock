@@ -2,7 +2,7 @@
   "name": "Carrying Things",
   "icon": "backpacked:backpack",
   "category": "patchouli:start",
-  "sortnum": 5,
+  "sortnum": 4,
   "pages": [
     {
       "type": "patchouli:spotlight",

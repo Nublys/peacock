@@ -63,8 +63,8 @@ of them and you will know.
 ### Seasons and weather
 The year is four seasons of three sub-seasons, sixteen days each. Crops grow only in their season: wheat
 in spring and summer, nothing in winter without a greenhouse. Winter snow piles up in layers and melts
-back in spring. Cold and heat hurt (the gauge is by your hotbar): wool armour warms, leather cools,
-campfires warm the air around them. There is no thirst. A calendar (Serene Seasons) shows the season;
+back in spring. There is no thirst and no temperature damage — the seasons are felt in the fields, not on
+your skin. A calendar (Serene Seasons) shows the season;
 the chat tells you too, every time you log in. The calendar only moves while someone is online, so an empty
 server does not turn winter into winter again behind your back.
 

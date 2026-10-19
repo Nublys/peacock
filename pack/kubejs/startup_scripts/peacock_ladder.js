@@ -32,11 +32,6 @@ global.LADDER = {
              outputs: ['minecraft:tnt', 'create:empty_blaze_burner', 'musketmod:cartridge', 'musketmod:musket', 'musketmod:pistol', 'musketmod:blunderbuss', 'createbigcannons:powder_charge'] },
     story: 'Powder, fuses, the blaze burner, and the first guns.',
   },
-  climate: {
-    name: 'Climate control', tier: 1, bosses: ['mutantmonsters:mutant_snow_golem'], key: 'minecraft:snow_block',
-    gates: { outputs: ['toughasnails:thermoregulator', 'tan_plus:fan', 'tan_plus:personal_fan', 'tan_plus:air_conditioner_o', 'tan_plus:advanced_air_conditioner_o'] },
-    story: 'Thermoregulators, fans and air conditioners. Wool and leaves are always free.',
-  },
   cooking: {
     name: 'Advanced cooking', tier: 1, bosses: ['minecraft:skeleton|Torte'], key: 'farmersdelight:cooking_pot',
     gates: { outputs: ['sliceanddice:slicer', 'sliceanddice:sprinkler'] },

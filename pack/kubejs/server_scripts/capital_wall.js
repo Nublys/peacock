@@ -61,10 +61,12 @@ function build(level, bb, log) {
   let seed = (x0 * 31 + z0) >>> 0
   const rng = () => { seed = (seed * 1664525 + 1013904223) >>> 0; return seed / 4294967296 }
   const cols = []
-  for (let x = x0; x <= x1; x++) cols.push([x, z0, 'n'])
-  for (let z = z0 + 1; z <= z1; z++) cols.push([x1, z, 'e'])
-  for (let x = x1 - 1; x >= x0; x--) cols.push([x, z1, 's'])
-  for (let z = z1 - 1; z > z0; z--) cols.push([x0, z, 'w'])
+  // KubeJS' Rhino rejects a second `let x` in another block of the same function ("redeclaration of var x"),
+  // so every loop variable in this function has its own name
+  for (let ax = x0; ax <= x1; ax++) cols.push([ax, z0, 'n'])
+  for (let az = z0 + 1; az <= z1; az++) cols.push([x1, az, 'e'])
+  for (let bx = x1 - 1; bx >= x0; bx--) cols.push([bx, z1, 's'])
+  for (let bz = z1 - 1; bz > z0; bz--) cols.push([x0, bz, 'w'])
   const midX = Math.floor((x0 + x1) / 2), midZ = Math.floor((z0 + z1) / 2)
   const isGate = (x, z, side) => (side === 'n' || side === 's') ? Math.abs(x - midX) <= GATE_HALF : Math.abs(z - midZ) <= GATE_HALF
   const isGatePost = (x, z, side) => (side === 'n' || side === 's') ? Math.abs(x - midX) === GATE_HALF + 1 : Math.abs(z - midZ) === GATE_HALF + 1
@@ -76,13 +78,13 @@ function build(level, bb, log) {
     const x = cols[i][0], z = cols[i][1], side = cols[i][2]
     const yg = groundY(level, Heightmap, x, z)
     // foundation: stone down through soft blocks and water to something solid (at most 8)
-    for (let y = yg - 1; y > yg - 9; y--) {
-      const id = level.getBlock(x, y, z).id
-      if (!SOFT(id) && y < yg - 1) break
-      set(x, y, z, 'minecraft:stone_bricks')
+    for (let fy = yg - 1; fy > yg - 9; fy--) {
+      const fid = level.getBlock(x, fy, z).id
+      if (!SOFT(fid) && fy < yg - 1) break
+      set(x, fy, z, 'minecraft:stone_bricks')
     }
     if (isGate(x, z, side)) {
-      for (let y = yg; y < yg + HEIGHT; y++) { if (level.getBlock(x, y, z).id !== 'minecraft:air') set(x, y, z, 'minecraft:air') }
+      for (let gy = yg; gy < yg + HEIGHT; gy++) { if (level.getBlock(x, gy, z).id !== 'minecraft:air') set(x, gy, z, 'minecraft:air') }
       set(x, yg - 1, z, 'minecraft:dirt_path')
       set(x, yg + HEIGHT, z, 'minecraft:stone_bricks')                                   // the arch
       if (Math.abs((side === 'n' || side === 's') ? x - midX : z - midZ) === 0) {
@@ -99,7 +101,7 @@ function build(level, bb, log) {
     }
     const corner = isCorner(x, z), pillar = corner || isGatePost(x, z, side) || i % PILLAR_EVERY === 0
     const top = yg + HEIGHT + (corner ? 2 : pillar ? 1 : 0)
-    for (let y = yg; y < top; y++) set(x, y, z, brick(rng))
+    for (let wy = yg; wy < top; wy++) set(x, wy, z, brick(rng))
     if (pillar) set(x, top, z, 'minecraft:lantern', { hanging: 'false' })
     else set(x, top, z, 'minecraft:stone_brick_wall')
   }

@@ -2,7 +2,7 @@
   "name": "Your First Machines",
   "icon": "create:andesite_alloy",
   "category": "patchouli:start",
-  "sortnum": 4,
+  "sortnum": 3,
   "pages": [
     {
       "type": "patchouli:text",

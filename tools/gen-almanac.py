@@ -35,7 +35,7 @@ BOOK_JSON = {
 # category id -> (name, description, icon, sortnum)
 CATEGORIES = {
     "story":   ("The Dark Age", "What happened, what was lost, and what you are here to do.", "minecraft:cracked_stone_bricks", 0),
-    "start":   ("First Days", "Spawn, the capital, food, warmth, animals, and the first machines.", "minecraft:campfire", 1),
+    "start":   ("First Days", "Spawn, the capital, food, animals, and the first machines.", "minecraft:campfire", 1),
     "land":    ("Land, Seasons & Sky", "The year, the cold, what grows when, the moons, and the other dimensions.", "sereneseasons:calendar", 2),
     "ore":     ("Ore & Prospecting", "Metal is regional. Finding it is the first adventure.", "geolosys:prospectors_pick", 3),
     "towns":   ("Towns & Trade", "The capital, villagers, workers, recruits, caravans and bounties.", "minecraft:emerald", 4),
@@ -154,11 +154,11 @@ ENTRIES = {
         ("spawn", "Where You Woke Up", "minecraft:bell", [
             txt("Everyone spawns in the same village: the " + B("capital") + ", the last old town standing — a walled castle town with a keep. It has a bell, villagers with trades, beds and bounty boards. It is the first market and the first thing raiders come for.",
                 "Claim a bed early. There is no fast travel; the way home matters. Every other old stone village is a ruin (" + L("story/dead_towns", "The Dead Towns") + ")."),
-            txt(B("Day one checklist:") + "$(br)- Wood, a crafting table, a bed in the capital$(br)- Check the season (sky colour, or craft a calendar)$(br)- Food: villager farms are fair game, replant what you take$(br)- A campfire before nightfall if it is cold$(br)- Read " + L("start/temperature", "Staying Warm") + " if it is autumn or winter"),
+            txt(B("Day one checklist:") + "$(br)- Wood, a crafting table, a bed in the capital$(br)- Check the season (sky colour, or craft a calendar)$(br)- Food: villager farms are fair game, replant what you take$(br)- A campfire before nightfall; the nights are long in winter"),
             txt(B("First night:") + " stay inside the wall. Mobs here are tougher and smarter than you remember, and the village guards will not chase them for you.",
                 "Mark the capital on your " + L("tools/atlas", "atlas") + " before you leave it. The capital will grow as the server does; nothing you build there is wasted."),
             txt(B("Dying") + " leaves a corpse holding everything you carried. Walk back and right-click it. Nothing despawns, but somebody else can loot it, so tell a friend where you fell.",
-                "Hunger is vanilla plus AppleSkin (hover food to see what it restores). Thirst is " + B("off") + " in this pack."),
+                "Hunger is vanilla plus AppleSkin (hover food to see what it restores). There is no thirst and no temperature: the seasons are felt in the fields, not on your skin."),
         ]),
         ("food", "Food & Cooking", "farmersdelight:cooking_pot", [
             txt("Farmer's Delight runs the kitchen. Raw food still works, but real meals feed you longer, give " + B("Nourishment") + " (slow natural regen) and " + B("Comfort") + " (faster healing).",
@@ -174,18 +174,6 @@ ENTRIES = {
                 "Raw and roasted food keeps you alive; meals make the difference in a fight."),
             txt("Season matters: see " + L("land/crops", "What Grows When") + ". Out of season, crops stop; a greenhouse roof or a deep farm keeps the pot full.",
                 "Animals are from Animania and are a chapter of their own: " + L("start/animals", "Animals")),
-        ]),
-        ("temperature", "Staying Warm (and Cool)", "toughasnails:wool_helmet", [
-            txt("Tough As Nails tracks your " + B("temperature") + ": five bands, Icy, Cold, Neutral, Warm, Hot. The gauge is by your hotbar. Winter nights, snow, deep water and altitude pull it down; deserts, the Nether and summer noon push it up.",
-                "Thirst is " + B("off") + ". Temperature is the survival layer."),
-            txt(B("Icy") + " and " + B("Hot") + " hurt you over time. " + B("Cold") + " and " + B("Warm") + " are warnings. The shift takes a while, so you can cross a cold valley; you cannot camp in it unprepared.",
-                "Heat sources (campfires, torches, lava, furnaces) warm the air nearby; water, ice and shade cool it."),
-            craft("toughasnails:wool_helmet", "Wool warms, leaves cool. Every two pieces move you one band toward Neutral; armor never pushes you into Hot or Icy."),
-            craft("toughasnails:leaf_helmet", "Leaf armor for deserts and the Nether. Both sets are cheap and always craftable; they are the basic climate clothing and they are free."),
-            craft("toughasnails:thermometer", "A thermometer reads the air where you stand; a temperature gauge is a block that reads a room. Build one before you build a greenhouse."),
-            spot("toughasnails:thermoregulator", "The thermoregulator is a block that heats or cools a room, fed with fuel or ice. Fans and air conditioners (TAN+) go further. These are " + B("advanced climate control") + " and are part of the Blueprint ladder; wool and leaves never are.", title="Advanced climate control"),
-            txt(B("Thermal Tuning") + " is an armor enchantment that holds you at Neutral. Rare, and worth a slot.",
-                "Plan the first winter: a roof, a fire, wool, and food that gives Comfort. Plan the first summer: shade and water near the fields."),
         ]),
         ("animals", "Animals", "animania:trough", [
             txt("Animania replaces the farm animals. Cows, pigs, sheep, goats, chickens, rabbits, horses, ferrets, hamsters, cats and more come in real breeds with males, females and young.",
@@ -453,7 +441,7 @@ ENTRIES = {
         ("tier1", "Tier 1: Iron and a Dog", "minecraft:iron_ingot", [
             txt("Beatable alone in iron armour with a dog. These are the dark age's fallout, not its masters. They wander near home and you will meet them whether you look or not.",
                 B("Mutant Zombie") + " holds " + B("Brass") + ".$(br)" + B("Mutant Skeleton") + " holds " + B("Recruiting") + ".$(br)" + B("Mutant Creeper") + " holds " + B("Blasting") + "."),
-            txt(B("Mutant Snow Golem") + " (snow) holds " + B("Climate control") + ": thermoregulators, fans, air conditioners. Wool and leaf clothing stay free.$(br)" + B("Mutant Enderman") + " holds nothing; it is simply dangerous.$(br)" + B("Torte") + " (Nether) holds " + B("Advanced cooking") + ": Slice & Dice automation."),
+            txt(B("Mutant Snow Golem") + " (snow) and the " + B("Mutant Enderman") + " hold nothing; they are simply dangerous.$(br)" + B("Torte") + " (Nether) holds " + B("Advanced cooking") + ": Slice & Dice automation."),
             spot("create:brass_ingot", "Brass is the hinge of the whole tree: mechanical crafters, deployers, arms, trains, the smart funnels and filters that make a factory think. Zinc plus copper in a mixer over a blaze burner. The dead took the knowledge; the Mutant Zombie carries it.", title="Why brass"),
             txt(B("Blasting") + " covers TNT, gunpowder recipes, the blaze burner and musket cartridges. " + B("Recruiting") + " is hiring from Village Recruits; guards stay free.",
                 "A fresh server should clear Tier 1 in its first week."),
@@ -484,7 +472,7 @@ ENTRIES = {
                 "A charter is how a new player on an old server catches up, and how a stuck server routes around a boss nobody can beat yet."),
             craft("peacock:charter/brass", "Brass: zinc is the key. Tier 1."),
             craft("peacock:charter/recruiting", "Recruiting: an iron sword. Tier 1.", recipe2="peacock:charter/blasting"),
-            craft("peacock:charter/climate", "Climate control: snow. Tier 1.", recipe2="peacock:charter/cooking"),
+            craft("peacock:charter/cooking", "Advanced cooking: a cooking pot. Tier 1."),
             craft("peacock:charter/trains", "Trains: a rail. Tier 2.", recipe2="peacock:charter/ships"),
             craft("peacock:charter/trade", "Trading Floor: a lectern. Tier 2.", recipe2="peacock:charter/diesel"),
             craft("peacock:charter/precision", "Precision: a cogwheel. Tier 3.", recipe2="peacock:charter/netherite"),
@@ -558,7 +546,7 @@ ENTRIES = {
         ]),
         ("what_we_dont_do", "What We Do Not Do", "minecraft:barrier", [
             txt(B("No minimap.") + " The atlas is the map.$(br)" + B("No fast travel.") + " Rails, ships, wagons and roads.$(br)" + B("No trading halls.") + " Villagers trade well where they live well.$(br)" + B("No block griefing from cannons.") + " They hurt mobs and players; the land stays.",
-                B("No thirst.") + " Temperature is the survival layer."),
+                B("No thirst, no temperature.") + " The seasons are the survival layer: what grows, and when."),
             txt(B("Sleep is a vote:") + " when half the players online are in bed, the night skips; the action bar counts who is sleeping. " + B("Away:") + " five minutes without moving greys your name in the tab list with an [AFK] tag; move or talk and it clears.",
                 B("Tab") + " shows the server's TPS and everyone's ping. Twenty is healthy; if it sits below fifteen while nobody is doing anything unusual, tell the admin what everyone was doing."),
             txt(B("Towns are capped") + " at about two dozen villagers; breeding stops when a town is full. Found another.$(br)" + B("Depots need towns:") + " a bell and four beds within 32 blocks.$(br)" + B("Technology is personal:") + " your Blueprints are yours. Trade them.",
@@ -655,9 +643,6 @@ ENTRIES = {
         ]),
         ("hire", "...hire this recruit?", "minecraft:emerald", [
             txt("Recruiting is a Blueprint (the Mutant Skeleton's). Until you have it, emeralds do nothing. Guards (give a villager a weapon) work for everyone."),
-        ]),
-        ("cold", "...stop freezing?", "toughasnails:wool_chestplate", [
-            txt("Wool armour, two pieces per band toward Neutral; a campfire or torches nearby; stay out of deep water and off the peaks at night. Winter is three sub-seasons long. See " + L("start/temperature", "Staying Warm") + "."),
         ]),
         ("far_terrain", "...see the far terrain?", "minecraft:spyglass", [
             txt("Distant Horizons needs the server to have generated the land first; a new world fills in over an hour or so, faster where people have walked. If it never appears: Options, Video, Distant Horizons, rendering on, and check your profile's radius (potato is 64 chunks)."),

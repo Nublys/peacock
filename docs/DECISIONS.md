@@ -533,3 +533,17 @@ Why things are the way they are. Add an entry when a choice would surprise someo
   CTOV's `minecraft:building_entrance` at road level. The bounty post carries Terralith's.
 - The CTOV-based capital variants are gone; the script wall remains available but off.
 
+## Tough As Nails removed (2026-10-18)
+- Aaron, on the players' behalf: "the freezing is annoying". Tough As Nails and TaN Plus are out, with their
+  config, the thirst script, and the ladder's *Climate control* rung (its outputs were all TaN blocks); the
+  Mutant Snow Golem now holds nothing. Seasons stay strict in the fields — that is the survival layer now.
+
+## Three script bugs from the fourth world's log (2026-10-18)
+- `capital_wall.js` died on "redeclaration of var x": KubeJS' Rhino does not scope `let`/`const` per block, so a
+  loop variable cannot share a name with a later `const` in the same function. Every loop variable is unique now.
+  The structure lookup itself worked: it logged the capital's bounds (141×155 blocks) before failing.
+- The AFK team never existed: Recruits listens to every command and throws if one runs inside `ServerEvents.loaded`
+  before it has its server reference. The team commands run 3 s later now.
+- `blueprints.js`: `event.source.getEntity()` is not exposed by KubeJS; `event.source.actual` is. Boss fighters
+  were never recorded, so no Blueprint would have dropped for anyone.
+

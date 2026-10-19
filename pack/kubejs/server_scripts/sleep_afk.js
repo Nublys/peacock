@@ -19,14 +19,18 @@ const TEAM = 'peacock_afk'
 
 ServerEvents.loaded(event => {
   const s = event.server
-  if (SLEEP_PERCENT >= 0) s.runCommandSilent('gamerule playersSleepingPercentage ' + Math.round(SLEEP_PERCENT))
-  if (AFK_TICKS > 0) {
-    s.runCommandSilent('team add ' + TEAM)
-    s.runCommandSilent('team modify ' + TEAM + ' color gray')
-    s.runCommandSilent('team modify ' + TEAM + ' prefix {"text":"[AFK] ","color":"dark_gray"}')
-    s.runCommandSilent('team modify ' + TEAM + ' collisionRule always')
-  }
-  console.info('[peacock] sleep vote at ' + SLEEP_PERCENT + '%, AFK fade after ' + (AFK_TICKS / 1200) + ' min')
+  // a few seconds late on purpose: the Recruits mod listens to every command and throws if one runs before
+  // it has seen the server start ("this.server is null", 2026-10-18), which aborted the team setup
+  s.scheduleInTicks(60, () => {
+    if (SLEEP_PERCENT >= 0) s.runCommandSilent('gamerule playersSleepingPercentage ' + Math.round(SLEEP_PERCENT))
+    if (AFK_TICKS > 0) {
+      s.runCommandSilent('team add ' + TEAM)
+      s.runCommandSilent('team modify ' + TEAM + ' color gray')
+      s.runCommandSilent('team modify ' + TEAM + ' prefix {"text":"[AFK] ","color":"dark_gray"}')
+      s.runCommandSilent('team modify ' + TEAM + ' collisionRule always')
+    }
+    console.info('[peacock] sleep vote at ' + SLEEP_PERCENT + '%, AFK fade after ' + (AFK_TICKS / 1200) + ' min')
+  })
 })
 
 // uuid -> { pose: 'x,y,z,yaw,pitch', since: tick, afk: bool }
