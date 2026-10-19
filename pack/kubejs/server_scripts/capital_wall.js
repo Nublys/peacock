@@ -156,15 +156,37 @@ function biomeTag(ns, path) {
   return J('net.minecraft.tags.TagKey').create(Registries.BIOME, RL(ns, path))
 }
 
-function sampler(level) {
+function idOf(h) {
+  var k = h.unwrapKey()
+  return k.isPresent() ? String(k.get().location()) : '?'
+}
+
+// Biome ids in a tag, as a plain string set: the per-sample test is then string lookup, with no reliance on
+// Rhino picking the right Holder.is(...) overload (the sixth world's survey called every candidate wet).
+function tagIds(level, ns, path) {
+  var Registries = J('net.minecraft.core.registries.Registries')
+  var ids = {}, count = 0
+  var it = level.registryAccess().registryOrThrow(Registries.BIOME).getTagOrEmpty(biomeTag(ns, path)).iterator()
+  while (it.hasNext()) { ids[idOf(it.next())] = true; count++ }
+  return { ids: ids, count: count }
+}
+
+function sampler(level, log) {
   var BlockPos = J('net.minecraft.core.BlockPos')
   var Heightmap = J('net.minecraft.world.level.levelgen.Heightmap$Types')
   var cs = level.getChunkSource()
   var gen = cs.getGenerator()
   var rs = cs.randomState()
-  var gentle = biomeTag('peacock', 'capital_biomes')
-  var wet = [biomeTag('minecraft', 'is_ocean'), biomeTag('minecraft', 'is_deep_ocean'), biomeTag('minecraft', 'is_river'), biomeTag('minecraft', 'is_beach')]
+  var gentle = tagIds(level, 'peacock', 'capital_biomes')
+  var wet = { ids: {}, count: 0 }
+  var wetTags = ['is_ocean', 'is_deep_ocean', 'is_river', 'is_beach']
+  for (var wi = 0; wi < wetTags.length; wi++) {
+    var t = tagIds(level, 'minecraft', wetTags[wi])
+    for (var key in t.ids) { wet.ids[key] = true }
+    wet.count += t.count
+  }
   var sea = gen.getSeaLevel()
+  log('found: tags: ' + gentle.count + ' gentle biomes, ' + wet.count + ' wet; sea level ' + sea)
   // the ruins' structure set, to keep the capital off the top of an old town (positional check, no chunk loads)
   var ruins = null
   try {
@@ -176,9 +198,9 @@ function sampler(level) {
   var state = cs.getGeneratorState()
   return {
     sea: sea,
-    biomeAt: (x, z) => level.getBiome(new BlockPos(x, 64, z)),
-    isGentle: h => h.is(gentle),
-    isWet: h => wet.some(t => h.is(t)),
+    idAt: (x, z) => idOf(level.getBiome(new BlockPos(x, 64, z))),
+    isGentle: id => gentle.ids[id] === true,
+    isWet: id => wet.ids[id] === true || /ocean|river|beach|shore/.test(id),
     // terrain height straight from the generator's noise: no chunk is generated or loaded for this
     heightAt: (x, z) => gen.getBaseHeight(x, z, Heightmap.WORLD_SURFACE_WG, level, rs),
     nearRuin: (cx, cz) => ruins ? state.hasStructureChunkInRange(ruins, cx, cz, 8) : false,
@@ -192,7 +214,7 @@ function survey(S, x, z) {
   for (var gi = -half; gi <= half; gi++) {
     for (var gj = -half; gj <= half; gj++) {
       var sx = x + gi * GRID_STEP, sz = z + gj * GRID_STEP
-      var b = S.biomeAt(sx, sz)
+      var b = S.idAt(sx, sz)
       if (S.isGentle(b)) gentleN++
       if (S.isWet(b)) wetN++
       var h = S.heightAt(sx, sz)
@@ -207,7 +229,7 @@ function survey(S, x, z) {
 // Picks the capital's chunk: the flattest gentle, dry, ruin-free spot in the nearest ring that has one; failing
 // that the flattest dry land anywhere in reach; failing that nothing (an all-ocean kilometre around the origin).
 function scan(S, log) {
-  var loose = null
+  var loose = null, seen = 0, wetCentres = 0, surveyed = 0, samples = []
   for (var R = RING_FROM; R <= RING_TO; R += RING_STEP) {
     var n = Math.max(8, Math.round(2 * Math.PI * R / 6))
     var best = null
@@ -215,10 +237,13 @@ function scan(S, log) {
       var a = 2 * Math.PI * k / n + R * 0.37      // rotate each ring so candidates do not line up
       var cx = Math.round(Math.cos(a) * R), cz = Math.round(Math.sin(a) * R)
       var x = cx * 16 + 8, z = cz * 16 + 8
-      var centre = S.biomeAt(x, z)
-      if (S.isWet(centre)) continue
+      var centre = S.idAt(x, z)
+      seen++
+      if (samples.length < 4) samples.push(centre + '@' + x + ',' + z + ' h' + S.heightAt(x, z))
+      if (S.isWet(centre)) { wetCentres++; continue }
       if (!S.isGentle(centre) && loose && loose.score < 12) continue   // enough looseness in hand; skip the noise
       var r = survey(S, x, z)
+      surveyed++
       if (r.dry < r.n - 1 || r.wet > 1) continue
       // the fallback: any dry, reasonably flat land, nearest and flattest first
       var looseScore = r.spread + (R - RING_FROM) / RING_STEP * 3 + (r.n - r.gentle)
@@ -226,8 +251,9 @@ function scan(S, log) {
       // the real thing: gentle biomes almost everywhere, flat, not on a ruin
       if (r.gentle >= r.n - 2 && r.spread <= STRICT_SPREAD && !S.nearRuin(cx, cz) && (!best || r.spread < best.r.spread)) best = { cx: cx, cz: cz, r: r, R: R }
     }
-    if (best) { log('found: gentle land at chunk ' + best.cx + ',' + best.cz + ' (ring ' + R + ', height spread ' + best.r.spread + ', ' + best.r.gentle + '/' + best.r.n + ' gentle)'); return best }
+    if (best) { log('found: looked at ' + seen + ' spots (' + wetCentres + ' in water, ' + surveyed + ' surveyed); e.g. ' + samples.join(' ')); log('found: gentle land at chunk ' + best.cx + ',' + best.cz + ' (ring ' + R + ', height spread ' + best.r.spread + ', ' + best.r.gentle + '/' + best.r.n + ' gentle)'); return best }
   }
+  log('found: looked at ' + seen + ' spots (' + wetCentres + ' in water, ' + surveyed + ' surveyed); e.g. ' + samples.join(' '))
   if (loose) { log('found: no gentle ring; nearest dry flat land at chunk ' + loose.cx + ',' + loose.cz + ' (ring ' + loose.R + ', height spread ' + loose.r.spread + ', ' + loose.r.gentle + '/' + loose.r.n + ' gentle)'); return loose }
   return null
 }
@@ -277,7 +303,7 @@ function found(server, where, force, log) {
   var pick = where
   if (!pick) {
     var t0 = Date.now()
-    pick = scan(sampler(level), log)
+    pick = scan(sampler(level, log), log)
     log('found: survey took ' + (Date.now() - t0) + ' ms')
     if (!pick) { log('found: no dry land within ' + RING_TO * 16 + ' blocks of the origin — nothing founded'); return false }
   }
