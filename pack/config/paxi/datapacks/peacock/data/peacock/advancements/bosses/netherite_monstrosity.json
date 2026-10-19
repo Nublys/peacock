@@ -1,0 +1,23 @@
+{
+  "display": {
+    "title": {
+      "text": "Slag"
+    },
+    "description": {
+      "text": "Defeat the Netherite Monstrosity"
+    },
+    "icon": {
+      "item": "minecraft:netherite_block"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "granted": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "peacock:bosses/first"
+}

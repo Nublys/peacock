@@ -607,7 +607,7 @@ ENTRIES = {
         ("what_we_dont_do", "What We Do Not Do", "minecraft:barrier", [
             txt(B("No minimap.") + " The atlas is the map.$(br)" + B("No fast travel.") + " Rails, ships, wagons and roads.$(br)" + B("No trading halls.") + " Villagers trade well where they live well.$(br)" + B("No block griefing from cannons.") + " They hurt mobs and players; the land stays.",
                 B("No thirst.") + " The seasons and the cold are the survival layer: what grows when, and a fire for winter nights."),
-            txt(B("Sleep is a vote:") + " when half the players online are in bed, the night skips; the action bar counts who is sleeping. " + B("Away:") + " five minutes without moving greys your name in the tab list with an [AFK] tag; move or talk and it clears.",
+            txt(B("Sleep is a vote:") + " when half the players online are in bed, the night skips; the action bar counts who is sleeping. " + B("Away:") + " after five minutes still you doze off where you stand, with a Zz in the tab list. Others see you typing or in a menu too.",
                 B("Tab") + " shows the server's TPS and everyone's ping. Twenty is healthy; if it sits below fifteen while nobody is doing anything unusual, tell the admin what everyone was doing."),
             txt(B("Towns are capped") + " at about two dozen villagers; breeding stops when a town is full. Found another.$(br)" + B("Depots need towns:") + " a bell and four beds within 32 blocks.$(br)" + B("Technology is personal:") + " your Blueprints are yours. Trade them.",
                 "Everything on this page is enforced by the pack, not by trust. The admin can switch any of it in " + B("kubejs/config/peacock.json") + "."),
@@ -623,7 +623,7 @@ ENTRIES = {
     "tools": [
         ("controls", "Keys", "minecraft:lever", [
             txt(B("B") + " backpack$(br)" + B("M") + " atlas, " + B("P") + " place a pin$(br)" + B("V") + " quiver$(br)" + B("R / U / N") + " Recruits: command / team / map$(br)" + B("Shift+1..4") + " dog whistles$(br)" + B("Alt") + " (hold) Create tool menu$(br)" + B("W") + " (hold, over a Create item) ponder"),
-            txt(B("K") + " shaders on/off, " + B("O") + " shader menu$(br)" + B("R") + " recipes for the hovered item, " + B("U") + " its uses (EMI)$(br)" + B(",") + " voice chat menu, " + B(".") + " mute mic$(br)" + B("Right Alt") + " push-to-talk",
+            txt(B("K") + " shaders on/off, " + B("O") + " shader menu$(br)" + B("R") + " recipes for the hovered item, " + B("U") + " its uses (EMI)$(br)" + B(",") + " voice chat menu, " + B(".") + " mute mic$(br)" + B("Right Alt") + " push-to-talk$(br)" + B("Z") + " zoom (scroll to adjust), only while you carry a spyglass, backpack included",
                 "Controlling is installed: Options, Controls has a search box, so any bind can be found by name."),
             txt("The bar above your hotbar is the " + B("locator bar") + ": a dot per player, by direction, like the newer game. It is not a map; it is where your friends are.",
                 B("J") + " opens the claim manager (FTB Chunks), the only map-shaped screen in the pack, and it shows claims, not terrain."),
@@ -633,6 +633,7 @@ ENTRIES = {
                 B("EMI") + " is the recipe book: " + B("R") + " for recipes, " + B("U") + " for uses, " + B("A") + " to favourite, drag to the side to pin. It knows Create, Farmer's Delight, loot tables and enchantments."),
             txt(B("Create") + " ponders with " + B("W") + ". " + B("Geolosys") + " and " + B("Animania") + " give you their own books on first join. Village Recruits is explained in " + L("towns/new_towns", "Towns & Trade") + ".",
                 "This almanac links to the others where they exist, and does not repeat them."),
+            txt(B("Advancements") + " (" + B("L") + ") has a " + B("Peacock") + " tab: every boss, the journals, the dead towns, the Blueprint tiers, the towns and the first winter. Bosses count for everyone who fought, not only the one who landed the blow."),
         ]),
         ("atlas", "The Atlas", "map_atlases:atlas", [
             spot("map_atlases:atlas", "There is no minimap. " + B("Map Atlases") + " collects maps into one book: craft an atlas from a book and a compass, feed it empty maps, carry it, and it fills as you travel. " + B("M") + " opens it; " + B("P") + " drops a pin where you stand.", title="The atlas"),

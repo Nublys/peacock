@@ -1,0 +1,278 @@
+{
+  "display": {
+    "title": {
+      "text": "The Whole Story"
+    },
+    "description": {
+      "text": "Find all 16 journals"
+    },
+    "icon": {
+      "item": "minecraft:lectern"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "guild_ledger": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:written_book"
+            ],
+            "nbt": "{title:\"Ledger of the Brass Works\",author:\"Oswin, ledger-keeper\"}"
+          }
+        ]
+      }
+    },
+    "physician": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:written_book"
+            ],
+            "nbt": "{title:\"Casebook\",author:\"Ysolde, physician\"}"
+          }
+        ]
+      }
+    },
+    "sermon": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:written_book"
+            ],
+            "nbt": "{title:\"Sermon Notes\",author:\"Elder Brannock\"}"
+          }
+        ]
+      }
+    },
+    "almanac_hedda": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:written_book"
+            ],
+            "nbt": "{title:\"Hedda Marl's Almanac\",author:\"Hedda Marl\"}"
+          }
+        ]
+      }
+    },
+    "broadsheet": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:written_book"
+            ],
+            "nbt": "{title:\"EAT FIRST\",author:\"a friend beyond the river\"}"
+          }
+        ]
+      }
+    },
+    "stationmaster": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:written_book"
+            ],
+            "nbt": "{title:\"Log, Halt Nine\",author:\"Stationmaster Vell\"}"
+          }
+        ]
+      }
+    },
+    "pip": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:written_book"
+            ],
+            "nbt": "{title:\"Pip's Book\",author:\"Pip, age 7\"}"
+          }
+        ]
+      }
+    },
+    "surveyor": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:written_book"
+            ],
+            "nbt": "{title:\"Field Notes, Lower Survey\",author:\"Surveyor Adaire\"}"
+          }
+        ]
+      }
+    },
+    "quartermaster": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:written_book"
+            ],
+            "nbt": "{title:\"Stores, Last Count\",author:\"Quartermaster Brisk\"}"
+          }
+        ]
+      }
+    },
+    "letter_unsent": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:written_book"
+            ],
+            "nbt": "{title:\"A Letter\",author:\"Maren, to her son\"}"
+          }
+        ]
+      }
+    },
+    "engine_house": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:written_book"
+            ],
+            "nbt": "{title:\"Engine-house Watch\",author:\"Watch-keeper Dunstan\"}"
+          }
+        ]
+      }
+    },
+    "cartographer": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:written_book"
+            ],
+            "nbt": "{title:\"Cartographer's Marginalia\",author:\"unsigned\"}"
+          }
+        ]
+      }
+    },
+    "watchman": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:written_book"
+            ],
+            "nbt": "{title:\"Wall Roster\",author:\"Captain of the Watch\"}"
+          }
+        ]
+      }
+    },
+    "trade_manifest": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:written_book"
+            ],
+            "nbt": "{title:\"Manifest, Capital Trading Floor\",author:\"Factor Hollis\"}"
+          }
+        ]
+      }
+    },
+    "gravedigger": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:written_book"
+            ],
+            "nbt": "{title:\"Tally\",author:\"Hob, sexton\"}"
+          }
+        ]
+      }
+    },
+    "recruit_letter": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:written_book"
+            ],
+            "nbt": "{title:\"Letter from a Tower\",author:\"Tam, recruit\"}"
+          }
+        ]
+      }
+    }
+  },
+  "parent": "peacock:story/found_writings",
+  "requirements": [
+    [
+      "guild_ledger"
+    ],
+    [
+      "physician"
+    ],
+    [
+      "sermon"
+    ],
+    [
+      "almanac_hedda"
+    ],
+    [
+      "broadsheet"
+    ],
+    [
+      "stationmaster"
+    ],
+    [
+      "pip"
+    ],
+    [
+      "surveyor"
+    ],
+    [
+      "quartermaster"
+    ],
+    [
+      "letter_unsent"
+    ],
+    [
+      "engine_house"
+    ],
+    [
+      "cartographer"
+    ],
+    [
+      "watchman"
+    ],
+    [
+      "trade_manifest"
+    ],
+    [
+      "gravedigger"
+    ],
+    [
+      "recruit_letter"
+    ]
+  ]
+}

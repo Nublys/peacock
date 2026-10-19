@@ -1,0 +1,23 @@
+{
+  "display": {
+    "title": {
+      "text": "Curse Lifted"
+    },
+    "description": {
+      "text": "Defeat Maledictus"
+    },
+    "icon": {
+      "item": "minecraft:soul_lantern"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "granted": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "peacock:bosses/first"
+}

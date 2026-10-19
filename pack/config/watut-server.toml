@@ -1,0 +1,5 @@
+# Peacock: What Are They Up To. Only the values the pack changes are listed; Forge fills in the rest.
+# dynamicGuiDontSendConstantGUIUpdates: while someone has a menu open, send it once instead of every 10 ticks
+# (less traffic, and the mod page's own fix for flickering).
+[general]
+	dynamicGuiDontSendConstantGUIUpdates = true

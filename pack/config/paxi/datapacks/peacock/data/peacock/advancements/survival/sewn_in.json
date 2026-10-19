@@ -1,0 +1,23 @@
+{
+  "display": {
+    "title": {
+      "text": "Sewn In"
+    },
+    "description": {
+      "text": "Insulate a piece of armour at a sewing table"
+    },
+    "icon": {
+      "item": "cold_sweat:sewing_table"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "insulated": {
+      "trigger": "cold_sweat:armor_insulated"
+    }
+  },
+  "parent": "peacock:survival/fire_drill"
+}

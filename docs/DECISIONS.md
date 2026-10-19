@@ -667,3 +667,36 @@ armour, waterskins, Serene Seasons integration (±15 °C summer/winter by defaul
   cools with altitude). A narrower list means more seeds with no capital; the seed-reroll proposal is still open.
 - Almanac: a Staying Warm entry (Land, Seasons & Sky), a "...stop freezing?" FAQ, the climate rung back on the
   Tier 1, charter and What Is Locked pages.
+
+## Zoom needs a spyglass; What Are They Up To; a Peacock achievements tab; seed reroll (2026-10-18)
+- **Just Zoom 3.0.1** (+ Konkrete, both client-only). It has no "require a spyglass" option — its zoom key always
+  works — so `spyglass_zoom.js` (server) checks each player's inventory and every equipped Backpacked backpack once
+  a second (backpack contents exist only on the server) and tells the client when that changes;
+  `spyglass_zoom_client.js` unbinds Just Zoom's key without a spyglass and puts the player's own key back with one
+  (remembered in `kubejs/config/peacock-zoom.json`, so an options save while unbound loses nothing). Using a
+  spyglass in hand zooms through Just Zoom too (its default). Its options key defaulted to **B**, the backpack, and
+  is unbound; its one-time "press B for options" toast is pre-dismissed by a shipped (preserved)
+  `justzoom_instance_data/persistence_data.json`.
+- **What Are They Up To 1.2.3** (+ CoroUtil, both sides) replaces the pack's grey `[AFK]` team (removed from older
+  worlds on load): typing bubbles, menus shown in the world, idle players doze off with a "Zz" in the tab list after
+  five minutes. Cost: status packets when someone starts/stops typing or opens a menu, relayed to nearby players;
+  nothing ticks in the world. `dynamicGuiDontSendConstantGUIUpdates = true` sends an open menu once instead of every
+  10 ticks. The sleep vote stays.
+- **Achievements**: `tools/gen-advancements.py` writes a Peacock tab (52 advancements) into the pack datapack.
+  Vanilla triggers where one exists — entering any of the 72 ruins (location + structure), killing a raider inside a
+  held ruin, picking up each journal (written-book NBT title + author; all 16 for the challenge), crafting a charter,
+  making a fire drill, Cold Sweat's own `armor_insulated` trigger, placing a hearth, taking a bounty. The rest are
+  `minecraft:impossible`, granted by `achievements.js`: 30 bosses (ladder bosses, Mowzie's, Cataclysm, the illager
+  bosses, Incendium's named vanilla mobs, the vanilla four) to everyone who hit the boss and is within 128 blocks, plus
+  "every boss that holds a Blueprint"; Blueprints (first, each tier, all) from recipe stages; joining a town (the
+  player's scoreboard team starts `village_`, Village Recruits' faction naming); a first recruit (a `recruits:`
+  entity within 16 blocks whose owner is the player); opening a sealed rumour; and a winter lived through (seen
+  online in winter, then online in spring). Dropped as undetectable: finishing a bounty (Bountiful only signals the
+  client), founding a town, an out-of-season greenhouse harvest. `validate.py` checks the script's boss table against
+  the generated files.
+- **Seed reroll** (approved): `capital_reroll.js` stops a brand-new world with no capital — world clock under 2
+  minutes, never joined (flag set on first login), nobody online — after writing `kubejs/config/peacock-reroll.json`;
+  `peacock-start.sh` now runs Java in a loop (foreground, so the console stays attached; no marker = exit with the
+  server's code, as before), deletes the world folder only if its `playerdata/` is empty and `level.dat` exists,
+  clears `level-seed`, and starts again. 15 tries in a row, then it keeps the world. Simulated locally with a stand-in
+  `java` (reroll path and the playerdata guard). Thread dumps now go to Java's PID, not 1 (server/README).

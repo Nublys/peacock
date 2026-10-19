@@ -1,0 +1,23 @@
+{
+  "display": {
+    "title": {
+      "text": "Year One"
+    },
+    "description": {
+      "text": "The capital still stands. Everything else is the question."
+    },
+    "icon": {
+      "item": "peacock:blueprint"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false,
+    "background": "minecraft:textures/block/cracked_stone_bricks.png"
+  },
+  "criteria": {
+    "joined": {
+      "trigger": "minecraft:tick"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "display": {
+    "title": {
+      "text": "Snowblind"
+    },
+    "description": {
+      "text": "Defeat a Mutant Snow Golem"
+    },
+    "icon": {
+      "item": "minecraft:carved_pumpkin"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "granted": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "peacock:bosses/first"
+}

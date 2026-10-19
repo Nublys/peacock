@@ -1,0 +1,23 @@
+{
+  "display": {
+    "title": {
+      "text": "Compliments to the Chef"
+    },
+    "description": {
+      "text": "Defeat Torte in the Quartz Kitchen"
+    },
+    "icon": {
+      "item": "minecraft:cake"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "granted": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "peacock:bosses/first"
+}

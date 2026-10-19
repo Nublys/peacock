@@ -129,10 +129,21 @@ hard cap — enough for a farm or one Create line while you sleep, not a factory
 No minimap. The **Atlas** (`M`) is the map, and it is shared: mark deposits, ruins and towns on it for
 everyone. The player locator bar shows friends' direction above the hotbar.
 
-### Sleeping, AFK and the tab list
+### Sleeping, idling and the tab list
 Sleep is a vote: when **half** the players online are in bed the night skips, and the action bar counts who is
-sleeping. Five minutes without moving greys your name in the tab list with an `[AFK]` tag; move or talk and it
-clears. The tab list also shows the server's TPS and everyone's ping — 20 is healthy.
+sleeping. You can see what other players are up to: a bubble while they type, their menu while they have one
+open, and after five minutes idle they doze off where they stand with a "Zz" in the tab list (What Are They Up
+To). The tab list also shows the server's TPS and everyone's ping — 20 is healthy.
+
+### Zooming
+**Z** zooms (Just Zoom; scroll to change magnification), but only while you carry a **spyglass** — anywhere in
+your inventory or in a backpack you are wearing. Without one the key does nothing. Using a spyglass in hand
+zooms the same way.
+
+### Achievements
+Press **L** for advancements: the **Peacock** tab has every boss (credited to everyone who fought it, not just
+the killing blow), the journals, the dead towns, the Blueprint tiers, joining a town and hiring a recruit, and
+living through your first winter.
 
 ### Dying
 You leave a corpse holding everything. Walk back and right-click it. Nothing despawns, but someone else
@@ -150,6 +161,7 @@ can loot it, so say where you fell.
 | `K` / `O` | Shaders on/off / shader menu |
 | `R` / `U` / `N` | Recruits: command / team / map |
 | `V` | Quiver |
+| `Z` | Zoom — only while you carry a spyglass (inventory or backpack); scroll to adjust |
 | `Shift+1–4` | Dog whistles (Doggy Talents) |
 | `,` / `.` | Voice chat menu / mute mic (`Right Alt` push-to-talk if you switch) |
 | `Alt` | Create tool menu / toolbelt |

@@ -1,0 +1,23 @@
+{
+  "display": {
+    "title": {
+      "text": "First Thaw"
+    },
+    "description": {
+      "text": "Live through a winter and see the spring"
+    },
+    "icon": {
+      "item": "minecraft:snow_block"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "granted": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "peacock:survival/fire_drill"
+}

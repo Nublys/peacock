@@ -124,7 +124,7 @@ hash = "8dbd7ed422d8cd88d8ac7ca47a8308c5a0d40d4db1a6af5cf46e989c3a5a4129"
 
 [[files]]
 file = "config/defaultoptions/keybindings.txt"
-hash = "7e59e2d86bf7ed0b4d418ae539a41f8d85333e28f4a0e26c1c2778ff96031b43"
+hash = "0bcee95ab75190a082b6922fae3d6c1662c2f31429a8fe6cf3e5f9caa5aecf1e"
 
 [[files]]
 file = "config/defaultoptions/options.txt"
@@ -490,6 +490,214 @@ hash = "c0b9e9c962b343621485120d68f08f569dc16ae366e9014a555bd316338bf117"
 [[files]]
 file = "config/paxi/datapacks/peacock/data/mowziesmobs/tags/worldgen/biome/has_structure/has_mowzie_structure.json"
 hash = "0ee75ac9e4f5bbcd3fa6ce4f54e081f57590cc6c8831cefcd1870afa88d32ba2"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/advancements/blueprints/all.json"
+hash = "ab5251dfeeef79fca7330b537cf21f2203031601e60d34c7ed5f49aa5b93a048"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/advancements/blueprints/charter.json"
+hash = "703cc05902364540e983c3a6a1dae52d621c38d719bc39c78e89359d90e3447c"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/advancements/blueprints/first.json"
+hash = "092d3e9bb25d2f673d96977fa1f9ae6cbd56001aede91129ec5da82804aec1f0"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/advancements/blueprints/tier1.json"
+hash = "5d78b145eab7a0bd250f0b2e1ee76529e9206924c682467dc5da77fecf24bceb"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/advancements/blueprints/tier2.json"
+hash = "0042671abb5262d6adc93f71b0856d5405eb05994dafe6973eaef16cceee415f"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/advancements/blueprints/tier3.json"
+hash = "0a613edc17c37adcb8ea87ca65fe0fb46207512203c85b2188441c5a37677aa7"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/advancements/blueprints/tier4.json"
+hash = "011cd8461fd56d7787de720905f159c544cd2bb17db47e5d60f2f78e5225649a"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/advancements/bosses/ancient_remnant.json"
+hash = "c63a9a3206ba9828b0a84618b3999676558735ab3eb6b3ae268833eeb444b116"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/advancements/bosses/elder_guardian.json"
+hash = "5932dd143ef20fb7136143d0314b2d89b08b5bc2a4884e6fad802402e4a441b0"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/advancements/bosses/ender_dragon.json"
+hash = "154a719846352c6c6c3eebe42f8fb8012e2b5afdb140e29877ef9c9248b13c93"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/advancements/bosses/ender_guardian.json"
+hash = "90b2ca67efcc4931cbc5e6b0465ca0b8216260e66b60546bf60b484857182d55"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/advancements/bosses/ferrous_wroughtnaut.json"
+hash = "b76a99eb3da35edf9b23df1a8d45c626433070a204373ac51df1fe48d97935b7"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/advancements/bosses/first.json"
+hash = "61694cd7835b48437253cfb877e54063f849bb1c42f7099a731a8dbdd7c308de"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/advancements/bosses/freakager.json"
+hash = "b796ae80e231b8e5295addf5dd9f1ca0fdef46ab01aa68669b75f0ffb5ac593f"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/advancements/bosses/frostmaw.json"
+hash = "40a0edb5a26bf9cbaf9d596431173fdf661df39360706279f8eba240258651fe"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/advancements/bosses/harbinger.json"
+hash = "e00854cd03282bb69b2aa5ccbd3617b92363d2efae4535728e95d38d616ef183"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/advancements/bosses/hovering_inferno.json"
+hash = "2902cd069c6a36f54707536be158a1a65468889a9ccbceba5319ce787f17ab59"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/advancements/bosses/ignis.json"
+hash = "1a758a791e0ed33897ad263e55ed358fc51ebc7848578281ce5cc40d025a2d5e"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/advancements/bosses/invoker.json"
+hash = "b7aaf9f46a268c5b8b4590cca3be4897fff0d932dcfe380f535ed40b58b4fa06"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/advancements/bosses/ledger.json"
+hash = "2df6707e112e63787908725f39b202d7d7799c1e6eb107b63e92cb8d76f8eafa"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/advancements/bosses/leviathan.json"
+hash = "a0024f590d8a6f521690af439b6795d482b1a40e8eb48a0caee660929df67071"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/advancements/bosses/magispeller.json"
+hash = "88fe31a20d57b02675b5ff66244647e6d49c4d78fc7b95a2f127d73a9e1879cb"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/advancements/bosses/maledictus.json"
+hash = "e480e6cf05671ae067984c231b15b1ebd58362277e129b33e7db549e705d8c16"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/advancements/bosses/mutant_creeper.json"
+hash = "8c494e06eb8c1905b0255f8bbfbedaa83a4b0eba02ec33159a5568ddabc5cfb1"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/advancements/bosses/mutant_enderman.json"
+hash = "724495db79cb065d3d0b68d407d31d18028103138a93dbb2b1952a5d32607746"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/advancements/bosses/mutant_skeleton.json"
+hash = "f65fd5f21243c8cc9f1fed8ae1b97f37de0dfadfdd2bd9909dcb4701474593fb"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/advancements/bosses/mutant_snow_golem.json"
+hash = "fba9ff1602713f3a1aed52a8a6f170c4a1c70b6899d80d11a9cdf3df1af57cdd"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/advancements/bosses/mutant_zombie.json"
+hash = "f55735e74ddb9cf54ce10843d138206aee20ae4c8699b5975a774821f4ca0b7a"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/advancements/bosses/naga.json"
+hash = "d94b2339c53cc2b3d7263c4c251366734eb0d2fbdffdbb0e9f36d81a1a05d3b1"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/advancements/bosses/netherite_monstrosity.json"
+hash = "dfe5cae4225dcf62d607642df10bc041474e62c04a6ba605cba12755b010f8aa"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/advancements/bosses/radiation_director.json"
+hash = "9939a0e386ee2ee087f575df9049c78b92bac039b808b149d466021bd40492fa"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/advancements/bosses/ragno.json"
+hash = "81b01205b1c6fbb98babfb25f64e899c60842a4ceca1ae100260ad820bb81f4b"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/advancements/bosses/sculptor.json"
+hash = "28ebe13308c808f6ad0ee8450b5414f70520f0401c9e7cc18135ff2f27f17133"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/advancements/bosses/scylla.json"
+hash = "f3563db1fe834f4daffaa873f66d93f5d07f7ef016fd198fc54aed2a95820fb1"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/advancements/bosses/spiritcaller.json"
+hash = "29e7f6d1753c095c99afbbfbbc398dc4c924d554a97f55cbd6392fe43af6b7a0"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/advancements/bosses/torte.json"
+hash = "a693c72e7fbce49a427eb131108e0e123f3c6c23704c187729ec4ad60c64ffb3"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/advancements/bosses/umvuthi.json"
+hash = "13800d7ce2ce7b93addbb7a98090ef802521cd85711b2ff3fae7d5a83177c145"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/advancements/bosses/warden.json"
+hash = "859a996fb0952fb39f232fceb390cb017bdbe4303cf12c32c5af0a3b28e51f9e"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/advancements/bosses/wither.json"
+hash = "c2a3b812ffc64c1e0d17126298265b83787193c8b8394ee2fc2094285b222a02"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/advancements/root.json"
+hash = "a9491d9d1e1ef19861a309b466aded1f51818cca441b9a9b84ff1a95234b586b"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/advancements/story/found_writings.json"
+hash = "d6e53a5d3e98986304b74559483de532c29a358c77ffe6ad21e2e43b8da45ba1"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/advancements/story/old_stone.json"
+hash = "6884aea26f89c1a4b67f8e757e80c0fca398533c01c94ef8aebba14c7a69e5d5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/advancements/story/painted_ones.json"
+hash = "adefd8f57b23d0d6854e8b24498a0a5b2565fd413d02ad9a345900af931ebad2"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/advancements/story/whole_story.json"
+hash = "297abcfd2587a43a629435f9302ed2831c34a34a32e635c9092634ec30a09918"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/advancements/survival/fire_drill.json"
+hash = "67aa576268663a170c21007af2b1a4697c51cb9d93dda94cadbb4659cd96f613"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/advancements/survival/hearth.json"
+hash = "8ae59caf07a230a76adbbb6b9c027f0cd75b5729d4f93cfd8c3177b5da7a9a1a"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/advancements/survival/sewn_in.json"
+hash = "1ce70ae85ed597d9a9c1290d0cf67bbe71cbd53d42a9c7ad6e7c2b70aa44e79c"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/advancements/survival/winter.json"
+hash = "5ce28670b8db24a3035d4511e21ac989c7e61f2ddafb4b713a2371077b96c3a9"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/advancements/towns/first_recruit.json"
+hash = "cf7e9bde63ebaec71f5fcb84ca8c7a895c2176e6bb4560bcebcdb953b6fce406"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/advancements/towns/rumour.json"
+hash = "512057b184ac006aca211708f1ae4c9fdb5664906cba231f733d850e6d934e4d"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/advancements/towns/sworn_in.json"
+hash = "b33b73f255d5703d9571d9d5a45752b5bfb63726e542ec4a9c834aebc491c1b9"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/advancements/towns/take_work.json"
+hash = "e07ef9fac2b7911e42f6e00eb28c6c465bdeb3279560292bd50df5504bd2535e"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/peacock/cold_sweat/block/block_temp/farmersdelight_stove.json"
@@ -976,6 +1184,10 @@ file = "config/visualworkbench-client.toml"
 hash = "090cf77a65d58c12bc3e95d79f04a1f81f8859dd46cc66b82e92fcf2e2a995f1"
 
 [[files]]
+file = "config/watut-server.toml"
+hash = "fcadbee111b9b38fb226af6340521078bf429e5414c0090e0019c41bf9d28b35"
+
+[[files]]
 file = "config/waveycapes.json"
 hash = "1da99d26f48e54631db80aecf731bd0e107a4e6e92db46964491bf0bb104f13e"
 
@@ -998,6 +1210,11 @@ hash = "c1b2a785a0a581d83b8c97414704736a6f08bea8e4d26353c51793653e05f120"
 [[files]]
 file = "defaultconfigs/ftbessentials-server.snbt"
 hash = "4b37d469babdcddb3554454d93631737c8b1ff2866dc99b005e996b0b4e78ed1"
+
+[[files]]
+file = "justzoom_instance_data/persistence_data.json"
+hash = "4bc3fa413c4508f4680d8d2a3c4b1d95338b5eae23a759d7fc4e6fe93124a9a0"
+preserve = true
 
 [[files]]
 file = "kubejs/assets/peacock/lang/en_us.json"
@@ -1028,12 +1245,20 @@ file = "kubejs/client_scripts/rumour_tooltips.js"
 hash = "790ca47319e01bea9825530c9f7c75eec00246719d1b7460626229386e12a2f0"
 
 [[files]]
+file = "kubejs/client_scripts/spyglass_zoom_client.js"
+hash = "02d21700dfa3242d5ef1b1c867243ffe502bba056dc2c591433b0abe65f012a9"
+
+[[files]]
 file = "kubejs/config/journals.json"
 hash = "b5d72b6da9c50a6a18cd9bbec34c01e09a4bf8ebebaf71cb03ec093bbaafbeba"
 
 [[files]]
 file = "kubejs/config/peacock.json"
-hash = "054d0e82b7e5e1f66c7fac46805aee4c327b7b4ef52271d116a94e1eef6103d5"
+hash = "42e2d46749dfa8a3356d9c62e371dbba5875fdae28bb7a746460b2350d94295a"
+
+[[files]]
+file = "kubejs/server_scripts/achievements.js"
+hash = "6734ae0d7f5ca4fafc391b469872c183305280c81b8ba8524306f7fc4a357c20"
 
 [[files]]
 file = "kubejs/server_scripts/almanac.js"
@@ -1042,6 +1267,10 @@ hash = "6c16de3bde6076f6ec0da4ebd480c8735ccf8fa032f4e85e95190172687d008b"
 [[files]]
 file = "kubejs/server_scripts/blueprints.js"
 hash = "3124630fabe5d255e997dfb4b00c9a823506380dec19fee7e23404fab6f2fa4d"
+
+[[files]]
+file = "kubejs/server_scripts/capital_reroll.js"
+hash = "9662c9768c438e3566455c778b65be8510134ab43705a377dd69f0625bee12b0"
 
 [[files]]
 file = "kubejs/server_scripts/capital_wall.js"
@@ -1077,7 +1306,11 @@ hash = "df89ae7d310496a4be9e1bc5dbd945bf65aa24347650efbe46c9e2549f5ca889"
 
 [[files]]
 file = "kubejs/server_scripts/sleep_afk.js"
-hash = "48bf7aaeaaf72d70b2e35a0df124c892d67e49906b4ca89a1dd25bed79e03c83"
+hash = "5ae37431f1d4b20e9e590406b123a5229165ecd1ba5a8787e5e041d46e934457"
+
+[[files]]
+file = "kubejs/server_scripts/spyglass_zoom.js"
+hash = "8bc7ed088af268bf38cf1eddfa6867ae0291d468e109844cc8439d079dd2c1ed"
 
 [[files]]
 file = "kubejs/server_scripts/trading_depot_town.js"
@@ -1251,6 +1484,11 @@ metafile = true
 [[files]]
 file = "mods/corgilib.pw.toml"
 hash = "9851c0c789361759981ad6e498a58e1d0ced85d213c9eaaa942ca062898509b1"
+metafile = true
+
+[[files]]
+file = "mods/coroutil.pw.toml"
+hash = "b2c7739b56ef71f50a86658cfa67375796beafd391c4dbe26a5de8cd92b9b685"
 metafile = true
 
 [[files]]
@@ -1574,6 +1812,11 @@ hash = "5d03d20b037a8b7a4765ded0e25146fc970964be46401dff5f9b1059875084e8"
 metafile = true
 
 [[files]]
+file = "mods/just-zoom.pw.toml"
+hash = "d1c5fb78aa1822c99feac51cdf6c28550efdd81e3fee7e0a7ae967b69dce0b54"
+metafile = true
+
+[[files]]
 file = "mods/kambrik.pw.toml"
 hash = "5be8bc5bf391069fb1a3c8ab5dab874a65cfa7cf46597bc9f6a0000a4947e86e"
 metafile = true
@@ -1581,6 +1824,11 @@ metafile = true
 [[files]]
 file = "mods/kiwi.pw.toml"
 hash = "9124261ff2f214a18d4b10255eb5a8aeefc19a2a25278fae95629def76eef42a"
+metafile = true
+
+[[files]]
+file = "mods/konkrete.pw.toml"
+hash = "646e07186d74573a2fbe26164fb39f037ae614c9ddcda21e969603d825d2aae5"
 metafile = true
 
 [[files]]
@@ -1954,6 +2202,11 @@ hash = "9066030f560c338dbc6c4067159fbcf1e37185da25ec5b29a77d3b484272059c"
 metafile = true
 
 [[files]]
+file = "mods/what-are-they-up-to.pw.toml"
+hash = "c557d1b26559ef987c229187d2f2705616e78179ce04fa1c96cc3d76a1cdf1b5"
+metafile = true
+
+[[files]]
 file = "mods/workshop-for-handsome-adventurer.pw.toml"
 hash = "d76b5786ce8680cf96da26a78c20add2a2e4cd5a8dd43ea3592d242760bd5dc8"
 metafile = true
@@ -2196,7 +2449,7 @@ hash = "b9853a45bef072affcbd161da8418f1c0825bfa43e55a6db5473d89111f261da"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/rules/what_we_dont_do.json"
-hash = "4ad7afc948f74580ce67b849b05468cc2c3f9edd40a8057f03cd6775138c74b4"
+hash = "ff086216038ea659a1948e20ebe50b87b511d260de53b5e2cb6c40fa605e6053"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/start/animals.json"
@@ -2288,11 +2541,11 @@ hash = "61c056d160131c41f63a1ed46c185902d3b06e22a8a58ee7c85fb8bcfdc0fadb"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/tools/controls.json"
-hash = "e76d2720cdd448aa0431a350caebfb41c42d029ca10d7a9420f4a1c49bcc4e4d"
+hash = "5fdcec9a0f88b09d267c2a293ce6c67da7973135bfdd1c6c1ea25eeb0085e98d"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/tools/info.json"
-hash = "af6e7d3e1adbf7388fb19f3d0006cdab804586a04a63655731280ac142cb4673"
+hash = "9a0372884381e261ecbbed41dbfdf23d40fef78de32dee6d2f63d37c8a9fc06d"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/tools/performance.json"
@@ -2356,7 +2609,7 @@ hash = "f22cac22f221bc51031e15445a077a41a468774497bdcf46d8397370924024de"
 
 [[files]]
 file = "peacock-server/peacock-start.sh"
-hash = "5127116c22fcfb1d88dbdc8103add51b10390d5c4991b9de8bdeda33d1eaea27"
+hash = "1d4bed845e8e685cc0a133b04035c8e7c2af32c3265ae8f2d70c3b641bd54ac3"
 
 [[files]]
 file = "peacock/launch.jar"
@@ -2424,7 +2677,7 @@ hash = "f6a2565056ed10ba270da94e671fa5d7ced8ade044fc8b31a851840f7bce654f"
 
 [[files]]
 file = "peacock/profiles/high/options.txt.keys"
-hash = "e477da0a901568ad7862178de55e8e75159511f118ee8b3d822b870710fb0e8d"
+hash = "0844fb9e28cc95a13ba69ed6432dffe28d11c1239e07f2f7fb9228f9b8b1f168"
 
 [[files]]
 file = "peacock/profiles/high/shaderpacks/ComplementaryReimagined_r5.9.3 + EuphoriaPatches_1.10.5.txt.keys"
@@ -2468,7 +2721,7 @@ hash = "f6a2565056ed10ba270da94e671fa5d7ced8ade044fc8b31a851840f7bce654f"
 
 [[files]]
 file = "peacock/profiles/low/options.txt.keys"
-hash = "4d8701b0b1ca15c2ca77bb50d0c2e744c82f5c7b17dd025cfe89e2a56f388a4e"
+hash = "094af5da16ee22df2cb325bd96f8ec040bb37dde10365b90e728ac1a629b4bc0"
 
 [[files]]
 file = "peacock/profiles/low/shaderpacks/ComplementaryReimagined_r5.9.3 + EuphoriaPatches_1.10.5.txt.keys"
@@ -2512,7 +2765,7 @@ hash = "f6a2565056ed10ba270da94e671fa5d7ced8ade044fc8b31a851840f7bce654f"
 
 [[files]]
 file = "peacock/profiles/medium/options.txt.keys"
-hash = "3ab2649e2b420d3523da3f23092f5a3ba8fca00002d4dd905e257613ae6bb291"
+hash = "81559987e1d38dbc80dad4ff02ca18ba208164006be21135f1b33aec7fe0da9b"
 
 [[files]]
 file = "peacock/profiles/medium/shaderpacks/ComplementaryReimagined_r5.9.3 + EuphoriaPatches_1.10.5.txt.keys"
@@ -2556,7 +2809,7 @@ hash = "fb5ff1984232edecfce6fbfa6deb6374bcd7bf898f58d2c51b9e46cbbbbb78fe"
 
 [[files]]
 file = "peacock/profiles/potato/options.txt.keys"
-hash = "1e56767cfe77f1ad26f96dd05ae59bcf988670749bfcfaa0e23e1a740d4ca0c9"
+hash = "6c14dc751d41711676e9dc2074273cf0c9f801eca0bfc51c3f07f12fdada2260"
 
 [[files]]
 file = "peacock/profiles/potato/shaderpacks/ComplementaryReimagined_r5.9.3 + EuphoriaPatches_1.10.5.txt.keys"
@@ -2600,7 +2853,7 @@ hash = "f6a2565056ed10ba270da94e671fa5d7ced8ade044fc8b31a851840f7bce654f"
 
 [[files]]
 file = "peacock/profiles/ultra/options.txt.keys"
-hash = "fc650d766c72f13c6806a1f993d72a5d46a6afdf668b085447f999096c88d2be"
+hash = "d323ddf992aa81ddbe72e53e85007e5c4af25986c7651013e410721166f17a58"
 
 [[files]]
 file = "peacock/profiles/ultra/shaderpacks/ComplementaryReimagined_r5.9.3 + EuphoriaPatches_1.10.5.txt.keys"

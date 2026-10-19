@@ -1,0 +1,23 @@
+{
+  "display": {
+    "title": {
+      "text": "Freak Out"
+    },
+    "description": {
+      "text": "Defeat a Freakager"
+    },
+    "icon": {
+      "item": "minecraft:rotten_flesh"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "granted": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "peacock:bosses/first"
+}

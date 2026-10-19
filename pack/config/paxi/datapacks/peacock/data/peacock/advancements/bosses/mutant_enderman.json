@@ -1,0 +1,23 @@
+{
+  "display": {
+    "title": {
+      "text": "Do Not Look"
+    },
+    "description": {
+      "text": "Defeat a Mutant Enderman"
+    },
+    "icon": {
+      "item": "minecraft:ender_eye"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "granted": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "peacock:bosses/first"
+}

@@ -84,6 +84,8 @@ COMMON_KEYS = {
     "key_key.ftbchunks.toggle_minimap": "key.keyboard.unknown",
     "key_key.ftbchunks.add_waypoint": "key.keyboard.unknown",
     "key_key.ftbchunks.waypoint_manager": "key.keyboard.unknown",
+    # Just Zoom's options screen defaults to B, which is the backpack; its options stay reachable from the mod list
+    "key_justzoom.keybinds.keybind.open_options": "key.keyboard.unknown",
     # first-launch screens and toasts (only added when missing: a player's own choice stands)
     "onboardAccessibility": "false", "skipMultiplayerWarning": "true", "joinedFirstServer": "true",
     "tutorialStep": "none", "realmsNotifications": "false",

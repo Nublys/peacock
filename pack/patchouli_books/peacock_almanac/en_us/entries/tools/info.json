@@ -11,6 +11,10 @@
     {
       "type": "patchouli:text",
       "text": "$(bold)Create$() ponders with $(bold)W$(). $(bold)Geolosys$() and $(bold)Animania$() give you their own books on first join. Village Recruits is explained in $(l:patchouli:towns/new_towns)Towns & Trade$().$(br2)This almanac links to the others where they exist, and does not repeat them."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Advancements$() ($(bold)L$()) has a $(bold)Peacock$() tab: every boss, the journals, the dead towns, the Blueprint tiers, the towns and the first winter. Bosses count for everyone who fought, not only the one who landed the blow."
     }
   ]
 }

@@ -1,0 +1,23 @@
+{
+  "display": {
+    "title": {
+      "text": "Bone of Contention"
+    },
+    "description": {
+      "text": "Defeat a Mutant Skeleton"
+    },
+    "icon": {
+      "item": "minecraft:skeleton_skull"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "granted": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "peacock:bosses/first"
+}

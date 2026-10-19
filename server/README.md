@@ -43,10 +43,22 @@ chunks from the main thread; fixed in config (DECISIONS.md). If it happens again
 **When the server hangs** (players time out, console still scrolls but `/` commands do nothing): get a
 thread dump *before* restarting. On the node, with the server's UUID as the container name:
 
-    docker exec 59f52550-697a-48ee-8c94-83c2d0a54d7b kill -3 1
+    docker exec 59f52550-697a-48ee-8c94-83c2d0a54d7b sh -c 'kill -3 $(pidof java)'
+
+(Since the seed reroll, `peacock-start.sh` stays running as process 1 and Java is its child, so the signal goes
+to Java's own PID, not to 1.)
 
 The JVM prints every thread's stack to the console; copy it. The watchdog does the same on its own
 after `max-tick-time`, then stops the server. Either dump is what identifies the mod at fault.
+
+**A new world** (stop the server, delete or rename the world folder, start): the server checks that the
+capital generated at spawn. If it did not, and the world is brand new (under two minutes old, nobody has ever
+joined, nobody online), it stops itself and `peacock-start.sh` deletes that world and starts again on a fresh
+random seed — the console shows `[peacock] reroll: no capital on this seed … attempt N of 15` and then
+`[peacock] reroll N: … deleting world`. Each try is one boot (several minutes on this host); expect a few. It
+never deletes a world whose `playerdata/` has anything in it, gives up after 15 tries in a row (keeping the last
+world), and is off with `"capitalReroll": false` in `kubejs/config/peacock.json`. A fixed `level-seed` in
+`server.properties` is cleared on a reroll.
 
 **Backups & schedules:** use Pterodactyl's. Take a backup before any start that follows a
 pack version bump; a schedule with a daily backup task is enough for a small server.

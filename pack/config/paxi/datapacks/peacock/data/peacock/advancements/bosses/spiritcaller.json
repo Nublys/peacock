@@ -1,0 +1,23 @@
+{
+  "display": {
+    "title": {
+      "text": "Spirits Dismissed"
+    },
+    "description": {
+      "text": "Defeat a Spiritcaller"
+    },
+    "icon": {
+      "item": "minecraft:soul_torch"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "granted": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "peacock:bosses/first"
+}

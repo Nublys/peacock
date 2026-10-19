@@ -1,0 +1,23 @@
+{
+  "display": {
+    "title": {
+      "text": "Storm's End"
+    },
+    "description": {
+      "text": "Defeat Scylla"
+    },
+    "icon": {
+      "item": "minecraft:trident"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "granted": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "peacock:bosses/first"
+}

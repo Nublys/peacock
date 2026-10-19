@@ -10,7 +10,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Sleep is a vote:$() when half the players online are in bed, the night skips; the action bar counts who is sleeping. $(bold)Away:$() five minutes without moving greys your name in the tab list with an [AFK] tag; move or talk and it clears.$(br2)$(bold)Tab$() shows the server's TPS and everyone's ping. Twenty is healthy; if it sits below fifteen while nobody is doing anything unusual, tell the admin what everyone was doing."
+      "text": "$(bold)Sleep is a vote:$() when half the players online are in bed, the night skips; the action bar counts who is sleeping. $(bold)Away:$() after five minutes still you doze off where you stand, with a Zz in the tab list. Others see you typing or in a menu too.$(br2)$(bold)Tab$() shows the server's TPS and everyone's ping. Twenty is healthy; if it sits below fifteen while nobody is doing anything unusual, tell the admin what everyone was doing."
     },
     {
       "type": "patchouli:text",

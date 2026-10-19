@@ -1,0 +1,23 @@
+{
+  "display": {
+    "title": {
+      "text": "Every Line of the Ledger"
+    },
+    "description": {
+      "text": "Defeat every boss that holds a Blueprint"
+    },
+    "icon": {
+      "item": "minecraft:writable_book"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "granted": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "peacock:bosses/first"
+}

@@ -1,0 +1,23 @@
+{
+  "display": {
+    "title": {
+      "text": "The Knowledge Returns"
+    },
+    "description": {
+      "text": "Learn a Blueprint"
+    },
+    "icon": {
+      "item": "peacock:blueprint"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "granted": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "peacock:root"
+}

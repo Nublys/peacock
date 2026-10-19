@@ -1,5 +1,5 @@
 {
-  "_comment": "Peacock pack switches read by kubejs/server_scripts/*.js. Server-side; takes effect on /reload or restart. ladder=false disables recipe staging and place/hire gates (Blueprints still drop). sleepPercent: players (%) that must sleep to skip the night (-1 = vanilla rule untouched). afkMinutes: minutes without moving before a name greys out in the tab list (0 = off). capitalWall: build the stone wall around the capital on first load (/peacock wall reruns it). capitalFound: EXPERIMENTAL, off — if the world has no capital at spawn, survey gentle land and found one there; on this pack it stalls the server for over a minute (2026-10-18), so it does not run at boot unless set true (/peacock found runs it by hand). bossBarScale: size of boss bars on screen, client-side (1 = vanilla).",
+  "_comment": "Peacock pack switches read by kubejs/server_scripts/*.js. Server-side; takes effect on /reload or restart. ladder=false disables recipe staging and place/hire gates (Blueprints still drop). sleepPercent: players (%) that must sleep to skip the night (-1 = vanilla rule untouched). capitalWall: build the stone wall around the capital on first load (/peacock wall reruns it). capitalFound: EXPERIMENTAL, off — if the world has no capital at spawn, survey gentle land and found one there; on this pack it stalls the server for over a minute (2026-10-18), so it does not run at boot unless set true (/peacock found runs it by hand). bossBarScale: size of boss bars on screen, client-side (1 = vanilla). capitalReroll: on a brand-new, never-joined world with no capital at spawn, stop the server so peacock-start.sh deletes it and starts on a new seed (at most 15 times in a row).",
   "rumourMaps": true,
   "depotNeedsTown": true,
   "ladder": true,
@@ -7,8 +7,8 @@
   "villagerCapCount": 24,
   "caveLoot": true,
   "sleepPercent": 50,
-  "afkMinutes": 5,
   "capitalWall": true,
   "capitalFound": false,
-  "bossBarScale": 0.5
+  "bossBarScale": 0.5,
+  "capitalReroll": true
 }

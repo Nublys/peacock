@@ -1,0 +1,23 @@
+{
+  "display": {
+    "title": {
+      "text": "Engineer"
+    },
+    "description": {
+      "text": "Learn every Tier 2 Blueprint"
+    },
+    "icon": {
+      "item": "peacock:blueprint"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "granted": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "peacock:blueprints/first"
+}

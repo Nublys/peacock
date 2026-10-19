@@ -1,0 +1,23 @@
+{
+  "display": {
+    "title": {
+      "text": "Sand in the Gears"
+    },
+    "description": {
+      "text": "Defeat the Ancient Remnant"
+    },
+    "icon": {
+      "item": "minecraft:sandstone"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "granted": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "peacock:bosses/first"
+}

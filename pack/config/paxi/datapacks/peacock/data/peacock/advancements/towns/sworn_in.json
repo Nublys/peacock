@@ -1,0 +1,23 @@
+{
+  "display": {
+    "title": {
+      "text": "Sworn In"
+    },
+    "description": {
+      "text": "Enlist in a town"
+    },
+    "icon": {
+      "item": "minecraft:white_banner"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "granted": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "peacock:root"
+}

@@ -1,0 +1,32 @@
+{
+  "display": {
+    "title": {
+      "text": "Fire from Sticks"
+    },
+    "description": {
+      "text": "Make a fire drill"
+    },
+    "icon": {
+      "item": "peacock:fire_drill"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "drill": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "peacock:fire_drill"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "parent": "peacock:root"
+}

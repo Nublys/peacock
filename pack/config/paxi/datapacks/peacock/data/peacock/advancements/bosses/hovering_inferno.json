@@ -1,0 +1,23 @@
+{
+  "display": {
+    "title": {
+      "text": "Risen and Fallen"
+    },
+    "description": {
+      "text": "Defeat the Hovering Inferno"
+    },
+    "icon": {
+      "item": "minecraft:fire_charge"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "granted": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "peacock:bosses/first"
+}

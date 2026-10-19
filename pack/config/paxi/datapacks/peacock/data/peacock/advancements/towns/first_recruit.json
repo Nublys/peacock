@@ -1,0 +1,23 @@
+{
+  "display": {
+    "title": {
+      "text": "A Company of One"
+    },
+    "description": {
+      "text": "Hire a recruit"
+    },
+    "icon": {
+      "item": "minecraft:iron_sword"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "granted": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "peacock:towns/sworn_in"
+}

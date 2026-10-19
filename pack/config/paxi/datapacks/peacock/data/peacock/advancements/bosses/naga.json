@@ -1,0 +1,23 @@
+{
+  "display": {
+    "title": {
+      "text": "Sea Serpent"
+    },
+    "description": {
+      "text": "Defeat a Naga"
+    },
+    "icon": {
+      "item": "minecraft:prismarine_shard"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "granted": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "peacock:bosses/first"
+}

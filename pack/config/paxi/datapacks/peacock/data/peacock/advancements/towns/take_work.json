@@ -1,0 +1,32 @@
+{
+  "display": {
+    "title": {
+      "text": "Help Wanted"
+    },
+    "description": {
+      "text": "Take a job from a bounty board"
+    },
+    "icon": {
+      "item": "bountiful:bountyboard"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "bounty": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "bountiful:bounty"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "parent": "peacock:root"
+}

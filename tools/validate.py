@@ -130,11 +130,24 @@ def check_kubejs() -> None:
                 depth_try.pop()
 
 
+def check_advancements() -> None:
+    """Every boss achievements.js grants must exist in the generated advancement tree (tools/gen-advancements.py)."""
+    import re
+    js = PACK / "kubejs/server_scripts/achievements.js"
+    adv = PACK / "config/paxi/datapacks/peacock/data/peacock/advancements"
+    if not js.exists():
+        return
+    for bid in re.findall(r"^  '[^']+': \['([a-z_]+)', (?:true|false)\],", js.read_text(encoding="utf-8"), re.M):
+        if not (adv / "bosses" / f"{bid}.json").exists():
+            err(f"achievements.js grants peacock:bosses/{bid} but there is no such advancement (run tools/gen-advancements.py)")
+
+
 def main() -> int:
     print("parsing TOML/JSON …"); parse_all()
     print("checking .pw.toml entries …"); check_pw_tomls()
     print("checking index …"); check_index()
     print("checking KubeJS scripts for Rhino traps …"); check_kubejs()
+    print("checking achievements …"); check_advancements()
     n_mods = len(list((PACK / "mods").glob("*.pw.toml")))
     if errors:
         print(f"\n{len(errors)} problem(s).")

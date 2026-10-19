@@ -1,0 +1,672 @@
+{
+  "display": {
+    "title": {
+      "text": "The Painted Ones"
+    },
+    "description": {
+      "text": "Kill a pillager in a town they hold"
+    },
+    "icon": {
+      "item": "minecraft:crossbow"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "held_0": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "#minecraft:raiders",
+              "location": {
+                "structure": "peacock:ruin_h/large/village_beach"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "held_1": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "#minecraft:raiders",
+              "location": {
+                "structure": "peacock:ruin_h/large/village_dark_forest"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "held_2": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "#minecraft:raiders",
+              "location": {
+                "structure": "peacock:ruin_h/large/village_desert"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "held_3": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "#minecraft:raiders",
+              "location": {
+                "structure": "peacock:ruin_h/large/village_jungle"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "held_4": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "#minecraft:raiders",
+              "location": {
+                "structure": "peacock:ruin_h/large/village_mesa"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "held_5": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "#minecraft:raiders",
+              "location": {
+                "structure": "peacock:ruin_h/large/village_mountain"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "held_6": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "#minecraft:raiders",
+              "location": {
+                "structure": "peacock:ruin_h/large/village_mushroom"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "held_7": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "#minecraft:raiders",
+              "location": {
+                "structure": "peacock:ruin_h/large/village_plains"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "held_8": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "#minecraft:raiders",
+              "location": {
+                "structure": "peacock:ruin_h/large/village_savanna"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "held_9": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "#minecraft:raiders",
+              "location": {
+                "structure": "peacock:ruin_h/large/village_snowy"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "held_10": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "#minecraft:raiders",
+              "location": {
+                "structure": "peacock:ruin_h/large/village_swamp"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "held_11": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "#minecraft:raiders",
+              "location": {
+                "structure": "peacock:ruin_h/large/village_taiga"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "held_12": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "#minecraft:raiders",
+              "location": {
+                "structure": "peacock:ruin_h/medium/village_beach"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "held_13": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "#minecraft:raiders",
+              "location": {
+                "structure": "peacock:ruin_h/medium/village_dark_forest"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "held_14": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "#minecraft:raiders",
+              "location": {
+                "structure": "peacock:ruin_h/medium/village_desert"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "held_15": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "#minecraft:raiders",
+              "location": {
+                "structure": "peacock:ruin_h/medium/village_jungle"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "held_16": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "#minecraft:raiders",
+              "location": {
+                "structure": "peacock:ruin_h/medium/village_mesa"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "held_17": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "#minecraft:raiders",
+              "location": {
+                "structure": "peacock:ruin_h/medium/village_mountain"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "held_18": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "#minecraft:raiders",
+              "location": {
+                "structure": "peacock:ruin_h/medium/village_mushroom"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "held_19": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "#minecraft:raiders",
+              "location": {
+                "structure": "peacock:ruin_h/medium/village_plains"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "held_20": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "#minecraft:raiders",
+              "location": {
+                "structure": "peacock:ruin_h/medium/village_savanna"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "held_21": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "#minecraft:raiders",
+              "location": {
+                "structure": "peacock:ruin_h/medium/village_snowy"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "held_22": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "#minecraft:raiders",
+              "location": {
+                "structure": "peacock:ruin_h/medium/village_swamp"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "held_23": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "#minecraft:raiders",
+              "location": {
+                "structure": "peacock:ruin_h/medium/village_taiga"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "held_24": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "#minecraft:raiders",
+              "location": {
+                "structure": "peacock:ruin_h/small/village_beach"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "held_25": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "#minecraft:raiders",
+              "location": {
+                "structure": "peacock:ruin_h/small/village_dark_forest"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "held_26": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "#minecraft:raiders",
+              "location": {
+                "structure": "peacock:ruin_h/small/village_desert"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "held_27": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "#minecraft:raiders",
+              "location": {
+                "structure": "peacock:ruin_h/small/village_jungle"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "held_28": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "#minecraft:raiders",
+              "location": {
+                "structure": "peacock:ruin_h/small/village_mesa"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "held_29": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "#minecraft:raiders",
+              "location": {
+                "structure": "peacock:ruin_h/small/village_mountain"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "held_30": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "#minecraft:raiders",
+              "location": {
+                "structure": "peacock:ruin_h/small/village_mushroom"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "held_31": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "#minecraft:raiders",
+              "location": {
+                "structure": "peacock:ruin_h/small/village_plains"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "held_32": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "#minecraft:raiders",
+              "location": {
+                "structure": "peacock:ruin_h/small/village_savanna"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "held_33": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "#minecraft:raiders",
+              "location": {
+                "structure": "peacock:ruin_h/small/village_snowy"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "held_34": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "#minecraft:raiders",
+              "location": {
+                "structure": "peacock:ruin_h/small/village_swamp"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "held_35": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "#minecraft:raiders",
+              "location": {
+                "structure": "peacock:ruin_h/small/village_taiga"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "peacock:story/old_stone",
+  "requirements": [
+    [
+      "held_0",
+      "held_1",
+      "held_2",
+      "held_3",
+      "held_4",
+      "held_5",
+      "held_6",
+      "held_7",
+      "held_8",
+      "held_9",
+      "held_10",
+      "held_11",
+      "held_12",
+      "held_13",
+      "held_14",
+      "held_15",
+      "held_16",
+      "held_17",
+      "held_18",
+      "held_19",
+      "held_20",
+      "held_21",
+      "held_22",
+      "held_23",
+      "held_24",
+      "held_25",
+      "held_26",
+      "held_27",
+      "held_28",
+      "held_29",
+      "held_30",
+      "held_31",
+      "held_32",
+      "held_33",
+      "held_34",
+      "held_35"
+    ]
+  ]
+}

@@ -48,6 +48,7 @@ Several parts of the pack are generated; edit the generator, not the output, and
 | `tools/gen-ruins.py` | `pack/config/paxi/datapacks/peacock-ruins.zip` | CTOV's jar + its compat jars (downloaded, cached in `~/.cache/peacock`) |
 | `tools/gen-bounties.py` | Bountiful pool overrides, the Archivist decree, rumour loot tables, `kubejs/config/journals.json` | `tools/data/journals.json` + the tables in the script |
 | `tools/gen-rustbelt.py` | Rust Belt / nature / war-camp NBTs, structures and structure sets | the voxel functions in the script |
+| `tools/gen-advancements.py` | the Peacock achievements tab (`data/peacock/advancements/**` in the pack datapack) | the boss table in the script (must match `kubejs/server_scripts/achievements.js`; `validate.py` checks), `tools/data/journals.json`, the ruin tag in `peacock-ruins.zip` — run after `gen-ruins.py` |
 | `tools/build-launch.sh` | `pack/peacock/launch.jar`, then `dist/Peacock-Prism.zip` via `tools/build-instance.py` | `tools/launch/Launch.java` (needs a JDK ≥ 17) |
 | `tools/build-instance.py` | `dist/Peacock-Prism.zip` — the importable Prism instance (instance.cfg, mmc-pack.json, launch.jar) | the constants in the script |
 | `tools/apply-profile.py` | a pack copy with one tier's `*.keys` baked into its config files (release workflow, CurseForge zips) | `pack/peacock/profiles/<tier>/` |

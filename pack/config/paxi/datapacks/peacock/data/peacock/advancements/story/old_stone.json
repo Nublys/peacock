@@ -1,0 +1,1248 @@
+{
+  "display": {
+    "title": {
+      "text": "Old Stone"
+    },
+    "description": {
+      "text": "Walk into a dead town"
+    },
+    "icon": {
+      "item": "minecraft:mossy_stone_bricks"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "ruin_0": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_a/large/village_beach"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_1": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_a/large/village_dark_forest"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_2": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_a/large/village_desert"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_3": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_a/large/village_jungle"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_4": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_a/large/village_mesa"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_5": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_a/large/village_mountain"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_6": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_a/large/village_mushroom"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_7": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_a/large/village_plains"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_8": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_a/large/village_savanna"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_9": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_a/large/village_snowy"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_10": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_a/large/village_swamp"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_11": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_a/large/village_taiga"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_12": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_a/medium/village_beach"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_13": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_a/medium/village_dark_forest"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_14": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_a/medium/village_desert"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_15": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_a/medium/village_jungle"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_16": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_a/medium/village_mesa"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_17": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_a/medium/village_mountain"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_18": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_a/medium/village_mushroom"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_19": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_a/medium/village_plains"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_20": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_a/medium/village_savanna"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_21": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_a/medium/village_snowy"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_22": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_a/medium/village_swamp"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_23": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_a/medium/village_taiga"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_24": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_a/small/village_beach"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_25": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_a/small/village_dark_forest"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_26": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_a/small/village_desert"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_27": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_a/small/village_jungle"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_28": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_a/small/village_mesa"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_29": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_a/small/village_mountain"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_30": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_a/small/village_mushroom"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_31": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_a/small/village_plains"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_32": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_a/small/village_savanna"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_33": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_a/small/village_snowy"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_34": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_a/small/village_swamp"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_35": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_a/small/village_taiga"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_36": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_h/large/village_beach"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_37": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_h/large/village_dark_forest"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_38": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_h/large/village_desert"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_39": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_h/large/village_jungle"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_40": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_h/large/village_mesa"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_41": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_h/large/village_mountain"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_42": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_h/large/village_mushroom"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_43": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_h/large/village_plains"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_44": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_h/large/village_savanna"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_45": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_h/large/village_snowy"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_46": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_h/large/village_swamp"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_47": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_h/large/village_taiga"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_48": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_h/medium/village_beach"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_49": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_h/medium/village_dark_forest"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_50": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_h/medium/village_desert"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_51": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_h/medium/village_jungle"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_52": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_h/medium/village_mesa"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_53": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_h/medium/village_mountain"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_54": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_h/medium/village_mushroom"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_55": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_h/medium/village_plains"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_56": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_h/medium/village_savanna"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_57": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_h/medium/village_snowy"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_58": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_h/medium/village_swamp"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_59": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_h/medium/village_taiga"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_60": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_h/small/village_beach"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_61": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_h/small/village_dark_forest"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_62": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_h/small/village_desert"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_63": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_h/small/village_jungle"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_64": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_h/small/village_mesa"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_65": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_h/small/village_mountain"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_66": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_h/small/village_mushroom"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_67": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_h/small/village_plains"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_68": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_h/small/village_savanna"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_69": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_h/small/village_snowy"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_70": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_h/small/village_swamp"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ruin_71": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "peacock:ruin_h/small/village_taiga"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "peacock:root",
+  "requirements": [
+    [
+      "ruin_0",
+      "ruin_1",
+      "ruin_2",
+      "ruin_3",
+      "ruin_4",
+      "ruin_5",
+      "ruin_6",
+      "ruin_7",
+      "ruin_8",
+      "ruin_9",
+      "ruin_10",
+      "ruin_11",
+      "ruin_12",
+      "ruin_13",
+      "ruin_14",
+      "ruin_15",
+      "ruin_16",
+      "ruin_17",
+      "ruin_18",
+      "ruin_19",
+      "ruin_20",
+      "ruin_21",
+      "ruin_22",
+      "ruin_23",
+      "ruin_24",
+      "ruin_25",
+      "ruin_26",
+      "ruin_27",
+      "ruin_28",
+      "ruin_29",
+      "ruin_30",
+      "ruin_31",
+      "ruin_32",
+      "ruin_33",
+      "ruin_34",
+      "ruin_35",
+      "ruin_36",
+      "ruin_37",
+      "ruin_38",
+      "ruin_39",
+      "ruin_40",
+      "ruin_41",
+      "ruin_42",
+      "ruin_43",
+      "ruin_44",
+      "ruin_45",
+      "ruin_46",
+      "ruin_47",
+      "ruin_48",
+      "ruin_49",
+      "ruin_50",
+      "ruin_51",
+      "ruin_52",
+      "ruin_53",
+      "ruin_54",
+      "ruin_55",
+      "ruin_56",
+      "ruin_57",
+      "ruin_58",
+      "ruin_59",
+      "ruin_60",
+      "ruin_61",
+      "ruin_62",
+      "ruin_63",
+      "ruin_64",
+      "ruin_65",
+      "ruin_66",
+      "ruin_67",
+      "ruin_68",
+      "ruin_69",
+      "ruin_70",
+      "ruin_71"
+    ]
+  ]
+}

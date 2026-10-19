@@ -1,0 +1,122 @@
+{
+  "display": {
+    "title": {
+      "text": "Paid in Full"
+    },
+    "description": {
+      "text": "Buy a Blueprint with a charter"
+    },
+    "icon": {
+      "item": "minecraft:emerald_block"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "brass": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipe_id": "peacock:charter/brass"
+      }
+    },
+    "recruiting": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipe_id": "peacock:charter/recruiting"
+      }
+    },
+    "blasting": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipe_id": "peacock:charter/blasting"
+      }
+    },
+    "climate": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipe_id": "peacock:charter/climate"
+      }
+    },
+    "cooking": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipe_id": "peacock:charter/cooking"
+      }
+    },
+    "trains": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipe_id": "peacock:charter/trains"
+      }
+    },
+    "ships": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipe_id": "peacock:charter/ships"
+      }
+    },
+    "trade": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipe_id": "peacock:charter/trade"
+      }
+    },
+    "diesel": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipe_id": "peacock:charter/diesel"
+      }
+    },
+    "precision": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipe_id": "peacock:charter/precision"
+      }
+    },
+    "netherite": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipe_id": "peacock:charter/netherite"
+      }
+    },
+    "cannons": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipe_id": "peacock:charter/cannons"
+      }
+    },
+    "arcane": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipe_id": "peacock:charter/arcane"
+      }
+    },
+    "ender": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipe_id": "peacock:charter/ender"
+      }
+    }
+  },
+  "parent": "peacock:blueprints/first",
+  "requirements": [
+    [
+      "brass",
+      "recruiting",
+      "blasting",
+      "climate",
+      "cooking",
+      "trains",
+      "ships",
+      "trade",
+      "diesel",
+      "precision",
+      "netherite",
+      "cannons",
+      "arcane",
+      "ender"
+    ]
+  ]
+}

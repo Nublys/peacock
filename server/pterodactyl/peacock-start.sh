@@ -44,6 +44,38 @@ GC_FLAGS="-XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:
   -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5
   -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1"
 
-exec java -Xms128M -XX:MaxRAMPercentage=90.0 ${GC_FLAGS} \
-  -Dterminal.jline=false -Dterminal.ansi=true \
-  @user_jvm_args.txt "@${ARGS_FILE}" nogui
+# Heap: 75% of the container, not 90. Netty buffers, Valkyrien Skies' physics, metaspace and the JVM itself
+# all live outside the Java heap; at 90% a busy evening gets the container OOM-killed instead of a GC pause.
+# Override with PEACOCK_HEAP_PERCENT (or set an explicit -Xmx in user_jvm_args.txt and leave this alone).
+HEAP_PERCENT="${PEACOCK_HEAP_PERCENT:-75.0}"
+
+# Seed reroll (kubejs/server_scripts/capital_reroll.js): on a brand-new world with no capital the server writes
+# kubejs/config/peacock-reroll.json and stops itself; this loop deletes that world and starts again on a new
+# random seed. Java runs in the foreground (not exec) so the console stays attached; with no marker the script
+# exits with the server's own exit code, exactly as before.
+MARKER="kubejs/config/peacock-reroll.json"
+COUNT="kubejs/config/peacock-reroll-count.json"
+while true; do
+  java -Xms128M -XX:MaxRAMPercentage="${HEAP_PERCENT}" ${GC_FLAGS} \
+    -Dterminal.jline=false -Dterminal.ansi=true \
+    @user_jvm_args.txt "@${ARGS_FILE}" nogui
+  code=$?
+  [ -f "${MARKER}" ] || exit "${code}"
+  LEVEL="$(grep -E '^level-name=' server.properties 2>/dev/null | cut -d= -f2- | tr -d '\r')"
+  LEVEL="${LEVEL:-world}"
+  ATTEMPT="$(grep -oE '"attempt"[[:space:]]*:[[:space:]]*[0-9]+' "${MARKER}" | grep -oE '[0-9]+$')"
+  rm -f "${MARKER}"
+  # last guard, independent of the script's: never delete a world anyone has played in
+  if [ -n "$(ls -A "${LEVEL}/playerdata" 2>/dev/null)" ]; then
+    say "!! reroll requested but ${LEVEL}/playerdata is not empty — keeping the world"
+    exit "${code}"
+  fi
+  if [ ! -f "${LEVEL}/level.dat" ]; then
+    say "!! reroll requested but ${LEVEL}/level.dat is missing — not deleting anything"
+    exit "${code}"
+  fi
+  say "reroll ${ATTEMPT:-?}: no capital on this seed — deleting ${LEVEL} and starting on a new seed"
+  rm -rf "${LEVEL}"
+  sed -i 's/^level-seed=.*/level-seed=/' server.properties
+  printf '{"tries": %s}\n' "${ATTEMPT:-1}" > "${COUNT}"
+done

@@ -1,0 +1,23 @@
+{
+  "display": {
+    "title": {
+      "text": "It Got Back Up"
+    },
+    "description": {
+      "text": "Defeat a Mutant Zombie"
+    },
+    "icon": {
+      "item": "minecraft:zombie_head"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "granted": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "peacock:bosses/first"
+}

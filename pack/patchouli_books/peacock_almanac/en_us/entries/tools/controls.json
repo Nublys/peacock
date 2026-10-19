@@ -10,7 +10,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)K$() shaders on/off, $(bold)O$() shader menu$(br)$(bold)R$() recipes for the hovered item, $(bold)U$() its uses (EMI)$(br)$(bold),$() voice chat menu, $(bold).$() mute mic$(br)$(bold)Right Alt$() push-to-talk$(br2)Controlling is installed: Options, Controls has a search box, so any bind can be found by name."
+      "text": "$(bold)K$() shaders on/off, $(bold)O$() shader menu$(br)$(bold)R$() recipes for the hovered item, $(bold)U$() its uses (EMI)$(br)$(bold),$() voice chat menu, $(bold).$() mute mic$(br)$(bold)Right Alt$() push-to-talk$(br)$(bold)Z$() zoom (scroll to adjust), only while you carry a spyglass, backpack included$(br2)Controlling is installed: Options, Controls has a search box, so any bind can be found by name."
     },
     {
       "type": "patchouli:text",

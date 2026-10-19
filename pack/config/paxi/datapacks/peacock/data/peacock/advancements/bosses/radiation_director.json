@@ -1,0 +1,23 @@
+{
+  "display": {
+    "title": {
+      "text": "Meltdown Averted"
+    },
+    "description": {
+      "text": "Defeat the Radiation Director in the Nether Reactor"
+    },
+    "icon": {
+      "item": "minecraft:wither_skeleton_skull"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "granted": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "peacock:bosses/first"
+}
