@@ -147,10 +147,17 @@ function runWall(server, log) {
 }
 
 // ---------------------------------------------------------------------------------------------- the founder
-const GRID = 5, GRID_STEP = 44          // 5x5 samples, ±88 blocks: most of the capital's footprint
+// The survey runs in slices of at most BUDGET_MS per server tick. The first version ran in one go and froze the
+// server for minutes (2026-10-18 22:01: every terrain-height read runs Tectonic/Terralith's full density stack;
+// a whole survey is thousands of them), so logins hung on "Encrypting". Now the tick always finishes, the
+// survey takes as many ticks as it takes, and progress is logged every few seconds.
+const BIOME_GRID = 5, BIOME_STEP = 44   // 5x5 biome samples, ±88 blocks: most of the capital's footprint
+const HEIGHT_GRID = 3, HEIGHT_STEP = 88 // 3x3 height samples over the same square (heights are the expensive part)
 const STRICT_SPREAD = 16, LOOSE_SPREAD = 30   // max height difference across the grid, in blocks
 const RING_FROM = 6, RING_TO = 62, RING_STEP = 4   // candidate rings, in chunks from the origin
 const TAU = 6.283185307179586                    // KubeJS' Rhino has no Math.PI (nor Math.E …): undefined, so NaN
+const BUDGET_MS = 15                     // survey time per server tick (a tick is 50 ms)
+let busy = false                         // one founding at a time
 
 function biomeTag(ns, path) {
   var Registries = J('net.minecraft.core.registries.Registries')
@@ -163,7 +170,7 @@ function idOf(h) {
 }
 
 // Biome ids in a tag, as a plain string set: the per-sample test is then string lookup, with no reliance on
-// Rhino picking the right Holder.is(...) overload (the sixth world's survey called every candidate wet).
+// Rhino picking the right Holder.is(...) overload.
 function tagIds(level, ns, path) {
   var Registries = J('net.minecraft.core.registries.Registries')
   var ids = {}, count = 0
@@ -173,11 +180,12 @@ function tagIds(level, ns, path) {
 }
 
 function sampler(level, log) {
-  var BlockPos = J('net.minecraft.core.BlockPos')
   var Heightmap = J('net.minecraft.world.level.levelgen.Heightmap$Types')
   var cs = level.getChunkSource()
   var gen = cs.getGenerator()
   var rs = cs.randomState()
+  var biomes = gen.getBiomeSource()
+  var climate = rs.sampler()
   var gentle = tagIds(level, 'peacock', 'capital_biomes')
   var wet = { ids: {}, count: 0 }
   var wetTags = ['is_ocean', 'is_deep_ocean', 'is_river', 'is_beach']
@@ -197,66 +205,105 @@ function sampler(level, log) {
     ruins = sets.getHolder(ResourceKey.create(Registries.STRUCTURE_SET, RL('minecraft', 'village'))).orElse(null)
   } catch (e) { ruins = null }
   var state = cs.getGeneratorState()
+  var stats = { heights: 0, heightMs: 0, biomes: 0 }
+  var qy = (sea + 8) >> 2
   return {
     sea: sea,
-    idAt: (x, z) => idOf(level.getBiome(new BlockPos(x, 64, z))),
+    stats: stats,
+    // straight from the biome source at the surface (quart coordinates): no chunk access, no 8-way zoom
+    idAt: (x, z) => { stats.biomes++; return idOf(biomes.getNoiseBiome(x >> 2, qy, z >> 2, climate)) },
     isGentle: id => gentle.ids[id] === true,
     isWet: id => wet.ids[id] === true || /ocean|river|beach|shore/.test(id),
-    // terrain height straight from the generator's noise: no chunk is generated or loaded for this
-    heightAt: (x, z) => gen.getBaseHeight(x, z, Heightmap.WORLD_SURFACE_WG, level, rs),
+    // terrain height straight from the generator's noise: no chunk is generated or loaded for this — but slow
+    heightAt: (x, z) => {
+      var t0 = Date.now()
+      var h = gen.getBaseHeight(x, z, Heightmap.WORLD_SURFACE_WG, level, rs)
+      stats.heights++; stats.heightMs += Date.now() - t0
+      return h
+    },
     nearRuin: (cx, cz) => ruins ? state.hasStructureChunkInRange(ruins, cx, cz, 8) : false,
   }
 }
 
-// Looks at a 5x5 grid around (x, z). Returns null if the centre is water, else a report.
+// Biomes first (cheap), heights only for spots whose biomes pass, with early exits.
 function survey(S, x, z) {
-  var gentleN = 0, wetN = 0, dryN = 0, hmin = 9999, hmax = -9999
-  var half = Math.floor(GRID / 2)
+  var n = BIOME_GRID * BIOME_GRID, gentleN = 0, wetN = 0
+  var half = Math.floor(BIOME_GRID / 2)
   for (var gi = -half; gi <= half; gi++) {
     for (var gj = -half; gj <= half; gj++) {
-      var sx = x + gi * GRID_STEP, sz = z + gj * GRID_STEP
-      var b = S.idAt(sx, sz)
+      var b = S.idAt(x + gi * BIOME_STEP, z + gj * BIOME_STEP)
       if (S.isGentle(b)) gentleN++
-      if (S.isWet(b)) wetN++
-      var h = S.heightAt(sx, sz)
-      if (h > S.sea + 1) dryN++
+      if (S.isWet(b)) { wetN++; if (wetN > 1) return null }
+    }
+  }
+  var hn = HEIGHT_GRID * HEIGHT_GRID, low = 0, hmin = 9999, hmax = -9999
+  var hh = Math.floor(HEIGHT_GRID / 2)
+  for (var hi = -hh; hi <= hh; hi++) {
+    for (var hj = -hh; hj <= hh; hj++) {
+      var h = S.heightAt(x + hi * HEIGHT_STEP, z + hj * HEIGHT_STEP)
+      if (h <= S.sea + 1) { low++; if (low > 1) return null }
       if (h < hmin) hmin = h
       if (h > hmax) hmax = h
+      if (hmax - hmin > LOOSE_SPREAD) return null
     }
   }
-  return { gentle: gentleN, wet: wetN, dry: dryN, spread: hmax - hmin, n: GRID * GRID }
+  return { gentle: gentleN, wet: wetN, n: n, spread: hmax - hmin }
 }
 
-// Picks the capital's chunk: the flattest gentle, dry, ruin-free spot in the nearest ring that has one; failing
-// that the flattest dry land anywhere in reach; failing that nothing (an all-ocean kilometre around the origin).
-function scan(S, log) {
-  var loose = null, seen = 0, wetCentres = 0, surveyed = 0, samples = []
+function spots() {
+  var out = []
   for (var R = RING_FROM; R <= RING_TO; R += RING_STEP) {
     var n = Math.max(8, Math.round(TAU * R / 6))
-    var best = null
     for (var k = 0; k < n; k++) {
       var a = TAU * k / n + R * 0.37      // rotate each ring so candidates do not line up
-      var cx = Math.round(Math.cos(a) * R), cz = Math.round(Math.sin(a) * R)
-      var x = cx * 16 + 8, z = cz * 16 + 8
-      var centre = S.idAt(x, z)
-      seen++
-      if (samples.length < 4) samples.push(centre + '@' + x + ',' + z + ' h' + S.heightAt(x, z))
-      if (S.isWet(centre)) { wetCentres++; continue }
-      if (!S.isGentle(centre) && loose && loose.score < 12) continue   // enough looseness in hand; skip the noise
-      var r = survey(S, x, z)
-      surveyed++
-      if (r.dry < r.n - 1 || r.wet > 1) continue
-      // the fallback: any dry, reasonably flat land, nearest and flattest first
-      var looseScore = r.spread + (R - RING_FROM) / RING_STEP * 3 + (r.n - r.gentle)
-      if (r.spread <= LOOSE_SPREAD && (!loose || looseScore < loose.score)) loose = { cx: cx, cz: cz, score: looseScore, r: r, R: R }
-      // the real thing: gentle biomes almost everywhere, flat, not on a ruin
-      if (r.gentle >= r.n - 2 && r.spread <= STRICT_SPREAD && !S.nearRuin(cx, cz) && (!best || r.spread < best.r.spread)) best = { cx: cx, cz: cz, r: r, R: R }
+      out.push({ R: R, cx: Math.round(Math.cos(a) * R), cz: Math.round(Math.sin(a) * R), last: k === n - 1 })
     }
-    if (best) { log('found: looked at ' + seen + ' spots (' + wetCentres + ' in water, ' + surveyed + ' surveyed); e.g. ' + samples.join(' ')); log('found: gentle land at chunk ' + best.cx + ',' + best.cz + ' (ring ' + R + ', height spread ' + best.r.spread + ', ' + best.r.gentle + '/' + best.r.n + ' gentle)'); return best }
   }
-  log('found: looked at ' + seen + ' spots (' + wetCentres + ' in water, ' + surveyed + ' surveyed); e.g. ' + samples.join(' '))
-  if (loose) { log('found: no gentle ring; nearest dry flat land at chunk ' + loose.cx + ',' + loose.cz + ' (ring ' + loose.R + ', height spread ' + loose.r.spread + ', ' + loose.r.gentle + '/' + loose.r.n + ' gentle)'); return loose }
-  return null
+  return out
+}
+
+// Picks the capital's chunk, a slice per tick: the flattest gentle, dry, ruin-free spot in the nearest ring that
+// has one; failing that the flattest dry land in reach; failing that nothing. Calls done(pick or null).
+function scan(server, S, log, done) {
+  var list = spots(), i = 0, loose = null, best = null, wetCentres = 0, surveyed = 0
+  var started = Date.now(), lastLog = Date.now(), ticks = 0
+  var report = () => 'spot ' + i + '/' + list.length + ' (ring ' + (i < list.length ? list[i].R : RING_TO) + '), ' + wetCentres + ' in water, ' +
+    surveyed + ' surveyed, ' + S.stats.heights + ' heights at ' + (S.stats.heights ? Math.round(S.stats.heightMs / S.stats.heights) : 0) +
+    ' ms each, ' + ticks + ' ticks, ' + Math.round((Date.now() - started) / 1000) + ' s'
+  var finish = pick => {
+    log('found: survey done — ' + report())
+    if (pick === best && best) log('found: gentle land at chunk ' + best.cx + ',' + best.cz + ' (ring ' + best.R + ', height spread ' + best.r.spread + ', ' + best.r.gentle + '/' + best.r.n + ' gentle)')
+    else if (pick) log('found: no gentle ring; nearest dry flat land at chunk ' + pick.cx + ',' + pick.cz + ' (ring ' + pick.R + ', height spread ' + pick.r.spread + ', ' + pick.r.gentle + '/' + pick.r.n + ' gentle)')
+    done(pick)
+  }
+  var step = () => {
+    ticks++
+    var t0 = Date.now()
+    try {
+      while (i < list.length && Date.now() - t0 < BUDGET_MS) {
+        var sp = list[i]
+        i++
+        var x = sp.cx * 16 + 8, z = sp.cz * 16 + 8
+        var centre = S.idAt(x, z)
+        if (S.isWet(centre)) { wetCentres++ }
+        else if (S.isGentle(centre) || !loose || loose.score >= 12) {
+          var r = survey(S, x, z)
+          surveyed++
+          if (r) {
+            var looseScore = r.spread + (sp.R - RING_FROM) / RING_STEP * 3 + (r.n - r.gentle)
+            if (!loose || looseScore < loose.score) loose = { cx: sp.cx, cz: sp.cz, score: looseScore, r: r, R: sp.R }
+            if (r.gentle >= r.n - 2 && r.spread <= STRICT_SPREAD && !S.nearRuin(sp.cx, sp.cz) && (!best || r.spread < best.r.spread))
+              best = { cx: sp.cx, cz: sp.cz, r: r, R: sp.R }
+          }
+        }
+        if (sp.last && best) { finish(best); return }
+      }
+    } catch (e) { log('found: survey failed — ' + e); busy = false; return }
+    if (i >= list.length) { finish(loose); return }
+    if (Date.now() - lastLog > 5000) { lastLog = Date.now(); log('found: surveying — ' + report()) }
+    server.scheduleInTicks(1, step)
+  }
+  step()
 }
 
 // Generates the structure's layout (no blocks yet) at a chunk; a few seeds, since a jigsaw start can come out empty.
@@ -293,24 +340,16 @@ function place(level, start, log) {
   return bb
 }
 
-// The whole founding, in stages: survey (now), force-load the footprint (ticket, asynchronous), wait for the
-// chunks, place, move spawn, wall. `where` is {cx, cz} or null for the search; `force` founds beside an existing capital.
-function found(server, where, force, log) {
-  var level = server.overworld()
-  var existing = findCapital(server, level)
-  if (existing && !force) { log('found: a capital already stands at spawn (' + existing.variant + '); `/peacock found force` to found another'); return false }
+// After the survey: lay out the town, force-load its footprint (asynchronous), wait for the chunks, place, move
+// spawn, wall.
+function settle(server, level, pick, log) {
   var BlockPos = J('net.minecraft.core.BlockPos')
   var Heightmap = J('net.minecraft.world.level.levelgen.Heightmap$Types')
-  var pick = where
-  if (!pick) {
-    var t0 = Date.now()
-    pick = scan(sampler(level, log), log)
-    log('found: survey took ' + (Date.now() - t0) + ' ms')
-    if (!pick) { log('found: no dry land within ' + RING_TO * 16 + ' blocks of the origin — nothing founded'); return false }
-  }
+  var t0 = Date.now()
   var start = layout(level, pick.cx, pick.cz)
-  if (!start) { log('found: the fortified village layout came out empty at chunk ' + pick.cx + ',' + pick.cz); return false }
+  if (!start) { log('found: the fortified village layout came out empty at chunk ' + pick.cx + ',' + pick.cz); busy = false; return }
   var bb = start.getBoundingBox()
+  log('found: laid out the town in ' + (Date.now() - t0) + ' ms')
   var c0x = bb.minX() >> 4, c0z = bb.minZ() >> 4, c1x = bb.maxX() >> 4, c1z = bb.maxZ() >> 4
   // /forceload takes at most 256 chunks per command; the footprint is ~15x15, split in two to stay under
   var midz = Math.floor((c0z + c1z) / 2)
@@ -326,7 +365,7 @@ function found(server, where, force, log) {
     var ready = 0
     for (var qx = c0x; qx <= c1x; qx++) for (var qz = c0z; qz <= c1z; qz++) if (level.hasChunk(qx, qz)) ready++
     polls++
-    if (ready < total && polls < 180) {       // up to three minutes; then load the rest synchronously in place()
+    if (ready < total && polls < 300) {       // up to five minutes; then load the rest synchronously in place()
       if (polls % 10 === 0) log('found: ' + ready + '/' + total + ' chunks ready')
       server.scheduleInTicks(20, tick)
       return
@@ -344,9 +383,25 @@ function found(server, where, force, log) {
       log('found: failed while placing — ' + e)
     } finally {
       cmds.forEach(c => server.runCommandSilent(c.replace('forceload add', 'forceload remove')))
+      busy = false
     }
   }
   server.scheduleInTicks(20, tick)
+}
+
+// `where` is {cx, cz} or null for the survey; `force` founds beside an existing capital.
+function found(server, where, force, log) {
+  if (busy) { log('found: already founding — watch the log'); return false }
+  var level = server.overworld()
+  var existing = findCapital(server, level)
+  if (existing && !force) { log('found: a capital already stands at spawn (' + existing.variant + '); `/peacock found force` to found another'); return false }
+  busy = true
+  var go = pick => {
+    if (!pick) { log('found: no dry land within ' + RING_TO * 16 + ' blocks of the origin — nothing founded'); busy = false; return }
+    try { settle(server, level, pick, log) } catch (e) { log('found: failed — ' + e); busy = false }
+  }
+  if (where) go(where)
+  else scan(server, sampler(level, log), log, go)
   return true
 }
 

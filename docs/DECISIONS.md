@@ -599,3 +599,11 @@ existing installs get it too:
   boss-bar HUD layer (vanilla and modded bars draw inside it) about the top centre, `bossBarScale` 0.5.
 - Not touched: Village Recruits' walk-into-a-village hints (gameplay, once per village) and the pack's own one
   welcome line. Anything still appearing on join shows up as `[CHAT]` lines in the *client's* `logs/latest.log`.
+- **Eighth run (22:01): the survey froze the server.** With `Math.PI` fixed the loop ran — on the server thread,
+  in one go. Every `getBaseHeight` runs the full Tectonic/Terralith density stack for a column; a survey is
+  thousands of them, so the tick never ended (Valkyrien Skies' "too many physics frames" every second from 22:01:39)
+  and a login at 22:04:38 hung on "Encrypting" until the client timed out. The survey now runs in slices of
+  ≤15 ms per tick, reads biomes straight from the biome source (no chunk lookup, no 8-way zoom), checks biomes
+  before any height, samples heights on a 3×3 grid with early exits, and logs progress (spots, heights, ms per
+  height) every 5 s. Only one founding runs at a time. Tested in the Rhino harness with a stub scheduler and 5 ms
+  height reads: 6 ticks, longest slice 60 ms.
