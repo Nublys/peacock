@@ -1,0 +1,13 @@
+name = "Tools On My Back (TOMB)"
+filename = "tools-on-my-back-1.1.2+1.20.1+forge.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/rQou28Z1/versions/QT2C3eio/tools-on-my-back-1.1.2%2B1.20.1%2Bforge.jar"
+hash-format = "sha512"
+hash = "8342548255fbe5edc97d75047c7f507649f96ebb6cd02fc4e5757f1b0cda2bd9410a9dc4c2d3b0cee4236ff62e82b7e653b5fb0671b2f62ad2622757c4e04301"
+
+[update]
+[update.modrinth]
+mod-id = "rQou28Z1"
+version = "QT2C3eio"

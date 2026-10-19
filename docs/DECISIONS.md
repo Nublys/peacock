@@ -714,3 +714,11 @@ source), **Sildur's Vibrant 2.02 Lite** and **Medium** (Distant Horizons support
 2.19** (very light; no sign of Distant Horizons support, so far terrain may look wrong with it). Sildur's files are
 renamed without spaces (validate.py rule). Once a winner is picked, the low tier's `oculus.properties` shader pack
 and its per-pack settings go into tools/gen-profiles.py like the Complementary presets.
+
+## Tools on the back (2026-10-19)
+Aaron: "a back or hips mod — unequipped tools and weapons go to the back or hip". **Tools On My Back 1.1.2**
+(client-only, no dependencies) is the only maintained option for Forge 1.20.1 (Arsenal+, Back Tools and Stowed are
+1.21-only). It shows each player's last-used tool or weapon on their back; it tracks every player the client sees
+(per-UUID in its player tick), so with everyone on the pack, everyone sees everyone's gear. One item at a time;
+position per item or per item type (all swords, all axes) is set in its in-game editor (Mods → Tools On My Back →
+Config), e.g. swords on the belt.

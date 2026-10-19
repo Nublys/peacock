@@ -2127,6 +2127,11 @@ hash = "df31d74a4c6de11c09fbcfaead84ca299188ab186a4f58dfff9099696541443f"
 metafile = true
 
 [[files]]
+file = "mods/tools-on-my-back.pw.toml"
+hash = "66b984a367029f6f3a3c48769e54f94e20f6e0eafd7708308f3b7895cb67d310"
+metafile = true
+
+[[files]]
 file = "mods/trotting-wagons.pw.toml"
 hash = "f56d02109831397a2e68d136e3e3174c48653aefb0b68c71562e17e9ce642466"
 metafile = true
