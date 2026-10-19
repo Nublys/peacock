@@ -2295,11 +2295,31 @@ hash = "a55c354e0f08e2cd44166655891c8c46fe47bb06482dcb3068e8414b319dcc97"
 
 [[files]]
 file = "peacock/profiles/README.txt"
-hash = "0c276d5e0e7deb8ef9d43546ce274ef2f42696b31c10cd4cdb210228f50b1e93"
+hash = "f1a8bf4d4d80260d905156857d5d092e1ccdd7f513d2818d2cbceeb5313f3389"
+
+[[files]]
+file = "peacock/profiles/_previous/config/DistantHorizons.toml.keys"
+hash = "72e6e66c6f67a45ed5caa0bdd5af42ae0e02d579aef32753c750291b13a37355"
+
+[[files]]
+file = "peacock/profiles/_previous/config/colorwheel-client.toml.keys"
+hash = "c50c5986e79ea7b77996a74f990a268f58d76aa329b697e334ba646f8e883352"
+
+[[files]]
+file = "peacock/profiles/_previous/config/embeddium-options.json.keys"
+hash = "e6ccfadc96bc3a83a3ad288c438751307082f6e2382909a1fbf4c72921cd753f"
+
+[[files]]
+file = "peacock/profiles/_previous/config/entity_model_features.json.keys"
+hash = "bddb086e16610c6d2264e0b942c25df9fb17de0bede75290a6088259ac1403cd"
+
+[[files]]
+file = "peacock/profiles/_previous/config/locatorbar.json.keys"
+hash = "6c9992ee147e8ccada7c03e7efdda90c51cf8ae967281fb080d6323cc54351ca"
 
 [[files]]
 file = "peacock/profiles/_previous/options.txt.keys"
-hash = "b3d1ab72659f5419a0209f81a678b112cc0598d6f44da6c76bc4f9195285061d"
+hash = "42473828c32a70c3354f24288cecc57cc8b84fdaa0f31242d666234f44893379"
 
 [[files]]
 file = "peacock/profiles/high/config/DistantHorizons.toml.keys"

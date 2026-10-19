@@ -1,0 +1,8 @@
+enableAutoUpdater = true
+showLowMemoryWarningOnStartup = true
+showReplayWarningOnStartup = true
+showModCompatibilityWarningsOnStartup = true
+showHighVanillaRenderDistanceWarning = true
+showPoolInsufficientMemoryWarning = true
+showGarbageCollectorWarning = true
+showSlowWorldGenSettingWarnings = true

@@ -1,1 +1,6 @@
 resourcePacks:["vanilla","mod_resources","file/FreshAnimations_v1.10.4.zip"]
+realmsNotifications:true
+onboardAccessibility:true
+skipMultiplayerWarning:false
+joinedFirstServer:false
+tutorialStep:movement
