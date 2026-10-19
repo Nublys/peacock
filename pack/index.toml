@@ -1040,6 +1040,14 @@ file = "config/paxi/datapacks/peacock/data/sereneseasons/tags/blocks/summer_crop
 hash = "7647c90009d8faf64df6efd2ad77a14f0923f0d605cc4e3148a835b587df30eb"
 
 [[files]]
+file = "config/paxi/datapacks/peacock/data/underground_village/worldgen/structure_set/underground_village.json"
+hash = "082283c08877fbe1faa11f4bc93c48998f8f63bd6dadf105a3fb6fe71457f27c"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/underground_village/worldgen/structure_set/underwater_village.json"
+hash = "fdad3882dce3efcc9d1deece8cf4599fa821d9d8c83ba9088320421c53e7e5f0"
+
+[[files]]
 file = "config/paxi/datapacks/peacock/pack.mcmeta"
 hash = "d95489181581732e809992e3756ad554f6bf0fa3e4fc1edff1a02b143d152e3a"
 
@@ -1106,6 +1114,10 @@ hash = "9edbc0a7900f8446e515e3a603eb6dde591b471fed228d69e38417d772eb93c3"
 [[files]]
 file = "config/terrablender.toml"
 hash = "c73292a81a8409d74edb12b0bb9226bda03f39e11afc8abfe6bff52cc30ef480"
+
+[[files]]
+file = "config/underground_village/common.json5"
+hash = "210c7b1672741c9eeecdf5f5ae2ffadbd427cf9c633fc75f355e641225700cc6"
 
 [[files]]
 file = "config/valkyrienskies/valkyrienskies-client.toml"
@@ -2131,6 +2143,11 @@ metafile = true
 [[files]]
 file = "mods/txnilib.pw.toml"
 hash = "360e8717e48ace854762aa02e2597a0c9fc9e1d443b665aae40acd047f83f692"
+metafile = true
+
+[[files]]
+file = "mods/underground-village-stoneholm.pw.toml"
+hash = "7b11f0b577ac00d30ca3d3271eb349e820c2857957423b865e6c593ec1d4babf"
 metafile = true
 
 [[files]]

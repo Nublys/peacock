@@ -738,7 +738,7 @@ their first real test.
   the spawn area — an already-generated chunk, so cheap). If the capital exists but spawn is not in it, spawn is
   moved there and the wall is built 30 s later, instead of deleting a world that has its capital.
 
-## Village review: wider gaps round the capital, no towers beside it, Stoneholm removed (2026-10-19)
+## Village review: wider gaps round the capital, no towers beside it, Stoneholm villages off (2026-10-19)
 A pass over every structure set in the pack against the dead-world plan (Aaron approved all of it).
 - **Ruins keep 14 chunks from the capital** (was 6). The capital, Terralith's size-7 castle town, reaches about
   7 chunks from its centre plus the 6-block wall, so a ruin starting 6 chunks out could run into the town.
@@ -750,8 +750,11 @@ A pass over every structure set in the pack against the dead-world plan (Aaron a
   rerolls a brand-new world when the tower set's placement maths puts any tower chunk within 9 chunks of the
   capital's centre — arithmetic only, nothing generated. Console: `[peacock] reroll: a Village Recruits tower can
   generate within 9 chunks of the capital …`. About 10% more rerolls.
-- **Stoneholm removed.** Its underground and underwater villages were living villages with trading villagers,
-  against the rule that only the capital and the new towns are alive, and it sent its own welcome message on
-  join. Its chest tables are gone from `cave_loot.js`, `journals.js` and `rumour_maps.js`, and from the Almanac.
+- **Stoneholm's villages switched off.** Its underground and underwater villages were living villages with trading
+  villagers, against the rule that only the capital and the new towns are alive, and it sent its own welcome
+  message on join. The first attempt removed the mod, and the server would not boot: Create: Better Villagers
+  declares Stoneholm a required dependency. So the mod stays installed as a library; the `peacock` datapack
+  overrides both its structure sets with frequency 0 (as Terralith's `rare_village`), and `ENABLE_IN_GAME_MESSAGE`
+  is false. Its chest tables are gone from `cave_loot.js`, `journals.js` and `rumour_maps.js`, and from the Almanac.
 - Noted, unchanged: vanilla's and CTOV's pillager outposts both generate, so outposts are roughly twice as common
   as vanilla. That suits a world the pillagers won.

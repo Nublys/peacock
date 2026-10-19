@@ -1,0 +1,16 @@
+{
+ "__comment": "Peacock: Stoneholm's living villages are off (village review, 2026-10-19). The mod stays installed only because Create: Better Villagers requires it. Frequency 0 never places one, the same way Terralith's rare_village is silenced.",
+ "structures": [
+  {
+   "structure": "underground_village:underwater_village",
+   "weight": 1
+  }
+ ],
+ "placement": {
+  "type": "minecraft:random_spread",
+  "salt": 8699777,
+  "spacing": 32,
+  "separation": 8,
+  "frequency": 0.0
+ }
+}
