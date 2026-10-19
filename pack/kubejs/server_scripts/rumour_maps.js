@@ -35,7 +35,6 @@ const RUMOURS = {
 const CHESTS = {
   'minecraft:chests/pillager_outpost':                [0.5,  ['wrought_chamber', 'umvuthana_grove', 'frostmaw', 'illager_fort']],
   'minecraft:chests/village/village_cartographer':    [0.3,  ['wrought_chamber', 'umvuthana_grove', 'frostmaw', 'monastery']],
-  'stoneholm:cartographer':                           [0.5,  ['wrought_chamber', 'umvuthana_grove', 'frostmaw', 'monastery']],
   'create_structures:chests/village/village_windmill':[0.35, ['wrought_chamber']],
   'illagerinvasion:chests/illusioner_tower_stairs':   [0.5,  ['illager_fort']],
   'illagerinvasion:chests/sorcerer_hut':              [0.3,  ['illager_fort', 'frostmaw']],

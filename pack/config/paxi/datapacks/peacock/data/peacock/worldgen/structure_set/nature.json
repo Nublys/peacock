@@ -25,6 +25,10 @@
   "type": "minecraft:random_spread",
   "spacing": 7,
   "separation": 3,
-  "salt": 20261018
+  "salt": 20261018,
+  "exclusion_zone": {
+   "other_set": "peacock:capital",
+   "chunk_count": 10
+  }
  }
 }

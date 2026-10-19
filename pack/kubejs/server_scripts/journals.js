@@ -26,9 +26,6 @@ const CHESTS = {
   'minecraft:chests/stronghold_library':             0.25,
   'betterdungeons:zombie_dungeon/chests/special':    0.12,
   'betterdungeons:skeleton_dungeon/chests/middle':   0.10,
-  'stoneholm:crypt':                                 0.20,
-  'stoneholm:forbidden_knowledge':                   0.30,
-  'stoneholm:cartographer':                          0.15,
   'cataclysm:chests/abandoned':                      0.10,
   'illagerinvasion:chests/illusioner_tower_stairs':  0.15,
 }

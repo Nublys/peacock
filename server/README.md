@@ -52,7 +52,7 @@ The JVM prints every thread's stack to the console; copy it. The watchdog does t
 after `max-tick-time`, then stops the server. Either dump is what identifies the mod at fault.
 
 **A new world** (stop the server, delete or rename the world folder, start): the server checks that the
-capital generated at spawn. If it did not, and the world is brand new (under two minutes old, nobody has ever
+capital generated at spawn (and that no Village Recruits tower can generate right beside it). If not, and the world is brand new (under two minutes old, nobody has ever
 joined, nobody online), it stops itself and `peacock-start.sh` deletes that world and starts again on a fresh
 random seed — the console shows `[peacock] reroll: no capital on this seed … attempt N of 15` and then
 `[peacock] reroll N: … deleting world`. Each try is one boot (several minutes on this host); expect a few. It

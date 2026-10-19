@@ -2,7 +2,7 @@
 //
 // Geolosys removes every vanilla ore feature, so a cave has no ore in its walls. Caves are for the
 // deep deposits (galena, kimberlite, azurite, cinnabar, limonite, beryl...) and for structures: YUNG's
-// Better Mineshafts and Dungeons, Stoneholm's underground villages, Cataclysm's Ancient Factory and
+// Better Mineshafts and Dungeons, Cataclysm's Ancient Factory and
 // abandoned ruins. This script makes their chests pay in ore: every underground chest gets an extra
 // pool of clusters (the same items the deposits drop), coal, and now and then a prospector's pick, plus
 // a smaller pool of supplies (torches, rope, rails, bread, powder) so a chest is never only ore. The
@@ -66,11 +66,6 @@ const CAVE_CHESTS = {
   'betterdungeons:zombie_dungeon/chests/tombstone': [1, 2],
   'betterdungeons:small_dungeon/chests/loot_piles': [0, 1],
   'betterdungeons:spider_dungeon/chests/egg_room': [1, 2],
-  'stoneholm:miner': [2, 4],
-  'stoneholm:armorer': [1, 2],
-  'stoneholm:weaponsmith': [1, 2],
-  'stoneholm:crypt': [1, 2],
-  'stoneholm:forbidden_knowledge': [1, 2],
   'cataclysm:chests/abandoned': [1, 2],
   'cataclysm:chests/abandoned_treasure': [2, 3],
 }

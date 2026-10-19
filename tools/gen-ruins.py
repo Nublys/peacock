@@ -413,10 +413,11 @@ def main() -> None:
             base = {"large": 1, "medium": 4, "small": 15}[size]
             set_entries.append({"structure": sid, "weight": base * mult})
 
-    # the village structure set: ruins only, kept clear of the capital
+    # the village structure set: ruins only, kept 14 chunks clear of the capital (it reaches ~7 chunks from its centre,
+    # plus the wall; 6 let a ruin run into it — village review, 2026-10-19)
     ctov_set = json.loads(z.read("data/minecraft/worldgen/structure_set/village.json"))
     placement = ctov_set["placement"]
-    placement["exclusion_zone"] = {"other_set": "peacock:capital", "chunk_count": 6}
+    placement["exclusion_zone"] = {"other_set": "peacock:capital", "chunk_count": 14}
     write_json("data/minecraft/worldgen/structure_set/village.json",
                {"structures": set_entries, "placement": placement})
 

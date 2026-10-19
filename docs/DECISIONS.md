@@ -220,7 +220,7 @@ Why things are the way they are. Add an entry when a choice would surprise someo
 - Geolosys removes every vanilla ore feature in every dimension (`remove_vanilla_ores` biome modifier on
   `#geolosys:all_dimensions`), so caves had nothing in their walls. Added **YUNG's Better Mineshafts** and
   **Better Dungeons** (Terralith-aware biome tags) for places to find, and `kubejs/server_scripts/cave_loot.js`
-  gives every underground chest table — vanilla mineshaft/dungeon/stronghold/ancient city, YUNG's, Stoneholm,
+  gives every underground chest table — vanilla mineshaft/dungeon/stronghold/ancient city, YUNG's,
   Cataclysm ruins — a pool of Geolosys clusters, coal, lapis, redstone, gems and the odd prospector's pick,
   rolled 1–4 times by depth. Switch `caveLoot`.
 - Geolosys compat flags were on for mods we do not have: platinum dropped **only Osmium** (Mekanism) and
@@ -737,3 +737,21 @@ their first real test.
 - The reroll also gained a safety net: before rerolling, it locates the capital (one concentric-ring position inside
   the spawn area — an already-generated chunk, so cheap). If the capital exists but spawn is not in it, spawn is
   moved there and the wall is built 30 s later, instead of deleting a world that has its capital.
+
+## Village review: wider gaps round the capital, no towers beside it, Stoneholm removed (2026-10-19)
+A pass over every structure set in the pack against the dead-world plan (Aaron approved all of it).
+- **Ruins keep 14 chunks from the capital** (was 6). The capital, Terralith's size-7 castle town, reaches about
+  7 chunks from its centre plus the 6-block wall, so a ruin starting 6 chunks out could run into the town.
+- **The pack's nature pieces** (fallen logs, boulders, the woodcutter's rest; spacing 7) keep 10 chunks from the
+  capital. They had no gap and would have landed in its streets.
+- **No Village Recruits tower beside the capital.** The tower set's one exclusion slot is used on the ruins, so it
+  cannot also avoid the capital; on roughly one seed in ten a tower could generate within a few chunks of the
+  walls (the spawn keep-out stops it founding a town, but the building would stand). `capital_reroll.js` now also
+  rerolls a brand-new world when the tower set's placement maths puts any tower chunk within 9 chunks of the
+  capital's centre — arithmetic only, nothing generated. Console: `[peacock] reroll: a Village Recruits tower can
+  generate within 9 chunks of the capital …`. About 10% more rerolls.
+- **Stoneholm removed.** Its underground and underwater villages were living villages with trading villagers,
+  against the rule that only the capital and the new towns are alive, and it sent its own welcome message on
+  join. Its chest tables are gone from `cave_loot.js`, `journals.js` and `rumour_maps.js`, and from the Almanac.
+- Noted, unchanged: vanilla's and CTOV's pillager outposts both generate, so outposts are roughly twice as common
+  as vanilla. That suits a world the pillagers won.

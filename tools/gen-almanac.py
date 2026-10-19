@@ -247,7 +247,7 @@ ENTRIES = {
             txt("Tectonic and Terralith shape the terrain: real mountain ranges, deep valleys, long rivers, high plateaus. Biomes O' Plenty fills them. Distant Horizons shows the far side of the valley from your door.",
                 "The capital sits in a lowland. Mountains are where the zinc is; dry country is where the gold is."),
             txt("Rivers and coasts matter: ships (Eureka) and wagons are how goods move before rails exist. Build towns where water and road meet.",
-                "Structory and Stoneholm scatter ruins and underground villages; Create Structures leave old workshops with parts in them. Pirates hold the coasts."),
+                "Structory scatters ruins; Create Structures leave old workshops with parts in them. Pirates hold the coasts."),
             txt(B("Nature's Compass") + " finds a biome by name: the way to the nearest snowy peak, savanna or desert. It is how you find the places bosses live.",
                 "Craft one before the first long trip."),
             craft("naturescompass:natures_compass", "Right-click to open the biome list, pick one, follow the needle. It cannot find structures; that is what rumours and maps are for."),
@@ -298,7 +298,7 @@ ENTRIES = {
         ("caving", "What Caves Are For", "minecraft:torch", [
             txt("Caves have " + B("no ore in the walls") + ": Geolosys took every vanilla vein. So why go down? Two reasons.",
                 "The " + B("deep deposits") + " only exist there: galena, azurite, cinnabar, kimberlite, beryl, limonite, anthracite. Their samples sit on cave floors the way surface samples sit on grass."),
-            txt("And the " + B("places") + ": mineshafts and dungeons (YUNG's, rebuilt for every biome), Stoneholm's underground villages, Cataclysm's ruins and its Ancient Factory.",
+            txt("And the " + B("places") + ": mineshafts and dungeons (YUNG's, rebuilt for every biome), Cataclysm's ruins and its Ancient Factory.",
                 "Every chest down there carries ore: clusters of iron, copper, zinc, gold and the rarer metals, coal, lapis, redstone, and sometimes a prospector's pick. The deeper the place, the more it pays."),
             txt("Rumour maps to the deeper bosses turn up in the same chests. A mineshaft is a good first expedition: wood, rails, chests, and the way to the deposits below.",
                 "Bring a bed, torches and a dog. Mobs are smarter here than you remember."),
@@ -660,7 +660,7 @@ ENTRIES = {
         ("world", "World", "minecraft:grass_block", [
             txt(B("Tectonic, Terralith, Biomes O' Plenty") + " shape and fill the land. " + B("Incendium") + " is the Nether, " + B("Nullscape") + " the End. " + B("Serene Seasons") + " runs the year, " + B("Cold Sweat") + " the temperature, " + B("Enhanced Celestials") + " the moons.",
                 B("Geolosys") + " places ore in regional deposits. " + B("Paxi") + " loads the pack's own datapack over everything else."),
-            txt(B("Distant Horizons") + " draws the far terrain. " + B("ChoiceTheorem's Overhauled Village") + " builds the villages; " + B("Stoneholm") + " the underground ones; " + B("YUNG's") + " mineshafts, dungeons and API; " + B("Structory") + " ruins; " + B("Create Structures") + " old workshops.",
+            txt(B("Distant Horizons") + " draws the far terrain. " + B("ChoiceTheorem's Overhauled Village") + " builds the villages (every one a ruin now); " + B("YUNG's") + " mineshafts, dungeons and API; " + B("Structory") + " ruins; " + B("Create Structures") + " old workshops.",
                 B("Village Spawn Point") + " puts everyone in the capital."),
         ]),
         ("machines", "Machines & Logistics", "create:cogwheel", [

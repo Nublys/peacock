@@ -109,7 +109,7 @@ depot outside a village, open an outpost chest.
 - Cross-mod recipes: wagons, canteens, guard/recruit gear, troughs, oil from FD crops,
   rail iron, cannon parts via press
 - Bountiful pools, Caravans & Convoys trades, villager trades, loot tables (Create ruins,
-  fortresses, Stoneholm, villages) on one emerald/Create economy
+  fortresses, villages) on one emerald/Create economy
 - EMI tab grouping, tooltips on gated items
 - Multiplayer economy: Trading Floor depots are **stage-gated and town-bound** (recipe needs a
   Blueprint; placement checked for a bell + beds within range via KubeJS), so the

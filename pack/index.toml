@@ -333,7 +333,7 @@ hash = "3b6236845f6a5ff8804487b63b0d74305b91316dc9a008362838607b0be3bd8e"
 
 [[files]]
 file = "config/paxi/datapacks/peacock-ruins.zip"
-hash = "e441dd999b49af134df2b408bd2d9e9d909aa5a69d7118d0d0a01a1e2a344193"
+hash = "7387a0cf3eaa5d9257b17f906b4af5e87dd85841334389691a1cabe9053a387e"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/animania/tags/worldgen/biome/amphibian_habitats.json"
@@ -945,7 +945,7 @@ hash = "d68497c7cbc6b884293576a341ccba3a039d927e665603288c5e9d4eb1d411f2"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/peacock/worldgen/structure_set/nature.json"
-hash = "1b40f214fad732e34aaf04a50d85b13c89dfcb7b08d77bdf83695f7b3b038a3b"
+hash = "6e60f8fa3718639f0caeb73cf29635c282f66ad11bb6c58f9b48e2056506e679"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/peacock/worldgen/structure_set/rust_belt.json"
@@ -1108,10 +1108,6 @@ file = "config/terrablender.toml"
 hash = "c73292a81a8409d74edb12b0bb9226bda03f39e11afc8abfe6bff52cc30ef480"
 
 [[files]]
-file = "config/underground_village/common.json5"
-hash = "0dda603d61b039d6eef9b75283bcf9990895f248faaa3628cde3431aae39ed4b"
-
-[[files]]
 file = "config/valkyrienskies/valkyrienskies-client.toml"
 hash = "f002bcce8d27856892757ab4b85fcc6180d198cc7da6304a26dae32effdd5a6a"
 
@@ -1266,7 +1262,7 @@ hash = "3124630fabe5d255e997dfb4b00c9a823506380dec19fee7e23404fab6f2fa4d"
 
 [[files]]
 file = "kubejs/server_scripts/capital_reroll.js"
-hash = "1101b41b4c17711e6124a19362e9bd3341d99e85b60c9e0dfe6dbd112ed8683e"
+hash = "20a29824d1c11e21d6cbabba6a63734b00442de20e714ab01a29a23cc1d06bb1"
 
 [[files]]
 file = "kubejs/server_scripts/capital_wall.js"
@@ -1274,7 +1270,7 @@ hash = "97fe3ee95e26a26f97eb2c194169e5591c6c5fdb724b8ad7f69bf98a865c9322"
 
 [[files]]
 file = "kubejs/server_scripts/cave_loot.js"
-hash = "03aa157f43fb12a09129cb57ffe9c6eb1b82208fdd0d5c72c63d5b0d4000624f"
+hash = "bc99db5246b2b571d6a06b00867955f1296966e1dea6dadc256336e9e6cc36aa"
 
 [[files]]
 file = "kubejs/server_scripts/fire_drill_recipe.js"
@@ -1286,7 +1282,7 @@ hash = "437073ce1974cd48925c985d6ce079c226555a12e6437ad460b7b6f7ef2fd62c"
 
 [[files]]
 file = "kubejs/server_scripts/journals.js"
-hash = "9272595c2a161681619923c44d3275fe7d52945a5c4376435502b560cf5086aa"
+hash = "e8dc51f1aa3cd76659f0874cd0eea538d75c805fb7e88778e6f1e6659afee75c"
 
 [[files]]
 file = "kubejs/server_scripts/no_vr_manual.js"
@@ -1298,7 +1294,7 @@ hash = "f080acf86837aa66c9bc9ead68ef864af9b88aafe9769e6fc0f81f25af5cbe04"
 
 [[files]]
 file = "kubejs/server_scripts/rumour_maps.js"
-hash = "df89ae7d310496a4be9e1bc5dbd945bf65aa24347650efbe46c9e2549f5ca889"
+hash = "c251b28fd2eb8e4674a0f8975f847d838678d7c2f66a2a5492f8dfc98afea4b7"
 
 [[files]]
 file = "kubejs/server_scripts/sleep_afk.js"
@@ -2138,11 +2134,6 @@ hash = "360e8717e48ace854762aa02e2597a0c9fc9e1d443b665aae40acd047f83f692"
 metafile = true
 
 [[files]]
-file = "mods/underground-village-stoneholm.pw.toml"
-hash = "7b11f0b577ac00d30ca3d3271eb349e820c2857957423b865e6c593ec1d4babf"
-metafile = true
-
-[[files]]
 file = "mods/valkyrien-pirates.pw.toml"
 hash = "ff3a138655404bb220e1bc12b8f4192e468dccc371ad9e475969a070cdb7e561"
 metafile = true
@@ -2390,7 +2381,7 @@ hash = "3425a682ef7b50bc90018492db9bd806e0aed3ecdb39c9f8e24ca77cd4fd24d6"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/land/terrain.json"
-hash = "f243c8f1f5670ef5a1b03e1148959a6b83b87b76985c5ad9a8a11cc2ffdc74d4"
+hash = "199f5e513509e41a8fc3f18aa3673514590e8746d13eca5dbb8f72854841e72c"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/land/warmth.json"
@@ -2414,11 +2405,11 @@ hash = "eb026188e2e998793291ff6be2818eaf964a908f06b22b18a82494c1e81a3817"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/mods/world.json"
-hash = "f3380ce70f75e70ca68cac9804da257f8554c6a61529652f08b373c56facabd2"
+hash = "3e31dc90e8ab963c18dc09973f1b20bfdd59cff7909b96181061895a738f1c88"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/ore/caving.json"
-hash = "ebb4da1a915a3c296ddb6db810f731ea692d481612c5e09d7243d55cf32b8438"
+hash = "f01464b2752a4b1957b58efd2abbfc2ccae624dfe7b021c5630de64c209e22ad"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/ore/deposits.json"
