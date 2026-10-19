@@ -95,8 +95,8 @@ Still to do (needs playtest data or Phase 3 scripting):
 
 ## Phase 3 — Glue (KubeJS)  🟡 started 2026-10-17
 Shipped (`pack/kubejs/server_scripts/`, switches in `pack/kubejs/config/peacock.json`):
-- `thirst_off.js` — canteens, purifier, rain collector, water bottles and every TAN/TAN+ juice: recipes
-  removed, hidden from EMI. Temperature items untouched.
+- ~~`thirst_off.js`~~ — gone with Tough As Nails (2026-10-18). Temperature is Cold Sweat now (no thirst at all);
+  `fire_drill.js` (startup) + `fire_drill_recipe.js` add the three-stick fire drill.
 - `trading_depot_town.js` — a trading depot only places with a bell and ≥4 beds within 32 blocks
   (counted from block entities in the loaded chunks; creative bypasses). Switch `depotNeedsTown`.
 - `rumour_maps.js` — exploration maps to boss structures (Paxi tags `peacock:rumour_*`) in outpost,

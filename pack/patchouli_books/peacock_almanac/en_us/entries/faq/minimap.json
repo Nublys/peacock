@@ -2,7 +2,7 @@
   "name": "...see a minimap?",
   "icon": "map_atlases:atlas",
   "category": "patchouli:faq",
-  "sortnum": 3,
+  "sortnum": 4,
   "pages": [
     {
       "type": "patchouli:text",

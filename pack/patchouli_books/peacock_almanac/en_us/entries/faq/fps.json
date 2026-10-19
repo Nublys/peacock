@@ -2,7 +2,7 @@
   "name": "...get more frames?",
   "icon": "minecraft:redstone_torch",
   "category": "patchouli:faq",
-  "sortnum": 7,
+  "sortnum": 8,
   "pages": [
     {
       "type": "patchouli:text",

@@ -2,7 +2,7 @@
   "name": "...craft this?",
   "icon": "create:brass_casing",
   "category": "patchouli:faq",
-  "sortnum": 0,
+  "sortnum": 1,
   "pages": [
     {
       "type": "patchouli:text",

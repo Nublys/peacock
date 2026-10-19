@@ -10,7 +10,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Mutant Snow Golem$() (snow) and the $(bold)Mutant Enderman$() hold nothing; they are simply dangerous.$(br)$(bold)Torte$() (Nether) holds $(bold)Advanced cooking$(): Slice & Dice automation."
+      "text": "$(bold)Mutant Snow Golem$() (snow) holds $(bold)Climate control$(): the hearth, boiler and icebox. Fires, furnaces and clothing stay free.$(br)$(bold)Mutant Enderman$() holds nothing; it is simply dangerous.$(br)$(bold)Torte$() (Nether) holds $(bold)Advanced cooking$(): Slice & Dice automation."
     },
     {
       "type": "patchouli:spotlight",

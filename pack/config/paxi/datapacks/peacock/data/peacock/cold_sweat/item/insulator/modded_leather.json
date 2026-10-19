@@ -1,0 +1,10 @@
+{
+  "type": "item",
+  "item": {
+    "items": {
+      "require": ["#forge:leather"],
+      "exclude": ["minecraft:leather", "cold_sweat:hoglin_hide"]
+    }
+  },
+  "insulation": { "cold": 1, "heat": 1 }
+}

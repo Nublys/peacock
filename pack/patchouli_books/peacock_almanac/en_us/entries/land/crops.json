@@ -2,7 +2,7 @@
   "name": "What Grows When",
   "icon": "minecraft:wheat",
   "category": "patchouli:land",
-  "sortnum": 1,
+  "sortnum": 2,
   "pages": [
     {
       "type": "patchouli:text",

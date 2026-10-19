@@ -2,7 +2,7 @@
   "name": "...hire this recruit?",
   "icon": "minecraft:emerald",
   "category": "patchouli:faq",
-  "sortnum": 5,
+  "sortnum": 6,
   "pages": [
     {
       "type": "patchouli:text",

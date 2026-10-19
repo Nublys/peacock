@@ -638,3 +638,32 @@ builders, granary, sleep, mines and seams), Merchants & Contracts (standing, bou
 from the map, Offers/Stock/Goods tabs, reserves, armoury, troop convoys, four towns per faction) — written from the
 addon's own wiki text and this pack's settings. The `I` key (the addon's wiki screen) still works but is no longer
 advertised; the README key table and the Almanac's Keys page dropped it.
+
+## Temperature is back, as Cold Sweat; a fire drill; the capital only in temperate country (2026-10-18)
+Aaron: "Add thermal stuff back, not the thirst. But add ways for the player to warm, it seemed like fires or
+furnaces did not help." Tough As Nails (removed earlier the same day for "the freezing") counts campfires and
+furnaces only inside an enclosed room as far as we could tell, so standing beside a campfire in the open did
+nothing. **Cold Sweat 2.4.4** replaces it: proximity heat anywhere (within ~7 blocks, falling off with distance,
+weakened by walls, two campfires at most stacking), the hearth/boiler/icebox for whole rooms, insulation sewn into
+armour, waterskins, Serene Seasons integration (±15 °C summer/winter by default), and no thirst system at all.
+- Its defaults warm you near fire, campfires, lava, magma and Create's blaze burner, **not furnaces**. The pack
+  datapack adds lit furnaces, smokers, blast furnaces and Farmer's Delight's stove (`data/peacock/cold_sweat/
+  block/block_temp/`), at Cold Sweat's own documented furnace value (15 °F, range 7, max 40 °F).
+- "Make sure the wool and leather to insulate work with modded gear": Cold Sweat insulates any item that goes in
+  an armour slot (`Equipable` + armour slot, minus a blacklist that is empty), with fixed 4/6/5/4 slots per piece
+  whatever its protection, so every mod's armour takes insulation. Ingredients are leather, all `#minecraft:wool`,
+  rabbit hide and its own furs; `item/insulator/modded_leather.json` adds every other `#forge:leather` item at
+  leather's value.
+- **Climate control** is back on the ladder (14 rungs): the Mutant Snow Golem's Blueprint gates the hearth, boiler
+  and icebox. Campfires, furnaces, the sewing table, insulation, waterskins and the thermometer are always free.
+- **Fire drill** (`peacock:fire_drill`, KubeJS): three sticks on a diagonal; hold right-click on a block for two
+  seconds to light an unlit campfire or candle (not furnaces, lamps or ores, which also have a `lit` property;
+  not waterlogged ones) or put a fire on the face aimed at; twelve uses. Chosen over Tools for Survival (a small
+  mod that also adds sickles, javelins and plant fibre) to add nothing else.
+- **Capital biomes**: temperature 0.5–0.8 and low ground only — plains, sunflower plains, forest, flower forest,
+  birch and old-growth birch forest; Terralith temperate highlands, lavender forest/valley, blooming valley, sakura
+  grove/valley, moonlight valley. Out: savanna and shrublands (hot, dry), taiga, birch taiga, steppe, forested
+  highlands, valley clearing, lush valley (cool), meadow, cherry grove, blooming plateau (high, and Cold Sweat
+  cools with altitude). A narrower list means more seeds with no capital; the seed-reroll proposal is still open.
+- Almanac: a Staying Warm entry (Land, Seasons & Sky), a "...stop freezing?" FAQ, the climate rung back on the
+  Tier 1, charter and What Is Locked pages.

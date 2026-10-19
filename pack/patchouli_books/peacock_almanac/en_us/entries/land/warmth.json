@@ -1,0 +1,43 @@
+{
+  "name": "Staying Warm",
+  "icon": "minecraft:campfire",
+  "category": "patchouli:land",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Cold Sweat tracks two temperatures: the $(bold)air$() where you stand and your $(bold)body$(). The air follows the biome, the season, the hour, altitude, rain and shade. Your body follows the air slowly; the gauge by your hotbar shows which way it is going.$(br2)There is no thirst."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Far enough either way and it hurts: the cold slows and freezes you, heat wears you down. New players get a grace period. Winter nights, rain and high ground are the danger.$(br2)The capital sits in mild country: comfortable in spring and autumn, a cold winter, a warm summer."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Heat:$() a lit campfire, fire, furnace, smoker, blast furnace or stove warms you within about seven blocks, more the closer you stand. Two campfires is the most that adds up. Walls between you and the fire weaken it. Lava and magma are hot; ice cools.$(br2)A roof, four walls and a fire is a winter night survived."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "peacock:fire_drill",
+      "text": "The fire drill: three sticks. Hold right-click on a block for two seconds to light a campfire or candle, or start a fire. Twelve uses."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "cold_sweat:sewing_table",
+      "text": "Insulates any armour piece, from any mod. Wool keeps out cold, rabbit hide heat, leather a little of both. Shears take it back off."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "cold_sweat:waterskin",
+      "recipe2": "cold_sweat:thermometer",
+      "text": "Warmed at a campfire: a hot-water bottle. The thermometer reads the air."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "cold_sweat:hearth",
+      "text": "The hearth heats a whole house: fuel it and fit a smokestack; pipes carry the air further. The boiler warms a room, the icebox cools one. All three are $(bold)Climate control$(), held by the Mutant Snow Golem.",
+      "link_recipe": false,
+      "title": "Climate control"
+    }
+  ]
+}

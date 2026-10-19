@@ -1,0 +1,11 @@
+{
+  "required_mods": ["farmersdelight"],
+  "block": {
+    "blocks": ["farmersdelight:stove"],
+    "state": { "lit": true }
+  },
+  "temperature": 15,
+  "range": 7,
+  "max_effect": 40,
+  "units": "f"
+}

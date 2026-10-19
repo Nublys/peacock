@@ -1,0 +1,12 @@
+{
+  "name": "...stop freezing?",
+  "icon": "minecraft:campfire",
+  "category": "patchouli:faq",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Stand near a lit campfire, furnace or fire, under a roof. Sew wool into your armour at a sewing table. Warm a waterskin at the fire and keep it in your hotbar. Stay off the peaks and out of the rain at night. See $(l:patchouli:land/warmth)Staying Warm$()."
+    }
+  ]
+}

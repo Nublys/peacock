@@ -2,7 +2,7 @@
   "name": "...find my things after dying?",
   "icon": "minecraft:skeleton_skull",
   "category": "patchouli:faq",
-  "sortnum": 8,
+  "sortnum": 9,
   "pages": [
     {
       "type": "patchouli:text",

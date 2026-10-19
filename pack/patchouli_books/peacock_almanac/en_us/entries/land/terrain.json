@@ -2,7 +2,7 @@
   "name": "The Land Itself",
   "icon": "minecraft:grass_block",
   "category": "patchouli:land",
-  "sortnum": 3,
+  "sortnum": 4,
   "pages": [
     {
       "type": "patchouli:text",

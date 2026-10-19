@@ -154,11 +154,11 @@ ENTRIES = {
         ("spawn", "Where You Woke Up", "minecraft:bell", [
             txt("Everyone spawns in the same village: the " + B("capital") + ", the last old town standing — a walled castle town with a keep. It has a bell, villagers with trades, beds and bounty boards. It is the first market and the first thing raiders come for.",
                 "Claim a bed early. There is no fast travel; the way home matters. Every other old stone village is a ruin (" + L("story/dead_towns", "The Dead Towns") + ")."),
-            txt(B("Day one checklist:") + "$(br)- Wood, a crafting table, a bed in the capital$(br)- Check the season (sky colour, or craft a calendar)$(br)- Food: villager farms are fair game, replant what you take$(br)- A campfire before nightfall; the nights are long in winter"),
+            txt(B("Day one checklist:") + "$(br)- Wood, a crafting table, a bed in the capital$(br)- Check the season (sky colour, or craft a calendar)$(br)- Food: villager farms are fair game, replant what you take$(br)- A campfire before nightfall: three sticks make a " + L("land/warmth", "fire drill") + ""),
             txt(B("First night:") + " stay inside the wall. Mobs here are tougher and smarter than you remember, and the village guards will not chase them for you.",
                 "Mark the capital on your " + L("tools/atlas", "atlas") + " before you leave it. The capital will grow as the server does; nothing you build there is wasted."),
             txt(B("Dying") + " leaves a corpse holding everything you carried. Walk back and right-click it. Nothing despawns, but somebody else can loot it, so tell a friend where you fell.",
-                "Hunger is vanilla plus AppleSkin (hover food to see what it restores). There is no thirst and no temperature: the seasons are felt in the fields, not on your skin."),
+                "Hunger is vanilla plus AppleSkin (hover food to see what it restores). There is no thirst. The cold is real in winter: see " + L("land/warmth", "Staying Warm") + "."),
         ]),
         ("food", "Food & Cooking", "farmersdelight:cooking_pot", [
             txt("Farmer's Delight runs the kitchen. Raw food still works, but real meals feed you longer, give " + B("Nourishment") + " (slow natural regen) and " + B("Comfort") + " (faster healing).",
@@ -215,6 +215,18 @@ ENTRIES = {
             craft("sereneseasons:season_sensor", "A season sensor emits redstone by season: greenhouse shutters, a bell that rings on the first day of spring."),
             txt(B("Spring:") + " thaw, planting, breeding.$(br)" + B("Summer:") + " long days, heat, the main harvest.$(br)" + B("Autumn:") + " second harvest, pumpkins, storing.$(br)" + B("Winter:") + " snow, cold, dark early; berries and whatever is under glass.",
                 "Animals, fish and crops all follow the year. Plan around it, or fight it with glass."),
+        ]),
+        ("warmth", "Staying Warm", "minecraft:campfire", [
+            txt("Cold Sweat tracks two temperatures: the " + B("air") + " where you stand and your " + B("body") + ". The air follows the biome, the season, the hour, altitude, rain and shade. Your body follows the air slowly; the gauge by your hotbar shows which way it is going.",
+                "There is no thirst."),
+            txt("Far enough either way and it hurts: the cold slows and freezes you, heat wears you down. New players get a grace period. Winter nights, rain and high ground are the danger.",
+                "The capital sits in mild country: comfortable in spring and autumn, a cold winter, a warm summer."),
+            txt(B("Heat:") + " a lit campfire, fire, furnace, smoker, blast furnace or stove warms you within about seven blocks, more the closer you stand. Two campfires is the most that adds up. Walls between you and the fire weaken it. Lava and magma are hot; ice cools.",
+                "A roof, four walls and a fire is a winter night survived."),
+            craft("peacock:fire_drill", "The fire drill: three sticks. Hold right-click on a block for two seconds to light a campfire or candle, or start a fire. Twelve uses."),
+            craft("cold_sweat:sewing_table", "Insulates any armour piece, from any mod. Wool keeps out cold, rabbit hide heat, leather a little of both. Shears take it back off."),
+            craft("cold_sweat:waterskin", "Warmed at a campfire: a hot-water bottle. The thermometer reads the air.", recipe2="cold_sweat:thermometer"),
+            spot("cold_sweat:hearth", "The hearth heats a whole house: fuel it and fit a smokestack; pipes carry the air further. The boiler warms a room, the icebox cools one. All three are " + B("Climate control") + ", held by the Mutant Snow Golem.", title="Climate control"),
         ]),
         ("crops", "What Grows When", "minecraft:wheat", [
             txt("Crops " + B("do not grow out of season") + ". Hover seeds for their fertile seasons.",
@@ -489,7 +501,7 @@ ENTRIES = {
         ("tier1", "Tier 1: Iron and a Dog", "minecraft:iron_ingot", [
             txt("Beatable alone in iron armour with a dog. These are the dark age's fallout, not its masters. They wander near home and you will meet them whether you look or not.",
                 B("Mutant Zombie") + " holds " + B("Brass") + ".$(br)" + B("Mutant Skeleton") + " holds " + B("Recruiting") + ".$(br)" + B("Mutant Creeper") + " holds " + B("Blasting") + "."),
-            txt(B("Mutant Snow Golem") + " (snow) and the " + B("Mutant Enderman") + " hold nothing; they are simply dangerous.$(br)" + B("Torte") + " (Nether) holds " + B("Advanced cooking") + ": Slice & Dice automation."),
+            txt(B("Mutant Snow Golem") + " (snow) holds " + B("Climate control") + ": the hearth, boiler and icebox. Fires, furnaces and clothing stay free.$(br)" + B("Mutant Enderman") + " holds nothing; it is simply dangerous.$(br)" + B("Torte") + " (Nether) holds " + B("Advanced cooking") + ": Slice & Dice automation."),
             spot("create:brass_ingot", "Brass is the hinge of the whole tree: mechanical crafters, deployers, arms, trains, the smart funnels and filters that make a factory think. Zinc plus copper in a mixer over a blaze burner. The dead took the knowledge; the Mutant Zombie carries it.", title="Why brass"),
             txt(B("Blasting") + " covers TNT, gunpowder recipes, the blaze burner and musket cartridges. " + B("Recruiting") + " is hiring from Village Recruits; guards stay free.",
                 "A fresh server should clear Tier 1 in its first week."),
@@ -520,7 +532,7 @@ ENTRIES = {
                 "A charter is how a new player on an old server catches up, and how a stuck server routes around a boss nobody can beat yet."),
             craft("peacock:charter/brass", "Brass: zinc is the key. Tier 1."),
             craft("peacock:charter/recruiting", "Recruiting: an iron sword. Tier 1.", recipe2="peacock:charter/blasting"),
-            craft("peacock:charter/cooking", "Advanced cooking: a cooking pot. Tier 1."),
+            craft("peacock:charter/climate", "Climate control: snow. Tier 1.", recipe2="peacock:charter/cooking"),
             craft("peacock:charter/trains", "Trains: a rail. Tier 2.", recipe2="peacock:charter/ships"),
             craft("peacock:charter/trade", "Trading Floor: a lectern. Tier 2.", recipe2="peacock:charter/diesel"),
             craft("peacock:charter/precision", "Precision: a cogwheel. Tier 3.", recipe2="peacock:charter/netherite"),
@@ -530,7 +542,7 @@ ENTRIES = {
         ("what_is_locked", "What Exactly Is Locked", "minecraft:iron_door", [
             txt("Only " + B("crafting-table recipes") + " can be locked, so the rule is: the things built " + I("from") + " a material are locked, the material is not. Anyone can mix brass in a basin; nobody without the Blueprint can make a casing or a funnel from it.",
                 "Everything whose recipe is locked is also locked to " + B("place") + ": a brass machine handed to you will not go down until you have learned it."),
-            txt(B("Brass:") + " every recipe with brass in it or brass out of it, and the mechanical crafter.$(br)" + B("Blasting:") + " everything made with gunpowder, TNT, the empty blaze burner, muskets and cartridges, powder charges.$(br)" + B("Climate:") + " thermoregulator, fans, air conditioners.$(br)" + B("Cooking:") + " Slice & Dice slicer and sprinkler."),
+            txt(B("Brass:") + " every recipe with brass in it or brass out of it, and the mechanical crafter.$(br)" + B("Blasting:") + " everything made with gunpowder, TNT, the empty blaze burner, muskets and cartridges, powder charges.$(br)" + B("Climate:") + " the hearth, boiler and icebox.$(br)" + B("Cooking:") + " Slice & Dice slicer and sprinkler."),
             txt(B("Trains:") + " track, stations, controls, schedules, signals, train doors, railway casing, all of Steam 'n' Rails.$(br)" + B("Ships:") + " all of Eureka: helms, floaters, ballast, balloons, engines.$(br)" + B("Trading Floor:") + " the depot.$(br)" + B("Diesel:") + " all of Create Diesel Generators."),
             txt(B("Precision:") + " everything made with a precision mechanism: arms, speed controllers, sequenced gearshifts, extendo grips.$(br)" + B("Netherite:") + " ingots and anything crafted from them (smithing is not locked).$(br)" + B("Cannons:") + " all of Create Big Cannons.$(br)" + B("Arcane:") + " Enchantment Industry and Dragons Plus.$(br)" + B("Ender:") + " ender chests, portable interfaces, item vaults, smart chutes, stockpile switches."),
             txt(B("Recruiting") + " locks the act of hiring, not an item: emeralds on a recruit do nothing until you have learned it. Guards and your own dogs are never locked.",
@@ -594,7 +606,7 @@ ENTRIES = {
         ]),
         ("what_we_dont_do", "What We Do Not Do", "minecraft:barrier", [
             txt(B("No minimap.") + " The atlas is the map.$(br)" + B("No fast travel.") + " Rails, ships, wagons and roads.$(br)" + B("No trading halls.") + " Villagers trade well where they live well.$(br)" + B("No block griefing from cannons.") + " They hurt mobs and players; the land stays.",
-                B("No thirst, no temperature.") + " The seasons are the survival layer: what grows, and when."),
+                B("No thirst.") + " The seasons and the cold are the survival layer: what grows when, and a fire for winter nights."),
             txt(B("Sleep is a vote:") + " when half the players online are in bed, the night skips; the action bar counts who is sleeping. " + B("Away:") + " five minutes without moving greys your name in the tab list with an [AFK] tag; move or talk and it clears.",
                 B("Tab") + " shows the server's TPS and everyone's ping. Twenty is healthy; if it sits below fifteen while nobody is doing anything unusual, tell the admin what everyone was doing."),
             txt(B("Towns are capped") + " at about two dozen villagers; breeding stops when a town is full. Found another.$(br)" + B("Depots need towns:") + " a bell and four beds within 32 blocks.$(br)" + B("Technology is personal:") + " your Blueprints are yours. Trade them.",
@@ -645,7 +657,7 @@ ENTRIES = {
     # ===================================================================================== mods
     "mods": [
         ("world", "World", "minecraft:grass_block", [
-            txt(B("Tectonic, Terralith, Biomes O' Plenty") + " shape and fill the land. " + B("Incendium") + " is the Nether, " + B("Nullscape") + " the End. " + B("Serene Seasons") + " runs the year, " + B("Tough As Nails") + " (+TAN+) the temperature, " + B("Enhanced Celestials") + " the moons.",
+            txt(B("Tectonic, Terralith, Biomes O' Plenty") + " shape and fill the land. " + B("Incendium") + " is the Nether, " + B("Nullscape") + " the End. " + B("Serene Seasons") + " runs the year, " + B("Cold Sweat") + " the temperature, " + B("Enhanced Celestials") + " the moons.",
                 B("Geolosys") + " places ore in regional deposits. " + B("Paxi") + " loads the pack's own datapack over everything else."),
             txt(B("Distant Horizons") + " draws the far terrain. " + B("ChoiceTheorem's Overhauled Village") + " builds the villages; " + B("Stoneholm") + " the underground ones; " + B("YUNG's") + " mineshafts, dungeons and API; " + B("Structory") + " ruins; " + B("Create Structures") + " old workshops.",
                 B("Village Spawn Point") + " puts everyone in the capital."),
@@ -673,6 +685,9 @@ ENTRIES = {
     ],
     # ===================================================================================== faq
     "faq": [
+        ("cold", "...stop freezing?", "minecraft:campfire", [
+            txt("Stand near a lit campfire, furnace or fire, under a roof. Sew wool into your armour at a sewing table. Warm a waterskin at the fire and keep it in your hotbar. Stay off the peaks and out of the rain at night. See " + L("land/warmth", "Staying Warm") + "."),
+        ]),
         ("cant_craft", "...craft this?", "create:brass_casing", [
             txt("The recipe shows in EMI but the table gives nothing, or the tooltip is gold: it needs a " + B("Blueprint") + " you have not learned. The tooltip names which, and who holds it. Fight the boss, trade for the sheet, or buy a " + L("tech/charters", "charter") + ".",
                 "Brass itself mixes fine; it is the things made from brass that are locked."),

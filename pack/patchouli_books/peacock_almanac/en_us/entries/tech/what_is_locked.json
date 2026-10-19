@@ -10,7 +10,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Brass:$() every recipe with brass in it or brass out of it, and the mechanical crafter.$(br)$(bold)Blasting:$() everything made with gunpowder, TNT, the empty blaze burner, muskets and cartridges, powder charges.$(br)$(bold)Climate:$() thermoregulator, fans, air conditioners.$(br)$(bold)Cooking:$() Slice & Dice slicer and sprinkler."
+      "text": "$(bold)Brass:$() every recipe with brass in it or brass out of it, and the mechanical crafter.$(br)$(bold)Blasting:$() everything made with gunpowder, TNT, the empty blaze burner, muskets and cartridges, powder charges.$(br)$(bold)Climate:$() the hearth, boiler and icebox.$(br)$(bold)Cooking:$() Slice & Dice slicer and sprinkler."
     },
     {
       "type": "patchouli:text",

@@ -32,6 +32,13 @@ global.LADDER = {
              outputs: ['minecraft:tnt', 'create:empty_blaze_burner', 'musketmod:cartridge', 'musketmod:musket', 'musketmod:pistol', 'musketmod:blunderbuss', 'createbigcannons:powder_charge'] },
     story: 'Powder, fuses, the blaze burner, and the first guns.',
   },
+  climate: {
+    // Cold Sweat's thermal sources (2026-10-18). Campfires, furnaces, the sewing table, insulation, waterskins and
+    // the thermometer are always free: nobody should freeze for want of a Blueprint.
+    name: 'Climate control', tier: 1, bosses: ['mutantmonsters:mutant_snow_golem'], key: 'minecraft:snow_block',
+    gates: { outputs: ['cold_sweat:hearth', 'cold_sweat:boiler', 'cold_sweat:icebox'] },
+    story: 'The hearth that warms a whole house, the boiler, and the icebox. Fires, furnaces and insulation are always free.',
+  },
   cooking: {
     name: 'Advanced cooking', tier: 1, bosses: ['minecraft:skeleton|Torte'], key: 'farmersdelight:cooking_pot',
     gates: { outputs: ['sliceanddice:slicer', 'sliceanddice:sprinkler'] },

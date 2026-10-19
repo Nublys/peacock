@@ -9,5 +9,6 @@
   "bountiful.decree.archivist.name": "Archivist's Records",
   "bountiful.decree.peacock:archivist.name": "Archivist's Records",
   "peacock.join.first": "Year One. The capital still stands. Everything else is the question.",
-  "peacock.join.season": "It is %s. Mind the season."
+  "peacock.join.season": "It is %s. Mind the season.",
+  "item.peacock.fire_drill": "Fire Drill"
 }
