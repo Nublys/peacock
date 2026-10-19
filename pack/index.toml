@@ -480,10 +480,6 @@ file = "config/paxi/datapacks/peacock/data/geolosys/deposits/ore/sphalerite.json
 hash = "a2776f83e6de7d64ea03f62b16a08b6c4714d7ea87fd89561f6d8557731c6a2a"
 
 [[files]]
-file = "config/paxi/datapacks/peacock/data/minecraft/worldgen/structure_set/village.json"
-hash = "72bf98034285d5146ae76b14fdf93fbab97464d75b0e71ada2a30480f507b34a"
-
-[[files]]
 file = "config/paxi/datapacks/peacock/data/minecraft/worldgen/structure_set/villages.json"
 hash = "c0b9e9c962b343621485120d68f08f569dc16ae366e9014a555bd316338bf117"
 
@@ -1270,7 +1266,7 @@ hash = "3124630fabe5d255e997dfb4b00c9a823506380dec19fee7e23404fab6f2fa4d"
 
 [[files]]
 file = "kubejs/server_scripts/capital_reroll.js"
-hash = "9662c9768c438e3566455c778b65be8510134ab43705a377dd69f0625bee12b0"
+hash = "1101b41b4c17711e6124a19362e9bd3341d99e85b60c9e0dfe6dbd112ed8683e"
 
 [[files]]
 file = "kubejs/server_scripts/capital_wall.js"

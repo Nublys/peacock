@@ -142,12 +142,28 @@ def check_advancements() -> None:
             err(f"achievements.js grants peacock:bosses/{bid} but there is no such advancement (run tools/gen-advancements.py)")
 
 
+def check_datapack_overlap() -> None:
+    """The pack datapack (folder) loads AFTER peacock-ruins.zip, so any file both define is taken from the folder.
+    A stale minecraft:village set in the folder silently replaced every ruin with a living CTOV village until
+    2026-10-19. Only pack.mcmeta may appear in both."""
+    import os, zipfile
+    zp = PACK / "config/paxi/datapacks/peacock-ruins.zip"
+    folder = PACK / "config/paxi/datapacks/peacock"
+    if not zp.exists() or not folder.exists():
+        return
+    zn = {n for n in zipfile.ZipFile(zp).namelist() if not n.endswith("/")}
+    fn = {str(p.relative_to(folder)).replace(os.sep, "/") for p in folder.rglob("*") if p.is_file()}
+    for f in sorted((zn & fn) - {"pack.mcmeta"}):
+        err(f"datapack overlap: {f} is in both peacock-ruins.zip and the peacock folder (the folder wins)")
+
+
 def main() -> int:
     print("parsing TOML/JSON …"); parse_all()
     print("checking .pw.toml entries …"); check_pw_tomls()
     print("checking index …"); check_index()
     print("checking KubeJS scripts for Rhino traps …"); check_kubejs()
     print("checking achievements …"); check_advancements()
+    print("checking datapack overlap …"); check_datapack_overlap()
     n_mods = len(list((PACK / "mods").glob("*.pw.toml")))
     if errors:
         print(f"\n{len(errors)} problem(s).")

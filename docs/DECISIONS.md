@@ -722,3 +722,18 @@ Aaron: "a back or hips mod — unequipped tools and weapons go to the back or hi
 (per-UUID in its player tick), so with everyone on the pack, everyone sees everyone's gear. One item at a time;
 position per item or per item type (all swords, all axes) is set in its in-game editor (Mods → Tools On My Back →
 Config), e.g. swords on the belt.
+
+## The ruins never generated: a stale village set won the datapack order (2026-10-19)
+Review before the next playtest. Both pack datapacks defined `data/minecraft/worldgen/structure_set/village.json`:
+`peacock-ruins.zip` (72 ruin structures, kept clear of the capital) and an old copy in the `peacock` folder from
+2026-10-17 listing all 36 CTOV villages as ordinary living villages. Paxi loads the folder after the zip (the
+crash report's datapack list ends `…, peacock-ruins.zip, peacock`), and the later pack wins — so every world so far
+had living CTOV villages and no ruins: the living "normal CTOV village" near the capital, Mindi shot by a pillager,
+no zombie owners or ruin loot. The stale file is deleted (packwiz removes it from servers and clients on the next
+sync) and `validate.py` now fails on any file both packs define except `pack.mcmeta`. Vanilla's own
+`minecraft:villages` set was already handled (overridden to Village Recruits' tower spawner only). The ruins
+structures themselves loaded without errors on every boot; they have simply never been placed before, so tonight is
+their first real test.
+- The reroll also gained a safety net: before rerolling, it locates the capital (one concentric-ring position inside
+  the spawn area — an already-generated chunk, so cheap). If the capital exists but spawn is not in it, spawn is
+  moved there and the wall is built 30 s later, instead of deleting a world that has its capital.

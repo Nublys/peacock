@@ -2,7 +2,8 @@
 //
 // The capital only generates on temperate, low, dry land, and vanilla gives it one candidate position per seed; on
 // many seeds there is simply no capital. Rather than build one by script (far too slow on this host), the server
-// tries another seed: 15 seconds after load, if there is no capital at spawn AND the world is brand new, this writes
+// tries another seed: 15 seconds after load, if there is no capital at spawn or anywhere in reach AND the world is
+// brand new, this writes
 // kubejs/config/peacock-reroll.json and stops the server. peacock-start.sh sees the file, deletes that world folder
 // (only if it holds no player data at all), clears level-seed, and starts again on a fresh random seed.
 //
@@ -37,6 +38,30 @@ function hasCapital(server) {
   return !!server.persistentData.getString('peacock_capital_bb')
 }
 
+// The capital exists but spawn is not in it (Village Spawn Point found nothing once, 2026-10-18 21:37, though it
+// generated). The capital is a one-position concentric-ring structure inside the spawn area, so this locate only
+// checks that one already-generated chunk: cheap, unlike a random-spread search.
+function locateCapital(server) {
+  var level = server.overworld()
+  var Registries = Java.loadClass('net.minecraft.core.registries.Registries')
+  var ResourceLocation = Java.loadClass('net.minecraft.resources.ResourceLocation')
+  var TagKey = Java.loadClass('net.minecraft.tags.TagKey')
+  var BlockPos = Java.loadClass('net.minecraft.core.BlockPos')
+  var tag = TagKey.create(Registries.STRUCTURE, new ResourceLocation('peacock', 'capital'))
+  return level.findNearestMapStructure(tag, new BlockPos(0, 64, 0), 16, false)
+}
+
+function moveSpawnTo(server, pos, log) {
+  var level = server.overworld()
+  var Heightmap = Java.loadClass('net.minecraft.world.level.levelgen.Heightmap$Types')
+  var BlockPos = Java.loadClass('net.minecraft.core.BlockPos')
+  var y = level.getHeight(Heightmap.MOTION_BLOCKING_NO_LEAVES, pos.getX(), pos.getZ())
+  level.setDefaultSpawnPos(new BlockPos(pos.getX(), y, pos.getZ()), 0.0)
+  log('the capital is at ' + pos.getX() + ',' + pos.getZ() + ' but spawn was not in it — spawn moved there; walling it in 30 s')
+  // the wall reads the capital at spawn; give the new spawn chunks time to load first
+  server.scheduleInTicks(600, () => server.runCommandSilent('peacock wall'))
+}
+
 function tries() {
   try { var d = JsonIO.read(COUNT); return d && d.tries ? Number(d.tries) : 0 } catch (e) { return 0 }
 }
@@ -55,6 +80,9 @@ ServerEvents.loaded(event => {
         return
       }
       if (age > NEW_WORLD_TICKS) return                                   // an old world: never touched
+      var found = null
+      try { found = locateCapital(server) } catch (e) { log('locate failed — ' + e) }
+      if (found) { moveSpawnTo(server, found, log); return }
       if (server.persistentData.getBoolean('peacock_had_players')) return
       if (server.players.size() > 0) return
       var n = tries()
