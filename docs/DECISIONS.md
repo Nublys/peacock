@@ -615,3 +615,14 @@ existing installs get it too:
   on the server thread — the watchdog killed the server at 60 s. The founder no longer runs at boot
   (`capitalFound: false`); the same y=0 problem is why vanilla's ring placement never nudges the capital onto
   `preferred_biomes` in this pack (it searches biomes at y=0, which Terralith fills with cave biomes).
+
+## Pirate ships made rare (2026-10-18, spark profile)
+A 74 s spark profile after boot (1 player): **37% of the server thread** was Valkyrien Pirates/VLib turning
+worldgen pirate ships into Valkyrien Skies ships (`StructureTemplateExtKt.placeAsShip` from `vlib$tick`), mostly
+parked waiting for neighbouring chunks to load — one tick took 28 s. Ships spawned every 24 chunks of deep/warm
+ocean, and Distant Horizons' server-side generation runs the full pipeline, so they kept spawning far from anyone.
+The host is a Xeon E5-2690 v2 (2013, 8 threads at 3.0 GHz): main-thread work costs about twice what it would on a
+current desktop. Aaron chose "rare" over removal: the datapack overrides `pirates_eureka:ships` to spacing 96 /
+separation 48 (16× fewer) and `pirates:wrecks` to 80 / 40 (4× fewer; the set includes the friendly raft). The
+`pirates_sails` and `pirates_sky` sets are not overridden: they live in the jar's optional datapacks, which are not
+loaded, and a set naming an unregistered structure would break world loading. Applies to newly generated chunks.

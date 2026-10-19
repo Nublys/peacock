@@ -804,6 +804,14 @@ file = "config/paxi/datapacks/peacock/data/peacock/worldgen/template_pool/war_ca
 hash = "b9dcb578a13c41c95a7e4823ecca2b624b8fcd3cfef81aecbfbf13243b4a5063"
 
 [[files]]
+file = "config/paxi/datapacks/peacock/data/pirates/worldgen/structure_set/wrecks.json"
+hash = "1f1bb31bafab68a01fc4bdb58f545df731de3938bb0352b5fc522c11af128549"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/pirates_eureka/worldgen/structure_set/ships.json"
+hash = "6f19f102767d574468eea1f3b2a1ad8fcfe56655d152bd62bef4d6b88778e67a"
+
+[[files]]
 file = "config/paxi/datapacks/peacock/data/sereneseasons/tags/blocks/autumn_crops.json"
 hash = "a5310d4145eefae9ed989d01e717c64365bba38f2eb6847f7e2f438c7f74cda6"
 
