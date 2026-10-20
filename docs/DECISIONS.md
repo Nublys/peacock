@@ -778,3 +778,15 @@ script had already marked the world "booted", the next start took it for an exis
 after the check), and cleared on the reroll path; the reroll marker is read back before `stop`, so a failed write
 keeps the world instead of stopping for nothing. `peacock-start.sh` appends every decision — reroll, refusal (with
 the `playerdata/` entries it found), or a stop with no reroll requested — to `logs/peacock-reroll.log`.
+
+## Shutdown hangs: a watchdog kills a stuck Java and saves a thread dump (2026-10-19 night)
+About half of all shutdowns (reroll stops and manual ones alike) save everything — "All dimensions are saved",
+"Finished unloading server configs" — and then Java never exits: a mod leaves a non-daemon thread running. On a
+reroll that stalls the whole loop (the afternoon's lost world). Aaron chose a safety net plus diagnosis over
+removing suspects blind (the hang is intermittent, and the suspects — Valkyrien Skies, Distant Horizons, Simple
+Voice Chat — carry ships, the far view and voice). `peacock-start.sh` now runs Java in the background (stdin kept
+with `<&0`, so the panel console still works) beside a watchdog: once shutdown begins (a reroll marker, or
+"Stopping server" in this boot's `latest.log`), Java gets 120 s (`PEACOCK_HANG_GRACE`); then `jcmd Thread.print`
+goes to `logs/peacock-hang-<time>.txt` (plus `kill -3` into the console), and Java is killed. The next hang names
+the thread; the real fix follows from it. The reroll count is also written by the script itself, so a killed stop
+still counts toward the 15.

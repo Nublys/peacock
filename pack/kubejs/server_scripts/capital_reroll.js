@@ -156,6 +156,7 @@ ServerEvents.loaded(event => {
       var n = tries()
       if (n >= MAX_TRIES) { keep(n + ' rerolls in a row'); JsonIO.write(COUNT, { tries: 0 }); return }
       JsonIO.write(MARKER, { reroll: true, attempt: n + 1, worldTicks: Number(age) })
+      JsonIO.write(COUNT, { tries: n + 1 })   // here too, not only in the start script: a killed stop still counts
       var check = null
       try { check = JsonIO.read(MARKER) } catch (e) { }
       if (!check || !check.reroll) { keep('the reroll marker could not be written to ' + MARKER); return }

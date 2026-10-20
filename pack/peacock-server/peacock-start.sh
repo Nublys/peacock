@@ -58,11 +58,52 @@ COUNT="kubejs/config/peacock-reroll-count.json"
 # every reroll decision is also appended here: the console scrolls away, this file does not
 REROLL_LOG="logs/peacock-reroll.log"
 note() { say "$*"; mkdir -p logs; printf '%s %s\n' "$(date '+%Y-%m-%d %H:%M:%S')" "$*" >> "${REROLL_LOG}"; }
+
+# Hang safety net (2026-10-19): about half of all shutdowns finish saving ("All dimensions are saved", "Finished
+# unloading server configs") and then Java never exits — some mod leaves a thread running. The watchdog below waits
+# for the shutdown to begin (a reroll marker, or "Stopping server" in this boot's latest.log), gives it
+# PEACOCK_HANG_GRACE seconds (120), then writes a thread dump to logs/peacock-hang-<time>.txt (that names the
+# thread keeping Java alive), and kills it. Everything is saved by then. A reroll then carries on as normal.
+HANG_GRACE="${PEACOCK_HANG_GRACE:-120}"
+STARTED="logs/.peacock-started"
+watchdog() {
+  local pid="$1" since="" dump
+  while kill -0 "${pid}" 2>/dev/null; do
+    if [ -z "${since}" ]; then
+      # latest.log counts only once this boot has rotated it (newer than our start stamp)
+      if [ -f "${MARKER}" ] || { [ logs/latest.log -nt "${STARTED}" ] && grep -q "Stopping server" logs/latest.log 2>/dev/null; }; then
+        since="$(date +%s)"
+      fi
+    elif [ $(( $(date +%s) - since )) -ge "${HANG_GRACE}" ]; then
+      dump="logs/peacock-hang-$(date '+%Y%m%d-%H%M%S').txt"
+      { command -v jcmd >/dev/null 2>&1 && timeout 30 jcmd "${pid}" Thread.print; } > "${dump}" 2>&1 \
+        || { command -v jstack >/dev/null 2>&1 && timeout 30 jstack "${pid}"; } > "${dump}" 2>&1 \
+        || echo "no jcmd/jstack in this image: the thread dump is in the console output (kill -3)" > "${dump}"
+      kill -3 "${pid}" 2>/dev/null   # a second copy of the dump, in the console
+      note "!! Java still running ${HANG_GRACE}s after shutdown began (world already saved) — thread dump in ${dump}; killing it"
+      sleep 2
+      kill -TERM "${pid}" 2>/dev/null; sleep 15
+      kill -0 "${pid}" 2>/dev/null && kill -KILL "${pid}" 2>/dev/null
+      return 0
+    fi
+    sleep 5
+  done
+}
+
 while true; do
+  mkdir -p logs; touch "${STARTED}"
+  # Java runs in the background so the watchdog can see it; <&0 keeps the panel console connected to it.
   java -Xms128M -XX:MaxRAMPercentage="${HEAP_PERCENT}" ${GC_FLAGS} \
     -Dterminal.jline=false -Dterminal.ansi=true \
-    @user_jvm_args.txt "@${ARGS_FILE}" nogui
+    @user_jvm_args.txt "@${ARGS_FILE}" nogui <&0 &
+  JPID=$!
+  trap 'kill -TERM "${JPID}" 2>/dev/null' TERM INT
+  watchdog "${JPID}" &
+  WPID=$!
+  wait "${JPID}"
   code=$?
+  kill "${WPID}" 2>/dev/null; wait "${WPID}" 2>/dev/null
+  trap - TERM INT
   if [ ! -f "${MARKER}" ]; then
     note "server stopped (exit ${code}), no reroll requested"
     exit "${code}"
