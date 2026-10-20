@@ -1,6 +1,24 @@
 # Decisions
 
-Why things are the way they are. Add an entry when a choice would surprise someone later.
+Why things are the way they are. Add an entry when a choice would surprise someone later. Entries are a dated
+history and are not rewritten when a later one supersedes them; the summary below says what holds now.
+
+## Where things stand (2026-10-20)
+- **The capital** is `peacock:capital`: CTOV's large plains town at size 7, on temperate lowland
+  (`#peacock:capital_biomes`), one candidate per ~2,000 blocks; Village Spawn Point moves spawn into the nearest
+  one at world creation, so any seed works. `capital_wall.js` walls it along its outline with four lit gates
+  where the main roads end; `capital_boards.js` places two bounty boards. Any far copy turns zombie
+  (`dead_capitals.js`), so it is the only living old town. *Supersedes:* the concentric-ring CTOV capital,
+  Terralith's fortified village, the script founder, the seed reroll, the rectangle wall with boards inside the
+  gates, and the board plaza in the house pool (entries 2026-10-17 to 2026-10-20).
+- **Every other CTOV village is a ruin** (60% abandoned, 40% pillager-held), kept 14 chunks from the capital.
+  Stoneholm's villages are switched off (the mod stays as a dependency). Village Recruits towers are the only
+  new living settlements; the AI runs their diplomacy, wars and expansion.
+- **Temperature** is Cold Sweat, comfortable 45–100 °F, no thirst (*supersedes* Tough As Nails).
+- **The server** syncs on every start; `peacock-start.sh` runs Java beside a shutdown watchdog. The only hang found
+  (Supplementaries road signs) is fixed. Chunk Pregenerator, not Chunky, for pre-generation.
+- **The look** adds Subtle Effects (both sides), Particle Rain, Camera Overhaul (toned down), Smooth Steps,
+  Better Biome Reblend, six texture packs, Streams Reflowing and Terrain Slabs; AmbientSounds is gone.
 
 ## Platform
 - **Forge 47.4.16, not NeoForge.** On 1.20.1 NeoForge is frozen at 47.1.x; Serene

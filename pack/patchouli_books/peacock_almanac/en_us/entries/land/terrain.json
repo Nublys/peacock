@@ -6,11 +6,11 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Tectonic and Terralith shape the terrain: real mountain ranges, deep valleys, long rivers, high plateaus. Biomes O' Plenty fills them. Distant Horizons shows the far side of the valley from your door.$(br2)The capital sits in a lowland. Mountains are where the zinc is; dry country is where the gold is."
+      "text": "Tectonic and Terralith shape the terrain: real mountain ranges, deep valleys, long rivers, high plateaus. Biomes O' Plenty fills them. Streams run and fall from the hills, and slabs soften the slopes.$(br2)The capital sits in a lowland. Mountains are where the zinc is; dry country is where the gold is."
     },
     {
       "type": "patchouli:text",
-      "text": "Rivers and coasts matter: ships (Eureka) and wagons are how goods move before rails exist. Build towns where water and road meet.$(br2)Structory scatters ruins; Create Structures leave old workshops with parts in them. Pirates hold the coasts."
+      "text": "Rivers and coasts matter: ships (Eureka) and wagons are how goods move before rails exist. Rivers carry a current: a boat drifts downstream. Build towns where water and road meet.$(br2)Structory scatters ruins; Create Structures leave old workshops with parts in them. Pirates hold the coasts."
     },
     {
       "type": "patchouli:text",

@@ -36,17 +36,22 @@ workshop, ships carrying grain to towns that never saw a field. They did very we
 their walls, onto the fields that fed them, and dug deeper than anyone had before. A sickness came up
 out of the lowest shafts and travelled the rail lines. The monsters followed it. The towns emptied.
 
-You arrive in **Year One** after that, in the **capital** — the one old town still standing: a walled castle
-town with a keep, a church, a library, traders and bounty boards. It belongs to everyone and nobody can take it.
+You arrive in **Year One** after that, in the **capital** — the one old town still alive: a big old town of
+houses, workshops and a church around a market square, inside a stone wall the survivors raised, with a gate
+on each of its main roads and bounty boards on the square. It belongs to everyone and nobody can take it.
 
 Everything else you find is one of three things:
 
 - **A dead town.** Every other old stone village is a ruin. Most are abandoned — roofs open, the owners
   still in the cellars as zombies, a little left in the chests. The rest are **held by pillagers**, who
-  camp in them and guard chests full of what they took from every town they emptied.
+  camp in them and guard chests full of what they took from every town they emptied. Very far out, a few
+  big old towns held on almost as long as the capital; their streets still stand, and their people are
+  zombies now — curable, if you have the weakness potions and golden apples to spare.
 - **A new town.** The survivors are founding settlements of their own: a tower, a bell, a recruit table,
   and a town that builds itself out from there. They are small, rough, growing, and have names and
-  factions. *Old stone means dead; a tower means people.* When you find one, write the coordinates down.
+  factions. *Old stone means dead; a tower means people.* A tower only rises once someone walks near, so
+  follow the new roads, or earn a sealed rumour of *smoke from a new tower* on a bounty board. When you
+  find one, write the coordinates down.
 - **The painted ones.** Pillagers are villagers — the desperate, the criminal, the opportunists, the sick who
   walked out of the gates at night. Their numbers have grown since the fall. They never held the old
   machines; they steal, and their chests are the best ordinary loot in the world.
@@ -63,10 +68,12 @@ of them and you will know.
 ### Seasons and weather
 The year is four seasons of three sub-seasons, sixteen days each. Crops grow only in their season: wheat
 in spring and summer, nothing in winter without a greenhouse. Winter snow piles up in layers and melts
-back in spring. There is no thirst, but the cold is real (Cold Sweat): stand near a lit campfire or
+back in spring. There is no thirst, but the cold is real (Cold Sweat; comfortable is 45–100 °F on the
+thermometer): stand near a lit campfire or
 furnace under a roof, sew wool into your armour at a sewing table, and carry a waterskin warmed at the fire.
-Three sticks make a **fire drill** for your first campfire. The capital sits in mild country — fine in spring
-and autumn, cold in winter, warm in summer. A calendar (Serene Seasons) shows the season;
+Three sticks make a **fire drill** for your first campfire. The capital always sits in mild lowland — fine in
+spring and autumn, cold in winter, warm in summer — wherever that is on your world: spawn is wherever the
+capital is, not the middle of the map. A calendar (Serene Seasons) shows the season;
 the chat tells you too, every time you log in. The calendar only moves while someone is online, so an empty
 server does not turn winter into winter again behind your back.
 
@@ -115,7 +122,8 @@ each boss lives; **rumour maps** from outposts, cartographers and bounty boards 
 ### Building and getting around
 There is **no fast travel** — no /home, /tpa or warps, only `/spawn` back to the capital (slowly) and
 `/back` after a death. Distance is the game: roads, wagons, ships (Valkyrien Skies — ships actually
-sail), and eventually trains. Trees fall whole when you chop the bottom log (FallingTree; sneak to take a
+sail), and eventually trains. Streams and rivers flow and fall (Streams Reflowing): a boat drifts
+downstream, and slopes are softened with slabs so walking the hills is less jumping. Trees fall whole when you chop the bottom log (FallingTree; sneak to take a
 single log). Create is the industrial backbone; Macaw's furniture, roofs, bridges and
 paths are for making places look like places. Cannons hurt mobs and players, never the land.
 
@@ -184,6 +192,11 @@ touching it (`/peacock profile <tier> reset` puts the profile back over your edi
 | `medium` | thin laptop with a fan, 16 GB | Complementary, Medium | 192 | 8 |
 | `high` | laptop with a real GPU | Complementary + Euphoria, High | 256 | 10 |
 | `ultra` | desktop with a dedicated GPU | Complementary + Euphoria, Ultra | 384 | 12 |
+
+The look — falling leaves, fireflies and breath in the cold (Subtle Effects), rain and snow as particles with
+ground fog (Particle Rain), a camera that leans gently as you walk (Camera Overhaul, turn it down in its menu),
+fuller grass and foliage, 3D details and livelier animals (resource packs) — is all on your machine and costs
+the server nothing; `potato` leaves out the 3D and animation packs.
 
 If frames drop: shaders off (`K`) is the big one, then Distant Horizons' radius, then render distance.
 Macs stay on plain Complementary (`low` or `medium`); the Euphoria variant needs more than macOS

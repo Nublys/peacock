@@ -152,10 +152,10 @@ ENTRIES = {
     # ===================================================================================== start
     "start": [
         ("spawn", "Where You Woke Up", "minecraft:bell", [
-            txt("Everyone spawns in the same village: the " + B("capital") + ", the last old town alive. It has a bell, villagers with trades, beds and bounty boards. It is the first market and the first thing raiders come for.",
+            txt("Everyone spawns in the same village: the " + B("capital") + ", the last old town alive, inside the survivors' wall. It has a bell, villagers with trades, beds and bounty boards. It is the first market and the first thing raiders come for.",
                 "Claim a bed early. There is no fast travel; the way home matters. Almost every other old stone village is a ruin (" + L("story/dead_towns", "The Dead Towns") + ")."),
             txt(B("Day one checklist:") + "$(br)- Wood, a crafting table, a bed in the capital$(br)- Check the season (sky colour, or craft a calendar)$(br)- Food: villager farms are fair game, replant what you take$(br)- A campfire before nightfall: three sticks make a " + L("land/warmth", "fire drill") + ""),
-            txt(B("First night:") + " stay in town, indoors. Mobs here are tougher and smarter than you remember, and the village guards will not chase them for you.",
+            txt(B("First night:") + " stay inside the wall. Mobs here are tougher and smarter than you remember, and the village guards will not chase them for you.",
                 "Mark the capital on your " + L("tools/atlas", "atlas") + " before you leave it. The capital will grow as the server does; nothing you build there is wasted."),
             txt(B("Dying") + " leaves a corpse holding everything you carried. Walk back and right-click it. Nothing despawns, but somebody else can loot it, so tell a friend where you fell.",
                 "Hunger is vanilla plus AppleSkin (hover food to see what it restores). There is no thirst. The cold is real in winter: see " + L("land/warmth", "Staying Warm") + "."),
@@ -218,7 +218,7 @@ ENTRIES = {
         ]),
         ("warmth", "Staying Warm", "minecraft:campfire", [
             txt("Cold Sweat tracks two temperatures: the " + B("air") + " where you stand and your " + B("body") + ". The air follows the biome, the season, the hour, altitude, rain and shade. Your body follows the air slowly; the gauge by your hotbar shows which way it is going.",
-                "There is no thirst."),
+                "There is no thirst. Comfortable air is 45 to 100 °F; the thermometer reads it."),
             txt("Far enough either way and it hurts: the cold slows and freezes you, heat wears you down. New players get a grace period. Winter nights, rain and high ground are the danger.",
                 "The capital sits in mild country: comfortable in spring and autumn, a cold winter, a warm summer."),
             txt(B("Heat:") + " a lit campfire, fire, furnace, smoker, blast furnace or stove warms you within about seven blocks, more the closer you stand. Two campfires is the most that adds up. Walls between you and the fire weaken it. Lava and magma are hot; ice cools.",
@@ -244,9 +244,9 @@ ENTRIES = {
                 "Weather is seasonal too: winter storms snow, summer storms are short and loud."),
         ]),
         ("terrain", "The Land Itself", "minecraft:grass_block", [
-            txt("Tectonic and Terralith shape the terrain: real mountain ranges, deep valleys, long rivers, high plateaus. Biomes O' Plenty fills them. Distant Horizons shows the far side of the valley from your door.",
+            txt("Tectonic and Terralith shape the terrain: real mountain ranges, deep valleys, long rivers, high plateaus. Biomes O' Plenty fills them. Streams run and fall from the hills, and slabs soften the slopes.",
                 "The capital sits in a lowland. Mountains are where the zinc is; dry country is where the gold is."),
-            txt("Rivers and coasts matter: ships (Eureka) and wagons are how goods move before rails exist. Build towns where water and road meet.",
+            txt("Rivers and coasts matter: ships (Eureka) and wagons are how goods move before rails exist. Rivers carry a current: a boat drifts downstream. Build towns where water and road meet.",
                 "Structory scatters ruins; Create Structures leave old workshops with parts in them. Pirates hold the coasts."),
             txt(B("Nature's Compass") + " finds a biome by name: the way to the nearest snowy peak, savanna or desert. It is how you find the places bosses live.",
                 "Craft one before the first long trip."),
@@ -311,7 +311,7 @@ ENTRIES = {
                 "It belongs to everyone; no faction can claim it or found a town in it. Build in it, but build with the town, not over it."),
             txt(B("What makes a town a town") + " here: a bell, beds, and villagers who sleep in them. Several mods check for exactly that. Trading depots, bounty boards and caravan stops all want a real settlement around them.",
                 "A hole in the ground with one librarian is not a town, and the pack will tell you so."),
-            txt(B("Growing it:") + " more beds and workstations draw more villagers; Village Expansion lets a town build itself out; guards hold the streets; workers tend the fields.",
+            txt(B("Growing it:") + " more beds and workstations draw more villagers; Village Expansion lets a town build itself out; guards hold the wall; workers tend the fields.",
                 "Villagers have names (Villager Names). Learn them. The one who sells the thing you need will be gone if the raid gets through."),
         ]),
         ("villagers", "Villagers Worth Keeping", "minecraft:emerald", [
@@ -651,8 +651,8 @@ ENTRIES = {
                 "Macs stay on plain Complementary; the Euphoria variant exceeds what macOS OpenGL offers."),
             txt(B("Distant Horizons") + " draws the far terrain from a low-detail copy the server builds as players explore. On a fresh world the horizon fills in over the first hour; a reset world starts over.",
                 "Embeddium, ImmediatelyFast, Entity Culling, ModernFix and FerriteCore are the quiet half of the frame rate; leave them on. Sound Physics (cave echo) is off on potato. Particle mods can be turned down in their menus."),
-            txt(B("Resource packs") + " ship with the pack and are on by default: Fresh Animations (vanilla mobs and villagers move like living things), Better Leaves, Enhanced Boss Bars, xali's enchanted books and potions, Low on Fire.",
-                "All optional: Options, Resource Packs. Fresh Animations is the only one that costs anything, and only in a crowd."),
+            txt(B("Resource packs") + " are on by default: Fresh Animations (+ Details, Objects), Better Leaves, Fast Better Grass, rainbow's foliage, 3D Default, Cubic Sun & Moon, Enhanced Boss Bars, xali's books and potions, Low on Fire.",
+                "All optional (Options, Resource Packs). Potato leaves out 3D Default and the Fresh Animations family. Camera Overhaul sways the view as you walk: turn it down in its menu."),
         ]),
     ],
     # ===================================================================================== mods
@@ -660,7 +660,7 @@ ENTRIES = {
         ("world", "World", "minecraft:grass_block", [
             txt(B("Tectonic, Terralith, Biomes O' Plenty") + " shape and fill the land. " + B("Incendium") + " is the Nether, " + B("Nullscape") + " the End. " + B("Serene Seasons") + " runs the year, " + B("Cold Sweat") + " the temperature, " + B("Enhanced Celestials") + " the moons.",
                 B("Geolosys") + " places ore in regional deposits. " + B("Paxi") + " loads the pack's own datapack over everything else."),
-            txt(B("Distant Horizons") + " draws the far terrain. " + B("ChoiceTheorem's Overhauled Village") + " builds the villages (every one a ruin now); " + B("YUNG's") + " mineshafts, dungeons and API; " + B("Structory") + " ruins; " + B("Create Structures") + " old workshops.",
+            txt(B("Distant Horizons") + " draws the far terrain. " + B("ChoiceTheorem's Overhauled Village") + " builds the villages (every one a ruin now); " + B("Streams Reflowing") + " the flowing streams; " + B("Terrain Slabs") + " the soft slopes; " + B("YUNG's") + " mineshafts, dungeons and API; " + B("Structory") + " ruins; " + B("Create Structures") + " old workshops.",
                 B("Village Spawn Point") + " puts everyone in the capital."),
         ]),
         ("machines", "Machines & Logistics", "create:cogwheel", [
@@ -680,7 +680,7 @@ ENTRIES = {
         ("quality", "Quality of Life", "minecraft:spyglass", [
             txt(B("EMI") + " (recipes), " + B("Jade") + " (what am I looking at), " + B("AppleSkin") + ", " + B("Mouse Tweaks") + ", " + B("Controlling") + ", " + B("Easy Anvils") + ", " + B("Visual Workbench") + ", " + B("Map Atlases") + ", " + B("Nature's Compass") + ", " + B("Locator Bar") + ", " + B("Patchouli") + " (this book), " + B("Simple Voice Chat") + ", " + B("Chat Animation") + ", " + B("No Chat Reports") + ".",
                 B("FTB Chunks / Teams / Essentials") + " are claims, parties, /spawn and /back."),
-            txt(B("Performance:") + " Embeddium, Oculus (shaders), ImmediatelyFast, Entity Culling, ModernFix, FerriteCore, Canary (server). " + B("Looks:") + " Fresh Animations, Better Leaves, Enhanced Boss Bars, xali's, Low On Fire, Falling Leaves, Particular, Wavey Capes, 3D Skin Layers, Not Enough Animations, Entity Model and Texture Features."),
+            txt(B("Performance:") + " Embeddium, Oculus (shaders), ImmediatelyFast, Entity Culling, ModernFix, FerriteCore, Canary (server). " + B("Looks:") + " Subtle Effects, Particle Rain, Falling Leaves, Particular, Camera Overhaul, Smooth Steps, Better Biome Reblend, Wavey Capes, 3D Skin Layers, Not Enough Animations, Entity Model and Texture Features, and the resource packs."),
             txt(B("Under the hood:") + " KubeJS runs the pack's rules; Game Stages and Recipe Stages hold the ladder; Paxi carries the datapack; Default Options sets first-run settings; the launcher jar applies your hardware profile."),
         ]),
     ],

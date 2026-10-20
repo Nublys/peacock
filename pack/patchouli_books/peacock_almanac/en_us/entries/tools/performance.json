@@ -18,7 +18,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Resource packs$() ship with the pack and are on by default: Fresh Animations (vanilla mobs and villagers move like living things), Better Leaves, Enhanced Boss Bars, xali's enchanted books and potions, Low on Fire.$(br2)All optional: Options, Resource Packs. Fresh Animations is the only one that costs anything, and only in a crowd."
+      "text": "$(bold)Resource packs$() are on by default: Fresh Animations (+ Details, Objects), Better Leaves, Fast Better Grass, rainbow's foliage, 3D Default, Cubic Sun & Moon, Enhanced Boss Bars, xali's books and potions, Low on Fire.$(br2)All optional (Options, Resource Packs). Potato leaves out 3D Default and the Fresh Animations family. Camera Overhaul sways the view as you walk: turn it down in its menu."
     }
   ]
 }

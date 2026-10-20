@@ -204,15 +204,15 @@ details below as they get exercised.
 - ✅ Release pipeline: `.github/workflows/release.yml` builds the Prism instance zip, `.mrpack`, one CurseForge
   zip per hardware tier and the server zip on a `vX.Y.Z` tag (docs/DEVELOPING.md "Releasing a version").
   Modrinth listing would need the CurseForge-only mods swapped.
-- ✅ Almanac prose (v4, 243 pages) and resource packs (Fresh Animations, Better Leaves, Enhanced Boss Bars,
-  xali's, Low On Fire).
+- ✅ Almanac prose (v4; 264 pages by 2026-10-20) and resource packs (Fresh Animations, Better Leaves, Enhanced Boss
+  Bars, xali's, Low On Fire; the Appalachia-look packs added 2026-10-20).
 - ✅ In-game profile picker (`/peacock profile`, Phase 7) and the importable Prism instance (`dist/Peacock-Prism.zip`).
 - ✅ Player-facing docs: README as the guide, docs/INSTALL-PRISM.md, docs/INSTALL-CURSEFORGE.md.
 - Open, after the mid game has been played: Tier 3–4 charter prices and gate lists; Cataclysm gear out of
   early loot (its items only appear in its own dungeons today, so nothing to do until proven otherwise);
   FancyMenu title screen (not in the pack — add only if wanted).
 
-## Phase 7 — The dead world  🟡 shipped 2026-10-18, untested in play
+## Phase 7 — The dead world  🟡 shipped 2026-10-18; the world itself seen working on the server 2026-10-20
 The story made concrete (Aaron, 2026-10-18: "most towns found are abandoned, this is an apocalypse after all";
 one living settlement type so players are never confused). The cause — the villagers overbuilt, dug too deep,
 and nature answered with sickness and monsters — is never stated in-game; the journals each blame something else.
@@ -221,9 +221,10 @@ and nature answered with sickness and monsters — is never stated in-game; the 
   `peacock:chests/ruin_house`), `ruin_h` pillager-held (40%: lighter decay, no villagers, illager spawn
   overrides, `peacock:chests/plunder`). NBTs are copied because CTOV's jigsaw blocks name their pools inside
   the .nbt files. Underground village and outposts excluded (they keep their own sets).
-- ✅ **The capital** — one living CTOV village (fortified centre where CTOV has one, size 7) placed 8–10 chunks
-  from the origin by a `concentric_rings` set; Village Spawn Point targets `#peacock:capital`; the ruin set and
-  the Rust Belt sets keep an exclusion zone around it. Village Recruits' spawn keep-out widened to 17 chunks
+- ✅ **The capital** — (current design, 2026-10-20; history below) one living large CTOV plains town,
+  `peacock:capital`, size 7, on `#peacock:capital_biomes` (temperate lowland), one candidate per ~2,000 blocks
+  (`random_spread` 128/64); Village Spawn Point targets `#peacock:capital` and moves spawn into the nearest; the
+  ruin, nature, war-camp and Rust Belt sets keep exclusion zones around every candidate. Village Recruits' spawn keep-out widened to 17 chunks
   (`worldSpawnKeepoutChunks`) so no faction claim can reach it; the addon already refuses to found a town in
   spawn chunks, so the capital is permanent neutral ground.
 - ✅ **Living towns are Village Recruits towns only** — no change to the tower set; `maxCentersPerFaction = 4`.
@@ -239,8 +240,8 @@ and nature answered with sickness and monsters — is never stated in-game; the 
   spacing 7), 10 rail-age ruins (derailed cart, toppled wheel, dead fan, Halt 9 platform, cairn, signal post,
   Gallery 7 drill crater, boarded well, cracked-bell chapel, grave wall; spacing 22), and the pillager
   **war camp** (spacing 64, caged villagers, plunder, pillager spawns). Authored as voxels, emitted as NBT.
-- ✅ **Atmosphere** — AmbientSounds (+CreativeCore, client), Sound Physics Remastered (client; off in `potato`
-  via profile key), Snow! Real Magic! (+Kiwi); MOTD "Year One. The capital still stands."; `welcome.js`
+- ✅ **Atmosphere** — Sound Physics Remastered (client; off in `potato` via profile key), Snow! Real Magic! (+Kiwi)
+  (AmbientSounds removed 2026-10-20: it played animals that were not there); MOTD "Year One. The capital still stands."; `welcome.js`
   first-join line and the Serene Seasons season on every join.
 - ✅ **Performance for 6–8 players** — Dynamic View 36 ms / sim 5–10; heap 75% (`PEACOCK_HEAP_PERCENT`);
   Clumps; Let Me Despawn; (Chunky was added and removed the same day — DH 3.3.3 crashes with it, see server/README.md);
@@ -261,15 +262,33 @@ and nature answered with sickness and monsters — is never stated in-game; the 
   has none in reach, the same script founds the capital on surveyed flat, dry land near the origin and moves
   spawn there (`capitalFound`, 2026-10-19 — the sixth world had spawned in mid-ocean). The ruins' zombie-owner pieces got
   the jigsaw block they were missing.
-- ✅ **Capital simplified** (2026-10-20): about 25 seeds in a row had no capital at the one fixed position near the
-  origin, so the capital is now a large living CTOV plains town on temperate land, one candidate per ~2,000 blocks,
-  and Village Spawn Point moves spawn into the nearest one. The reroll, the script wall and the founder are gone;
-  Terralith's castle town stays silenced. Bounty boards come from a 3x3 plaza in the capital's house pool.
-- Open: first play of all of the above (do the ruins' chests roll? does the founder fire and place cleanly when the seed is bad (`[peacock] found:` lines)?
-  do Rust Belt pieces sit flush — `start_height` assumes the heightmap is the first air block); Snow! Real
+- ✅ **Third flight** (2026-10-19): the ruins never generated (a stale living-village set in the pack datapack won the
+  load order; `validate.py` now fails on files both datapacks define). Temperature is back as **Cold Sweat** (no
+  thirst; comfortable 45–100 °F since 2026-10-20) with a scripted **fire drill**; Tough As Nails gone. Just Zoom
+  needs a spyglass; What Are They Up To; a Peacock achievements tab; Tools On My Back; more shaders to try.
+  Village review: ruins keep 14 chunks from the capital, nature pieces 10; Stoneholm's living villages switched off
+  (the mod stays: Create: Better Villagers requires it). The seed reroll (one fixed capital spot near the origin)
+  ran but found no capital on ~25 seeds in a row.
+- ✅ **Capital simplified** (2026-10-20): the scattered CTOV capital above, found on any seed; reroll and founder
+  retired. `capital_wall.js` (rewritten) walls the town along its outline with a lit gate where each main road
+  ends; `capital_boards.js` places two bounty boards by the bell or the square's corners (a board in the house
+  pool had filled every street); `dead_capitals.js` turns the villagers of any far copy of the capital into
+  curable zombie villagers, so the spawn capital is the only living old town. Lore for the towers: the "Charter
+  of a New Town" journal and a "smoke from a new tower" sealed rumour.
+- ✅ **Shutdown hang** (2026-10-19/20): about half of all stops left Java running; the thread dump named
+  Supplementaries' worldgen road signs (off now). `peacock-start.sh` runs Java beside a watchdog that dumps and
+  kills a Java still alive 120 s after shutdown began (`logs/peacock-hang-*.txt`, `logs/peacock-reroll.log`).
+- ✅ **The Appalachia look** (2026-10-20, from GOATED's Fabric pack, Forge 1.20.1 equivalents only): Subtle Effects
+  (both sides — it registers particles), Particle Rain, Camera Overhaul (toned down), Smooth Steps, Better Biome
+  Reblend, six texture packs; Streams Reflowing and Countered's Terrain Slabs for new land.
+- Open: a full play session on the current world design (do the ruins' chests roll? do Rust Belt pieces sit flush — `start_height` assumes the heightmap is the first air block); Snow! Real
   Magic! on Create tracks (blacklist if it accumulates); whether `bountiful.decree.archivist.name` or the
   namespaced key is the one Bountiful reads (both are in the lang file); feeding CTOV houses into the Village
-  Recruits builder (the addon has a datapack structure loader — untested).
+  Recruits builder (the addon has a datapack structure loader — untested; Aaron wants to see a grown VR town
+  first). From 2026-10-20: `/weather rain` with Particle Rain (it registers particles client-side only and may
+  crash a client on rain); a test world for Streams Reflowing + Terrain Slabs (boot time, TPS while travelling,
+  streams through the capital?) with Chunk Pregenerator around the capital; Camera Overhaul's sprint tilt is
+  still the mod's; AI war pace (`warBias` 0.3 is "war-heavy") and lag from battles far from players.
 
 ## Version 1.0.0 (2026-10-18)
 Tagged at the end of Phase 7: the dead world, the capital, bounty boards, journals, the Rust Belt, atmosphere,

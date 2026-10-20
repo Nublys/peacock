@@ -10,7 +10,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Distant Horizons$() draws the far terrain. $(bold)ChoiceTheorem's Overhauled Village$() builds the villages (every one a ruin now); $(bold)YUNG's$() mineshafts, dungeons and API; $(bold)Structory$() ruins; $(bold)Create Structures$() old workshops.$(br2)$(bold)Village Spawn Point$() puts everyone in the capital."
+      "text": "$(bold)Distant Horizons$() draws the far terrain. $(bold)ChoiceTheorem's Overhauled Village$() builds the villages (every one a ruin now); $(bold)Streams Reflowing$() the flowing streams; $(bold)Terrain Slabs$() the soft slopes; $(bold)YUNG's$() mineshafts, dungeons and API; $(bold)Structory$() ruins; $(bold)Create Structures$() old workshops.$(br2)$(bold)Village Spawn Point$() puts everyone in the capital."
     }
   ]
 }

@@ -2444,11 +2444,11 @@ hash = "71f34a746c5feac65124262d535c4ac22aba24e4ac14dd9f20f5807a4c17f593"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/land/terrain.json"
-hash = "199f5e513509e41a8fc3f18aa3673514590e8746d13eca5dbb8f72854841e72c"
+hash = "6ac802c34ce028d3ed7940013ecf25360f179c56c10086a87edb6e637867aafb"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/land/warmth.json"
-hash = "d03ecd09f4229d99b7108cea8aea03ec03cdcaca7cae62785d18df701874368d"
+hash = "4ba9214aed0af3ecacfc4e1cfbacb2c93436fe6508a6b1a412c5f036bdd79a09"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/mods/fights.json"
@@ -2464,11 +2464,11 @@ hash = "abe525637246c07dad4d70eb5695fe9b9df5d88b3b3abb70f949b343efe6c178"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/mods/quality.json"
-hash = "eb026188e2e998793291ff6be2818eaf964a908f06b22b18a82494c1e81a3817"
+hash = "05021ddcb236dad5dd135734830eb34cff9c5ab8df5abe0f3bff5f8cf7cfbdd7"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/mods/world.json"
-hash = "3e31dc90e8ab963c18dc09973f1b20bfdd59cff7909b96181061895a738f1c88"
+hash = "19389250273611ea79b90565ab1b43a40f64fdfd07fc82236f67257db9d6cead"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/ore/caving.json"
@@ -2524,7 +2524,7 @@ hash = "5a2ec56b77a366cc85aabd7cc2509ae6b23e83567b5cc9765feb2d06f6d0e445"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/start/spawn.json"
-hash = "c16c2f166c6e030118005c416082a096278b238b1d0cfec0fe75c5318672eb2c"
+hash = "5149dc22de49d30ae92e256e441321a96d387e032771b283476915040da8c9fb"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/story/dead_towns.json"
@@ -2604,7 +2604,7 @@ hash = "9a0372884381e261ecbbed41dbfdf23d40fef78de32dee6d2f63d37c8a9fc06d"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/tools/performance.json"
-hash = "738c97ac2cc92acdb06cb8ac4ade3b33b89b382f6b91d147fa03a6d7b22caec1"
+hash = "5309b78f4765a3c0dfae72e1949e47d2ae8ffaccb1c3af4bb7a043e1d59c9c94"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/tools/voice.json"
@@ -2612,7 +2612,7 @@ hash = "8b170b12e24414da8c4356402655e08914b4bf20a8bf06f2afbdf6b171961a91"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/towns/capital.json"
-hash = "3edd32af9aa03f14440c7edd587ac7610108f0a25ea68c63fe8a55a049b64bca"
+hash = "3d58f961d5a710e96c60215fe34deb40f89f7277bcfe3f02ec2b076b92918177"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/towns/caravans.json"

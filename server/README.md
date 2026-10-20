@@ -17,13 +17,14 @@ Everything here is for the host. Players never see this folder.
    ends with `== done`.
 4. Before the first start: Files → `server.properties` (seed, `max-players`), then start once
    and `whitelist add <name>` from the console.
-5. Pre-generate 2 km with Chunk Pregenerator (below); beyond that Distant Horizons has the server generate
+5. Pre-generate around the **capital** (spawn is wherever the capital is, not 0,0) with Chunk Pregenerator
+   (below); beyond that Distant Horizons has the server generate
    what the horizon needs (`INTERNAL_SERVER`). (Chunky was removed: DH 3.3.3 crashes with it on servers.)
 
 **Every start** re-syncs the pack from `main` and reapplies `peacock-server/` — a merged PR
 reaches the server on its next restart. The `Pack URL` variable pins a commit for rollback:
 `https://raw.githubusercontent.com/Nublys/peacock/<sha>/pack/pack.toml`.
-The startup command is `bash peacock-start.sh` (sync → overrides → `exec` Forge); it must stay a
+The startup command is `bash peacock-start.sh` (sync → overrides → Forge, run beside a shutdown watchdog); it must stay a
 single command because the Java image runs it with `exec env`, not a shell — a `&&` chain there
 runs inside the image's `eval echo` expansion with its console captured. After a restart that
 follows a push, read the first console lines: `[peacock] syncing pack`, packwiz-installer's list
@@ -32,8 +33,10 @@ right after a push, raw.githubusercontent.com served a cached `pack.toml` — wa
 and restart again. (This output is console-only; it never appears in `logs/latest.log`.)
 Mods removed from the index are deleted on the next sync; nothing needs cleaning by hand.
 
-**Don't run `/locate`** (or anything that searches for structures) on this server: on Terralith terrain it
-blocks the main thread for minutes and the watchdog treats it as a hang. `max-tick-time` is 90000 in
+**Be careful with `/locate`** (or anything that searches for structures) on this server: a search over
+ungenerated Terralith terrain can block the main thread for minutes and the watchdog treats it as a hang.
+`/locate structure peacock:capital` and `village_recruits:tower_spawner` are cheap (only placement maths and a
+biome test per candidate) and were used for testing on 2026-10-20; avoid broad ones like `#minecraft:village`. `max-tick-time` is 90000 in
 the template: long enough for the spawn-village search at world creation (~45 s), short enough that a
 real hang is dumped and killed instead of sitting there.
 
@@ -53,13 +56,22 @@ after `max-tick-time`, then stops the server. Either dump is what identifies the
 
 **A new world** (stop the server, delete or rename the world folder, start): Village Spawn Point finds the
 nearest capital (a large CTOV town on temperate land, one candidate every ~2,000 blocks) while the world is
-created and moves spawn into it — `[Village Spawn Point] Village found! The world will now generate.` in the log.
-Any seed works; there is no reroll any more (retired 2026-10-20).
+created and moves spawn into it — `[Village Spawn Point] Village found! The world will now generate.` in the log
+(the search takes one to two minutes; the first boot of a new world takes four to seven). Any seed works; there
+is no reroll any more (retired 2026-10-20). A few seconds after `Done`, three one-time scripts finish the capital;
+check for their lines in `latest.log`:
+- `[peacock] capital boards: 2 placed …` — two bounty boards by the bell (or the square's corners);
+- `[peacock] wall: … columns around … buildings` then `wall: done — …; 4 gates … at x,z …` — the stone wall and
+  its gates (`/peacock wall`, op, rebuilds it in place);
+- far-away copies of the capital that generate later turn zombie: `[peacock] dead capital at chunk …`.
+Streams Reflowing and Terrain Slabs only shape **new** chunks, so their look needs a new world (or new land).
 
 **Shutdowns:** after `Finished unloading server configs`, Java can take a minute or so to exit (idle thread pools
 time out). `peacock-start.sh` watches every shutdown: if Java is still running 120 s after it began
 (`PEACOCK_HANG_GRACE`), it writes a thread dump to `logs/peacock-hang-<time>.txt`, notes it in
-`logs/peacock-reroll.log`, and kills Java. Everything is saved by then.
+`logs/peacock-reroll.log`, and kills Java. Everything is saved by then. The one real hang found so far was
+Supplementaries' worldgen road signs (a structure search parked on a chunk load after the server stopped); they
+are off (`way_sign.enabled = false`). A new `peacock-hang-*.txt` means another mod: send the dump.
 
 **Backups & schedules:** use Pterodactyl's. Take a backup before any start that follows a
 pack version bump; a schedule with a daily backup task is enough for a small server.
