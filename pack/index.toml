@@ -397,7 +397,7 @@ hash = "b2aa9e907dc46257181226cc0bfd35646d673be0357bfb1f7166e1d56acb60fc"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/bountiful/bounty_pools/bountiful/_all_rews.json"
-hash = "792bbc53acbbbde8900397e53f28d05d1b9a69830a1462a3f614c093ef2f107c"
+hash = "40ba72b2b88c6e838a409d80d44bc3897651c4f79d6dade8d074c4acef53d585"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/bountiful/bounty_pools/bountiful/_equip_rews.json"
@@ -2607,7 +2607,7 @@ hash = "3d58f961d5a710e96c60215fe34deb40f89f7277bcfe3f02ec2b076b92918177"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/towns/caravans.json"
-hash = "df108d2122147d4ea18557dbde8ff05e6d096abd4fe916c382629f2775d3e183"
+hash = "0aa4ef869d8f21baf2f113b0d5617921abb1720ae8018786f34f8f13383012f0"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/towns/joining.json"

@@ -6,7 +6,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(bold)Bountiful$() boards post jobs a town wants done: bring brass, kill pillagers, clear a ruin. Pay is emerald blocks, golden apples, saddles, real enchanted books, and standing with that board.$(br2)Trust pays better: at ten reputation, $(bold)sealed rumours$() (right-click: a map to a boss's home); at fifteen, deeper journals and totems; at thirty, a named weapon."
+      "text": "$(bold)Bountiful$() boards post jobs: bring brass, kill pillagers. A new board pays in kit (iron tools, chainmail, winter fur); a grown one in emerald blocks, saddles and enchanted books.$(br2)Each finished bounty raises the board's standing, shared by all. At ten, $(bold)sealed rumours$() (a map to a boss); at fifteen, journals and totems; at thirty, a named weapon."
     },
     {
       "type": "patchouli:crafting",

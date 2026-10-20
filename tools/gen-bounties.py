@@ -89,16 +89,38 @@ def potion(kind: str, worth: int, lo=1, hi=1, rarity=None):
 ALL_REWS = pool({
     "emerald":        entry("minecraft:emerald", 1000, 2, 6),
     "emerald_block":  entry("minecraft:emerald_block", 9000, 1, 2, "UNCOMMON"),
-    "iron_ingot":     entry("minecraft:iron_ingot", 450, 3, 8),
+    "iron_ingot":     entry("minecraft:iron_ingot", 300, 3, 8),
     "gold_ingot":     entry("minecraft:gold_ingot", 900, 2, 5, "UNCOMMON"),
     "golden_apple":   entry("minecraft:golden_apple", 2500, 1, 2, "UNCOMMON"),
     "xp_bottle":      entry("minecraft:experience_bottle", 700, 3, 8, "UNCOMMON"),
     "saddle":         entry("minecraft:saddle", 4000, 1, 1, "UNCOMMON"),
     "name_tag":       entry("minecraft:name_tag", 3000, 1, 1, "UNCOMMON"),
-    "lantern":        entry("minecraft:lantern", 500, 2, 6),
+    "lantern":        entry("minecraft:lantern", 350, 2, 6),
     "beef_stew":      entry("farmersdelight:beef_stew", 600, 2, 4),
     "bacon_eggs":     entry("farmersdelight:bacon_and_eggs", 500, 2, 4),
-    "cartridge":      entry("musketmod:cartridge", 300, 6, 16),
+    # Starter pay (Aaron, 2026-10-20: "make the initial bounty rewards good, as a way to rope players in"). A
+    # bounty's objectives cost what its rewards are worth, so a delivery broke even and iron-for-iron lost. These
+    # COMMON rewards are priced well under what they are worth to a new settler (chainmail cannot be crafted, iron
+    # is regional, winter is real), so a fresh board's first jobs pay out in kit: four zombies for an iron pickaxe.
+    # Bountiful weights rewards by the board's level (finished bounties, shared by everyone): below level 5 commons
+    # dominate; from level 5 their weight drops by 2.25x and from 15 by 5x, so this generosity fades as the board
+    # grows into the rarer pay. Nothing here is Blueprint-gated (the musket cartridge was, and is gone).
+    "iron_pickaxe":   entry("minecraft:iron_pickaxe", 900, 1, 1),
+    "iron_sword":     entry("minecraft:iron_sword", 700, 1, 1),
+    "iron_knife":     entry("farmersdelight:iron_knife", 500, 1, 1),
+    "chain_helmet":   entry("minecraft:chainmail_helmet", 700, 1, 1),
+    "chain_chest":    entry("minecraft:chainmail_chestplate", 1100, 1, 1),
+    "chain_legs":     entry("minecraft:chainmail_leggings", 1000, 1, 1),
+    "chain_boots":    entry("minecraft:chainmail_boots", 600, 1, 1),
+    "fur_helmet":     entry("cold_sweat:goat_fur_helmet", 600, 1, 1),
+    "fur_chest":      entry("cold_sweat:goat_fur_chestplate", 1000, 1, 1),
+    "fur_legs":       entry("cold_sweat:goat_fur_leggings", 900, 1, 1),
+    "fur_boots":      entry("cold_sweat:goat_fur_boots", 500, 1, 1),
+    "waterskin":      entry("cold_sweat:waterskin", 400, 1, 1),
+    "torch":          entry("minecraft:torch", 30, 16, 32),
+    "cooked_beef":    entry("minecraft:cooked_beef", 150, 4, 10),
+    "andesite_alloy": entry("create:andesite_alloy", 250, 4, 12),
+    "map":            entry("minecraft:map", 500, 1, 2),
     "diamond":        entry("minecraft:diamond", 4000, 1, 3, "RARE"),
     "horse_armor_i":  entry("minecraft:iron_horse_armor", 6000, 1, 1, "RARE"),
     "horse_armor_g":  entry("minecraft:golden_horse_armor", 7000, 1, 1, "RARE"),

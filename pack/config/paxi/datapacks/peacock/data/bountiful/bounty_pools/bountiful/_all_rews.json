@@ -26,7 +26,7 @@
     "min": 3,
     "max": 8
    },
-   "unitWorth": 450
+   "unitWorth": 300
   },
   "gold_ingot": {
    "type": "item",
@@ -85,7 +85,7 @@
     "min": 2,
     "max": 6
    },
-   "unitWorth": 500
+   "unitWorth": 350
   },
   "beef_stew": {
    "type": "item",
@@ -105,14 +105,149 @@
    },
    "unitWorth": 500
   },
-  "cartridge": {
+  "iron_pickaxe": {
    "type": "item",
-   "content": "musketmod:cartridge",
+   "content": "minecraft:iron_pickaxe",
    "amount": {
-    "min": 6,
-    "max": 16
+    "min": 1,
+    "max": 1
    },
-   "unitWorth": 300
+   "unitWorth": 900
+  },
+  "iron_sword": {
+   "type": "item",
+   "content": "minecraft:iron_sword",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 700
+  },
+  "iron_knife": {
+   "type": "item",
+   "content": "farmersdelight:iron_knife",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 500
+  },
+  "chain_helmet": {
+   "type": "item",
+   "content": "minecraft:chainmail_helmet",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 700
+  },
+  "chain_chest": {
+   "type": "item",
+   "content": "minecraft:chainmail_chestplate",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 1100
+  },
+  "chain_legs": {
+   "type": "item",
+   "content": "minecraft:chainmail_leggings",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 1000
+  },
+  "chain_boots": {
+   "type": "item",
+   "content": "minecraft:chainmail_boots",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 600
+  },
+  "fur_helmet": {
+   "type": "item",
+   "content": "cold_sweat:goat_fur_helmet",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 600
+  },
+  "fur_chest": {
+   "type": "item",
+   "content": "cold_sweat:goat_fur_chestplate",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 1000
+  },
+  "fur_legs": {
+   "type": "item",
+   "content": "cold_sweat:goat_fur_leggings",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 900
+  },
+  "fur_boots": {
+   "type": "item",
+   "content": "cold_sweat:goat_fur_boots",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 500
+  },
+  "waterskin": {
+   "type": "item",
+   "content": "cold_sweat:waterskin",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 400
+  },
+  "torch": {
+   "type": "item",
+   "content": "minecraft:torch",
+   "amount": {
+    "min": 16,
+    "max": 32
+   },
+   "unitWorth": 30
+  },
+  "cooked_beef": {
+   "type": "item",
+   "content": "minecraft:cooked_beef",
+   "amount": {
+    "min": 4,
+    "max": 10
+   },
+   "unitWorth": 150
+  },
+  "andesite_alloy": {
+   "type": "item",
+   "content": "create:andesite_alloy",
+   "amount": {
+    "min": 4,
+    "max": 12
+   },
+   "unitWorth": 250
+  },
+  "map": {
+   "type": "item",
+   "content": "minecraft:map",
+   "amount": {
+    "min": 1,
+    "max": 2
+   },
+   "unitWorth": 500
   },
   "diamond": {
    "type": "item",

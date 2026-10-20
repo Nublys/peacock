@@ -988,3 +988,17 @@ shader side does not double anything: shaders draw no particles, and every Eupho
 default it is Complementary plus modded-block support). Euphoria's optional Seasons module would double Serene
 Seasons' colouring if a player turns it on.
 
+## Bounty boards pay a newcomer well; board standing is shared (2026-10-20)
+Aaron: "make the initial bounty rewards good, as a way to rope players into the bounty system", unless they already
+return more than goes in. They did not: Bountiful picks rewards first and then objectives worth the same
+(`objectiveModifier` 0), so a delivery broke even, and with iron priced 450 as a reward against 350 as an
+objective, iron-for-anything-for-iron lost. Read from Bountiful 6.0.4's code: a board's level comes from the
+bounties *everyone* has finished on it (2 per level for the first five, then 3, 4, 5 ...; level 10 at 25,
+level 30 at 135), so standing is the board's, not a player's; rewards are weighted by rarity against that level
+(below 5, commons at full weight; from 5 they drop 2.25x, from 15 about 5x). So the hook is in COMMON rewards:
+iron pickaxe, sword and knife, chainmail (uncraftable), goat-fur armour, a waterskin, torches, cooked beef,
+andesite alloy and maps, all priced well under their worth to a new settler; iron 450 → 300 (still above the
+armorer's 4-for-an-emerald, so no loop), lanterns 500 → 350. They fade as the board levels into rarer pay. The
+musket cartridge left the reward pool: it is Blueprint-gated (Blasting), and rewards never are. Not changed: the
+board starts with one random decree, so the capital's journals and rumours depend on luck (proposal pending).
+

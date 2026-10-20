@@ -389,8 +389,8 @@ ENTRIES = {
                 B("Moving troops:") + " a convoy between two of your own towns carries soldiers, who walk the road and can be met on it. Goods only travel to allies."),
         ]),
         ("caravans", "Caravans, Bounties, Markets", "bountiful:bountyboard", [
-            txt(B("Bountiful") + " boards post jobs a town wants done: bring brass, kill pillagers, clear a ruin. Pay is emerald blocks, golden apples, saddles, real enchanted books, and standing with that board.",
-                "Trust pays better: at ten reputation, " + B("sealed rumours") + " (right-click: a map to a boss's home); at fifteen, deeper journals and totems; at thirty, a named weapon."),
+            txt(B("Bountiful") + " boards post jobs: bring brass, kill pillagers. A new board pays in kit (iron tools, chainmail, winter fur); a grown one in emerald blocks, saddles and enchanted books.",
+                "Each finished bounty raises the board's standing, shared by all. At ten, " + B("sealed rumours") + " (a map to a boss); at fifteen, journals and totems; at thirty, a named weapon."),
             craft("bountiful:crafting/bountyboard", "The capital's board works for everyone; a new town can craft its own. Decrees set what a board asks for; Archivist's Records pays in writings."),
             txt(B("Caravans & Convoys") + ": merchant caravans travel between settlements with wagons, and you can run your own. Build a stop and routes open. This is the mid-game economy before rail.",
                 "Pirates and raiders know the roads too."),
