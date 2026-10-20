@@ -902,3 +902,8 @@ Sunbathing Godrays, Allure, Wild Vanilla, Photonics.
 - **AmbientSounds removed** (Aaron): its region loops play animals that are not there — wolf howls, owls, crows,
   frogs, whales. Wind/water/cave reverb remain through Sound Physics Remastered; Subtle Effects adds a few sounds.
 - Every new jar's mandatory dependencies were checked against the pack before shipping (the Stoneholm lesson).
+- 15:46 client crash on join: `Registry Object not present: subtle_effects:item_rarity`. Subtle Effects registers
+  its own particle types; on Forge the client's registries are matched to the server's on join, and the server did
+  not have the mod, so its particles vanished. Subtle Effects (and Fzzy Config) are now `side = "both"` — the mod
+  supports servers. Particle Rain registers particles the same way but does nothing at all on a dedicated server, so
+  it cannot be fixed that way; it stays client-only pending an in-game `/weather rain` test.
