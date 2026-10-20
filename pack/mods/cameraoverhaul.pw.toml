@@ -1,0 +1,13 @@
+name = "Camera Overhaul"
+filename = "CameraOverhaul-v2.1.2-forge+mc[1.20-1.20.5].jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/m0oRwcZx/versions/Apl3bbtA/CameraOverhaul-v2.1.2-forge%2Bmc%5B1.20-1.20.5%5D.jar"
+hash-format = "sha512"
+hash = "a4cfa6b09269fb2937498d46d4af1ed7f04e02be68250e37ffc5cf8c8635d34657922bae8e9a57409365b23e0dbb95e714071a4ccdd49010dbc39b1381a4f45b"
+
+[update]
+[update.modrinth]
+mod-id = "m0oRwcZx"
+version = "Apl3bbtA"

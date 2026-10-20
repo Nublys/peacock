@@ -1,0 +1,13 @@
+name = "Countered's Smooth Steps"
+filename = "smooth_steps-forge-1.1.0.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/5VSZqDK0/versions/xLK3w0o0/smooth_steps-forge-1.1.0.jar"
+hash-format = "sha512"
+hash = "c77517af6b459a6bf2dea6104a3c8ec7bdbf61d5fe838536898268ac7fc47e6ee3121df46e291a70c0c574b8f2d3d2f1db67b53e52603d2425917fd357ea5605"
+
+[update]
+[update.modrinth]
+mod-id = "5VSZqDK0"
+version = "xLK3w0o0"

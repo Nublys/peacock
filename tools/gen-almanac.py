@@ -650,7 +650,7 @@ ENTRIES = {
             txt("Anything you change in the video or shader menus is kept; the profile only sets defaults. Shaders toggle with " + B("K") + ". If frames drop: lower Distant Horizons' radius first, shaders second, render distance last.",
                 "Macs stay on plain Complementary; the Euphoria variant exceeds what macOS OpenGL offers."),
             txt(B("Distant Horizons") + " draws the far terrain from a low-detail copy the server builds as players explore. On a fresh world the horizon fills in over the first hour; a reset world starts over.",
-                "Embeddium, ImmediatelyFast, Entity Culling, ModernFix and FerriteCore are the quiet half of the frame rate; leave them on. Sound Physics (cave echo) is off on potato; AmbientSounds has its own menu."),
+                "Embeddium, ImmediatelyFast, Entity Culling, ModernFix and FerriteCore are the quiet half of the frame rate; leave them on. Sound Physics (cave echo) is off on potato. Particle mods can be turned down in their menus."),
             txt(B("Resource packs") + " ship with the pack and are on by default: Fresh Animations (vanilla mobs and villagers move like living things), Better Leaves, Enhanced Boss Bars, xali's enchanted books and potions, Low on Fire.",
                 "All optional: Options, Resource Packs. Fresh Animations is the only one that costs anything, and only in a crowd."),
         ]),

@@ -30,7 +30,10 @@ EUPHORIA = f"{CR_NAME} + EuphoriaPatches_1.10.5"   # folder Euphoria Patcher gen
 
 # Resource packs shipped in pack/resourcepacks/, enabled in every tier (last = highest priority). Must match the
 # `filename` fields of the .pw.toml files and config/defaultoptions/options.txt.
-RESOURCE_PACKS = '["vanilla","mod_resources","file/Better-Leaves-9.6.zip","file/EnhancedBossBars-1.6.zip","file/xalis-enchanted-books-1.0.0-beta.2.zip","file/xalis-potions-1.2.0.zip","file/LowOnFire-26.3.zip","file/FreshAnimations_v1.10.4.zip"]'
+# Appalachia-style look (2026-10-20): grass, foliage, 3D models, sun & moon, Fresh Animations' add-ons. Later = on top.
+RESOURCE_PACKS = '["vanilla","mod_resources","file/Fast Better Grass.zip","file/rainbows-foliage-vanilla-edition-v2.1.zip","file/3D Default 1.20+ v1.16.0.zip","file/Better-Leaves-9.6.zip","file/EnhancedBossBars-1.6.zip","file/xalis-enchanted-books-1.0.0-beta.2.zip","file/xalis-potions-1.2.0.zip","file/LowOnFire-26.3.zip","file/cubic-sun-moon-v1.8.5.zip","file/FreshAnimations_v1.10.4.zip","file/FA+Details-v2.2.1.zip","file/FA+Objects-v2.1.2.zip"]'
+# potato: no 3D models, no Fresh Animations (or its add-ons) — extra geometry per block/entity
+POTATO_DROP = ['"file/3D Default 1.20+ v1.16.0.zip"', '"file/FreshAnimations_v1.10.4.zip"', '"file/FA+Details-v2.2.1.zip"', '"file/FA+Objects-v2.1.2.zip"']
 
 #          tier          shaders  pack        preset      DH radius  DH transp.  threads  DH quality  options.txt keys
 TIERS = {
@@ -58,6 +61,8 @@ TIERS = {
 PREVIOUS_DEFAULTS = {
     "options.txt.keys": [
         'resourcePacks:["vanilla","mod_resources","file/FreshAnimations_v1.10.4.zip"]',
+        'resourcePacks:' + '["vanilla","mod_resources","file/Better-Leaves-9.6.zip","file/EnhancedBossBars-1.6.zip","file/xalis-enchanted-books-1.0.0-beta.2.zip","file/xalis-potions-1.2.0.zip","file/LowOnFire-26.3.zip","file/FreshAnimations_v1.10.4.zip"]',
+        'resourcePacks:' + '["vanilla","mod_resources","file/Better-Leaves-9.6.zip","file/EnhancedBossBars-1.6.zip","file/xalis-enchanted-books-1.0.0-beta.2.zip","file/xalis-potions-1.2.0.zip","file/LowOnFire-26.3.zip"]',
         # vanilla's own first-launch values (2026-10-18: the launcher kept these as "yours", so screens stayed on)
         "realmsNotifications:true", "onboardAccessibility:true", "skipMultiplayerWarning:false",
         "joinedFirstServer:false", "tutorialStep:movement",
@@ -164,7 +169,10 @@ def main():
         # settings for the plain pack and for the Euphoria folder, so switching packs in-game keeps the tier's preset
         (d / f"shaderpacks/{CR_ZIP}.txt.keys").write_text(txt)
         (d / f"shaderpacks/{EUPHORIA}.txt.keys").write_text(txt)
-        packs = RESOURCE_PACKS if c.get("fresh_animations", True) else RESOURCE_PACKS.replace(',"file/FreshAnimations_v1.10.4.zip"', "")
+        packs = RESOURCE_PACKS
+        if not c.get("fresh_animations", True):
+            for p in POTATO_DROP:
+                packs = packs.replace("," + p, "")
         opts = dict(c["options"], resourcePacks=packs, **COMMON_KEYS)
         (d / "options.txt.keys").write_text("".join(f"{k}:{v}\n" for k, v in opts.items()))
         # Sound Physics Remastered (cave echo, muffling through walls) costs CPU per sound; off on potato only

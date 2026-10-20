@@ -132,7 +132,7 @@ hash = "0bcee95ab75190a082b6922fae3d6c1662c2f31429a8fe6cf3e5f9caa5aecf1e"
 
 [[files]]
 file = "config/defaultoptions/options.txt"
-hash = "44ed4655ec395798facb61162f4899846c1192b763e9a32bf9a62f682419a105"
+hash = "61146a7961877b13320e21d44907318b851b605d84c0a2e7aef1453f0776ad4b"
 
 [[files]]
 file = "config/distraction_free_recipes-client.toml"
@@ -1367,11 +1367,6 @@ hash = "8792ca49f7af7cbc4131d28777c5051f66d8cc021db5c2827b7ffc7506da0e54"
 metafile = true
 
 [[files]]
-file = "mods/ambientsounds.pw.toml"
-hash = "5c006ca7823c362a9b21d5408749d057e2daa885e902d0d97f409101f2ea9bf3"
-metafile = true
-
-[[files]]
 file = "mods/animania-reborn.pw.toml"
 hash = "70e7310a3ea76eb3159f916d48feee00ed8c2d697d9098045a0c41d873347a09"
 metafile = true
@@ -1393,7 +1388,7 @@ metafile = true
 
 [[files]]
 file = "mods/architectury-api.pw.toml"
-hash = "5e9edd1fd2395f14a0c8a4acbdbdd61e1047be1f0033deb3140d2ce0d093e9d8"
+hash = "4e81241ba2da06f425efc5e09fb6b38470125c1581c39e1310c5843a0b96ec76"
 metafile = true
 
 [[files]]
@@ -1404,6 +1399,11 @@ metafile = true
 [[files]]
 file = "mods/balm.pw.toml"
 hash = "cc37ff59be72eda8f46f5cef81c330bed65049ebb91dd68cda5997c80eba1d97"
+metafile = true
+
+[[files]]
+file = "mods/bbrb.pw.toml"
+hash = "d9032cefeb9a35dcb26277e2370a769e107a2a0a00de1e36af8cb27adfddf589"
 metafile = true
 
 [[files]]
@@ -1434,6 +1434,11 @@ metafile = true
 [[files]]
 file = "mods/bountiful.pw.toml"
 hash = "12971220390c277d210e15eb2bb2cfcdf2b696b39118e139f044b6d2c207eb07"
+metafile = true
+
+[[files]]
+file = "mods/cameraoverhaul.pw.toml"
+hash = "2fc95a4f4228c1591fdecc8334d38157d43e1b932a9fedd9b5429f171c84f4fb"
 metafile = true
 
 [[files]]
@@ -1514,6 +1519,16 @@ metafile = true
 [[files]]
 file = "mods/corpse.pw.toml"
 hash = "2c0104bead0631ef3102bb524c6865414676ce0cf3d762b7e446660d55e74715"
+metafile = true
+
+[[files]]
+file = "mods/countereds-smooth-steps.pw.toml"
+hash = "fadee8ca7ad8ff3a6a47f79463147054c13b2ebedf729a0d58e710428de9a493"
+metafile = true
+
+[[files]]
+file = "mods/countereds-terrain-slabs.pw.toml"
+hash = "424165ae4449238fca093e158f7214961e7341852c2acab6b421c00ebc32bdfe"
 metafile = true
 
 [[files]]
@@ -2017,6 +2032,11 @@ hash = "f2ce670820167ff1594c14724c44fb287faaf79d70d18a20162e5d758da84ef5"
 metafile = true
 
 [[files]]
+file = "mods/particle-rain.pw.toml"
+hash = "531d7b76f54c8b4dc9d64194eeb2220ef35166f9e6652aaf07db8cf227f15a0b"
+metafile = true
+
+[[files]]
 file = "mods/particular-reforged.pw.toml"
 hash = "443226b8413e7c2f76da8fb326247b555c3a5340881e9638ef4a48d042cb2f37"
 metafile = true
@@ -2122,8 +2142,18 @@ hash = "7d8f3a08fd4332475ce3930c7fd775c6cfc044ef8c81b8368fbd7bd19ead2012"
 metafile = true
 
 [[files]]
+file = "mods/streams-reflowing.pw.toml"
+hash = "9c0f68b446c53478f397c0b0363d3e630c9b3ce35a0ff550c27fe4d150392848"
+metafile = true
+
+[[files]]
 file = "mods/structory.pw.toml"
 hash = "55ec888a1557983f5746ab4520744583d8861a3b26d0d9528a41b3d72101090b"
+metafile = true
+
+[[files]]
+file = "mods/subtle-effects.pw.toml"
+hash = "748b3b710ae994eb18a848da5fe44eddb048ddbb7f4d97d5fbddde23d74c5d7a"
 metafile = true
 
 [[files]]
@@ -2574,7 +2604,7 @@ hash = "9a0372884381e261ecbbed41dbfdf23d40fef78de32dee6d2f63d37c8a9fc06d"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/tools/performance.json"
-hash = "731d9d68d8b08671bbf545ae68c123b4d48c498c41ac6613555ff39ba31a071f"
+hash = "738c97ac2cc92acdb06cb8ac4ade3b33b89b382f6b91d147fa03a6d7b22caec1"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/tools/voice.json"
@@ -2666,7 +2696,7 @@ hash = "6c9992ee147e8ccada7c03e7efdda90c51cf8ae967281fb080d6323cc54351ca"
 
 [[files]]
 file = "peacock/profiles/_previous/options.txt.keys"
-hash = "42473828c32a70c3354f24288cecc57cc8b84fdaa0f31242d666234f44893379"
+hash = "67c6505e7581c3dbcd5da324235c0c10ef69b0cdbbe66848087cfad2556a23d0"
 
 [[files]]
 file = "peacock/profiles/high/config/DistantHorizons.toml.keys"
@@ -2702,7 +2732,7 @@ hash = "f6a2565056ed10ba270da94e671fa5d7ced8ade044fc8b31a851840f7bce654f"
 
 [[files]]
 file = "peacock/profiles/high/options.txt.keys"
-hash = "0844fb9e28cc95a13ba69ed6432dffe28d11c1239e07f2f7fb9228f9b8b1f168"
+hash = "c01c499db1908bb586df184ca77e9f3a8818b00d079ceaa5210251e73e10720e"
 
 [[files]]
 file = "peacock/profiles/high/shaderpacks/ComplementaryReimagined_r5.9.3 + EuphoriaPatches_1.10.5.txt.keys"
@@ -2746,7 +2776,7 @@ hash = "f6a2565056ed10ba270da94e671fa5d7ced8ade044fc8b31a851840f7bce654f"
 
 [[files]]
 file = "peacock/profiles/low/options.txt.keys"
-hash = "094af5da16ee22df2cb325bd96f8ec040bb37dde10365b90e728ac1a629b4bc0"
+hash = "69fd0c1d05c070e603f31517de35cc44037cfd0d3ca731b80e62c1a08f32c722"
 
 [[files]]
 file = "peacock/profiles/low/shaderpacks/ComplementaryReimagined_r5.9.3 + EuphoriaPatches_1.10.5.txt.keys"
@@ -2790,7 +2820,7 @@ hash = "f6a2565056ed10ba270da94e671fa5d7ced8ade044fc8b31a851840f7bce654f"
 
 [[files]]
 file = "peacock/profiles/medium/options.txt.keys"
-hash = "81559987e1d38dbc80dad4ff02ca18ba208164006be21135f1b33aec7fe0da9b"
+hash = "a7f9372ff44917f6b8d9f63a203d85f5ddd91eaa8a33f9a5eda37acfee056957"
 
 [[files]]
 file = "peacock/profiles/medium/shaderpacks/ComplementaryReimagined_r5.9.3 + EuphoriaPatches_1.10.5.txt.keys"
@@ -2834,7 +2864,7 @@ hash = "fb5ff1984232edecfce6fbfa6deb6374bcd7bf898f58d2c51b9e46cbbbbb78fe"
 
 [[files]]
 file = "peacock/profiles/potato/options.txt.keys"
-hash = "6c14dc751d41711676e9dc2074273cf0c9f801eca0bfc51c3f07f12fdada2260"
+hash = "72c9e7c4e1e1c8513ce862fee4402bbb782662bb212113358d3787a795382b80"
 
 [[files]]
 file = "peacock/profiles/potato/shaderpacks/ComplementaryReimagined_r5.9.3 + EuphoriaPatches_1.10.5.txt.keys"
@@ -2878,7 +2908,7 @@ hash = "f6a2565056ed10ba270da94e671fa5d7ced8ade044fc8b31a851840f7bce654f"
 
 [[files]]
 file = "peacock/profiles/ultra/options.txt.keys"
-hash = "d323ddf992aa81ddbe72e53e85007e5c4af25986c7651013e410721166f17a58"
+hash = "7db49bf5d4eaa22298cf4723c5a3c3b972eae2ad01d421d2e267f87c30c23d99"
 
 [[files]]
 file = "peacock/profiles/ultra/shaderpacks/ComplementaryReimagined_r5.9.3 + EuphoriaPatches_1.10.5.txt.keys"
@@ -2889,13 +2919,38 @@ file = "peacock/profiles/ultra/shaderpacks/ComplementaryReimagined_r5.9.3.zip.tx
 hash = "1253953f4942dcd9cc5dd6fc2ee4f3d951c8a2aec55f48a00e1460baaa2d64a5"
 
 [[files]]
+file = "resourcepacks/3d-default.pw.toml"
+hash = "f4811f10dd9c415cce09209332869beb5a304ff34c4c4e4cf091b13539484117"
+metafile = true
+
+[[files]]
 file = "resourcepacks/better-leaves.pw.toml"
 hash = "eb0b5f269171cd5b891d9bdf2c5da89698e21a71ffec1172ead75bc19411cbdc"
 metafile = true
 
 [[files]]
+file = "resourcepacks/cubic-sun-moon.pw.toml"
+hash = "6d198fcead3ae516d33d9011f3ecf9717a72b963aadea7a6b3ad7f0c7cada070"
+metafile = true
+
+[[files]]
 file = "resourcepacks/enhanced-boss-bars.pw.toml"
 hash = "fad11585397af61bcba766b5ca20de5ed0b9e95bd4ffc734b93aad5a348a7b71"
+metafile = true
+
+[[files]]
+file = "resourcepacks/fast-better-grass.pw.toml"
+hash = "b9362da7ce0d258d671a6b57177fe4816a326efda27ace533be93ce86c611857"
+metafile = true
+
+[[files]]
+file = "resourcepacks/fresh-animations-details.pw.toml"
+hash = "0fbf13d350fe4d7645ca6e01da4f860c18d762666ba3c4f83ba9a91312724853"
+metafile = true
+
+[[files]]
+file = "resourcepacks/fresh-animations-objects.pw.toml"
+hash = "d46d25e5eb08ca03367924784ed88301f53381aa1c581c5510de8deb25f19e0a"
 metafile = true
 
 [[files]]
@@ -2906,6 +2961,11 @@ metafile = true
 [[files]]
 file = "resourcepacks/low-on-fire.pw.toml"
 hash = "70130b75ad199e1090231f079466eca8fad8159080055d7a9fea771df394cdb5"
+metafile = true
+
+[[files]]
+file = "resourcepacks/rainbows-foliage-vanilla-edition.pw.toml"
+hash = "d1aca3ad7c31c5d73fe771552633a3ab4b34076daab78fd588816a8b9b60e34a"
 metafile = true
 
 [[files]]

@@ -886,3 +886,19 @@ no gaps. The world the reroll era left needs nothing: the flag is new, so the cu
   standing wall on the next start (flag `peacock_capital_wall_gates`; ground read two blocks inside the wall).
   Checked against a CTOV-like fake town (roads ending inside): 4 gates and paths on a new world, the same 4 cut into
   an existing wall, nothing on a third boot.
+
+## The Appalachia look, Forge-1.20.1 edition (2026-10-20)
+Aaron liked GOATED's Appalachia pack (Fabric, 1.21.11) and picked from it. Every candidate was checked for a Forge
+1.20.1 build on Modrinth; unavailable: Wilder Wild, Terrestria, Boids/Birds, Cicada, Cool Rain, Wet Sand, Resonance,
+Sunbathing Godrays, Allure, Wild Vanilla, Photonics.
+- **Client only (no server cost, any world):** Subtle Effects (+ Fzzy Config, already present), Particle Rain, Camera
+  Overhaul, Countered's Smooth Steps, Better Biome Reblend; texture packs Fast Better Grass, rainbow's foliage,
+  3D Default, Fresh Animations Details + Objects, Cubic Sun & Moon — on in every profile, `potato` without 3D Default
+  and the Fresh Animations family. The old shipped pack lists are in `_previous`, so players who never changed
+  their packs get the new list. Better Animations left out: its 1.20.1 version declares Fabric API.
+- **Worldgen (server cost, new chunks only):** Streams Reflowing and Countered's Terrain Slabs (beta on 1.20.1;
+  bundles polymixin). To be tried on a test world first: capital still found, wall/boards behave, boot time and
+  TPS while travelling; pre-generate around the capital with Chunk Pregenerator (not Chunky: DH 3.3.3 crashes with it).
+- **AmbientSounds removed** (Aaron): its region loops play animals that are not there — wolf howls, owls, crows,
+  frogs, whales. Wind/water/cave reverb remain through Sound Physics Remastered; Subtle Effects adds a few sounds.
+- Every new jar's mandatory dependencies were checked against the pack before shipping (the Stoneholm lesson).

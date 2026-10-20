@@ -108,9 +108,13 @@ Marked `side = "server"` in `pack/mods/`, so they install here and never on a cl
 - **Chunk Pregenerator** (server) — real-chunk pre-generation. Chunky is out for good (DH 3.3.3 binds to Chunky's
   API and crashes); DH has no hook into this one. With nobody on, from the console:
   ```
-  pregen start gen radius peacock SQUARE 0 0 128 minecraft:overworld
+  pregen start gen radius peacock SQUARE <cx> <cz> 128 minecraft:overworld
   ```
-  (radius in **chunks**: 128 = 2 km each way, ~65k chunks, a few hours on 8 cores; `pregen taskList` to watch,
+  Centre it on the capital, not 0,0: since 2026-10-20 spawn is wherever Village Spawn Point found the capital
+  (the `[Village Spawn Point] Village found!` boot, then the spawn coordinates in the first login line or
+  `/peacock wall`'s log). The mod counts in **chunks** — confirm with `pregen help` whether its centre is chunk
+  coordinates (block ÷ 16) or blocks on the installed version.
+  (radius 128 = 2 km each way, ~65k chunks, a few hours on 8 cores; `pregen taskList` to watch,
   `pregen stop peacock` to stop, `pregen help` for the exact syntax of the installed version). The mod idles
   when no task runs.
 - **Distant Horizons generation mode** is `INTERNAL_SERVER` (since 2026-10-18): DH asks the *server* to generate

@@ -4,7 +4,7 @@ graphicsMode:2
 particles:0
 entityShadows:true
 biomeBlendRadius:5
-resourcePacks:["vanilla","mod_resources","file/Better-Leaves-9.6.zip","file/EnhancedBossBars-1.6.zip","file/xalis-enchanted-books-1.0.0-beta.2.zip","file/xalis-potions-1.2.0.zip","file/LowOnFire-26.3.zip","file/FreshAnimations_v1.10.4.zip"]
+resourcePacks:["vanilla","mod_resources","file/Fast Better Grass.zip","file/rainbows-foliage-vanilla-edition-v2.1.zip","file/3D Default 1.20+ v1.16.0.zip","file/Better-Leaves-9.6.zip","file/EnhancedBossBars-1.6.zip","file/xalis-enchanted-books-1.0.0-beta.2.zip","file/xalis-potions-1.2.0.zip","file/LowOnFire-26.3.zip","file/cubic-sun-moon-v1.8.5.zip","file/FreshAnimations_v1.10.4.zip","file/FA+Details-v2.2.1.zip","file/FA+Objects-v2.1.2.zip"]
 key_key.ftbchunks.map:key.keyboard.unknown
 key_key.ftbchunks.claim_manager:key.keyboard.j
 key_key.ftbchunks.toggle_minimap:key.keyboard.unknown

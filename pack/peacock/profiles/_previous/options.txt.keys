@@ -1,4 +1,6 @@
 resourcePacks:["vanilla","mod_resources","file/FreshAnimations_v1.10.4.zip"]
+resourcePacks:["vanilla","mod_resources","file/Better-Leaves-9.6.zip","file/EnhancedBossBars-1.6.zip","file/xalis-enchanted-books-1.0.0-beta.2.zip","file/xalis-potions-1.2.0.zip","file/LowOnFire-26.3.zip","file/FreshAnimations_v1.10.4.zip"]
+resourcePacks:["vanilla","mod_resources","file/Better-Leaves-9.6.zip","file/EnhancedBossBars-1.6.zip","file/xalis-enchanted-books-1.0.0-beta.2.zip","file/xalis-potions-1.2.0.zip","file/LowOnFire-26.3.zip"]
 realmsNotifications:true
 onboardAccessibility:true
 skipMultiplayerWarning:false
