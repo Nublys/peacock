@@ -4,9 +4,9 @@
 // until one fits, so the plaza took every slot no house fitted, whatever its weight: 50+ boards along one street.
 // Instead this places two boards once per world, beside the town bell when the capital's centre has one (CTOV's
 // plains square does, at the well), else just outside the centre piece's corners (the fortified variant's keep has
-// no bell). A spot must be open ground — the first solid block from the sky is ground, not a roof or a road — with
+// no bell), then on rings out to 40 blocks, and as a last resort beside world spawn — there are always two. A spot must be open ground — the first solid block from the sky is ground, not a roof or a road — with
 // two blocks of air above it. Runs 5 s after the first load; `peacock_capital_boards` in server persistentData
-// marks it done (also when spawn has no capital, so it never rescans).
+// marks it done. With no capital at spawn the two go beside spawn.
 //
 // Rhino notes (see tools/validate.py): `var` inside functions, no `const`/`let` in try blocks, no Math constants.
 ;(() => {
@@ -53,14 +53,44 @@ function candidates(bb, bell) {
   }
   var m = 2
   out.push([bb.minX() - m, bb.minZ() - m], [bb.maxX() + m, bb.maxZ() + m], [bb.maxX() + m, bb.minZ() - m], [bb.minX() - m, bb.maxZ() + m])
+  // then wider rings around the square's centre, 16 directions out to 40 blocks: some open ground always turns up
+  var cx = (bb.minX() + bb.maxX()) >> 1, cz = (bb.minZ() + bb.maxZ()) >> 1
+  var ring = [[1, 0], [0, 1], [-1, 0], [0, -1], [1, 1], [-1, 1], [-1, -1], [1, -1], [2, 1], [1, 2], [-1, 2], [-2, 1], [-2, -1], [-1, -2], [1, -2], [2, -1]]
+  for (var r = 12; r <= 40; r += 4)
+    for (var k = 0; k < ring.length; k++) {
+      var len = Math.sqrt(ring[k][0] * ring[k][0] + ring[k][1] * ring[k][1])
+      out.push([cx + Math.round(ring[k][0] / len * r), cz + Math.round(ring[k][1] / len * r)])
+    }
   return out
+}
+
+// last resort, so there are always boards: beside the world spawn, on whatever stands there
+function lastResort(level, placed) {
+  var sp = level.getSharedSpawnPos()
+  var spots = [[2, 0], [-2, 0], [0, 2], [0, -2], [3, 3], [-3, -3]]
+  for (var i = 0; i < spots.length && placed.length < 2; i++) {
+    var x = sp.getX() + spots[i][0], z = sp.getZ() + spots[i][1]
+    for (var y = sp.getY() + 8; y > sp.getY() - 8; y--) {
+      var id = String(level.getBlock(x, y, z).id)
+      if (SOFT.test(id)) continue
+      if (/water|lava/.test(id)) break
+      level.getBlock(x, y + 1, z).set(BOARD)
+      placed.push([x, y + 1, z])
+      break
+    }
+  }
 }
 
 function place(server) {
   var level = server.overworld()
   var log = m => console.info('[peacock] capital boards: ' + m)
   var start = capitalStart(level)
-  if (!start) { log('no capital at world spawn — none placed'); return true }
+  if (!start) {
+    var near = []
+    lastResort(level, near)
+    log('no capital at world spawn — ' + near.length + ' placed beside spawn' + (near.length ? ': ' + near.map(p => p.join(',')).join(' and ') : ''))
+    return true
+  }
   // getPieces() is a JDK immutable list (ImmutableCollections$ListN), whose members Rhino may not reflect on
   // ("IllegalAccessException … ListN", 2026-10-20 14:34): copy it into an ArrayList first
   var ArrayList = Java.loadClass('java.util.ArrayList')
@@ -79,6 +109,7 @@ function place(server) {
     level.getBlock(x, y, z).set(BOARD)
     placed.push([x, y, z])
   }
+  if (placed.length < 2) lastResort(level, placed)
   log(placed.length + ' placed ' + (bell ? 'by the bell at ' + bell.x + ',' + bell.y + ',' + bell.z : '(no bell on the square)') +
       (placed.length ? ': ' + placed.map(p => p.join(',')).join(' and ') : ''))
   return true

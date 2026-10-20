@@ -1286,7 +1286,7 @@ hash = "3124630fabe5d255e997dfb4b00c9a823506380dec19fee7e23404fab6f2fa4d"
 
 [[files]]
 file = "kubejs/server_scripts/capital_boards.js"
-hash = "d9a08973a91a59d0dac4860e3886a36a0e66c42db74358616a2b2b18996c5860"
+hash = "7f1b365f17205f8f797d9157132a60d5f1e59335a4639d4da56c1b2e6a717cf6"
 
 [[files]]
 file = "kubejs/server_scripts/cave_loot.js"

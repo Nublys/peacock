@@ -861,3 +861,8 @@ is the safety net for the rare far one.
   New Town" (the forty raise a tower on clean ground, three rules, grain for the capital), and a Sealed Rumour,
   "smoke from a new tower" (exploration map to `village_recruits:tower_spawner`, search radius 20), as an UNCOMMON
   mapper-board reward. The Almanac's New Towns page says towers rise only when someone walks near.
+- 14:34: `capital_boards.js` failed on its first run — `start.getPieces()` is a JDK immutable list
+  (`ImmutableCollections$ListN`) whose members Rhino cannot reflect on. Copied into an `ArrayList` first
+  (reproduced and verified in the same Rhino). Aaron: "just need to ensure there are boards", so the search now
+  widens to rings out to 40 blocks from the square, and as a last resort puts the two beside world spawn on
+  whatever stands there; with no capital at spawn they go beside spawn too.
