@@ -45,20 +45,21 @@ thread dump *before* restarting. On the node, with the server's UUID as the cont
 
     docker exec 59f52550-697a-48ee-8c94-83c2d0a54d7b sh -c 'kill -3 $(pidof java)'
 
-(Since the seed reroll, `peacock-start.sh` stays running as process 1 and Java is its child, so the signal goes
-to Java's own PID, not to 1.)
+(`peacock-start.sh` stays running as process 1 and Java is its child, so the signal goes to Java's own PID,
+not to 1.)
 
 The JVM prints every thread's stack to the console; copy it. The watchdog does the same on its own
 after `max-tick-time`, then stops the server. Either dump is what identifies the mod at fault.
 
-**A new world** (stop the server, delete or rename the world folder, start): the server checks that the
-capital generated at spawn (and that no Village Recruits tower can generate right beside it). If not, and the world is brand new (under two minutes old, nobody has ever
-joined, nobody online), it stops itself and `peacock-start.sh` deletes that world and starts again on a fresh
-random seed — the console shows `[peacock] reroll: no capital on this seed … attempt N of 15` and then
-`[peacock] reroll N: … deleting world`. Each try is one boot (several minutes on this host); expect a few. It
-never deletes a world whose `playerdata/` has anything in it, gives up after 15 tries in a row (keeping the last
-world), and is off with `"capitalReroll": false` in `kubejs/config/peacock.json`. A fixed `level-seed` in
-`server.properties` is cleared on a reroll.
+**A new world** (stop the server, delete or rename the world folder, start): Village Spawn Point finds the
+nearest capital (a large CTOV town on temperate land, one candidate every ~2,000 blocks) while the world is
+created and moves spawn into it — `[Village Spawn Point] Village found! The world will now generate.` in the log.
+Any seed works; there is no reroll any more (retired 2026-10-20).
+
+**Shutdowns:** after `Finished unloading server configs`, Java can take a minute or so to exit (idle thread pools
+time out). `peacock-start.sh` watches every shutdown: if Java is still running 120 s after it began
+(`PEACOCK_HANG_GRACE`), it writes a thread dump to `logs/peacock-hang-<time>.txt`, notes it in
+`logs/peacock-reroll.log`, and kills Java. Everything is saved by then.
 
 **Backups & schedules:** use Pterodactyl's. Take a backup before any start that follows a
 pack version bump; a schedule with a daily backup task is enough for a small server.

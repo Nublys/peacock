@@ -261,6 +261,10 @@ and nature answered with sickness and monsters — is never stated in-game; the 
   has none in reach, the same script founds the capital on surveyed flat, dry land near the origin and moves
   spawn there (`capitalFound`, 2026-10-19 — the sixth world had spawned in mid-ocean). The ruins' zombie-owner pieces got
   the jigsaw block they were missing.
+- ✅ **Capital simplified** (2026-10-20): about 25 seeds in a row had no capital at the one fixed position near the
+  origin, so the capital is now a large living CTOV plains town on temperate land, one candidate per ~2,000 blocks,
+  and Village Spawn Point moves spawn into the nearest one. The reroll, the script wall and the founder are gone;
+  Terralith's castle town stays silenced. Bounty boards come from a 3x3 plaza in the capital's house pool.
 - Open: first play of all of the above (do the ruins' chests roll? does the founder fire and place cleanly when the seed is bad (`[peacock] found:` lines)?
   do Rust Belt pieces sit flush — `start_height` assumes the heightmap is the first air block); Snow! Real
   Magic! on Create tracks (blacklist if it accumulates); whether `bountiful.decree.archivist.name` or the

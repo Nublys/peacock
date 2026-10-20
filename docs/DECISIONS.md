@@ -790,3 +790,26 @@ with `<&0`, so the panel console still works) beside a watchdog: once shutdown b
 goes to `logs/peacock-hang-<time>.txt` (plus `kill -3` into the console), and Java is killed. The next hang names
 the thread; the real fix follows from it. The reroll count is also written by the script itself, so a killed stop
 still counts toward the 15.
+
+## The capital is a scattered large CTOV town; reroll, wall and founder retired (2026-10-20)
+Overnight the reroll ran unattended through its 15 tries and found no capital on any of them — about 25 seeds in a
+row with 2026-10-19's — so the one-fixed-position design was the problem, not luck. Aaron: "The capital village just
+has to be a large CTOV village in a comfortable temperature biome, and a good terrain", walls and Terralith optional.
+- `peacock:capital` = CTOV's large plains village (start pool `ctov:village/biome/plains`, normal town centre or the
+  keep), `size` 7 (CTOV's large is 5), `max_distance_from_center` 116, biomes `#peacock:capital_biomes` (unchanged).
+  Placement: `random_spread` 128/64 — one candidate per ~2,000 blocks, kept only on a capital biome.
+- Village Spawn Point (`#peacock:capital`) finds the nearest at world creation; Collective's search behind it is
+  `findNearestMapStructure(…, 100, false)`, 100 spacings out, so a qualifying town is found on any seed. A jigsaw
+  structure's biome test needs only its start position (the piece layout is deferred), so failed candidates are cheap.
+- Several capitals exist, thousands of blocks apart (the Almanac now says "a few old towns live on, far apart").
+  Ruins (14 chunks), nature pieces (10) and war camps (14) keep clear of every candidate via their exclusion zones on
+  `peacock:capital`; Village Recruits' keep-out follows the world spawn, so the spawn capital stays neutral.
+- Bounty boards: a 3x3 plaza at weight 5 in CTOV's plains house pool (now used only by the capital). CTOV's streets
+  carry their house jigsaws one block above the road surface, its houses at their own y=0 (checked in the jar), so the
+  plaza's path is layer 0 and its `building_entrance` jigsaw sits at y=1.
+- Removed: `capital_reroll.js`, `capital_wall.js` (wall, `/peacock wall`, `/peacock found`), the `capitalWall`,
+  `capitalFound`, `capitalReroll` switches, and the Terralith fortified-village overrides (its set stays at frequency 0).
+  `peacock-start.sh` keeps its loop and hang watchdog and now clears a stale reroll marker before each start: the
+  21:48 "hang" dump was a booting server (main thread in `PlayerRespawnLogic`), killed because a marker left by a
+  panel-killed server made the watchdog think a shutdown had begun. Across the ten real reroll stops after it, Java
+  always exited within 120 s; the slow exits are idle non-daemon pools (LuckPerms' HTTP client, IO workers) timing out.

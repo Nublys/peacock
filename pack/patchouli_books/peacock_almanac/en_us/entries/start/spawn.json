@@ -6,7 +6,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Everyone spawns in the same village: the $(bold)capital$(), the last old town standing — a walled castle town with a keep. It has a bell, villagers with trades, beds and bounty boards. It is the first market and the first thing raiders come for.$(br2)Claim a bed early. There is no fast travel; the way home matters. Every other old stone village is a ruin ($(l:patchouli:story/dead_towns)The Dead Towns$())."
+      "text": "Everyone spawns in the same village: the $(bold)capital$(), a large old town that held on. It has a bell, villagers with trades, beds and bounty boards. It is the first market and the first thing raiders come for.$(br2)Claim a bed early. There is no fast travel; the way home matters. Almost every other old stone village is a ruin ($(l:patchouli:story/dead_towns)The Dead Towns$())."
     },
     {
       "type": "patchouli:text",
@@ -14,7 +14,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)First night:$() stay inside the wall. Mobs here are tougher and smarter than you remember, and the village guards will not chase them for you.$(br2)Mark the capital on your $(l:patchouli:tools/atlas)atlas$() before you leave it. The capital will grow as the server does; nothing you build there is wasted."
+      "text": "$(bold)First night:$() stay in town, indoors. Mobs here are tougher and smarter than you remember, and the village guards will not chase them for you.$(br2)Mark the capital on your $(l:patchouli:tools/atlas)atlas$() before you leave it. The capital will grow as the server does; nothing you build there is wasted."
     },
     {
       "type": "patchouli:text",

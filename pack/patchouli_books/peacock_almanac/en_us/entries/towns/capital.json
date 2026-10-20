@@ -6,7 +6,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "The capital is the village you spawned in and the only old town alive. It is the one shared spawn: settlers arrive there, raids are drawn to it, and the first station, dock and market will be there.$(br2)It belongs to everyone; no faction can claim it or found a town in it. Build in it, but build with the town, not over it."
+      "text": "The capital is the village you spawned in, the nearest of the few old towns still alive. It is the one shared spawn: settlers arrive there, raids are drawn to it, and the first station, dock and market will be there.$(br2)It belongs to everyone; no faction can claim it or found a town in it. Build in it, but build with the town, not over it."
     },
     {
       "type": "patchouli:text",
@@ -14,7 +14,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Growing it:$() more beds and workstations draw more villagers; Village Expansion lets a town build itself out; guards hold the wall; workers tend the fields.$(br2)Villagers have names (Villager Names). Learn them. The one who sells the thing you need will be gone if the raid gets through."
+      "text": "$(bold)Growing it:$() more beds and workstations draw more villagers; Village Expansion lets a town build itself out; guards hold the streets; workers tend the fields.$(br2)Villagers have names (Villager Names). Learn them. The one who sells the thing you need will be gone if the raid gets through."
     }
   ]
 }

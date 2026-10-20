@@ -6,7 +6,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Enhanced Celestials gives the moon moods. A chat line announces each one at dusk.$(br2)$(bold)Blood Moon:$() the undead come thick, and keep coming. Stay inside the wall.$(br)$(bold)Harvest Moon:$() crops give more.$(br)$(bold)Blue Moon:$() luck; fish and loot are kinder.$(br)$(bold)Super Moon:$() slimes."
+      "text": "Enhanced Celestials gives the moon moods. A chat line announces each one at dusk.$(br2)$(bold)Blood Moon:$() the undead come thick, and keep coming. Stay indoors.$(br)$(bold)Harvest Moon:$() crops give more.$(br)$(bold)Blue Moon:$() luck; fish and loot are kinder.$(br)$(bold)Super Moon:$() slimes."
     },
     {
       "type": "patchouli:text",

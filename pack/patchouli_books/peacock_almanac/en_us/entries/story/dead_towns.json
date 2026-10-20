@@ -14,7 +14,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "The only old town alive is the $(bold)capital$(), where you woke: a walled castle town with a keep and a church. It is neutral ground: no faction can take it or found one in it. Raids are its only threat, and the moment you are needed.$(br2)Smaller things litter the land between: fallen logs, cairns, a derailed cart, a platform where the morning engine never came. Read them. They are the same story told in blocks."
+      "text": "A few old towns live on, far apart. The nearest is the $(bold)capital$(), where you woke. It is neutral ground: no faction can take it or found one in it. Raids are its only threat, and the moment you are needed.$(br2)Smaller things litter the land between: fallen logs, cairns, a derailed cart, a platform where the morning engine never came. Read them. They are the same story told in blocks."
     }
   ]
 }

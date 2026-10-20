@@ -9,9 +9,9 @@ Reads ChoiceTheorem's Overhauled Village jar and writes a Paxi datapack
   ruin_h  — pillager-held: lighter decay, no villagers, pillagers / vindicators /
             evokers spawning inside the bounds, chests swapped to plunder.
 
-plus the CAPITAL: Terralith's walled `fortified_village` placed 5–10 chunks from
-the world origin by a concentric_rings set (count 1); Terralith's own placements of
-it are silenced.  Village Spawn Point sends every new player there (#peacock:capital).
+plus the CAPITAL: a large living CTOV plains town (`peacock:capital`) on temperate land,
+one candidate per ~2,000 blocks (random_spread 128/64); Terralith's castle town is
+silenced.  Village Spawn Point moves the world spawn into the nearest one (#peacock:capital).
 
 Why NBTs are copied: CTOV's jigsaw blocks name their target pools INSIDE the
 .nbt files (ctov:village/plains/house …), so a ruin that only changed JSON would
@@ -276,10 +276,10 @@ def bounty_post_piece() -> bytes:
     for x in range(3):
         for z in range(3):
             blocks.append({"pos": [x, 0, z], "state": 0})
-    # Terralith's fortified streets carry their house jigsaws one block above the road surface and target
-    # `minecraft:entrance` (CTOV's use `building_entrance` at road level); ours sits at y=1 on the plaza's
-    # front edge, facing north out of it
-    blocks.append({"pos": [1, 1, 0], "state": 5, "nbt": jigsaw_nbt("minecraft:entrance", final_state="minecraft:air")})
+    # CTOV's plains streets carry their house jigsaws (target `minecraft:building_entrance`) one block above the road
+    # surface, and its houses carry theirs at their own y=0 (checked in the jar, 2026-10-20). So the plaza's path is
+    # layer 0 and its jigsaw sits on top of the front-edge path block at y=1, facing north out of the plaza.
+    blocks.append({"pos": [1, 1, 0], "state": 5, "nbt": jigsaw_nbt("minecraft:building_entrance", final_state="minecraft:air")})
     blocks += [{"pos": [1, 1, 1], "state": 1}, {"pos": [2, 1, 2], "state": 2}, {"pos": [2, 2, 2], "state": 3},
                {"pos": [0, 1, 2], "state": 4}]
     f = nbtlib.File({
@@ -422,48 +422,37 @@ def main() -> None:
                {"structures": set_entries, "placement": placement})
 
     # ---------------------------------------------------------------- the capital
-    # Terralith ships a castle town, `terralith:fortified_village` (a 40-block castle, its own houses, church,
-    # library, deepslate streets) in its `rare_village` set. Neither it nor CTOV's "fortified" variants has a
-    # perimeter wall — kubejs/server_scripts/capital_wall.js builds that. Since 2026-10-18 the capital IS
-    # Terralith's fortified village: one concentric-ring
-    # position near the origin, and the structure overridden to accept any village-able biome so that one roll
-    # cannot fail. Terralith's own set is silenced (frequency 0) so the capital stays the only living old town.
-    tj = terralith_jar()
-    cap = json.loads(tj.read("data/terralith/worldgen/structure/fortified_village.json"))
-    # Gentle land only. The ring placement has exactly one position; `preferred_biomes` nudges it onto a
-    # #peacock:capital_biomes biome if one lies within 112 blocks (vanilla's fixed search radius), and this
-    # field decides whether the structure then generates at all. A catch-all here (`#minecraft:is_overworld`,
-    # 2026-10-18) put the sixth world's capital in mid-ocean; a strict list means a bad seed gets no capital at
-    # all (the script founder in capital_wall.js is off at boot: too slow on this host). The nudge itself rarely
-    # helps here: vanilla searches biomes at y=0, which Terralith fills with cave biomes. So the capital stands on
-    # temperate, low, dry land or not at all — never in water, mountains, jungle, swamp, desert or snow.
+    # Since 2026-10-20 the capital is a large living CTOV plains town (Aaron: "just a large CTOV village in a
+    # comfortable temperature biome, and a good terrain"; the walls and Terralith's castle dropped). It is no longer
+    # one fixed position near the origin — about 25 seeds in a row on 2026-10-19 had no capital there, and the reroll
+    # never found one — but a sparse random spread: one candidate per 128x128 chunks (~2,000 blocks), kept only on a
+    # #peacock:capital_biomes biome. Village Spawn Point (locateVillageTag #peacock:capital) moves the world spawn
+    # into the nearest one when the world is created; it searches 100 spacings out, i.e. the whole world. Other
+    # capitals stand thousands of blocks apart. Ruins, nature pieces and war camps keep clear of every candidate
+    # through their exclusion zones on `peacock:capital`.
+    ctov_large = json.loads(z.read("data/ctov/worldgen/structure/large/village_plains.json"))
+    cap = dict(ctov_large)
     cap["biomes"] = "#peacock:capital_biomes"
     cap["spawn_overrides"] = {}
-    cap["size"] = 7                       # Terralith's 6: a larger capital
+    cap["size"] = 7                        # CTOV's large is 5: a bigger town
     cap["max_distance_from_center"] = 116
-    write_json("data/terralith/worldgen/structure/fortified_village.json", cap)
-    # Terralith's start pool is 1 empty : 3 castle — one capital in four would be nothing at all (and Village
-    # Spawn Point would then fall back to the nearest ruin: "the spawn village has no walls and is tiny").
-    starts = json.loads(tj.read("data/terralith/worldgen/template_pool/village/fortified/starts.json"))
-    starts["elements"] = [e for e in starts["elements"] if e["element"].get("element_type") != "minecraft:empty_pool_element"]
-    write_json("data/terralith/worldgen/template_pool/village/fortified/starts.json", starts)
-    # Terralith's road pool ends more often than it continues (straight2 and bend2 carry houses but no onward
-    # road, and are the heaviest entries): from the castle's four roads that averages a castle and four houses
-    # (2026-10-18, "tiny"). Re-weight toward continuing roads; size 7 above gives them room to run.
-    roads = json.loads(tj.read("data/terralith/worldgen/template_pool/village/fortified/roads.json"))
-    REWEIGHT = {"straight2": 8, "bend2": 4, "term1": 1, "term2": 1, "term3": 1, "term4": 1,
-                "straight1": 22, "bend1": 18, "t1": 9, "t2": 9, "inter1": 9, "intersection_big": 2}
-    for e in roads["elements"]:
-        key = e["element"].get("location", "").rsplit("/", 1)[-1]
-        if key in REWEIGHT:
-            e["weight"] = REWEIGHT[key]
-    write_json("data/terralith/worldgen/template_pool/village/fortified/roads.json", roads)
-    cap_ids = ["terralith:fortified_village"]
+    write_json("data/peacock/worldgen/structure/capital.json", cap)
+    cap_ids = ["peacock:capital"]
     write_json("data/peacock/worldgen/structure_set/capital.json", {
         "structures": [{"structure": s, "weight": 1} for s in cap_ids],
-        "placement": {"type": "minecraft:concentric_rings", "distance": 2, "spread": 1, "count": 1,
-                      "preferred_biomes": "#peacock:capital_biomes", "salt": 20260918},
+        "placement": {"type": "minecraft:random_spread", "spacing": 128, "separation": 64, "salt": 20260918},
     })
+    # Bounty boards: a 3x3 plaza in the capital's house pool (CTOV's plains pools now serve only the capital: every
+    # other CTOV village is a ruin with its own peacock:ruin_* pools). Low weight, because jigsaw tries the next
+    # element when a piece does not fit, so a small piece wins slots no house fits (Terralith's castle got twenty).
+    house = json.loads(z.read("data/ctov/worldgen/template_pool/village/plains/house.json"))
+    house["elements"].append({"weight": 5, "element": {"element_type": "minecraft:single_pool_element", "projection": "rigid",
+                                                       "processors": "minecraft:empty", "location": "peacock:capital/bounty_post"}})
+    write_json("data/ctov/worldgen/template_pool/village/plains/house.json", house)
+    (OUT / "data/peacock/structures/capital").mkdir(parents=True, exist_ok=True)
+    (OUT / "data/peacock/structures/capital/bounty_post.nbt").write_bytes(bounty_post_piece())
+    # Terralith's own castle town stays silenced: the capital is the CTOV town
+    tj = terralith_jar()
     rare = json.loads(tj.read("data/terralith/worldgen/structure_set/rare_village.json"))
     rare["placement"]["frequency"] = 0.0
     write_json("data/terralith/worldgen/structure_set/rare_village.json", rare)
@@ -485,9 +474,7 @@ def main() -> None:
     write_json("data/peacock/tags/worldgen/biome/capital_biomes.json", {"replace": False, "values": capital_biomes})
     write_json("data/peacock/tags/worldgen/structure/capital.json", {"replace": False, "values": cap_ids})
 
-    # (Bounty boards are NOT pool-injected: a 3x3 board piece fits wherever a house does not, so it won most
-    # contested slots and the capital had twenty boards. capital_wall.js places one inside each gate instead.)
-    print("capital: terralith:fortified_village (temperate biomes only, rare_village silenced)")
+    print("capital: peacock:capital (CTOV large plains, size 7, temperate biomes, spread 128/64; rare_village silenced)")
     ruin_ids = [e["structure"] for e in set_entries]
     write_json("data/peacock/tags/worldgen/structure/ruins.json", {"replace": False, "values": ruin_ids})
     write_json("data/minecraft/tags/worldgen/structure/village.json",

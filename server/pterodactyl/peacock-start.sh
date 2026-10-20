@@ -49,10 +49,10 @@ GC_FLAGS="-XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:
 # Override with PEACOCK_HEAP_PERCENT (or set an explicit -Xmx in user_jvm_args.txt and leave this alone).
 HEAP_PERCENT="${PEACOCK_HEAP_PERCENT:-75.0}"
 
-# Seed reroll (kubejs/server_scripts/capital_reroll.js): on a brand-new world with no capital the server writes
-# kubejs/config/peacock-reroll.json and stops itself; this loop deletes that world and starts again on a new
-# random seed. Java runs in the foreground (not exec) so the console stays attached; with no marker the script
-# exits with the server's own exit code, exactly as before.
+# Seed reroll loop. The capital reroll script that requested rerolls was retired on 2026-10-20 (the capital is now
+# a scattered CTOV town that Village Spawn Point finds on any seed), so nothing writes the marker any more and the
+# loop runs Java once and exits with its code. Kept for the hang watchdog below and in case a reroll ever returns:
+# a kubejs/config/peacock-reroll.json written by a script makes this loop delete the world and start a new seed.
 MARKER="kubejs/config/peacock-reroll.json"
 COUNT="kubejs/config/peacock-reroll-count.json"
 # every reroll decision is also appended here: the console scrolls away, this file does not
@@ -92,6 +92,9 @@ watchdog() {
 
 while true; do
   mkdir -p logs; touch "${STARTED}"
+  # a marker left by a server that was killed before this loop saw it is stale: it would make the watchdog think a
+  # shutdown had begun and kill this boot after HANG_GRACE seconds (2026-10-19 21:48 — the "hang" dump was a boot)
+  rm -f "${MARKER}"
   # Java runs in the background so the watchdog can see it; <&0 keeps the panel console connected to it.
   java -Xms128M -XX:MaxRAMPercentage="${HEAP_PERCENT}" ${GC_FLAGS} \
     -Dterminal.jline=false -Dterminal.ansi=true \

@@ -333,7 +333,7 @@ hash = "3b6236845f6a5ff8804487b63b0d74305b91316dc9a008362838607b0be3bd8e"
 
 [[files]]
 file = "config/paxi/datapacks/peacock-ruins.zip"
-hash = "7387a0cf3eaa5d9257b17f906b4af5e87dd85841334389691a1cabe9053a387e"
+hash = "d262d4697ef37f545f39f6edc4380c6433917a11012a7e476ae8556706b1414c"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/animania/tags/worldgen/biome/amphibian_habitats.json"
@@ -1258,7 +1258,7 @@ hash = "b5d72b6da9c50a6a18cd9bbec34c01e09a4bf8ebebaf71cb03ec093bbaafbeba"
 
 [[files]]
 file = "kubejs/config/peacock.json"
-hash = "42e2d46749dfa8a3356d9c62e371dbba5875fdae28bb7a746460b2350d94295a"
+hash = "8cd2c4d30dfa71408879738a6211c7e06d8293750868485dd0f193a9178ec85d"
 
 [[files]]
 file = "kubejs/server_scripts/achievements.js"
@@ -1271,14 +1271,6 @@ hash = "6c16de3bde6076f6ec0da4ebd480c8735ccf8fa032f4e85e95190172687d008b"
 [[files]]
 file = "kubejs/server_scripts/blueprints.js"
 hash = "3124630fabe5d255e997dfb4b00c9a823506380dec19fee7e23404fab6f2fa4d"
-
-[[files]]
-file = "kubejs/server_scripts/capital_reroll.js"
-hash = "f6bbd01c41a8520048ee71cd111a024b939b7d6885551076bda4729f542364e0"
-
-[[files]]
-file = "kubejs/server_scripts/capital_wall.js"
-hash = "97fe3ee95e26a26f97eb2c194169e5591c6c5fdb724b8ad7f69bf98a865c9322"
 
 [[files]]
 file = "kubejs/server_scripts/cave_loot.js"
@@ -2394,7 +2386,7 @@ hash = "3b2191f5f0de47fc2a4359eecde330fe7580ef5e8d18acc0820f0e866582c775"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/land/sky.json"
-hash = "3425a682ef7b50bc90018492db9bd806e0aed3ecdb39c9f8e24ca77cd4fd24d6"
+hash = "71f34a746c5feac65124262d535c4ac22aba24e4ac14dd9f20f5807a4c17f593"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/land/terrain.json"
@@ -2478,11 +2470,11 @@ hash = "5a2ec56b77a366cc85aabd7cc2509ae6b23e83567b5cc9765feb2d06f6d0e445"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/start/spawn.json"
-hash = "f4a935b3cb59c443cf1de4805bba52c5c9fcd9b1e6759f49d52c9357a8c51f94"
+hash = "737a52f4a008c0e5aa9371ed9af676659a0db55d4dde6c33ea343197fa3b5db4"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/story/dead_towns.json"
-hash = "7fe0acd9297a1fac716c55149a7c935b580a00b901e37d3b9647ddc16dcf484b"
+hash = "4ac727a005d31c34e6721a71d066bfc53407056902867f0710b69f88072b6dc3"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/story/found_writings.json"
@@ -2566,7 +2558,7 @@ hash = "8b170b12e24414da8c4356402655e08914b4bf20a8bf06f2afbdf6b171961a91"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/towns/capital.json"
-hash = "3d58f961d5a710e96c60215fe34deb40f89f7277bcfe3f02ec2b076b92918177"
+hash = "97ed85d9fa65878ae97e49d803588fb7ce83cef282a5e68e7ba82661cd17ab8b"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/towns/caravans.json"
@@ -2582,7 +2574,7 @@ hash = "68b946794901608c242430efa2e2771bbc85be00fa678f0ff8a72a0e610e5cfb"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/towns/new_towns.json"
-hash = "e332bd8cd852207d4a186129abb6ea4352b1e166a238ee0a3ebc75f1c2adda2a"
+hash = "65d834cf5e3891bc23b3fdedd9f7bfd4838337363385ba208cf7f18cbb1819be"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/towns/recruits.json"
@@ -2618,7 +2610,7 @@ hash = "f22cac22f221bc51031e15445a077a41a468774497bdcf46d8397370924024de"
 
 [[files]]
 file = "peacock-server/peacock-start.sh"
-hash = "e596208c1128c58153c6c3784236779dc26c819733ddcbb13d08bd3c6528ae13"
+hash = "cf6731ba06445fdf4160f989cb0073e2228ac2e3e4158e2be0cb1feddc304c93"
 
 [[files]]
 file = "peacock/launch.jar"
