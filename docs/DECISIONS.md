@@ -769,3 +769,12 @@ so only this name is missing from KubeJS's remapping. Fix: "brand new" is now a 
 (`peacock_booted`), AND-ed with the world's age when any route to the clock works (`worldAge()` tries
 `getGameTime`, the SRG names, and `levelData`); the console line `[peacock] reroll: first boot: …; world age: …`
 shows which route worked. The player-has-joined, nobody-online and start-script `playerdata/` guards are unchanged.
+
+## A rerolled world that was not deleted got kept; reroll decisions now logged to a file (2026-10-19 evening)
+The 20:47 boot read `first boot: false; world age: 301 ticks`: the previous boot had stopped for a reroll at the
+300-tick check, but the world was never deleted (the start script's reason went with the console), and because the
+script had already marked the world "booted", the next start took it for an existing world. `/locate structure
+#peacock:capital` confirmed no capital. Fixes: `peacock_booted` is written only when a world is kept (a `finally`
+after the check), and cleared on the reroll path; the reroll marker is read back before `stop`, so a failed write
+keeps the world instead of stopping for nothing. `peacock-start.sh` appends every decision — reroll, refusal (with
+the `playerdata/` entries it found), or a stop with no reroll requested — to `logs/peacock-reroll.log`.

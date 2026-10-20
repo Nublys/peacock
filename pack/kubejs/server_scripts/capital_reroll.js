@@ -117,11 +117,14 @@ ServerEvents.loaded(event => {
   if (!ON) return
   var server = event.server
   server.scheduleInTicks(300, () => {
+    var stopping = false
     try {
       var log = m => console.info('[peacock] reroll: ' + m)
       var pd = server.persistentData
       var firstBoot = !pd.getBoolean('peacock_booted')
-      pd.putBoolean('peacock_booted', true)
+      // marked "booted" only once this world is KEPT (finally, below). A world stopped for a reroll stays unmarked, so
+      // if the start script does not delete it (2026-10-19 afternoon: it did not, reason lost with the console), the
+      // next start checks it again instead of taking it for an existing world.
       var clock = worldAge(server.overworld())
       var age = clock ? clock.ticks : -1
       var fresh = firstBoot && (!clock || age <= NEW_WORLD_TICKS)
@@ -153,9 +156,15 @@ ServerEvents.loaded(event => {
       var n = tries()
       if (n >= MAX_TRIES) { keep(n + ' rerolls in a row'); JsonIO.write(COUNT, { tries: 0 }); return }
       JsonIO.write(MARKER, { reroll: true, attempt: n + 1, worldTicks: Number(age) })
+      var check = null
+      try { check = JsonIO.read(MARKER) } catch (e) { }
+      if (!check || !check.reroll) { keep('the reroll marker could not be written to ' + MARKER); return }
       log(why + ' (new world, never joined) — attempt ' + (n + 1) + ' of ' + MAX_TRIES + ', stopping for a new seed')
+      stopping = true
+      pd.putBoolean('peacock_booted', false)
       server.runCommandSilent('stop')
     } catch (e) { console.error('[peacock] reroll: failed — ' + e) }
+    finally { if (!stopping) server.persistentData.putBoolean('peacock_booted', true) }
   })
 })
 })()

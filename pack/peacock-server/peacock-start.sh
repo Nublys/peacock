@@ -55,26 +55,32 @@ HEAP_PERCENT="${PEACOCK_HEAP_PERCENT:-75.0}"
 # exits with the server's own exit code, exactly as before.
 MARKER="kubejs/config/peacock-reroll.json"
 COUNT="kubejs/config/peacock-reroll-count.json"
+# every reroll decision is also appended here: the console scrolls away, this file does not
+REROLL_LOG="logs/peacock-reroll.log"
+note() { say "$*"; mkdir -p logs; printf '%s %s\n' "$(date '+%Y-%m-%d %H:%M:%S')" "$*" >> "${REROLL_LOG}"; }
 while true; do
   java -Xms128M -XX:MaxRAMPercentage="${HEAP_PERCENT}" ${GC_FLAGS} \
     -Dterminal.jline=false -Dterminal.ansi=true \
     @user_jvm_args.txt "@${ARGS_FILE}" nogui
   code=$?
-  [ -f "${MARKER}" ] || exit "${code}"
+  if [ ! -f "${MARKER}" ]; then
+    note "server stopped (exit ${code}), no reroll requested"
+    exit "${code}"
+  fi
   LEVEL="$(grep -E '^level-name=' server.properties 2>/dev/null | cut -d= -f2- | tr -d '\r')"
   LEVEL="${LEVEL:-world}"
   ATTEMPT="$(grep -oE '"attempt"[[:space:]]*:[[:space:]]*[0-9]+' "${MARKER}" | grep -oE '[0-9]+$')"
   rm -f "${MARKER}"
   # last guard, independent of the script's: never delete a world anyone has played in
   if [ -n "$(ls -A "${LEVEL}/playerdata" 2>/dev/null)" ]; then
-    say "!! reroll requested but ${LEVEL}/playerdata is not empty — keeping the world"
+    note "!! reroll ${ATTEMPT:-?} requested but ${LEVEL}/playerdata is not empty — keeping the world: $(ls -A "${LEVEL}/playerdata" | head -5 | tr '\n' ' ')"
     exit "${code}"
   fi
   if [ ! -f "${LEVEL}/level.dat" ]; then
-    say "!! reroll requested but ${LEVEL}/level.dat is missing — not deleting anything"
+    note "!! reroll ${ATTEMPT:-?} requested but ${LEVEL}/level.dat is missing — not deleting anything"
     exit "${code}"
   fi
-  say "reroll ${ATTEMPT:-?}: this seed does not suit the capital — deleting ${LEVEL} and starting on a new seed"
+  note "reroll ${ATTEMPT:-?}: this seed does not suit the capital — deleting ${LEVEL} and starting on a new seed"
   rm -rf "${LEVEL}"
   sed -i 's/^level-seed=.*/level-seed=/' server.properties
   printf '{"tries": %s}\n' "${ATTEMPT:-1}" > "${COUNT}"
