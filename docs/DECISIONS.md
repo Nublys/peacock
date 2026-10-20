@@ -981,3 +981,10 @@ _previous, so an untouched install takes its tier's clouds. The launcher (and ap
 missing JSON config from keys, since a mod's nested JSON (Particle Rain's `{"perf": {...}}`) cannot be built from
 flat lines; the keys apply on the launch after the mod writes its file.
 
+## One set of rain ripples (2026-10-20)
+Particle Rain and Subtle Effects both put ripple particles on water in the rain. Subtle Effects' `rainWaterRipples`
+(config/subtle_effects/blocks.toml) is off through the profiles; Particle Rain's ripples stay, scaled by tier. The
+shader side does not double anything: shaders draw no particles, and every Euphoria Patches feature starts off (by
+default it is Complementary plus modded-block support). Euphoria's optional Seasons module would double Serene
+Seasons' colouring if a player turns it on.
+

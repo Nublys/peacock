@@ -101,6 +101,7 @@ PREVIOUS_DEFAULTS = {
     "config/embeddium-options.json.keys": ['"force_disable_donation_prompts": false'],
     "config/coldsweat/client.toml.keys": ["[Preferences]", '"Show Water Effect" = 3'],
     "config/subtle_effects/entities.toml.keys": ["[dustClouds]", "playerRunning = true"],
+    "config/subtle_effects/blocks.toml.keys": ["rainWaterRipples = true"],
     "config/colorwheel-client.toml.keys": ["alertIncompatiblePack = true", "alertBrokenPack = true"],
     "config/entity_model_features.json.keys": ['"showReloadErrorToast": true'],
     "config/locatorbar.json.keys": ['"unsupportedVersionWarningShown": false'],
@@ -139,6 +140,9 @@ COMMON_FILES = {
     # Subtle Effects' dust cloud trailing a running player (Aaron, 2026-10-20: "not a whole trail, just a little dust
     # below the feet") is off; vanilla's own sprint particles under the feet stay. Mobs' running dust stays.
     "config/subtle_effects/entities.toml.keys": "[dustClouds]\nplayerRunning = false\n",
+    # rain ripples on water: Particle Rain draws them too (and its density follows the tier), so Subtle Effects' set
+    # is off rather than doubling every pond in the rain (Aaron, 2026-10-20)
+    "config/subtle_effects/blocks.toml.keys": "rainWaterRipples = false\n",
     # Camera Overhaul, gentler again (Aaron, 2026-10-20: "lower the camera sway", then "reduce the walking, jumping,
     # looking around, and flying sway further"). [general]: idle sway and the roll when turning.
     # The tilts repeat under each movement's table, so they are scoped with [table] lines (launch.jar matches a key

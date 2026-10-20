@@ -2694,6 +2694,10 @@ file = "peacock/profiles/_previous/config/locatorbar.json.keys"
 hash = "6c9992ee147e8ccada7c03e7efdda90c51cf8ae967281fb080d6323cc54351ca"
 
 [[files]]
+file = "peacock/profiles/_previous/config/subtle_effects/blocks.toml.keys"
+hash = "c71eebdce1073c36b335ea92c0bf1a0789baaf3302d4d56d80457f3d4297ea88"
+
+[[files]]
 file = "peacock/profiles/_previous/config/subtle_effects/entities.toml.keys"
 hash = "d319ac0bedcbe0644429c9b532769cd524b249c86b9eb24b8311334a1b9f4189"
 
@@ -2748,6 +2752,10 @@ hash = "7dc415d0e8fea914812dd457cb52a72d76b565cbfe35c8e80b48447522ddbd90"
 [[files]]
 file = "peacock/profiles/high/config/soundphysics/soundphysics.properties.keys"
 hash = "f6a2565056ed10ba270da94e671fa5d7ced8ade044fc8b31a851840f7bce654f"
+
+[[files]]
+file = "peacock/profiles/high/config/subtle_effects/blocks.toml.keys"
+hash = "137f65cde95fd0335097812e412d51109ed19ee7969090c0fac33f0a9cf036fc"
 
 [[files]]
 file = "peacock/profiles/high/config/subtle_effects/entities.toml.keys"
@@ -2818,6 +2826,10 @@ file = "peacock/profiles/low/config/soundphysics/soundphysics.properties.keys"
 hash = "f6a2565056ed10ba270da94e671fa5d7ced8ade044fc8b31a851840f7bce654f"
 
 [[files]]
+file = "peacock/profiles/low/config/subtle_effects/blocks.toml.keys"
+hash = "137f65cde95fd0335097812e412d51109ed19ee7969090c0fac33f0a9cf036fc"
+
+[[files]]
 file = "peacock/profiles/low/config/subtle_effects/entities.toml.keys"
 hash = "249d23105a0e48911ae56022112ad31c313216e856959d97619d49a220cd962f"
 
@@ -2884,6 +2896,10 @@ hash = "7dc415d0e8fea914812dd457cb52a72d76b565cbfe35c8e80b48447522ddbd90"
 [[files]]
 file = "peacock/profiles/medium/config/soundphysics/soundphysics.properties.keys"
 hash = "f6a2565056ed10ba270da94e671fa5d7ced8ade044fc8b31a851840f7bce654f"
+
+[[files]]
+file = "peacock/profiles/medium/config/subtle_effects/blocks.toml.keys"
+hash = "137f65cde95fd0335097812e412d51109ed19ee7969090c0fac33f0a9cf036fc"
 
 [[files]]
 file = "peacock/profiles/medium/config/subtle_effects/entities.toml.keys"
@@ -2954,6 +2970,10 @@ file = "peacock/profiles/potato/config/soundphysics/soundphysics.properties.keys
 hash = "fb5ff1984232edecfce6fbfa6deb6374bcd7bf898f58d2c51b9e46cbbbbb78fe"
 
 [[files]]
+file = "peacock/profiles/potato/config/subtle_effects/blocks.toml.keys"
+hash = "137f65cde95fd0335097812e412d51109ed19ee7969090c0fac33f0a9cf036fc"
+
+[[files]]
 file = "peacock/profiles/potato/config/subtle_effects/entities.toml.keys"
 hash = "249d23105a0e48911ae56022112ad31c313216e856959d97619d49a220cd962f"
 
@@ -3020,6 +3040,10 @@ hash = "7dc415d0e8fea914812dd457cb52a72d76b565cbfe35c8e80b48447522ddbd90"
 [[files]]
 file = "peacock/profiles/ultra/config/soundphysics/soundphysics.properties.keys"
 hash = "f6a2565056ed10ba270da94e671fa5d7ced8ade044fc8b31a851840f7bce654f"
+
+[[files]]
+file = "peacock/profiles/ultra/config/subtle_effects/blocks.toml.keys"
+hash = "137f65cde95fd0335097812e412d51109ed19ee7969090c0fac33f0a9cf036fc"
 
 [[files]]
 file = "peacock/profiles/ultra/config/subtle_effects/entities.toml.keys"
