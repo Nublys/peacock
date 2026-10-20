@@ -822,3 +822,15 @@ up the nearest structures on an executor thread and blocks on chunk loads. A sea
 for a chunk the stopped server never delivers, and the thread keeps the JVM alive (the logs' "Searching for closest
 structure among [ruins…]" lines are these). `building.sign_post.way_sign.enabled = false`; placed signposts are
 untouched. The watchdog stays as the backstop.
+
+## Only the spawn capital is alive: the others' villagers become zombies (2026-10-20)
+The scattered capital means other copies of `peacock:capital` generate far out. Aaron: generate them, then kill
+their villagers — as zombie villagers. `kubejs/server_scripts/dead_capitals.js`: on `EntityEvents.spawned` for a
+villager, iron golem or Guard Villagers guard, one tick later (never inside the join: a worldgen entity joins while
+its chunk is promoted, and a lookup there can block), if the entity stands inside a `peacock:capital` whose start
+chunk differs from the one at world spawn, in a chunk with under 20 ticks of inhabited time (created with the town,
+no player there yet), and not inside a `village_recruits:tower_spawner` — villagers are replaced by persistent zombie
+villagers keeping `VillagerData`, `Offers` and `Xp` (curable, babies stay babies), golems and guards are removed.
+Every candidate is tagged once (`peacock_dead_capital_checked`). Spawn capital, VR towns, player-brought and bred
+villagers are untouched; if spawn is in no capital, nothing is. Zombies caught outdoors burn at dawn like any other.
+The Almanac is back to "the only old town alive", plus a line on the fallen ones.

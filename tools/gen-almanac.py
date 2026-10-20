@@ -133,7 +133,7 @@ ENTRIES = {
                 "Most are " + B("abandoned") + ": roofs open, glass gone, the dead owners still in the cellars, a little left in the chests and sometimes a journal. The rest are " + B("held") + ": pillagers camp in them, and the chests hold what they took from every town they emptied."),
             txt("An abandoned village is a quarry, a shelter and a story. A held one is a fight with real loot at the end. Neither has a bell that works, a board that posts, or a villager who trades.",
                 "Cure the zombie villagers, or bring villagers of your own, put down a recruit table and ring a bell: the survivors will found a new town on the old bones (" + L("towns/new_towns", "The New Towns") + ")."),
-            txt("A few old towns live on, far apart. The nearest is the " + B("capital") + ", where you woke. It is neutral ground: no faction can take it or found one in it. Raids are its only threat, and the moment you are needed.",
+            txt("The only old town alive is the " + B("capital") + ", where you woke. A few held out nearly as long; their streets stand, their people are zombies. It is neutral ground: no faction can take it or found one in it. Raids are its only threat.",
                 "Smaller things litter the land between: fallen logs, cairns, a derailed cart, a platform where the morning engine never came. Read them. They are the same story told in blocks."),
         ]),
         ("painted_ones", "The Painted Ones", "minecraft:crossbow", [
@@ -152,7 +152,7 @@ ENTRIES = {
     # ===================================================================================== start
     "start": [
         ("spawn", "Where You Woke Up", "minecraft:bell", [
-            txt("Everyone spawns in the same village: the " + B("capital") + ", a large old town that held on. It has a bell, villagers with trades, beds and bounty boards. It is the first market and the first thing raiders come for.",
+            txt("Everyone spawns in the same village: the " + B("capital") + ", the last old town alive. It has a bell, villagers with trades, beds and bounty boards. It is the first market and the first thing raiders come for.",
                 "Claim a bed early. There is no fast travel; the way home matters. Almost every other old stone village is a ruin (" + L("story/dead_towns", "The Dead Towns") + ")."),
             txt(B("Day one checklist:") + "$(br)- Wood, a crafting table, a bed in the capital$(br)- Check the season (sky colour, or craft a calendar)$(br)- Food: villager farms are fair game, replant what you take$(br)- A campfire before nightfall: three sticks make a " + L("land/warmth", "fire drill") + ""),
             txt(B("First night:") + " stay in town, indoors. Mobs here are tougher and smarter than you remember, and the village guards will not chase them for you.",
@@ -307,7 +307,7 @@ ENTRIES = {
     # ===================================================================================== towns
     "towns": [
         ("capital", "The Capital", "minecraft:bell", [
-            txt("The capital is the village you spawned in, the nearest of the few old towns still alive. It is the one shared spawn: settlers arrive there, raids are drawn to it, and the first station, dock and market will be there.",
+            txt("The capital is the village you spawned in and the only old town alive. It is the one shared spawn: settlers arrive there, raids are drawn to it, and the first station, dock and market will be there.",
                 "It belongs to everyone; no faction can claim it or found a town in it. Build in it, but build with the town, not over it."),
             txt(B("What makes a town a town") + " here: a bell, beds, and villagers who sleep in them. Several mods check for exactly that. Trading depots, bounty boards and caravan stops all want a real settlement around them.",
                 "A hole in the ground with one librarian is not a town, and the pack will tell you so."),
@@ -323,7 +323,7 @@ ENTRIES = {
                 "In a town, workers earn the town its income (" + L("towns/town_life", "How a Town Lives") + ")."),
         ]),
         ("new_towns", "The New Towns", "recruits:recruit_block", [
-            txt("Every living settlement besides the old towns is new: a " + B("tower") + " the survivors raised, a bell, a recruit table, and a town that builds itself out from there. They are small, rough and growing, and they have names.",
+            txt("Every living settlement besides the capital is new: a " + B("tower") + " the survivors raised, a bell, a recruit table, and a town that builds itself out from there. They are small, rough and growing, and they have names.",
                 "Walk into one and the chat tells you whose it is. Write the coordinates down. They are far apart and worth finding."),
             txt("Each town is a " + B("faction") + ": a leader, a garrison, a treasury, a merchant and a Noble. It farms, mines, trades, sends convoys down the roads, founds new towns when rich and goes to war when it must, whether or not you take part.",
                 "Villagers and soldiers belong to the town whose " + B("bed") + " they sleep in. Everything else follows from that."),
