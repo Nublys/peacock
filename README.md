@@ -193,7 +193,7 @@ touching it (`/peacock profile <tier> reset` puts the profile back over your edi
 | `high` | laptop with a real GPU | Complementary + Euphoria, High | 256 | 10 |
 | `ultra` | desktop with a dedicated GPU | Complementary + Euphoria, Ultra | 384 | 12 |
 
-The look — falling leaves, fireflies and breath in the cold (Subtle Effects), rain and snow as particles with
+The look — falling leaves, fireflies and breath in the cold (Falling Leaves, Subtle Effects), rain and snow as particles with
 ground fog (Particle Rain), a camera that leans gently as you walk (Camera Overhaul, turn it down in its menu),
 fuller grass and foliage, 3D details and livelier animals (resource packs) — is all on your machine and costs
 the server nothing; `potato` leaves out the 3D and animation packs.
