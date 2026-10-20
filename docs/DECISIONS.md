@@ -878,3 +878,11 @@ foundation filled down to the bed (at most 8). Built 8 s after first load, 40 co
 `peacock_capital_wall2`; `/peacock wall` (op) rebuilds. Columns in unloaded chunks are skipped and counted.
 Logic checked against a fake town (6 buildings, 4 roads, a pond): 480 columns, 4 gates, none inside a building,
 no gaps. The world the reroll era left needs nothing: the flag is new, so the current world is walled on its next start.
+- 15:05, first real wall: 830 columns around 297 building pieces, 105 road pieces — and 0 gates. CTOV's streets end
+  at houses inside the town, so no road piece ever crosses the hull. Gates are now placed on purpose: the road piece
+  reaching farthest N, E, S and W each gets a 3-wide gate (stone lintel, hanging lantern) at the wall column nearest
+  its far end, posts beside it, and a 3-wide dirt path from the road's end out to the gate (open ground only, never
+  inside a building piece). The plan is deterministic, so a world walled before this gets the gates cut into its
+  standing wall on the next start (flag `peacock_capital_wall_gates`; ground read two blocks inside the wall).
+  Checked against a CTOV-like fake town (roads ending inside): 4 gates and paths on a new world, the same 4 cut into
+  an existing wall, nothing on a third boot.
