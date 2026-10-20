@@ -1,0 +1,13 @@
+name = "Allium Shaders"
+filename = "Allium-v2.1.2.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/EQs4Ewl7/versions/PWB6M4aT/Allium%20v2.1.2.zip"
+hash-format = "sha512"
+hash = "052c1f2f8ff755af03546d6b7896f817dc0e257398842aa9e8e7895ed3fc185abef64bc06a2a2e78ed7ec76ca8bae4312d139065ac30f3129afe3924851d7f63"
+
+[update]
+[update.modrinth]
+mod-id = "EQs4Ewl7"
+version = "PWB6M4aT"

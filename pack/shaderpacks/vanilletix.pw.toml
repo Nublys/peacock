@@ -1,0 +1,13 @@
+name = "Vanilletix Shaders"
+filename = "Vanilletix-1.2.0.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/CiFGzRV9/versions/r613fCq9/%C2%A79%C2%A7lVanil%C2%A7b%C2%A7lletix%20%C2%A7c%5B%C2%A7f1.2.0%C2%A7c%5D.zip"
+hash-format = "sha512"
+hash = "84ec646d0ec253b1fe3505c02701d780589250d6c47ed5d0cbd0b46452f103bbf6e5e30edba28a69a657a2e05c0e0c16d3d1045a875a3ecc5f5c2ddc42227506"
+
+[update]
+[update.modrinth]
+mod-id = "CiFGzRV9"
+version = "r613fCq9"

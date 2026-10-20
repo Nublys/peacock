@@ -2703,6 +2703,10 @@ file = "peacock/profiles/_previous/config/locatorbar.json.keys"
 hash = "6c9992ee147e8ccada7c03e7efdda90c51cf8ae967281fb080d6323cc54351ca"
 
 [[files]]
+file = "peacock/profiles/_previous/config/subtle_effects/entities.toml.keys"
+hash = "d319ac0bedcbe0644429c9b532769cd524b249c86b9eb24b8311334a1b9f4189"
+
+[[files]]
 file = "peacock/profiles/_previous/options.txt.keys"
 hash = "67c6505e7581c3dbcd5da324235c0c10ef69b0cdbbe66848087cfad2556a23d0"
 
@@ -2745,6 +2749,10 @@ hash = "8b4ac3411ce4558a2b9b1825b2362e35b714c0b374e5871438d393b465ce39ca"
 [[files]]
 file = "peacock/profiles/high/config/soundphysics/soundphysics.properties.keys"
 hash = "f6a2565056ed10ba270da94e671fa5d7ced8ade044fc8b31a851840f7bce654f"
+
+[[files]]
+file = "peacock/profiles/high/config/subtle_effects/entities.toml.keys"
+hash = "249d23105a0e48911ae56022112ad31c313216e856959d97619d49a220cd962f"
 
 [[files]]
 file = "peacock/profiles/high/options.txt.keys"
@@ -2799,6 +2807,10 @@ file = "peacock/profiles/low/config/soundphysics/soundphysics.properties.keys"
 hash = "f6a2565056ed10ba270da94e671fa5d7ced8ade044fc8b31a851840f7bce654f"
 
 [[files]]
+file = "peacock/profiles/low/config/subtle_effects/entities.toml.keys"
+hash = "249d23105a0e48911ae56022112ad31c313216e856959d97619d49a220cd962f"
+
+[[files]]
 file = "peacock/profiles/low/options.txt.keys"
 hash = "26829294ebe8bcacfb152d70c145044c1bf614f2cc92b1932ecc2cb1042e8f83"
 
@@ -2849,6 +2861,10 @@ hash = "ecdc47e26c1b274613251b8935d35c7225b4e1b12b7671388999dacd0f7178cb"
 [[files]]
 file = "peacock/profiles/medium/config/soundphysics/soundphysics.properties.keys"
 hash = "f6a2565056ed10ba270da94e671fa5d7ced8ade044fc8b31a851840f7bce654f"
+
+[[files]]
+file = "peacock/profiles/medium/config/subtle_effects/entities.toml.keys"
+hash = "249d23105a0e48911ae56022112ad31c313216e856959d97619d49a220cd962f"
 
 [[files]]
 file = "peacock/profiles/medium/options.txt.keys"
@@ -2903,6 +2919,10 @@ file = "peacock/profiles/potato/config/soundphysics/soundphysics.properties.keys
 hash = "fb5ff1984232edecfce6fbfa6deb6374bcd7bf898f58d2c51b9e46cbbbbb78fe"
 
 [[files]]
+file = "peacock/profiles/potato/config/subtle_effects/entities.toml.keys"
+hash = "249d23105a0e48911ae56022112ad31c313216e856959d97619d49a220cd962f"
+
+[[files]]
 file = "peacock/profiles/potato/options.txt.keys"
 hash = "846dab1eb4a076dd3eed66299622a5ee7644e45752e2f6a587e7b84737189542"
 
@@ -2953,6 +2973,10 @@ hash = "8b4ac3411ce4558a2b9b1825b2362e35b714c0b374e5871438d393b465ce39ca"
 [[files]]
 file = "peacock/profiles/ultra/config/soundphysics/soundphysics.properties.keys"
 hash = "f6a2565056ed10ba270da94e671fa5d7ced8ade044fc8b31a851840f7bce654f"
+
+[[files]]
+file = "peacock/profiles/ultra/config/subtle_effects/entities.toml.keys"
+hash = "249d23105a0e48911ae56022112ad31c313216e856959d97619d49a220cd962f"
 
 [[files]]
 file = "peacock/profiles/ultra/options.txt.keys"
@@ -3027,6 +3051,61 @@ hash = "6a36ef1d71dcda03ca5ec5634b9636dc9997ce39cb1e43dd22d246a6c0c1477c"
 metafile = true
 
 [[files]]
+file = "shaderpacks/allium-shaders.pw.toml"
+hash = "e8cbb6e1475c568dbfe5a25e7b2210f46a8f22c440372beab6e3b1587de9e5eb"
+metafile = true
+
+[[files]]
+file = "shaderpacks/amethyst-shaders.pw.toml"
+hash = "a8e294d440e5bd19052d432323949ba680cf6ebb192be6d90a2a8c8f2b0ba51a"
+metafile = true
+
+[[files]]
+file = "shaderpacks/artshade.pw.toml"
+hash = "93d0100d32e5297b1474fd612ed98e6af7f82136f8826af7cfd3b4d6c544ae57"
+metafile = true
+
+[[files]]
+file = "shaderpacks/astralcore.pw.toml"
+hash = "d75d47af250428636a343d46d26a754a4307ec15f84a36468c20db035a7cd679"
+metafile = true
+
+[[files]]
+file = "shaderpacks/aurora-fantasy.pw.toml"
+hash = "82c416b47cf83f9c46ebff81ebbaf19e8211c6fbc841bcc1979663bd05f77b9c"
+metafile = true
+
+[[files]]
+file = "shaderpacks/bettervoxels.pw.toml"
+hash = "45e499f016d190862f20706020a6f73f31e1543ba3cba0cc2dae3e073baa4dc6"
+metafile = true
+
+[[files]]
+file = "shaderpacks/bliss-shader.pw.toml"
+hash = "98c5ce12067a0734671e5fee7e4155998fc85ce7045af09896adf9258a7cc12f"
+metafile = true
+
+[[files]]
+file = "shaderpacks/blocky-shader.pw.toml"
+hash = "2842e3767dd45be8cd43d9411b3f76318c2311f57c8297783fcfeed2badbc37f"
+metafile = true
+
+[[files]]
+file = "shaderpacks/bloop-shaders.pw.toml"
+hash = "3495531dac46f1035b2a1beac1f96321978ee70c0080835fe7f6606ad60ff183"
+metafile = true
+
+[[files]]
+file = "shaderpacks/bsl-shaders.pw.toml"
+hash = "31135d68099785a089f03c458fb5d1e8060a4ccec81dd3b8c36ae34ea4b9c121"
+metafile = true
+
+[[files]]
+file = "shaderpacks/bvs.pw.toml"
+hash = "ea2b65f547a645281815af46a7b0b63d164357b9a55b9b0283360975a985de8f"
+metafile = true
+
+[[files]]
 file = "shaderpacks/complementary-reimagined.pw.toml"
 hash = "2bfa33d17a5a973a3eec4d9fdff4a70d3b5a0da6de4869ea5cbf3dc7ebe7f5ff"
 metafile = true
@@ -3037,13 +3116,168 @@ hash = "418cc4915cc477c39e2081a15a3c388cbd9d9e5983072eeb47fbb6910d866ba4"
 metafile = true
 
 [[files]]
+file = "shaderpacks/dercode.pw.toml"
+hash = "29618902a1c20c21fd34a9d5be5aec998d47faa42e00436e9b07aa82a52e825c"
+metafile = true
+
+[[files]]
+file = "shaderpacks/drdestens-shaders.pw.toml"
+hash = "b2192e992b2c5f2c7f8e7ddcab3db93fd996eae3aa8b1aab87304da7b6bc0eec"
+metafile = true
+
+[[files]]
+file = "shaderpacks/dreamlight-shaders.pw.toml"
+hash = "ef97904608634464b0bc0f7400508bfa1256184476a87e0153d03b4fd5937bcb"
+metafile = true
+
+[[files]]
+file = "shaderpacks/exposa-shaders.pw.toml"
+hash = "e4c0389bc7172b015d297bd66315c91d39ffbba6dd9974f7762d20a920d2363d"
+metafile = true
+
+[[files]]
+file = "shaderpacks/fantasy-shader-unbound.pw.toml"
+hash = "97b5e1d25b7f36463a688cad4818a9a3ac371efc2949e1341f96f16ec29d808f"
+metafile = true
+
+[[files]]
+file = "shaderpacks/fantasy-shaders.pw.toml"
+hash = "da7389d6150d82ef438857c9167662fcf0261647a2dac868c926c8a5a282f039"
+metafile = true
+
+[[files]]
+file = "shaderpacks/fastpbr.pw.toml"
+hash = "2bcc95f580641626857a1e0672170b104bb75b5e8f36ca57d9f2f765051f540e"
+metafile = true
+
+[[files]]
+file = "shaderpacks/glimmer-shaders.pw.toml"
+hash = "84c1accef6768a316d35ea643f420a98183b01bd7948a314676315491b80ecbb"
+metafile = true
+
+[[files]]
+file = "shaderpacks/hysteria-shaders.pw.toml"
+hash = "ad9999844c5f06419268c4283f56e7e0dd9ce5a8c0df5e22ea6125018273ccb5"
+metafile = true
+
+[[files]]
+file = "shaderpacks/i-like-vanilla.pw.toml"
+hash = "ecee89980f624cc20c5c14b8ba919af8c833755db6db55c59fa9c2f7beadce48"
+metafile = true
+
+[[files]]
+file = "shaderpacks/just-colored-lighting.pw.toml"
+hash = "2fe6b5bc55a056d9d1b1eec35d188516294cdcf2092831b99d4fa4d91aba3396"
+metafile = true
+
+[[files]]
+file = "shaderpacks/kute.pw.toml"
+hash = "98e7f97c2f9ee94637e0c43af88e91b4fecc88bf25e4b2d77148b3695d8a604f"
+metafile = true
+
+[[files]]
+file = "shaderpacks/lite-shaders.pw.toml"
+hash = "47f691c4ff541de2dd1e08ea5e6d2fd6fc3f33771c56436880abc65a4a611322"
+metafile = true
+
+[[files]]
+file = "shaderpacks/lumina-shader-lite.pw.toml"
+hash = "e09f617461e4598107f9762520de459cf7b8deba937825d83128bb40e9d68eb0"
+metafile = true
+
+[[files]]
 file = "shaderpacks/makeup-ultra-fast-shaders.pw.toml"
-hash = "992fb67acaae4657efbe62d17dd405b5f05f95d63b63eaa902a09010991bff99"
+hash = "1d892c58b3e1eede0f0380955b0e53bd6f55d5cbcefa4a6c15eae8d7924c0e26"
+metafile = true
+
+[[files]]
+file = "shaderpacks/mellow.pw.toml"
+hash = "7e20f37131441fefce4f0687330e4cf71144791349dccfcd5d39dc84f89fd720"
 metafile = true
 
 [[files]]
 file = "shaderpacks/miniature-shader.pw.toml"
 hash = "ef5725a80fad1f9ffe4715a36772e12bf1ca0415894016fc834b0014beba1455"
+metafile = true
+
+[[files]]
+file = "shaderpacks/noble.pw.toml"
+hash = "e2e5a3a16e1d38dc3e253916a21d6ab71ef36d65a1591834ef4b8904fd811f60"
+metafile = true
+
+[[files]]
+file = "shaderpacks/pegasus.pw.toml"
+hash = "cbc945e389d3405d0670002a1d9360685ec51037e8b28c9bca5eab3670cc4bbc"
+metafile = true
+
+[[files]]
+file = "shaderpacks/photon-shader.pw.toml"
+hash = "1e4109987a9d4b0bab4302601e08b365b0e3d5b3a39b14b7134f8655c29a6bcc"
+metafile = true
+
+[[files]]
+file = "shaderpacks/pixel-perfect-shaders.pw.toml"
+hash = "4ce28554a6e885ada8f37d46b787154a4db59847b9ef724e770bce29151dc1ec"
+metafile = true
+
+[[files]]
+file = "shaderpacks/pixelcraft-shaders.pw.toml"
+hash = "8556efd72b1790058effce325e05694715cd83dc490024d05ffb19d4ba270d32"
+metafile = true
+
+[[files]]
+file = "shaderpacks/prismarine-shader.pw.toml"
+hash = "9e1b078387e1dc2b67bfb37d62dbba957fde4b8dccfb91fa8e494031261ae8fb"
+metafile = true
+
+[[files]]
+file = "shaderpacks/pyvtron-shaders-official-modrinth.pw.toml"
+hash = "880feb81e262bdaeac6a9c4cb5e7b8e395d497d9040d3c70cbccd759c46c4da0"
+metafile = true
+
+[[files]]
+file = "shaderpacks/rethinking-voxels.pw.toml"
+hash = "0a3f01f56afd065dc65dffb073b4fc5f9ae031aaef08d95d9df92e0093ac8504"
+metafile = true
+
+[[files]]
+file = "shaderpacks/reverie-shader.pw.toml"
+hash = "20bac2dfcd564d0544fc651212d7a61eeaa0af3e0634c9aa4a264adebcdb980c"
+metafile = true
+
+[[files]]
+file = "shaderpacks/shrimple.pw.toml"
+hash = "79733fc3a9a56bf32a40b4d79e4095747e0d010688887c76cc7a1e7db206d30a"
+metafile = true
+
+[[files]]
+file = "shaderpacks/sildur-s-enhanced-default-1-20-fancy.pw.toml"
+hash = "2cb2901285f7fa74d231eeea0143dedb9079d0b4ce5b69c0d02667e209f8452b"
+metafile = true
+
+[[files]]
+file = "shaderpacks/sildur-s-enhanced-default-1-20-fast.pw.toml"
+hash = "1fd902ee982a75b3b0c22479e928d0f4c317921cfe6bc0b22815575202c59f6d"
+metafile = true
+
+[[files]]
+file = "shaderpacks/sildur-s-vibrant-shaders-2-02-extreme-volumetric-lighting.pw.toml"
+hash = "0279cba4fb26a90fc45bfad967225d5ed72d302096fd646dc75b1d4af3acaab8"
+metafile = true
+
+[[files]]
+file = "shaderpacks/sildur-s-vibrant-shaders-2-02-extreme.pw.toml"
+hash = "37c690d24e09c323413c03a752e4adcbee990d892fdb179465256ef5c50c82e4"
+metafile = true
+
+[[files]]
+file = "shaderpacks/sildur-s-vibrant-shaders-2-02-high.pw.toml"
+hash = "8a5313e89e7b9e37681569202d90b81afbd30b87acc598fe182fce14ca191708"
+metafile = true
+
+[[files]]
+file = "shaderpacks/sildurs-basic-shaders.pw.toml"
+hash = "150aa241a244b2876414afccbc96937e65687204daeadd64bbf3acaf61fe8803"
 metafile = true
 
 [[files]]
@@ -3054,4 +3288,69 @@ metafile = true
 [[files]]
 file = "shaderpacks/sildurs-vibrant-medium.pw.toml"
 hash = "3bd069ff29e6ee9429ba16e4aeb7c810ede30ae68b5fc7ae02af4333b54076fe"
+metafile = true
+
+[[files]]
+file = "shaderpacks/simply-upscaled.pw.toml"
+hash = "4e7345418e29fce1d42b1d25c6c4720f9d88164420cbd978b269917a0e874a7e"
+metafile = true
+
+[[files]]
+file = "shaderpacks/solas-shader.pw.toml"
+hash = "71929dc154a77a2de38bc59b691625d9f4abe81c97306fb076252b58b09e7ec9"
+metafile = true
+
+[[files]]
+file = "shaderpacks/spooklementary.pw.toml"
+hash = "98d266a803313736dee1d42d73779e8f50841a3d17f69b06dc2096f4c1b44ebe"
+metafile = true
+
+[[files]]
+file = "shaderpacks/spring-shaders.pw.toml"
+hash = "e92e4e141326a6d068c580457d0354416761bee97cfadf433738725c75538c61"
+metafile = true
+
+[[files]]
+file = "shaderpacks/steadfast-shaders.pw.toml"
+hash = "08088e1560d1d8ec4e4dd833ab4cb283a7e64a93127700f3716658a2990f1abd"
+metafile = true
+
+[[files]]
+file = "shaderpacks/stracciatella-shaders.pw.toml"
+hash = "02a115473fd69becd9667db181d66e58902007f661faf8a664d06335513e8f2c"
+metafile = true
+
+[[files]]
+file = "shaderpacks/sundial-lite.pw.toml"
+hash = "6f6b6a5b17fae211544afc3fa3bfa0e376c2f62074b982c0e82b7ae73015bf80"
+metafile = true
+
+[[files]]
+file = "shaderpacks/super-duper-vanilla.pw.toml"
+hash = "a8d349403d1c4b03c42f1962ba993e8b3dd65b9176176eec256f3fc6cbd9f40a"
+metafile = true
+
+[[files]]
+file = "shaderpacks/trickeds-shaders.pw.toml"
+hash = "508d7c16c71bbc5fba4b4f0fdc41094809fcc14c60ffc414a651c01d798a5bbd"
+metafile = true
+
+[[files]]
+file = "shaderpacks/truelightfx.pw.toml"
+hash = "c6213f8020042dcf2e46e6822e143b6b685bace79a6813b3b9221492a317cc8b"
+metafile = true
+
+[[files]]
+file = "shaderpacks/vanilletix.pw.toml"
+hash = "bbd2625b3dba1297d8bf63ac4437f1f5bdefdcf0d072bf28fab381a8bebaf69f"
+metafile = true
+
+[[files]]
+file = "shaderpacks/visual-vibrance.pw.toml"
+hash = "3d61d055ac119a322f57c5f227ef6fd2a2fe76db1ad2ec658d0df896eb7a06b5"
+metafile = true
+
+[[files]]
+file = "shaderpacks/zayko.pw.toml"
+hash = "fefc4033a7f78f475995cd10e55f8ff7ba74325bd41d2171d277a31f39038d03"
 metafile = true

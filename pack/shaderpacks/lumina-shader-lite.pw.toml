@@ -1,0 +1,13 @@
+name = "Lumina Shader - Lite"
+filename = "Lumina_Shader_Lite_v1.2.9.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/70O0661F/versions/AC7c1gBI/Lumina_Shader_Lite_v1.2.9.zip"
+hash-format = "sha512"
+hash = "a82fa45762e1aab5a0e7cdd99331120a2b35decef7b64645d6df6c76936e9ab3d57783e50eee6f25a6ffa33d0e5a50835af647e0015939f43acd9446bae94c9e"
+
+[update]
+[update.modrinth]
+mod-id = "70O0661F"
+version = "AC7c1gBI"

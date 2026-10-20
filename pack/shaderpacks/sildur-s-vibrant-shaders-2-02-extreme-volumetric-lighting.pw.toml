@@ -1,0 +1,13 @@
+name = "Sildur's Vibrant Shaders 2.02 Extreme Volumetric Lighting"
+filename = "Sildurs-Vibrant-Shaders-v2.02-Extreme-VL.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/z8EjLYqN/versions/QDQKRRS3/Sildur%27s%20Vibrant%20Shaders%20v2.02%20Extreme-VL.zip"
+hash-format = "sha512"
+hash = "684b7be19113e949defa27c48583529ab1ed3267952d744c78fe708214684c6552116e843590c2fe94f11f6af36bc1c423aab331711bbc7c8013b6c6fae585c2"
+
+[update]
+[update.modrinth]
+mod-id = "z8EjLYqN"
+version = "QDQKRRS3"

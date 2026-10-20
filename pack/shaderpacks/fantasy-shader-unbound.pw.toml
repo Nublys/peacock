@@ -1,0 +1,13 @@
+name = "Fantasy Shaders Unbound"
+filename = "Fantasy-Shaders-Unbound-v1.11.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/Q1ICdkzj/versions/ks6VSlpQ/Fantasy%20Shaders%20Unbound%20v1.11.zip"
+hash-format = "sha512"
+hash = "fc02705c783b842f181868b01914a4b74e016cf3bb6a87bff66ed024c8409969f363fcb3497387034d693df2189eba363f6522498da56e418b243ec5504d642d"
+
+[update]
+[update.modrinth]
+mod-id = "Q1ICdkzj"
+version = "ks6VSlpQ"

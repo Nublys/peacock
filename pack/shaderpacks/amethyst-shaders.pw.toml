@@ -1,0 +1,13 @@
+name = "Amethyst Shaders"
+filename = "AmethystShaders_2.4.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/LypdYQ63/versions/mULXIH2t/AmethystShaders_2.4.zip"
+hash-format = "sha512"
+hash = "b1b276fba6673afc5b27112f338b69d65ec947ac1acb3b73d8a220efe2a5b6ee06a4d0364a3b4f5f117b074054c59644da59ad316bdf5da71ce94e06d337c058"
+
+[update]
+[update.modrinth]
+mod-id = "LypdYQ63"
+version = "mULXIH2t"

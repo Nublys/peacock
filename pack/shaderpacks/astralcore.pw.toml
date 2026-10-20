@@ -1,0 +1,13 @@
+name = "AstralCore"
+filename = "AstralCore_v1.6.0.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/reghUXdy/versions/vQXzN8YJ/AstralCore_v1.6.0.zip"
+hash-format = "sha512"
+hash = "d5383c36f44a1ebad20994bfdbc4c8285dc18c3213e0b7ddb8b270269377c7122e6afedddfecdc74e77ecb3ab9cf7e7972f02ee04f68e5bf502915b956ccb563"
+
+[update]
+[update.modrinth]
+mod-id = "reghUXdy"
+version = "vQXzN8YJ"

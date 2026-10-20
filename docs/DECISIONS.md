@@ -942,3 +942,23 @@ tools/apply-profile.py), and a quoted key may contain spaces. Values: idle sway 
 view smoothing 0.25 (was 1.0, the floaty lag), swimming, mounts and vehicles about halved. The drops were Cold
 Sweat's wet effect (`"Show Water Effect"` in [Preferences] of config/coldsweat/client.toml, default 3 = drips
 and on-screen); it is 0 now. Both are per-setting, so a player who changes them in game keeps their value.
+
+## Every shader that fits the pack, shipped for choosing (2026-10-20)
+Aaron: "Find ALL shaders that support the modpack and add them so I may choose." Method: every Modrinth shader with
+a 1.20.1 Iris build and 40k+ downloads (148 of 660; the rest is a long tail of small personal packs), less effect
+filters (VHS, body cam, flashlight, motion blur, saturation sliders, depth/normal maps, PS1 looks, joke packs);
+each file downloaded and opened. Kept only packs with Distant Horizons programs (`dh_terrain`/`dh_water` in the
+zip; without them the far LOD terrain renders wrong) whose `iris.features.required` Oculus 1.8.0 provides (it has
+every flag Iris defines). That added 50 packs plus three more Sildur's Vibrant variants (High, Extreme, Extreme-VL)
+and Sildur's Enhanced Default (Fancy, Fast); MakeUp went to 9.6. About 250 MB per client, client-only, filenames
+without spaces or colour codes. Packs that need compute shaders, SSBOs or custom images (Rethinking Voxels, Better
+Voxels, Noble, Shrimple, FastPBR, Visual Vibrance, Pegasus, Glimmer, Reverie, Spring, Blocky, DERCODE, Just Colored
+Lighting, Tricked) need OpenGL 4.3 and cannot run on macOS. Not added for lack of DH support: Insanity, AstraLex,
+Pastel, Nostalgia, Kappa, Potato, Vanilla Plus, Lux, RedHat and others; Miniature (already shipped) also lacks it.
+Once Aaron picks, the rest come out again before friends install.
+
+## Running dust trail off (2026-10-20)
+Subtle Effects' dust cloud behind a running player is off (`[dustClouds] playerRunning = false` in
+config/subtle_effects/entities.toml, via the profiles); vanilla's small sprint particles under the feet remain, as do
+the clouds behind galloping horses and charging ravagers.
+

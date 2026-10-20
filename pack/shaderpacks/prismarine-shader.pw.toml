@@ -1,0 +1,13 @@
+name = "Prismarine Shader"
+filename = "Prismarine-Shader-V5.0.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/AZs0ahDh/versions/t1vPVCFN/Prismarine%20Shader%20V5.0.zip"
+hash-format = "sha512"
+hash = "b9b76963f67889ed9fcad27466d780350619a464065fc575a702d17a392d7b355cb4f83ef052cd42fe0b542c63672f9d40e4d3ec3dc2683225bc739e42da7829"
+
+[update]
+[update.modrinth]
+mod-id = "AZs0ahDh"
+version = "t1vPVCFN"

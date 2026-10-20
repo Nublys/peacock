@@ -93,6 +93,7 @@ PREVIOUS_DEFAULTS = {
     ],
     "config/embeddium-options.json.keys": ['"force_disable_donation_prompts": false'],
     "config/coldsweat/client.toml.keys": ["[Preferences]", '"Show Water Effect" = 3'],
+    "config/subtle_effects/entities.toml.keys": ["[dustClouds]", "playerRunning = true"],
     "config/colorwheel-client.toml.keys": ["alertIncompatiblePack = true", "alertBrokenPack = true"],
     "config/entity_model_features.json.keys": ['"showReloadErrorToast": true'],
     "config/locatorbar.json.keys": ['"unsupportedVersionWarningShown": false'],
@@ -128,6 +129,9 @@ COMMON_FILES = {
     # Cold Sweat's wet effect: blocky water drops running down the screen after leaving water (Aaron, 2026-10-20:
     # "blocky blue drops work their way down the screen"). 0 off, 1 drip particles, 2 on-screen, 3 both (the default)
     "config/coldsweat/client.toml.keys": '[Preferences]\n"Show Water Effect" = 0\n',
+    # Subtle Effects' dust cloud trailing a running player (Aaron, 2026-10-20: "not a whole trail, just a little dust
+    # below the feet") is off; vanilla's own sprint particles under the feet stay. Mobs' running dust stays.
+    "config/subtle_effects/entities.toml.keys": "[dustClouds]\nplayerRunning = false\n",
     # Camera Overhaul, gentler again (Aaron, 2026-10-20: "lower the camera sway", then "reduce the walking, jumping,
     # looking around, and flying sway further"). [general]: idle sway and the roll when turning.
     # The tilts repeat under each movement's table, so they are scoped with [table] lines (launch.jar matches a key
