@@ -4,7 +4,7 @@
       "text": "The Whole Story"
     },
     "description": {
-      "text": "Find all 16 journals"
+      "text": "Find all 17 journals"
     },
     "icon": {
       "item": "minecraft:lectern"
@@ -222,6 +222,19 @@
           }
         ]
       }
+    },
+    "tower_charter": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:written_book"
+            ],
+            "nbt": "{title:\"Charter of a New Town\",author:\"Wenna, first of the forty\"}"
+          }
+        ]
+      }
     }
   },
   "parent": "peacock:story/found_writings",
@@ -273,6 +286,9 @@
     ],
     [
       "recruit_letter"
+    ],
+    [
+      "tower_charter"
     ]
   ]
 }

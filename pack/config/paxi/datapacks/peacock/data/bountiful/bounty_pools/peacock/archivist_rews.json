@@ -238,6 +238,18 @@
    "repRequired": 4,
    "nbt": "{title:\"Letter from a Tower\",author:\"Tam, recruit\",generation:1,resolved:1b,pages:[\"{\\\"text\\\": \\\"Dear all. The tower is up. Forty of us, a bell, a table, and a man who says he is the leader because he had the table. It is not the capital. It is not trying to be.\\\"}\",\"{\\\"text\\\": \\\"We do not dig. We agreed that first, before the roof was on. We plant, we trade, we keep a watch, and when the painted ones come we stand together on the road. Come and find us. Follow the roads that are new.\\\"}\"]}"
   },
+  "journal_tower_charter": {
+   "type": "item",
+   "content": "minecraft:written_book",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 6500,
+   "rarity": "RARE",
+   "repRequired": 14,
+   "nbt": "{title:\"Charter of a New Town\",author:\"Wenna, first of the forty\",generation:1,resolved:1b,pages:[\"{\\\"text\\\": \\\"We, the forty, raise this tower on clean ground. Not on the old stone: the old towns are full of what came up from below, and we will not sleep in their beds. A bell, a table, a watch. That is a town.\\\"}\",\"{\\\"text\\\": \\\"Rule one: we do not dig past the old marks. Rule two: a stranger who rings our bell is fed once. Rule three: when the painted ones come, every hand goes to the road, the leader first.\\\"}\",\"{\\\"text\\\": \\\"The capital sent no one. We expected no one. If it still stands when we are grown, we will send a cart of grain and ask for nothing. That is how towns used to begin.\\\"}\"]}"
+  },
   "warden_sword": {
    "type": "item",
    "content": "minecraft:iron_sword",

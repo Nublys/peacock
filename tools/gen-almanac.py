@@ -324,7 +324,7 @@ ENTRIES = {
         ]),
         ("new_towns", "The New Towns", "recruits:recruit_block", [
             txt("Every living settlement besides the capital is new: a " + B("tower") + " the survivors raised, a bell, a recruit table, and a town that builds itself out from there. They are small, rough and growing, and they have names.",
-                "Walk into one and the chat tells you whose it is. Write the coordinates down. They are far apart and worth finding."),
+                "A tower rises only when someone walks near. Follow new roads, or earn a sealed rumour of smoke from a new tower on a bounty board."),
             txt("Each town is a " + B("faction") + ": a leader, a garrison, a treasury, a merchant and a Noble. It farms, mines, trades, sends convoys down the roads, founds new towns when rich and goes to war when it must, whether or not you take part.",
                 "Villagers and soldiers belong to the town whose " + B("bed") + " they sleep in. Everything else follows from that."),
             txt(B("Reclaiming:") + " a recruit table and a bell in a dead village found a new town there, far enough from other towns. The builders put the new over the old.",

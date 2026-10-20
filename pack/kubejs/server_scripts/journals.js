@@ -53,6 +53,7 @@ const RUMOUR_NAMES = {
   umvuthana_grove: 'the sun chief\'s grove', monastery: 'the monastery on the peaks', illager_fort: 'the illager fort',
   cursed_pyramid: 'the cursed pyramid', frosted_prison: 'the frosted prison', ancient_factory: 'the factory under the ground',
   sunken_city: 'the sunken city', acropolis: 'the acropolis in the warm sea',
+  survivors_tower: 'smoke from a new tower',
 }
 
 ItemEvents.rightClicked('peacock:rumour_voucher', event => {

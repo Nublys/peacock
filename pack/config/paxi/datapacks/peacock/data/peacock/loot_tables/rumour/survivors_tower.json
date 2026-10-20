@@ -1,0 +1,32 @@
+{
+ "type": "minecraft:chest",
+ "pools": [
+  {
+   "rolls": 1,
+   "entries": [
+    {
+     "type": "minecraft:item",
+     "name": "minecraft:map",
+     "functions": [
+      {
+       "function": "minecraft:exploration_map",
+       "destination": "peacock:rumour_survivors_tower",
+       "decoration": "target_point",
+       "zoom": 1,
+       "search_radius": 20,
+       "skip_existing_chunks": false
+      },
+      {
+       "function": "minecraft:set_name",
+       "name": {
+        "text": "Rumour: smoke from a new tower",
+        "italic": false,
+        "color": "gold"
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

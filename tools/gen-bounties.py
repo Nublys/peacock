@@ -41,6 +41,7 @@ RUMOURS = {
     "ancient_factory": ("Rumour: the factory under the ground", 120, "red_x"),
     "sunken_city":     ("Rumour: the sunken city", 120, "red_x"),
     "acropolis":       ("Rumour: the acropolis in the warm sea", 100, "red_x"),
+    "survivors_tower": ("Rumour: smoke from a new tower", 20, "target_point"),
 }
 
 
@@ -147,6 +148,8 @@ MAPPER_REWS = pool({
     "spyglass":     entry("minecraft:spyglass", 3500, 1, 1, "UNCOMMON"),
     "banner_globe": entry("minecraft:globe_banner_pattern", 3000, 1, 1, "RARE"),
     "recovery":     entry("minecraft:recovery_compass", 8000, 1, 1, "EPIC", rep=12),
+    # a Village Recruits tower: the survivors' new towns (2026-10-20)
+    "rumour_survivors_tower": entry("peacock:rumour_voucher", 2500, 1, 1, "UNCOMMON", nbt="{rumour:\"survivors_tower\"}"),
     **{f"rumour_{rid}": entry("peacock:rumour_voucher", 6000, 1, 1, "RARE", rep=10,
                              nbt="{rumour:" + snbt_str(rid) + "}")
        for rid in ("wrought_chamber", "frostmaw", "umvuthana_grove", "monastery", "illager_fort")},

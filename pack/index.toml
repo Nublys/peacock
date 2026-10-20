@@ -337,7 +337,7 @@ hash = "3b6236845f6a5ff8804487b63b0d74305b91316dc9a008362838607b0be3bd8e"
 
 [[files]]
 file = "config/paxi/datapacks/peacock-ruins.zip"
-hash = "d262d4697ef37f545f39f6edc4380c6433917a11012a7e476ae8556706b1414c"
+hash = "4b27aaaa21d29396ecfcb630664713e9a2ef9f5aedf713120011f3b977076c6b"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/animania/tags/worldgen/biome/amphibian_habitats.json"
@@ -417,7 +417,7 @@ hash = "6c639786fffc249394cff720b711947fca0c172a1211f87daa73eeaa50d2a72c"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/bountiful/bounty_pools/bountiful/mapper_rews.json"
-hash = "b84d2a737dc039324c61f46db3d5fbfd48e5492a34a7cda3cf8545b99bb81a2f"
+hash = "1f91015147c3660ecc7225a41c43bcd3d55993bb62db2b0c566d73d90bbd9119"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/bountiful/bounty_pools/peacock/archivist_objs.json"
@@ -425,7 +425,7 @@ hash = "6f713b1aa5e04578e71cc5854b73c594a9bdc74dd559a5b3f5fa5cedace69e72"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/bountiful/bounty_pools/peacock/archivist_rews.json"
-hash = "e06d9d56b50e02918d23bdd1c9529cc8e14ba0274173175662b9668f34d471ae"
+hash = "26a80dd367baa645420f7cfd7aeb97dc728d2d74b5b82bda7ae7b2be92914f8f"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/cataclysm/tags/worldgen/biome/has_structure/burning_arena_biomes.json"
@@ -653,7 +653,7 @@ hash = "a9491d9d1e1ef19861a309b466aded1f51818cca441b9a9b84ff1a95234b586b"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/peacock/advancements/story/found_writings.json"
-hash = "d6e53a5d3e98986304b74559483de532c29a358c77ffe6ad21e2e43b8da45ba1"
+hash = "5648da1aa60d7a8b542b39caef8a13be6781809dbb5a05f6d67be88dfa69ee81"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/peacock/advancements/story/old_stone.json"
@@ -665,7 +665,7 @@ hash = "adefd8f57b23d0d6854e8b24498a0a5b2565fd413d02ad9a345900af931ebad2"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/peacock/advancements/story/whole_story.json"
-hash = "297abcfd2587a43a629435f9302ed2831c34a34a32e635c9092634ec30a09918"
+hash = "95d569fb0eebefdd76a4f40f6775c5cf80908aaa05c14d64f050626e9d014966"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/peacock/advancements/survival/fire_drill.json"
@@ -750,6 +750,10 @@ hash = "cfee599dc085692aa081e73303f2ec222bb09ba6a06bdc789b6444ead4dfb0ee"
 [[files]]
 file = "config/paxi/datapacks/peacock/data/peacock/loot_tables/rumour/sunken_city.json"
 hash = "95ebda44eb196a3bbf3015c3c275575634a38c58c6d86eb0265e3a6202acdb1a"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/loot_tables/rumour/survivors_tower.json"
+hash = "f46e4ec5646010ccaaea97deb0688fe2093c886cd6f3b5fffd7899bd8f76bb60"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/peacock/loot_tables/rumour/umvuthana_grove.json"
@@ -866,6 +870,10 @@ hash = "a9244774f8a2e5a20ac7a8124206dc10fd2b121e7b66718ea3d7272e8e941a54"
 [[files]]
 file = "config/paxi/datapacks/peacock/data/peacock/tags/worldgen/structure/rumour_sunken_city.json"
 hash = "a556d4803cd4106fc1329894ac83b5c3f5a8b749062b85af6ad09648976ad5e6"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/tags/worldgen/structure/rumour_survivors_tower.json"
+hash = "492a9932fff93a030b38a018120699fe5a586c5ba386754e2becca92ba23cac3"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/peacock/tags/worldgen/structure/rumour_umvuthana_grove.json"
@@ -1250,7 +1258,7 @@ hash = "a02ab44dfc207563c7c8400b5027b0320326329e6628989320b8892e81655806"
 
 [[files]]
 file = "kubejs/client_scripts/rumour_tooltips.js"
-hash = "790ca47319e01bea9825530c9f7c75eec00246719d1b7460626229386e12a2f0"
+hash = "6a540fb55b68748b587a094025387b4dff245739c33b28e645692450c483c92d"
 
 [[files]]
 file = "kubejs/client_scripts/spyglass_zoom_client.js"
@@ -1258,7 +1266,7 @@ hash = "02d21700dfa3242d5ef1b1c867243ffe502bba056dc2c591433b0abe65f012a9"
 
 [[files]]
 file = "kubejs/config/journals.json"
-hash = "b5d72b6da9c50a6a18cd9bbec34c01e09a4bf8ebebaf71cb03ec093bbaafbeba"
+hash = "cc48e7b6d2c9ccc4375e04f371c53582ebc7fa50f8f366ae097b71feaf9d2aed"
 
 [[files]]
 file = "kubejs/config/peacock.json"
@@ -1275,6 +1283,10 @@ hash = "6c16de3bde6076f6ec0da4ebd480c8735ccf8fa032f4e85e95190172687d008b"
 [[files]]
 file = "kubejs/server_scripts/blueprints.js"
 hash = "3124630fabe5d255e997dfb4b00c9a823506380dec19fee7e23404fab6f2fa4d"
+
+[[files]]
+file = "kubejs/server_scripts/capital_boards.js"
+hash = "b78253f8ff4732d62cd440b67091133fb3a044b12268e7d25286563d39429081"
 
 [[files]]
 file = "kubejs/server_scripts/cave_loot.js"
@@ -1294,7 +1306,7 @@ hash = "437073ce1974cd48925c985d6ce079c226555a12e6437ad460b7b6f7ef2fd62c"
 
 [[files]]
 file = "kubejs/server_scripts/journals.js"
-hash = "e8dc51f1aa3cd76659f0874cd0eea538d75c805fb7e88778e6f1e6659afee75c"
+hash = "12bb9718ac3cf5e6b5b98a97f171b6a9a397ed518d1be049b663c745458c6ab8"
 
 [[files]]
 file = "kubejs/server_scripts/no_vr_manual.js"
@@ -1306,7 +1318,7 @@ hash = "f080acf86837aa66c9bc9ead68ef864af9b88aafe9769e6fc0f81f25af5cbe04"
 
 [[files]]
 file = "kubejs/server_scripts/rumour_maps.js"
-hash = "c251b28fd2eb8e4674a0f8975f847d838678d7c2f66a2a5492f8dfc98afea4b7"
+hash = "a703bffab3a695acf0b1d0581f2b70bcb7797338dd88509be9ccedc15f56af86"
 
 [[files]]
 file = "kubejs/server_scripts/sleep_afk.js"
@@ -2582,7 +2594,7 @@ hash = "68b946794901608c242430efa2e2771bbc85be00fa678f0ff8a72a0e610e5cfb"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/towns/new_towns.json"
-hash = "e332bd8cd852207d4a186129abb6ea4352b1e166a238ee0a3ebc75f1c2adda2a"
+hash = "bbaf3a2481ee6d56f4fb2728790bb9963ca6b2389e5f83aeb555e7cc059680ec"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/towns/recruits.json"

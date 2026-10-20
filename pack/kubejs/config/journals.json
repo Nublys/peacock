@@ -168,6 +168,17 @@
     "{\"text\": \"Dear all. The tower is up. Forty of us, a bell, a table, and a man who says he is the leader because he had the table. It is not the capital. It is not trying to be.\"}",
     "{\"text\": \"We do not dig. We agreed that first, before the roof was on. We plant, we trade, we keep a watch, and when the painted ones come we stand together on the road. Come and find us. Follow the roads that are new.\"}"
    ]
+  },
+  {
+   "id": "tower_charter",
+   "tier": 2,
+   "title": "Charter of a New Town",
+   "author": "Wenna, first of the forty",
+   "pages": [
+    "{\"text\": \"We, the forty, raise this tower on clean ground. Not on the old stone: the old towns are full of what came up from below, and we will not sleep in their beds. A bell, a table, a watch. That is a town.\"}",
+    "{\"text\": \"Rule one: we do not dig past the old marks. Rule two: a stranger who rings our bell is fed once. Rule three: when the painted ones come, every hand goes to the road, the leader first.\"}",
+    "{\"text\": \"The capital sent no one. We expected no one. If it still stands when we are grown, we will send a cart of grain and ask for nothing. That is how towns used to begin.\"}"
+   ]
   }
  ]
 }

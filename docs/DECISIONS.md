@@ -849,3 +849,15 @@ the capital biomes' Cold Sweat lows are 51–59 °F, so dawn read ~50 °F at the
 2,000-block candidates land on capital-biome lowland under Terralith + Tectonic — which also explains the ~25
 failed single-position seeds. In practice the spawn capital is the only one players will meet; `dead_capitals.js`
 is the safety net for the rare far one.
+
+## Capital bounty boards placed by script; tower lore (2026-10-20)
+- The 3x3 board plaza in the capital's house pool gave one world 50+ boards: jigsaw tries a slot's elements in turn
+  until one fits, so a small piece takes every slot no house fits regardless of weight. It is gone from the pools;
+  `capital_boards.js` places two `bountiful:bountyboard`s once per world, 5 s after first load: beside the bell
+  (CTOV's plains square has one, at the well) on open ground — the first solid block from the sky must be a ground
+  block (never a roof, never a dirt-path road) with two air above — else outside the centre piece's corners (the
+  fortified keep has no bell). Flag `peacock_capital_boards`. Existing worlds: place boards by hand.
+- Aaron: towers need not be easier to find, but lore or bounties are welcome. A tier-2 found writing, "Charter of a
+  New Town" (the forty raise a tower on clean ground, three rules, grain for the capital), and a Sealed Rumour,
+  "smoke from a new tower" (exploration map to `village_recruits:tower_spawner`, search radius 20), as an UNCOMMON
+  mapper-board reward. The Almanac's New Towns page says towers rise only when someone walks near.

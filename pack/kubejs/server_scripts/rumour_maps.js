@@ -29,6 +29,7 @@ const RUMOURS = {
   ancient_factory: ['Rumour: the factory under the ground', 120, 'red_x'],
   sunken_city:     ['Rumour: the sunken city', 120, 'red_x'],
   acropolis:       ['Rumour: the acropolis in the warm sea', 100, 'red_x'],
+  survivors_tower: ['Rumour: smoke from a new tower', 20, 'target_point'],
 }
 
 // loot table -> [chance that the chest holds a rumour at all, [rumour ids with equal weight]]

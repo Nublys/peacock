@@ -6,7 +6,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Every living settlement besides the capital is new: a $(bold)tower$() the survivors raised, a bell, a recruit table, and a town that builds itself out from there. They are small, rough and growing, and they have names.$(br2)Walk into one and the chat tells you whose it is. Write the coordinates down. They are far apart and worth finding."
+      "text": "Every living settlement besides the capital is new: a $(bold)tower$() the survivors raised, a bell, a recruit table, and a town that builds itself out from there. They are small, rough and growing, and they have names.$(br2)A tower rises only when someone walks near. Follow new roads, or earn a sealed rumour of smoke from a new tower on a bounty board."
     },
     {
       "type": "patchouli:text",

@@ -222,6 +222,19 @@
           }
         ]
       }
+    },
+    "tower_charter": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:written_book"
+            ],
+            "nbt": "{title:\"Charter of a New Town\",author:\"Wenna, first of the forty\"}"
+          }
+        ]
+      }
     }
   },
   "parent": "peacock:root",
@@ -242,7 +255,8 @@
       "watchman",
       "trade_manifest",
       "gravedigger",
-      "recruit_letter"
+      "recruit_letter",
+      "tower_charter"
     ]
   ]
 }

@@ -267,35 +267,6 @@ def zombie_piece(vtype: str) -> bytes:
     return buf.getvalue()
 
 
-def bounty_post_piece() -> bytes:
-    """A 3x3 plaza: a bounty board on a dirt-path square with a lantern post, for the capital's streets."""
-    pal = [{"Name": "minecraft:dirt_path"}, {"Name": "bountiful:bountyboard"},
-           {"Name": "minecraft:oak_fence", "Properties": {}}, {"Name": "minecraft:lantern", "Properties": {"hanging": "false"}},
-           {"Name": "minecraft:potted_dandelion"}, {"Name": "minecraft:jigsaw", "Properties": {"orientation": "north_up"}}]
-    blocks = []
-    for x in range(3):
-        for z in range(3):
-            blocks.append({"pos": [x, 0, z], "state": 0})
-    # CTOV's plains streets carry their house jigsaws (target `minecraft:building_entrance`) one block above the road
-    # surface, and its houses carry theirs at their own y=0 (checked in the jar, 2026-10-20). So the plaza's path is
-    # layer 0 and its jigsaw sits on top of the front-edge path block at y=1, facing north out of the plaza.
-    blocks.append({"pos": [1, 1, 0], "state": 5, "nbt": jigsaw_nbt("minecraft:building_entrance", final_state="minecraft:air")})
-    blocks += [{"pos": [1, 1, 1], "state": 1}, {"pos": [2, 1, 2], "state": 2}, {"pos": [2, 2, 2], "state": 3},
-               {"pos": [0, 1, 2], "state": 4}]
-    f = nbtlib.File({
-        "size": T.List[T.Int]([T.Int(3), T.Int(3), T.Int(3)]),
-        "palette": T.List[T.Compound]([T.Compound({k: (T.String(v) if isinstance(v, str) else T.Compound({a: T.String(b) for a, b in v.items()}))
-                                                   for k, v in p.items()}) for p in pal]),
-        "blocks": T.List[T.Compound]([T.Compound({"pos": T.List[T.Int]([T.Int(i) for i in b["pos"]]), "state": T.Int(b["state"]),
-                                                  **({"nbt": b["nbt"]} if "nbt" in b else {})}) for b in blocks]),
-        "entities": T.List[T.Compound]([]),
-        "DataVersion": T.Int(3465),
-    })
-    buf = io.BytesIO()
-    f.save(buf, gzipped=True)
-    return buf.getvalue()
-
-
 def spawn_overrides(state: str):
     if state == "ruin_a":
         return {"monster": {"bounding_box": "full", "spawns": [
@@ -442,15 +413,9 @@ def main() -> None:
         "structures": [{"structure": s, "weight": 1} for s in cap_ids],
         "placement": {"type": "minecraft:random_spread", "spacing": 128, "separation": 64, "salt": 20260918},
     })
-    # Bounty boards: a 3x3 plaza in the capital's house pool (CTOV's plains pools now serve only the capital: every
-    # other CTOV village is a ruin with its own peacock:ruin_* pools). Low weight, because jigsaw tries the next
-    # element when a piece does not fit, so a small piece wins slots no house fits (Terralith's castle got twenty).
-    house = json.loads(z.read("data/ctov/worldgen/template_pool/village/plains/house.json"))
-    house["elements"].append({"weight": 5, "element": {"element_type": "minecraft:single_pool_element", "projection": "rigid",
-                                                       "processors": "minecraft:empty", "location": "peacock:capital/bounty_post"}})
-    write_json("data/ctov/worldgen/template_pool/village/plains/house.json", house)
-    (OUT / "data/peacock/structures/capital").mkdir(parents=True, exist_ok=True)
-    (OUT / "data/peacock/structures/capital/bounty_post.nbt").write_bytes(bounty_post_piece())
+    # Bounty boards are NOT in the capital's pools: jigsaw tries a slot's elements one after another until one fits, so
+    # a 3x3 plaza takes every slot no house fits whatever its weight (2026-10-20: 50+ boards on one street).
+    # kubejs/server_scripts/capital_boards.js places two beside the town bell instead, once per world.
     # Terralith's own castle town stays silenced: the capital is the CTOV town
     tj = terralith_jar()
     rare = json.loads(tj.read("data/terralith/worldgen/structure_set/rare_village.json"))
