@@ -813,3 +813,12 @@ has to be a large CTOV village in a comfortable temperature biome, and a good te
   21:48 "hang" dump was a booting server (main thread in `PlayerRespawnLogic`), killed because a marker left by a
   panel-killed server made the watchdog think a shutdown had begun. Across the ten real reroll stops after it, Java
   always exited within 120 s; the slow exits are idle non-daemon pools (LuckPerms' HTTP client, IO workers) timing out.
+
+## The shutdown hang was Supplementaries' road signs (2026-10-20)
+The first real hang dump (`peacock-hang-20261020-094515.txt`, 09:45) has one non-daemon thread left besides
+DestroyJavaVM: `pool-15-thread-1`, parked in `ServerChunkCache.getChunk` ← Supplementaries
+`StructureLocator.findNearestMapFeatures` ← `BlockGeneratorBlockTile` — the worldgen road-sign generator, which looks
+up the nearest structures on an executor thread and blocks on chunk loads. A search still running at shutdown waits
+for a chunk the stopped server never delivers, and the thread keeps the JVM alive (the logs' "Searching for closest
+structure among [ruins…]" lines are these). `building.sign_post.way_sign.enabled = false`; placed signposts are
+untouched. The watchdog stays as the backstop.

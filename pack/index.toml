@@ -1105,7 +1105,7 @@ hash = "86206026902fc37dcb7903ad01be97b2516b1806b24d6360fab5416cceaae5eb"
 
 [[files]]
 file = "config/supplementaries-common.toml"
-hash = "4de8ffe3073ea1afabb40f245c654764800846e2870dcec59e48bbed3838774a"
+hash = "67136b89b393641f7bcaeb880cff97a1c0f0d2434e85d6e4c2b7d3b5688faf8f"
 
 [[files]]
 file = "config/tectonic.json"

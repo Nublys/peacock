@@ -362,7 +362,10 @@
 
 		[building.sign_post.way_sign]
 			#Entirely disables them from spawning
-			enabled = true
+			#Peacock (2026-10-20): off. The road-sign generator locates structures on a background thread that blocks on
+			#chunk loads; a search still running at shutdown never finishes and keeps Java alive (thread dump
+			#logs/peacock-hang-20261020-094515.txt: pool-15-thread-1 in BlockGeneratorBlockTile -> StructureLocator).
+			enabled = false
 			#With this option road signs will display the distance to the structure that they are pointing to
 			show_distance_text = true
 
