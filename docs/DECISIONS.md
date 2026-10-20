@@ -866,3 +866,15 @@ is the safety net for the rare far one.
   (reproduced and verified in the same Rhino). Aaron: "just need to ensure there are boards", so the search now
   widens to rings out to 40 blocks from the square, and as a last resort puts the two beside world spawn on
   whatever stands there; with no capital at spawn they go beside spawn too.
+
+## The capital gets a wall again, following the town's outline (2026-10-20)
+Aaron: "Can we try generating walls for it?" `capital_wall.js` is back, rewritten for the CTOV capital: the wall line
+is the convex hull of every building piece's footprint (pieces whose pool element is not under `/roads/` and not a
+villager piece), pushed 5 blocks out, stepped 4-connected so there are no diagonal gaps. A column inside a road
+piece's footprint becomes a gate (cleared arch, stone lintel, hanging lantern on its first column), so every road
+out of town passes through. Wall: 5 high, stone bricks with some mossy/cracked, stone-brick-wall cap, lantern posts
+every 8 columns and beside gates, taller towers at the hull's corners; over water it stands on the surface with a
+foundation filled down to the bed (at most 8). Built 8 s after first load, 40 columns per tick; flag
+`peacock_capital_wall2`; `/peacock wall` (op) rebuilds. Columns in unloaded chunks are skipped and counted.
+Logic checked against a fake town (6 buildings, 4 roads, a pond): 480 columns, 4 gates, none inside a building,
+no gaps. The world the reroll era left needs nothing: the flag is new, so the current world is walled on its next start.

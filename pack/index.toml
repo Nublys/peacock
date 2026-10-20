@@ -1289,6 +1289,10 @@ file = "kubejs/server_scripts/capital_boards.js"
 hash = "7f1b365f17205f8f797d9157132a60d5f1e59335a4639d4da56c1b2e6a717cf6"
 
 [[files]]
+file = "kubejs/server_scripts/capital_wall.js"
+hash = "df2c8b9c7ad78eeefe905efb633722ab45d903f14aef4b0e23f037d7f6500f00"
+
+[[files]]
 file = "kubejs/server_scripts/cave_loot.js"
 hash = "bc99db5246b2b571d6a06b00867955f1296966e1dea6dadc256336e9e6cc36aa"
 
