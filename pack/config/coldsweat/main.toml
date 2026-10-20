@@ -1,0 +1,17 @@
+# Peacock: only the keys the pack changes. Forge fills in every other key with Cold Sweat's default on first load.
+# Temperatures here are in Cold Sweat's internal unit (MC): MC = (°F - 32) / 45.
+
+[Builtin]
+	# custom: the habitable range below is the pack's own, not a difficulty preset
+	Difficulty = "custom"
+	# off, so a Cold Sweat update cannot rewrite these values to its new defaults
+	"Auto Update" = false
+
+[Difficulty]
+	# Aaron, 2026-10-20: comfortable is 45-100 °F (Cold Sweat's default 50-100). A new world starts in early spring,
+	# when the capital's biomes run about 42-50 °F at dawn; 45 keeps the first mornings livable without softening
+	# the cold biomes much.
+	# 45 °F
+	"Minimum Habitable Temperature" = 0.28888888888888886
+	# 100 °F (unchanged)
+	"Maximum Habitable Temperature" = 1.511111111111111

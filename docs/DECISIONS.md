@@ -834,3 +834,18 @@ villagers keeping `VillagerData`, `Offers` and `Xp` (curable, babies stay babies
 Every candidate is tagged once (`peacock_dead_capital_checked`). Spawn capital, VR towns, player-brought and bred
 villagers are untouched; if spawn is in no capital, nothing is. Zombies caught outdoors burn at dawn like any other.
 The Almanac is back to "the only old town alive", plus a line on the fallen ones.
+
+## Comfortable is 45–100 °F (2026-10-20)
+Aaron: "change 45-100 to comfortable temperature". `config/coldsweat/main.toml` (COMMON) now ships with only the
+changed keys — Forge fills the rest with defaults: `[Difficulty] "Minimum Habitable Temperature" = 0.2889` (Cold
+Sweat stores MC units, MC = (°F − 32) / 45, read from `Temperature.convert`; 45 °F), max unchanged at 100 °F,
+`[Builtin] Difficulty = "custom"`, `"Auto Update" = false` so an update cannot reset them. Not `preserve`, so it
+reaches servers that already generated the file. Context: a new world starts in early spring (−0.2 MC, −9 °F) and
+the capital biomes' Cold Sweat lows are 51–59 °F, so dawn read ~50 °F at the old floor.
+
+## Capitals are rarer than the grid suggests (2026-10-20 13:54)
+`/locate structure peacock:capital` from (−3000, −3000) and from (3000, 3000) both returned the spawn capital
+(960, −5424), 4,642 and 8,667 blocks away: no other capital within ~8,700 blocks. Only a few percent of the
+2,000-block candidates land on capital-biome lowland under Terralith + Tectonic — which also explains the ~25
+failed single-position seeds. In practice the spawn capital is the only one players will meet; `dead_capitals.js`
+is the safety net for the rare far one.
