@@ -61,7 +61,12 @@ function place(server) {
   var log = m => console.info('[peacock] capital boards: ' + m)
   var start = capitalStart(level)
   if (!start) { log('no capital at world spawn — none placed'); return true }
-  var bb = start.getPieces().get(0).getBoundingBox()
+  // getPieces() is a JDK immutable list (ImmutableCollections$ListN), whose members Rhino may not reflect on
+  // ("IllegalAccessException … ListN", 2026-10-20 14:34): copy it into an ArrayList first
+  var ArrayList = Java.loadClass('java.util.ArrayList')
+  var pieces = new ArrayList(start.getPieces())
+  if (pieces.isEmpty()) { log('the capital has no pieces?'); return true }
+  var bb = pieces.get(0).getBoundingBox()
   var bell = findBell(level, bb)
   var top = bb.maxY() + 6, bottom = bb.minY() - 6
   var placed = []
