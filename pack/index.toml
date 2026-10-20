@@ -2668,7 +2668,7 @@ hash = "cf6731ba06445fdf4160f989cb0073e2228ac2e3e4158e2be0cb1feddc304c93"
 
 [[files]]
 file = "peacock/launch.jar"
-hash = "a55c354e0f08e2cd44166655891c8c46fe47bb06482dcb3068e8414b319dcc97"
+hash = "0d332aa6c0468d0b1d25774e14d1c3fe275eb82589ba332e87b984958d0e34d0"
 
 [[files]]
 file = "peacock/profiles/README.txt"
@@ -2680,7 +2680,11 @@ hash = "72e6e66c6f67a45ed5caa0bdd5af42ae0e02d579aef32753c750291b13a37355"
 
 [[files]]
 file = "peacock/profiles/_previous/config/cameraoverhaul.toml.keys"
-hash = "398b173af9255a689d2ba29da9bb4333dc7a65b669bdfe50791f9bfef3d1dc49"
+hash = "b3c2fd4f852bf2efc235c22ce07c094808135c4296d0a7144134c6f99260be14"
+
+[[files]]
+file = "peacock/profiles/_previous/config/coldsweat/client.toml.keys"
+hash = "b8f172e6324107bad3038ef197c33bdd03a08c841611f3c68e1cd445172477da"
 
 [[files]]
 file = "peacock/profiles/_previous/config/colorwheel-client.toml.keys"
@@ -2708,7 +2712,11 @@ hash = "e1b0204fedcda0b7840500ecae6eb914767c42c147b2ec76837ab27c2fef25ba"
 
 [[files]]
 file = "peacock/profiles/high/config/cameraoverhaul.toml.keys"
-hash = "d17766167fa4511066041db7f7267f0917b2907a8cc7792910e7cd59cde8ec44"
+hash = "1edc7acbc01f5756241c759004a972d4242f320f33387e9418547287ada46039"
+
+[[files]]
+file = "peacock/profiles/high/config/coldsweat/client.toml.keys"
+hash = "5fb382c05efa54f00aee8a1067669c7d38833ec56e55c5316a76acc04e205776"
 
 [[files]]
 file = "peacock/profiles/high/config/colorwheel-client.toml.keys"
@@ -2756,7 +2764,11 @@ hash = "5d7b6488363b84de2050c7c811d3aed8de62a210625724487ce219f889fbec2a"
 
 [[files]]
 file = "peacock/profiles/low/config/cameraoverhaul.toml.keys"
-hash = "d17766167fa4511066041db7f7267f0917b2907a8cc7792910e7cd59cde8ec44"
+hash = "1edc7acbc01f5756241c759004a972d4242f320f33387e9418547287ada46039"
+
+[[files]]
+file = "peacock/profiles/low/config/coldsweat/client.toml.keys"
+hash = "5fb382c05efa54f00aee8a1067669c7d38833ec56e55c5316a76acc04e205776"
 
 [[files]]
 file = "peacock/profiles/low/config/colorwheel-client.toml.keys"
@@ -2804,7 +2816,11 @@ hash = "a47487cde40eb05dae56160e1325dc81ed18c0c370b731f068d0eadc9b4e38d3"
 
 [[files]]
 file = "peacock/profiles/medium/config/cameraoverhaul.toml.keys"
-hash = "d17766167fa4511066041db7f7267f0917b2907a8cc7792910e7cd59cde8ec44"
+hash = "1edc7acbc01f5756241c759004a972d4242f320f33387e9418547287ada46039"
+
+[[files]]
+file = "peacock/profiles/medium/config/coldsweat/client.toml.keys"
+hash = "5fb382c05efa54f00aee8a1067669c7d38833ec56e55c5316a76acc04e205776"
 
 [[files]]
 file = "peacock/profiles/medium/config/colorwheel-client.toml.keys"
@@ -2852,7 +2868,11 @@ hash = "2677668653e471233d8fb3bca299a3fdbef926ddc98b1758e2f6c39a5e00a76e"
 
 [[files]]
 file = "peacock/profiles/potato/config/cameraoverhaul.toml.keys"
-hash = "d17766167fa4511066041db7f7267f0917b2907a8cc7792910e7cd59cde8ec44"
+hash = "1edc7acbc01f5756241c759004a972d4242f320f33387e9418547287ada46039"
+
+[[files]]
+file = "peacock/profiles/potato/config/coldsweat/client.toml.keys"
+hash = "5fb382c05efa54f00aee8a1067669c7d38833ec56e55c5316a76acc04e205776"
 
 [[files]]
 file = "peacock/profiles/potato/config/colorwheel-client.toml.keys"
@@ -2900,7 +2920,11 @@ hash = "5e2cd57039f1df71cdd4aef983a8afa5691a33b08719a8b46f5154e5c24c1efd"
 
 [[files]]
 file = "peacock/profiles/ultra/config/cameraoverhaul.toml.keys"
-hash = "d17766167fa4511066041db7f7267f0917b2907a8cc7792910e7cd59cde8ec44"
+hash = "1edc7acbc01f5756241c759004a972d4242f320f33387e9418547287ada46039"
+
+[[files]]
+file = "peacock/profiles/ultra/config/coldsweat/client.toml.keys"
+hash = "5fb382c05efa54f00aee8a1067669c7d38833ec56e55c5316a76acc04e205776"
 
 [[files]]
 file = "peacock/profiles/ultra/config/colorwheel-client.toml.keys"

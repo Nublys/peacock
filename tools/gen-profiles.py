@@ -71,6 +71,17 @@ PREVIOUS_DEFAULTS = {
     "config/cameraoverhaul.toml.keys": [
         "cameraSwayIntensity = 0.6", "turningRollIntensity = 1.25",
         "strafingRollFactor = 10.0", "forwardVelocityPitchFactor = 7.0", "verticalVelocityPitchFactor = 2.5",
+        # per section (2026-10-20, once the launcher could scope keys to a [table]): the mod's stock values for each
+        # movement, and for [walking] also the first pack values (5.0 / 3.5 / 1.5), which were written without a section
+        "[general]", "cameraSwayIntensity = 0.6", "turningRollIntensity = 1.25", "cameraSwayIntensity = 0.2", "turningRollIntensity = 0.5",
+        "[walking]", "strafingRollFactor = 10.0", "forwardVelocityPitchFactor = 7.0", "verticalVelocityPitchFactor = 2.5",
+        "strafingRollFactor = 5.0", "forwardVelocityPitchFactor = 3.5", "verticalVelocityPitchFactor = 1.5",
+        "[sprinting]", "strafingRollFactor = 12.5", "forwardVelocityPitchFactor = 9.5", "verticalVelocityPitchFactor = 2.5",
+        "[swimming]", "strafingRollFactor = -3.0", "forwardVelocityPitchFactor = 3.0", "verticalVelocityPitchFactor = 3.0",
+        "[flying]", "strafingRollFactor = -1.0", "forwardVelocityPitchFactor = 7.0", "verticalVelocityPitchFactor = 2.5",
+        "cameraSmoothing = 1.0",
+        "[mounts]", "strafingRollFactor = 2.0", "verticalVelocityPitchFactor = 2.5",
+        "[vehicles]", "verticalVelocityPitchFactor = 2.0",
     ],
     # the mods' shipped values before the quieter-boot change; without these the launcher took the old `true`s for
     # the player's own choice and kept the update popup and join warnings ("keep … 8 setting(s) you changed")
@@ -81,6 +92,7 @@ PREVIOUS_DEFAULTS = {
         "showSlowWorldGenSettingWarnings = true",
     ],
     "config/embeddium-options.json.keys": ['"force_disable_donation_prompts": false'],
+    "config/coldsweat/client.toml.keys": ["[Preferences]", '"Show Water Effect" = 3'],
     "config/colorwheel-client.toml.keys": ["alertIncompatiblePack = true", "alertBrokenPack = true"],
     "config/entity_model_features.json.keys": ['"showReloadErrorToast": true'],
     "config/locatorbar.json.keys": ['"unsupportedVersionWarningShown": false'],
@@ -113,11 +125,22 @@ COMMON_FILES = {
     # Colorwheel's "incompatible shaderpack" chat line, EMF's reload-error toast
     "config/colorwheel-client.toml.keys": "alertIncompatiblePack = false\nalertBrokenPack = false\n",
     "config/entity_model_features.json.keys": '"showReloadErrorToast": false\n',
-    # Camera Overhaul, gentler (Aaron, 2026-10-20: "lower the camera sway"): idle sway and turning roll, and the
-    # walking tilts. The launcher matches keys by name and the walking section is the first to carry the
-    # tilt keys, so sprinting/swimming/flying keep the mod's values. Its stock values are in _previous.
-    "config/cameraoverhaul.toml.keys": ("cameraSwayIntensity = 0.2\nturningRollIntensity = 0.5\n"
-                                        "strafingRollFactor = 5.0\nforwardVelocityPitchFactor = 3.5\nverticalVelocityPitchFactor = 1.5\n"),
+    # Cold Sweat's wet effect: blocky water drops running down the screen after leaving water (Aaron, 2026-10-20:
+    # "blocky blue drops work their way down the screen"). 0 off, 1 drip particles, 2 on-screen, 3 both (the default)
+    "config/coldsweat/client.toml.keys": '[Preferences]\n"Show Water Effect" = 0\n',
+    # Camera Overhaul, gentler again (Aaron, 2026-10-20: "lower the camera sway", then "reduce the walking, jumping,
+    # looking around, and flying sway further"). [general]: idle sway and the roll when turning.
+    # The tilts repeat under each movement's table, so they are scoped with [table] lines (launch.jar matches a key
+    # inside that table only). strafing = sideways roll, forward = pitch when moving, vertical = pitch when jumping or
+    # falling; flying's cameraSmoothing is the floaty lag on the view. The mod's stock values are in _previous.
+    "config/cameraoverhaul.toml.keys": (
+        "[general]\ncameraSwayIntensity = 0.1\nturningRollIntensity = 0.2\n"
+        "[walking]\nstrafingRollFactor = 2.0\nforwardVelocityPitchFactor = 1.5\nverticalVelocityPitchFactor = 0.5\n"
+        "[sprinting]\nstrafingRollFactor = 3.0\nforwardVelocityPitchFactor = 2.0\nverticalVelocityPitchFactor = 0.5\n"
+        "[swimming]\nstrafingRollFactor = -1.0\nforwardVelocityPitchFactor = 1.0\nverticalVelocityPitchFactor = 1.0\n"
+        "[flying]\nstrafingRollFactor = -0.5\nforwardVelocityPitchFactor = 1.5\nverticalVelocityPitchFactor = 0.5\ncameraSmoothing = 0.25\n"
+        "[mounts]\nstrafingRollFactor = 1.0\nverticalVelocityPitchFactor = 1.0\n"
+        "[vehicles]\nverticalVelocityPitchFactor = 1.0\n"),
 }
 
 def load_presets():

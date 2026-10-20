@@ -3,3 +3,33 @@ turningRollIntensity = 1.25
 strafingRollFactor = 10.0
 forwardVelocityPitchFactor = 7.0
 verticalVelocityPitchFactor = 2.5
+[general]
+cameraSwayIntensity = 0.6
+turningRollIntensity = 1.25
+cameraSwayIntensity = 0.2
+turningRollIntensity = 0.5
+[walking]
+strafingRollFactor = 10.0
+forwardVelocityPitchFactor = 7.0
+verticalVelocityPitchFactor = 2.5
+strafingRollFactor = 5.0
+forwardVelocityPitchFactor = 3.5
+verticalVelocityPitchFactor = 1.5
+[sprinting]
+strafingRollFactor = 12.5
+forwardVelocityPitchFactor = 9.5
+verticalVelocityPitchFactor = 2.5
+[swimming]
+strafingRollFactor = -3.0
+forwardVelocityPitchFactor = 3.0
+verticalVelocityPitchFactor = 3.0
+[flying]
+strafingRollFactor = -1.0
+forwardVelocityPitchFactor = 7.0
+verticalVelocityPitchFactor = 2.5
+cameraSmoothing = 1.0
+[mounts]
+strafingRollFactor = 2.0
+verticalVelocityPitchFactor = 2.5
+[vehicles]
+verticalVelocityPitchFactor = 2.0

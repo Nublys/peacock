@@ -136,18 +136,30 @@ public class Launch {
     }
 
     /** One setting line: indent, optional quote, key, separator (as written), value, optional trailing comma.
-     *  Covers key=value (.properties, Iris .txt), key = value (TOML), key:value (options.txt) and "key": value, (JSON). */
-    static final Pattern LINE = Pattern.compile("^(\\s*)(\"?)([A-Za-z0-9_.\\-]+)\\2(\\s*[=:]\\s*)(.*?)(,?)\\s*$");
+     *  Covers key=value (.properties, Iris .txt), key = value (TOML), key:value (options.txt) and "key": value, (JSON).
+     *  A quoted key may contain spaces ("Show Water Effect" = 3, as Cold Sweat writes its TOML). */
+    static final Pattern LINE = Pattern.compile("^(\\s*)(\"?)((?<=\")[A-Za-z0-9_.\\- ]+|[A-Za-z0-9_.\\-]+)\\2(\\s*[=:]\\s*)(.*?)(,?)\\s*$");
 
+    /** A TOML table header, [walking] or [general.advancedSettings] (not [[array tables]]). */
+    static final Pattern HEADER = Pattern.compile("^\\s*\\[\\s*([A-Za-z0-9_.\\-]+)\\s*\\]\\s*(#.*)?$");
+
+    /** Lines as { key, separator, value, section }. A [table] line in a .keys file scopes the keys after it to that
+     *  table of the target TOML (Camera Overhaul repeats the same keys under [walking], [sprinting], [flying] ...);
+     *  keys before any header keep the old rule: the first line with that key anywhere in the file. */
     static List<String[]> parseKeys(Path f) throws IOException {
         List<String[]> out = new ArrayList<>();
+        String section = "";
         for (String line : Files.readAllLines(f, StandardCharsets.UTF_8)) {
             if (line.isBlank() || line.trim().startsWith("#")) continue;
+            Matcher h = HEADER.matcher(line);
+            if (h.matches()) { section = h.group(1); continue; }
             Matcher m = LINE.matcher(line);
-            if (m.matches()) out.add(new String[] { m.group(3), m.group(4), m.group(5) });
+            if (m.matches()) out.add(new String[] { m.group(3), m.group(4), m.group(5), section });
         }
         return out;
     }
+
+    static String qualified(String[] kv) { return kv[3].isEmpty() ? kv[0] : kv[3] + "." + kv[0]; }
 
     /** Every value any profile assigns to (target, key) counts as "not the player's own". */
     static Map<String, Set<String>> profileValues(Path profilesDir, String keysRel) throws IOException {
@@ -155,7 +167,7 @@ public class Launch {
         try (Stream<Path> s = Files.list(profilesDir)) {
             for (Path p : s.filter(Files::isDirectory).collect(Collectors.toList())) {
                 Path f = p.resolve(keysRel);
-                if (Files.isRegularFile(f)) for (String[] kv : parseKeys(f)) all.computeIfAbsent(kv[0], x -> new HashSet<>()).add(kv[2]);
+                if (Files.isRegularFile(f)) for (String[] kv : parseKeys(f)) all.computeIfAbsent(qualified(kv), x -> new HashSet<>()).add(kv[2]);
             }
         }
         return all;
@@ -172,21 +184,39 @@ public class Launch {
         int set = 0, kept = 0;
         List<String> changed = new ArrayList<>();
         for (String[] kv : want) {
-            String key = kv[0], sep = kv[1], value = kv[2], stateKey = "key." + targetRel + "#" + key;
+            String key = kv[0], sep = kv[1], value = kv[2], section = kv[3], qkey = qualified(kv);
+            String stateKey = "key." + targetRel + "#" + qkey;
             int idx = -1; Matcher found = null;
+            String table = "";
+            int sectionEnd = -1;            // last setting line of the wanted table, where a missing key is inserted
             for (int i = 0; i < lines.size(); i++) {
+                Matcher h = HEADER.matcher(lines.get(i));
+                if (h.matches()) { table = h.group(1); if (table.equals(section) && sectionEnd < 0) sectionEnd = i; continue; }
+                if (!section.isEmpty() && !table.equals(section)) continue;
                 Matcher m = LINE.matcher(lines.get(i));
-                if (m.matches() && m.group(3).equals(key)) { idx = i; found = m; break; }
+                if (m.matches()) {
+                    if (!section.isEmpty()) sectionEnd = i;
+                    if (m.group(3).equals(key)) { idx = i; found = m; break; }
+                }
             }
-            if (idx < 0) { lines.add(key + sep + value); state.setProperty(stateKey, value); set++; changed.add(key); continue; }
+            if (idx < 0) {
+                String line = (key.contains(" ") ? "\"" + key + "\"" : key) + sep + value;   // a key with spaces must stay quoted
+                int firstHeader = -1;
+                if (section.isEmpty()) for (int i = 0; i < lines.size() && firstHeader < 0; i++) if (HEADER.matcher(lines.get(i)).matches()) firstHeader = i;
+                if (section.isEmpty() && firstHeader < 0) lines.add(line);
+                else if (section.isEmpty()) lines.add(firstHeader, line);   // top level of a TOML: before its first [table]
+                else if (sectionEnd >= 0) lines.add(sectionEnd + 1, line);
+                else { lines.add(""); lines.add("[" + section + "]"); lines.add(line); }
+                state.setProperty(stateKey, value); set++; changed.add(qkey); continue;
+            }
             String cur = found.group(5);
             if (same(cur, value)) { state.setProperty(stateKey, value); continue; }
             String last = state.getProperty(stateKey);
             // Known to us: untouched only if still what we last wrote. Never seen: untouched if it is any profile's value.
-            boolean untouched = reset || (last != null ? same(cur, last) : anyProfile.getOrDefault(key, Set.of()).stream().anyMatch(v -> same(cur, v)));
+            boolean untouched = reset || (last != null ? same(cur, last) : anyProfile.getOrDefault(qkey, Set.of()).stream().anyMatch(v -> same(cur, v)));
             if (!untouched) { kept++; continue; }
             lines.set(idx, found.group(1) + found.group(2) + key + found.group(2) + found.group(4) + value + found.group(6));   // keep indent, quoting, spacing, trailing comma
-            state.setProperty(stateKey, value); set++; changed.add(key);
+            state.setProperty(stateKey, value); set++; changed.add(qkey);
         }
         if (!changed.isEmpty()) {
             Files.createDirectories(target.getParent());

@@ -281,14 +281,15 @@ and nature answered with sickness and monsters — is never stated in-game; the 
 - ✅ **The Appalachia look** (2026-10-20, from GOATED's Fabric pack, Forge 1.20.1 equivalents only): Subtle Effects
   (both sides — it registers particles), Particle Rain, Camera Overhaul (toned down), Smooth Steps, Better Biome
   Reblend, six texture packs; Streams Reflowing and Countered's Terrain Slabs for new land.
+- ✅ **Camera and wet screen** (2026-10-20): Camera Overhaul toned down in every movement (`.keys` files can scope
+  keys to a `[table]` now); Cold Sweat's on-screen water drops off.
 - Open: a full play session on the current world design (do the ruins' chests roll? do Rust Belt pieces sit flush — `start_height` assumes the heightmap is the first air block); Snow! Real
   Magic! on Create tracks (blacklist if it accumulates); whether `bountiful.decree.archivist.name` or the
   namespaced key is the one Bountiful reads (both are in the lang file); feeding CTOV houses into the Village
   Recruits builder (the addon has a datapack structure loader — untested; Aaron wants to see a grown VR town
   first). From 2026-10-20: `/weather rain` with Particle Rain (it registers particles client-side only and may
   crash a client on rain); a test world for Streams Reflowing + Terrain Slabs (boot time, TPS while travelling,
-  streams through the capital?) with Chunk Pregenerator around the capital; Camera Overhaul's sprint tilt is
-  still the mod's; AI war pace (`warBias` 0.3 is "war-heavy") and lag from battles far from players.
+  streams through the capital?) with Chunk Pregenerator around the capital; AI war pace (`warBias` 0.3 is "war-heavy") and lag from battles far from players.
 
 ## Version 1.0.0 (2026-10-18)
 Tagged at the end of Phase 7: the dead world, the capital, bounty boards, journals, the Rust Belt, atmosphere,

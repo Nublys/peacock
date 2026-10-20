@@ -17,8 +17,9 @@ history and are not rewritten when a later one supersedes them; the summary belo
 - **Temperature** is Cold Sweat, comfortable 45–100 °F, no thirst (*supersedes* Tough As Nails).
 - **The server** syncs on every start; `peacock-start.sh` runs Java beside a shutdown watchdog. The only hang found
   (Supplementaries road signs) is fixed. Chunk Pregenerator, not Chunky, for pre-generation.
-- **The look** adds Subtle Effects (both sides), Particle Rain, Camera Overhaul (toned down), Smooth Steps,
-  Better Biome Reblend, six texture packs, Streams Reflowing and Terrain Slabs; AmbientSounds is gone.
+- **The look** adds Subtle Effects (both sides), Particle Rain, Camera Overhaul (toned down twice, every movement), Smooth
+  Steps, Better Biome Reblend, six texture packs, Streams Reflowing and Terrain Slabs; AmbientSounds is gone. Cold
+  Sweat's on-screen water drops are off.
 
 ## Platform
 - **Forge 47.4.16, not NeoForge.** On 1.20.1 NeoForge is frozen at 47.1.x; Serene
@@ -930,3 +931,14 @@ Sunbathing Godrays, Allure, Wild Vanilla, Photonics.
   matches keys by name and `[walking]` is the first section carrying the tilt keys, so sprinting/swimming/flying
   keep the mod's values; the mod's defaults are in `_previous` so they count as untouched. Applies from the launch
   after the mod first writes `config/cameraoverhaul.toml`; a player's own edits are kept.
+
+## Camera Overhaul quieter in every movement; Cold Sweat's screen drops off (2026-10-20)
+Aaron: "Reduce the walking, jumping, looking around, and flying sway further", and blocky blue drops ran down the
+screen after leaving water. The first toning-down only reached walking: Camera Overhaul repeats its tilt keys under
+[walking], [sprinting], [swimming], [flying], [mounts] and [vehicles], and the launcher matched a key's first line in
+the file. `*.keys` files may now carry `[table]` lines that scope the keys after them to that table (Launch.java and
+tools/apply-profile.py), and a quoted key may contain spaces. Values: idle sway 0.1, turning roll 0.2; walking
+2.0 / 1.5 / 0.5 (sideways roll / pitch moving / pitch jumping), sprinting 3 / 2 / 0.5, flying -0.5 / 1.5 / 0.5 with
+view smoothing 0.25 (was 1.0, the floaty lag), swimming, mounts and vehicles about halved. The drops were Cold
+Sweat's wet effect (`"Show Water Effect"` in [Preferences] of config/coldsweat/client.toml, default 3 = drips
+and on-screen); it is 0 now. Both are per-setting, so a player who changes them in game keeps their value.
