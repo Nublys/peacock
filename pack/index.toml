@@ -328,10 +328,6 @@ hash = "064398b6c586c07c0121656e1a42172352accf9e940cfde1ef679bcc1cd39ff9"
 preserve = true
 
 [[files]]
-file = "config/particular-common.toml"
-hash = "d1c8901485ef63842ab090b79797c1333fb39d0ca96180730f7a43d23171260d"
-
-[[files]]
 file = "config/patchouli-client.toml"
 hash = "3b6236845f6a5ff8804487b63b0d74305b91316dc9a008362838607b0be3bd8e"
 
@@ -2037,11 +2033,6 @@ hash = "531d7b76f54c8b4dc9d64194eeb2220ef35166f9e6652aaf07db8cf227f15a0b"
 metafile = true
 
 [[files]]
-file = "mods/particular-reforged.pw.toml"
-hash = "443226b8413e7c2f76da8fb326247b555c3a5340881e9638ef4a48d042cb2f37"
-metafile = true
-
-[[files]]
 file = "mods/patchouli.pw.toml"
 hash = "2c5f9c46337d69d5b63766d19a005ffcf9656b4a61480fc4362e06f34ea6e430"
 metafile = true
@@ -2372,7 +2363,7 @@ hash = "a83e449cdfe9cbdcf65f198c3a1731114ac268f8dcd1822e4f122efeecc233d5"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/building/decor.json"
-hash = "6db387827a36bafed33c3c0526b713c6c249a4eef870ec804c89f54fa6fb1546"
+hash = "f5cf7970cdb8f12466b1d8fd581e3d99b5752dc079a1cf89f6868a3a3a19602b"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/building/ships.json"
@@ -2464,7 +2455,7 @@ hash = "abe525637246c07dad4d70eb5695fe9b9df5d88b3b3abb70f949b343efe6c178"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/mods/quality.json"
-hash = "05021ddcb236dad5dd135734830eb34cff9c5ab8df5abe0f3bff5f8cf7cfbdd7"
+hash = "dd40edea249b93a9b015051dbb37f429c319ca6de9b1936f14c76cb69cec49d0"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/mods/world.json"
@@ -2668,7 +2659,7 @@ hash = "cf6731ba06445fdf4160f989cb0073e2228ac2e3e4158e2be0cb1feddc304c93"
 
 [[files]]
 file = "peacock/launch.jar"
-hash = "0d332aa6c0468d0b1d25774e14d1c3fe275eb82589ba332e87b984958d0e34d0"
+hash = "ac4b79ba1ea1daea565b96dee67cf5a477836266c4d10ea22cf94f11bef25548"
 
 [[files]]
 file = "peacock/profiles/README.txt"
@@ -2708,7 +2699,7 @@ hash = "d319ac0bedcbe0644429c9b532769cd524b249c86b9eb24b8311334a1b9f4189"
 
 [[files]]
 file = "peacock/profiles/_previous/options.txt.keys"
-hash = "67c6505e7581c3dbcd5da324235c0c10ef69b0cdbbe66848087cfad2556a23d0"
+hash = "9180f11b58ab23caf28379aa062440347cc8402ff9d1fd724402fd51d46917c7"
 
 [[files]]
 file = "peacock/profiles/high/config/DistantHorizons.toml.keys"
@@ -2735,6 +2726,10 @@ file = "peacock/profiles/high/config/entity_model_features.json.keys"
 hash = "5ea1cc25b2543ce6cbde59a08580cda7656b59ceac7d70a3da9853dd3b61ff10"
 
 [[files]]
+file = "peacock/profiles/high/config/fallingleaves-client.toml.keys"
+hash = "b348543821ff061644200abdc80efb158b7911fe9f08ffa7f42e4b8a836ea5a6"
+
+[[files]]
 file = "peacock/profiles/high/config/jade/jade.json.keys"
 hash = "446a3fc3204cbed5d80279cbd735dfaa57208689ae83602185062172d776f1f1"
 
@@ -2747,6 +2742,10 @@ file = "peacock/profiles/high/config/oculus.properties.keys"
 hash = "8b4ac3411ce4558a2b9b1825b2362e35b714c0b374e5871438d393b465ce39ca"
 
 [[files]]
+file = "peacock/profiles/high/config/particlerain/config.json.keys"
+hash = "7dc415d0e8fea914812dd457cb52a72d76b565cbfe35c8e80b48447522ddbd90"
+
+[[files]]
 file = "peacock/profiles/high/config/soundphysics/soundphysics.properties.keys"
 hash = "f6a2565056ed10ba270da94e671fa5d7ced8ade044fc8b31a851840f7bce654f"
 
@@ -2755,8 +2754,12 @@ file = "peacock/profiles/high/config/subtle_effects/entities.toml.keys"
 hash = "249d23105a0e48911ae56022112ad31c313216e856959d97619d49a220cd962f"
 
 [[files]]
+file = "peacock/profiles/high/config/subtle_effects/general.toml.keys"
+hash = "7416eb557fe7929d1321b30bb1d88198d86072c656ed5f3bc9e444c15f1b2db1"
+
+[[files]]
 file = "peacock/profiles/high/options.txt.keys"
-hash = "b664290c1f189fa0bed898a0c2394886d53072f47db1e328692b1549426e03fb"
+hash = "3a7753b65eda634a218fce32c20273b21eac5533b3a72f4f581aee4842619e0f"
 
 [[files]]
 file = "peacock/profiles/high/shaderpacks/ComplementaryReimagined_r5.9.3 + EuphoriaPatches_1.10.5.txt.keys"
@@ -2791,6 +2794,10 @@ file = "peacock/profiles/low/config/entity_model_features.json.keys"
 hash = "5ea1cc25b2543ce6cbde59a08580cda7656b59ceac7d70a3da9853dd3b61ff10"
 
 [[files]]
+file = "peacock/profiles/low/config/fallingleaves-client.toml.keys"
+hash = "c37dae14afdd0e5ea1a80da4b5c541dce6ebffabde0e544c5a6d473e7915914c"
+
+[[files]]
 file = "peacock/profiles/low/config/jade/jade.json.keys"
 hash = "446a3fc3204cbed5d80279cbd735dfaa57208689ae83602185062172d776f1f1"
 
@@ -2803,6 +2810,10 @@ file = "peacock/profiles/low/config/oculus.properties.keys"
 hash = "ecdc47e26c1b274613251b8935d35c7225b4e1b12b7671388999dacd0f7178cb"
 
 [[files]]
+file = "peacock/profiles/low/config/particlerain/config.json.keys"
+hash = "0e1b696d3863d5649992d57fd31d27e3aa9719f32add1012f33493f59b5da3be"
+
+[[files]]
 file = "peacock/profiles/low/config/soundphysics/soundphysics.properties.keys"
 hash = "f6a2565056ed10ba270da94e671fa5d7ced8ade044fc8b31a851840f7bce654f"
 
@@ -2811,8 +2822,12 @@ file = "peacock/profiles/low/config/subtle_effects/entities.toml.keys"
 hash = "249d23105a0e48911ae56022112ad31c313216e856959d97619d49a220cd962f"
 
 [[files]]
+file = "peacock/profiles/low/config/subtle_effects/general.toml.keys"
+hash = "41d780d4c3ed099897f71151abc7ddf4f8f9d3cfc0062265e0fad4ac6c4d0d54"
+
+[[files]]
 file = "peacock/profiles/low/options.txt.keys"
-hash = "26829294ebe8bcacfb152d70c145044c1bf614f2cc92b1932ecc2cb1042e8f83"
+hash = "3cfbf1f635c8dbd17eafc1b79409549e354c71d930f59e97900b01234e8a26f1"
 
 [[files]]
 file = "peacock/profiles/low/shaderpacks/ComplementaryReimagined_r5.9.3 + EuphoriaPatches_1.10.5.txt.keys"
@@ -2847,6 +2862,10 @@ file = "peacock/profiles/medium/config/entity_model_features.json.keys"
 hash = "5ea1cc25b2543ce6cbde59a08580cda7656b59ceac7d70a3da9853dd3b61ff10"
 
 [[files]]
+file = "peacock/profiles/medium/config/fallingleaves-client.toml.keys"
+hash = "b348543821ff061644200abdc80efb158b7911fe9f08ffa7f42e4b8a836ea5a6"
+
+[[files]]
 file = "peacock/profiles/medium/config/jade/jade.json.keys"
 hash = "446a3fc3204cbed5d80279cbd735dfaa57208689ae83602185062172d776f1f1"
 
@@ -2859,6 +2878,10 @@ file = "peacock/profiles/medium/config/oculus.properties.keys"
 hash = "ecdc47e26c1b274613251b8935d35c7225b4e1b12b7671388999dacd0f7178cb"
 
 [[files]]
+file = "peacock/profiles/medium/config/particlerain/config.json.keys"
+hash = "7dc415d0e8fea914812dd457cb52a72d76b565cbfe35c8e80b48447522ddbd90"
+
+[[files]]
 file = "peacock/profiles/medium/config/soundphysics/soundphysics.properties.keys"
 hash = "f6a2565056ed10ba270da94e671fa5d7ced8ade044fc8b31a851840f7bce654f"
 
@@ -2867,8 +2890,12 @@ file = "peacock/profiles/medium/config/subtle_effects/entities.toml.keys"
 hash = "249d23105a0e48911ae56022112ad31c313216e856959d97619d49a220cd962f"
 
 [[files]]
+file = "peacock/profiles/medium/config/subtle_effects/general.toml.keys"
+hash = "7416eb557fe7929d1321b30bb1d88198d86072c656ed5f3bc9e444c15f1b2db1"
+
+[[files]]
 file = "peacock/profiles/medium/options.txt.keys"
-hash = "eafda871d7b0c8cab1f6db0385e93caa474ceb4826ce863f5bd941df9ad7355a"
+hash = "fd7b7f612bd6da0166d712a783b0bc8629f7a0586750749ce8341d78348851ac"
 
 [[files]]
 file = "peacock/profiles/medium/shaderpacks/ComplementaryReimagined_r5.9.3 + EuphoriaPatches_1.10.5.txt.keys"
@@ -2903,6 +2930,10 @@ file = "peacock/profiles/potato/config/entity_model_features.json.keys"
 hash = "5ea1cc25b2543ce6cbde59a08580cda7656b59ceac7d70a3da9853dd3b61ff10"
 
 [[files]]
+file = "peacock/profiles/potato/config/fallingleaves-client.toml.keys"
+hash = "285b70668f915e34a0ff14f5afe0dd7530c11e0dde98a2ceee3ba79de4cfd2c8"
+
+[[files]]
 file = "peacock/profiles/potato/config/jade/jade.json.keys"
 hash = "446a3fc3204cbed5d80279cbd735dfaa57208689ae83602185062172d776f1f1"
 
@@ -2915,6 +2946,10 @@ file = "peacock/profiles/potato/config/oculus.properties.keys"
 hash = "3679e644386b40bf6bf9c612b40b6dbac157398edf6cc87dda142f1b1c72efde"
 
 [[files]]
+file = "peacock/profiles/potato/config/particlerain/config.json.keys"
+hash = "3f6e017b0a42b9ace9c8d128cedd51227fe57d4f8394afa5dd7a8eae6e684d1c"
+
+[[files]]
 file = "peacock/profiles/potato/config/soundphysics/soundphysics.properties.keys"
 hash = "fb5ff1984232edecfce6fbfa6deb6374bcd7bf898f58d2c51b9e46cbbbbb78fe"
 
@@ -2923,8 +2958,12 @@ file = "peacock/profiles/potato/config/subtle_effects/entities.toml.keys"
 hash = "249d23105a0e48911ae56022112ad31c313216e856959d97619d49a220cd962f"
 
 [[files]]
+file = "peacock/profiles/potato/config/subtle_effects/general.toml.keys"
+hash = "2cbb23679ce90d06ffe89074fc45b6fe7856ed04ce7747c81ed8228a54076e8b"
+
+[[files]]
 file = "peacock/profiles/potato/options.txt.keys"
-hash = "846dab1eb4a076dd3eed66299622a5ee7644e45752e2f6a587e7b84737189542"
+hash = "88ba9e95cd9fd593822ce82e4ad955aed0f954fb379c142609e3443188987417"
 
 [[files]]
 file = "peacock/profiles/potato/shaderpacks/ComplementaryReimagined_r5.9.3 + EuphoriaPatches_1.10.5.txt.keys"
@@ -2959,6 +2998,10 @@ file = "peacock/profiles/ultra/config/entity_model_features.json.keys"
 hash = "5ea1cc25b2543ce6cbde59a08580cda7656b59ceac7d70a3da9853dd3b61ff10"
 
 [[files]]
+file = "peacock/profiles/ultra/config/fallingleaves-client.toml.keys"
+hash = "b348543821ff061644200abdc80efb158b7911fe9f08ffa7f42e4b8a836ea5a6"
+
+[[files]]
 file = "peacock/profiles/ultra/config/jade/jade.json.keys"
 hash = "446a3fc3204cbed5d80279cbd735dfaa57208689ae83602185062172d776f1f1"
 
@@ -2971,6 +3014,10 @@ file = "peacock/profiles/ultra/config/oculus.properties.keys"
 hash = "8b4ac3411ce4558a2b9b1825b2362e35b714c0b374e5871438d393b465ce39ca"
 
 [[files]]
+file = "peacock/profiles/ultra/config/particlerain/config.json.keys"
+hash = "7dc415d0e8fea914812dd457cb52a72d76b565cbfe35c8e80b48447522ddbd90"
+
+[[files]]
 file = "peacock/profiles/ultra/config/soundphysics/soundphysics.properties.keys"
 hash = "f6a2565056ed10ba270da94e671fa5d7ced8ade044fc8b31a851840f7bce654f"
 
@@ -2979,8 +3026,12 @@ file = "peacock/profiles/ultra/config/subtle_effects/entities.toml.keys"
 hash = "249d23105a0e48911ae56022112ad31c313216e856959d97619d49a220cd962f"
 
 [[files]]
+file = "peacock/profiles/ultra/config/subtle_effects/general.toml.keys"
+hash = "7416eb557fe7929d1321b30bb1d88198d86072c656ed5f3bc9e444c15f1b2db1"
+
+[[files]]
 file = "peacock/profiles/ultra/options.txt.keys"
-hash = "00002b8bc322cd42dad7cef490eaeddcdf4c6fcf5f8b3d3f97fd876733249cbe"
+hash = "4172b774a018a90494f2c73fe64cf2bbf5835e99730477976a40b053d5da95d0"
 
 [[files]]
 file = "peacock/profiles/ultra/shaderpacks/ComplementaryReimagined_r5.9.3 + EuphoriaPatches_1.10.5.txt.keys"

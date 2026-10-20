@@ -6,3 +6,5 @@ onboardAccessibility:true
 skipMultiplayerWarning:false
 joinedFirstServer:false
 tutorialStep:movement
+renderClouds:false
+renderClouds:"false"

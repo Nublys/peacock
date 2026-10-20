@@ -556,7 +556,7 @@ ENTRIES = {
                 B("Supplementaries") + " gives the small things: sacks, ropes, pulleys, bellows, notice boards, sign posts, hourglasses, globes, jars, planters, flags, safes."),
             txt(B("Create Deco") + " and " + B("Interiors") + " cover industrial trim: catwalks, cages, placards, seats, chairs and tables that contraptions can carry.",
                 B("Every Compat") + " makes every wood work with every furniture mod, so a BOP wood roof exists. " + B("Visual Workbench") + " shows the recipe on the table. " + B("Easy Anvils") + " keep items in and never say Too Expensive."),
-            txt(B("Falling leaves") + ", " + B("Particular") + " particles, " + B("3D skins") + " and " + B("capes") + " are cosmetic and free to turn off if frames matter (see " + L("tools/performance", "Performance") + ")."),
+            txt(B("Falling leaves") + ", " + B("Particle Rain") + " weather, " + B("3D skins") + " and " + B("capes") + " are cosmetic and free to turn off if frames matter (see " + L("tools/performance", "Performance") + ")."),
         ]),
         ("wagons", "Wagons", "minecraft:lead", [
             txt(B("Trotting Wagons") + ": a wagon hitched to a horse (or an Animania draft horse) with storage in the back. Lead the horse, the wagon follows. This is the first bulk transport.",
@@ -680,7 +680,7 @@ ENTRIES = {
         ("quality", "Quality of Life", "minecraft:spyglass", [
             txt(B("EMI") + " (recipes), " + B("Jade") + " (what am I looking at), " + B("AppleSkin") + ", " + B("Mouse Tweaks") + ", " + B("Controlling") + ", " + B("Easy Anvils") + ", " + B("Visual Workbench") + ", " + B("Map Atlases") + ", " + B("Nature's Compass") + ", " + B("Locator Bar") + ", " + B("Patchouli") + " (this book), " + B("Simple Voice Chat") + ", " + B("Chat Animation") + ", " + B("No Chat Reports") + ".",
                 B("FTB Chunks / Teams / Essentials") + " are claims, parties, /spawn and /back."),
-            txt(B("Performance:") + " Embeddium, Oculus (shaders), ImmediatelyFast, Entity Culling, ModernFix, FerriteCore, Canary (server). " + B("Looks:") + " Subtle Effects, Particle Rain, Falling Leaves, Particular, Camera Overhaul, Smooth Steps, Better Biome Reblend, Wavey Capes, 3D Skin Layers, Not Enough Animations, Entity Model and Texture Features, and the resource packs."),
+            txt(B("Performance:") + " Embeddium, Oculus (shaders), ImmediatelyFast, Entity Culling, ModernFix, FerriteCore, Canary (server). " + B("Looks:") + " Subtle Effects, Particle Rain, Falling Leaves, Camera Overhaul, Smooth Steps, Better Biome Reblend, Wavey Capes, 3D Skin Layers, Not Enough Animations, Entity Model and Texture Features, and the resource packs."),
             txt(B("Under the hood:") + " KubeJS runs the pack's rules; Game Stages and Recipe Stages hold the ladder; Paxi carries the datapack; Default Options sets first-run settings; the launcher jar applies your hardware profile."),
         ]),
     ],

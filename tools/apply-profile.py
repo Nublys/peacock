@@ -104,6 +104,10 @@ def main() -> None:
     for keys in sorted(prof.rglob("*.keys")):
         rel = keys.relative_to(prof).as_posix()[: -len(".keys")]
         rel = TARGET_OVERRIDE.get(rel, rel)
+        if rel.endswith(".json") and not (pack / rel).exists():
+            # a mod's own nested JSON (Particle Rain's {"perf": {...}}) cannot be built from flat keys; the mod writes it
+            print(f"  {rel}: not shipped, skipped (the mod creates it)")
+            continue
         n = apply(keys, pack / rel)
         total += n
         print(f"  {rel}: {n} setting(s)")

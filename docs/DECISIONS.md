@@ -962,3 +962,22 @@ Subtle Effects' dust cloud behind a running player is off (`[dustClouds] playerR
 config/subtle_effects/entities.toml, via the profiles); vanilla's small sprint particles under the feet remain, as do
 the clouds behind galloping horses and charging ravagers.
 
+## Particles, clouds and entity distance follow the profile; Particular removed (2026-10-20)
+Aaron: "Could it be worth modifying other settings like particle count?" then "Ship it!". The four particle mods ran
+at full strength on every tier. Now per tier (gen-profiles.py `PARTICLES`; medium and up keep each mod's default):
+
+| | potato | low | medium / high / ultra |
+|---|---|---|---|
+| Particle Rain max / density / storm / distance | 400 / 20 / 25 / 10 | 750 / 40 / 50 / 12 | 1500 / 75 / 100 / 16 |
+| Falling Leaves spawn rate / conifers | 3 / 1 | 6 / 1 | 10 / 2 |
+| Subtle Effects particle culling distance | 3 | 4 | 5 |
+| entityDistanceScaling | 0.5 | 0.75 | 1.0 |
+| clouds | off | fast | fancy |
+
+Particular is gone: its leaves, fireflies and waterfall spray repeated Falling Leaves, Subtle Effects and Streams
+Reflowing. Clouds: the shipped first-launch options.txt had them off for everyone (which also hides Complementary's
+clouds), and potato wrote `renderClouds:false` unquoted where vanilla writes `"false"`; both old values are in
+_previous, so an untouched install takes its tier's clouds. The launcher (and apply-profile.py) no longer creates a
+missing JSON config from keys, since a mod's nested JSON (Particle Rain's `{"perf": {...}}`) cannot be built from
+flat lines; the keys apply on the launch after the mod writes its file.
+

@@ -41,19 +41,23 @@ TIERS = {
                         fresh_animations=False,
                         options={"renderDistance": "6", "simulationDistance": "6", "graphicsMode": "0", "particles": "2",
                                  "entityShadows": "false", "biomeBlendRadius": "1", "mipmapLevels": "2", "entityDistanceScaling": "0.5",
-                                 "renderClouds": "false"}),
+                                 "renderClouds": '"false"'}),
     "low":         dict(shaders=True,  pack=CR_ZIP,  preset="POTATO",  dh=128, transp="FAKE",     threads=1, quality="LOW", ssao=False, emb=("FAST","FAST","false"),
                         options={"renderDistance": "6", "simulationDistance": "6", "graphicsMode": "1", "particles": "1",
-                                 "entityShadows": "false", "biomeBlendRadius": "2"}),
+                                 "entityShadows": "false", "biomeBlendRadius": "2", "entityDistanceScaling": "0.75",
+                                 "renderClouds": '"fast"'}),
     "medium":      dict(shaders=True,  pack=CR_ZIP,  preset="MEDIUM",  dh=192, transp="FAKE",     threads=2, quality="MEDIUM", ssao=True, emb=("DEFAULT","DEFAULT","true"),
                         options={"renderDistance": "8", "simulationDistance": "8", "graphicsMode": "1", "particles": "0",
-                                 "entityShadows": "true", "biomeBlendRadius": "3"}),
+                                 "entityShadows": "true", "biomeBlendRadius": "3", "entityDistanceScaling": "1.0",
+                                 "renderClouds": '"true"'}),
     "high":        dict(shaders=True,  pack=EUPHORIA, preset="HIGH",   dh=256, transp="COMPLETE", threads=4, quality="MEDIUM", ssao=True, emb=("FANCY","FANCY","true"),
                         options={"renderDistance": "10", "simulationDistance": "8", "graphicsMode": "2", "particles": "0",
-                                 "entityShadows": "true", "biomeBlendRadius": "5"}),
+                                 "entityShadows": "true", "biomeBlendRadius": "5", "entityDistanceScaling": "1.0",
+                                 "renderClouds": '"true"'}),
     "ultra":       dict(shaders=True,  pack=EUPHORIA, preset="ULTRA",  dh=384, transp="COMPLETE", threads=6, quality="HIGH", ssao=True, emb=("FANCY","FANCY","true"),
                         options={"renderDistance": "12", "simulationDistance": "10", "graphicsMode": "2", "particles": "0",
-                                 "entityShadows": "true", "biomeBlendRadius": "7"}),
+                                 "entityShadows": "true", "biomeBlendRadius": "7", "entityDistanceScaling": "1.0",
+                                 "renderClouds": '"true"'}),
 }
 
 # Values earlier pack versions wrote as defaults. launch.jar treats a setting that still equals one of these as
@@ -66,6 +70,9 @@ PREVIOUS_DEFAULTS = {
         # vanilla's own first-launch values (2026-10-18: the launcher kept these as "yours", so screens stayed on)
         "realmsNotifications:true", "onboardAccessibility:true", "skipMultiplayerWarning:false",
         "joinedFirstServer:false", "tutorialStep:movement",
+        # potato wrote clouds unquoted until 2026-10-20 (vanilla writes "false"); the shipped first-launch options.txt
+        # had clouds off for everyone, so a still-off value counts as untouched and the tier's choice applies
+        'renderClouds:false', 'renderClouds:"false"',
     ],
     # Camera Overhaul's own defaults (general, then the walking section's tilts): replaced by the gentler values above
     "config/cameraoverhaul.toml.keys": [
@@ -147,6 +154,27 @@ COMMON_FILES = {
         "[vehicles]\nverticalVelocityPitchFactor = 1.0\n"),
 }
 
+# Particle mods per tier (Aaron, 2026-10-20). Particle Rain (config/particlerain/config.json, its defaults are
+# max 1500 / density 75 / storm 100 / 16 blocks), Falling Leaves (spawn rate 10, conifers 2) and Subtle Effects'
+# particle culling distance (default 5, range 1-32). medium and up get the mods' own defaults.
+PARTICLES = {
+    "potato": dict(rain=(400, 20, 25, 10), leaves=(3, 1), se_dist=3),
+    "low":    dict(rain=(750, 40, 50, 12), leaves=(6, 1), se_dist=4),
+    "medium": dict(rain=(1500, 75, 100, 16), leaves=(10, 2), se_dist=5),
+    "high":   dict(rain=(1500, 75, 100, 16), leaves=(10, 2), se_dist=5),
+    "ultra":  dict(rain=(1500, 75, 100, 16), leaves=(10, 2), se_dist=5),
+}
+
+def particle_files(tier):
+    p = PARTICLES[tier]
+    mx, dens, storm, dist = p["rain"]
+    return {
+        "config/particlerain/config.json.keys": (f'"maxParticleAmount": {mx}\n"particleDensity": {dens}\n'
+                                                 f'"particleStormDensity": {storm}\n"particleDistance": {dist}\n'),
+        "config/fallingleaves-client.toml.keys": f"leafSpawnRate = {p['leaves'][0]}\nconiferLeafSpawnRate = {p['leaves'][1]}\n",
+        "config/subtle_effects/general.toml.keys": f"enableParticleCulling = true\nparticleRenderDistance = {p['se_dist']}\n",
+    }
+
 def load_presets():
     data = urllib.request.urlopen(CR_URL, timeout=60).read()
     props = zipfile.ZipFile(io.BytesIO(data)).read("shaders/shaders.properties").decode("utf-8", "replace")
@@ -216,7 +244,7 @@ def main():
         (d / "config/soundphysics").mkdir(parents=True, exist_ok=True)
         (d / "config/soundphysics/soundphysics.properties.keys").write_text(
             f"enabled={'false' if tier == 'potato' else 'true'}\n")
-        for rel, content in COMMON_FILES.items():
+        for rel, content in {**COMMON_FILES, **particle_files(tier)}.items():
             (d / rel).parent.mkdir(parents=True, exist_ok=True)
             (d / rel).write_text(content)
         print(f"{tier:12s} shaders={'on ' if c['shaders'] else 'off'} {c['pack'][:28]:28s} {c['preset']:7s} DH {c['dh']:>3} {c['transp']:8s} {c['threads']}t")

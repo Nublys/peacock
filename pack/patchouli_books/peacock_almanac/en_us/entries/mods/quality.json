@@ -10,7 +10,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Performance:$() Embeddium, Oculus (shaders), ImmediatelyFast, Entity Culling, ModernFix, FerriteCore, Canary (server). $(bold)Looks:$() Subtle Effects, Particle Rain, Falling Leaves, Particular, Camera Overhaul, Smooth Steps, Better Biome Reblend, Wavey Capes, 3D Skin Layers, Not Enough Animations, Entity Model and Texture Features, and the resource packs."
+      "text": "$(bold)Performance:$() Embeddium, Oculus (shaders), ImmediatelyFast, Entity Culling, ModernFix, FerriteCore, Canary (server). $(bold)Looks:$() Subtle Effects, Particle Rain, Falling Leaves, Camera Overhaul, Smooth Steps, Better Biome Reblend, Wavey Capes, 3D Skin Layers, Not Enough Animations, Entity Model and Texture Features, and the resource packs."
     },
     {
       "type": "patchouli:text",

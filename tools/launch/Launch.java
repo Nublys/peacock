@@ -178,7 +178,7 @@ public class Launch {
         List<String[]> want = parseKeys(keysFile);
         Map<String, Set<String>> anyProfile = profileValues(profilesDir, targetRel + KEYS);
         boolean exists = Files.exists(target);
-        if (!exists && targetRel.endsWith(".toml")) { log("skip  " + targetRel + " (not present yet; the mod creates it, keys apply next launch)"); return new int[] {0, 0}; }
+        if (!exists && (targetRel.endsWith(".toml") || targetRel.endsWith(".json"))) { log("skip  " + targetRel + " (not present yet; the mod creates it, keys apply next launch)"); return new int[] {0, 0}; }
         if (!exists && targetRel.equals("options.txt")) { log("skip  options.txt (first launch; Default Options creates it, keys apply next launch)"); return new int[] {0, 0}; }
         List<String> lines = exists ? new ArrayList<>(Files.readAllLines(target, StandardCharsets.UTF_8)) : new ArrayList<>();
         int set = 0, kept = 0;
