@@ -67,6 +67,11 @@ PREVIOUS_DEFAULTS = {
         "realmsNotifications:true", "onboardAccessibility:true", "skipMultiplayerWarning:false",
         "joinedFirstServer:false", "tutorialStep:movement",
     ],
+    # Camera Overhaul's own defaults (general, then the walking section's tilts): replaced by the gentler values above
+    "config/cameraoverhaul.toml.keys": [
+        "cameraSwayIntensity = 0.6", "turningRollIntensity = 1.25",
+        "strafingRollFactor = 10.0", "forwardVelocityPitchFactor = 7.0", "verticalVelocityPitchFactor = 2.5",
+    ],
     # the mods' shipped values before the quieter-boot change; without these the launcher took the old `true`s for
     # the player's own choice and kept the update popup and join warnings ("keep … 8 setting(s) you changed")
     "config/DistantHorizons.toml.keys": [
@@ -108,6 +113,11 @@ COMMON_FILES = {
     # Colorwheel's "incompatible shaderpack" chat line, EMF's reload-error toast
     "config/colorwheel-client.toml.keys": "alertIncompatiblePack = false\nalertBrokenPack = false\n",
     "config/entity_model_features.json.keys": '"showReloadErrorToast": false\n',
+    # Camera Overhaul, gentler (Aaron, 2026-10-20: "lower the camera sway"): idle sway and turning roll, and the
+    # walking tilts. The launcher matches keys by name and the walking section is the first to carry the
+    # tilt keys, so sprinting/swimming/flying keep the mod's values. Its stock values are in _previous.
+    "config/cameraoverhaul.toml.keys": ("cameraSwayIntensity = 0.2\nturningRollIntensity = 0.5\n"
+                                        "strafingRollFactor = 5.0\nforwardVelocityPitchFactor = 3.5\nverticalVelocityPitchFactor = 1.5\n"),
 }
 
 def load_presets():

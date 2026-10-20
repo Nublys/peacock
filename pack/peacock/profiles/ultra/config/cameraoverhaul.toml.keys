@@ -1,0 +1,5 @@
+cameraSwayIntensity = 0.2
+turningRollIntensity = 0.5
+strafingRollFactor = 5.0
+forwardVelocityPitchFactor = 3.5
+verticalVelocityPitchFactor = 1.5

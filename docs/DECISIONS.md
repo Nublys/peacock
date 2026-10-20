@@ -907,3 +907,8 @@ Sunbathing Godrays, Allure, Wild Vanilla, Photonics.
   not have the mod, so its particles vanished. Subtle Effects (and Fzzy Config) are now `side = "both"` — the mod
   supports servers. Particle Rain registers particles the same way but does nothing at all on a dedicated server, so
   it cannot be fixed that way; it stays client-only pending an in-game `/weather rain` test.
+- Camera Overhaul toned down (Aaron: "lower the camera sway"): profile keys set idle sway 0.6→0.2, turning roll
+  1.25→0.5 and the walking tilts (strafe roll 10→5, forward pitch 7→3.5, vertical pitch 2.5→1.5). The launcher
+  matches keys by name and `[walking]` is the first section carrying the tilt keys, so sprinting/swimming/flying
+  keep the mod's values; the mod's defaults are in `_previous` so they count as untouched. Applies from the launch
+  after the mod first writes `config/cameraoverhaul.toml`; a player's own edits are kept.
