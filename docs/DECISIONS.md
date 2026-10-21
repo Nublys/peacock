@@ -1043,7 +1043,7 @@ the next step is removing the mod.
 
 ## Quieter waterfalls and music (2026-10-20)
 Aaron: "lower the volume of the waterfalls too, and the minecraft music". Streams Reflowing's water ambience (its
-rivers and waterfalls; `waterAmbience` in config/streamsreflowing-client.toml) 1.0 → 0.35, and Minecraft's music
+rivers and waterfalls; `waterAmbience` in config/streamsreflowing-client.properties; the first commit named the .toml it only imports from) 1.0 → 0.35, and Minecraft's music
 slider 100% → 30%, in every profile and in the first-launch options; a player's own slider setting stands.
 
 ## The player list opens below the compass (2026-10-20)
