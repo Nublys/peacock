@@ -532,6 +532,22 @@ file = "config/paxi/datapacks/peacock/data/create/recipes/filling/purified_water
 hash = "4c702ebae17c77801f7a960fa6457fa14e7ae1970c2d981a9467cd8e9c8c53e4"
 
 [[files]]
+file = "config/paxi/datapacks/peacock/data/farmersdelight/worldgen/placed_feature/patch_wild_carrots.json"
+hash = "b38e35d41009059bb79ffd9e451deb6e851d528ab9356ca6eab8a96560d7f204"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/farmersdelight/worldgen/placed_feature/patch_wild_onions.json"
+hash = "9c546e12f19833ebeae54f388184598c83bd5e5507a6c6b719c056a668cdfe9b"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/farmersdelight/worldgen/placed_feature/patch_wild_potatoes.json"
+hash = "0746b17aafb22b63d4c04f06e9a47c61dd0153d45480fa3c221afafbb4332c19"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/farmersdelight/worldgen/placed_feature/patch_wild_tomatoes.json"
+hash = "c4969b45217bc20abee4048b09c66a71e15956b73dc0afa24f6f39a96d32977c"
+
+[[files]]
 file = "config/paxi/datapacks/peacock/data/forge/tags/items/raw_materials/copper.json"
 hash = "111f88de8f3766d333bc9873fbbb88ab633880b34a12b5e51d243eede0d34009"
 

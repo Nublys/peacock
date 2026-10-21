@@ -1026,3 +1026,10 @@ to be per player."
   finished bounties on that board, and a board generates one set of jobs for all. A player who wants their own
   standing can craft a board at home; the capital's boards stay shared.
 
+## Wild crops easier to find (2026-10-20)
+Farmer's Delight's wild crops already generate in Terralith and Biomes O' Plenty biomes (both tag theirs
+`forge:is_hot`/`is_wet` and `minecraft:is_beach`), but rarely. Aaron: "You can increase them". The Paxi datapack
+overrides the placed features' rarity: tomatoes 1 in 100 chunks → 30 (hot, dry biomes), onions and carrots 120 →
+50 (temperate), potatoes 100 → 40 (cold). Cabbages and beetroots (beaches, 30) and rice (wet, 20) are unchanged.
+New chunks only.
+
