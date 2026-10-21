@@ -27,6 +27,15 @@
     "max": 24
    },
    "unitWorth": 60
+  },
+  "pk_lead_ingot": {
+   "type": "item",
+   "content": "geolosys:lead_ingot",
+   "amount": {
+    "min": 2,
+    "max": 8
+   },
+   "unitWorth": 250
   }
  }
 }

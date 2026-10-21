@@ -1,0 +1,8 @@
+{
+  "type": "tconstruct:casting_table",
+  "conditions": [
+    {
+      "type": "forge:false"
+    }
+  ]
+}

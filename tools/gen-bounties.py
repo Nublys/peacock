@@ -322,6 +322,7 @@ MOD_POOLS = {
     "fletcher_objs": {
         "pk_iron_arrow": obj("spartanweaponry:iron_arrow", 60, 8, 32, "UNCOMMON"), "pk_rope": obj("supplementaries:rope", 50, 8, 24),
         "pk_flax": obj("supplementaries:flax", 60, 8, 24),
+        "pk_lead_ingot": obj("geolosys:lead_ingot", 250, 2, 8),   # lead is shot
     },
     "fletcher_rews": {
         "pk_iron_arrow": entry("spartanweaponry:iron_arrow", 60, 8, 24),
@@ -332,6 +333,10 @@ MOD_POOLS = {
     },
     "toolsmith_objs": {
         "pk_iron_sheet": obj("create:iron_sheet", 450, 2, 8, "UNCOMMON"), "pk_iron_knife": obj("farmersdelight:iron_knife", 500, 1, 1),
+        # Geolosys metals and Create: Ironworks' alloys have buyers (2026-10-21)
+        "pk_tin_ingot": obj("create_ironworks:tin_ingot", 250, 4, 12),
+        "pk_bronze_ingot": obj("create_ironworks:bronze_ingot", 450, 2, 8, "UNCOMMON"),
+        "pk_steel_ingot": obj("create_ironworks:steel_ingot", 900, 1, 4, "RARE"),
     },
     "toolsmith_rews": {
         "pk_prospectors_pick": entry("geolosys:prospectors_pick", 1500, 1, 1, "UNCOMMON"),
@@ -345,6 +350,8 @@ MOD_POOLS = {
         "pk_flanged_mace": entry("spartanweaponry:iron_flanged_mace", 2000, 1, 1, "UNCOMMON"),
         "pk_halberd": entry("spartanweaponry:iron_halberd", 2500, 1, 1, "RARE"),
         "pk_warhammer": entry("spartanweaponry:iron_warhammer", 2500, 1, 1, "RARE"),
+        "pk_bronze_pickaxe": entry("create_ironworks:bronze_pickaxe", 1200, 1, 1, "UNCOMMON"),
+        "pk_steel_hammer": entry("create_ironworks:steel_hammer", 4000, 1, 1, "RARE"),
         # Bountiful's own diamond tools and trident had no reputation gate
         "toolsmith_rew_diamond_pickaxe": {"repRequired": 12}, "toolsmith_rew_diamond_axe": {"repRequired": 12},
         "toolsmith_rew_diamond_hoe": {"repRequired": 12}, "toolsmith_rew_trident": {"repRequired": 10},
@@ -352,11 +359,14 @@ MOD_POOLS = {
     "armorer_objs": {
         "pk_goat_fur": obj("cold_sweat:goat_fur", 300, 2, 6), "pk_hoglin_hide": obj("cold_sweat:hoglin_hide", 600, 1, 4, "UNCOMMON"),
         "pk_iron_sheet": obj("create:iron_sheet", 450, 2, 8, "UNCOMMON"),
+        "pk_bronze_ingot": obj("create_ironworks:bronze_ingot", 450, 2, 8, "UNCOMMON"),
+        "pk_nickel_ingot": obj("geolosys:nickel_ingot", 350, 2, 6, "UNCOMMON"),
     },
     "armorer_rews": {
         "pk_iron_shield": entry("spartanshields:iron_basic_shield", 2000, 1, 1, "UNCOMMON"),
         "pk_iron_tower": entry("spartanshields:iron_tower_shield", 3000, 1, 1, "RARE"),
         "pk_hoglin_chest": entry("cold_sweat:hoglin_chestplate", 2500, 1, 1, "RARE"),
+        "pk_bronze_chest": entry("create_ironworks:bronze_armor_chestplate", 2500, 1, 1, "RARE"),
         # netherite is a Blueprint (tier 3): never a reward; Bountiful's diamond armour waits for a grown board
         **{f"armorer_rew_nether_{p}": None for p in ("helm", "chest", "legs", "boots")},
         **{f"armorer_rew_diamond_{p}": {"repRequired": 12} for p in ("helm", "chest", "legs", "boots", "horse_armor")},
@@ -411,6 +421,7 @@ MOD_POOLS = {
         "pk_glow_goop": obj("naturalist:glow_goop", 300, 2, 6, "UNCOMMON"), "pk_snail_shell": obj("naturalist:snail_shell", 400, 1, 3, "UNCOMMON"),
         "pk_creeper_spores": obj("savage_and_ravage:creeper_spores", 300, 2, 6, "UNCOMMON"),
         "pk_illusionary_dust": obj("illagerinvasion:illusionary_dust", 800, 1, 3, "RARE"),
+        "pk_silver_ingot": obj("geolosys:silver_ingot", 500, 1, 4, "UNCOMMON"),
     },
     "cleric_rews": {
         "pk_training_treat": entry("doggytalents:training_treat", 500, 1, 3, "UNCOMMON"),
@@ -446,10 +457,15 @@ ALL_OBJS_EXTRA = {
     "k_firecaller": ent("illagerinvasion:firecaller", 2000, 1, 1, "EPIC"),
     # Bountiful's own: dirt, cobblestone and stone bricks were filler; its emerald, zombie, spider, creeper and iron
     # block entries doubled the pack's own
+    # precious metal is wanted everywhere (2026-10-21)
+    "pk_platinum_ingot": obj("geolosys:platinum_ingot", 1500, 1, 2, "RARE"),
     **{f"all_obj_{k}": None for k in ("dirt", "cobblestone", "stonebrick", "primary_currency", "zombie", "spider", "creeper", "iron_block")},
 }
 ALL_REWS_EXTRA = {f"all_rew_{k}": None for k in ("arrow", "glow_ink", "prismarine_crystals", "minecart", "axolotl_bucket",
                                                  "totem_undying", "spyglass", "primary_currency", "primary_currency_rare_bargain")}
+# silver and platinum pay like money (2026-10-21)
+ALL_REWS_EXTRA["pk_silver_ingot"] = entry("geolosys:silver_ingot", 450, 2, 4, "UNCOMMON")
+ALL_REWS_EXTRA["pk_platinum_ingot"] = entry("geolosys:platinum_ingot", 1500, 1, 2, "RARE")
 
 # ----------------------------------------------------------------------------- main
 def main() -> None:

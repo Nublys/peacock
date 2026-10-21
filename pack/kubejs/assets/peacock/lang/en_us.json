@@ -10,5 +10,21 @@
   "bountiful.decree.peacock:archivist.name": "Archivist's Records",
   "peacock.join.first": "Year One. The capital still stands. Everything else is the question.",
   "peacock.join.season": "It is %s. Mind the season.",
-  "item.peacock.fire_drill": "Fire Drill"
+  "item.peacock.fire_drill": "Fire Drill",
+  "item.peacock.electrum_ingot": "Electrum Ingot",
+  "item.peacock.electrum_nugget": "Electrum Nugget",
+  "item.peacock.constantan_ingot": "Constantan Ingot",
+  "item.peacock.constantan_nugget": "Constantan Nugget",
+  "item.peacock.invar_ingot": "Invar Ingot",
+  "item.peacock.invar_nugget": "Invar Nugget",
+  "item.peacock.aluminum_sheet": "Aluminum Sheet",
+  "item.peacock.platinum_sheet": "Platinum Sheet",
+  "block.peacock.aluminum_block": "Block of Aluminum",
+  "block.peacock.lead_block": "Block of Lead",
+  "block.peacock.silver_block": "Block of Silver",
+  "block.peacock.nickel_block": "Block of Nickel",
+  "block.peacock.platinum_block": "Block of Platinum",
+  "block.peacock.electrum_block": "Block of Electrum",
+  "block.peacock.constantan_block": "Block of Constantan",
+  "block.peacock.invar_block": "Block of Invar"
 }

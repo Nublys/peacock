@@ -315,6 +315,16 @@
    "unitWorth": 2000,
    "rarity": "EPIC"
   },
+  "pk_platinum_ingot": {
+   "type": "item",
+   "content": "geolosys:platinum_ingot",
+   "amount": {
+    "min": 1,
+    "max": 2
+   },
+   "unitWorth": 1500,
+   "rarity": "RARE"
+  },
   "all_obj_dirt": null,
   "all_obj_cobblestone": null,
   "all_obj_stonebrick": null,

@@ -292,8 +292,10 @@ ENTRIES = {
             txt("There is no iron ore block. There is " + B("hematite") + ", which is what iron ore is called in the ground. Geolosys names every deposit after its mineral, and the mineral tells you the metal.",
                 B("Hematite, Limonite") + " = iron$(br)" + B("Malachite, Azurite") + " = copper$(br)" + B("Sphalerite") + " = zinc$(br)" + B("Cassiterite, Teallite") + " = tin"),
             txt(B("Galena") + " = lead, with silver in it$(br)" + B("Bauxite") + " = aluminum$(br)" + B("Cinnabar") + " = redstone$(br)" + B("Kimberlite") + " = diamond$(br)" + B("Beryl") + " = emerald$(br)" + B("Lignite, Bituminous, Anthracite") + " = coal, soft to hard$(br)" + B("Platinum, Gold, Lapis, Quartz") + " are themselves."),
-            txt("Mine a mineral and you get a " + B("cluster") + " of its metal, never a raw ore. Tin, lead, silver, nickel, aluminum and platinum ingots have no machines of their own here; Spartan Weaponry turns them into spears, blades and shields with their own weights and reach.",
+            txt("Mine a mineral and you get a " + B("cluster") + " of its metal, never a raw ore. Smelt it, or crush and wash it in Create for more: washed galena also gives silver, washed nickel a little platinum.",
                 "Uranium is not in this world. Anything else you dig up, EMI knows a use for."),
+            txt(B("Tin") + ": bronze, Ironworks tools, buckets, lanterns$(br)" + B("Lead") + ": musket and cannon shot$(br)" + B("Nickel") + ": constantan, invar$(br)" + B("Silver") + ": electrum$(br)" + B("Aluminum") + ": balloon sheets$(br)" + B("Platinum") + ": a quicker precision mechanism",
+                "Alloys mix in a heated basin. Smiths and clerics buy the metals for emeralds, and Spartan Weaponry arms you with all of them."),
         ]),
         ("caving", "What Caves Are For", "minecraft:torch", [
             txt("Caves have " + B("no ore in the walls") + ": Geolosys took every vanilla vein. So why go down? Two reasons.",

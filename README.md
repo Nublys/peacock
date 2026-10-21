@@ -83,7 +83,9 @@ the capital, zinc in the mountains, coal in the hills, gold and the rarer metals
 *samples* (small clusters of the ore on the ground) mark a deposit below; a **prospector's pick** reads
 the stone for what is nearby. Ore comes out as clusters that smelt like raw ore. Mineral names you will
 see — hematite, limonite, sphalerite, cassiterite — are the real ones for the metal they hold; the
-Almanac has the table. Caves have no ore in the walls, so caving is for what people left behind:
+Almanac has the table. Every metal has a job: tin makes bronze and **Create: Ironworks** tools and armour,
+lead is musket and cannon shot, silver, nickel and gold mix into electrum, constantan and invar, aluminum makes
+balloons, platinum a quicker precision mechanism, and smiths and clerics buy them for emeralds. Caves have no ore in the walls, so caving is for what people left behind:
 mineshafts, dungeons, the ruins under the hills, and their chests, which do carry ore.
 
 ### Blueprints: how technology comes back

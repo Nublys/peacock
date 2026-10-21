@@ -14,7 +14,11 @@
     },
     {
       "type": "patchouli:text",
-      "text": "Mine a mineral and you get a $(bold)cluster$() of its metal, never a raw ore. Tin, lead, silver, nickel, aluminum and platinum ingots have no machines of their own here; Spartan Weaponry turns them into spears, blades and shields with their own weights and reach.$(br2)Uranium is not in this world. Anything else you dig up, EMI knows a use for."
+      "text": "Mine a mineral and you get a $(bold)cluster$() of its metal, never a raw ore. Smelt it, or crush and wash it in Create for more: washed galena also gives silver, washed nickel a little platinum.$(br2)Uranium is not in this world. Anything else you dig up, EMI knows a use for."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Tin$(): bronze, Ironworks tools, buckets, lanterns$(br)$(bold)Lead$(): musket and cannon shot$(br)$(bold)Nickel$(): constantan, invar$(br)$(bold)Silver$(): electrum$(br)$(bold)Aluminum$(): balloon sheets$(br)$(bold)Platinum$(): a quicker precision mechanism$(br2)Alloys mix in a heated basin. Smiths and clerics buy the metals for emeralds, and Spartan Weaponry arms you with all of them."
     }
   ]
 }

@@ -19,6 +19,8 @@ history and are not rewritten when a later one supersedes them; the summary belo
   (Supplementaries road signs) is fixed. Chunk Pregenerator, not Chunky, for pre-generation.
 - **The look** adds Subtle Effects (both sides), Particle Rain, Smooth Steps (Camera Overhaul removed 2026-10-21), Better Biome Reblend, six texture packs, Streams Reflowing and Terrain Slabs; AmbientSounds is gone. Cold
   Sweat's on-screen water drops are off, by setting and by invisible drop textures (2026-10-21).
+- **Metals:** Create: Ironworks' tin, bronze and steel are the pack's only ones (Geolosys' tin and Big Cannons'
+  bronze/steel fold into them); every Geolosys metal has a use beyond Spartan weapons (entry 2026-10-21).
 
 ## Platform
 - **Forge 47.4.16, not NeoForge.** On 1.20.1 NeoForge is frozen at 47.1.x; Serene
@@ -1104,3 +1106,47 @@ is the only on-screen drop overlay in the pack (its 8×8 droplet stretched to 40
 pack now ships fully transparent `droplet.png` (8×8) and `droplet_trail.png` (8×1) under
 `kubejs/assets/cold_sweat/textures/gui/overlay/`. KubeJS puts its asset pack above mod resources, so this holds
 whatever the setting says. The profiles also set `"Water Droplet Opacity" = 0.0` (default 0.5).
+
+## Geolosys metals get work; Create: Ironworks (2026-10-21)
+Aaron: "The geolosys mod adds many many ores that are ONLY used when crafting spartan weaponry. Are there any mods
+or custom work we can do to give these ores more use?" A recipe scan of every jar confirmed it: silver, nickel,
+platinum and aluminium fed only Spartan Weaponry/Shields; lead only Supplementaries' spiky bomb; tin only Big
+Cannons' bronze. Create's recipes naming these metals are Immersive Engineering compat, inactive here. He chose
+items 1–5 of the proposal plus Create: Ironworks.
+- **Create: Ironworks 3.5.0** (Forge 1.20.1; MCreator-built, data-driven Create recipes, no Create code
+  dependency): copper, bronze, brass, rose quartz, sturdy and steel tools and armour, hammers, paxels; tin, bronze
+  and steel ingots, nuggets, sheets and blocks; tin buckets, cauldrons, hoppers and lanterns; coal dust gunpowder.
+  Its tin ore worldgen is off (`forge:none` over its three biome modifiers; Geolosys is the only ore). It replaced
+  Create's own brass mixing with a one-ingot version: the datapack restores Create's (`create:mixing/brass_ingot`,
+  2 ingots) and `metals.js` removes Ironworks' brass mixes. Its Tinkers' and Dreams & Desires recipes ship without
+  load conditions; the datapack switches them off (`forge:false`), so they do not error at every load. Its steel
+  recipe for netherite templates (7 steel + netherrack, instead of 7 diamonds) is kept.
+- **One tin, one bronze, one steel**: Ironworks' items, because its own recipes name them by id. Geolosys' tin
+  ingot/nugget and Big Cannons' bronze/steel ingots, scrap and blocks are replaced in every recipe output and
+  input, their conversion crafts removed, dropped from the forge tags and hidden in EMI. Big Cannons melts by tag,
+  so cannons cast from Ironworks' metal. Bronze: Ironworks unheated (1 ingot), Big Cannons heated (2).
+- **Crushed Geolosys ore was a dead end** (found on the way): the clusters carry `forge:raw_materials/<metal>`, so
+  Create crushed lead, silver, nickel, aluminium and platinum into crushed ore that could not be washed or smelted
+  (those recipes are conditional on Thermal, Mekanism, IE…). Now washing gives 9 nuggets plus the real companion
+  metal (lead → 50% silver nugget, silver → 50% lead, nickel → 25% platinum, platinum → 25% nickel), and crushed
+  ore smelts or blasts to an ingot. Tin goes through Ironworks' crushed tin (it overrides `create:crushing/raw_tin`).
+- **1, lead is shot**: musket cartridge from 3 lead nuggets + gunpowder + paper (4, iron gives 3); Big Cannons shot
+  balls (3, iron gives 2) and solid shot from lead. Script-added recipes are not seen by blueprints.js's staging
+  pass (`forEachRecipe` walks only the original recipes), so `metals.js` wraps these in the same Recipe Stages
+  gate itself (Blasting, Cannons), and honours `ladder: false`.
+- **2, alloys** in a heated basin: electrum (gold + silver → 2), constantan (copper + nickel → 2), invar (2 iron +
+  nickel → 3), with nuggets. Their forge tags also unlock Spartan's electrum, constantan and invar weapons.
+- **3, blocks**: lead, silver, nickel, aluminium, platinum, electrum, constantan, invar (tin, bronze, steel are
+  Ironworks'). The lead block's tag switches Supplementaries' cannonball recipe from iron blocks to lead blocks.
+  Sheets only where something uses them: aluminium and platinum (Create press). Textures are recoloured from
+  Geolosys' ingots, Create's iron sheet and the vanilla iron block.
+- **4, wealth**: villagers buy them (startup `VillagerTradesEvent`, Forge's `BasicItemListing`): toolsmith L2 6 tin,
+  weaponsmith L2 6 lead, cleric L2 3 silver, armorer L3 4 nickel, toolsmith L3 5 aluminium → 1 emerald; cleric L4
+  1 platinum → 2. New offers appear as villagers level up; existing levels keep their lists. Bounties: tin,
+  bronze, steel (toolsmith), bronze, nickel (armorer), lead (fletcher), silver (cleric), platinum (any board);
+  rewards silver and platinum (any board), a bronze pickaxe and steel hammer (toolsmith), a bronze chestplate
+  (armorer).
+- **5**: platinum sheet → precision mechanism in 3 deploy loops, no scrap (Create's: gold sheet, 5 loops, ~12%
+  scrap); Ironworks adds a steel-nugget version. Aluminium sheets → 8 Eureka balloons (paper 2, leather 4,
+  membrane 32), gated by Ships like Eureka's own.
+- The Almanac's "Why the Rocks Have Names" gains a page of what each metal is for.

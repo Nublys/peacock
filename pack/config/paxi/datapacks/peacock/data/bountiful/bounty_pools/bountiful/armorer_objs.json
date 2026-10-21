@@ -28,6 +28,26 @@
    },
    "unitWorth": 450,
    "rarity": "UNCOMMON"
+  },
+  "pk_bronze_ingot": {
+   "type": "item",
+   "content": "create_ironworks:bronze_ingot",
+   "amount": {
+    "min": 2,
+    "max": 8
+   },
+   "unitWorth": 450,
+   "rarity": "UNCOMMON"
+  },
+  "pk_nickel_ingot": {
+   "type": "item",
+   "content": "geolosys:nickel_ingot",
+   "amount": {
+    "min": 2,
+    "max": 6
+   },
+   "unitWorth": 350,
+   "rarity": "UNCOMMON"
   }
  }
 }

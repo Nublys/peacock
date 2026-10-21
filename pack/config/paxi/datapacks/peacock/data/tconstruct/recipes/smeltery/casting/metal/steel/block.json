@@ -1,0 +1,8 @@
+{
+  "type": "tconstruct:casting_basin",
+  "conditions": [
+    {
+      "type": "forge:false"
+    }
+  ]
+}

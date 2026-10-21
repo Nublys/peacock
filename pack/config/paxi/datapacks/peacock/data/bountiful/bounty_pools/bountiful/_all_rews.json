@@ -340,6 +340,26 @@
   "all_rew_totem_undying": null,
   "all_rew_spyglass": null,
   "all_rew_primary_currency": null,
-  "all_rew_primary_currency_rare_bargain": null
+  "all_rew_primary_currency_rare_bargain": null,
+  "pk_silver_ingot": {
+   "type": "item",
+   "content": "geolosys:silver_ingot",
+   "amount": {
+    "min": 2,
+    "max": 4
+   },
+   "unitWorth": 450,
+   "rarity": "UNCOMMON"
+  },
+  "pk_platinum_ingot": {
+   "type": "item",
+   "content": "geolosys:platinum_ingot",
+   "amount": {
+    "min": 1,
+    "max": 2
+   },
+   "unitWorth": 1500,
+   "rarity": "RARE"
+  }
  }
 }

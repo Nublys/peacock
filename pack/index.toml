@@ -393,11 +393,11 @@ hash = "13f7e543aef10672c4481b15dea47491b57de458254bfba43335bfa7556234cd"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/bountiful/bounty_pools/bountiful/_all_objs.json"
-hash = "0b44b529cb93451caafec2d79b2b2a2a344365aa37ce8d9de3bc551bbbeb6348"
+hash = "8d1b360b7e8ae15e00c5fca04ec1230bc0ab4c9f9aeae53544d9e218624bc3da"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/bountiful/bounty_pools/bountiful/_all_rews.json"
-hash = "5aa98bf244ffb24e8466110a0dcb8a39520e285bf0c51d126a71d2bd7a03471f"
+hash = "aa2bd5e72af1a06ed8a2342f7c329e21b6a0d1060d7b8c531296267f75ee5e02"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/bountiful/bounty_pools/bountiful/_equip_rews.json"
@@ -405,11 +405,11 @@ hash = "5a88e9dee4e08a2d66709af6204da533cb108f87031183323c2dcb2687936181"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/bountiful/bounty_pools/bountiful/armorer_objs.json"
-hash = "5b5707aec43dea065d79cdfd765aeb8f938e86318c82d1457c2e84d1c590cd85"
+hash = "9b4661d814bff1f6dfcf33e7053ae2a40821e3070471174b6f0ab3bbe7141205"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/bountiful/bounty_pools/bountiful/armorer_rews.json"
-hash = "d9b5c1c22cc9f67c61eeacb1ba0ff1c37b50dcc467894bc9ec479937b6bb0724"
+hash = "51f3880e4f2fc9b0ed9ed261ac94389a075522c4446efc209385b32d1e892db4"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/bountiful/bounty_pools/bountiful/butcher_objs.json"
@@ -421,7 +421,7 @@ hash = "bc0ea465856113524b6f8365bffe96903a5a61a6e770f2b5497d9bc10fc6efec"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/bountiful/bounty_pools/bountiful/cleric_objs.json"
-hash = "0e48ef9483b825ae77cd2d3d8e182f9921e3dccb64dfef1563e589f8f764edbc"
+hash = "1287d4cd9baa9ebabb248b43137c3033bcc8f65889057e85a9029b175a7391c3"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/bountiful/bounty_pools/bountiful/cleric_rews.json"
@@ -445,7 +445,7 @@ hash = "0ffb7f9869ea13db6d795af586daff606d118b9159f0153997da14d4055c9519"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/bountiful/bounty_pools/bountiful/fletcher_objs.json"
-hash = "7167e6d5ee16d0f575755911a4deb041c8c52da3bd7a720c69e92a7af0dabf03"
+hash = "f899c05829c7eedb4ad0bf0ee59dd8b8ce2363f48157e08572056fbd44c7065c"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/bountiful/bounty_pools/bountiful/fletcher_rews.json"
@@ -493,11 +493,11 @@ hash = "41bb4044d0c38c2ede0231e86e5333209f2af8446219bc5b50b788414242a46e"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/bountiful/bounty_pools/bountiful/toolsmith_objs.json"
-hash = "7ef30ba09b650a9d12db290da5f7c1cfa89de956741196d771de6ffa7a51e415"
+hash = "d47e341f0be668e6c125872358e73f5eac2327a9926dae59ec98bc5f600a0a9c"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/bountiful/bounty_pools/bountiful/toolsmith_rews.json"
-hash = "f51b9f27327dba9d99dedd821f8edd5d64fce931fe96db9f5f4763becc38e635"
+hash = "e669c4004d1834df6b40463e32c7ffc21eaf4fe97264d2d1e756951e8b5b8c7b"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/bountiful/bounty_pools/peacock/archivist_objs.json"
@@ -530,6 +530,62 @@ hash = "e9e6fd232618545626af37a1239915ed3f009527d41f1ba891ef14cefd0c9cac"
 [[files]]
 file = "config/paxi/datapacks/peacock/data/create/recipes/filling/purified_water_bucket.json"
 hash = "4c702ebae17c77801f7a960fa6457fa14e7ae1970c2d981a9467cd8e9c8c53e4"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/create/recipes/mixing/brass_ingot.json"
+hash = "f265358916f4362753643603b12141a7d9c245fc9914bd17d25005e809ff698e"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/create_dd/recipes/crafting/steel_block_from_compacting.json"
+hash = "8c499694e2c327491490c3f76ec58e65549db7ff7448a5ca94e7a8a6f792871e"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/create_dd/recipes/crafting/steel_ingot_from_compacting.json"
+hash = "8c499694e2c327491490c3f76ec58e65549db7ff7448a5ca94e7a8a6f792871e"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/create_dd/recipes/crafting/steel_ingot_from_decompacting.json"
+hash = "63154cd93626803977271eeb1d0f333b0e18ad9c2943b2e048b0202b475fa9bb"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/create_dd/recipes/crafting/steel_nugget_from_decompacting.json"
+hash = "63154cd93626803977271eeb1d0f333b0e18ad9c2943b2e048b0202b475fa9bb"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/create_dd/recipes/crafting/tin_block_from_compacting.json"
+hash = "8c499694e2c327491490c3f76ec58e65549db7ff7448a5ca94e7a8a6f792871e"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/create_dd/recipes/crafting/tin_ingot_from_compacting.json"
+hash = "8c499694e2c327491490c3f76ec58e65549db7ff7448a5ca94e7a8a6f792871e"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/create_dd/recipes/crafting/tin_ingot_from_decompacting.json"
+hash = "63154cd93626803977271eeb1d0f333b0e18ad9c2943b2e048b0202b475fa9bb"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/create_dd/recipes/crafting/tin_nugget_from_decompacting.json"
+hash = "63154cd93626803977271eeb1d0f333b0e18ad9c2943b2e048b0202b475fa9bb"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/create_ironworks/forge/biome_modifier/deepslate_tin_ore_biome_modifier.json"
+hash = "8fd00d4ac4c1fe988b0ef8e3706ffe52de95187c381050e241a3705627f96e86"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/create_ironworks/forge/biome_modifier/raw_tin_block_biome_modifier.json"
+hash = "8fd00d4ac4c1fe988b0ef8e3706ffe52de95187c381050e241a3705627f96e86"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/create_ironworks/forge/biome_modifier/tin_ore_biome_modifier.json"
+hash = "8fd00d4ac4c1fe988b0ef8e3706ffe52de95187c381050e241a3705627f96e86"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/create_ironworks/recipes/compat/dreams_and_desires/crushing_coal_piece.json"
+hash = "25d0362113beba4b8f407ebc11dc660db4a8508d90e2dd1c2880c70d8231fee8"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/create_ironworks/recipes/compat/dreams_and_desires/raw_tin_exchange.json"
+hash = "63154cd93626803977271eeb1d0f333b0e18ad9c2943b2e048b0202b475fa9bb"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/farmersdelight/worldgen/placed_feature/patch_wild_carrots.json"
@@ -1148,6 +1204,42 @@ file = "config/paxi/datapacks/peacock/data/sereneseasons/tags/blocks/summer_crop
 hash = "7647c90009d8faf64df6efd2ad77a14f0923f0d605cc4e3148a835b587df30eb"
 
 [[files]]
+file = "config/paxi/datapacks/peacock/data/tconstruct/recipes/common/materials/steel_block_from_ingots.json"
+hash = "8c499694e2c327491490c3f76ec58e65549db7ff7448a5ca94e7a8a6f792871e"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/tconstruct/recipes/common/materials/steel_ingot_from_block.json"
+hash = "63154cd93626803977271eeb1d0f333b0e18ad9c2943b2e048b0202b475fa9bb"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/tconstruct/recipes/common/materials/steel_ingot_from_nuggets.json"
+hash = "8c499694e2c327491490c3f76ec58e65549db7ff7448a5ca94e7a8a6f792871e"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/tconstruct/recipes/common/materials/steel_nugget_from_ingot.json"
+hash = "63154cd93626803977271eeb1d0f333b0e18ad9c2943b2e048b0202b475fa9bb"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/tconstruct/recipes/smeltery/casting/metal/steel/block.json"
+hash = "a7fc9e2b2a7429d36223c808e6bfc5bf126bf2452b7a67063c8d86f9b80c441a"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/tconstruct/recipes/smeltery/casting/metal/steel/ingot_gold_cast.json"
+hash = "0c6b74c83a620225dba311574f655f1661cfe3a82c370f1aa2160eab7cbfefbf"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/tconstruct/recipes/smeltery/casting/metal/steel/ingot_sand_cast.json"
+hash = "0c6b74c83a620225dba311574f655f1661cfe3a82c370f1aa2160eab7cbfefbf"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/tconstruct/recipes/smeltery/casting/metal/steel/nugget_gold_cast.json"
+hash = "0c6b74c83a620225dba311574f655f1661cfe3a82c370f1aa2160eab7cbfefbf"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/tconstruct/recipes/smeltery/casting/metal/steel/nugget_sand_cast.json"
+hash = "0c6b74c83a620225dba311574f655f1661cfe3a82c370f1aa2160eab7cbfefbf"
+
+[[files]]
 file = "config/paxi/datapacks/peacock/data/underground_village/worldgen/structure_set/underground_village.json"
 hash = "082283c08877fbe1faa11f4bc93c48998f8f63bd6dadf105a3fb6fe71457f27c"
 
@@ -1338,15 +1430,79 @@ hash = "c767c02c7a6eb0769bcdac8e7c2b43bed5cfc9b2a1653f90fe52ce958f2fe10c"
 
 [[files]]
 file = "kubejs/assets/peacock/lang/en_us.json"
-hash = "f7ad8dd18fad3fa507cee05cd8e4a2b38a5520780de79eaa8252bdfbdcbad56d"
+hash = "70c1f6780e299fa036260cfc901ed98d5a0853bbbe02ee0b42afa8e9c9627582"
+
+[[files]]
+file = "kubejs/assets/peacock/textures/block/aluminum_block.png"
+hash = "955f918836b3b50d7cd6f8b267700d78900022e54302bc850b4c057f240f0959"
+
+[[files]]
+file = "kubejs/assets/peacock/textures/block/constantan_block.png"
+hash = "c5546c50c5fcd1f0aab0290191fb657c23b3e1971f985dacbcbc93da516bf401"
+
+[[files]]
+file = "kubejs/assets/peacock/textures/block/electrum_block.png"
+hash = "720bfd15505e6246daac14f8eecce051c869aad32a95c3cf09b353b8a1201fb5"
+
+[[files]]
+file = "kubejs/assets/peacock/textures/block/invar_block.png"
+hash = "7d949c066706ec3d602c5ff3b52c9ca95d8f7c11f2d9d55050bd210ae9849493"
+
+[[files]]
+file = "kubejs/assets/peacock/textures/block/lead_block.png"
+hash = "295aac7c2d501e23736faf4cf1178e1aebb804e13bc17af0b9239a820c05cdcf"
+
+[[files]]
+file = "kubejs/assets/peacock/textures/block/nickel_block.png"
+hash = "9fcd6d19f6776ae575c47c8312857969adf03c15a2f06639757551fe37e4ed41"
+
+[[files]]
+file = "kubejs/assets/peacock/textures/block/platinum_block.png"
+hash = "a30cfe66700da1161f81bab59be39d161d543b448fc60739731a236fb02b699e"
+
+[[files]]
+file = "kubejs/assets/peacock/textures/block/silver_block.png"
+hash = "5f295e16cbd90c684e10595d6570b1204541802fcee194fb7475962fa2590e12"
+
+[[files]]
+file = "kubejs/assets/peacock/textures/item/aluminum_sheet.png"
+hash = "cbab6092e833e0adb9596c0e98494a95bfe16e210d95cc06dd15b753ce4cc902"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/blueprint.png"
 hash = "244b616ffc97ccae07006cdbae119954d722f13cc5fbe72b738c0f95d25c7eb3"
 
 [[files]]
+file = "kubejs/assets/peacock/textures/item/constantan_ingot.png"
+hash = "fb54365e3c7c86835ae2d74fff7df7f37bc7e155070d7f039868223b2bfae5a8"
+
+[[files]]
+file = "kubejs/assets/peacock/textures/item/constantan_nugget.png"
+hash = "7bc14cbb556fe90a0689f7b8b3b9561c6a371922ebf7cef542c50fe6143698bd"
+
+[[files]]
+file = "kubejs/assets/peacock/textures/item/electrum_ingot.png"
+hash = "50717cd1adceab907f9b0cfd1abf8e839f8366fb8117f7e494db4d586bca3bbc"
+
+[[files]]
+file = "kubejs/assets/peacock/textures/item/electrum_nugget.png"
+hash = "497c546910c8b1335fd3d2cbe3db025980ac4930deece466eaa096457bae74ec"
+
+[[files]]
 file = "kubejs/assets/peacock/textures/item/fire_drill.png"
 hash = "3969f18a9c823fa284fd3e8a0d13d9956941bb894474e88632dd0592353c2603"
+
+[[files]]
+file = "kubejs/assets/peacock/textures/item/invar_ingot.png"
+hash = "74d4668f38ea3ba5d1365d409a496d006d9c344ac61b863affb402cf74315ccf"
+
+[[files]]
+file = "kubejs/assets/peacock/textures/item/invar_nugget.png"
+hash = "380c9c490084ba06293309c31b91c6dca918938e451bb423262412388c312041"
+
+[[files]]
+file = "kubejs/assets/peacock/textures/item/platinum_sheet.png"
+hash = "179cd68766557f3932e2c4a8dc6e8af1f697be2857412a831f61961cb36aec7c"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/rumour_voucher.png"
@@ -1417,6 +1573,10 @@ file = "kubejs/server_scripts/journals.js"
 hash = "12bb9718ac3cf5e6b5b98a97f171b6a9a397ed518d1be049b663c745458c6ab8"
 
 [[files]]
+file = "kubejs/server_scripts/metals.js"
+hash = "8289519c452d0f5af346e9d0efa854bdf735133f2ac6e253591fe9832564dff4"
+
+[[files]]
 file = "kubejs/server_scripts/no_vr_manual.js"
 hash = "fa5abef14f5e188ac6734d733f38be7f063e11db1f73f0cb9936817723b2c409"
 
@@ -1455,6 +1615,10 @@ hash = "c98a3376d1b26ab97751a81735558691508336384f994c69849eebbbbae4cf3a"
 [[files]]
 file = "kubejs/startup_scripts/fire_drill.js"
 hash = "e47482cdc15f348403399b7c97413d8cac404b0d39d77b3bcf7c9a24676859af"
+
+[[files]]
+file = "kubejs/startup_scripts/metals.js"
+hash = "05d94bd65675272fdb3586d41fe970662cb8901ffaafec81a20a877e803cec0d"
 
 [[files]]
 file = "kubejs/startup_scripts/peacock_ladder.js"
@@ -1667,6 +1831,11 @@ metafile = true
 [[files]]
 file = "mods/create-enchantment-industry.pw.toml"
 hash = "e2847e53f1b45565b712adc055c2801da0cddafd07296ec4fc0dc289f2716223"
+metafile = true
+
+[[files]]
+file = "mods/create-ironworks.pw.toml"
+hash = "bd3025c05acd5ec26137bfbee0ba7c3a230dfaec9f9d800f7cd7045caa79198d"
 metafile = true
 
 [[files]]
@@ -2578,7 +2747,7 @@ hash = "766c34b119376accac9520329a3018a77a28613e06944589dc0d99cf51b54ab6"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/ore/minerals.json"
-hash = "ecd93f02b53cdbe7dd3c16ccb983b45fda1d7be7c6cd7dd1f0d630906fa8ae74"
+hash = "b6367aa97c2f0438ad4f6ea7a93fe59159f0ea84f9ccdafe438f026469666067"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/ore/prospecting.json"
