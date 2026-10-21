@@ -1366,7 +1366,7 @@ hash = "cc48e7b6d2c9ccc4375e04f371c53582ebc7fa50f8f366ae097b71feaf9d2aed"
 
 [[files]]
 file = "kubejs/config/peacock.json"
-hash = "8cd2c4d30dfa71408879738a6211c7e06d8293750868485dd0f193a9178ec85d"
+hash = "e6d8f93771384979f3d211eb2a22747c170b93f8609b77f7d59acbd9d10ec209"
 
 [[files]]
 file = "kubejs/server_scripts/achievements.js"
@@ -1451,6 +1451,10 @@ hash = "e47482cdc15f348403399b7c97413d8cac404b0d39d77b3bcf7c9a24676859af"
 [[files]]
 file = "kubejs/startup_scripts/peacock_ladder.js"
 hash = "3716782119cd8d4dfc16c31d25aba1c4f1f4a9be20035e30648c2619c88bf030"
+
+[[files]]
+file = "kubejs/startup_scripts/tab_list_offset.js"
+hash = "d192f22ffdb17c4b29dcfd229d18bb87082e5e6581a8e3531e0ce527d7ecca50"
 
 [[files]]
 file = "mods/3dskinlayers.pw.toml"

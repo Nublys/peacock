@@ -1046,3 +1046,10 @@ Aaron: "lower the volume of the waterfalls too, and the minecraft music". Stream
 rivers and waterfalls; `waterAmbience` in config/streamsreflowing-client.toml) 1.0 → 0.35, and Minecraft's music
 slider 100% → 30%, in every profile and in the first-launch options; a player's own slider setting stands.
 
+## The player list opens below the compass (2026-10-20)
+Aaron: "Tab gets in the way over compass, makes it difficult to read." Reworked Locator Bar draws its compass at the
+top centre and the player list draws from the top as well (the 2026-10-17 note left this alone). Better Tab has no
+position setting and the compass can only be offset from the top, so `startup_scripts/tab_list_offset.js` shifts
+Forge's `minecraft:player_list` HUD layer down 30 GUI pixels (`tabListOffset` in kubejs/config/peacock.json), the
+same push/pop pattern as the boss-bar scaling. Supersedes "the tab list covering the locator bar ... is left alone".
+
