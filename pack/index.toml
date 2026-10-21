@@ -1514,7 +1514,7 @@ hash = "09d333d76904e58dcfc54bac179a809c34e83ece952f11ab110dd5ea81e575f0"
 
 [[files]]
 file = "kubejs/client_scripts/cold_breath.js"
-hash = "b352f2c18e410feb6c97e69ea40133fb984f15f16a61e4f795c66cd823485811"
+hash = "ae3a24c1638eda55a1752bf1a403887bf325ae4ad41fe9ff65c6e00dc60509a2"
 
 [[files]]
 file = "kubejs/client_scripts/profile_client.js"
@@ -1550,7 +1550,7 @@ hash = "3124630fabe5d255e997dfb4b00c9a823506380dec19fee7e23404fab6f2fa4d"
 
 [[files]]
 file = "kubejs/server_scripts/capital_boards.js"
-hash = "128fba06674cc97e38cf7487c9a797e2a7e359f5215426a7218661bb885118c1"
+hash = "c2847c71ca7dde322c5aa5730a4321af07d5f37275d745709fa388c5fc2731db"
 
 [[files]]
 file = "kubejs/server_scripts/capital_wall.js"

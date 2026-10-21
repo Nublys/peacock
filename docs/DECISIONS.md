@@ -1244,3 +1244,16 @@ weather, and the crops and terrain pages no longer mention it.
   and crops pass through) with at most 3 blocks of rise. Flag `peacock_board_pavilion_v2`; a world whose first run fell
   back to bare boards (pavilion flag, no saved site) gets the pavilion and its bare boards (near the bell, and beside
   spawn) are taken up.
+- 14:10, another new world, "no open 7x7 ground within 40 blocks": the capital's first piece is the town centre, the
+  square itself, and the search kept clear of it like a house, so nothing near the bell qualified. Third version: the
+  square counts as open ground, the search relaxes in four steps (reach 40→64, rise 2→8, roads allowed from step 3,
+  outside the hull only at step 4), each failed step logs how many spots each rule rejected, and building/road
+  overlap is a summed-area grid (constant time per spot; ~380 boxes × 12,800 spots was too slow for the server
+  thread). Only a built pavilion sets the flag (`peacock_board_pavilion_v3`): bare boards are put out again each start
+  until one stands.
+
+## Breath script, second fix (2026-10-21 14:10)
+"no method players on ClientLevel": KubeJS adds its own `players` property to levels, which hides the game's
+`players()` method under the same name. The helper now accepts a property value when no arguments are needed and
+tries KubeJS' `getPlayers()` first; particles fall back to the particle engine; and the log shows one line ten seconds
+in with the air temperature it reads, and one when the first breath is drawn.

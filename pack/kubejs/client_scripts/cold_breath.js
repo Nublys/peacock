@@ -53,13 +53,19 @@ function particle() {
 // Game methods by their readable name, falling back to the runtime (SRG) name: on 2026-10-21 KubeJS could not find
 // ClientLevel.getGameTime() in Aaron's client ("Cannot find function getGameTime in object ClientLevel") every tick,
 // so no breath was ever drawn. The script keeps its own tick count now and goes through call() for the rest.
+// A name can also be a KubeJS property: KubeJS adds its own members to game classes, and its `players` property on
+// the level hides the game's players() method ("no method players on ClientLevel", 2026-10-21 14:09), so a
+// non-function value is taken as the answer when no arguments are needed.
 function call(obj, names, args) {
   for (var i = 0; i < names.length; i++) {
     var f = obj[names[i]]
     if (typeof f === 'function') return f.apply(obj, args || [])
+    if (f !== undefined && f !== null && !(args && args.length)) return f
   }
   throw 'no method ' + names[0] + ' on ' + obj
 }
+
+let firstPuff = true
 
 let warned = false
 function warnOnce(e) {
@@ -74,7 +80,7 @@ function cold(p) {
 
 // Subtle Effects' ParticleSpawnUtil.spawnEntityFaceParticle: (0, -0.1, 0.6) in front of the eyes, drifting forward
 function puff(level, p, type) {
-  var pitch = -call(p, ['getXRot', 'm_146909_']) * DEG, yaw = -call(p, ['getYRot', 'm_146908_']) * DEG
+  var pitch = -call(p, ['getXRot', 'm_146909_', 'getPitch', 'pitch']) * DEG, yaw = -call(p, ['getYRot', 'm_146908_', 'getYaw', 'yaw']) * DEG
   var cp = Math.cos(pitch), sp = Math.sin(pitch), cy = Math.cos(yaw), sy = Math.sin(yaw)
   // position: x 0, y -0.1, z 0.6 — rotate about X (pitch), then Y (yaw)
   var y1 = -0.1 * cp + 0.6 * sp, z1 = 0.6 * cp + 0.1 * sp
@@ -82,11 +88,18 @@ function puff(level, p, type) {
   // speed: x 0, y 0, z 0.005–0.01
   var s = 0.005 + Math.random() * 0.005
   var vy = s * sp, vz1 = s * cp
-  var x = call(p, ['getX', 'm_20185_']), y = call(p, ['getEyeY', 'm_20188_']), z = call(p, ['getZ', 'm_20189_'])
-  call(level, ['addParticle', 'm_7106_'], [type, x + x2, y + y1, z + z2, vz1 * sy, vy, vz1 * cy])
+  var x = call(p, ['getX', 'm_20185_', 'x']), y = call(p, ['getEyeY', 'm_20188_', 'eyeY']), z = call(p, ['getZ', 'm_20189_', 'z'])
+  var args = [type, x + x2, y + y1, z + z2, vz1 * sy, vy, vz1 * cy]
+  try { call(level, ['addParticle', 'm_7106_'], args) }
+  catch (e) { call(call(api.mc, ['particleEngine', 'f_91061_']), ['createParticle', 'm_107370_'], args) }   // the same, one step lower
+  if (firstPuff) {
+    firstPuff = false
+    console.info('[peacock] cold breath: first breath drawn (air ' + Math.round(api.Temperature.get(p, api.Trait.WORLD) * 45 + 32) + ' °F)')
+  }
 }
 
 let ticks = 0
+let inWorld = 0
 ClientEvents.tick(event => {
   ticks++
   try {
@@ -95,7 +108,10 @@ ClientEvents.tick(event => {
     if (!level || !me || call(mc, ['isPaused', 'm_91104_'])) return
     var type = particle()
     if (!type) return
-    var players = call(level, ['players', 'm_6907_'])
+    // one line ten seconds in, so a log shows the script running and the air it reads
+    if (++inWorld === 200) console.info('[peacock] cold breath: running; the air at you is ' + Math.round(api.Temperature.get(me, api.Trait.WORLD) * 45 + 32) +
+      ' °F (breath below ' + Math.round(BELOW * 45 + 32) + ' °F)')
+    var players = call(level, ['getPlayers', 'players', 'm_6907_'])
     for (var i = 0; i < players.size(); i++) {
       if ((ticks + i * 17) % EVERY >= PUFF) continue          // each player on their own rhythm
       var p = players.get(i)
