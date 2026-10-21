@@ -1140,7 +1140,7 @@ items 1–5 of the proposal plus Create: Ironworks.
   Ironworks'). The lead block's tag switches Supplementaries' cannonball recipe from iron blocks to lead blocks.
   Sheets only where something uses them: aluminium and platinum (Create press). Textures are recoloured from
   Geolosys' ingots, Create's iron sheet and the vanilla iron block.
-- **4, wealth**: villagers buy them (startup `VillagerTradesEvent`, Forge's `BasicItemListing`): toolsmith L2 6 tin,
+- **4, wealth**: villagers buy them (added to the villager's offers on right-click; see the crash entry below): toolsmith L2 6 tin,
   weaponsmith L2 6 lead, cleric L2 3 silver, armorer L3 4 nickel, toolsmith L3 5 aluminium → 1 emerald; cleric L4
   1 platinum → 2. New offers appear as villagers level up; existing levels keep their lists. Bounties: tin,
   bronze, steel (toolsmith), bronze, nickel (armorer), lead (fletcher), silver (cleric), platinum (any board);
@@ -1183,3 +1183,16 @@ Names" became "Every Ore at a Glance" (the depth table, mining and processing, F
 Middle and Deep Ores (each ore: speckle colour from its texture, what it drops, depth and terrain, what it is for)
 and "What the Metals Are For". Galena and limonite are called out as two-metal ores.
 Same day: Subtle Effects' rising sparkles on dropped items off (`[itemRarity] particlesDisplayType = "OFF"`).
+
+## The metals update crashed server start; fixed (2026-10-21 11:00)
+Aaron's server logs (11:00 and 11:03 boots): `ClassCastException: String cannot be cast to Integer` in
+`ServerAboutToStartEvent` → `VillagerTradesEvent`, from `NativeJavaMap.get` → `Int2ObjectMap.containsKey`. KubeJS'
+Rhino wraps every Java map as a JS object and answers each property or method lookup with `containsKey(name)`;
+fastutil's Int2ObjectMap (Forge's trade table) casts that String key to Integer. The first touch of
+`event.getTrades()` killed the server, and the shutdown then hung on LuckPerms and Spark threads until the
+watchdog. Never call into a Java Map from KubeJS. The villager metal trades now go into the villager's own
+`MerchantOffers` (an ArrayList) when a player right-clicks it, once it has the profession and level (server
+`metals.js`); existing villagers get them too.
+Same boot: KubeJS reported "modified 2 recipes": `replaceOutput` only reaches recipe types it has a schema for
+(Geolosys' smelting/blasting), so Big Cannons' basin mixing and compacting still made its hidden bronze and steel.
+Those ten recipes are now rebuilt with the ids swapped in their JSON.

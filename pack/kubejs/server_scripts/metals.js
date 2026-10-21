@@ -21,6 +21,7 @@
 // 5. Storage blocks, and sheets where something uses them: aluminium sheets make Eureka balloons (light metal,
 //    8 per craft; gated by Ships like Eureka's own), platinum sheets make a precision mechanism in 3 steps
 //    instead of 5 and without Create's scrap chance.
+// 6. Villagers buy the rarer metals (BUYS, at the end).
 ;(() => {
 const SW = (() => { try { return JsonIO.read('kubejs/config/peacock.json') || {} } catch (e) { return {} } })()
 const LADDER_ON = SW.ladder !== false
@@ -71,6 +72,22 @@ ServerEvents.recipes(event => {
   FOLD.forEach(f => {
     event.replaceOutput({}, f[0], f[1])
     event.replaceInput({}, f[0], f[1])
+  })
+  // replaceOutput only reaches recipe types KubeJS has a schema for (here: Geolosys' smelting and blasting). Big
+  // Cannons' Create mixing and compacting recipes are rebuilt with the ids swapped in their JSON (first boot,
+  // 2026-10-21: "modified 2 recipes", and the basin still made Big Cannons' hidden bronze and steel).
+  ;['mixing/alloy_bronze_tin', 'mixing/alloy_bronze_brass', 'mixing/alloy_bronze_tinless', 'mixing/alloy_steel',
+    'compacting/forge_bronze_ingot', 'compacting/forge_bronze_block', 'compacting/forge_bronze_nugget',
+    'compacting/forge_steel_ingot', 'compacting/forge_steel_block', 'compacting/forge_steel_nugget'].forEach(path => {
+    var id = 'createbigcannons:' + path
+    event.forEachRecipe({ id: id }, r => {
+      var text = String(r.json)
+      FOLD.forEach(f => { text = text.split('"' + f[0] + '"').join('"' + f[1] + '"') })
+      var json = JSON.parse(text)
+      delete json.conditions
+      event.remove({ id: id })
+      event.custom(json).id('peacock:metals/fold/' + path.replace('/', '_'))
+    })
   })
   event.remove({ id: /^create_ironworks:materials\/alloys\/.*mixing_brass$/ })
   event.remove({ id: /^create_ironworks:compat\/(bronze|steel)_/ })
@@ -144,5 +161,41 @@ ServerEvents.recipes(event => {
 ServerEvents.tags('item', event => {
   Object.keys(FOLD_TAGS).forEach(id => event.remove(FOLD_TAGS[id], id))
   HIDE.forEach(id => event.add('c:hidden_from_recipe_viewers', id))
+})
+// ---------------------------------------------------------------- 6. villagers buy metals
+// Added to a villager's own offer list when a player right-clicks it (before the trade screen opens), once it has
+// the profession and level: existing villagers get them too, and the offer then lives in the villager like any other.
+// Not Forge's VillagerTradesEvent: its trade table is a fastutil Int2ObjectMap, and KubeJS' Rhino wraps any Java map
+// as a JS object whose every property lookup calls containsKey(String), which that map answers with a
+// ClassCastException. That crashed server start on 2026-10-21.
+// [profession, level, item the villager wants, how many, emeralds paid]
+const BUYS = [
+  ['toolsmith', 2, 'create_ironworks:tin_ingot', 6, 1],
+  ['weaponsmith', 2, 'geolosys:lead_ingot', 6, 1],
+  ['cleric', 2, 'geolosys:silver_ingot', 3, 1],
+  ['armorer', 3, 'geolosys:nickel_ingot', 4, 1],
+  ['toolsmith', 3, 'geolosys:aluminum_ingot', 5, 1],
+  ['cleric', 4, 'geolosys:platinum_ingot', 1, 2],
+]
+const MerchantOffer = Java.loadClass('net.minecraft.world.item.trading.MerchantOffer')
+
+ItemEvents.entityInteracted(event => {
+  var v = event.target
+  if (!v || String(v.type) !== 'minecraft:villager' || v.level.isClientSide()) return
+  try {
+    var data = v.getVillagerData()
+    var prof = String(data.getProfession().name())
+    if (prof.indexOf(':') >= 0) prof = prof.substring(prof.indexOf(':') + 1)
+    var level = data.getLevel()
+    var offers = null
+    BUYS.forEach(b => {
+      if (b[0] !== prof || level < b[1]) return
+      if (!offers) offers = v.getOffers()
+      for (var i = 0; i < offers.size(); i++) {
+        if (String(offers.get(i).getBaseCostA().id) === b[2]) return
+      }
+      offers.add(new MerchantOffer(Item.of(b[2], b[3]), Item.of('minecraft:emerald', b[4]), 12, 10 * b[1], 0.05))
+    })
+  } catch (e) { console.warn('[peacock] metals: villager trade: ' + e) }
 })
 })()

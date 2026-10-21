@@ -1582,7 +1582,7 @@ hash = "12bb9718ac3cf5e6b5b98a97f171b6a9a397ed518d1be049b663c745458c6ab8"
 
 [[files]]
 file = "kubejs/server_scripts/metals.js"
-hash = "8289519c452d0f5af346e9d0efa854bdf735133f2ac6e253591fe9832564dff4"
+hash = "afe18c852a6dbc71992435a7409f5517f3929440eceb6193dda8b64f191bf94f"
 
 [[files]]
 file = "kubejs/server_scripts/no_vr_manual.js"
@@ -1626,7 +1626,7 @@ hash = "e47482cdc15f348403399b7c97413d8cac404b0d39d77b3bcf7c9a24676859af"
 
 [[files]]
 file = "kubejs/startup_scripts/metals.js"
-hash = "05d94bd65675272fdb3586d41fe970662cb8901ffaafec81a20a877e803cec0d"
+hash = "b3dca150dde74c73c1494c7e7a55977e3f94b8e13372c051dcb8f7dbd7334832"
 
 [[files]]
 file = "kubejs/startup_scripts/peacock_ladder.js"
