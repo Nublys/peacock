@@ -112,7 +112,7 @@ PREVIOUS_DEFAULTS = {
     "config/coldsweat/client.toml.keys": ["[Preferences]", '"Show Water Effect" = 3'],
     "config/subtle_effects/entities.toml.keys": ["[dustClouds]", "playerRunning = true"],
     "config/subtle_effects/blocks.toml.keys": ["rainWaterRipples = true"],
-    "config/streamsreflowing-client.toml.keys": ["waterAmbience = 1.0"],
+    "config/streamsreflowing-client.properties.keys": ["waterAmbience=1.0"],
     "config/soundphysics/soundphysics.properties.keys": ["reverb_attenuation_distance=0.0", "reverb_gain=1.0"],
     "config/colorwheel-client.toml.keys": ["alertIncompatiblePack = true", "alertBrokenPack = true"],
     "config/entity_model_features.json.keys": ['"showReloadErrorToast": true'],
@@ -157,8 +157,9 @@ COMMON_FILES = {
     # rain ripples on water: Particle Rain draws them too (and its density follows the tier), so Subtle Effects' set
     # is off rather than doubling every pond in the rain (Aaron, 2026-10-20)
     "config/subtle_effects/blocks.toml.keys": "rainWaterRipples = false\n",
-    # Streams Reflowing's river and waterfall sound at 35% (Aaron, 2026-10-20: "lower the volume of the waterfalls")
-    "config/streamsreflowing-client.toml.keys": "waterAmbience = 0.35\n",
+    # Streams Reflowing's river and waterfall sound at 35% (Aaron, 2026-10-20: "lower the volume of the waterfalls"); its
+    # client settings live in config/streamsreflowing-client.properties (the .toml name is only an old import source)
+    "config/streamsreflowing-client.properties.keys": "waterAmbience=0.35\n",
     # Camera Overhaul, nearly off (Aaron, 2026-10-20, third pass: "the mod that snakes the screen ... reduce everything
     # it does massively"). The smooth step up a slab he likes is Smooth Steps, a separate mod, and untouched.
     # [general]: idle sway off, turning roll and screen shake small, no shake from swinging. Per movement:
