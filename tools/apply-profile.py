@@ -18,7 +18,7 @@ from pathlib import Path
 
 # a quoted key may contain spaces ("Show Water Effect" = 3, as Cold Sweat writes its TOML)
 LINE = re.compile(r'^(\s*)("?)((?<=")[A-Za-z0-9_.\- ]+|[A-Za-z0-9_.\-]+)\2(\s*[=:]\s*)(.*?)(,?)\s*$')
-# a TOML [table] line; in a .keys file it scopes the keys after it to that table (Camera Overhaul repeats keys per movement)
+# a TOML [table] line; in a .keys file it scopes the keys after it to that table (a mod that repeats the same key in several tables)
 HEADER = re.compile(r'^\s*\[\s*([A-Za-z0-9_.\-]+)\s*\]\s*(#.*)?$')
 TARGET_OVERRIDE = {"options.txt": "config/defaultoptions/options.txt"}
 

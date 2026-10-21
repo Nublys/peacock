@@ -652,7 +652,7 @@ ENTRIES = {
             txt(B("Distant Horizons") + " draws the far terrain from a low-detail copy the server builds as players explore. On a fresh world the horizon fills in over the first hour; a reset world starts over.",
                 "Embeddium, ImmediatelyFast, Entity Culling, ModernFix and FerriteCore are the quiet half of the frame rate; leave them on. Sound Physics (cave echo) is off on potato. Particle mods can be turned down in their menus."),
             txt(B("Resource packs") + " are on by default: Fresh Animations (+ Details, Objects), Better Leaves, Fast Better Grass, rainbow's foliage, 3D Default, Cubic Sun & Moon, Enhanced Boss Bars, xali's books and potions, Low on Fire.",
-                "All optional (Options, Resource Packs). Potato leaves out 3D Default and the Fresh Animations family. Camera Overhaul sways the view as you walk: turn it down in its menu."),
+                "All optional (Options, Resource Packs). Potato leaves out 3D Default and the Fresh Animations family. Smooth Steps eases the camera up each slab and block you step onto."),
         ]),
     ],
     # ===================================================================================== mods
@@ -680,7 +680,7 @@ ENTRIES = {
         ("quality", "Quality of Life", "minecraft:spyglass", [
             txt(B("EMI") + " (recipes), " + B("Jade") + " (what am I looking at), " + B("AppleSkin") + ", " + B("Mouse Tweaks") + ", " + B("Controlling") + ", " + B("Easy Anvils") + ", " + B("Visual Workbench") + ", " + B("Map Atlases") + ", " + B("Nature's Compass") + ", " + B("Locator Bar") + ", " + B("Patchouli") + " (this book), " + B("Simple Voice Chat") + ", " + B("Chat Animation") + ", " + B("No Chat Reports") + ".",
                 B("FTB Chunks / Teams / Essentials") + " are claims, parties, /spawn and /back."),
-            txt(B("Performance:") + " Embeddium, Oculus (shaders), ImmediatelyFast, Entity Culling, ModernFix, FerriteCore, Canary (server). " + B("Looks:") + " Subtle Effects, Particle Rain, Falling Leaves, Camera Overhaul, Smooth Steps, Better Biome Reblend, Wavey Capes, 3D Skin Layers, Not Enough Animations, Entity Model and Texture Features, and the resource packs."),
+            txt(B("Performance:") + " Embeddium, Oculus (shaders), ImmediatelyFast, Entity Culling, ModernFix, FerriteCore, Canary (server). " + B("Looks:") + " Subtle Effects, Particle Rain, Falling Leaves, Smooth Steps, Better Biome Reblend, Wavey Capes, 3D Skin Layers, Not Enough Animations, Entity Model and Texture Features, and the resource packs."),
             txt(B("Under the hood:") + " KubeJS runs the pack's rules; Game Stages and Recipe Stages hold the ladder; Paxi carries the datapack; Default Options sets first-run settings; the launcher jar applies your hardware profile."),
         ]),
     ],

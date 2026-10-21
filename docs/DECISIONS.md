@@ -17,8 +17,7 @@ history and are not rewritten when a later one supersedes them; the summary belo
 - **Temperature** is Cold Sweat, comfortable 35–100 °F (45 until 2026-10-21), no thirst (*supersedes* Tough As Nails).
 - **The server** syncs on every start; `peacock-start.sh` runs Java beside a shutdown watchdog. The only hang found
   (Supplementaries road signs) is fixed. Chunk Pregenerator, not Chunky, for pre-generation.
-- **The look** adds Subtle Effects (both sides), Particle Rain, Camera Overhaul (toned down twice, every movement), Smooth
-  Steps, Better Biome Reblend, six texture packs, Streams Reflowing and Terrain Slabs; AmbientSounds is gone. Cold
+- **The look** adds Subtle Effects (both sides), Particle Rain, Smooth Steps (Camera Overhaul removed 2026-10-21), Better Biome Reblend, six texture packs, Streams Reflowing and Terrain Slabs; AmbientSounds is gone. Cold
   Sweat's on-screen water drops are off.
 
 ## Platform
@@ -1080,4 +1079,12 @@ pegs to freezing as soon as the air is below the habitable minimum, while the bo
 With the minimum at 45 °F, ordinary nights (the capital sat near 50 °F by day), autumn and winter, rain and
 highlands all read as freezing. Minimum habitable now 35 °F (`0.0666…` MC units; MC = (°F − 32) / 45), maximum
 unchanged at 100 °F: a cool night is fine, frost, snow, mountains and winter still bite. Almanac and README say 35.
+
+## Camera Overhaul removed; Smooth Steps does the slabs (2026-10-21)
+Aaron: walking over all the half slabs felt jittery; is there a lighter mod that only smooths steps? There already
+was: Countered's Smooth Steps (client mixins on the camera and entity move) lowers the camera when the player steps
+up and eases it back over a few ticks; it needs nothing else. Camera Overhaul pitched the view on every vertical
+movement, so Terrain Slabs' half-steps made it nod at each one. It is removed with its profile keys (three
+toning-down passes did not make it right). Smooth Steps stays at its default 0.7; it smooths stepping up only,
+stepping down a slab is vanilla's short fall.
 

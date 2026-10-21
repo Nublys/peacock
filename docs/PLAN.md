@@ -279,9 +279,9 @@ and nature answered with sickness and monsters — is never stated in-game; the 
   Supplementaries' worldgen road signs (off now). `peacock-start.sh` runs Java beside a watchdog that dumps and
   kills a Java still alive 120 s after shutdown began (`logs/peacock-hang-*.txt`, `logs/peacock-reroll.log`).
 - ✅ **The Appalachia look** (2026-10-20, from GOATED's Fabric pack, Forge 1.20.1 equivalents only): Subtle Effects
-  (both sides — it registers particles), Particle Rain, Camera Overhaul (toned down), Smooth Steps, Better Biome
+  (both sides — it registers particles), Particle Rain, Smooth Steps, Better Biome
   Reblend, six texture packs; Streams Reflowing and Countered's Terrain Slabs for new land.
-- ✅ **Camera and wet screen** (2026-10-20): Camera Overhaul toned down in every movement (`.keys` files can scope
+- ✅ **Camera and wet screen** (2026-10-20): Camera Overhaul toned down in every movement, then removed 2026-10-21 (`.keys` files can scope
   keys to a `[table]` now); Cold Sweat's on-screen water drops off.
 - Open: a full play session on the current world design (do the ruins' chests roll? do Rust Belt pieces sit flush — `start_height` assumes the heightmap is the first air block); Snow! Real
   Magic! on Create tracks (blacklist if it accumulates); whether `bountiful.decree.archivist.name` or the
