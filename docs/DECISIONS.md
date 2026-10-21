@@ -1060,3 +1060,9 @@ client. Euphoria Patcher stays: it builds `ComplementaryReimagined + EuphoriaPat
 shipped zip, which the high and ultra profiles use. Supersedes "Lighter shader packs shipped for testing" and
 "Every shader that fits the pack, shipped for choosing".
 
+## Echo only in caves and big halls (2026-10-20)
+Aaron: muffling indoors is fine, but "echo is for caves and very large buildings, not huts, homes, long houses".
+Sound Physics Remastered's `reverb_attenuation_distance` ("the ray distance at which reverb starts", default 0 =
+off, so every room rang) is 10 blocks in every profile, and `reverb_gain` 1.0 → 0.7. Occlusion (the muffling) is
+unchanged. If halls still sound dry or huts still ring, the distance is the one number to move.
+

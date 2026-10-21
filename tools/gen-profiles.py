@@ -113,6 +113,7 @@ PREVIOUS_DEFAULTS = {
     "config/subtle_effects/entities.toml.keys": ["[dustClouds]", "playerRunning = true"],
     "config/subtle_effects/blocks.toml.keys": ["rainWaterRipples = true"],
     "config/streamsreflowing-client.toml.keys": ["waterAmbience = 1.0"],
+    "config/soundphysics/soundphysics.properties.keys": ["reverb_attenuation_distance=0.0", "reverb_gain=1.0"],
     "config/colorwheel-client.toml.keys": ["alertIncompatiblePack = true", "alertBrokenPack = true"],
     "config/entity_model_features.json.keys": ['"showReloadErrorToast": true'],
     "config/locatorbar.json.keys": ['"unsupportedVersionWarningShown": false'],
@@ -261,8 +262,11 @@ def main():
         (d / "options.txt.keys").write_text("".join(f"{k}:{v}\n" for k, v in opts.items()))
         # Sound Physics Remastered (cave echo, muffling through walls) costs CPU per sound; off on potato only
         (d / "config/soundphysics").mkdir(parents=True, exist_ok=True)
+        # echo only where sound has room to travel (Aaron, 2026-10-20: "echo is for caves and very large buildings, not
+        # huts, homes, long houses"): reflections shorter than 10 blocks add no reverb (the mod's default 0 lets any
+        # room ring), and the reverb that remains is a little quieter
         (d / "config/soundphysics/soundphysics.properties.keys").write_text(
-            f"enabled={'false' if tier == 'potato' else 'true'}\n")
+            f"enabled={'false' if tier == 'potato' else 'true'}\nreverb_attenuation_distance=10.0\nreverb_gain=0.7\n")
         for rel, content in {**COMMON_FILES, **particle_files(tier)}.items():
             (d / rel).parent.mkdir(parents=True, exist_ok=True)
             (d / rel).write_text(content)
