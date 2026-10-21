@@ -132,7 +132,7 @@ hash = "0bcee95ab75190a082b6922fae3d6c1662c2f31429a8fe6cf3e5f9caa5aecf1e"
 
 [[files]]
 file = "config/defaultoptions/options.txt"
-hash = "3d5a5cf58f53213d9de48cefc6f15e7cd6b159b341e559b0e5c8f0cd8240d1c9"
+hash = "9fb60f49e30a78bc7d0c353c9b1b089cce6ac35db65d7f67b054a5e9b724a8c5"
 
 [[files]]
 file = "config/distraction_free_recipes-client.toml"
@@ -2794,6 +2794,10 @@ file = "peacock/profiles/_previous/config/locatorbar.json.keys"
 hash = "6c9992ee147e8ccada7c03e7efdda90c51cf8ae967281fb080d6323cc54351ca"
 
 [[files]]
+file = "peacock/profiles/_previous/config/streamsreflowing-client.toml.keys"
+hash = "6833a7e54f30a799c179c7ac72d4380e0a561f5b4cd0211a3ed7161d52231ffc"
+
+[[files]]
 file = "peacock/profiles/_previous/config/subtle_effects/blocks.toml.keys"
 hash = "c71eebdce1073c36b335ea92c0bf1a0789baaf3302d4d56d80457f3d4297ea88"
 
@@ -2803,7 +2807,7 @@ hash = "d319ac0bedcbe0644429c9b532769cd524b249c86b9eb24b8311334a1b9f4189"
 
 [[files]]
 file = "peacock/profiles/_previous/options.txt.keys"
-hash = "9180f11b58ab23caf28379aa062440347cc8402ff9d1fd724402fd51d46917c7"
+hash = "9729036f4769b8a93845d1be8cf4fb7f9177760aa2c4a63d85737a0fe6ad7576"
 
 [[files]]
 file = "peacock/profiles/high/config/DistantHorizons.toml.keys"
@@ -2854,6 +2858,10 @@ file = "peacock/profiles/high/config/soundphysics/soundphysics.properties.keys"
 hash = "f6a2565056ed10ba270da94e671fa5d7ced8ade044fc8b31a851840f7bce654f"
 
 [[files]]
+file = "peacock/profiles/high/config/streamsreflowing-client.toml.keys"
+hash = "ee56cb537fd48d713c2831b618d3f91ba466da5f292128ae8a5c3ab736df29bd"
+
+[[files]]
 file = "peacock/profiles/high/config/subtle_effects/blocks.toml.keys"
 hash = "137f65cde95fd0335097812e412d51109ed19ee7969090c0fac33f0a9cf036fc"
 
@@ -2867,7 +2875,7 @@ hash = "7416eb557fe7929d1321b30bb1d88198d86072c656ed5f3bc9e444c15f1b2db1"
 
 [[files]]
 file = "peacock/profiles/high/options.txt.keys"
-hash = "3a7753b65eda634a218fce32c20273b21eac5533b3a72f4f581aee4842619e0f"
+hash = "73dad1543a8d5ac718379314e94860c27331b30896c1253ca713196dfd3b97a9"
 
 [[files]]
 file = "peacock/profiles/high/shaderpacks/ComplementaryReimagined_r5.9.3 + EuphoriaPatches_1.10.5.txt.keys"
@@ -2926,6 +2934,10 @@ file = "peacock/profiles/low/config/soundphysics/soundphysics.properties.keys"
 hash = "f6a2565056ed10ba270da94e671fa5d7ced8ade044fc8b31a851840f7bce654f"
 
 [[files]]
+file = "peacock/profiles/low/config/streamsreflowing-client.toml.keys"
+hash = "ee56cb537fd48d713c2831b618d3f91ba466da5f292128ae8a5c3ab736df29bd"
+
+[[files]]
 file = "peacock/profiles/low/config/subtle_effects/blocks.toml.keys"
 hash = "137f65cde95fd0335097812e412d51109ed19ee7969090c0fac33f0a9cf036fc"
 
@@ -2939,7 +2951,7 @@ hash = "41d780d4c3ed099897f71151abc7ddf4f8f9d3cfc0062265e0fad4ac6c4d0d54"
 
 [[files]]
 file = "peacock/profiles/low/options.txt.keys"
-hash = "3cfbf1f635c8dbd17eafc1b79409549e354c71d930f59e97900b01234e8a26f1"
+hash = "2eb3a8a55e48bb72af873095965fb034f3a73bbe22d100273dbace3657b41bb9"
 
 [[files]]
 file = "peacock/profiles/low/shaderpacks/ComplementaryReimagined_r5.9.3 + EuphoriaPatches_1.10.5.txt.keys"
@@ -2998,6 +3010,10 @@ file = "peacock/profiles/medium/config/soundphysics/soundphysics.properties.keys
 hash = "f6a2565056ed10ba270da94e671fa5d7ced8ade044fc8b31a851840f7bce654f"
 
 [[files]]
+file = "peacock/profiles/medium/config/streamsreflowing-client.toml.keys"
+hash = "ee56cb537fd48d713c2831b618d3f91ba466da5f292128ae8a5c3ab736df29bd"
+
+[[files]]
 file = "peacock/profiles/medium/config/subtle_effects/blocks.toml.keys"
 hash = "137f65cde95fd0335097812e412d51109ed19ee7969090c0fac33f0a9cf036fc"
 
@@ -3011,7 +3027,7 @@ hash = "7416eb557fe7929d1321b30bb1d88198d86072c656ed5f3bc9e444c15f1b2db1"
 
 [[files]]
 file = "peacock/profiles/medium/options.txt.keys"
-hash = "fd7b7f612bd6da0166d712a783b0bc8629f7a0586750749ce8341d78348851ac"
+hash = "425a1cad579fc1dd6f0e5e1e2164c21e1b4002b59fcf55a2a47c5302993b5056"
 
 [[files]]
 file = "peacock/profiles/medium/shaderpacks/ComplementaryReimagined_r5.9.3 + EuphoriaPatches_1.10.5.txt.keys"
@@ -3070,6 +3086,10 @@ file = "peacock/profiles/potato/config/soundphysics/soundphysics.properties.keys
 hash = "fb5ff1984232edecfce6fbfa6deb6374bcd7bf898f58d2c51b9e46cbbbbb78fe"
 
 [[files]]
+file = "peacock/profiles/potato/config/streamsreflowing-client.toml.keys"
+hash = "ee56cb537fd48d713c2831b618d3f91ba466da5f292128ae8a5c3ab736df29bd"
+
+[[files]]
 file = "peacock/profiles/potato/config/subtle_effects/blocks.toml.keys"
 hash = "137f65cde95fd0335097812e412d51109ed19ee7969090c0fac33f0a9cf036fc"
 
@@ -3083,7 +3103,7 @@ hash = "2cbb23679ce90d06ffe89074fc45b6fe7856ed04ce7747c81ed8228a54076e8b"
 
 [[files]]
 file = "peacock/profiles/potato/options.txt.keys"
-hash = "88ba9e95cd9fd593822ce82e4ad955aed0f954fb379c142609e3443188987417"
+hash = "8091f23a116fce82c174b6f7ef3f00389d5874c5a1c6089036cc89cc9a418dc1"
 
 [[files]]
 file = "peacock/profiles/potato/shaderpacks/ComplementaryReimagined_r5.9.3 + EuphoriaPatches_1.10.5.txt.keys"
@@ -3142,6 +3162,10 @@ file = "peacock/profiles/ultra/config/soundphysics/soundphysics.properties.keys"
 hash = "f6a2565056ed10ba270da94e671fa5d7ced8ade044fc8b31a851840f7bce654f"
 
 [[files]]
+file = "peacock/profiles/ultra/config/streamsreflowing-client.toml.keys"
+hash = "ee56cb537fd48d713c2831b618d3f91ba466da5f292128ae8a5c3ab736df29bd"
+
+[[files]]
 file = "peacock/profiles/ultra/config/subtle_effects/blocks.toml.keys"
 hash = "137f65cde95fd0335097812e412d51109ed19ee7969090c0fac33f0a9cf036fc"
 
@@ -3155,7 +3179,7 @@ hash = "7416eb557fe7929d1321b30bb1d88198d86072c656ed5f3bc9e444c15f1b2db1"
 
 [[files]]
 file = "peacock/profiles/ultra/options.txt.keys"
-hash = "4172b774a018a90494f2c73fe64cf2bbf5835e99730477976a40b053d5da95d0"
+hash = "2ddfc7d39c01eef370ac8ce6b8137fb1be58ae178a8cbba7f2b9c14c908fe7ab"
 
 [[files]]
 file = "peacock/profiles/ultra/shaderpacks/ComplementaryReimagined_r5.9.3 + EuphoriaPatches_1.10.5.txt.keys"

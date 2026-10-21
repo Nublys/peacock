@@ -73,6 +73,8 @@ PREVIOUS_DEFAULTS = {
         # potato wrote clouds unquoted until 2026-10-20 (vanilla writes "false"); the shipped first-launch options.txt
         # had clouds off for everyone, so a still-off value counts as untouched and the tier's choice applies
         'renderClouds:false', 'renderClouds:"false"',
+        # music shipped at full volume until 2026-10-20
+        "soundCategory_music:1.0",
     ],
     # Camera Overhaul's own defaults (general, then the walking section's tilts): replaced by the gentler values above
     "config/cameraoverhaul.toml.keys": [
@@ -110,6 +112,7 @@ PREVIOUS_DEFAULTS = {
     "config/coldsweat/client.toml.keys": ["[Preferences]", '"Show Water Effect" = 3'],
     "config/subtle_effects/entities.toml.keys": ["[dustClouds]", "playerRunning = true"],
     "config/subtle_effects/blocks.toml.keys": ["rainWaterRipples = true"],
+    "config/streamsreflowing-client.toml.keys": ["waterAmbience = 1.0"],
     "config/colorwheel-client.toml.keys": ["alertIncompatiblePack = true", "alertBrokenPack = true"],
     "config/entity_model_features.json.keys": ['"showReloadErrorToast": true'],
     "config/locatorbar.json.keys": ['"unsupportedVersionWarningShown": false'],
@@ -128,6 +131,8 @@ COMMON_KEYS = {
     # first-launch screens and toasts (only added when missing: a player's own choice stands)
     "onboardAccessibility": "false", "skipMultiplayerWarning": "true", "joinedFirstServer": "true",
     "tutorialStep": "none", "realmsNotifications": "false",
+    # Minecraft's music at 30% (Aaron, 2026-10-20: "lower ... the minecraft music")
+    "soundCategory_music": "0.3",
 }
 
 # Extra *.keys files written into every tier (same content). Jade: a smaller, quieter block/entity overlay
@@ -151,6 +156,8 @@ COMMON_FILES = {
     # rain ripples on water: Particle Rain draws them too (and its density follows the tier), so Subtle Effects' set
     # is off rather than doubling every pond in the rain (Aaron, 2026-10-20)
     "config/subtle_effects/blocks.toml.keys": "rainWaterRipples = false\n",
+    # Streams Reflowing's river and waterfall sound at 35% (Aaron, 2026-10-20: "lower the volume of the waterfalls")
+    "config/streamsreflowing-client.toml.keys": "waterAmbience = 0.35\n",
     # Camera Overhaul, nearly off (Aaron, 2026-10-20, third pass: "the mod that snakes the screen ... reduce everything
     # it does massively"). The smooth step up a slab he likes is Smooth Steps, a separate mod, and untouched.
     # [general]: idle sway off, turning roll and screen shake small, no shake from swinging. Per movement:

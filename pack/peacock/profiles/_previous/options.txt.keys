@@ -8,3 +8,4 @@ joinedFirstServer:false
 tutorialStep:movement
 renderClouds:false
 renderClouds:"false"
+soundCategory_music:1.0

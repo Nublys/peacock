@@ -1041,3 +1041,8 @@ capped at 0.5 and none from swinging; walking 0.5 / 0.3 / 0.1, sprinting 0.75 / 
 view smoothing 0 when sprinting or flying, swimming, mounts and vehicles cut alike. If it still bothers players,
 the next step is removing the mod.
 
+## Quieter waterfalls and music (2026-10-20)
+Aaron: "lower the volume of the waterfalls too, and the minecraft music". Streams Reflowing's water ambience (its
+rivers and waterfalls; `waterAmbience` in config/streamsreflowing-client.toml) 1.0 → 0.35, and Minecraft's music
+slider 100% → 30%, in every profile and in the first-launch options; a player's own slider setting stands.
+
