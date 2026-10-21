@@ -234,6 +234,94 @@
    },
    "unitWorth": 4000,
    "rarity": "EPIC"
-  }
+  },
+  "k_skeleton_villager": {
+   "type": "entity",
+   "content": "savage_and_ravage:skeleton_villager",
+   "amount": {
+    "min": 2,
+    "max": 6
+   },
+   "unitWorth": 400,
+   "rarity": "UNCOMMON"
+  },
+  "k_provoker": {
+   "type": "entity",
+   "content": "illagerinvasion:provoker",
+   "amount": {
+    "min": 1,
+    "max": 3
+   },
+   "unitWorth": 900,
+   "rarity": "UNCOMMON"
+  },
+  "k_basher": {
+   "type": "entity",
+   "content": "illagerinvasion:basher",
+   "amount": {
+    "min": 1,
+    "max": 3
+   },
+   "unitWorth": 900,
+   "rarity": "UNCOMMON"
+  },
+  "k_griefer": {
+   "type": "entity",
+   "content": "savage_and_ravage:griefer",
+   "amount": {
+    "min": 1,
+    "max": 3
+   },
+   "unitWorth": 900,
+   "rarity": "RARE"
+  },
+  "k_marauder": {
+   "type": "entity",
+   "content": "illagerinvasion:marauder",
+   "amount": {
+    "min": 1,
+    "max": 2
+   },
+   "unitWorth": 1200,
+   "rarity": "RARE"
+  },
+  "k_executioner": {
+   "type": "entity",
+   "content": "savage_and_ravage:executioner",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 1500,
+   "rarity": "RARE"
+  },
+  "k_igniter": {
+   "type": "entity",
+   "content": "illageandspillage:igniter",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 1500,
+   "rarity": "RARE"
+  },
+  "k_firecaller": {
+   "type": "entity",
+   "content": "illagerinvasion:firecaller",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 2000,
+   "rarity": "EPIC"
+  },
+  "all_obj_dirt": null,
+  "all_obj_cobblestone": null,
+  "all_obj_stonebrick": null,
+  "all_obj_primary_currency": null,
+  "all_obj_zombie": null,
+  "all_obj_spider": null,
+  "all_obj_creeper": null,
+  "all_obj_iron_block": null
  }
 }

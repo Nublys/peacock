@@ -1,0 +1,53 @@
+{
+ "content": {
+  "pk_iron_shield": {
+   "type": "item",
+   "content": "spartanshields:iron_basic_shield",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 2000,
+   "rarity": "UNCOMMON"
+  },
+  "pk_iron_tower": {
+   "type": "item",
+   "content": "spartanshields:iron_tower_shield",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 3000,
+   "rarity": "RARE"
+  },
+  "pk_hoglin_chest": {
+   "type": "item",
+   "content": "cold_sweat:hoglin_chestplate",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 2500,
+   "rarity": "RARE"
+  },
+  "armorer_rew_nether_helm": null,
+  "armorer_rew_nether_chest": null,
+  "armorer_rew_nether_legs": null,
+  "armorer_rew_nether_boots": null,
+  "armorer_rew_diamond_helm": {
+   "repRequired": 12
+  },
+  "armorer_rew_diamond_chest": {
+   "repRequired": 12
+  },
+  "armorer_rew_diamond_legs": {
+   "repRequired": 12
+  },
+  "armorer_rew_diamond_boots": {
+   "repRequired": 12
+  },
+  "armorer_rew_diamond_horse_armor": {
+   "repRequired": 12
+  }
+ }
+}

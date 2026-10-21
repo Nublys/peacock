@@ -263,15 +263,210 @@ ARCHIVIST_REWS = pool({
 })
 
 
+# ----------------------------------------------------------------------------- the mods on the boards
+# Aaron, 2026-10-20: "ensure plenty of mod items can be rewarded or demanded by the bounty system ... a great way to
+# force players to interact with unfamiliar mods ... don't over pollute to the point where players don't see
+# Peacock's story-specific bounties." Bountiful divides every pool's weight by its entry count (Pool.finishMergedSetup),
+# so a pool holds the same share of a board's picks however many entries it has. The mods therefore go into the
+# trade decrees' own pools (farmer, fisherman, inventor ...), which never appear on an Archivist board, and the story
+# pools (archivist_objs/rews, the pillager hunts in _all_objs, the mapper's rumour vouchers) keep their share.
+# Datapack pools MERGE into Bountiful's built-in ones (the "replace" flag only works for config-folder files), so
+# entries here are added to the defaults; None removes a default entry, a partial dict edits one (Kudzu graft).
+def obj(c, worth, lo, hi, rarity=None, rep=None):
+    return entry(c, worth, lo, hi, rarity=rarity, rep=rep)
+
+def fish(c, worth=150, lo=2, hi=6, rarity=None):
+    return entry(c, worth, lo, hi, rarity=rarity)
+
+MOD_POOLS = {
+    "farmer_objs": {
+        "pk_cabbage": obj("farmersdelight:cabbage", 60, 8, 24), "pk_tomato": obj("farmersdelight:tomato", 60, 8, 24),
+        "pk_onion": obj("farmersdelight:onion", 60, 8, 24), "pk_rice": obj("farmersdelight:rice", 50, 8, 32),
+        "pk_straw": obj("farmersdelight:straw", 30, 16, 32), "pk_flax": obj("supplementaries:flax", 60, 8, 24),
+        "pk_compost": obj("farmersdelight:organic_compost", 250, 2, 6, "UNCOMMON"),
+        "pk_flour": obj("create:wheat_flour", 50, 16, 32, "UNCOMMON"),
+    },
+    "farmer_rews": {
+        "pk_cabbage_seeds": entry("farmersdelight:cabbage_seeds", 40, 4, 12), "pk_tomato_seeds": entry("farmersdelight:tomato_seeds", 40, 4, 12),
+        "pk_rice": entry("farmersdelight:rice", 40, 4, 12), "pk_flax_seeds": entry("supplementaries:flax_seeds", 40, 4, 12),
+        "pk_rich_soil": entry("farmersdelight:rich_soil", 300, 4, 8, "UNCOMMON"),
+        "pk_cooking_pot": entry("farmersdelight:cooking_pot", 2500, 1, 1, "RARE"),
+    },
+    "butcher_objs": {
+        "pk_ham": obj("farmersdelight:ham", 300, 1, 4), "pk_minced_beef": obj("farmersdelight:minced_beef", 60, 8, 16),
+        "pk_chicken_cuts": obj("farmersdelight:chicken_cuts", 50, 8, 16), "pk_venison": obj("naturalist:venison", 120, 4, 12),
+        "pk_duck": obj("naturalist:duck", 100, 4, 8),
+        "pk_beef_stew": obj("farmersdelight:beef_stew", 600, 2, 4, "UNCOMMON"),
+        "pk_steak_potatoes": obj("farmersdelight:steak_and_potatoes", 700, 1, 4, "UNCOMMON"),
+    },
+    "butcher_rews": {
+        "pk_cooked_venison": entry("naturalist:cooked_venison", 200, 4, 8), "pk_bacon": entry("farmersdelight:cooked_bacon", 120, 4, 12),
+        "pk_smoked_ham": entry("farmersdelight:smoked_ham", 1200, 1, 2, "UNCOMMON"),
+        "pk_skillet": entry("farmersdelight:skillet", 1500, 1, 1, "UNCOMMON"),
+    },
+    "fisherman_objs": {
+        **{f"pk_{f}": fish(f"aquaculture:{f}") for f in ("bluegill", "perch", "smallmouth_bass", "brown_trout", "carp", "catfish",
+                                                        "minnow", "gar", "pollock", "atlantic_herring")},
+        "pk_piranha": fish("aquaculture:piranha", 400, 1, 3, "UNCOMMON"),
+        "pk_tuna": fish("aquaculture:tuna", 900, 1, 2, "RARE"), "pk_arapaima": fish("aquaculture:arapaima", 1200, 1, 1, "RARE"),
+        "pk_worm": obj("aquaculture:worm", 40, 4, 16), "pk_rope": obj("supplementaries:rope", 50, 8, 24),
+        "pk_nat_bass": fish("naturalist:bass"), "pk_nat_catfish": fish("naturalist:catfish"),
+    },
+    "fisherman_rews": {
+        "pk_worm": entry("aquaculture:worm", 30, 8, 16), "pk_fillet": entry("aquaculture:fish_fillet_cooked", 120, 4, 12),
+        "pk_fish_chips": entry("aquaculturedelight:fish_and_chips", 500, 1, 3),
+        "pk_iron_rod": entry("aquaculture:iron_fishing_rod", 1500, 1, 1, "UNCOMMON"),
+        "pk_tackle_box": entry("aquaculture:tackle_box", 2500, 1, 1, "RARE"),
+        "pk_neptunes_bounty": entry("aquaculture:neptunes_bounty", 6000, 1, 1, "EPIC", rep=10),
+    },
+    "fletcher_objs": {
+        "pk_iron_arrow": obj("spartanweaponry:iron_arrow", 60, 8, 32, "UNCOMMON"), "pk_rope": obj("supplementaries:rope", 50, 8, 24),
+        "pk_flax": obj("supplementaries:flax", 60, 8, 24),
+    },
+    "fletcher_rews": {
+        "pk_iron_arrow": entry("spartanweaponry:iron_arrow", 60, 8, 24),
+        "pk_slingshot": entry("supplementaries:slingshot", 1500, 1, 1, "UNCOMMON"),
+        "pk_longbow": entry("spartanweaponry:iron_longbow", 3000, 1, 1, "UNCOMMON"),
+        "pk_heavy_crossbow": entry("spartanweaponry:iron_heavy_crossbow", 3500, 1, 1, "RARE"),
+        "pk_quiver": entry("supplementaries:quiver", 4000, 1, 1, "RARE"),
+    },
+    "toolsmith_objs": {
+        "pk_iron_sheet": obj("create:iron_sheet", 450, 2, 8, "UNCOMMON"), "pk_iron_knife": obj("farmersdelight:iron_knife", 500, 1, 1),
+    },
+    "toolsmith_rews": {
+        "pk_prospectors_pick": entry("geolosys:prospectors_pick", 1500, 1, 1, "UNCOMMON"),
+        "pk_wrench": entry("create:wrench", 1500, 1, 1, "UNCOMMON"),
+        "pk_throwing_knife": entry("spartanweaponry:iron_throwing_knife", 300, 2, 6),
+        "pk_javelin": entry("spartanweaponry:iron_javelin", 400, 2, 4),
+        "pk_dagger": entry("spartanweaponry:iron_dagger", 800, 1, 1),
+        "pk_spear": entry("spartanweaponry:iron_spear", 1500, 1, 1, "UNCOMMON"),
+        "pk_longsword": entry("spartanweaponry:iron_longsword", 2000, 1, 1, "UNCOMMON"),
+        "pk_battleaxe": entry("spartanweaponry:iron_battleaxe", 2200, 1, 1, "UNCOMMON"),
+        "pk_flanged_mace": entry("spartanweaponry:iron_flanged_mace", 2000, 1, 1, "UNCOMMON"),
+        "pk_halberd": entry("spartanweaponry:iron_halberd", 2500, 1, 1, "RARE"),
+        "pk_warhammer": entry("spartanweaponry:iron_warhammer", 2500, 1, 1, "RARE"),
+        # Bountiful's own diamond tools and trident had no reputation gate
+        "toolsmith_rew_diamond_pickaxe": {"repRequired": 12}, "toolsmith_rew_diamond_axe": {"repRequired": 12},
+        "toolsmith_rew_diamond_hoe": {"repRequired": 12}, "toolsmith_rew_trident": {"repRequired": 10},
+    },
+    "armorer_objs": {
+        "pk_goat_fur": obj("cold_sweat:goat_fur", 300, 2, 6), "pk_hoglin_hide": obj("cold_sweat:hoglin_hide", 600, 1, 4, "UNCOMMON"),
+        "pk_iron_sheet": obj("create:iron_sheet", 450, 2, 8, "UNCOMMON"),
+    },
+    "armorer_rews": {
+        "pk_iron_shield": entry("spartanshields:iron_basic_shield", 2000, 1, 1, "UNCOMMON"),
+        "pk_iron_tower": entry("spartanshields:iron_tower_shield", 3000, 1, 1, "RARE"),
+        "pk_hoglin_chest": entry("cold_sweat:hoglin_chestplate", 2500, 1, 1, "RARE"),
+        # netherite is a Blueprint (tier 3): never a reward; Bountiful's diamond armour waits for a grown board
+        **{f"armorer_rew_nether_{p}": None for p in ("helm", "chest", "legs", "boots")},
+        **{f"armorer_rew_diamond_{p}": {"repRequired": 12} for p in ("helm", "chest", "legs", "boots", "horse_armor")},
+    },
+    "leatherer_objs": {
+        "pk_goat_fur": obj("cold_sweat:goat_fur", 300, 2, 8), "pk_canvas": obj("farmersdelight:canvas", 150, 4, 12, "UNCOMMON"),
+        "pk_sack": obj("supplementaries:sack", 400, 1, 4, "UNCOMMON"), "pk_hoglin_hide": obj("cold_sweat:hoglin_hide", 600, 1, 4, "UNCOMMON"),
+    },
+    "leatherer_rews": {
+        "pk_canvas": entry("farmersdelight:canvas", 100, 4, 8), "pk_sack": entry("supplementaries:sack", 300, 1, 2),
+        "pk_sewing_table": entry("cold_sweat:sewing_table", 1500, 1, 1, "UNCOMMON"),
+        "pk_lunch_basket": entry("supplementaries:lunch_basket", 1500, 1, 1, "UNCOMMON"),
+        "pk_wool_collar": entry("doggytalents:wool_collar", 1200, 1, 1, "UNCOMMON"),
+    },
+    "shepherd_objs": {
+        "pk_flax": obj("supplementaries:flax", 60, 8, 24), "pk_canvas": obj("farmersdelight:canvas", 150, 4, 12, "UNCOMMON"),
+    },
+    "shepherd_rews": {
+        "pk_chair": entry("mcwfurnitures:oak_chair", 500, 1, 4), "pk_table": entry("mcwfurnitures:oak_table", 800, 1, 2),
+        "pk_desk": entry("mcwfurnitures:oak_desk", 800, 1, 1), "pk_bookshelf": entry("mcwfurnitures:oak_bookshelf", 1000, 1, 2, "UNCOMMON"),
+        "pk_wardrobe": entry("mcwfurnitures:oak_wardrobe", 1200, 1, 1, "UNCOMMON"),
+        "pk_dog_bed": entry("doggytalents:dog_bed", 1500, 1, 1, "UNCOMMON"),
+    },
+    "inventor_objs": {
+        "pk_cogwheel": obj("create:cogwheel", 120, 4, 12), "pk_shaft": obj("create:shaft", 40, 8, 24),
+        "pk_andesite_casing": obj("create:andesite_casing", 400, 2, 8, "UNCOMMON"),
+        "pk_belt": obj("create:belt_connector", 300, 2, 6, "UNCOMMON"), "pk_copper_sheet": obj("create:copper_sheet", 300, 2, 8, "UNCOMMON"),
+        "pk_water_wheel": obj("create:water_wheel", 900, 1, 2, "UNCOMMON"), "pk_millstone": obj("create:millstone", 1200, 1, 1, "UNCOMMON"),
+        "pk_basin": obj("create:basin", 600, 1, 2, "UNCOMMON"), "pk_depot": obj("create:depot", 500, 1, 2, "UNCOMMON"),
+        "pk_press": obj("create:mechanical_press", 2500, 1, 1, "RARE"), "pk_fan": obj("create:encased_fan", 1500, 1, 1, "RARE"),
+    },
+    "inventor_rews": {
+        "pk_cogwheel": entry("create:cogwheel", 150, 4, 12), "pk_large_cogwheel": entry("create:large_cogwheel", 300, 2, 6),
+        "pk_drawers": entry("storagedrawers:oak_full_drawers_1", 600, 1, 4),
+        "pk_wrench": entry("create:wrench", 1500, 1, 1, "UNCOMMON"), "pk_goggles": entry("create:goggles", 1500, 1, 1, "UNCOMMON"),
+        "pk_water_wheel": entry("create:water_wheel", 1000, 1, 1, "UNCOMMON"),
+        "pk_drill": entry("create:mechanical_drill", 2000, 1, 1, "RARE"), "pk_saw": entry("create:mechanical_saw", 2000, 1, 1, "RARE"),
+        "pk_super_glue": entry("create:super_glue", 1500, 1, 1, "RARE"),
+        "pk_drawer_controller": entry("storagedrawers:controller", 4000, 1, 1, "RARE"),
+    },
+    "librarian_objs": {
+        "pk_antique_ink": obj("supplementaries:antique_ink", 500, 1, 3, "UNCOMMON"),
+    },
+    "mapper_objs": {
+        # Geolosys: the surface pebbles that say what ore lies below; prospecting is the first adventure
+        "pk_hematite_sample": obj("geolosys:hematite_ore_sample", 200, 1, 3),
+        "pk_malachite_sample": obj("geolosys:malachite_ore_sample", 200, 1, 3),
+        "pk_cassiterite_sample": obj("geolosys:cassiterite_ore_sample", 250, 1, 3, "UNCOMMON"),
+        "pk_sphalerite_sample": obj("geolosys:sphalerite_ore_sample", 300, 1, 3, "UNCOMMON"),
+    },
+    "cleric_objs": {
+        "pk_glow_goop": obj("naturalist:glow_goop", 300, 2, 6, "UNCOMMON"), "pk_snail_shell": obj("naturalist:snail_shell", 400, 1, 3, "UNCOMMON"),
+        "pk_creeper_spores": obj("savage_and_ravage:creeper_spores", 300, 2, 6, "UNCOMMON"),
+        "pk_illusionary_dust": obj("illagerinvasion:illusionary_dust", 800, 1, 3, "RARE"),
+    },
+    "cleric_rews": {
+        "pk_training_treat": entry("doggytalents:training_treat", 500, 1, 3, "UNCOMMON"),
+        "pk_soap": entry("supplementaries:soap", 200, 1, 4),
+        "pk_soulspring_lamp": entry("cold_sweat:soulspring_lamp", 4000, 1, 1, "RARE"),
+        "cleric_rew_ench_book_mending": {"repRequired": 15},
+    },
+    "fisherman_rews_gates": {},
+}
+MOD_POOLS["fisherman_rews"]["fisherman_rew_heart_sea"] = {"repRequired": 15}
+del MOD_POOLS["fisherman_rews_gates"]
+
+# added to the shared pools the pack already overrides
+LIBRARIAN_EXTRA = {"pk_candle_holder": entry("supplementaries:candle_holder", 300, 1, 4),
+                   "pk_chain_lantern": entry("mcwlights:chain_lantern", 400, 1, 4),
+                   "pk_notice_board": entry("supplementaries:notice_board", 600, 1, 1),
+                   "pk_hourglass": entry("supplementaries:hourglass", 1500, 1, 1, "UNCOMMON"),
+                   "librarian_rew_glass": None, "librarian_rew_tinted_glass": None}
+MAPPER_EXTRA = {"pk_atlas": entry("map_atlases:atlas", 3000, 1, 1, "UNCOMMON"),
+                "pk_natures_compass": entry("naturescompass:naturescompass", 6000, 1, 1, "RARE"),
+                "pk_altimeter": entry("supplementaries:altimeter", 800, 1, 1), "pk_wind_vane": entry("supplementaries:wind_vane", 600, 1, 1),
+                "pk_field_manual": entry("geolosys:field_manual", 400, 1, 1),
+                "mapper_rew_black_dye": None, "mapper_rew_pink_banner": None, "mapper_rew_light_blue_banner": None}
+# the pillager faction's own kind, in every decree: the story's enemies, not filler
+ALL_OBJS_EXTRA = {
+    "k_skeleton_villager": ent("savage_and_ravage:skeleton_villager", 400, 2, 6, "UNCOMMON"),
+    "k_provoker": ent("illagerinvasion:provoker", 900, 1, 3, "UNCOMMON"),
+    "k_basher": ent("illagerinvasion:basher", 900, 1, 3, "UNCOMMON"),
+    "k_griefer": ent("savage_and_ravage:griefer", 900, 1, 3, "RARE"),
+    "k_marauder": ent("illagerinvasion:marauder", 1200, 1, 2, "RARE"),
+    "k_executioner": ent("savage_and_ravage:executioner", 1500, 1, 1, "RARE"),
+    "k_igniter": ent("illageandspillage:igniter", 1500, 1, 1, "RARE"),
+    "k_firecaller": ent("illagerinvasion:firecaller", 2000, 1, 1, "EPIC"),
+    # Bountiful's own: dirt, cobblestone and stone bricks were filler; its emerald, zombie, spider, creeper and iron
+    # block entries doubled the pack's own
+    **{f"all_obj_{k}": None for k in ("dirt", "cobblestone", "stonebrick", "primary_currency", "zombie", "spider", "creeper", "iron_block")},
+}
+ALL_REWS_EXTRA = {f"all_rew_{k}": None for k in ("arrow", "glow_ink", "prismarine_crystals", "minecart", "axolotl_bucket",
+                                                 "totem_undying", "spyglass", "primary_currency", "primary_currency_rare_bargain")}
+
 # ----------------------------------------------------------------------------- main
 def main() -> None:
     bp = "bountiful/bounty_pools"
+    ALL_REWS["content"].update(ALL_REWS_EXTRA)
+    ALL_OBJS["content"].update(ALL_OBJS_EXTRA)
+    LIBRARIAN_REWS["content"].update(LIBRARIAN_EXTRA)
+    MAPPER_REWS["content"].update(MAPPER_EXTRA)
     write(f"{bp}/bountiful/_all_rews.json", ALL_REWS)
     write(f"{bp}/bountiful/_all_objs.json", ALL_OBJS)
     write(f"{bp}/bountiful/_equip_rews.json", EQUIP_REWS)
     write(f"{bp}/bountiful/librarian_rews.json", LIBRARIAN_REWS)
     write(f"{bp}/bountiful/mapper_rews.json", MAPPER_REWS)
+    CLERIC_REWS["content"].update(MOD_POOLS.pop("cleric_rews"))
     write(f"{bp}/bountiful/cleric_rews.json", CLERIC_REWS)
+    for name, content in MOD_POOLS.items():
+        write(f"{bp}/bountiful/{name}.json", pool(content))
     write(f"{bp}/peacock/archivist_objs.json", ARCHIVIST_OBJS)
     write(f"{bp}/peacock/archivist_rews.json", ARCHIVIST_REWS)
     write("bountiful/bounty_decrees/peacock/archivist.json", {

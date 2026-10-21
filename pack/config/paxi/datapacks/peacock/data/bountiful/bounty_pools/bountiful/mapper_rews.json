@@ -198,6 +198,56 @@
    "rarity": "EPIC",
    "repRequired": 20,
    "nbt": "{rumour:\"acropolis\"}"
-  }
+  },
+  "pk_atlas": {
+   "type": "item",
+   "content": "map_atlases:atlas",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 3000,
+   "rarity": "UNCOMMON"
+  },
+  "pk_natures_compass": {
+   "type": "item",
+   "content": "naturescompass:naturescompass",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 6000,
+   "rarity": "RARE"
+  },
+  "pk_altimeter": {
+   "type": "item",
+   "content": "supplementaries:altimeter",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 800
+  },
+  "pk_wind_vane": {
+   "type": "item",
+   "content": "supplementaries:wind_vane",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 600
+  },
+  "pk_field_manual": {
+   "type": "item",
+   "content": "geolosys:field_manual",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 400
+  },
+  "mapper_rew_black_dye": null,
+  "mapper_rew_pink_banner": null,
+  "mapper_rew_light_blue_banner": null
  }
 }

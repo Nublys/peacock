@@ -1,0 +1,65 @@
+{
+ "content": {
+  "pk_worm": {
+   "type": "item",
+   "content": "aquaculture:worm",
+   "amount": {
+    "min": 8,
+    "max": 16
+   },
+   "unitWorth": 30
+  },
+  "pk_fillet": {
+   "type": "item",
+   "content": "aquaculture:fish_fillet_cooked",
+   "amount": {
+    "min": 4,
+    "max": 12
+   },
+   "unitWorth": 120
+  },
+  "pk_fish_chips": {
+   "type": "item",
+   "content": "aquaculturedelight:fish_and_chips",
+   "amount": {
+    "min": 1,
+    "max": 3
+   },
+   "unitWorth": 500
+  },
+  "pk_iron_rod": {
+   "type": "item",
+   "content": "aquaculture:iron_fishing_rod",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 1500,
+   "rarity": "UNCOMMON"
+  },
+  "pk_tackle_box": {
+   "type": "item",
+   "content": "aquaculture:tackle_box",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 2500,
+   "rarity": "RARE"
+  },
+  "pk_neptunes_bounty": {
+   "type": "item",
+   "content": "aquaculture:neptunes_bounty",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 6000,
+   "rarity": "EPIC",
+   "repRequired": 10
+  },
+  "fisherman_rew_heart_sea": {
+   "repRequired": 15
+  }
+ }
+}

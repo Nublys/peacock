@@ -192,6 +192,45 @@
    },
    "unitWorth": 3000,
    "rarity": "RARE"
-  }
+  },
+  "pk_candle_holder": {
+   "type": "item",
+   "content": "supplementaries:candle_holder",
+   "amount": {
+    "min": 1,
+    "max": 4
+   },
+   "unitWorth": 300
+  },
+  "pk_chain_lantern": {
+   "type": "item",
+   "content": "mcwlights:chain_lantern",
+   "amount": {
+    "min": 1,
+    "max": 4
+   },
+   "unitWorth": 400
+  },
+  "pk_notice_board": {
+   "type": "item",
+   "content": "supplementaries:notice_board",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 600
+  },
+  "pk_hourglass": {
+   "type": "item",
+   "content": "supplementaries:hourglass",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 1500,
+   "rarity": "UNCOMMON"
+  },
+  "librarian_rew_glass": null,
+  "librarian_rew_tinted_glass": null
  }
 }

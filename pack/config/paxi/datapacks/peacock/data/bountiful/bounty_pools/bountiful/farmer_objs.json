@@ -1,0 +1,78 @@
+{
+ "content": {
+  "pk_cabbage": {
+   "type": "item",
+   "content": "farmersdelight:cabbage",
+   "amount": {
+    "min": 8,
+    "max": 24
+   },
+   "unitWorth": 60
+  },
+  "pk_tomato": {
+   "type": "item",
+   "content": "farmersdelight:tomato",
+   "amount": {
+    "min": 8,
+    "max": 24
+   },
+   "unitWorth": 60
+  },
+  "pk_onion": {
+   "type": "item",
+   "content": "farmersdelight:onion",
+   "amount": {
+    "min": 8,
+    "max": 24
+   },
+   "unitWorth": 60
+  },
+  "pk_rice": {
+   "type": "item",
+   "content": "farmersdelight:rice",
+   "amount": {
+    "min": 8,
+    "max": 32
+   },
+   "unitWorth": 50
+  },
+  "pk_straw": {
+   "type": "item",
+   "content": "farmersdelight:straw",
+   "amount": {
+    "min": 16,
+    "max": 32
+   },
+   "unitWorth": 30
+  },
+  "pk_flax": {
+   "type": "item",
+   "content": "supplementaries:flax",
+   "amount": {
+    "min": 8,
+    "max": 24
+   },
+   "unitWorth": 60
+  },
+  "pk_compost": {
+   "type": "item",
+   "content": "farmersdelight:organic_compost",
+   "amount": {
+    "min": 2,
+    "max": 6
+   },
+   "unitWorth": 250,
+   "rarity": "UNCOMMON"
+  },
+  "pk_flour": {
+   "type": "item",
+   "content": "create:wheat_flour",
+   "amount": {
+    "min": 16,
+    "max": 32
+   },
+   "unitWorth": 50,
+   "rarity": "UNCOMMON"
+  }
+ }
+}

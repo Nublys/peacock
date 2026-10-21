@@ -1,0 +1,112 @@
+{
+ "content": {
+  "pk_cogwheel": {
+   "type": "item",
+   "content": "create:cogwheel",
+   "amount": {
+    "min": 4,
+    "max": 12
+   },
+   "unitWorth": 120
+  },
+  "pk_shaft": {
+   "type": "item",
+   "content": "create:shaft",
+   "amount": {
+    "min": 8,
+    "max": 24
+   },
+   "unitWorth": 40
+  },
+  "pk_andesite_casing": {
+   "type": "item",
+   "content": "create:andesite_casing",
+   "amount": {
+    "min": 2,
+    "max": 8
+   },
+   "unitWorth": 400,
+   "rarity": "UNCOMMON"
+  },
+  "pk_belt": {
+   "type": "item",
+   "content": "create:belt_connector",
+   "amount": {
+    "min": 2,
+    "max": 6
+   },
+   "unitWorth": 300,
+   "rarity": "UNCOMMON"
+  },
+  "pk_copper_sheet": {
+   "type": "item",
+   "content": "create:copper_sheet",
+   "amount": {
+    "min": 2,
+    "max": 8
+   },
+   "unitWorth": 300,
+   "rarity": "UNCOMMON"
+  },
+  "pk_water_wheel": {
+   "type": "item",
+   "content": "create:water_wheel",
+   "amount": {
+    "min": 1,
+    "max": 2
+   },
+   "unitWorth": 900,
+   "rarity": "UNCOMMON"
+  },
+  "pk_millstone": {
+   "type": "item",
+   "content": "create:millstone",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 1200,
+   "rarity": "UNCOMMON"
+  },
+  "pk_basin": {
+   "type": "item",
+   "content": "create:basin",
+   "amount": {
+    "min": 1,
+    "max": 2
+   },
+   "unitWorth": 600,
+   "rarity": "UNCOMMON"
+  },
+  "pk_depot": {
+   "type": "item",
+   "content": "create:depot",
+   "amount": {
+    "min": 1,
+    "max": 2
+   },
+   "unitWorth": 500,
+   "rarity": "UNCOMMON"
+  },
+  "pk_press": {
+   "type": "item",
+   "content": "create:mechanical_press",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 2500,
+   "rarity": "RARE"
+  },
+  "pk_fan": {
+   "type": "item",
+   "content": "create:encased_fan",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 1500,
+   "rarity": "RARE"
+  }
+ }
+}

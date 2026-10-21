@@ -1,0 +1,123 @@
+{
+ "content": {
+  "pk_prospectors_pick": {
+   "type": "item",
+   "content": "geolosys:prospectors_pick",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 1500,
+   "rarity": "UNCOMMON"
+  },
+  "pk_wrench": {
+   "type": "item",
+   "content": "create:wrench",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 1500,
+   "rarity": "UNCOMMON"
+  },
+  "pk_throwing_knife": {
+   "type": "item",
+   "content": "spartanweaponry:iron_throwing_knife",
+   "amount": {
+    "min": 2,
+    "max": 6
+   },
+   "unitWorth": 300
+  },
+  "pk_javelin": {
+   "type": "item",
+   "content": "spartanweaponry:iron_javelin",
+   "amount": {
+    "min": 2,
+    "max": 4
+   },
+   "unitWorth": 400
+  },
+  "pk_dagger": {
+   "type": "item",
+   "content": "spartanweaponry:iron_dagger",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 800
+  },
+  "pk_spear": {
+   "type": "item",
+   "content": "spartanweaponry:iron_spear",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 1500,
+   "rarity": "UNCOMMON"
+  },
+  "pk_longsword": {
+   "type": "item",
+   "content": "spartanweaponry:iron_longsword",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 2000,
+   "rarity": "UNCOMMON"
+  },
+  "pk_battleaxe": {
+   "type": "item",
+   "content": "spartanweaponry:iron_battleaxe",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 2200,
+   "rarity": "UNCOMMON"
+  },
+  "pk_flanged_mace": {
+   "type": "item",
+   "content": "spartanweaponry:iron_flanged_mace",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 2000,
+   "rarity": "UNCOMMON"
+  },
+  "pk_halberd": {
+   "type": "item",
+   "content": "spartanweaponry:iron_halberd",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 2500,
+   "rarity": "RARE"
+  },
+  "pk_warhammer": {
+   "type": "item",
+   "content": "spartanweaponry:iron_warhammer",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 2500,
+   "rarity": "RARE"
+  },
+  "toolsmith_rew_diamond_pickaxe": {
+   "repRequired": 12
+  },
+  "toolsmith_rew_diamond_axe": {
+   "repRequired": 12
+  },
+  "toolsmith_rew_diamond_hoe": {
+   "repRequired": 12
+  },
+  "toolsmith_rew_trident": {
+   "repRequired": 10
+  }
+ }
+}

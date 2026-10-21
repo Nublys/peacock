@@ -393,27 +393,111 @@ hash = "13f7e543aef10672c4481b15dea47491b57de458254bfba43335bfa7556234cd"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/bountiful/bounty_pools/bountiful/_all_objs.json"
-hash = "b2aa9e907dc46257181226cc0bfd35646d673be0357bfb1f7166e1d56acb60fc"
+hash = "0b44b529cb93451caafec2d79b2b2a2a344365aa37ce8d9de3bc551bbbeb6348"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/bountiful/bounty_pools/bountiful/_all_rews.json"
-hash = "40ba72b2b88c6e838a409d80d44bc3897651c4f79d6dade8d074c4acef53d585"
+hash = "5aa98bf244ffb24e8466110a0dcb8a39520e285bf0c51d126a71d2bd7a03471f"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/bountiful/bounty_pools/bountiful/_equip_rews.json"
 hash = "5a88e9dee4e08a2d66709af6204da533cb108f87031183323c2dcb2687936181"
 
 [[files]]
+file = "config/paxi/datapacks/peacock/data/bountiful/bounty_pools/bountiful/armorer_objs.json"
+hash = "5b5707aec43dea065d79cdfd765aeb8f938e86318c82d1457c2e84d1c590cd85"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/bountiful/bounty_pools/bountiful/armorer_rews.json"
+hash = "d9b5c1c22cc9f67c61eeacb1ba0ff1c37b50dcc467894bc9ec479937b6bb0724"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/bountiful/bounty_pools/bountiful/butcher_objs.json"
+hash = "9288adae9ce26a827ec56b156988c3b8c82d8f962f75da8f02b21800ff364013"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/bountiful/bounty_pools/bountiful/butcher_rews.json"
+hash = "bc0ea465856113524b6f8365bffe96903a5a61a6e770f2b5497d9bc10fc6efec"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/bountiful/bounty_pools/bountiful/cleric_objs.json"
+hash = "0e48ef9483b825ae77cd2d3d8e182f9921e3dccb64dfef1563e589f8f764edbc"
+
+[[files]]
 file = "config/paxi/datapacks/peacock/data/bountiful/bounty_pools/bountiful/cleric_rews.json"
-hash = "b90b52ce2e60dc76c354bf7f33f8cfc59fa8d1aec091c9b994f50fdeebeb268f"
+hash = "26b23226967e16aa750d8b0c9c37614e2d7c9089c520da9d60f5e30e1cb74c9c"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/bountiful/bounty_pools/bountiful/farmer_objs.json"
+hash = "25ca7cf8bc7bfbb1cfbdae0195b16b61b4c61ba4897fd04a686391b5510c563e"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/bountiful/bounty_pools/bountiful/farmer_rews.json"
+hash = "fbdce5277de1d7a43277fe456f9cc14516f2f2d4a3fd6a05fa075c97d7140558"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/bountiful/bounty_pools/bountiful/fisherman_objs.json"
+hash = "92b51eb46755192b15af68bbaa47669f4145b523a2fa8c502c93646f5b0d72eb"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/bountiful/bounty_pools/bountiful/fisherman_rews.json"
+hash = "0ffb7f9869ea13db6d795af586daff606d118b9159f0153997da14d4055c9519"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/bountiful/bounty_pools/bountiful/fletcher_objs.json"
+hash = "7167e6d5ee16d0f575755911a4deb041c8c52da3bd7a720c69e92a7af0dabf03"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/bountiful/bounty_pools/bountiful/fletcher_rews.json"
+hash = "5e29d1ab471ab2c6a86c4795a0b2d704c282e169a89f552cf97cb7fc3d66eaba"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/bountiful/bounty_pools/bountiful/inventor_objs.json"
+hash = "478974e10b2f66eac4b92f69e3f5bb683ec96da6f34977850032e7d0d4b71b66"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/bountiful/bounty_pools/bountiful/inventor_rews.json"
+hash = "40c32cedff609e0f934a3acf6148bcb3b136b766a6be86f3ecbdabfd24ea5834"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/bountiful/bounty_pools/bountiful/leatherer_objs.json"
+hash = "2d66134447f4466608b3f8e8c0e08c5d64fcebca6932e5481f5b6d373e32c37c"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/bountiful/bounty_pools/bountiful/leatherer_rews.json"
+hash = "b7c082533c6966106b30926e58990db14a45a316b1b96d62a158960dbc24b51c"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/bountiful/bounty_pools/bountiful/librarian_objs.json"
+hash = "cd6591854ca29b2464cfbde03e65134b8a72678156af28f6657713d88aed25c9"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/bountiful/bounty_pools/bountiful/librarian_rews.json"
-hash = "6c639786fffc249394cff720b711947fca0c172a1211f87daa73eeaa50d2a72c"
+hash = "676b04c95161866a70cfe49e49753db689d5ebd1d877b49fe83ed41f779b3de1"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/bountiful/bounty_pools/bountiful/mapper_objs.json"
+hash = "8b5294ecf27df694378c8d4661e1cfe18a21ee13be2ef970fc8916893cd2f002"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/bountiful/bounty_pools/bountiful/mapper_rews.json"
-hash = "1f91015147c3660ecc7225a41c43bcd3d55993bb62db2b0c566d73d90bbd9119"
+hash = "8262379ace2c1a3210c7740c912ca77381cf777503da16f6a074978ba069f065"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/bountiful/bounty_pools/bountiful/shepherd_objs.json"
+hash = "f78ca02de2495bff35bdbaf8bc77bb6e781ad43e4824be3d332aeae4807f3511"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/bountiful/bounty_pools/bountiful/shepherd_rews.json"
+hash = "41bb4044d0c38c2ede0231e86e5333209f2af8446219bc5b50b788414242a46e"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/bountiful/bounty_pools/bountiful/toolsmith_objs.json"
+hash = "7ef30ba09b650a9d12db290da5f7c1cfa89de956741196d771de6ffa7a51e415"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/bountiful/bounty_pools/bountiful/toolsmith_rews.json"
+hash = "f51b9f27327dba9d99dedd821f8edd5d64fce931fe96db9f5f4763becc38e635"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/bountiful/bounty_pools/peacock/archivist_objs.json"

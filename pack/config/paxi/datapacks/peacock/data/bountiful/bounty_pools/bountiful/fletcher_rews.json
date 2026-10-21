@@ -1,0 +1,53 @@
+{
+ "content": {
+  "pk_iron_arrow": {
+   "type": "item",
+   "content": "spartanweaponry:iron_arrow",
+   "amount": {
+    "min": 8,
+    "max": 24
+   },
+   "unitWorth": 60
+  },
+  "pk_slingshot": {
+   "type": "item",
+   "content": "supplementaries:slingshot",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 1500,
+   "rarity": "UNCOMMON"
+  },
+  "pk_longbow": {
+   "type": "item",
+   "content": "spartanweaponry:iron_longbow",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 3000,
+   "rarity": "UNCOMMON"
+  },
+  "pk_heavy_crossbow": {
+   "type": "item",
+   "content": "spartanweaponry:iron_heavy_crossbow",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 3500,
+   "rarity": "RARE"
+  },
+  "pk_quiver": {
+   "type": "item",
+   "content": "supplementaries:quiver",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 4000,
+   "rarity": "RARE"
+  }
+ }
+}

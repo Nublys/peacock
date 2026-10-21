@@ -1002,3 +1002,27 @@ armorer's 4-for-an-emerald, so no loop), lanterns 500 → 350. They fade as the 
 musket cartridge left the reward pool: it is Blueprint-gated (Blasting), and rewards never are. Not changed: the
 board starts with one random decree, so the capital's journals and rumours depend on luck (proposal pending).
 
+## The mods on the bounty boards; Bountiful's ungated defaults closed (2026-10-20)
+Aaron: "plenty of mod items can be rewarded or demanded ... a great way to force players to interact with unfamiliar
+mods ... don't over pollute to the point where players don't see Peacock's story-specific bounties. Set the bounties
+to be per player."
+- **Where they go.** Bountiful divides each pool's weight by its entry count, so a pool keeps the same share of a
+  board's picks however long it gets. Mod items went into the twelve trade decrees' own pools (Farmer's Delight crops
+  and meals; Aquaculture fish, rods and tackle; Create parts, sheets and machines; Spartan weapons and shields;
+  Cold Sweat fur, hides, sewing table and soulspring lamp; Geolosys ore samples and the prospector's pick; Macaw's
+  furniture; Storage Drawers; Supplementaries rope, flax, sacks, quiver, slingshot, hourglass; Naturalist game;
+  Doggy Talents treats, collars and beds; Map Atlases; Nature's Compass). The Archivist decree never draws those
+  pools, the mapper's rumour vouchers keep their share, and `_all_objs` (in every decree) gained only the pillager
+  faction's own: skeleton villagers, provokers, bashers, griefers, marauders, executioners, igniters, firecallers.
+  Every id was checked against the jars.
+- **Bountiful's defaults merge in.** A datapack pool merges into the built-in one (`replace` only works for files in
+  config/bountiful), so the filler the pack meant to drop was still there. Now removed by null entries: arrows, glow
+  ink, prismarine, minecarts, axolotl buckets, glass, dyes, banners, dirt/cobblestone/stone-brick jobs, and the
+  defaults that doubled the pack's own. Bountiful's netherite armour rewards are gone (netherite is a Blueprint);
+  its diamond armour and tools wait for board level 12, trident 10, Mending and Heart of the Sea 15, and its
+  ungated totem is replaced by the pack's (level 15).
+- **Per player.** The bounty slips already are: each player takes their own copy, so two players can both do the
+  same job. The board's level is not and cannot be made so without changing Bountiful: it is the sum of everyone's
+  finished bounties on that board, and a board generates one set of jobs for all. A player who wants their own
+  standing can craft a board at home; the capital's boards stay shared.
+

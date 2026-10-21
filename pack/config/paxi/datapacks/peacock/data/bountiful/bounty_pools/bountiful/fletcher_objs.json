@@ -1,0 +1,32 @@
+{
+ "content": {
+  "pk_iron_arrow": {
+   "type": "item",
+   "content": "spartanweaponry:iron_arrow",
+   "amount": {
+    "min": 8,
+    "max": 32
+   },
+   "unitWorth": 60,
+   "rarity": "UNCOMMON"
+  },
+  "pk_rope": {
+   "type": "item",
+   "content": "supplementaries:rope",
+   "amount": {
+    "min": 8,
+    "max": 24
+   },
+   "unitWorth": 50
+  },
+  "pk_flax": {
+   "type": "item",
+   "content": "supplementaries:flax",
+   "amount": {
+    "min": 8,
+    "max": 24
+   },
+   "unitWorth": 60
+  }
+ }
+}

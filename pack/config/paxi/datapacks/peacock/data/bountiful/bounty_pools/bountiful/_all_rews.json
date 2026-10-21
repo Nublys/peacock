@@ -331,6 +331,15 @@
    "unitWorth": 20000,
    "rarity": "LEGENDARY",
    "repRequired": 15
-  }
+  },
+  "all_rew_arrow": null,
+  "all_rew_glow_ink": null,
+  "all_rew_prismarine_crystals": null,
+  "all_rew_minecart": null,
+  "all_rew_axolotl_bucket": null,
+  "all_rew_totem_undying": null,
+  "all_rew_spyglass": null,
+  "all_rew_primary_currency": null,
+  "all_rew_primary_currency_rare_bargain": null
  }
 }

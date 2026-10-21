@@ -1,0 +1,101 @@
+{
+ "content": {
+  "pk_cogwheel": {
+   "type": "item",
+   "content": "create:cogwheel",
+   "amount": {
+    "min": 4,
+    "max": 12
+   },
+   "unitWorth": 150
+  },
+  "pk_large_cogwheel": {
+   "type": "item",
+   "content": "create:large_cogwheel",
+   "amount": {
+    "min": 2,
+    "max": 6
+   },
+   "unitWorth": 300
+  },
+  "pk_drawers": {
+   "type": "item",
+   "content": "storagedrawers:oak_full_drawers_1",
+   "amount": {
+    "min": 1,
+    "max": 4
+   },
+   "unitWorth": 600
+  },
+  "pk_wrench": {
+   "type": "item",
+   "content": "create:wrench",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 1500,
+   "rarity": "UNCOMMON"
+  },
+  "pk_goggles": {
+   "type": "item",
+   "content": "create:goggles",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 1500,
+   "rarity": "UNCOMMON"
+  },
+  "pk_water_wheel": {
+   "type": "item",
+   "content": "create:water_wheel",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 1000,
+   "rarity": "UNCOMMON"
+  },
+  "pk_drill": {
+   "type": "item",
+   "content": "create:mechanical_drill",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 2000,
+   "rarity": "RARE"
+  },
+  "pk_saw": {
+   "type": "item",
+   "content": "create:mechanical_saw",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 2000,
+   "rarity": "RARE"
+  },
+  "pk_super_glue": {
+   "type": "item",
+   "content": "create:super_glue",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 1500,
+   "rarity": "RARE"
+  },
+  "pk_drawer_controller": {
+   "type": "item",
+   "content": "storagedrawers:controller",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 4000,
+   "rarity": "RARE"
+  }
+ }
+}

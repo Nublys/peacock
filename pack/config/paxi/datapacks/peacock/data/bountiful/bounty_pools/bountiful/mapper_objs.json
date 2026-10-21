@@ -1,0 +1,42 @@
+{
+ "content": {
+  "pk_hematite_sample": {
+   "type": "item",
+   "content": "geolosys:hematite_ore_sample",
+   "amount": {
+    "min": 1,
+    "max": 3
+   },
+   "unitWorth": 200
+  },
+  "pk_malachite_sample": {
+   "type": "item",
+   "content": "geolosys:malachite_ore_sample",
+   "amount": {
+    "min": 1,
+    "max": 3
+   },
+   "unitWorth": 200
+  },
+  "pk_cassiterite_sample": {
+   "type": "item",
+   "content": "geolosys:cassiterite_ore_sample",
+   "amount": {
+    "min": 1,
+    "max": 3
+   },
+   "unitWorth": 250,
+   "rarity": "UNCOMMON"
+  },
+  "pk_sphalerite_sample": {
+   "type": "item",
+   "content": "geolosys:sphalerite_ore_sample",
+   "amount": {
+    "min": 1,
+    "max": 3
+   },
+   "unitWorth": 300,
+   "rarity": "UNCOMMON"
+  }
+ }
+}

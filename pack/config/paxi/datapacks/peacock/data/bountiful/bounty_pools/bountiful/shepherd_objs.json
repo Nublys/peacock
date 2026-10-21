@@ -1,0 +1,23 @@
+{
+ "content": {
+  "pk_flax": {
+   "type": "item",
+   "content": "supplementaries:flax",
+   "amount": {
+    "min": 8,
+    "max": 24
+   },
+   "unitWorth": 60
+  },
+  "pk_canvas": {
+   "type": "item",
+   "content": "farmersdelight:canvas",
+   "amount": {
+    "min": 4,
+    "max": 12
+   },
+   "unitWorth": 150,
+   "rarity": "UNCOMMON"
+  }
+ }
+}

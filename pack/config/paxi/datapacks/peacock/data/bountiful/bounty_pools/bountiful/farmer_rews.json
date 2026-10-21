@@ -1,0 +1,60 @@
+{
+ "content": {
+  "pk_cabbage_seeds": {
+   "type": "item",
+   "content": "farmersdelight:cabbage_seeds",
+   "amount": {
+    "min": 4,
+    "max": 12
+   },
+   "unitWorth": 40
+  },
+  "pk_tomato_seeds": {
+   "type": "item",
+   "content": "farmersdelight:tomato_seeds",
+   "amount": {
+    "min": 4,
+    "max": 12
+   },
+   "unitWorth": 40
+  },
+  "pk_rice": {
+   "type": "item",
+   "content": "farmersdelight:rice",
+   "amount": {
+    "min": 4,
+    "max": 12
+   },
+   "unitWorth": 40
+  },
+  "pk_flax_seeds": {
+   "type": "item",
+   "content": "supplementaries:flax_seeds",
+   "amount": {
+    "min": 4,
+    "max": 12
+   },
+   "unitWorth": 40
+  },
+  "pk_rich_soil": {
+   "type": "item",
+   "content": "farmersdelight:rich_soil",
+   "amount": {
+    "min": 4,
+    "max": 8
+   },
+   "unitWorth": 300,
+   "rarity": "UNCOMMON"
+  },
+  "pk_cooking_pot": {
+   "type": "item",
+   "content": "farmersdelight:cooking_pot",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 2500,
+   "rarity": "RARE"
+  }
+ }
+}
