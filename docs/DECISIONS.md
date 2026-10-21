@@ -1230,3 +1230,9 @@ bare boards beside spawn, as before.
   so a failed build is finished in the same place, and the next start finds the half-built frame (log centre post on
   a plank floor, log corner posts) and rebuilds over it. Materials now stone brick and oak (Aaron); the red roof and
   yellow flag stay for recognition.
+
+## Enhanced Celestials removed (2026-10-21)
+Aaron: "Can you remove the moon phases mod?" Enhanced Celestials 2 (core, default lunar events, shader support) and
+CorgiLib, which nothing else needs, are gone, with `config/enhancedcelestials2core-mixins.properties`. No more blood,
+harvest, blue or super moons; the moon is vanilla. The Almanac's "The Sky" page now covers vanilla moon phases and
+weather, and the crops and terrain pages no longer mention it.

@@ -21,7 +21,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Harvest Moon$() nights (see $(l:patchouli:land/sky)The Sky$()) give extra yield. $(bold)Rich soil$() (Farmer's Delight) speeds growth. Slice & Dice can automate the kitchen later; a sprinkler waters a field.$(br2)Trees ignore seasons. Berries, mushrooms and fish are the winter calories."
+      "text": "$(bold)Rich soil$() (Farmer's Delight) speeds growth. Slice & Dice can automate the kitchen later; a sprinkler waters a field.$(br2)Trees ignore seasons. Berries, mushrooms and fish are the winter calories."
     }
   ]
 }

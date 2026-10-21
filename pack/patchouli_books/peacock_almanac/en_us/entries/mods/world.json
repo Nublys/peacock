@@ -6,7 +6,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(bold)Tectonic, Terralith, Biomes O' Plenty$() shape and fill the land. $(bold)Incendium$() is the Nether, $(bold)Nullscape$() the End. $(bold)Serene Seasons$() runs the year, $(bold)Cold Sweat$() the temperature, $(bold)Enhanced Celestials$() the moons.$(br2)$(bold)Geolosys$() places ore in regional deposits. $(bold)Paxi$() loads the pack's own datapack over everything else."
+      "text": "$(bold)Tectonic, Terralith, Biomes O' Plenty$() shape and fill the land. $(bold)Incendium$() is the Nether, $(bold)Nullscape$() the End. $(bold)Serene Seasons$() runs the year, $(bold)Cold Sweat$() the temperature.$(br2)$(bold)Geolosys$() places ore in regional deposits. $(bold)Paxi$() loads the pack's own datapack over everything else."
     },
     {
       "type": "patchouli:text",

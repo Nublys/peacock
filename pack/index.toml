@@ -164,10 +164,6 @@ file = "config/emi_loot_config.toml"
 hash = "2c0f0d736b3928415ce323613178a2fcb2af4133c54dece41bf558283a3dbd16"
 
 [[files]]
-file = "config/enhancedcelestials2core-mixins.properties"
-hash = "36b0d118a1924aa3f2436fa16cc46a366c9a7f138765ae86caec05977be98bd5"
-
-[[files]]
 file = "config/entity_model_features.json"
 hash = "eb65e7bc516df06c1b0de51edb25924c7e700f1e65b8eb6d162b8f36b4b668ee"
 preserve = true
@@ -1782,11 +1778,6 @@ hash = "cfb358f8257a2b5d90d5974c2ca1b897a01221005a6893f43cbe3d3003130873"
 metafile = true
 
 [[files]]
-file = "mods/corgilib.pw.toml"
-hash = "9851c0c789361759981ad6e498a58e1d0ced85d213c9eaaa942ca062898509b1"
-metafile = true
-
-[[files]]
 file = "mods/coroutil.pw.toml"
 hash = "b2c7739b56ef71f50a86658cfa67375796beafd391c4dbe26a5de8cd92b9b685"
 metafile = true
@@ -1974,21 +1965,6 @@ metafile = true
 [[files]]
 file = "mods/emiffect.pw.toml"
 hash = "7f253401a4ef14528e607d505297a36dbfde334c2ed28906bc9873229f89097e"
-metafile = true
-
-[[files]]
-file = "mods/enhanced-celestials-2-core.pw.toml"
-hash = "4bdcfa8ea70eceea5197704cada8f02c12c5b912f30fba4307f0ade852e2a8ea"
-metafile = true
-
-[[files]]
-file = "mods/enhanced-celestials-2-default-lunar-events.pw.toml"
-hash = "e48f43b8dbd50aee013721381a48c0056361ffa5ebf396bd6c823177e23f56e5"
-metafile = true
-
-[[files]]
-file = "mods/enhanced-celestials-2-shader-support.pw.toml"
-hash = "048e5e91849604c70d697dd03606b310b69cdd7b63453712667b02f824ecdf88"
 metafile = true
 
 [[files]]
@@ -2579,7 +2555,7 @@ hash = "2a47a02ca7105f655f2d55be055fe777ac6237b22dc28e59635955b4e312b38e"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/categories/land.json"
-hash = "d266ed791b79329348ef8155ee04924c15e9cd107496d94c788b328127955314"
+hash = "9414b1f118fa3420ca113b4771c55fb8b3a74fadc47522f6bf93caad80473d88"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/categories/mods.json"
@@ -2703,7 +2679,7 @@ hash = "01eea9ce015744cc259431a4ed80be0073a09fc951ccdad64141124daff6e6cb"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/land/crops.json"
-hash = "db985f1523fc84b30183d77cd0078e0a4ba926e04df64286112f4fa189f6fb68"
+hash = "00d3353a65f72090c60652bb06e581dd06002ceafba6096078d65468b2dbb110"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/land/otherworlds.json"
@@ -2715,7 +2691,7 @@ hash = "3b2191f5f0de47fc2a4359eecde330fe7580ef5e8d18acc0820f0e866582c775"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/land/sky.json"
-hash = "71f34a746c5feac65124262d535c4ac22aba24e4ac14dd9f20f5807a4c17f593"
+hash = "57b99b7b6e97bfbf0f2e828e83156292a2161582c975298b8ae585d340ccf804"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/land/terrain.json"
@@ -2743,7 +2719,7 @@ hash = "7ec05210b9f92b686257ad8f4c905157b0abb50a4dd01e0d2ccf6c57d8998f38"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/mods/world.json"
-hash = "19389250273611ea79b90565ab1b43a40f64fdfd07fc82236f67257db9d6cead"
+hash = "900944678128c9a50008e1d3cddc16e817dcad74ad10b836c7b75e936bd65795"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/ore/caving.json"

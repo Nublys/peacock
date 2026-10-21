@@ -6,11 +6,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Enhanced Celestials gives the moon moods. A chat line announces each one at dusk.$(br2)$(bold)Blood Moon:$() the undead come thick, and keep coming. Stay indoors.$(br)$(bold)Harvest Moon:$() crops give more.$(br)$(bold)Blue Moon:$() luck; fish and loot are kinder.$(br)$(bold)Super Moon:$() slimes."
-    },
-    {
-      "type": "patchouli:text",
-      "text": "Super variants of each are rarer and stronger. A $(bold)Super Blood Moon$() is a siege; have the guards ready and the dog inside.$(br2)Weather is seasonal too: winter storms snow, summer storms are short and loud."
+      "text": "The moon keeps its ordinary phases: the fuller it is, the more slimes in the swamps and the better armed the night's mobs. Nights are dark; carry light.$(br2)Weather is seasonal: winter storms snow, summer storms are short and loud. The air is colder at night, in the rain and high up, and Cold Sweat counts all of it."
     }
   ]
 }

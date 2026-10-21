@@ -36,7 +36,7 @@ BOOK_JSON = {
 CATEGORIES = {
     "story":   ("The Dark Age", "What happened, what was lost, and what you are here to do.", "minecraft:cracked_stone_bricks", 0),
     "start":   ("First Days", "Spawn, the capital, food, animals, and the first machines.", "minecraft:campfire", 1),
-    "land":    ("Land, Seasons & Sky", "The year, the cold, what grows when, the moons, and the other dimensions.", "sereneseasons:calendar", 2),
+    "land":    ("Land, Seasons & Sky", "The year, the cold, what grows when, the sky, and the other dimensions.", "sereneseasons:calendar", 2),
     "ore":     ("Ore & Prospecting", "Metal is regional. Finding it is the first adventure.", "geolosys:prospectors_pick", 3),
     "towns":   ("Towns & Trade", "The capital, villagers, workers, recruits, caravans and bounties.", "minecraft:emerald", 4),
     "threats": ("Threats", "The night, the pillager faction, and how to fight.", "minecraft:crossbow", 5),
@@ -234,14 +234,12 @@ ENTRIES = {
             txt("Year-round: mushrooms, nether wart, cave vines.",
                 "Below " + B("Y=48") + " season is ignored: deep farms work all year. So does anything under a " + B("glass roof") + "."),
             spot("minecraft:glass", "Any glass counts as greenhouse glass here: a crop with glass a few blocks above it grows as if in season. A glass roof over a lit, walled field is the winter plan. Build it in autumn and the pot stays full.", title="Greenhouses"),
-            txt(B("Harvest Moon") + " nights (see " + L("land/sky", "The Sky") + ") give extra yield. " + B("Rich soil") + " (Farmer's Delight) speeds growth. Slice & Dice can automate the kitchen later; a sprinkler waters a field.",
+            txt(B("Rich soil") + " (Farmer's Delight) speeds growth. Slice & Dice can automate the kitchen later; a sprinkler waters a field.",
                 "Trees ignore seasons. Berries, mushrooms and fish are the winter calories."),
         ]),
         ("sky", "The Sky", "minecraft:clock", [
-            txt("Enhanced Celestials gives the moon moods. A chat line announces each one at dusk.",
-                B("Blood Moon:") + " the undead come thick, and keep coming. Stay indoors.$(br)" + B("Harvest Moon:") + " crops give more.$(br)" + B("Blue Moon:") + " luck; fish and loot are kinder.$(br)" + B("Super Moon:") + " slimes."),
-            txt("Super variants of each are rarer and stronger. A " + B("Super Blood Moon") + " is a siege; have the guards ready and the dog inside.",
-                "Weather is seasonal too: winter storms snow, summer storms are short and loud."),
+            txt("The moon keeps its ordinary phases: the fuller it is, the more slimes in the swamps and the better armed the night's mobs. Nights are dark; carry light.",
+                "Weather is seasonal: winter storms snow, summer storms are short and loud. The air is colder at night, in the rain and high up, and Cold Sweat counts all of it."),
         ]),
         ("terrain", "The Land Itself", "minecraft:grass_block", [
             txt("Tectonic and Terralith shape the terrain: real mountain ranges, deep valleys, long rivers, high plateaus. Biomes O' Plenty fills them. Streams run and fall from the hills, and slabs soften the slopes.",
@@ -682,7 +680,7 @@ ENTRIES = {
     # ===================================================================================== mods
     "mods": [
         ("world", "World", "minecraft:grass_block", [
-            txt(B("Tectonic, Terralith, Biomes O' Plenty") + " shape and fill the land. " + B("Incendium") + " is the Nether, " + B("Nullscape") + " the End. " + B("Serene Seasons") + " runs the year, " + B("Cold Sweat") + " the temperature, " + B("Enhanced Celestials") + " the moons.",
+            txt(B("Tectonic, Terralith, Biomes O' Plenty") + " shape and fill the land. " + B("Incendium") + " is the Nether, " + B("Nullscape") + " the End. " + B("Serene Seasons") + " runs the year, " + B("Cold Sweat") + " the temperature.",
                 B("Geolosys") + " places ore in regional deposits. " + B("Paxi") + " loads the pack's own datapack over everything else."),
             txt(B("Distant Horizons") + " draws the far terrain. " + B("ChoiceTheorem's Overhauled Village") + " builds the villages (every one a ruin now); " + B("Streams Reflowing") + " the flowing streams; " + B("Terrain Slabs") + " the soft slopes; " + B("YUNG's") + " mineshafts, dungeons and API; " + B("Structory") + " ruins; " + B("Create Structures") + " old workshops.",
                 B("Village Spawn Point") + " puts everyone in the capital."),
