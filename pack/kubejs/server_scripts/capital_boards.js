@@ -6,8 +6,8 @@
 // block on the ground ... create buildings around them so they are easier to find"). Now: once per world, an open
 // 7x7 timber pavilion near the town bell, with both boards back to back on its centre post.
 //
-//   stone-brick plinth, spruce floor; spruce log corner posts and beams; a steep red nether-brick hip roof; six
-//   hanging lanterns; a "Bounties" hanging sign over each open side (north and south); spruce railings east and
+//   stone-brick plinth, oak floor; oak log corner posts and beams (stone brick and oak, Aaron 2026-10-21); a steep red nether-brick hip roof; six
+//   hanging lanterns; a "Bounties" hanging sign over each open side (north and south); oak railings east and
 //   west; a flagpole on the ridge with a yellow banner (red diamond, red border), the same in every world, seen
 //   across town and on the Distant Horizons skyline.
 //
@@ -96,32 +96,34 @@ function roofFacing(dx, dz, r) {
 }
 
 function build(server, level, cx, y0, cz) {
-  var x, y, z, dx, dz
+  // every loop variable declared up here: this Rhino scopes `for (var d ...)` to its loop, so a second
+  // `for (d = ...)` threw "Assignment to undeclared variable d" mid-build on 2026-10-21 (posts and beams, no roof)
+  var x, y, z, dx, dz, d
   // clear the space, lay the plinth and floor, and fill under it where the ground dips
   for (dx = -R; dx <= R; dx++)
     for (dz = -R; dz <= R; dz++) {
       x = cx + dx; z = cz + dz
       for (y = y0; y <= y0 + 12; y++) set(level, x, y, z, 'minecraft:air')
       var edge = Math.abs(dx) === R || Math.abs(dz) === R
-      set(level, x, y0 - 1, z, edge ? 'minecraft:stone_bricks' : 'minecraft:spruce_planks')
+      set(level, x, y0 - 1, z, edge ? 'minecraft:stone_bricks' : 'minecraft:oak_planks')
       for (y = y0 - 2; y > y0 - 8 && FILLABLE.test(String(level.getBlock(x, y, z).id)); y--) set(level, x, y, z, 'minecraft:cobblestone')
     }
   // corner posts (5 high, to the beam line) and the centre post up to the roof cap
   ;[[-2, -2], [2, -2], [-2, 2], [2, 2]].forEach(c => {
-    for (var py = y0; py <= y0 + 4; py++) set(level, cx + c[0], py, cz + c[1], 'minecraft:spruce_log', { axis: 'y' })
+    for (var py = y0; py <= y0 + 4; py++) set(level, cx + c[0], py, cz + c[1], 'minecraft:oak_log', { axis: 'y' })
   })
-  for (y = y0; y <= y0 + 5; y++) set(level, cx, y, cz, 'minecraft:spruce_log', { axis: 'y' })
+  for (y = y0; y <= y0 + 5; y++) set(level, cx, y, cz, 'minecraft:oak_log', { axis: 'y' })
   // beams between the posts
-  for (var d = -1; d <= 1; d++) {
-    set(level, cx + d, y0 + 4, cz - 2, 'minecraft:spruce_log', { axis: 'x' })
-    set(level, cx + d, y0 + 4, cz + 2, 'minecraft:spruce_log', { axis: 'x' })
-    set(level, cx - 2, y0 + 4, cz + d, 'minecraft:spruce_log', { axis: 'z' })
-    set(level, cx + 2, y0 + 4, cz + d, 'minecraft:spruce_log', { axis: 'z' })
+  for (d = -1; d <= 1; d++) {
+    set(level, cx + d, y0 + 4, cz - 2, 'minecraft:oak_log', { axis: 'x' })
+    set(level, cx + d, y0 + 4, cz + 2, 'minecraft:oak_log', { axis: 'x' })
+    set(level, cx - 2, y0 + 4, cz + d, 'minecraft:oak_log', { axis: 'z' })
+    set(level, cx + 2, y0 + 4, cz + d, 'minecraft:oak_log', { axis: 'z' })
   }
   // railings on the east and west sides; north and south stay open
   for (d = -1; d <= 1; d++) {
-    set(level, cx - 2, y0, cz + d, 'minecraft:spruce_fence', { north: 'true', south: 'true', east: 'false', west: 'false', waterlogged: 'false' })
-    set(level, cx + 2, y0, cz + d, 'minecraft:spruce_fence', { north: 'true', south: 'true', east: 'false', west: 'false', waterlogged: 'false' })
+    set(level, cx - 2, y0, cz + d, 'minecraft:oak_fence', { north: 'true', south: 'true', east: 'false', west: 'false', waterlogged: 'false' })
+    set(level, cx + 2, y0, cz + d, 'minecraft:oak_fence', { north: 'true', south: 'true', east: 'false', west: 'false', waterlogged: 'false' })
   }
   // hip roof: rings at |d| = 3, 2, 1, corners first so the edge stairs give them their outer shape, then the cap
   ;[[3, y0 + 4], [2, y0 + 5], [1, y0 + 6]].forEach(ring => {
@@ -135,18 +137,34 @@ function build(server, level, cx, y0, cz) {
   })
   set(level, cx, y0 + 6, cz, 'minecraft:red_nether_bricks')
   // flagpole and banner
-  for (y = y0 + 7; y <= y0 + 10; y++) set(level, cx, y, cz, 'minecraft:spruce_fence')
+  for (y = y0 + 7; y <= y0 + 10; y++) set(level, cx, y, cz, 'minecraft:oak_fence')
   var cmd = c => server.runCommandSilent(c)
   cmd('setblock ' + cx + ' ' + (y0 + 11) + ' ' + cz + ' minecraft:yellow_banner[rotation=0]{Patterns:[{Pattern:"mr",Color:14},{Pattern:"bo",Color:14}]} replace')
   // lanterns under the beams, and a sign over each open side
   ;[[-1, -2], [1, -2], [-1, 2], [1, 2], [-2, 0], [2, 0]].forEach(l => set(level, cx + l[0], y0 + 3, cz + l[1], 'minecraft:lantern', { hanging: 'true', waterlogged: 'false' }))
   var text = "messages:['{\"text\":\"\"}','{\"text\":\"Bounties\",\"bold\":true}','{\"text\":\"Work for pay\"}','{\"text\":\"\"}']"
   ;[-2, 2].forEach(sz => cmd('setblock ' + cx + ' ' + (y0 + 3) + ' ' + (cz + sz) +
-    ' minecraft:spruce_hanging_sign[rotation=0]{front_text:{' + text + '},back_text:{' + text + '},is_waxed:1b} replace'))
+    ' minecraft:oak_hanging_sign[rotation=0]{front_text:{' + text + '},back_text:{' + text + '},is_waxed:1b} replace'))
   // the two boards, back to back on the centre post
   set(level, cx, y0, cz - 1, BOARD)
   set(level, cx, y0, cz + 1, BOARD)
   return [[cx, y0, cz - 1], [cx, y0, cz + 1]]
+}
+
+// the frame of an unfinished pavilion (the 2026-10-21 run stopped after posts and beams): a log centre post on a
+// plank floor with log corner posts at (±2, ±2). Returns its floor height and centre, or null
+function unfinished(level, cx, cz, top, bottom) {
+  var LOG = /^minecraft:(oak|spruce)_log$/
+  for (var x = cx - 48; x <= cx + 48; x++)
+    for (var z = cz - 48; z <= cz + 48; z++)
+      for (var y = bottom; y <= top; y++) {
+        if (!LOG.test(String(level.getBlock(x, y, z).id))) continue
+        if (!/^minecraft:(oak|spruce)_planks$/.test(String(level.getBlock(x, y - 1, z).id))) continue
+        if (LOG.test(String(level.getBlock(x - 2, y, z - 2).id)) && LOG.test(String(level.getBlock(x + 2, y, z + 2).id)) &&
+            LOG.test(String(level.getBlock(x + 2, y, z - 2).id)) && LOG.test(String(level.getBlock(x - 2, y, z + 2).id)))
+          return [x, y, z]
+      }
+  return null
 }
 
 // a world from 2026-10-20 has two bare boards near the square: take them up before the pavilion goes in
@@ -205,9 +223,18 @@ function place(server) {
     ? removeBareBoards(level, bell ? bell.x : mid.x, bell ? bell.z : mid.z, bell ? bell.y + 12 : top, bell ? bell.y - 12 : bottom) : []
   if (removed.length) log('took up ' + removed.length + ' bare board(s): ' + removed.map(p => p.join(',')).join(' and '))
 
+  // a site chosen by an earlier run (saved before building, so a failed build is finished in the same place), or
+  // the frame left by the run that failed before sites were saved
+  var SITE = 'peacock_board_pavilion_site'
+  var saved = String(server.persistentData.getString(SITE) || '')
+  var again = saved ? saved.split(',').map(n => parseInt(n, 10)) : unfinished(level, bell ? bell.x : mid.x, bell ? bell.z : mid.z,
+    bell ? bell.y + 12 : top, bell ? bell.y - 12 : bottom)
+  if (again) list.unshift(again)
   for (var i = 0; i < list.length; i++) {
-    var y0 = site(level, list[i][0], list[i][1], top, bottom)
+    var y0 = (again && i === 0) ? again[1] : site(level, list[i][0], list[i][1], top, bottom)
     if (y0 === null) continue
+    if (again && i === 0) { list[i] = [again[0], again[2]]; log('finishing the pavilion at ' + again.join(',')) }
+    server.persistentData.putString(SITE, list[i][0] + ',' + y0 + ',' + list[i][1])
     var boards = build(server, level, list[i][0], y0, list[i][1])
     log('pavilion at ' + list[i][0] + ',' + y0 + ',' + list[i][1] + (bell ? ' by the bell at ' + bell.x + ',' + bell.y + ',' + bell.z : '') +
         '; boards ' + boards.map(p => p.join(',')).join(' and '))

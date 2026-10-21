@@ -1214,12 +1214,19 @@ silently every tick.
 Aaron: the boards are "tuff to spot as they are a single block on the ground. Can you create buildings around them
 so they are easier to find and players can recognize the building? Like a tavern or a Gazebo." He chose the open
 pavilion over an enclosed hall (a 9x7 building rarely fits on CTOV's dense square and would end up hidden behind
-houses). `capital_boards.js` now builds, once per world, a 7x7 open timber pavilion: stone-brick plinth, spruce floor,
-spruce log posts and beams, a red nether-brick hip roof, six hanging lanterns, a waxed "Bounties / Work for pay"
-hanging sign over the north and south openings, spruce railings east and west, and a flagpole on the ridge with a
+houses). `capital_boards.js` now builds, once per world, a 7x7 open timber pavilion: stone-brick plinth, oak floor,
+oak log posts and beams, a red nether-brick hip roof, six hanging lanterns, a waxed "Bounties / Work for pay"
+hanging sign over the north and south openings, oak railings east and west, and a flagpole on the ridge with a
 yellow banner (red diamond and border) that reads from across town and on the Distant Horizons skyline. Both boards
 stand back to back on the centre post. Site: the first 7x7 patch of open ground (no roof, road or water in any
 column, at most 2 blocks of rise) on rings around the bell (6 to 20), then the square's centre (to 48), then spawn;
 the patch is levelled. Flag `peacock_board_pavilion`; a world that already had the 2026-10-20 bare boards gets the
 pavilion once and its bare boards within 48 blocks (±12 of the bell's height) are taken up. No site anywhere: two
 bare boards beside spawn, as before.
+- 12:50, first build failed halfway (Aaron: "Saw the structure, no bounty board on it"): `Assignment to undeclared
+  variable d`. KubeJS' Rhino scopes `for (var d ...)` to its loop, so the second loop's `for (d = ...)` threw after the
+  posts and beams. Every loop variable is now declared up front, and `validate.py` flags a `for (x = ...)` whose name is
+  only declared in an earlier `for (var x ...)`. The site is saved (`peacock_board_pavilion_site`) before building,
+  so a failed build is finished in the same place, and the next start finds the half-built frame (log centre post on
+  a plank floor, log corner posts) and rebuilds over it. Materials now stone brick and oak (Aaron); the red roof and
+  yellow flag stay for recognition.

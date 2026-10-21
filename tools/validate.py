@@ -128,6 +128,21 @@ def check_kubejs() -> None:
             depth += line.count("{") - line.count("}")
             while depth_try and depth < depth_try[-1]:
                 depth_try.pop()
+        # `for (var d ...)` is scoped to its loop in this Rhino: a later `for (d = ...)` without its own declaration
+        # throws "Assignment to undeclared variable d" (capital_boards.js, 2026-10-21, a half-built pavilion)
+        text = "\n".join(code)
+        declared = set()
+        for m in re.finditer(r"^\s*(?:var|let|const)\s+(.+)$", text, re.M):
+            for part in m.group(1).split(","):
+                n = re.match(r"\s*([A-Za-z_$][\w$]*)", part)
+                if n: declared.add(n.group(1))
+        for m in re.finditer(r"\bfunction\s*[\w$]*\s*\(([^)]*)\)|\(([^()]*)\)\s*=>|\b([A-Za-z_$][\w$]*)\s*=>", text):
+            for g in m.groups():
+                if g: declared.update(x.strip() for x in g.split(",") if x.strip())
+        for i, line in enumerate(code, 1):
+            for m in re.finditer(r"\bfor\s*\(\s*([A-Za-z_$][\w$]*)\s*=", line):
+                if m.group(1) not in declared:
+                    err(f"{f.relative_to(ROOT)}:{i}: for ({m.group(1)} = …) reuses a loop variable only declared in an earlier for (var …); KubeJS' Rhino scopes that to its loop — declare it with var before the loops")
 
 
 def check_advancements() -> None:
