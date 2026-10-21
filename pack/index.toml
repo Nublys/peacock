@@ -132,7 +132,7 @@ hash = "0bcee95ab75190a082b6922fae3d6c1662c2f31429a8fe6cf3e5f9caa5aecf1e"
 
 [[files]]
 file = "config/defaultoptions/options.txt"
-hash = "1448c8088f2b83c27ff71c740d27fdede566a93fac30842a90a81a63149420be"
+hash = "e904e31ae3990969e6752b2a803324d92d29f29393affffc503744999944ed62"
 
 [[files]]
 file = "config/distraction_free_recipes-client.toml"
@@ -1429,6 +1429,10 @@ file = "kubejs/assets/cold_sweat/textures/gui/overlay/droplet_trail.png"
 hash = "c767c02c7a6eb0769bcdac8e7c2b43bed5cfc9b2a1653f90fe52ce958f2fe10c"
 
 [[files]]
+file = "kubejs/assets/particlerain/particles.json"
+hash = "4faefbccfc4cab282d70059defae8f62f40781f2af872f712b1c009395eb6528"
+
+[[files]]
 file = "kubejs/assets/peacock/lang/en_us.json"
 hash = "70c1f6780e299fa036260cfc901ed98d5a0853bbbe02ee0b42afa8e9c9627582"
 
@@ -1513,6 +1517,10 @@ file = "kubejs/client_scripts/blueprint_tooltips.js"
 hash = "09d333d76904e58dcfc54bac179a809c34e83ece952f11ab110dd5ea81e575f0"
 
 [[files]]
+file = "kubejs/client_scripts/cold_breath.js"
+hash = "d9139392e896c679e3531bda0d19e363c378a44314b2ca7cbd6783d6757f3e3f"
+
+[[files]]
 file = "kubejs/client_scripts/profile_client.js"
 hash = "a02ab44dfc207563c7c8400b5027b0320326329e6628989320b8892e81655806"
 
@@ -1530,7 +1538,7 @@ hash = "cc48e7b6d2c9ccc4375e04f371c53582ebc7fa50f8f366ae097b71feaf9d2aed"
 
 [[files]]
 file = "kubejs/config/peacock.json"
-hash = "ea1a9e4cf4e9eb89f3b6826859039fcfe652142630aa7fcd2df6b86d12b98466"
+hash = "7c4e4ba61dd03c46fb857c899e704abc8be9c82fc571923d9bfad59e2c7ae288"
 
 [[files]]
 file = "kubejs/server_scripts/achievements.js"
@@ -2947,7 +2955,7 @@ hash = "72e6e66c6f67a45ed5caa0bdd5af42ae0e02d579aef32753c750291b13a37355"
 
 [[files]]
 file = "peacock/profiles/_previous/config/coldsweat/client.toml.keys"
-hash = "dd9e072729cfd034c71c375dd2175a6535ab2ebf5a40f15746be77c28f40ef0e"
+hash = "38f5c7d249c637d9e0d1cba03867f6c0ecf73c845b8543530bd02952eb9e1106"
 
 [[files]]
 file = "peacock/profiles/_previous/config/colorwheel-client.toml.keys"
@@ -2979,11 +2987,15 @@ hash = "c71eebdce1073c36b335ea92c0bf1a0789baaf3302d4d56d80457f3d4297ea88"
 
 [[files]]
 file = "peacock/profiles/_previous/config/subtle_effects/entities.toml.keys"
-hash = "d319ac0bedcbe0644429c9b532769cd524b249c86b9eb24b8311334a1b9f4189"
+hash = "e53c30b1a3004eae1d63aafb5f9d172a43e51152a97f72fab3dcbaf4e602aefa"
+
+[[files]]
+file = "peacock/profiles/_previous/config/subtle_effects/general.toml.keys"
+hash = "8eeb244c64c43c6a14663f17a44f87796ed307c3890e8313e8255a11434c59d8"
 
 [[files]]
 file = "peacock/profiles/_previous/options.txt.keys"
-hash = "1f3f3b6f16632dd68852b8f9abbe1d57bc16ddb0b5f643be0cdd6dcb289d7f64"
+hash = "1d69136b319b4c2b49ef52e0a3dd40e162a8b74c0e55c088a8d9244a2b77c564"
 
 [[files]]
 file = "peacock/profiles/high/config/DistantHorizons.toml.keys"
@@ -2991,7 +3003,7 @@ hash = "e1b0204fedcda0b7840500ecae6eb914767c42c147b2ec76837ab27c2fef25ba"
 
 [[files]]
 file = "peacock/profiles/high/config/coldsweat/client.toml.keys"
-hash = "91a2505a8d35e124eeac54e302faa3f2b4b7c760c49ab9484dc62633ec4f8301"
+hash = "c0d073aa79d0e3bc4536b40f4c04a6893c7415ee7346302882d6257afd978aa6"
 
 [[files]]
 file = "peacock/profiles/high/config/colorwheel-client.toml.keys"
@@ -3039,7 +3051,7 @@ hash = "137f65cde95fd0335097812e412d51109ed19ee7969090c0fac33f0a9cf036fc"
 
 [[files]]
 file = "peacock/profiles/high/config/subtle_effects/entities.toml.keys"
-hash = "249d23105a0e48911ae56022112ad31c313216e856959d97619d49a220cd962f"
+hash = "30073d4365b47b8ab85d3401082b6727c8598ff5448cc377c5542f8392afd411"
 
 [[files]]
 file = "peacock/profiles/high/config/subtle_effects/general.toml.keys"
@@ -3047,7 +3059,7 @@ hash = "7416eb557fe7929d1321b30bb1d88198d86072c656ed5f3bc9e444c15f1b2db1"
 
 [[files]]
 file = "peacock/profiles/high/options.txt.keys"
-hash = "2d9ed31028c0f4c859e30552b496ae3a1e1959b4564773818cee4b4cf77722b4"
+hash = "93c0cf8693d01a4ae7fadb8caa2a766736cfaf19f54113d003471428d6c34dea"
 
 [[files]]
 file = "peacock/profiles/high/shaderpacks/ComplementaryReimagined_r5.9.3 + EuphoriaPatches_1.10.5.txt.keys"
@@ -3063,7 +3075,7 @@ hash = "5d7b6488363b84de2050c7c811d3aed8de62a210625724487ce219f889fbec2a"
 
 [[files]]
 file = "peacock/profiles/low/config/coldsweat/client.toml.keys"
-hash = "91a2505a8d35e124eeac54e302faa3f2b4b7c760c49ab9484dc62633ec4f8301"
+hash = "c0d073aa79d0e3bc4536b40f4c04a6893c7415ee7346302882d6257afd978aa6"
 
 [[files]]
 file = "peacock/profiles/low/config/colorwheel-client.toml.keys"
@@ -3111,7 +3123,7 @@ hash = "137f65cde95fd0335097812e412d51109ed19ee7969090c0fac33f0a9cf036fc"
 
 [[files]]
 file = "peacock/profiles/low/config/subtle_effects/entities.toml.keys"
-hash = "249d23105a0e48911ae56022112ad31c313216e856959d97619d49a220cd962f"
+hash = "30073d4365b47b8ab85d3401082b6727c8598ff5448cc377c5542f8392afd411"
 
 [[files]]
 file = "peacock/profiles/low/config/subtle_effects/general.toml.keys"
@@ -3119,7 +3131,7 @@ hash = "41d780d4c3ed099897f71151abc7ddf4f8f9d3cfc0062265e0fad4ac6c4d0d54"
 
 [[files]]
 file = "peacock/profiles/low/options.txt.keys"
-hash = "3a85241b9f00008e51891d163ade499b77f2105e590872e39c918320b5285246"
+hash = "1cece4cbdf8b8807981807f05ac040a7a41e0479ad1ee0dcec2f55cebe590e60"
 
 [[files]]
 file = "peacock/profiles/low/shaderpacks/ComplementaryReimagined_r5.9.3 + EuphoriaPatches_1.10.5.txt.keys"
@@ -3135,7 +3147,7 @@ hash = "a47487cde40eb05dae56160e1325dc81ed18c0c370b731f068d0eadc9b4e38d3"
 
 [[files]]
 file = "peacock/profiles/medium/config/coldsweat/client.toml.keys"
-hash = "91a2505a8d35e124eeac54e302faa3f2b4b7c760c49ab9484dc62633ec4f8301"
+hash = "c0d073aa79d0e3bc4536b40f4c04a6893c7415ee7346302882d6257afd978aa6"
 
 [[files]]
 file = "peacock/profiles/medium/config/colorwheel-client.toml.keys"
@@ -3183,7 +3195,7 @@ hash = "137f65cde95fd0335097812e412d51109ed19ee7969090c0fac33f0a9cf036fc"
 
 [[files]]
 file = "peacock/profiles/medium/config/subtle_effects/entities.toml.keys"
-hash = "249d23105a0e48911ae56022112ad31c313216e856959d97619d49a220cd962f"
+hash = "30073d4365b47b8ab85d3401082b6727c8598ff5448cc377c5542f8392afd411"
 
 [[files]]
 file = "peacock/profiles/medium/config/subtle_effects/general.toml.keys"
@@ -3191,7 +3203,7 @@ hash = "7416eb557fe7929d1321b30bb1d88198d86072c656ed5f3bc9e444c15f1b2db1"
 
 [[files]]
 file = "peacock/profiles/medium/options.txt.keys"
-hash = "d9997e044dc341718af4cdb2b9eeafeb7fd2f0f933e5891fffcc08fc828fa84b"
+hash = "744ec6df420dc68dcf545db776e482376f53313ea6bd582a2bc0525c4cd4ed5c"
 
 [[files]]
 file = "peacock/profiles/medium/shaderpacks/ComplementaryReimagined_r5.9.3 + EuphoriaPatches_1.10.5.txt.keys"
@@ -3207,7 +3219,7 @@ hash = "2677668653e471233d8fb3bca299a3fdbef926ddc98b1758e2f6c39a5e00a76e"
 
 [[files]]
 file = "peacock/profiles/potato/config/coldsweat/client.toml.keys"
-hash = "91a2505a8d35e124eeac54e302faa3f2b4b7c760c49ab9484dc62633ec4f8301"
+hash = "c0d073aa79d0e3bc4536b40f4c04a6893c7415ee7346302882d6257afd978aa6"
 
 [[files]]
 file = "peacock/profiles/potato/config/colorwheel-client.toml.keys"
@@ -3255,7 +3267,7 @@ hash = "137f65cde95fd0335097812e412d51109ed19ee7969090c0fac33f0a9cf036fc"
 
 [[files]]
 file = "peacock/profiles/potato/config/subtle_effects/entities.toml.keys"
-hash = "249d23105a0e48911ae56022112ad31c313216e856959d97619d49a220cd962f"
+hash = "30073d4365b47b8ab85d3401082b6727c8598ff5448cc377c5542f8392afd411"
 
 [[files]]
 file = "peacock/profiles/potato/config/subtle_effects/general.toml.keys"
@@ -3263,7 +3275,7 @@ hash = "2cbb23679ce90d06ffe89074fc45b6fe7856ed04ce7747c81ed8228a54076e8b"
 
 [[files]]
 file = "peacock/profiles/potato/options.txt.keys"
-hash = "ced398ce9874747e5f0407582a8b119c185fb4f9307b757b3d33b7fed7de80db"
+hash = "99be562d8e540d05a6a26fc8cab2241b52bb398318aafa139fb17d93ad00d7cb"
 
 [[files]]
 file = "peacock/profiles/potato/shaderpacks/ComplementaryReimagined_r5.9.3 + EuphoriaPatches_1.10.5.txt.keys"
@@ -3279,7 +3291,7 @@ hash = "5e2cd57039f1df71cdd4aef983a8afa5691a33b08719a8b46f5154e5c24c1efd"
 
 [[files]]
 file = "peacock/profiles/ultra/config/coldsweat/client.toml.keys"
-hash = "91a2505a8d35e124eeac54e302faa3f2b4b7c760c49ab9484dc62633ec4f8301"
+hash = "c0d073aa79d0e3bc4536b40f4c04a6893c7415ee7346302882d6257afd978aa6"
 
 [[files]]
 file = "peacock/profiles/ultra/config/colorwheel-client.toml.keys"
@@ -3327,7 +3339,7 @@ hash = "137f65cde95fd0335097812e412d51109ed19ee7969090c0fac33f0a9cf036fc"
 
 [[files]]
 file = "peacock/profiles/ultra/config/subtle_effects/entities.toml.keys"
-hash = "249d23105a0e48911ae56022112ad31c313216e856959d97619d49a220cd962f"
+hash = "30073d4365b47b8ab85d3401082b6727c8598ff5448cc377c5542f8392afd411"
 
 [[files]]
 file = "peacock/profiles/ultra/config/subtle_effects/general.toml.keys"
@@ -3335,7 +3347,7 @@ hash = "7416eb557fe7929d1321b30bb1d88198d86072c656ed5f3bc9e444c15f1b2db1"
 
 [[files]]
 file = "peacock/profiles/ultra/options.txt.keys"
-hash = "c54ae5781a57ef278b774a7a13dc1b51c764841c808934041b49bd215bc74a6d"
+hash = "4a38bf6c23eb71384ee1cef415afaeff69133a21cb40b49b7e8ee25452040d97"
 
 [[files]]
 file = "peacock/profiles/ultra/shaderpacks/ComplementaryReimagined_r5.9.3 + EuphoriaPatches_1.10.5.txt.keys"

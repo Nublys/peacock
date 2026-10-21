@@ -1,0 +1,7 @@
+{
+  "fog": { "density": 0.05 },
+  "vertical_fog": { "density": 0.05, "opacity": 0.5 },
+  "fog_after_rain": { "density": 0.05 },
+  "vertical_fog_after_rain": { "density": 0.05, "opacity": 0.5 },
+  "dust_haze": { "density": 0.1 }
+}

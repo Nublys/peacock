@@ -1150,3 +1150,25 @@ items 1–5 of the proposal plus Create: Ironworks.
   scrap); Ironworks adds a steel-nugget version. Aluminium sheets → 8 Eureka balloons (paper 2, leather 4,
   membrane 32), gated by Ships like Eureka's own.
 - The Almanac's "Why the Rocks Have Names" gains a page of what each metal is for.
+
+## Quieter, softer: breath from Cold Sweat, thinner fog, less noise (2026-10-21)
+Aaron: "ways to reduce game noise, and create a clean but soft look." What he chose:
+- **Breath fog** was Subtle Effects' Frosty Breath: it shows in any biome cold enough to snow and, with Serene
+  Seasons, in every biome from late autumn to early spring, regardless of temperature, so nearly always. It is off
+  (`displayType = "OFF"`), and `kubejs/client_scripts/cold_breath.js` draws the same particle with the same placement
+  and rhythm from Cold Sweat's outside air temperature (trait WORLD, the world gauge's number: biome, height, time,
+  season, weather) below `breathBelowF` (peacock.json, 45 °F). Aaron: "they can have warm clothes on but have the fog
+  breath because they are in a cold area or it is winter. It should be tied to the outside temperature", so body
+  temperature, clothing and acclimation play no part; a hearth warming the air does. Cold Sweat syncs every
+  player's temperatures to everyone tracking them, so other players breathe by their own air.
+- **Particle Rain fog** (wet-biome fog, always on in rivers and swamps, and the after-rain fog): density 0.1 → 0.05
+  for both the flat and upright layers, upright opacity 1.0 → 0.5; desert dust haze 0.2 → 0.1. Shipped as
+  `kubejs/assets/particlerain/particles.json`: Particle Rain merges every resource pack's particles.json field by field
+  (missing fields stay null), and KubeJS's pack sits above the mod's. Aaron wrote "fog density to .5"; read as half
+  (0.05), since 0.5 would be five times the default.
+- **Sounds** (Subtle Effects): no snoring (player and villager chance 0), no stomach growling (threshold 0), the
+  low-health heartbeat at half volume, drips landing at 40%.
+- **Potion rings** around players at half opacity.
+- **Screen motion** (options.txt, also the first-launch file): FOV effects, screen distortion, damage tilt 0.5;
+  lightning flashes hidden. Cold Sweat: shiver intensity, heatstroke sway and blur 0.5.
+All settings go through the launcher's untouched-only rule (the old values are in `PREVIOUS_DEFAULTS`).

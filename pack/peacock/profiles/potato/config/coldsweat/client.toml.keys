@@ -1,3 +1,7 @@
 [Preferences]
 "Show Water Effect" = 0
 "Water Droplet Opacity" = 0.0
+[Accessibility]
+"Shiver Intensity" = 0.5
+"Heatstroke Sway Amount" = 0.5
+"Heatstroke Blur Strength" = 0.5

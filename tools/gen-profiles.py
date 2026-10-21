@@ -75,6 +75,8 @@ PREVIOUS_DEFAULTS = {
         'renderClouds:false', 'renderClouds:"false"',
         # music shipped at full volume until 2026-10-20
         "soundCategory_music:1.0", "soundCategory_music:0.3", "soundCategory_neutral:1.0", "soundCategory_ambient:1.0",
+        # vanilla's full screen motion until 2026-10-21
+        "fovEffectScale:1.0", "screenEffectScale:1.0", "damageTiltStrength:1.0", "hideLightningFlashes:false",
     ],
     # the mods' shipped values before the quieter-boot change; without these the launcher took the old `true`s for
     # the player's own choice and kept the update popup and join warnings ("keep … 8 setting(s) you changed")
@@ -85,8 +87,14 @@ PREVIOUS_DEFAULTS = {
         "showSlowWorldGenSettingWarnings = true",
     ],
     "config/embeddium-options.json.keys": ['"force_disable_donation_prompts": false'],
-    "config/coldsweat/client.toml.keys": ["[Preferences]", '"Show Water Effect" = 3', '"Water Droplet Opacity" = 0.5'],
-    "config/subtle_effects/entities.toml.keys": ["[dustClouds]", "playerRunning = true"],
+    "config/coldsweat/client.toml.keys": ["[Preferences]", '"Show Water Effect" = 3', '"Water Droplet Opacity" = 0.5',
+                                          "[Accessibility]", '"Shiver Intensity" = 1.0', '"Heatstroke Sway Amount" = 1.0',
+                                          '"Heatstroke Blur Strength" = 1.0'],
+    "config/subtle_effects/entities.toml.keys": ["[dustClouds]", "playerRunning = true", "[humanoids]", "potionRingsAlpha = 1.0",
+                                                 "[humanoids.frostyBreath]", 'displayType = "DEFAULT"',
+                                                 "[humanoids.player]", "stomachGrowlingThreshold = 6", "heartbeatVolume = 1.0",
+                                                 "[sleeping]", "playerSnoreChance = 1.0", "villagerSnoreChance = 1.0"],
+    "config/subtle_effects/general.toml.keys": ["dropLandSoundVolume = 1.0"],
     "config/subtle_effects/blocks.toml.keys": ["rainWaterRipples = true"],
     "config/streamsreflowing-client.properties.keys": ["waterAmbience=1.0"],
     "config/soundphysics/soundphysics.properties.keys": ["reverb_attenuation_distance=0.0", "reverb_attenuation_distance=10.0", "reverb_gain=1.0"],
@@ -111,6 +119,9 @@ COMMON_KEYS = {
     # Minecraft's music at 10% (Aaron, 2026-10-20 "lower ... the minecraft music" → 30%; 2026-10-21 "reduce the music
     # to 10"), friendly creatures and ambient/environment sounds at 70% (2026-10-21)
     "soundCategory_music": "0.1", "soundCategory_neutral": "0.7", "soundCategory_ambient": "0.7",
+    # softer screen motion (Aaron, 2026-10-21): the sprint FOV change, nausea/portal distortion and the hurt tilt at
+    # half, lightning flashes hidden
+    "fovEffectScale": "0.5", "screenEffectScale": "0.5", "damageTiltStrength": "0.5", "hideLightningFlashes": "true",
 }
 
 # Extra *.keys files written into every tier (same content). Jade: a smaller, quieter block/entity overlay
@@ -129,10 +140,22 @@ COMMON_FILES = {
     # "blocky blue drops work their way down the screen"). 0 off, 1 drip particles, 2 on-screen, 3 both (the default).
     # Opacity 0 as well: on 2026-10-21 Aaron still had the drops in rain with the launcher showing this as done, so the
     # pack also ships invisible drop textures (kubejs/assets/cold_sweat/textures/gui/overlay/) that need no setting.
-    "config/coldsweat/client.toml.keys": '[Preferences]\n"Show Water Effect" = 0\n"Water Droplet Opacity" = 0.0\n',
+    # Shivering and heatstroke sway/blur at half (2026-10-21): the warnings stay, they move less.
+    "config/coldsweat/client.toml.keys": ('[Preferences]\n"Show Water Effect" = 0\n"Water Droplet Opacity" = 0.0\n'
+                                          '[Accessibility]\n"Shiver Intensity" = 0.5\n"Heatstroke Sway Amount" = 0.5\n'
+                                          '"Heatstroke Blur Strength" = 0.5\n'),
     # Subtle Effects' dust cloud trailing a running player (Aaron, 2026-10-20: "not a whole trail, just a little dust
     # below the feet") is off; vanilla's own sprint particles under the feet stay. Mobs' running dust stays.
-    "config/subtle_effects/entities.toml.keys": "[dustClouds]\nplayerRunning = false\n",
+    # 2026-10-21, quieter and softer: Frosty Breath off (it showed in any snowy biome and all cold season; the
+    # client script kubejs/client_scripts/cold_breath.js draws it from Cold Sweat's air temperature instead), potion
+    # rings at half opacity, no stomach growling, the low-health heartbeat at half volume, no snoring.
+    "config/subtle_effects/entities.toml.keys": ("[dustClouds]\nplayerRunning = false\n"
+                                                 "[humanoids]\npotionRingsAlpha = 0.5\n"
+                                                 '[humanoids.frostyBreath]\ndisplayType = "OFF"\n'
+                                                 "[humanoids.player]\nstomachGrowlingThreshold = 0\nheartbeatVolume = 0.5\n"
+                                                 "[sleeping]\nplayerSnoreChance = 0.0\nvillagerSnoreChance = 0.0\n"),
+    # the sound of drips landing (dripstone, leaky ceilings) at 40% (2026-10-21)
+    "config/subtle_effects/general.toml.keys": "dropLandSoundVolume = 0.4\n",
     # rain ripples on water: Particle Rain draws them too (and its density follows the tier), so Subtle Effects' set
     # is off rather than doubling every pond in the rain (Aaron, 2026-10-20)
     "config/subtle_effects/blocks.toml.keys": "rainWaterRipples = false\n",

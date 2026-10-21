@@ -12,3 +12,7 @@ soundCategory_music:1.0
 soundCategory_music:0.3
 soundCategory_neutral:1.0
 soundCategory_ambient:1.0
+fovEffectScale:1.0
+screenEffectScale:1.0
+damageTiltStrength:1.0
+hideLightningFlashes:false

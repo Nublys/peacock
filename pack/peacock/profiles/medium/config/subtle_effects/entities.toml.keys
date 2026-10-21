@@ -1,2 +1,12 @@
 [dustClouds]
 playerRunning = false
+[humanoids]
+potionRingsAlpha = 0.5
+[humanoids.frostyBreath]
+displayType = "OFF"
+[humanoids.player]
+stomachGrowlingThreshold = 0
+heartbeatVolume = 0.5
+[sleeping]
+playerSnoreChance = 0.0
+villagerSnoreChance = 0.0
