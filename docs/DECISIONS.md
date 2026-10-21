@@ -1196,3 +1196,9 @@ watchdog. Never call into a Java Map from KubeJS. The villager metal trades now 
 Same boot: KubeJS reported "modified 2 recipes": `replaceOutput` only reaches recipe types it has a schema for
 (Geolosys' smelting/blasting), so Big Cannons' basin mixing and compacting still made its hidden bronze and steel.
 Those ten recipes are now rebuilt with the ids swapped in their JSON.
+
+## Geolosys samples left out of Distant Horizons' LODs (2026-10-21)
+Aaron: "add the geolosys surface rocks to the DH exception list". All 23 `geolosys:*_ore_sample` blocks are appended
+to DH's defaults in `ignoredRenderBlockCsv` (tier profiles via `dh_keys`, the shipped client file and the server
+copy). Samples have a collision box, so `blocksToIgnore = NON_COLLIDING` kept them, and each drew as a block-sized
+speck in the distance. LODs already generated keep the specks until those areas are regenerated or revisited.

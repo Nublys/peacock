@@ -85,6 +85,7 @@ PREVIOUS_DEFAULTS = {
         "showModCompatibilityWarningsOnStartup = true", "showHighVanillaRenderDistanceWarning = true",
         "showPoolInsufficientMemoryWarning = true", "showGarbageCollectorWarning = true",
         "showSlowWorldGenSettingWarnings = true",
+        'ignoredRenderBlockCsv = "minecraft:barrier,minecraft:structure_void,minecraft:light,minecraft:tripwire,minecraft:brown_mushroom"',
     ],
     "config/embeddium-options.json.keys": ['"force_disable_donation_prompts": false'],
     "config/coldsweat/client.toml.keys": ["[Preferences]", '"Show Water Effect" = 3', '"Water Droplet Opacity" = 0.5',
@@ -212,6 +213,16 @@ def preset_to_iris_txt(tokens):
             out.append(f"{tok}=true")
     return "\n".join(sorted(out)) + "\n"
 
+# Blocks DH leaves out of its LODs: DH's own defaults, plus every Geolosys surface sample (Aaron, 2026-10-21). Samples
+# are small rocks with a collision box, so blocksToIgnore = NON_COLLIDING keeps them, and far away each one drew as a
+# full block-sized speck across the hills.
+DH_IGNORED_DEFAULT = "minecraft:barrier,minecraft:structure_void,minecraft:light,minecraft:tripwire,minecraft:brown_mushroom"
+GEOLOSYS_SAMPLES = ["lignite", "bituminous_coal", "anthracite_coal", "hematite", "limonite", "malachite", "azurite",
+                    "cassiterite", "teallite", "galena", "bauxite", "autunite", "platinum", "sphalerite", "coal",
+                    "cinnabar", "gold", "lapis", "quartz", "kimberlite", "beryl", "ancient_debris", "nether_gold"]
+DH_IGNORED = DH_IGNORED_DEFAULT + "," + ",".join(f"geolosys:{m}_ore_sample" for m in GEOLOSYS_SAMPLES)
+
+
 def dh_keys(dh, transp, threads, quality, ssao):
     # chunkGeneratorMode must not be DISABLED on the client: in DH 3.x it also governs whether the client
     # requests LODs from a DH server. In singleplayer it is the local generator; SURFACE is the light one.
@@ -224,7 +235,8 @@ def dh_keys(dh, transp, threads, quality, ssao):
              "enableAutoUpdater = false", "showLowMemoryWarningOnStartup = false", "showReplayWarningOnStartup = false",
              "showModCompatibilityWarningsOnStartup = false", "showHighVanillaRenderDistanceWarning = false",
              "showPoolInsufficientMemoryWarning = false", "showGarbageCollectorWarning = false",
-             "showSlowWorldGenSettingWarnings = false"]
+             "showSlowWorldGenSettingWarnings = false",
+             f'ignoredRenderBlockCsv = "{DH_IGNORED}"']
     return "\n".join(lines) + "\n"
 
 def embeddium_keys(weather, leaves, vignette):

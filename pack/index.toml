@@ -2,7 +2,7 @@ hash-format = "sha256"
 
 [[files]]
 file = "config/DistantHorizons.toml"
-hash = "c2442b4e9eb341cb5cdfd705f1cd14be7ff0d1aadd3d589fd6fa584afbc14626"
+hash = "de542fe60e22a6fed2186b59dfd158cef4622b4237f03bc42ffef3ca23c3c785"
 preserve = true
 
 [[files]]
@@ -2943,7 +2943,7 @@ hash = "1f139b8561336fed8a4fd2830af1989d808425ac6cc603c26028afd49d105899"
 
 [[files]]
 file = "peacock-server/config/DistantHorizons.toml"
-hash = "e8a28edb51f1df8762aa24f7a62e92e771ed25974a6c35074da636888d280bae"
+hash = "f54e56c1bfbaf01f856e555066d1418d7ca39ebd5dfee5b606d6a715328df0ed"
 
 [[files]]
 file = "peacock-server/config/dynamicview.json"
@@ -2963,7 +2963,7 @@ hash = "f1a8bf4d4d80260d905156857d5d092e1ccdd7f513d2818d2cbceeb5313f3389"
 
 [[files]]
 file = "peacock/profiles/_previous/config/DistantHorizons.toml.keys"
-hash = "72e6e66c6f67a45ed5caa0bdd5af42ae0e02d579aef32753c750291b13a37355"
+hash = "12e7b917465aa7c88757ee63b9af432f8cb787c0315d93a007c7bd7b3c861846"
 
 [[files]]
 file = "peacock/profiles/_previous/config/coldsweat/client.toml.keys"
@@ -3015,7 +3015,7 @@ hash = "1d69136b319b4c2b49ef52e0a3dd40e162a8b74c0e55c088a8d9244a2b77c564"
 
 [[files]]
 file = "peacock/profiles/high/config/DistantHorizons.toml.keys"
-hash = "e1b0204fedcda0b7840500ecae6eb914767c42c147b2ec76837ab27c2fef25ba"
+hash = "5fe3575004023546ac3c9a495ba2fea794456246e041919ef71e0e95297b0b1e"
 
 [[files]]
 file = "peacock/profiles/high/config/coldsweat/client.toml.keys"
@@ -3091,7 +3091,7 @@ hash = "ed50d1efb065f355b9a58b4bbb47b662a33a124f1a48b740cf5e4152365953b2"
 
 [[files]]
 file = "peacock/profiles/low/config/DistantHorizons.toml.keys"
-hash = "5d7b6488363b84de2050c7c811d3aed8de62a210625724487ce219f889fbec2a"
+hash = "de67e82b095b1ef90d981cf76b0baef35d4c8b682ef1d70ce4306d31ce88cf53"
 
 [[files]]
 file = "peacock/profiles/low/config/coldsweat/client.toml.keys"
@@ -3167,7 +3167,7 @@ hash = "6faeeac70e8bedbca9a3978ff0ead50bb03e13d9d9dd869bd85a181523f87972"
 
 [[files]]
 file = "peacock/profiles/medium/config/DistantHorizons.toml.keys"
-hash = "a47487cde40eb05dae56160e1325dc81ed18c0c370b731f068d0eadc9b4e38d3"
+hash = "a47014413f6eb82af0f49c41235d0fcd84640fda1a0f8b1d94778d43d59a18b3"
 
 [[files]]
 file = "peacock/profiles/medium/config/coldsweat/client.toml.keys"
@@ -3243,7 +3243,7 @@ hash = "084ce2b07765a4674a2886cd6f0ecd5a91049f92eb88396d2a745dc2c2831597"
 
 [[files]]
 file = "peacock/profiles/potato/config/DistantHorizons.toml.keys"
-hash = "2677668653e471233d8fb3bca299a3fdbef926ddc98b1758e2f6c39a5e00a76e"
+hash = "7eee0479887b0628dfb211277036fb863df91dfd4ea6c7ce653e1dddf0f02f28"
 
 [[files]]
 file = "peacock/profiles/potato/config/coldsweat/client.toml.keys"
@@ -3319,7 +3319,7 @@ hash = "6faeeac70e8bedbca9a3978ff0ead50bb03e13d9d9dd869bd85a181523f87972"
 
 [[files]]
 file = "peacock/profiles/ultra/config/DistantHorizons.toml.keys"
-hash = "5e2cd57039f1df71cdd4aef983a8afa5691a33b08719a8b46f5154e5c24c1efd"
+hash = "947a6dd55cfb5fefbebe4f002c0eb8a1956b6cfbf6d56bc7b65d5832f027edc5"
 
 [[files]]
 file = "peacock/profiles/ultra/config/coldsweat/client.toml.keys"

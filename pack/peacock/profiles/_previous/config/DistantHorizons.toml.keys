@@ -6,3 +6,4 @@ showHighVanillaRenderDistanceWarning = true
 showPoolInsufficientMemoryWarning = true
 showGarbageCollectorWarning = true
 showSlowWorldGenSettingWarnings = true
+ignoredRenderBlockCsv = "minecraft:barrier,minecraft:structure_void,minecraft:light,minecraft:tripwire,minecraft:brown_mushroom"
