@@ -1088,3 +1088,9 @@ movement, so Terrain Slabs' half-steps made it nod at each one. It is removed wi
 toning-down passes did not make it right). Smooth Steps stays at its default 0.7; it smooths stepping up only,
 stepping down a slab is vanilla's short fall.
 
+## The player list lines up with Jade (2026-10-21)
+Aaron: "Reduce the gap from the tab menu and the compass. You have Jade a good size gap." The fixed 30 px shift
+became "auto": the list's top goes where Jade's overlay starts, a tenth of the screen height down (Jade
+`overlayPosY` 0.9), so it scales with the window and GUI scale like Jade does. A number in `tabListOffset` still
+forces a fixed shift.
+
