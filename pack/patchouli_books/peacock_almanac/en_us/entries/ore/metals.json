@@ -1,0 +1,16 @@
+{
+  "name": "What the Metals Are For",
+  "icon": "create_ironworks:bronze_ingot",
+  "category": "patchouli:ore",
+  "sortnum": 6,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Tin$(): bronze, Ironworks tools, buckets, lanterns$(br)$(bold)Bronze$(): Ironworks bronze tools and armour, bronze cannons$(br)$(bold)Steel$(): iron + coal dust, superheated; the best Ironworks gear$(br)$(bold)Lead$(): musket and cannon shot$(br2)$(bold)Nickel$(): constantan, invar$(br)$(bold)Silver$(): electrum$(br)$(bold)Aluminum$(): balloon sheets$(br)$(bold)Platinum$(): a quicker precision mechanism"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Alloys mix in a $(bold)heated basin$(): electrum is gold + silver, constantan copper + nickel, invar two iron + nickel. Every metal also has a storage block.$(br2)Smiths, armorers and clerics buy the rarer metals for emeralds, bounty boards ask for them, and Spartan Weaponry makes weapons of all of them."
+    }
+  ]
+}

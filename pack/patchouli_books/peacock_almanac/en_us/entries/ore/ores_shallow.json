@@ -1,0 +1,20 @@
+{
+  "name": "Shallow Ores",
+  "icon": "geolosys:malachite_ore",
+  "category": "patchouli:ore",
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Malachite$() (green): copper. Y -16 to 90, anywhere. Create's pipes and copper casing, bronze, Ironworks copper tools, constantan.$(br2)$(bold)Coal$(): coal. Y 34 to 78. Fuel, torches, steel."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Cassiterite$() (pale tan): tin. Y 44 to 68. Bronze (copper + tin in a basin), Ironworks tin buckets, hoppers and lanterns. Toolsmiths buy it.$(br2)$(bold)Bauxite$() (tan): aluminum. Y 48 to 65. Aluminum sheets make airship balloons, eight to a craft. Toolsmiths buy it."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Hematite$() (dark red): iron. Y 32 to 60, everywhere, the most common deposit. Everything.$(br2)$(bold)Sphalerite$(): zinc. Y 37 to 46, under mountains only. Brass, the hinge of the whole Create tree. Find it early and tell everyone where."
+    }
+  ]
+}

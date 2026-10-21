@@ -1172,3 +1172,14 @@ Aaron: "ways to reduce game noise, and create a clean but soft look." What he ch
 - **Screen motion** (options.txt, also the first-launch file): FOV effects, screen distortion, damage tilt 0.5;
   lightning flashes hidden. Cold Sweat: shiver intensity, heatstroke sway and blur 0.5.
 All settings go through the launcher's untouched-only rule (the old values are in `PREVIOUS_DEFAULTS`).
+
+## The Almanac's ore chapter, ore by ore (2026-10-21)
+Aaron asked whether the book explains the ore system and what each ore does and how to get it. It did, scattered over
+three entries, and a check against Geolosys' loot tables and deposits found it wrong in places: nickel had no source
+(limonite drops nickel and iron together, Y -48 to -32; the book said "iron, deep"), autunite was still listed though
+it was confined to the End on 2026-10-17, and quartz was missing (Y -64 to -48, the only quartz: Geolosys' biome
+modifier also removes `ore_quartz_nether` and `ore_quartz_deltas`). "Where Each Metal Lies" and "Why the Rocks Have
+Names" became "Every Ore at a Glance" (the depth table, mining and processing, Fortune and Silk Touch) plus Shallow,
+Middle and Deep Ores (each ore: speckle colour from its texture, what it drops, depth and terrain, what it is for)
+and "What the Metals Are For". Galena and limonite are called out as two-metal ores.
+Same day: Subtle Effects' rising sparkles on dropped items off (`[itemRarity] particlesDisplayType = "OFF"`).

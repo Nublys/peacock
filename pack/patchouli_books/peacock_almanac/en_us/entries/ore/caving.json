@@ -2,7 +2,7 @@
   "name": "What Caves Are For",
   "icon": "minecraft:torch",
   "category": "patchouli:ore",
-  "sortnum": 4,
+  "sortnum": 7,
   "pages": [
     {
       "type": "patchouli:text",

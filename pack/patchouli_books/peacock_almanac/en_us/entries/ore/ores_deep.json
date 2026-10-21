@@ -1,0 +1,24 @@
+{
+  "name": "Deep Ores",
+  "icon": "geolosys:limonite_ore",
+  "category": "patchouli:ore",
+  "sortnum": 5,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Beryl$() (green): emeralds. Y -56 to 19. Trade, and the Blueprint charters.$(br2)$(bold)Bituminous coal$(): Y -32 to -16. Fuel.$(br)$(bold)Anthracite$(): hard coal. Y -64 to -52. Fuel."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Limonite$() (yellow): nickel $(bold)and$() iron. Y -48 to -32, deepslate only. The only nickel: constantan (copper + nickel), invar (iron + nickel). Armorers buy it.$(br2)$(bold)Teallite$(): tin, in deep dikes shared with beryl. Y -52 to -40."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Kimberlite$() (cyan flecks): diamonds. Y -64 to 10.$(br2)$(bold)Quartz$(): nether quartz, here the only source: Geolosys took the Nether's veins too. Y -64 to -48. Rose quartz (with redstone), comparators, observers."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Nether:$() poor gold Y 10 to 40, ancient debris Y 8 to 22, both as deposits with samples. Ancient debris clumps smelt to netherite scrap.$(br2)$(bold)Peat$() lies in swamp ground and burns. Granite, diorite and andesite come in plutons, which is why a hillside is sometimes one stone."
+    }
+  ]
+}

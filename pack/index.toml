@@ -2747,15 +2747,27 @@ hash = "19389250273611ea79b90565ab1b43a40f64fdfd07fc82236f67257db9d6cead"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/ore/caving.json"
-hash = "f01464b2752a4b1957b58efd2abbfc2ccae624dfe7b021c5630de64c209e22ad"
+hash = "4ad40b31cd26e915782f762fd879253bb5a24c4981f8eb4e714705d4179cea58"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/ore/deposits.json"
-hash = "766c34b119376accac9520329a3018a77a28613e06944589dc0d99cf51b54ab6"
+hash = "f41fd95f32a2ac7d8ca04a52271c0da0c7ba00b2f3258475f66080622535c480"
 
 [[files]]
-file = "patchouli_books/peacock_almanac/en_us/entries/ore/minerals.json"
-hash = "b6367aa97c2f0438ad4f6ea7a93fe59159f0ea84f9ccdafe438f026469666067"
+file = "patchouli_books/peacock_almanac/en_us/entries/ore/metals.json"
+hash = "0869a03c119fa13044f40f23bffce349b30d150ff522c4ade44b97bdbbc1b2d3"
+
+[[files]]
+file = "patchouli_books/peacock_almanac/en_us/entries/ore/ores_deep.json"
+hash = "93cd531ca187b419951ac9a5d599a7a7a50e7b185b7c365a59874d6066481ff8"
+
+[[files]]
+file = "patchouli_books/peacock_almanac/en_us/entries/ore/ores_middle.json"
+hash = "8c47b641849da280bd2a52f591f38f3e0d64b70992d42c80946ca0b5c46526eb"
+
+[[files]]
+file = "patchouli_books/peacock_almanac/en_us/entries/ore/ores_shallow.json"
+hash = "5895ef282e0d9c970e683dab350c811481fdddea6e79dcea2d8564d3d478629e"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/ore/prospecting.json"
@@ -2994,6 +3006,10 @@ file = "peacock/profiles/_previous/config/subtle_effects/general.toml.keys"
 hash = "8eeb244c64c43c6a14663f17a44f87796ed307c3890e8313e8255a11434c59d8"
 
 [[files]]
+file = "peacock/profiles/_previous/config/subtle_effects/items.toml.keys"
+hash = "7b956cd0b9ec8c3f12e3149e84f3e6bd2b42e76ac77bffc810bfcde2a1ef37bc"
+
+[[files]]
 file = "peacock/profiles/_previous/options.txt.keys"
 hash = "1d69136b319b4c2b49ef52e0a3dd40e162a8b74c0e55c088a8d9244a2b77c564"
 
@@ -3056,6 +3072,10 @@ hash = "30073d4365b47b8ab85d3401082b6727c8598ff5448cc377c5542f8392afd411"
 [[files]]
 file = "peacock/profiles/high/config/subtle_effects/general.toml.keys"
 hash = "7416eb557fe7929d1321b30bb1d88198d86072c656ed5f3bc9e444c15f1b2db1"
+
+[[files]]
+file = "peacock/profiles/high/config/subtle_effects/items.toml.keys"
+hash = "32e48ae6d8e771a6c24421b675413c3188ca0660f442addc9449564059911e07"
 
 [[files]]
 file = "peacock/profiles/high/options.txt.keys"
@@ -3130,6 +3150,10 @@ file = "peacock/profiles/low/config/subtle_effects/general.toml.keys"
 hash = "41d780d4c3ed099897f71151abc7ddf4f8f9d3cfc0062265e0fad4ac6c4d0d54"
 
 [[files]]
+file = "peacock/profiles/low/config/subtle_effects/items.toml.keys"
+hash = "32e48ae6d8e771a6c24421b675413c3188ca0660f442addc9449564059911e07"
+
+[[files]]
 file = "peacock/profiles/low/options.txt.keys"
 hash = "1cece4cbdf8b8807981807f05ac040a7a41e0479ad1ee0dcec2f55cebe590e60"
 
@@ -3200,6 +3224,10 @@ hash = "30073d4365b47b8ab85d3401082b6727c8598ff5448cc377c5542f8392afd411"
 [[files]]
 file = "peacock/profiles/medium/config/subtle_effects/general.toml.keys"
 hash = "7416eb557fe7929d1321b30bb1d88198d86072c656ed5f3bc9e444c15f1b2db1"
+
+[[files]]
+file = "peacock/profiles/medium/config/subtle_effects/items.toml.keys"
+hash = "32e48ae6d8e771a6c24421b675413c3188ca0660f442addc9449564059911e07"
 
 [[files]]
 file = "peacock/profiles/medium/options.txt.keys"
@@ -3274,6 +3302,10 @@ file = "peacock/profiles/potato/config/subtle_effects/general.toml.keys"
 hash = "2cbb23679ce90d06ffe89074fc45b6fe7856ed04ce7747c81ed8228a54076e8b"
 
 [[files]]
+file = "peacock/profiles/potato/config/subtle_effects/items.toml.keys"
+hash = "32e48ae6d8e771a6c24421b675413c3188ca0660f442addc9449564059911e07"
+
+[[files]]
 file = "peacock/profiles/potato/options.txt.keys"
 hash = "99be562d8e540d05a6a26fc8cab2241b52bb398318aafa139fb17d93ad00d7cb"
 
@@ -3344,6 +3376,10 @@ hash = "30073d4365b47b8ab85d3401082b6727c8598ff5448cc377c5542f8392afd411"
 [[files]]
 file = "peacock/profiles/ultra/config/subtle_effects/general.toml.keys"
 hash = "7416eb557fe7929d1321b30bb1d88198d86072c656ed5f3bc9e444c15f1b2db1"
+
+[[files]]
+file = "peacock/profiles/ultra/config/subtle_effects/items.toml.keys"
+hash = "32e48ae6d8e771a6c24421b675413c3188ca0660f442addc9449564059911e07"
 
 [[files]]
 file = "peacock/profiles/ultra/options.txt.keys"

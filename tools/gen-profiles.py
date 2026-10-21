@@ -95,6 +95,7 @@ PREVIOUS_DEFAULTS = {
                                                  "[humanoids.player]", "stomachGrowlingThreshold = 6", "heartbeatVolume = 1.0",
                                                  "[sleeping]", "playerSnoreChance = 1.0", "villagerSnoreChance = 1.0"],
     "config/subtle_effects/general.toml.keys": ["dropLandSoundVolume = 1.0"],
+    "config/subtle_effects/items.toml.keys": ["[itemRarity]", 'particlesDisplayType = "ON"'],
     "config/subtle_effects/blocks.toml.keys": ["rainWaterRipples = true"],
     "config/streamsreflowing-client.properties.keys": ["waterAmbience=1.0"],
     "config/soundphysics/soundphysics.properties.keys": ["reverb_attenuation_distance=0.0", "reverb_attenuation_distance=10.0", "reverb_gain=1.0"],
@@ -156,6 +157,8 @@ COMMON_FILES = {
                                                  "[sleeping]\nplayerSnoreChance = 0.0\nvillagerSnoreChance = 0.0\n"),
     # the sound of drips landing (dripstone, leaky ceilings) at 40% (2026-10-21)
     "config/subtle_effects/general.toml.keys": "dropLandSoundVolume = 0.4\n",
+    # no sparkles rising off every dropped item (Aaron, 2026-10-21)
+    "config/subtle_effects/items.toml.keys": '[itemRarity]\nparticlesDisplayType = "OFF"\n',
     # rain ripples on water: Particle Rain draws them too (and its density follows the tier), so Subtle Effects' set
     # is off rather than doubling every pond in the rain (Aaron, 2026-10-20)
     "config/subtle_effects/blocks.toml.keys": "rainWaterRipples = false\n",
