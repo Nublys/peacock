@@ -152,7 +152,7 @@ ENTRIES = {
     # ===================================================================================== start
     "start": [
         ("spawn", "Where You Woke Up", "minecraft:bell", [
-            txt("Everyone spawns in the same village: the " + B("capital") + ", the last old town alive, inside the survivors' wall. Its bounty boards are in the red-roofed pavilion with a yellow flag. The first market, and the first thing raiders come for.",
+            txt("Everyone spawns in the same village: the " + B("capital") + ", the last old town alive, inside the survivors' wall. Its bounty boards are in red-roofed pavilions with yellow flags. The first market, and the first thing raiders come for.",
                 "Claim a bed early. There is no fast travel; the way home matters. Almost every other old stone village is a ruin (" + L("story/dead_towns", "The Dead Towns") + ")."),
             txt(B("Day one checklist:") + "$(br)- Wood, a crafting table, a bed in the capital$(br)- Check the season (sky colour, or craft a calendar)$(br)- Food: villager farms are fair game, replant what you take$(br)- A campfire before nightfall: three sticks make a " + L("land/warmth", "fire drill") + ""),
             txt(B("First night:") + " stay inside the wall. Mobs here are tougher and smarter than you remember, and the village guards will not chase them for you.",

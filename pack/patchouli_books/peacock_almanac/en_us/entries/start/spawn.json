@@ -6,7 +6,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Everyone spawns in the same village: the $(bold)capital$(), the last old town alive, inside the survivors' wall. Its bounty boards are in the red-roofed pavilion with a yellow flag. The first market, and the first thing raiders come for.$(br2)Claim a bed early. There is no fast travel; the way home matters. Almost every other old stone village is a ruin ($(l:patchouli:story/dead_towns)The Dead Towns$())."
+      "text": "Everyone spawns in the same village: the $(bold)capital$(), the last old town alive, inside the survivors' wall. Its bounty boards are in red-roofed pavilions with yellow flags. The first market, and the first thing raiders come for.$(br2)Claim a bed early. There is no fast travel; the way home matters. Almost every other old stone village is a ruin ($(l:patchouli:story/dead_towns)The Dead Towns$())."
     },
     {
       "type": "patchouli:text",

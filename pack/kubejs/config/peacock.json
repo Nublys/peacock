@@ -1,5 +1,5 @@
 {
-  "_comment": "Peacock pack switches read by kubejs/server_scripts/*.js. Server-side; takes effect on /reload or restart. ladder=false disables recipe staging and place/hire gates (Blueprints still drop). sleepPercent: players (%) that must sleep to skip the night (-1 = vanilla rule untouched). bossBarScale: size of boss bars on screen, client-side (1 = vanilla). tabListOffset: where the player list (Tab) opens, client-side: \"auto\" lines it up with Jade's overlay below the compass bar; a number is a fixed shift in GUI pixels (0 = vanilla position). coldBreath: visible breath when Cold Sweat's outside air temperature at a player is below breathBelowF (°F), client-side (false = off).",
+  "_comment": "Peacock pack switches read by kubejs/server_scripts/*.js. Server-side; takes effect on /reload or restart. ladder=false disables recipe staging and place/hire gates (Blueprints still drop). sleepPercent: players (%) that must sleep to skip the night (-1 = vanilla rule untouched). bossBarScale: size of boss bars on screen, client-side (1 = vanilla). tabListOffset: where the player list (Tab) opens, client-side: \"auto\" lines it up with Jade's overlay below the compass bar; a number is a fixed shift in GUI pixels (0 = vanilla position). coldBreath: visible breath when Cold Sweat's outside air temperature at a player is below breathBelowF (°F), client-side (false = off). boardPavilions: how many bounty-board pavilions the capital gets, built once per world (default 3).",
   "rumourMaps": true,
   "depotNeedsTown": true,
   "ladder": true,
@@ -10,5 +10,6 @@
   "bossBarScale": 0.5,
   "tabListOffset": "auto",
   "coldBreath": true,
-  "breathBelowF": 45
+  "breathBelowF": 45,
+  "boardPavilions": 3
 }

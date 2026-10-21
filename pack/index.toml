@@ -1534,7 +1534,7 @@ hash = "cc48e7b6d2c9ccc4375e04f371c53582ebc7fa50f8f366ae097b71feaf9d2aed"
 
 [[files]]
 file = "kubejs/config/peacock.json"
-hash = "7c4e4ba61dd03c46fb857c899e704abc8be9c82fc571923d9bfad59e2c7ae288"
+hash = "b02d6fc0f6f04ae57993bc7653a3f385cb93558f889cbdbd6cbc04a5cf85854b"
 
 [[files]]
 file = "kubejs/server_scripts/achievements.js"
@@ -1550,7 +1550,7 @@ hash = "3124630fabe5d255e997dfb4b00c9a823506380dec19fee7e23404fab6f2fa4d"
 
 [[files]]
 file = "kubejs/server_scripts/capital_boards.js"
-hash = "c2847c71ca7dde322c5aa5730a4321af07d5f37275d745709fa388c5fc2731db"
+hash = "d3aa65c0264024b72caeabef86344fe347b6b0c0ffb552509af3e470ab35f2f4"
 
 [[files]]
 file = "kubejs/server_scripts/capital_wall.js"
@@ -2787,7 +2787,7 @@ hash = "5a2ec56b77a366cc85aabd7cc2509ae6b23e83567b5cc9765feb2d06f6d0e445"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/start/spawn.json"
-hash = "bf7b21e316a0812f33c2f8cff8edcebb93055d3910db96f09c50f47bee356a17"
+hash = "5df38383f36ac5468ac676ef6ef2ddaf64f63b8a6755b3bb3001b3134eb7b8fa"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/story/dead_towns.json"

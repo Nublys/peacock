@@ -7,7 +7,7 @@ history and are not rewritten when a later one supersedes them; the summary belo
 - **The capital** is `peacock:capital`: CTOV's large plains town at size 7, on temperate lowland
   (`#peacock:capital_biomes`), one candidate per ~2,000 blocks; Village Spawn Point moves spawn into the nearest
   one at world creation, so any seed works. `capital_wall.js` walls it along its outline with four lit gates
-  where the main roads end; `capital_boards.js` builds a board pavilion near the bell (2026-10-21). Any far copy turns zombie
+  where the main roads end; `capital_boards.js` builds three bounty-board pavilions in the town (2026-10-21). Any far copy turns zombie
   (`dead_capitals.js`), so it is the only living old town. *Supersedes:* the concentric-ring CTOV capital,
   Terralith's fortified village, the script founder, the seed reroll, the rectangle wall with boards inside the
   gates, and the board plaza in the house pool (entries 2026-10-17 to 2026-10-20).
@@ -1257,3 +1257,10 @@ weather, and the crops and terrain pages no longer mention it.
 `players()` method under the same name. The helper now accepts a property value when no arguments are needed and
 tries KubeJS' `getPlayers()` first; particles fall back to the particle engine; and the log shows one line ten seconds
 in with the air temperature it reads, and one when the first breath is drawn.
+- 15:05: the third search worked (step 3, 50 blocks from the bell, 17 up a hill: 4,175 of ~5,000 nearby spots touched a
+  house). Aaron: "The pavilions just need to be in the town, and there should be multiple to make them easier to
+  find." Now `boardPavilions` (peacock.json, default 3) pavilions, at least 32 blocks apart, anywhere inside the hull of
+  the town's pieces, nearest the bell first; paths allowed from the start; rise 3, then 6, then 8 (the last step
+  also allows the town's edge). Sites are kept in `peacock_board_pavilion_sites`; the one being built in
+  `peacock_board_pavilion_site`; done flag `peacock_board_pavilions_v4`. A world with the one-pavilion version keeps it
+  and gets the other two.
