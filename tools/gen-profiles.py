@@ -74,7 +74,7 @@ PREVIOUS_DEFAULTS = {
         # had clouds off for everyone, so a still-off value counts as untouched and the tier's choice applies
         'renderClouds:false', 'renderClouds:"false"',
         # music shipped at full volume until 2026-10-20
-        "soundCategory_music:1.0",
+        "soundCategory_music:1.0", "soundCategory_music:0.3", "soundCategory_neutral:1.0", "soundCategory_ambient:1.0",
     ],
     # Camera Overhaul's own defaults (general, then the walking section's tilts): replaced by the gentler values above
     "config/cameraoverhaul.toml.keys": [
@@ -113,7 +113,7 @@ PREVIOUS_DEFAULTS = {
     "config/subtle_effects/entities.toml.keys": ["[dustClouds]", "playerRunning = true"],
     "config/subtle_effects/blocks.toml.keys": ["rainWaterRipples = true"],
     "config/streamsreflowing-client.properties.keys": ["waterAmbience=1.0"],
-    "config/soundphysics/soundphysics.properties.keys": ["reverb_attenuation_distance=0.0", "reverb_gain=1.0"],
+    "config/soundphysics/soundphysics.properties.keys": ["reverb_attenuation_distance=0.0", "reverb_attenuation_distance=10.0", "reverb_gain=1.0"],
     "config/colorwheel-client.toml.keys": ["alertIncompatiblePack = true", "alertBrokenPack = true"],
     "config/entity_model_features.json.keys": ['"showReloadErrorToast": true'],
     "config/locatorbar.json.keys": ['"unsupportedVersionWarningShown": false'],
@@ -132,8 +132,9 @@ COMMON_KEYS = {
     # first-launch screens and toasts (only added when missing: a player's own choice stands)
     "onboardAccessibility": "false", "skipMultiplayerWarning": "true", "joinedFirstServer": "true",
     "tutorialStep": "none", "realmsNotifications": "false",
-    # Minecraft's music at 30% (Aaron, 2026-10-20: "lower ... the minecraft music")
-    "soundCategory_music": "0.3",
+    # Minecraft's music at 10% (Aaron, 2026-10-20 "lower ... the minecraft music" → 30%; 2026-10-21 "reduce the music
+    # to 10"), friendly creatures and ambient/environment sounds at 70% (2026-10-21)
+    "soundCategory_music": "0.1", "soundCategory_neutral": "0.7", "soundCategory_ambient": "0.7",
 }
 
 # Extra *.keys files written into every tier (same content). Jade: a smaller, quieter block/entity overlay
@@ -264,10 +265,11 @@ def main():
         # Sound Physics Remastered (cave echo, muffling through walls) costs CPU per sound; off on potato only
         (d / "config/soundphysics").mkdir(parents=True, exist_ok=True)
         # echo only where sound has room to travel (Aaron, 2026-10-20: "echo is for caves and very large buildings, not
-        # huts, homes, long houses"): reflections shorter than 10 blocks add no reverb (the mod's default 0 lets any
-        # room ring), and the reverb that remains is a little quieter
+        # huts, homes, long houses"): a bounce adds reverb only once the sound's total path (up to 4 bounces) passes 24
+        # blocks, so a hut ~6 wide (paths ~3+6+6+6) stays dry and caves and halls still ring; 10 (the first try,
+        # 2026-10-20) still let a hut's later bounces echo; the mod's default 0 lets any room ring. Reverb gain 0.7.
         (d / "config/soundphysics/soundphysics.properties.keys").write_text(
-            f"enabled={'false' if tier == 'potato' else 'true'}\nreverb_attenuation_distance=10.0\nreverb_gain=0.7\n")
+            f"enabled={'false' if tier == 'potato' else 'true'}\nreverb_attenuation_distance=24.0\nreverb_gain=0.7\n")
         for rel, content in {**COMMON_FILES, **particle_files(tier)}.items():
             (d / rel).parent.mkdir(parents=True, exist_ok=True)
             (d / rel).write_text(content)

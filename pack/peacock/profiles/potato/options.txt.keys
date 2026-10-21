@@ -19,4 +19,6 @@ skipMultiplayerWarning:true
 joinedFirstServer:true
 tutorialStep:none
 realmsNotifications:false
-soundCategory_music:0.3
+soundCategory_music:0.1
+soundCategory_neutral:0.7
+soundCategory_ambient:0.7

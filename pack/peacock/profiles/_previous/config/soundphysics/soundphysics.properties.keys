@@ -1,2 +1,3 @@
 reverb_attenuation_distance=0.0
+reverb_attenuation_distance=10.0
 reverb_gain=1.0

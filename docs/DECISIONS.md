@@ -1066,3 +1066,11 @@ Sound Physics Remastered's `reverb_attenuation_distance` ("the ray distance at w
 off, so every room rang) is 10 blocks in every profile, and `reverb_gain` 1.0 → 0.7. Occlusion (the muffling) is
 unchanged. If halls still sound dry or huts still ring, the distance is the one number to move.
 
+## Echo threshold 24; music 10%, creatures and ambience 70% (2026-10-21)
+Reading Sound Physics Remastered's code: `reverb_attenuation_distance` is compared with a ray's *total* path across
+its bounces (up to 4), not with the room's size, so at 10 a hut about 6 blocks wide (paths ~3+6+6+6 = 21) still
+echoed on its later bounces. Aaron chose 24 (of 24 or 32): huts and homes up to ~7 wide only muffle, longhouses
+echo faintly, caves and halls ring; 32 would also quiet longhouses and most narrow caves. Wood already reflects
+little (0.4 against stone's 1.5); lowering it further is the next lever. Same day: music slider 30% → 10%,
+"Friendly Creatures" (neutral) and "Ambient/Environment" 100% → 70%, in every profile and the first-launch options.
+

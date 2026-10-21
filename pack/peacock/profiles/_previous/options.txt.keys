@@ -9,3 +9,6 @@ tutorialStep:movement
 renderClouds:false
 renderClouds:"false"
 soundCategory_music:1.0
+soundCategory_music:0.3
+soundCategory_neutral:1.0
+soundCategory_ambient:1.0
