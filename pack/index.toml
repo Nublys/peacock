@@ -1518,7 +1518,7 @@ hash = "09d333d76904e58dcfc54bac179a809c34e83ece952f11ab110dd5ea81e575f0"
 
 [[files]]
 file = "kubejs/client_scripts/cold_breath.js"
-hash = "d9139392e896c679e3531bda0d19e363c378a44314b2ca7cbd6783d6757f3e3f"
+hash = "b352f2c18e410feb6c97e69ea40133fb984f15f16a61e4f795c66cd823485811"
 
 [[files]]
 file = "kubejs/client_scripts/profile_client.js"

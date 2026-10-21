@@ -50,13 +50,31 @@ function particle() {
   return breath
 }
 
+// Game methods by their readable name, falling back to the runtime (SRG) name: on 2026-10-21 KubeJS could not find
+// ClientLevel.getGameTime() in Aaron's client ("Cannot find function getGameTime in object ClientLevel") every tick,
+// so no breath was ever drawn. The script keeps its own tick count now and goes through call() for the rest.
+function call(obj, names, args) {
+  for (var i = 0; i < names.length; i++) {
+    var f = obj[names[i]]
+    if (typeof f === 'function') return f.apply(obj, args || [])
+  }
+  throw 'no method ' + names[0] + ' on ' + obj
+}
+
+let warned = false
+function warnOnce(e) {
+  if (warned) return
+  warned = true
+  console.warn('[peacock] cold breath: ' + e + ' (logged once)')
+}
+
 function cold(p) {
   return api.Temperature.get(p, api.Trait.WORLD) < BELOW
 }
 
 // Subtle Effects' ParticleSpawnUtil.spawnEntityFaceParticle: (0, -0.1, 0.6) in front of the eyes, drifting forward
 function puff(level, p, type) {
-  var pitch = -p.getXRot() * DEG, yaw = -p.getYRot() * DEG
+  var pitch = -call(p, ['getXRot', 'm_146909_']) * DEG, yaw = -call(p, ['getYRot', 'm_146908_']) * DEG
   var cp = Math.cos(pitch), sp = Math.sin(pitch), cy = Math.cos(yaw), sy = Math.sin(yaw)
   // position: x 0, y -0.1, z 0.6 — rotate about X (pitch), then Y (yaw)
   var y1 = -0.1 * cp + 0.6 * sp, z1 = 0.6 * cp + 0.1 * sp
@@ -64,26 +82,28 @@ function puff(level, p, type) {
   // speed: x 0, y 0, z 0.005–0.01
   var s = 0.005 + Math.random() * 0.005
   var vy = s * sp, vz1 = s * cp
-  level.addParticle(type, p.getX() + x2, p.getEyeY() + y1, p.getZ() + z2, vz1 * sy, vy, vz1 * cy)
+  var x = call(p, ['getX', 'm_20185_']), y = call(p, ['getEyeY', 'm_20188_']), z = call(p, ['getZ', 'm_20189_'])
+  call(level, ['addParticle', 'm_7106_'], [type, x + x2, y + y1, z + z2, vz1 * sy, vy, vz1 * cy])
 }
 
+let ticks = 0
 ClientEvents.tick(event => {
-  var mc = api.mc
-  var level = mc.level, me = mc.player
-  if (!level || !me || mc.isPaused()) return
-  var type = particle()
-  if (!type) return
-  var t = level.getGameTime()
-  var players = level.players()
-  for (var i = 0; i < players.size(); i++) {
-    var p = players.get(i)
-    try {
-      if ((t + p.getId() * 17) % EVERY >= PUFF) continue     // each player on their own rhythm
-      if (p.isSpectator() || p.isInvisible() || p.isUnderWater()) continue
-      if (p !== me && p.distanceToSqr(me) > RANGE_SQ) continue
+  ticks++
+  try {
+    var mc = api.mc
+    var level = mc.level, me = mc.player
+    if (!level || !me || call(mc, ['isPaused', 'm_91104_'])) return
+    var type = particle()
+    if (!type) return
+    var players = call(level, ['players', 'm_6907_'])
+    for (var i = 0; i < players.size(); i++) {
+      if ((ticks + i * 17) % EVERY >= PUFF) continue          // each player on their own rhythm
+      var p = players.get(i)
+      if (call(p, ['isSpectator', 'm_5833_']) || call(p, ['isInvisible', 'm_20145_']) || call(p, ['isUnderWater', 'm_5842_'])) continue
+      if (p !== me && call(p, ['distanceToSqr', 'm_20280_'], [me]) > RANGE_SQ) continue
       if (!cold(p)) continue
       puff(level, p, type)
-    } catch (e) { }
-  }
+    }
+  } catch (e) { warnOnce(e) }
 })
 })()

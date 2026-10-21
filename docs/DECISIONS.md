@@ -1202,3 +1202,10 @@ Aaron: "add the geolosys surface rocks to the DH exception list". All 23 `geolos
 to DH's defaults in `ignoredRenderBlockCsv` (tier profiles via `dh_keys`, the shipped client file and the server
 copy). Samples have a collision box, so `blocksToIgnore = NON_COLLIDING` kept them, and each drew as a block-sized
 speck in the distance. LODs already generated keep the specks until those areas are regenerated or revisited.
+
+## Breath script: no breath at all, fixed (2026-10-21 11:30)
+Aaron's client log: `cold_breath.js#76: Error in 'ClientEvents.tick': TypeError: Cannot find function getGameTime in
+object ClientLevel`, every tick from joining, so the temperature was never checked. KubeJS' name remapping did not
+expose that one method on the client level. The script now counts its own ticks, calls every game method through a
+helper that tries the readable name and then the runtime (SRG) name, and logs the first failure once instead of
+silently every tick.
