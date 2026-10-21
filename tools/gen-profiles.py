@@ -85,7 +85,7 @@ PREVIOUS_DEFAULTS = {
         "showSlowWorldGenSettingWarnings = true",
     ],
     "config/embeddium-options.json.keys": ['"force_disable_donation_prompts": false'],
-    "config/coldsweat/client.toml.keys": ["[Preferences]", '"Show Water Effect" = 3'],
+    "config/coldsweat/client.toml.keys": ["[Preferences]", '"Show Water Effect" = 3', '"Water Droplet Opacity" = 0.5'],
     "config/subtle_effects/entities.toml.keys": ["[dustClouds]", "playerRunning = true"],
     "config/subtle_effects/blocks.toml.keys": ["rainWaterRipples = true"],
     "config/streamsreflowing-client.properties.keys": ["waterAmbience=1.0"],
@@ -126,8 +126,10 @@ COMMON_FILES = {
     "config/colorwheel-client.toml.keys": "alertIncompatiblePack = false\nalertBrokenPack = false\n",
     "config/entity_model_features.json.keys": '"showReloadErrorToast": false\n',
     # Cold Sweat's wet effect: blocky water drops running down the screen after leaving water (Aaron, 2026-10-20:
-    # "blocky blue drops work their way down the screen"). 0 off, 1 drip particles, 2 on-screen, 3 both (the default)
-    "config/coldsweat/client.toml.keys": '[Preferences]\n"Show Water Effect" = 0\n',
+    # "blocky blue drops work their way down the screen"). 0 off, 1 drip particles, 2 on-screen, 3 both (the default).
+    # Opacity 0 as well: on 2026-10-21 Aaron still had the drops in rain with the launcher showing this as done, so the
+    # pack also ships invisible drop textures (kubejs/assets/cold_sweat/textures/gui/overlay/) that need no setting.
+    "config/coldsweat/client.toml.keys": '[Preferences]\n"Show Water Effect" = 0\n"Water Droplet Opacity" = 0.0\n',
     # Subtle Effects' dust cloud trailing a running player (Aaron, 2026-10-20: "not a whole trail, just a little dust
     # below the feet") is off; vanilla's own sprint particles under the feet stay. Mobs' running dust stays.
     "config/subtle_effects/entities.toml.keys": "[dustClouds]\nplayerRunning = false\n",

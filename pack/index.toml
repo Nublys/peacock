@@ -1329,6 +1329,14 @@ hash = "4bc3fa413c4508f4680d8d2a3c4b1d95338b5eae23a759d7fc4e6fe93124a9a0"
 preserve = true
 
 [[files]]
+file = "kubejs/assets/cold_sweat/textures/gui/overlay/droplet.png"
+hash = "f7384f4a77fcb038a8e41d555cb28cdb5170d0427a11932d3e8c5c7e66df71f3"
+
+[[files]]
+file = "kubejs/assets/cold_sweat/textures/gui/overlay/droplet_trail.png"
+hash = "c767c02c7a6eb0769bcdac8e7c2b43bed5cfc9b2a1653f90fe52ce958f2fe10c"
+
+[[files]]
 file = "kubejs/assets/peacock/lang/en_us.json"
 hash = "f7ad8dd18fad3fa507cee05cd8e4a2b38a5520780de79eaa8252bdfbdcbad56d"
 
@@ -2770,7 +2778,7 @@ hash = "72e6e66c6f67a45ed5caa0bdd5af42ae0e02d579aef32753c750291b13a37355"
 
 [[files]]
 file = "peacock/profiles/_previous/config/coldsweat/client.toml.keys"
-hash = "b8f172e6324107bad3038ef197c33bdd03a08c841611f3c68e1cd445172477da"
+hash = "dd9e072729cfd034c71c375dd2175a6535ab2ebf5a40f15746be77c28f40ef0e"
 
 [[files]]
 file = "peacock/profiles/_previous/config/colorwheel-client.toml.keys"
@@ -2814,7 +2822,7 @@ hash = "e1b0204fedcda0b7840500ecae6eb914767c42c147b2ec76837ab27c2fef25ba"
 
 [[files]]
 file = "peacock/profiles/high/config/coldsweat/client.toml.keys"
-hash = "5fb382c05efa54f00aee8a1067669c7d38833ec56e55c5316a76acc04e205776"
+hash = "91a2505a8d35e124eeac54e302faa3f2b4b7c760c49ab9484dc62633ec4f8301"
 
 [[files]]
 file = "peacock/profiles/high/config/colorwheel-client.toml.keys"
@@ -2886,7 +2894,7 @@ hash = "5d7b6488363b84de2050c7c811d3aed8de62a210625724487ce219f889fbec2a"
 
 [[files]]
 file = "peacock/profiles/low/config/coldsweat/client.toml.keys"
-hash = "5fb382c05efa54f00aee8a1067669c7d38833ec56e55c5316a76acc04e205776"
+hash = "91a2505a8d35e124eeac54e302faa3f2b4b7c760c49ab9484dc62633ec4f8301"
 
 [[files]]
 file = "peacock/profiles/low/config/colorwheel-client.toml.keys"
@@ -2958,7 +2966,7 @@ hash = "a47487cde40eb05dae56160e1325dc81ed18c0c370b731f068d0eadc9b4e38d3"
 
 [[files]]
 file = "peacock/profiles/medium/config/coldsweat/client.toml.keys"
-hash = "5fb382c05efa54f00aee8a1067669c7d38833ec56e55c5316a76acc04e205776"
+hash = "91a2505a8d35e124eeac54e302faa3f2b4b7c760c49ab9484dc62633ec4f8301"
 
 [[files]]
 file = "peacock/profiles/medium/config/colorwheel-client.toml.keys"
@@ -3030,7 +3038,7 @@ hash = "2677668653e471233d8fb3bca299a3fdbef926ddc98b1758e2f6c39a5e00a76e"
 
 [[files]]
 file = "peacock/profiles/potato/config/coldsweat/client.toml.keys"
-hash = "5fb382c05efa54f00aee8a1067669c7d38833ec56e55c5316a76acc04e205776"
+hash = "91a2505a8d35e124eeac54e302faa3f2b4b7c760c49ab9484dc62633ec4f8301"
 
 [[files]]
 file = "peacock/profiles/potato/config/colorwheel-client.toml.keys"
@@ -3102,7 +3110,7 @@ hash = "5e2cd57039f1df71cdd4aef983a8afa5691a33b08719a8b46f5154e5c24c1efd"
 
 [[files]]
 file = "peacock/profiles/ultra/config/coldsweat/client.toml.keys"
-hash = "5fb382c05efa54f00aee8a1067669c7d38833ec56e55c5316a76acc04e205776"
+hash = "91a2505a8d35e124eeac54e302faa3f2b4b7c760c49ab9484dc62633ec4f8301"
 
 [[files]]
 file = "peacock/profiles/ultra/config/colorwheel-client.toml.keys"

@@ -18,7 +18,7 @@ history and are not rewritten when a later one supersedes them; the summary belo
 - **The server** syncs on every start; `peacock-start.sh` runs Java beside a shutdown watchdog. The only hang found
   (Supplementaries road signs) is fixed. Chunk Pregenerator, not Chunky, for pre-generation.
 - **The look** adds Subtle Effects (both sides), Particle Rain, Smooth Steps (Camera Overhaul removed 2026-10-21), Better Biome Reblend, six texture packs, Streams Reflowing and Terrain Slabs; AmbientSounds is gone. Cold
-  Sweat's on-screen water drops are off.
+  Sweat's on-screen water drops are off, by setting and by invisible drop textures (2026-10-21).
 
 ## Platform
 - **Forge 47.4.16, not NeoForge.** On 1.20.1 NeoForge is frozen at 47.1.x; Serene
@@ -1094,3 +1094,13 @@ became "auto": the list's top goes where Jade's overlay starts, a tenth of the s
 `overlayPosY` 0.9), so it scales with the window and GUI scale like Jade does. A number in `tabListOffset` still
 forces a fixed shift.
 
+## Cold Sweat's water drops: invisible textures, not just the setting (2026-10-21)
+Aaron still had the drops in rain ("It's not the rain mod", then "I looked it up, it's 100% cold sweat"). His log
+showed the launcher treating `"Show Water Effect" = 0` as already done, yet Cold Sweat's in-game Water Effects
+option (Esc → Options → the Cold Sweat icon; the mod list's Config button does nothing for this mod) was on until he
+turned it off. Most likely the first launch after 2026-10-20, before the launcher read quoted keys with spaces, wrote
+the setting where Cold Sweat did not read it; his rewritten file can no longer show it. Cold Sweat's WetnessRenderer
+is the only on-screen drop overlay in the pack (its 8×8 droplet stretched to 40–48 px is the "blocky" look), so the
+pack now ships fully transparent `droplet.png` (8×8) and `droplet_trail.png` (8×1) under
+`kubejs/assets/cold_sweat/textures/gui/overlay/`. KubeJS puts its asset pack above mod resources, so this holds
+whatever the setting says. The profiles also set `"Water Droplet Opacity" = 0.0` (default 0.5).
