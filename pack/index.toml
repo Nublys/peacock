@@ -95,7 +95,7 @@ hash = "b0fa9ec5d41f666fa2c770bb2bde4753cbeeef76909f4765d6ebbf5683c4ae58"
 
 [[files]]
 file = "config/coldsweat/main.toml"
-hash = "31f5050572db93a89d7b8604258d3eae9bb8558301ce9bb55e3064134a1c848e"
+hash = "7d1bb33967c17c938e4953736450a46809b4960834853cde2cafff9f98c35a60"
 
 [[files]]
 file = "config/collective.json5"

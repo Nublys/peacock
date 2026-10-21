@@ -8,10 +8,10 @@
 	"Auto Update" = false
 
 [Difficulty]
-	# Aaron, 2026-10-20: comfortable is 45-100 °F (Cold Sweat's default 50-100). A new world starts in early spring,
-	# when the capital's biomes run about 42-50 °F at dawn; 45 keeps the first mornings livable without softening
-	# the cold biomes much.
-	# 45 °F
+	# Aaron: comfortable is 35-100 °F (2026-10-21; 45-100 on 2026-10-20; Cold Sweat's default 50-100). The world
+	# gauge reads "freezing" below this minimum, and at 45 ordinary nights did; 35 keeps cool nights fine while frost,
+	# snow, mountains and winter still bite.
+	# 35 °F
 	"Minimum Habitable Temperature" = 0.06666666666666667
 	# 100 °F (unchanged)
 	"Maximum Habitable Temperature" = 1.511111111111111
