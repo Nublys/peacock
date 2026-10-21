@@ -1053,3 +1053,10 @@ position setting and the compass can only be offset from the top, so `startup_sc
 Forge's `minecraft:player_list` HUD layer down 30 GUI pixels (`tabListOffset` in kubejs/config/peacock.json), the
 same push/pop pattern as the boss-bar scaling. Supersedes "the tab list covering the locator bar ... is left alone".
 
+## One shader: Complementary Reimagined (2026-10-20)
+Aaron: "Remove all shader but the one chose" (he chose Complementary Reimagined, on by default). The 60 other packs
+shipped for choosing (2026-10-19 and 2026-10-20, including Complementary Unbound) are gone, about 250 MB less per
+client. Euphoria Patcher stays: it builds `ComplementaryReimagined + EuphoriaPatches` on each client from the
+shipped zip, which the high and ultra profiles use. Supersedes "Lighter shader packs shipped for testing" and
+"Every shader that fits the pack, shipped for choosing".
+
