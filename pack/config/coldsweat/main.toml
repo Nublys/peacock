@@ -12,6 +12,6 @@
 	# when the capital's biomes run about 42-50 °F at dawn; 45 keeps the first mornings livable without softening
 	# the cold biomes much.
 	# 45 °F
-	"Minimum Habitable Temperature" = 0.28888888888888886
+	"Minimum Habitable Temperature" = 0.06666666666666667
 	# 100 °F (unchanged)
 	"Maximum Habitable Temperature" = 1.511111111111111

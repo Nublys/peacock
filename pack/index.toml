@@ -95,7 +95,7 @@ hash = "b0fa9ec5d41f666fa2c770bb2bde4753cbeeef76909f4765d6ebbf5683c4ae58"
 
 [[files]]
 file = "config/coldsweat/main.toml"
-hash = "cab77ec9df87dbb58e55694d06e2cfcc7c575cd7b308e2a8120ff2e0b0448fe4"
+hash = "31f5050572db93a89d7b8604258d3eae9bb8558301ce9bb55e3064134a1c848e"
 
 [[files]]
 file = "config/collective.json5"
@@ -2543,7 +2543,7 @@ hash = "6ac802c34ce028d3ed7940013ecf25360f179c56c10086a87edb6e637867aafb"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/land/warmth.json"
-hash = "4ba9214aed0af3ecacfc4e1cfbacb2c93436fe6508a6b1a412c5f036bdd79a09"
+hash = "baf8697543376fda1eedb05504e2f029918ee7dedfbb159305d2436212f6dd25"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/mods/fights.json"

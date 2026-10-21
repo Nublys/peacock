@@ -6,7 +6,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Cold Sweat tracks two temperatures: the $(bold)air$() where you stand and your $(bold)body$(). The air follows the biome, the season, the hour, altitude, rain and shade. Your body follows the air slowly; the gauge by your hotbar shows which way it is going.$(br2)There is no thirst. Comfortable air is 45 to 100 °F; the thermometer reads it."
+      "text": "Cold Sweat tracks two temperatures: the $(bold)air$() where you stand and your $(bold)body$(). The air follows the biome, the season, the hour, altitude, rain and shade. Your body follows the air slowly; the gauge by your hotbar shows which way it is going.$(br2)There is no thirst. Comfortable air is 35 to 100 °F; the thermometer reads it."
     },
     {
       "type": "patchouli:text",

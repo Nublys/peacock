@@ -218,7 +218,7 @@ ENTRIES = {
         ]),
         ("warmth", "Staying Warm", "minecraft:campfire", [
             txt("Cold Sweat tracks two temperatures: the " + B("air") + " where you stand and your " + B("body") + ". The air follows the biome, the season, the hour, altitude, rain and shade. Your body follows the air slowly; the gauge by your hotbar shows which way it is going.",
-                "There is no thirst. Comfortable air is 45 to 100 °F; the thermometer reads it."),
+                "There is no thirst. Comfortable air is 35 to 100 °F; the thermometer reads it."),
             txt("Far enough either way and it hurts: the cold slows and freezes you, heat wears you down. New players get a grace period. Winter nights, rain and high ground are the danger.",
                 "The capital sits in mild country: comfortable in spring and autumn, a cold winter, a warm summer."),
             txt(B("Heat:") + " a lit campfire, fire, furnace, smoker, blast furnace or stove warms you within about seven blocks, more the closer you stand. Two campfires is the most that adds up. Walls between you and the fire weaken it. Lava and magma are hot; ice cools.",

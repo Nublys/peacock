@@ -14,7 +14,7 @@ history and are not rewritten when a later one supersedes them; the summary belo
 - **Every other CTOV village is a ruin** (60% abandoned, 40% pillager-held), kept 14 chunks from the capital.
   Stoneholm's villages are switched off (the mod stays as a dependency). Village Recruits towers are the only
   new living settlements; the AI runs their diplomacy, wars and expansion.
-- **Temperature** is Cold Sweat, comfortable 45–100 °F, no thirst (*supersedes* Tough As Nails).
+- **Temperature** is Cold Sweat, comfortable 35–100 °F (45 until 2026-10-21), no thirst (*supersedes* Tough As Nails).
 - **The server** syncs on every start; `peacock-start.sh` runs Java beside a shutdown watchdog. The only hang found
   (Supplementaries road signs) is fixed. Chunk Pregenerator, not Chunky, for pre-generation.
 - **The look** adds Subtle Effects (both sides), Particle Rain, Camera Overhaul (toned down twice, every movement), Smooth
@@ -1073,4 +1073,11 @@ echoed on its later bounces. Aaron chose 24 (of 24 or 32): huts and homes up to 
 echo faintly, caves and halls ring; 32 would also quiet longhouses and most narrow caves. Wood already reflects
 little (0.4 against stone's 1.5); lowering it further is the next lever. Same day: music slider 30% → 10%,
 "Friendly Creatures" (neutral) and "Ambient/Environment" 100% → 70%, in every profile and the first-launch options.
+
+## Comfortable is 35–100 °F (2026-10-21)
+Aaron: the temperature bar showed "Frozen" when no one was in danger. That bar is Cold Sweat's *world* gauge: it
+pegs to freezing as soon as the air is below the habitable minimum, while the body only cools slowly from there.
+With the minimum at 45 °F, ordinary nights (the capital sat near 50 °F by day), autumn and winter, rain and
+highlands all read as freezing. Minimum habitable now 35 °F (`0.0666…` MC units; MC = (°F − 32) / 45), maximum
+unchanged at 100 °F: a cool night is fine, frost, snow, mountains and winter still bite. Almanac and README say 35.
 
