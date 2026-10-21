@@ -1550,7 +1550,7 @@ hash = "3124630fabe5d255e997dfb4b00c9a823506380dec19fee7e23404fab6f2fa4d"
 
 [[files]]
 file = "kubejs/server_scripts/capital_boards.js"
-hash = "085653f4a22d893a61ea9404c0b82940531362f2b09de97a3be446cf1d8ce761"
+hash = "128fba06674cc97e38cf7487c9a797e2a7e359f5215426a7218661bb885118c1"
 
 [[files]]
 file = "kubejs/server_scripts/capital_wall.js"

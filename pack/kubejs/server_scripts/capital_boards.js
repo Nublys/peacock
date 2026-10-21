@@ -1,33 +1,38 @@
-// Peacock — the capital's bounty boards, in a pavilion on the square (2026-10-20; pavilion 2026-10-21).
+// Peacock — the capital's bounty boards, in a pavilion near the bell (2026-10-20; pavilion 2026-10-21).
 //
 // The boards used to be a 3x3 plaza in the capital's house pool. Jigsaw tries a slot's elements one after another
 // until one fits, so the plaza took every slot no house fitted, whatever its weight: 50+ boards along one street.
-// Then two lone boards beside the bell, which were hard to spot (Aaron, 2026-10-21: "tuff to spot as they are a single
-// block on the ground ... create buildings around them so they are easier to find"). Now: once per world, an open
-// 7x7 timber pavilion near the town bell, with both boards back to back on its centre post.
+// Then two lone boards beside the bell, hard to spot (Aaron, 2026-10-21: "tuff to spot as they are a single block on
+// the ground ... create buildings around them"). Now, once per world, an open 7x7 pavilion with both boards back to
+// back on its centre post: stone-brick plinth, oak floor, oak log posts and beams, a red nether-brick hip roof, six
+// hanging lanterns, a "Bounties" hanging sign over the north and south openings, oak railings east and west, and a
+// flagpole with a yellow banner (red diamond and border) that reads from across town and on the DH skyline.
 //
-//   stone-brick plinth, oak floor; oak log corner posts and beams (stone brick and oak, Aaron 2026-10-21); a steep red nether-brick hip roof; six
-//   hanging lanterns; a "Bounties" hanging sign over each open side (north and south); oak railings east and
-//   west; a flagpole on the ridge with a yellow banner (red diamond, red border), the same in every world, seen
-//   across town and on the Distant Horizons skyline.
+// Site (second version, 2026-10-21 13:40: the first looked on 16 directions per ring and found nothing on a dense
+// square, so the boards went bare beside spawn). Every 7x7 spot within 40 blocks of the bell, nearest first, that:
+//   • does not touch a building or road piece of the capital (their bounding boxes, plus one block),
+//   • lies inside the hull of the town's buildings, where capital_wall.js never builds (its wall is outside it),
+//   • is open ground in all 49 columns (surface grass/dirt/stone/sand/path…, no log, water or block on top), at most
+//     3 blocks of rise; the patch is levelled (foundation under low columns, everything from the floor up cleared).
+// No capital: the same search around world spawn, without the piece checks. Nothing anywhere: bare boards by spawn.
+// The site is saved (`peacock_board_pavilion_site`) before building, so a failed build is finished in place.
+// Flags in server persistentData: `peacock_capital_boards` (some boards exist), `peacock_board_pavilion` (first
+// version done), `peacock_board_pavilion_v2`. A world whose first run fell back to bare boards (pavilion flag but no
+// saved site) gets the pavilion now: bare boards near the bell and beside spawn are taken up first.
 //
-// Site: the first 7x7 patch of open, nearly flat ground (every column's first solid block from the sky is ground,
-// not a roof or a road; at most 2 blocks of rise) on rings around the bell (6 to 20 blocks), then around the
-// capital's centre piece out to 48, then around world spawn. The patch is levelled: foundation under low columns,
-// everything from the floor up cleared. With no site anywhere, two bare boards beside spawn as before.
-// Flags in server persistentData: `peacock_capital_boards` (boards placed, the 2026-10-20 version) and
-// `peacock_board_pavilion`. A world that already had the bare boards gets the pavilion once: the bare boards within
-// 48 blocks of the square are removed first (their bounties start over, which on a new world is nothing).
-//
-// Rhino notes (see tools/validate.py): `var` inside functions, no `const`/`let` in try blocks, no Math constants.
+// Rhino notes (see tools/validate.py): `var` inside functions, no `const`/`let` in try blocks, no Math constants,
+// every loop variable declared before its loops.
 ;(() => {
 const DONE = 'peacock_capital_boards'
 const PAVILION = 'peacock_board_pavilion'
+const V2 = 'peacock_board_pavilion_v2'
+const SITE = 'peacock_board_pavilion_site'
 const BOARD = 'bountiful:bountyboard'
-const GROUND = /^minecraft:(grass_block|dirt|coarse_dirt|rooted_dirt|podzol|mycelium|moss_block|sand|red_sand|gravel|stone|cobblestone|mossy_cobblestone|stone_bricks|mossy_stone_bricks|cracked_stone_bricks|andesite|polished_andesite|smooth_stone|packed_mud|mud_bricks|granite|diorite|tuff|calcite|clay|snow_block)$/
-const SOFT = /^minecraft:(air|cave_air|grass|tall_grass|fern|large_fern|dandelion|poppy|blue_orchid|allium|azure_bluet|red_tulip|orange_tulip|white_tulip|pink_tulip|oxeye_daisy|cornflower|lily_of_the_valley|sunflower|lilac|rose_bush|peony|snow|dead_bush|sweet_berry_bush|pink_petals)$/
+const GROUND = /^minecraft:(grass_block|dirt|coarse_dirt|rooted_dirt|podzol|mycelium|moss_block|sand|red_sand|gravel|stone|cobblestone|mossy_cobblestone|stone_bricks|mossy_stone_bricks|cracked_stone_bricks|andesite|polished_andesite|smooth_stone|packed_mud|mud_bricks|granite|diorite|tuff|calcite|clay|snow_block|dirt_path|farmland)$/
+const SOFT = /^minecraft:(air|cave_air|grass|tall_grass|fern|large_fern|dandelion|poppy|blue_orchid|allium|azure_bluet|red_tulip|orange_tulip|white_tulip|pink_tulip|oxeye_daisy|cornflower|lily_of_the_valley|sunflower|lilac|rose_bush|peony|snow|dead_bush|sweet_berry_bush|pink_petals|[a-z_]+_leaves|vine|glow_lichen|wheat|carrots|potatoes|beetroots)$/
 const FILLABLE = /^minecraft:(air|cave_air|water|grass|tall_grass|fern|large_fern|snow)$/
-const R = 3   // half width: the pavilion is 7x7
+const R = 3        // half width: the pavilion is 7x7
+const REACH = 40   // how far from the bell to look
 
 function capitalStart(level) {
   var Registries = Java.loadClass('net.minecraft.core.registries.Registries')
@@ -38,48 +43,92 @@ function capitalStart(level) {
   return start && start.isValid() ? start : null
 }
 
-// y of the first air block above open ground in this column, or null (roof, road, water, nothing)
-function openGround(level, x, z, top, bottom) {
-  for (var y = top; y > bottom; y--) {
-    var id = String(level.getBlock(x, y, z).id)
-    if (SOFT.test(id)) continue
-    if (!GROUND.test(id)) return null
-    var above = String(level.getBlock(x, y + 1, z).id), above2 = String(level.getBlock(x, y + 2, z).id)
-    return SOFT.test(above) && SOFT.test(above2) ? y + 1 : null
-  }
-  return null
-}
-
 function findBell(level, bb) {
-  for (var x = bb.minX(); x <= bb.maxX(); x++)
-    for (var z = bb.minZ(); z <= bb.maxZ(); z++)
-      for (var y = bb.minY(); y <= bb.maxY(); y++)
+  var x, y, z
+  for (x = bb.minX(); x <= bb.maxX(); x++)
+    for (z = bb.minZ(); z <= bb.maxZ(); z++)
+      for (y = bb.minY(); y <= bb.maxY(); y++)
         if (String(level.getBlock(x, y, z).id) === 'minecraft:bell') return { x: x, y: y, z: z }
   return null
 }
 
-// centre points on rings: 16 directions per ring
-function rings(cx, cz, from, to, step, out) {
-  var dirs = [[1, 0], [0, 1], [-1, 0], [0, -1], [1, 1], [-1, 1], [-1, -1], [1, -1], [2, 1], [1, 2], [-1, 2], [-2, 1], [-2, -1], [-1, -2], [1, -2], [2, -1]]
-  for (var r = from; r <= to; r += step)
-    for (var k = 0; k < dirs.length; k++) {
-      var len = Math.sqrt(dirs[k][0] * dirs[k][0] + dirs[k][1] * dirs[k][1])
-      out.push([cx + Math.round(dirs[k][0] / len * r), cz + Math.round(dirs[k][1] / len * r)])
-    }
+// the capital's pieces as boxes: buildings and roads (as capital_wall.js reads them)
+function layout(start) {
+  var ArrayList = Java.loadClass('java.util.ArrayList')
+  var pieces = new ArrayList(start.getPieces())   // a JDK immutable list Rhino cannot reflect on: copy first
+  var out = { buildings: [], roads: [], first: null, top: -9999 }
+  for (var i = 0; i < pieces.size(); i++) {
+    var p = pieces.get(i)
+    var name = ''
+    try { name = String(p.getElement()) } catch (e) { name = '' }
+    var b = p.getBoundingBox()
+    var box = { x0: b.minX(), x1: b.maxX(), z0: b.minZ(), z1: b.maxZ() }
+    if (i === 0) out.first = b
+    if (b.maxY() > out.top) out.top = b.maxY()
+    if (name.indexOf('/roads/') >= 0) out.roads.push(box)
+    else if (name.indexOf('/villager') < 0) out.buildings.push(box)
+  }
   return out
 }
 
-// floor height for a 7x7 patch centred here, or null when it is not open, nearly flat ground
+// convex hull (monotone chain) of points [x, z], counter-clockwise
+function hull(points) {
+  var pts = points.slice().sort((a, b) => a[0] - b[0] || a[1] - b[1])
+  if (pts.length < 3) return pts
+  var cross = (o, a, b) => (a[0] - o[0]) * (b[1] - o[1]) - (a[1] - o[1]) * (b[0] - o[0])
+  var lower = [], upper = [], i
+  for (i = 0; i < pts.length; i++) {
+    while (lower.length >= 2 && cross(lower[lower.length - 2], lower[lower.length - 1], pts[i]) <= 0) lower.pop()
+    lower.push(pts[i])
+  }
+  for (i = pts.length - 1; i >= 0; i--) {
+    while (upper.length >= 2 && cross(upper[upper.length - 2], upper[upper.length - 1], pts[i]) <= 0) upper.pop()
+    upper.push(pts[i])
+  }
+  upper.pop(); lower.pop()
+  return lower.concat(upper)
+}
+
+function insideHull(h, x, z) {
+  if (h.length < 3) return true
+  for (var i = 0; i < h.length; i++) {
+    var a = h[i], b = h[(i + 1) % h.length]
+    if ((b[0] - a[0]) * (z - a[1]) - (b[1] - a[1]) * (x - a[0]) < 0) return false
+  }
+  return true
+}
+
+function touches(boxes, x0, x1, z0, z1) {
+  for (var i = 0; i < boxes.length; i++) {
+    var b = boxes[i]
+    if (x0 <= b.x1 + 1 && x1 >= b.x0 - 1 && z0 <= b.z1 + 1 && z1 >= b.z0 - 1) return true
+  }
+  return false
+}
+
+// y of the first air above open ground in this column, or null (log, water, a block standing on it, nothing)
+function openGround(level, x, z, top, bottom) {
+  for (var y = top; y > bottom; y--) {
+    var id = String(level.getBlock(x, y, z).id)
+    if (SOFT.test(id)) continue
+    return GROUND.test(id) ? y + 1 : null
+  }
+  return null
+}
+
+// floor height for the 7x7 patch centred here, or null; the centre and corners first, so most spots fail fast
 function site(level, cx, cz, top, bottom) {
-  var ys = []
-  for (var dx = -R; dx <= R; dx++)
-    for (var dz = -R; dz <= R; dz++) {
-      var y = openGround(level, cx + dx, cz + dz, top, bottom)
-      if (y === null) return null
-      ys.push(y)
-    }
+  var ys = [], cells = [[0, 0], [-R, -R], [R, -R], [-R, R], [R, R]], dx, dz
+  for (dx = -R; dx <= R; dx++)
+    for (dz = -R; dz <= R; dz++)
+      if (!(dx === 0 && dz === 0) && !(Math.abs(dx) === R && Math.abs(dz) === R)) cells.push([dx, dz])
+  for (var i = 0; i < cells.length; i++) {
+    var y = openGround(level, cx + cells[i][0], cz + cells[i][1], top, bottom)
+    if (y === null) return null
+    ys.push(y)
+    if (Math.max.apply(null, ys) - Math.min.apply(null, ys) > 3) return null
+  }
   ys.sort((a, b) => a - b)
-  if (ys[ys.length - 1] - ys[0] > 2) return null
   return ys[ys.length >> 1]
 }
 
@@ -168,10 +217,10 @@ function unfinished(level, cx, cz, top, bottom) {
 }
 
 // a world from 2026-10-20 has two bare boards near the square: take them up before the pavilion goes in
-function removeBareBoards(level, cx, cz, top, bottom) {
+function removeBareBoards(level, cx, cz, top, bottom, reach) {
   var found = []
-  for (var x = cx - 48; x <= cx + 48; x++)
-    for (var z = cz - 48; z <= cz + 48; z++)
+  for (var x = cx - reach; x <= cx + reach; x++)
+    for (var z = cz - reach; z <= cz + reach; z++)
       for (var y = bottom; y <= top; y++)
         if (String(level.getBlock(x, y, z).id) === BOARD) { set(level, x, y, z, 'minecraft:air'); found.push([x, y, z]) }
   return found
@@ -194,64 +243,84 @@ function lastResort(level, placed) {
   }
 }
 
+// a site for the pavilion, or null. ctx: centre to search around, pieces (or null), heights
+function findSite(level, ctx) {
+  var list = [], dx, dz, i
+  for (dx = -REACH; dx <= REACH; dx++)
+    for (dz = -REACH; dz <= REACH; dz++) {
+      var d2 = dx * dx + dz * dz
+      if (d2 > REACH * REACH || d2 < 36) continue   // not on top of the bell and well
+      list.push([ctx.x + dx, ctx.z + dz, d2])
+    }
+  list.sort((a, b) => a[2] - b[2])
+  for (i = 0; i < list.length; i++) {
+    var cx = list[i][0], cz = list[i][1]
+    var x0 = cx - R, x1 = cx + R, z0 = cz - R, z1 = cz + R
+    if (ctx.lay) {
+      if (touches(ctx.lay.buildings, x0, x1, z0, z1) || touches(ctx.lay.roads, x0, x1, z0, z1)) continue
+      if (!insideHull(ctx.hull, x0, z0) || !insideHull(ctx.hull, x1, z0) || !insideHull(ctx.hull, x0, z1) || !insideHull(ctx.hull, x1, z1)) continue
+    }
+    var y0 = site(level, cx, cz, ctx.top, ctx.bottom)
+    if (y0 !== null) return [cx, y0, cz]
+  }
+  return null
+}
+
 function place(server) {
   var level = server.overworld()
   var log = m => console.info('[peacock] capital boards: ' + m)
   var sp = level.getSharedSpawnPos()
   var start = capitalStart(level)
-  var list = [], top, bottom, bell = null, mid = { x: sp.getX(), z: sp.getZ() }
+  var ctx = { x: sp.getX(), z: sp.getZ(), top: sp.getY() + 24, bottom: sp.getY() - 16, lay: null, hull: [] }
+  var bell = null
   if (start) {
-    // getPieces() is a JDK immutable list (ImmutableCollections$ListN), whose members Rhino may not reflect on
-    // ("IllegalAccessException … ListN", 2026-10-20 14:34): copy it into an ArrayList first
-    var ArrayList = Java.loadClass('java.util.ArrayList')
-    var pieces = new ArrayList(start.getPieces())
-    if (!pieces.isEmpty()) {
-      var bb = pieces.get(0).getBoundingBox()
-      bell = findBell(level, bb)
-      top = bb.maxY() + 8; bottom = bb.minY() - 8
-      mid = { x: (bb.minX() + bb.maxX()) >> 1, z: (bb.minZ() + bb.maxZ()) >> 1 }
-      if (bell) rings(bell.x, bell.z, 6, 20, 1, list)
-      rings(mid.x, mid.z, 8, 48, 2, list)
+    var lay = layout(start)
+    if (lay.first) {
+      bell = findBell(level, lay.first)
+      var pts = []
+      lay.buildings.forEach(b => { pts.push([b.x0, b.z0], [b.x1, b.z0], [b.x0, b.z1], [b.x1, b.z1]) })
+      ctx = { x: bell ? bell.x : (lay.first.minX() + lay.first.maxX()) >> 1, z: bell ? bell.z : (lay.first.minZ() + lay.first.maxZ()) >> 1,
+              top: lay.top + 12, bottom: lay.first.minY() - 12, lay: lay, hull: hull(pts) }
     }
   }
-  if (top === undefined) { top = sp.getY() + 24; bottom = sp.getY() - 16 }
-  rings(sp.getX(), sp.getZ(), 6, 32, 2, list)
 
-  // the bare boards stood on open ground beside the bell (or on the rings around the square): a band around the
-  // bell's height is enough, and keeps this one-off scan short
-  var removed = server.persistentData.getBoolean(DONE)
-    ? removeBareBoards(level, bell ? bell.x : mid.x, bell ? bell.z : mid.z, bell ? bell.y + 12 : top, bell ? bell.y - 12 : bottom) : []
-  if (removed.length) log('took up ' + removed.length + ' bare board(s): ' + removed.map(p => p.join(',')).join(' and '))
-
-  // a site chosen by an earlier run (saved before building, so a failed build is finished in the same place), or
-  // the frame left by the run that failed before sites were saved
-  var SITE = 'peacock_board_pavilion_site'
+  // a site saved by an earlier run (finish it there), or the frame of the run that failed before sites were saved
   var saved = String(server.persistentData.getString(SITE) || '')
-  var again = saved ? saved.split(',').map(n => parseInt(n, 10)) : unfinished(level, bell ? bell.x : mid.x, bell ? bell.z : mid.z,
-    bell ? bell.y + 12 : top, bell ? bell.y - 12 : bottom)
-  if (again) list.unshift(again)
-  for (var i = 0; i < list.length; i++) {
-    var y0 = (again && i === 0) ? again[1] : site(level, list[i][0], list[i][1], top, bottom)
-    if (y0 === null) continue
-    if (again && i === 0) { list[i] = [again[0], again[2]]; log('finishing the pavilion at ' + again.join(',')) }
-    server.persistentData.putString(SITE, list[i][0] + ',' + y0 + ',' + list[i][1])
-    var boards = build(server, level, list[i][0], y0, list[i][1])
-    log('pavilion at ' + list[i][0] + ',' + y0 + ',' + list[i][1] + (bell ? ' by the bell at ' + bell.x + ',' + bell.y + ',' + bell.z : '') +
-        '; boards ' + boards.map(p => p.join(',')).join(' and '))
+  var spot = saved ? saved.split(',').map(n => parseInt(n, 10)) : unfinished(level, ctx.x, ctx.z, (bell ? bell.y : sp.getY()) + 12, (bell ? bell.y : sp.getY()) - 12)
+  if (spot) log('finishing the pavilion at ' + spot.join(','))
+
+  // a world whose first run left bare boards: take them up (near the bell, and beside spawn where the fallback puts them)
+  if (server.persistentData.getBoolean(DONE)) {
+    var by = bell ? bell.y : sp.getY()
+    var gone = removeBareBoards(level, ctx.x, ctx.z, by + 12, by - 12, 48)
+      .concat(removeBareBoards(level, sp.getX(), sp.getZ(), sp.getY() + 16, sp.getY() - 16, 6))
+    if (gone.length) log('took up ' + gone.length + ' bare board(s): ' + gone.map(p => p.join(',')).join(' and '))
+  }
+
+  if (!spot) spot = findSite(level, ctx)
+  if (spot) {
+    server.persistentData.putString(SITE, spot.join(','))
+    var boards = build(server, level, spot[0], spot[1], spot[2])
+    log('pavilion at ' + spot.join(',') + (bell ? ', ' + Math.round(Math.sqrt((spot[0] - bell.x) * (spot[0] - bell.x) + (spot[2] - bell.z) * (spot[2] - bell.z))) +
+        ' blocks from the bell at ' + bell.x + ',' + bell.y + ',' + bell.z : '') + '; boards ' + boards.map(p => p.join(',')).join(' and '))
     return true
   }
   var placed = []
   lastResort(level, placed)
-  log('no open 7x7 ground near the square — ' + placed.length + ' bare board(s) beside spawn' + (placed.length ? ': ' + placed.map(p => p.join(',')).join(' and ') : ''))
+  log('no open 7x7 ground within ' + REACH + ' blocks — ' + placed.length + ' bare board(s) beside spawn' +
+      (placed.length ? ': ' + placed.map(p => p.join(',')).join(' and ') : ''))
   return true
 }
 
 ServerEvents.loaded(event => {
   var server = event.server
-  if (server.persistentData.getBoolean(PAVILION)) return
+  var data = server.persistentData
+  if (data.getBoolean(V2)) return
+  // the first version already built a pavilion here (its site is saved and the flag is set): nothing to redo
+  if (data.getBoolean(PAVILION) && String(data.getString(SITE) || '')) { data.putBoolean(V2, true); return }
   server.scheduleInTicks(100, () => {
     try {
-      if (place(server)) { server.persistentData.putBoolean(DONE, true); server.persistentData.putBoolean(PAVILION, true) }
+      if (place(server)) { data.putBoolean(DONE, true); data.putBoolean(PAVILION, true); data.putBoolean(V2, true) }
     } catch (e) { console.error('[peacock] capital boards: failed — ' + e) }
   })
 })

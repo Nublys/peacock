@@ -1236,3 +1236,11 @@ Aaron: "Can you remove the moon phases mod?" Enhanced Celestials 2 (core, defaul
 CorgiLib, which nothing else needs, are gone, with `config/enhancedcelestials2core-mixins.properties`. No more blood,
 harvest, blue or super moons; the moon is vanilla. The Almanac's "The Sky" page now covers vanilla moon phases and
 weather, and the crops and terrain pages no longer mention it.
+- 13:37, a new world: "no open 7x7 ground near the square — 2 bare board(s) beside spawn" (Aaron: "No bounty boards").
+  The first site search tried 16 directions per ring, far too sparse for CTOV's dense square. Second version: every
+  7x7 spot within 40 blocks of the bell, nearest first, that touches no building or road piece of the capital (their
+  bounding boxes plus one), lies inside the hull of the buildings (so capital_wall.js, which walls outside that hull,
+  never crosses it), and is open ground in all 49 columns (paths and farmland now count as ground; leaves, flowers
+  and crops pass through) with at most 3 blocks of rise. Flag `peacock_board_pavilion_v2`; a world whose first run fell
+  back to bare boards (pavilion flag, no saved site) gets the pavilion and its bare boards (near the bell, and beside
+  spawn) are taken up.
