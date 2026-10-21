@@ -1033,3 +1033,11 @@ overrides the placed features' rarity: tomatoes 1 in 100 chunks → 30 (hot, dry
 50 (temperate), potatoes 100 → 40 (cold). Cabbages and beetroots (beaches, 30) and rice (wet, 20) are unchanged.
 New chunks only.
 
+## Camera Overhaul nearly off (2026-10-20)
+Aaron, third pass: "the mod that snakes the screen. Reduce everything it does massively ... except the part that
+smooths the walking going up the half slab terrain". That part is Smooth Steps, a separate mod, left alone. Camera
+Overhaul now runs at a fraction of the second pass in every movement: idle sway 0, turning roll 0.05, screen shake
+capped at 0.5 and none from swinging; walking 0.5 / 0.3 / 0.1, sprinting 0.75 / 0.5 / 0.1, flying -0.1 / 0.3 / 0.1,
+view smoothing 0 when sprinting or flying, swimming, mounts and vehicles cut alike. If it still bothers players,
+the next step is removing the mod.
+

@@ -1,25 +1,33 @@
 [general]
-cameraSwayIntensity = 0.1
-turningRollIntensity = 0.2
+cameraSwayIntensity = 0.0
+turningRollIntensity = 0.05
+screenShakesMaxIntensity = 0.5
+handSwingTrauma = 0.0
 [walking]
-strafingRollFactor = 2.0
-forwardVelocityPitchFactor = 1.5
-verticalVelocityPitchFactor = 0.5
+strafingRollFactor = 0.5
+forwardVelocityPitchFactor = 0.3
+verticalVelocityPitchFactor = 0.1
 [sprinting]
-strafingRollFactor = 3.0
-forwardVelocityPitchFactor = 2.0
-verticalVelocityPitchFactor = 0.5
+strafingRollFactor = 0.75
+forwardVelocityPitchFactor = 0.5
+verticalVelocityPitchFactor = 0.1
+cameraSmoothing = 0.0
 [swimming]
-strafingRollFactor = -1.0
-forwardVelocityPitchFactor = 1.0
-verticalVelocityPitchFactor = 1.0
+strafingRollFactor = -0.25
+forwardVelocityPitchFactor = 0.25
+verticalVelocityPitchFactor = 0.25
+cameraSmoothing = 0.3
 [flying]
-strafingRollFactor = -0.5
-forwardVelocityPitchFactor = 1.5
-verticalVelocityPitchFactor = 0.5
-cameraSmoothing = 0.25
+strafingRollFactor = -0.1
+forwardVelocityPitchFactor = 0.3
+verticalVelocityPitchFactor = 0.1
+cameraSmoothing = 0.0
 [mounts]
-strafingRollFactor = 1.0
-verticalVelocityPitchFactor = 1.0
+strafingRollFactor = 0.25
+forwardVelocityPitchFactor = 0.1
+verticalVelocityPitchFactor = 0.2
+cameraSmoothing = 0.2
 [vehicles]
-verticalVelocityPitchFactor = 1.0
+strafingRollFactor = 0.1
+forwardVelocityPitchFactor = 0.1
+verticalVelocityPitchFactor = 0.2

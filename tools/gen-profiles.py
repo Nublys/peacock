@@ -89,6 +89,14 @@ PREVIOUS_DEFAULTS = {
         "cameraSmoothing = 1.0",
         "[mounts]", "strafingRollFactor = 2.0", "verticalVelocityPitchFactor = 2.5",
         "[vehicles]", "verticalVelocityPitchFactor = 2.0",
+        # the second pack pass (2026-10-20), and the stock values of keys the third pass adds
+        "[general]", "cameraSwayIntensity = 0.1", "turningRollIntensity = 0.2", "screenShakesMaxIntensity = 2.5", "handSwingTrauma = 0.03",
+        "[walking]", "strafingRollFactor = 2.0", "forwardVelocityPitchFactor = 1.5", "verticalVelocityPitchFactor = 0.5",
+        "[sprinting]", "strafingRollFactor = 3.0", "forwardVelocityPitchFactor = 2.0", "verticalVelocityPitchFactor = 0.5", "cameraSmoothing = 0.6",
+        "[swimming]", "strafingRollFactor = -1.0", "forwardVelocityPitchFactor = 1.0", "verticalVelocityPitchFactor = 1.0", "cameraSmoothing = 1.5",
+        "[flying]", "strafingRollFactor = -0.5", "forwardVelocityPitchFactor = 1.5", "verticalVelocityPitchFactor = 0.5", "cameraSmoothing = 0.25",
+        "[mounts]", "strafingRollFactor = 1.0", "verticalVelocityPitchFactor = 1.0", "forwardVelocityPitchFactor = 0.5", "cameraSmoothing = 1.0",
+        "[vehicles]", "verticalVelocityPitchFactor = 1.0", "strafingRollFactor = 0.5", "forwardVelocityPitchFactor = 0.5",
     ],
     # the mods' shipped values before the quieter-boot change; without these the launcher took the old `true`s for
     # the player's own choice and kept the update popup and join warnings ("keep … 8 setting(s) you changed")
@@ -143,19 +151,19 @@ COMMON_FILES = {
     # rain ripples on water: Particle Rain draws them too (and its density follows the tier), so Subtle Effects' set
     # is off rather than doubling every pond in the rain (Aaron, 2026-10-20)
     "config/subtle_effects/blocks.toml.keys": "rainWaterRipples = false\n",
-    # Camera Overhaul, gentler again (Aaron, 2026-10-20: "lower the camera sway", then "reduce the walking, jumping,
-    # looking around, and flying sway further"). [general]: idle sway and the roll when turning.
-    # The tilts repeat under each movement's table, so they are scoped with [table] lines (launch.jar matches a key
-    # inside that table only). strafing = sideways roll, forward = pitch when moving, vertical = pitch when jumping or
-    # falling; flying's cameraSmoothing is the floaty lag on the view. The mod's stock values are in _previous.
+    # Camera Overhaul, nearly off (Aaron, 2026-10-20, third pass: "the mod that snakes the screen ... reduce everything
+    # it does massively"). The smooth step up a slab he likes is Smooth Steps, a separate mod, and untouched.
+    # [general]: idle sway off, turning roll and screen shake small, no shake from swinging. Per movement:
+    # strafing = sideways roll, forward = pitch when moving, vertical = pitch when jumping or falling,
+    # cameraSmoothing = the floaty lag on the view. The mod's stock values and the earlier pack values are in _previous.
     "config/cameraoverhaul.toml.keys": (
-        "[general]\ncameraSwayIntensity = 0.1\nturningRollIntensity = 0.2\n"
-        "[walking]\nstrafingRollFactor = 2.0\nforwardVelocityPitchFactor = 1.5\nverticalVelocityPitchFactor = 0.5\n"
-        "[sprinting]\nstrafingRollFactor = 3.0\nforwardVelocityPitchFactor = 2.0\nverticalVelocityPitchFactor = 0.5\n"
-        "[swimming]\nstrafingRollFactor = -1.0\nforwardVelocityPitchFactor = 1.0\nverticalVelocityPitchFactor = 1.0\n"
-        "[flying]\nstrafingRollFactor = -0.5\nforwardVelocityPitchFactor = 1.5\nverticalVelocityPitchFactor = 0.5\ncameraSmoothing = 0.25\n"
-        "[mounts]\nstrafingRollFactor = 1.0\nverticalVelocityPitchFactor = 1.0\n"
-        "[vehicles]\nverticalVelocityPitchFactor = 1.0\n"),
+        "[general]\ncameraSwayIntensity = 0.0\nturningRollIntensity = 0.05\nscreenShakesMaxIntensity = 0.5\nhandSwingTrauma = 0.0\n"
+        "[walking]\nstrafingRollFactor = 0.5\nforwardVelocityPitchFactor = 0.3\nverticalVelocityPitchFactor = 0.1\n"
+        "[sprinting]\nstrafingRollFactor = 0.75\nforwardVelocityPitchFactor = 0.5\nverticalVelocityPitchFactor = 0.1\ncameraSmoothing = 0.0\n"
+        "[swimming]\nstrafingRollFactor = -0.25\nforwardVelocityPitchFactor = 0.25\nverticalVelocityPitchFactor = 0.25\ncameraSmoothing = 0.3\n"
+        "[flying]\nstrafingRollFactor = -0.1\nforwardVelocityPitchFactor = 0.3\nverticalVelocityPitchFactor = 0.1\ncameraSmoothing = 0.0\n"
+        "[mounts]\nstrafingRollFactor = 0.25\nforwardVelocityPitchFactor = 0.1\nverticalVelocityPitchFactor = 0.2\ncameraSmoothing = 0.2\n"
+        "[vehicles]\nstrafingRollFactor = 0.1\nforwardVelocityPitchFactor = 0.1\nverticalVelocityPitchFactor = 0.2\n"),
 }
 
 # Particle mods per tier (Aaron, 2026-10-20). Particle Rain (config/particlerain/config.json, its defaults are
