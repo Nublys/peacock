@@ -7,7 +7,7 @@ history and are not rewritten when a later one supersedes them; the summary belo
 - **The capital** is `peacock:capital`: CTOV's large plains town at size 7, on temperate lowland
   (`#peacock:capital_biomes`), one candidate per ~2,000 blocks; Village Spawn Point moves spawn into the nearest
   one at world creation, so any seed works. `capital_wall.js` walls it along its outline with four lit gates
-  where the main roads end; `capital_boards.js` places two bounty boards. Any far copy turns zombie
+  where the main roads end; `capital_boards.js` builds a board pavilion near the bell (2026-10-21). Any far copy turns zombie
   (`dead_capitals.js`), so it is the only living old town. *Supersedes:* the concentric-ring CTOV capital,
   Terralith's fortified village, the script founder, the seed reroll, the rectangle wall with boards inside the
   gates, and the board plaza in the house pool (entries 2026-10-17 to 2026-10-20).
@@ -1209,3 +1209,17 @@ object ClientLevel`, every tick from joining, so the temperature was never check
 expose that one method on the client level. The script now counts its own ticks, calls every game method through a
 helper that tries the readable name and then the runtime (SRG) name, and logs the first failure once instead of
 silently every tick.
+
+## The bounty boards get a pavilion (2026-10-21)
+Aaron: the boards are "tuff to spot as they are a single block on the ground. Can you create buildings around them
+so they are easier to find and players can recognize the building? Like a tavern or a Gazebo." He chose the open
+pavilion over an enclosed hall (a 9x7 building rarely fits on CTOV's dense square and would end up hidden behind
+houses). `capital_boards.js` now builds, once per world, a 7x7 open timber pavilion: stone-brick plinth, spruce floor,
+spruce log posts and beams, a red nether-brick hip roof, six hanging lanterns, a waxed "Bounties / Work for pay"
+hanging sign over the north and south openings, spruce railings east and west, and a flagpole on the ridge with a
+yellow banner (red diamond and border) that reads from across town and on the Distant Horizons skyline. Both boards
+stand back to back on the centre post. Site: the first 7x7 patch of open ground (no roof, road or water in any
+column, at most 2 blocks of rise) on rings around the bell (6 to 20), then the square's centre (to 48), then spawn;
+the patch is levelled. Flag `peacock_board_pavilion`; a world that already had the 2026-10-20 bare boards gets the
+pavilion once and its bare boards within 48 blocks (±12 of the bell's height) are taken up. No site anywhere: two
+bare boards beside spawn, as before.

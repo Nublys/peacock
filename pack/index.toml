@@ -1554,7 +1554,7 @@ hash = "3124630fabe5d255e997dfb4b00c9a823506380dec19fee7e23404fab6f2fa4d"
 
 [[files]]
 file = "kubejs/server_scripts/capital_boards.js"
-hash = "7f1b365f17205f8f797d9157132a60d5f1e59335a4639d4da56c1b2e6a717cf6"
+hash = "1c285cc74316a0fb56930c0126ca56656eb857c81473fa2eebc6a4365e8a85ff"
 
 [[files]]
 file = "kubejs/server_scripts/capital_wall.js"
@@ -2811,7 +2811,7 @@ hash = "5a2ec56b77a366cc85aabd7cc2509ae6b23e83567b5cc9765feb2d06f6d0e445"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/start/spawn.json"
-hash = "5149dc22de49d30ae92e256e441321a96d387e032771b283476915040da8c9fb"
+hash = "bf7b21e316a0812f33c2f8cff8edcebb93055d3910db96f09c50f47bee356a17"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/story/dead_towns.json"
