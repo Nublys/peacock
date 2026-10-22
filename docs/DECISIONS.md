@@ -1317,4 +1317,8 @@ in `PREVIOUS_DEFAULTS`, so untouched installs switch on the next launch.
 Trade-off: it covers vanilla leaves only (oak, birch, spruce, jungle, acacia, dark oak, cherry, azalea, mangrove and
 roots); Better Leaves also covered Biomes O' Plenty and ~60 other mods, so BOP trees keep their plain leaves now.
 Its pack format is a newer one, so the resource-pack screen may label it "made for a newer version"; it loads anyway.
+Same hour, Aaron: "Stack both packs." Better Leaves is back, ranked just below Optimized Bushy Leaves: the light pack's
+blockstates, models and textures win for every vanilla leaf, and Better Leaves still dresses Biomes O' Plenty and the
+other modded trees (its modded models use their own mods' textures, so the light pack's opaque vanilla leaf textures do
+not reach them). Potato drops both.
 

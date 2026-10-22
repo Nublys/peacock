@@ -674,7 +674,7 @@ ENTRIES = {
                 "Macs stay on plain Complementary; the Euphoria variant exceeds what macOS OpenGL offers."),
             txt(B("Distant Horizons") + " draws the far terrain from a low-detail copy the server builds as players explore. On a fresh world the horizon fills in over the first hour; a reset world starts over.",
                 "Embeddium, ImmediatelyFast, Entity Culling, ModernFix and FerriteCore are the quiet half of the frame rate; leave them on. Sound Physics (cave echo) is off on potato. Particle mods can be turned down in their menus."),
-            txt(B("Resource packs") + " are on by default: Fresh Animations (+ Details, Objects), Optimized Bushy Leaves, Fast Better Grass, rainbow's foliage, 3D Default, Cubic Sun & Moon, Enhanced Boss Bars, xali's books and potions, Low on Fire.",
+            txt(B("Resource packs") + " are on by default: Fresh Animations (+ Details, Objects), Optimized Bushy Leaves over Better Leaves, Fast Better Grass, rainbow's foliage, 3D Default, Cubic Sun & Moon, Enhanced Boss Bars, xali's books and potions, Low on Fire.",
                 "All optional (Options, Resource Packs). Potato leaves out 3D Default and the Fresh Animations family. Smooth Steps eases the camera up each slab and block you step onto."),
         ]),
     ],
