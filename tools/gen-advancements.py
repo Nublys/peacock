@@ -21,7 +21,7 @@ OUT = PACK / "config/paxi/datapacks/peacock/data/peacock/advancements"
 JOURNALS = json.loads((ROOT / "tools/data/journals.json").read_text())["journals"]
 RUINS = json.loads(zipfile.ZipFile(PACK / "config/paxi/datapacks/peacock-ruins.zip")
                    .read("data/peacock/tags/worldgen/structure/ruins.json"))["values"]
-LADDER_RUNGS = ["brass", "recruiting", "blasting", "climate", "cooking", "trains", "ships", "trade", "diesel",
+LADDER_RUNGS = ["brass", "recruiting", "blasting", "climate", "cooking", "trains", "ships", "trade", "diesel", "diving",
                 "precision", "netherite", "cannons", "arcane", "ender"]
 
 # id, title, description, icon, frame, entity key ("ns:type" or "ns:type|Custom Name"), holds a Blueprint?
@@ -52,7 +52,7 @@ BOSSES = [
     ("magispeller", "Spell Broken", "Defeat a Magispeller", "minecraft:enchanted_book", "goal", "illageandspillage:magispeller", False),
     ("freakager", "Freak Out", "Defeat a Freakager", "minecraft:rotten_flesh", "goal", "illageandspillage:freakager", False),
     ("ragno", "Unwebbed", "Defeat Ragno", "minecraft:cobweb", "goal", "illageandspillage:ragno", False),
-    ("elder_guardian", "Old Eyes", "Defeat an Elder Guardian", "minecraft:sponge", "goal", "minecraft:elder_guardian", False),
+    ("elder_guardian", "Old Eyes", "Defeat an Elder Guardian", "minecraft:sponge", "goal", "minecraft:elder_guardian", True),
     ("warden", "Hush", "Defeat a Warden", "minecraft:sculk_shrieker", "challenge", "minecraft:warden", False),
     ("wither", "Unwithered", "Defeat the Wither", "minecraft:nether_star", "challenge", "minecraft:wither", False),
     ("ender_dragon", "The Last Line", "Defeat the Ender Dragon", "minecraft:dragon_head", "challenge", "minecraft:ender_dragon", False),

@@ -39,6 +39,11 @@
     },
     {
       "type": "patchouli:crafting",
+      "recipe": "peacock:charter/diving",
+      "text": "Diving: a prismarine shard. Tier 2."
+    },
+    {
+      "type": "patchouli:crafting",
       "recipe": "peacock:charter/precision",
       "recipe2": "peacock:charter/netherite",
       "text": "Precision: a cogwheel. Tier 3."

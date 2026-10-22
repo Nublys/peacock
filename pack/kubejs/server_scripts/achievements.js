@@ -35,7 +35,7 @@ const BOSSES = {
   'illageandspillage:magispeller': ['magispeller', false],
   'illageandspillage:freakager': ['freakager', false],
   'illageandspillage:ragno': ['ragno', false],
-  'minecraft:elder_guardian': ['elder_guardian', false],
+  'minecraft:elder_guardian': ['elder_guardian', true],
   'minecraft:warden': ['warden', false],
   'minecraft:wither': ['wither', false],
   'minecraft:ender_dragon': ['ender_dragon', false],

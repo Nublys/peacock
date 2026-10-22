@@ -120,7 +120,7 @@ depot outside a village, open an outpost chest.
 ## Phase 4 — The boss ladder (per-player unlocks)  🟡 shipped 2026-10-17, untested in play
 Implementation (`kubejs/startup_scripts/peacock_ladder.js` is the single table; `server_scripts/blueprints.js`
 enforces; `client_scripts/blueprint_tooltips.js` explains; **Recipe Stages** added for per-player crafting):
-- 14 rungs in 4 tiers: brass, recruiting, blasting, climate, cooking · trains, ships, trade, diesel ·
+- 15 rungs in 4 tiers: brass, recruiting, blasting, climate, cooking · trains, ships, trade, diesel, diving ·
   precision, netherite, cannons · arcane industry, ender logistics. Mutant Enderman dropped from the
   ladder; "frontier ore" became arcane industry (Enchantment Industry + Dragons Plus); Ender Guardian
   holds ender logistics.

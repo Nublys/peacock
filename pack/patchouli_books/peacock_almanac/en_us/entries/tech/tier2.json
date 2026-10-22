@@ -6,7 +6,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Bosses that guard a place. Bring a squad, or a friend. Diamond or good iron with enchantments; food with Comfort; a way home.$(br2)$(bold)Ferrous Wroughtnaut$() holds $(bold)Trains$() (Steam 'n' Rails).$(br)$(bold)Naga$() holds $(bold)Ships$() (Eureka).$(br)$(bold)The Invoker$() holds the $(bold)Trading Floor$().$(br)$(bold)Umvuthi$() holds $(bold)Diesel$()."
+      "text": "Bosses that guard a place. Bring a squad, or a friend. Diamond or good iron with enchantments; food with Comfort; a way home.$(br2)$(bold)Ferrous Wroughtnaut$() holds $(bold)Trains$() (Steam 'n' Rails).$(br)$(bold)Naga$() holds $(bold)Ships$() (Eureka).$(br)$(bold)The Invoker$() holds the $(bold)Trading Floor$().$(br)$(bold)Umvuthi$() holds $(bold)Diesel$().$(br)$(bold)Elder Guardians$() hold $(bold)Diving$()."
     },
     {
       "type": "patchouli:text",

@@ -116,7 +116,7 @@ ENTRIES = {
             txt("The survivors kept a ledger of what was taken and by whom. It is the spine of this almanac, and of the " + L("tech/how_blueprints_work", "Blueprint ladder") + ".",
                 B("Brass") + " went with the dead. " + B("Gunpowder") + " with the creepers. The " + B("drill") + " that made soldiers of farmers went with the skeletons."),
             txt(B("Trains") + " rusted in a chamber under the hills, guarded by an iron thing that will not leave. " + B("Ships") + " sank off the stony shores where the nagas nest. The " + B("trading ledgers") + " went to the illager fort.",
-                B("Diesel") + " burns in a savanna shrine. " + B("Cannons") + " froze with the frostmaw. The reactor's " + B("precision parts") + " glow in the Nether."),
+                B("Diesel") + " burns in a savanna shrine. The " + B("diving gear") + " lies in the ocean monuments. " + B("Cannons") + " froze with the frostmaw. The reactor's " + B("precision parts") + " glow in the Nether."),
             txt("And something was taken to the End that no one has named. The ledger's last line is blank.",
                 I("Every entry in this list is a boss in the ") + L("bosses/where_they_are", "Bestiary") + I(".")),
         ]),
@@ -458,7 +458,7 @@ ENTRIES = {
     "bosses": [
         ("where_they_are", "Where They Are", "minecraft:compass", [
             txt(B("Overworld, anywhere:") + " Mutant Zombie, Skeleton, Creeper, Enderman (wander); Ferrous Wroughtnaut (chamber under the ground, not in oceans)$(br)" + B("Snow:") + " Mutant Snow Golem, Frostmaw, Maledictus (Frosted Prison)$(br)" + B("Savanna:") + " Umvuthi (Umvuthana grove)$(br)" + B("Stony shores:") + " Naga"),
-            txt(B("Peaks:") + " the Sculptor's monastery$(br)" + B("Desert:") + " Ancient Remnant (Cursed Pyramid)$(br)" + B("Deep ocean:") + " the Leviathan (Sunken City); Scylla (Acropolis, warm ocean)$(br)" + B("Underground:") + " the Harbinger (Ancient Factory)$(br)" + B("Illager country:") + " the Invoker (Illager Fort)"),
+            txt(B("Peaks:") + " the Sculptor's monastery$(br)" + B("Desert:") + " Ancient Remnant (Cursed Pyramid)$(br)" + B("Deep ocean:") + " the Leviathan (Sunken City); Scylla (Acropolis, warm ocean)$(br)" + B("Underground:") + " the Harbinger (Ancient Factory)$(br)" + B("Ocean monuments:") + " Elder Guardians$(br)" + B("Illager country:") + " the Invoker (Illager Fort)"),
             txt(B("Nether:") + " Torte (Quartz Kitchen, quartz flats); Radiation Director (Nether Reactor, toxic heap); Ignis (Burning Arena, infernal dunes and ash); Netherite Monstrosity (Soul Blacksmith, withered forest); the Hovering Inferno (summoned at an Infernal Altar with a nether star)$(br)" + B("End:") + " Ender Guardian (Ruined Citadel)"),
             rel(["bosses/mutants", "bosses/mowzies", "bosses/illagers", "bosses/cataclysm", "bosses/incendium"], "Each family has a page with the fights.", title="Families"),
         ]),
@@ -531,7 +531,7 @@ ENTRIES = {
         ]),
         ("tier2", "Tier 2: Bring Recruits", "minecraft:diamond", [
             txt("Bosses that guard a place. Bring a squad, or a friend. Diamond or good iron with enchantments; food with Comfort; a way home.",
-                B("Ferrous Wroughtnaut") + " holds " + B("Trains") + " (Steam 'n' Rails).$(br)" + B("Naga") + " holds " + B("Ships") + " (Eureka).$(br)" + B("The Invoker") + " holds the " + B("Trading Floor") + ".$(br)" + B("Umvuthi") + " holds " + B("Diesel") + "."),
+                B("Ferrous Wroughtnaut") + " holds " + B("Trains") + " (Steam 'n' Rails).$(br)" + B("Naga") + " holds " + B("Ships") + " (Eureka).$(br)" + B("The Invoker") + " holds the " + B("Trading Floor") + ".$(br)" + B("Umvuthi") + " holds " + B("Diesel") + ".$(br)" + B("Elder Guardians") + " hold " + B("Diving") + "."),
             txt("Trains and ships are the two ways to move ore between regions that do not involve a horse. Diesel is the engine that does not need a river. The Trading Floor is the market that runs without you.",
                 "Tier 2 is where a server's economy stops being one person's chest."),
             rel(["bosses/mowzies", "bosses/illagers"], title="Who to fight"),
@@ -557,6 +557,7 @@ ENTRIES = {
             craft("peacock:charter/climate", "Climate control: snow. Tier 1.", recipe2="peacock:charter/cooking"),
             craft("peacock:charter/trains", "Trains: a rail. Tier 2.", recipe2="peacock:charter/ships"),
             craft("peacock:charter/trade", "Trading Floor: a lectern. Tier 2.", recipe2="peacock:charter/diesel"),
+            craft("peacock:charter/diving", "Diving: a prismarine shard. Tier 2."),
             craft("peacock:charter/precision", "Precision: a cogwheel. Tier 3.", recipe2="peacock:charter/netherite"),
             craft("peacock:charter/cannons", "Cannons: TNT, which itself needs Blasting. Tier 3."),
             craft("peacock:charter/arcane", "Arcane industry: an enchanting table. Tier 4.", recipe2="peacock:charter/ender"),
@@ -565,7 +566,7 @@ ENTRIES = {
             txt("Only " + B("crafting-table recipes") + " can be locked, so the rule is: the things built " + I("from") + " a material are locked, the material is not. Anyone can mix brass in a basin; nobody without the Blueprint can make a casing or a funnel from it.",
                 "Everything whose recipe is locked is also locked to " + B("place") + ": a brass machine handed to you will not go down until you have learned it."),
             txt(B("Brass:") + " every recipe with brass in it or brass out of it, and the mechanical crafter.$(br)" + B("Blasting:") + " everything made with gunpowder, TNT, the empty blaze burner, muskets and cartridges, powder charges.$(br)" + B("Climate:") + " the hearth, boiler and icebox.$(br)" + B("Cooking:") + " Slice & Dice slicer and sprinkler."),
-            txt(B("Trains:") + " track, stations, controls, schedules, signals, train doors, railway casing, all of Steam 'n' Rails.$(br)" + B("Ships:") + " all of Eureka: helms, floaters, ballast, balloons, engines.$(br)" + B("Trading Floor:") + " the depot.$(br)" + B("Diesel:") + " all of Create Diesel Generators."),
+            txt(B("Trains:") + " track, stations, controls, schedules, signals, train doors, railway casing, all of Steam 'n' Rails.$(br)" + B("Ships:") + " all of Eureka: helms, floaters, ballast, balloons, engines.$(br)" + B("Trading Floor:") + " the depot.$(br)" + B("Diesel:") + " all of Create Diesel Generators.$(br)" + B("Diving:") + " Create's backtank, diving helmet and boots; the conduit."),
             txt(B("Precision:") + " everything made with a precision mechanism: arms, speed controllers, sequenced gearshifts, extendo grips.$(br)" + B("Netherite:") + " ingots and anything crafted from them (smithing is not locked).$(br)" + B("Cannons:") + " all of Create Big Cannons.$(br)" + B("Arcane:") + " Enchantment Industry and Dragons Plus.$(br)" + B("Ender:") + " ender chests, portable interfaces, item vaults, smart chutes, stockpile switches."),
             txt(B("Recruiting") + " locks the act of hiring, not an item: emeralds on a recruit do nothing until you have learned it. Guards and your own dogs are never locked.",
                 "Hover anything grey in EMI: the tooltip names the Blueprint and the boss that holds it."),

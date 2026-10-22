@@ -69,6 +69,12 @@
         "recipe_id": "peacock:charter/diesel"
       }
     },
+    "diving": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipe_id": "peacock:charter/diving"
+      }
+    },
     "precision": {
       "trigger": "minecraft:recipe_crafted",
       "conditions": {
@@ -112,6 +118,7 @@
       "ships",
       "trade",
       "diesel",
+      "diving",
       "precision",
       "netherite",
       "cannons",

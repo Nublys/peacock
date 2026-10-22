@@ -65,6 +65,13 @@ global.LADDER = {
     gates: { outputMods: ['createdieselgenerators'] },
     story: 'Engines that do not need a river: pumpjacks, distillation, diesel.',
   },
+  diving: {
+    // Aaron, 2026-10-22: the Elder Guardian gets a Blueprint. Netherite diving gear is smithed from the copper pieces,
+    // so it follows; water breathing potions and turtle shells stay free.
+    name: 'Diving', tier: 2, bosses: ['minecraft:elder_guardian'], key: 'minecraft:prismarine_shard',
+    gates: { outputs: ['create:copper_backtank', 'create:copper_diving_helmet', 'create:copper_diving_boots', 'minecraft:conduit'] },
+    story: 'The old eyes in the monuments kept the deep. Backtank, diving helmet and boots, and the conduit.',
+  },
   precision: {
     name: 'Precision mechanisms', tier: 3, bosses: ['minecraft:wither_skeleton|Radiation Director', 'cataclysm:the_leviathan'], key: 'create:cogwheel',
     gates: { inputs: ['create:precision_mechanism'],

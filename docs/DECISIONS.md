@@ -1278,3 +1278,12 @@ already in the pack): leaves (`#minecraft:leaves`, via its `passablefoliage:pass
 slow down inside them (90% horizontally and vertically), falls into leaves do half damage, and mob pathfinding
 knows leaves are passable. Defaults kept, so mobs pass through leaves too. Its Leaf Walker enchantment lets you
 stand on leaves again.
+
+## The Elder Guardian holds Diving (2026-10-22)
+Aaron, after the boss review: "Add the Elder Guardian, that'll be it." A 15th rung, **Diving** (Tier 2, charter key a
+prismarine shard): Create's copper backtank, diving helmet and diving boots, and the vanilla conduit. The netherite
+diving pieces are smithed from the copper ones, so they follow; water breathing and turtle shells stay free. A
+monument has three Elder Guardians, and each one drops Blueprints like any ladder boss, so one monument raid supplies a
+team. "Every Line of the Ledger" now includes it. The other bosses without a Blueprint (Sculptor, Remnant, Maledictus,
+Scylla, Mutant Enderman, Hovering Inferno, the raid captains, Warden, Wither, Dragon) stay loot-only by choice.
+

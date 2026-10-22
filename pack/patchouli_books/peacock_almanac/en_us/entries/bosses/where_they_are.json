@@ -10,7 +10,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Peaks:$() the Sculptor's monastery$(br)$(bold)Desert:$() Ancient Remnant (Cursed Pyramid)$(br)$(bold)Deep ocean:$() the Leviathan (Sunken City); Scylla (Acropolis, warm ocean)$(br)$(bold)Underground:$() the Harbinger (Ancient Factory)$(br)$(bold)Illager country:$() the Invoker (Illager Fort)"
+      "text": "$(bold)Peaks:$() the Sculptor's monastery$(br)$(bold)Desert:$() Ancient Remnant (Cursed Pyramid)$(br)$(bold)Deep ocean:$() the Leviathan (Sunken City); Scylla (Acropolis, warm ocean)$(br)$(bold)Underground:$() the Harbinger (Ancient Factory)$(br)$(bold)Ocean monuments:$() Elder Guardians$(br)$(bold)Illager country:$() the Invoker (Illager Fort)"
     },
     {
       "type": "patchouli:text",
