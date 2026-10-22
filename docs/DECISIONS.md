@@ -1271,3 +1271,10 @@ Restock Balance has no config: it is data-pack functions in the mod, and its rul
 `clgd.villager:can_restock` (slept in a bed last night AND came within 6 blocks of its meeting point, the bell, between
 daytime 9000 and 11000). The pack datapack (Paxi, above the mods) overrides that predicate with the sleep condition
 alone. Villager Comfort still prices cramped, dark or caged villagers up to 4x, so halls stay a bad deal.
+
+## Walk through leaves: Passable Foliage (2026-10-22)
+Aaron: "Can you add walk through leaves?" Passable Foliage 8.2.1 (Snownee; Forge 1.20.1, both sides; needs Kiwi,
+already in the pack): leaves (`#minecraft:leaves`, via its `passablefoliage:passables` tag) lose their collision, you
+slow down inside them (90% horizontally and vertically), falls into leaves do half damage, and mob pathfinding
+knows leaves are passable. Defaults kept, so mobs pass through leaves too. Its Leaf Walker enchantment lets you
+stand on leaves again.

@@ -2297,6 +2297,11 @@ hash = "531d7b76f54c8b4dc9d64194eeb2220ef35166f9e6652aaf07db8cf227f15a0b"
 metafile = true
 
 [[files]]
+file = "mods/passable-foliage.pw.toml"
+hash = "051c791539eea4ca61799d8a99738dc062978ef8ae47e08e452fb3c77262aeff"
+metafile = true
+
+[[files]]
 file = "mods/patchouli.pw.toml"
 hash = "2c5f9c46337d69d5b63766d19a005ffcf9656b4a61480fc4362e06f34ea6e430"
 metafile = true
