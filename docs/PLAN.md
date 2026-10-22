@@ -120,10 +120,10 @@ depot outside a village, open an outpost chest.
 ## Phase 4 — The boss ladder (per-player unlocks)  🟡 shipped 2026-10-17, untested in play
 Implementation (`kubejs/startup_scripts/peacock_ladder.js` is the single table; `server_scripts/blueprints.js`
 enforces; `client_scripts/blueprint_tooltips.js` explains; **Recipe Stages** added for per-player crafting):
-- 15 rungs in 4 tiers: brass, recruiting, blasting, climate, cooking · trains, ships, trade, diesel, diving ·
-  precision, netherite, cannons · arcane industry, ender logistics. Mutant Enderman dropped from the
-  ladder; "frontier ore" became arcane industry (Enchantment Industry + Dragons Plus); Ender Guardian
-  holds ender logistics.
+- 15 rungs in 4 tiers (rebalanced 2026-10-22): brass, recruiting, blasting · climate, cooking, trains, ships,
+  trade, diesel, diving · precision, netherite, cannons · arcane industry, ender logistics. "Frontier ore"
+  became arcane industry (Enchantment Industry + Dragons Plus). Holders in `peacock_ladder.js`; the
+  rebalance is in DECISIONS.
 - Every crafting-table recipe a rung gates (by output, output mod, or input) is wrapped at load into a
   `recipestages:stage`/`shaped_stage` recipe with stage `peacock_<rung>`: visible in EMI, refuses to craft
   without the stage. Everything staged is also place-gated; recruit hiring (emerald on a `recruits:*` mob)

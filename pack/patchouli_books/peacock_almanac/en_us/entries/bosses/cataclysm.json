@@ -11,13 +11,13 @@
     {
       "type": "patchouli:entity",
       "entity": "cataclysm:ancient_remnant",
-      "text": "Ancient Remnant in the Cursed Pyramid (deserts). A desert king with charges and sandstorms. The pyramid's traps are half the fight.",
+      "text": "Ancient Remnant in the Cursed Pyramid (deserts). A desert king with charges and sandstorms. The pyramid's traps are half the fight. Shares $(bold)Netherite$() with the Monstrosity.",
       "scale": 0.45
     },
     {
       "type": "patchouli:entity",
       "entity": "cataclysm:maledictus",
-      "text": "Maledictus in the Frosted Prison (snow). A knight with a halberd and lightning phases. Fought in a ring; do not leave it.",
+      "text": "Maledictus in the Frosted Prison (snow). A knight with a halberd and lightning phases. Fought in a ring; do not leave it. Holds $(bold)Cannons$().",
       "scale": 0.55
     },
     {
@@ -47,7 +47,7 @@
     {
       "type": "patchouli:entity",
       "entity": "cataclysm:scylla",
-      "text": "Scylla in the Acropolis (warm ocean). Storm and sea. Late Tier 4.",
+      "text": "Scylla in the Acropolis (warm ocean). Storm and sea. Shares $(bold)Ender logistics$() with the Ender Guardian: the road for those who never reach the End.",
       "scale": 0.4
     },
     {

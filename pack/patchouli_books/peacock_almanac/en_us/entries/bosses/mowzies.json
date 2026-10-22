@@ -6,7 +6,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Mowzie's Mobs bosses stay where they are born and defend a place. Each has its own rules; the structure tells you the rules before the fight does.$(br2)Ferrous Wroughtnaut and Naga are $(l:patchouli:tech/tier2)Tier 2$(); Umvuthi is Tier 2; Frostmaw is $(l:patchouli:tech/tier3)Tier 3$()."
+      "text": "Mowzie's Mobs bosses stay where they are born and defend a place. Each has its own rules; the structure tells you the rules before the fight does.$(br2)Ferrous Wroughtnaut, Naga, Umvuthi and the Frostmaw are all $(l:patchouli:tech/tier2)Tier 2$()."
     },
     {
       "type": "patchouli:entity",
@@ -29,7 +29,7 @@
     {
       "type": "patchouli:entity",
       "entity": "mowziesmobs:frostmaw",
-      "text": "Frostmaw: a sleeping giant on an ice crystal in the snow. Wake it and it charges, freezes, slams. Warm clothes and a wall to hide behind. Holds $(bold)Cannons$().",
+      "text": "Frostmaw: a sleeping giant on an ice crystal in the snow. Wake it and it charges, freezes, slams. Warm clothes and a wall to hide behind. Holds $(bold)Climate control$().",
       "scale": 0.45
     },
     {

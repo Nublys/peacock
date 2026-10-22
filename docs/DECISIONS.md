@@ -1328,3 +1328,22 @@ is not an item of its own but a Patchouli book (`patchouli:guide_book` with `{"p
 which is what Geolosys' own recipe makes). The reward is now that. Also `/peacock wall trees` (op) runs the wall's tree
 check by hand, and the check logs what it found (or that it found no capital) — on 2026-10-22 17:50 it left no line.
 
+## Boss rebalance (2026-10-22)
+Aaron, after the boss review: "Make the changes and push." Principle: a Blueprint's tier is how hard its boss is *and*
+how hard it is to reach; Tier 1 is Overworld bosses you meet near home in iron; nothing is held by a boss that cannot
+be found; hard bosses pay.
+- **Brass** (Tier 1): Mutant Zombie **and Mutant Enderman** — the hinge of Create gets two wild holders.
+- **Climate control**: Mutant Snow Golem → **Frostmaw**, Tier 1 → **2**. The golem never spawns wild (only a player's
+  Chemical X pet), so the old route meant killing your own pet. Fires, furnaces, insulation and waterskins stay free.
+- **Advanced cooking**: Torte unchanged, Tier 1 → **2** — the fight is easy, the Nether trip is the tier.
+- **Trading Floor**: Invoker **plus the four Respillaged captains** (Spiritcaller, Magispeller, Freakager, Ragno).
+- **Precision**: Leviathan and the Radiation Director as before, but the Director (Incendium's 20 HP wither skeleton)
+  becomes 250 HP / armour 10 / knockback-immune the first time it is hit (`server_scripts/boss_tuning.js`, by
+  `attribute` command since Incendium builds it from a vanilla mob).
+- **Netherite**: Monstrosity **plus Ancient Remnant**. **Cannons**: Frostmaw → **Maledictus**. **Ender logistics**:
+  Ender Guardian **plus Scylla** (a route for those who never reach the End).
+- Unchanged: Recruiting, Blasting, Trains, Ships, Diesel, Diving, Arcane. Loot-only by choice: Hovering Inferno (its
+  artifacts), Sculptor (its armour set), Wither, Warden, Dragon, and the Mutant Snow Golem.
+- Charters follow the tiers (Climate and Cooking 2 → 4 emerald blocks); "Every Line of the Ledger" now counts the
+  new holders; Almanac bestiary, tier pages, ledger and charter list rewritten.
+

@@ -6,7 +6,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(bold)Overworld, anywhere:$() Mutant Zombie, Skeleton, Creeper, Enderman (wander); Ferrous Wroughtnaut (chamber under the ground, not in oceans)$(br)$(bold)Snow:$() Mutant Snow Golem, Frostmaw, Maledictus (Frosted Prison)$(br)$(bold)Savanna:$() Umvuthi (Umvuthana grove)$(br)$(bold)Stony shores:$() Naga"
+      "text": "$(bold)Overworld, anywhere:$() Mutant Zombie, Skeleton, Creeper, Enderman (wander); Ferrous Wroughtnaut (chamber under the ground, not in oceans)$(br)$(bold)Snow:$() Frostmaw, Maledictus (Frosted Prison)$(br)$(bold)Savanna:$() Umvuthi (Umvuthana grove)$(br)$(bold)Stony shores:$() Naga"
     },
     {
       "type": "patchouli:text",

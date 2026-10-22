@@ -14,9 +14,14 @@
 //   key      the one ingredient that makes the charter recipe unique
 // Stage names are "peacock_<rung>".
 
+// Rebalanced 2026-10-22 (Aaron: "Make the changes"): difficulty and reach decide the tier. Tier 1 is the three wild
+// mutants (Brass also from the Mutant Enderman); Climate control moved to the Frostmaw and, like Torte's cooking (a
+// Nether trip), to Tier 2; the raid captains share the Trading Floor; the Ancient Remnant shares Netherite; Maledictus
+// holds Cannons; Scylla shares Ender logistics; the Radiation Director gets boss stats (server_scripts/boss_tuning.js).
+// The Mutant Snow Golem, which only exists as a player's own pet, holds nothing.
 global.LADDER = {
   brass: {
-    name: 'Brass', tier: 1, bosses: ['mutantmonsters:mutant_zombie'], key: 'create:zinc_ingot',
+    name: 'Brass', tier: 1, bosses: ['mutantmonsters:mutant_zombie', 'mutantmonsters:mutant_enderman'], key: 'create:zinc_ingot',
     gates: { inputs: ['create:brass_ingot', 'create:brass_sheet', 'create:brass_nugget', 'create:brass_casing', 'create:brass_block', 'create:brass_hand'],
              outputs: ['create:brass_casing', 'create:brass_hand', 'create:mechanical_crafter'] },
     story: 'The dead carried the brass away. Brass is the hinge of the whole tree.',
@@ -35,12 +40,12 @@ global.LADDER = {
   climate: {
     // Cold Sweat's thermal sources (2026-10-18). Campfires, furnaces, the sewing table, insulation, waterskins and
     // the thermometer are always free: nobody should freeze for want of a Blueprint.
-    name: 'Climate control', tier: 1, bosses: ['mutantmonsters:mutant_snow_golem'], key: 'minecraft:snow_block',
+    name: 'Climate control', tier: 2, bosses: ['mowziesmobs:frostmaw'], key: 'minecraft:snow_block',
     gates: { outputs: ['cold_sweat:hearth', 'cold_sweat:boiler', 'cold_sweat:icebox'] },
     story: 'The hearth that warms a whole house, the boiler, and the icebox. Fires, furnaces and insulation are always free.',
   },
   cooking: {
-    name: 'Advanced cooking', tier: 1, bosses: ['minecraft:skeleton|Torte'], key: 'farmersdelight:cooking_pot',
+    name: 'Advanced cooking', tier: 2, bosses: ['minecraft:skeleton|Torte'], key: 'farmersdelight:cooking_pot',
     gates: { outputs: ['sliceanddice:slicer', 'sliceanddice:sprinkler'] },
     story: 'The skeleton chef Torte kept the kitchen machines. Slice & Dice automation.',
   },
@@ -56,7 +61,7 @@ global.LADDER = {
     story: 'Helms, floaters, ballast, balloons, engines: a hull that moves.',
   },
   trade: {
-    name: 'Trading Floor', tier: 2, bosses: ['illagerinvasion:invoker'], key: 'minecraft:lectern',
+    name: 'Trading Floor', tier: 2, bosses: ['illagerinvasion:invoker', 'illageandspillage:spiritcaller', 'illageandspillage:magispeller', 'illageandspillage:freakager', 'illageandspillage:ragno'], key: 'minecraft:lectern',
     gates: { outputs: ['trading_floor:trading_depot'] },
     story: 'The ledgers the illagers took. A depot sells while you are elsewhere.',
   },
@@ -79,12 +84,12 @@ global.LADDER = {
     story: 'The reactor\'s own parts: mechanical arms, speed controllers, sequenced gearshifts.',
   },
   netherite: {
-    name: 'Netherite', tier: 3, bosses: ['cataclysm:netherite_monstrosity'], key: 'minecraft:netherite_scrap',
+    name: 'Netherite', tier: 3, bosses: ['cataclysm:netherite_monstrosity', 'cataclysm:ancient_remnant'], key: 'minecraft:netherite_scrap',
     gates: { inputs: ['minecraft:netherite_ingot'], outputs: ['minecraft:netherite_ingot', 'minecraft:netherite_block'] },
     story: 'Working netherite: ingots, blocks, and what is built from them.',
   },
   cannons: {
-    name: 'Cannons', tier: 3, bosses: ['mowziesmobs:frostmaw'], key: 'minecraft:tnt',
+    name: 'Cannons', tier: 3, bosses: ['cataclysm:maledictus'], key: 'minecraft:tnt',
     gates: { outputMods: ['createbigcannons'] },
     story: 'Create Big Cannons: cast, build, mount, fire. They hurt mobs and players, never the land.',
   },
@@ -94,7 +99,7 @@ global.LADDER = {
     story: 'Enchantment as an industry, and dragon\'s breath as a fluid.',
   },
   ender: {
-    name: 'Ender logistics', tier: 4, bosses: ['cataclysm:ender_guardian'], key: 'minecraft:ender_eye',
+    name: 'Ender logistics', tier: 4, bosses: ['cataclysm:ender_guardian', 'cataclysm:scylla'], key: 'minecraft:ender_eye',
     gates: { outputs: ['minecraft:ender_chest', 'create:portable_storage_interface', 'create:portable_fluid_interface', 'create:item_vault', 'create:stockpile_switch', 'create:content_observer', 'create:smart_chute'] },
     story: 'The lost capital\'s last secret: storage that follows you, and vaults that think.',
   },

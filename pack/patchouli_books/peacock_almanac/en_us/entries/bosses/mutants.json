@@ -29,13 +29,13 @@
     {
       "type": "patchouli:entity",
       "entity": "mutantmonsters:mutant_snow_golem",
-      "text": "Mutant Snow Golem: snowy biomes only, hurls ice and freezes the ground. Wool armor and a fire nearby. Holds $(bold)Climate control$().",
+      "text": "Mutant Snow Golem: never wild. Splash a snow golem with Chemical X and it becomes yours: a pet that hurls ice at your enemies. Holds nothing.",
       "scale": 0.6
     },
     {
       "type": "patchouli:entity",
       "entity": "mutantmonsters:mutant_enderman",
-      "text": "Mutant Enderman: teleports, throws blocks, clones. Water hurts it; fight by a lake. Holds nothing but pearls: a warning of what the End became.",
+      "text": "Mutant Enderman: teleports, throws blocks, clones. Water hurts it; fight by a lake. Holds $(bold)Brass$(), like the Mutant Zombie: the second road to the hinge of the tree.",
       "scale": 0.5
     }
   ]

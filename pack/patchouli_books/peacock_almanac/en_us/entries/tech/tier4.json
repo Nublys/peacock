@@ -6,11 +6,11 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(bold)The Harbinger$() and $(bold)Ignis$() hold $(bold)Arcane industry$(): enchantment as a factory, dragon's breath as a fluid.$(br)$(bold)Ender Guardian$() (the End) holds $(bold)Ender logistics$(): ender chests, portable interfaces, item vaults."
+      "text": "$(bold)The Harbinger$() and $(bold)Ignis$() hold $(bold)Arcane industry$(): enchantment as a factory, dragon's breath as a fluid.$(br)$(bold)Ender Guardian$() (the End) holds $(bold)Ender logistics$(): ender chests, portable interfaces, item vaults. $(bold)Scylla$() (warm ocean) shares it."
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Hovering Inferno$(), the $(bold)totem captains$() and $(bold)Scylla$() hold loot, not knowledge.$(br2)Two Blueprints at the end of the world, and both of them about moving things."
+      "text": "$(bold)Hovering Inferno$() holds loot, not knowledge: the best artifacts in the Nether.$(br2)Two Blueprints at the end of the world, and both of them about moving things."
     },
     {
       "type": "patchouli:relations",

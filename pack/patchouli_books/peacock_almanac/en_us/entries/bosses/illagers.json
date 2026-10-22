@@ -6,7 +6,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Illager bosses are fought with their armies. They are the social tier: a squad of recruits and a friend are the intended answer.$(br2)The Invoker is $(l:patchouli:tech/tier2)Tier 2$(); the totem captains of Respillaged are $(l:patchouli:tech/tier4)Tier 4$()."
+      "text": "Illager bosses are fought with their armies. They are the social tier: a squad of recruits and a friend are the intended answer.$(br2)The Invoker and the totem captains of Respillaged all hold the $(l:patchouli:tech/tier2)Tier 2$() Trading Floor."
     },
     {
       "type": "patchouli:entity",
@@ -22,7 +22,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Totem captains$() (Illage & Spillage, Respillaged): summoned with totems looted from outposts. Spellcasters and brutes with phases. They are summonable, so a full server never waits on worldgen for them.$(br2)They hold the richest loot in the pack, and nothing a Blueprint needs."
+      "text": "$(bold)Totem captains$() (Illage & Spillage, Respillaged): summoned with totems looted from outposts. Spellcasters and brutes with phases. They are summonable, so a full server never waits on worldgen for them.$(br2)They hold the richest loot in the pack, and the illagers' stolen ledgers: any of them can drop the $(bold)Trading Floor$() Blueprint."
     }
   ]
 }

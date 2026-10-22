@@ -6,7 +6,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(bold)Create Big Cannons$(): cast or build cannons block by block, mount them, load them, aim with a controller or a contraption. Autocannons for defence, big guns for sieges.$(br2)$(bold)Tier 3$(): the Frostmaw holds the knowledge."
+      "text": "$(bold)Create Big Cannons$(): cast or build cannons block by block, mount them, load them, aim with a controller or a contraption. Autocannons for defence, big guns for sieges.$(br2)$(bold)Tier 3$(): Maledictus, in the Frosted Prison, holds the knowledge."
     },
     {
       "type": "patchouli:crafting",

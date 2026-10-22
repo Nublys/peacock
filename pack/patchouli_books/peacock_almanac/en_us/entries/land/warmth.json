@@ -35,7 +35,7 @@
     {
       "type": "patchouli:spotlight",
       "item": "cold_sweat:hearth",
-      "text": "The hearth heats a whole house: fuel it and fit a smokestack; pipes carry the air further. The boiler warms a room, the icebox cools one. All three are $(bold)Climate control$(), held by the Mutant Snow Golem.",
+      "text": "The hearth heats a whole house: fuel it and fit a smokestack; pipes carry the air further. The boiler warms a room, the icebox cools one. All three are $(bold)Climate control$(), held by the Frostmaw (Tier 2).",
       "link_recipe": false,
       "title": "Climate control"
     }
