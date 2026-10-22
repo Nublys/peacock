@@ -132,7 +132,7 @@ hash = "0bcee95ab75190a082b6922fae3d6c1662c2f31429a8fe6cf3e5f9caa5aecf1e"
 
 [[files]]
 file = "config/defaultoptions/options.txt"
-hash = "e904e31ae3990969e6752b2a803324d92d29f29393affffc503744999944ed62"
+hash = "4429d5e343ae34a512b00cefe8c478af2919b8f8822ee408b831de2079eeff6b"
 
 [[files]]
 file = "config/distraction_free_recipes-client.toml"
@@ -2876,7 +2876,7 @@ hash = "9a0372884381e261ecbbed41dbfdf23d40fef78de32dee6d2f63d37c8a9fc06d"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/tools/performance.json"
-hash = "80a47982354068653a36a19c7cd750be545a0658a30d1c80e5d55cf76128e506"
+hash = "d2f352f43e1fdba2b5d1ccde47159dcec5bc6775c0f3877b30f459ea1a46df2d"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/tools/voice.json"
@@ -2996,7 +2996,7 @@ hash = "7b956cd0b9ec8c3f12e3149e84f3e6bd2b42e76ac77bffc810bfcde2a1ef37bc"
 
 [[files]]
 file = "peacock/profiles/_previous/options.txt.keys"
-hash = "720a23b2e6e6b7823eddc6ccca6e3aa33b7a50b860b0beb5595900489013f511"
+hash = "081c42dddff66e35a3c5d76295508e8396759b7f8081f28fe2b8bf1d1c081156"
 
 [[files]]
 file = "peacock/profiles/high/config/DistantHorizons.toml.keys"
@@ -3064,7 +3064,7 @@ hash = "32e48ae6d8e771a6c24421b675413c3188ca0660f442addc9449564059911e07"
 
 [[files]]
 file = "peacock/profiles/high/options.txt.keys"
-hash = "93c0cf8693d01a4ae7fadb8caa2a766736cfaf19f54113d003471428d6c34dea"
+hash = "7fbc93d4e1ac2420286c6ab452317507a5961fef81747f838906d617c6e29b8b"
 
 [[files]]
 file = "peacock/profiles/high/shaderpacks/ComplementaryReimagined_r5.9.3 + EuphoriaPatches_1.10.5.txt.keys"
@@ -3140,7 +3140,7 @@ hash = "32e48ae6d8e771a6c24421b675413c3188ca0660f442addc9449564059911e07"
 
 [[files]]
 file = "peacock/profiles/low/options.txt.keys"
-hash = "1cece4cbdf8b8807981807f05ac040a7a41e0479ad1ee0dcec2f55cebe590e60"
+hash = "f7b72f50065d2702f2d574c3d0031e9747f3532f591c31ea907247d6a20cb5af"
 
 [[files]]
 file = "peacock/profiles/low/shaderpacks/ComplementaryReimagined_r5.9.3 + EuphoriaPatches_1.10.5.txt.keys"
@@ -3216,7 +3216,7 @@ hash = "32e48ae6d8e771a6c24421b675413c3188ca0660f442addc9449564059911e07"
 
 [[files]]
 file = "peacock/profiles/medium/options.txt.keys"
-hash = "744ec6df420dc68dcf545db776e482376f53313ea6bd582a2bc0525c4cd4ed5c"
+hash = "c4d356e88f345c8cf37bbd241e4e9faea2c4a8d9c9bc9136cd17321a8bb6bcf2"
 
 [[files]]
 file = "peacock/profiles/medium/shaderpacks/ComplementaryReimagined_r5.9.3 + EuphoriaPatches_1.10.5.txt.keys"
@@ -3368,7 +3368,7 @@ hash = "32e48ae6d8e771a6c24421b675413c3188ca0660f442addc9449564059911e07"
 
 [[files]]
 file = "peacock/profiles/ultra/options.txt.keys"
-hash = "4a38bf6c23eb71384ee1cef415afaeff69133a21cb40b49b7e8ee25452040d97"
+hash = "1855b35a1a43022225b9e7b953eb5338ec2bbea0323f57f632326b7f5c4039ad"
 
 [[files]]
 file = "peacock/profiles/ultra/shaderpacks/ComplementaryReimagined_r5.9.3 + EuphoriaPatches_1.10.5.txt.keys"
@@ -3384,11 +3384,6 @@ hash = "807d92fbc341005a5e5f2f8ee9bcbab421392dc84eaf52c42a0b5eac74645752"
 metafile = true
 
 [[files]]
-file = "resourcepacks/better-leaves.pw.toml"
-hash = "eb0b5f269171cd5b891d9bdf2c5da89698e21a71ffec1172ead75bc19411cbdc"
-metafile = true
-
-[[files]]
 file = "resourcepacks/cubic-sun-moon.pw.toml"
 hash = "6d198fcead3ae516d33d9011f3ecf9717a72b963aadea7a6b3ad7f0c7cada070"
 metafile = true
@@ -3396,6 +3391,11 @@ metafile = true
 [[files]]
 file = "resourcepacks/enhanced-boss-bars.pw.toml"
 hash = "fad11585397af61bcba766b5ca20de5ed0b9e95bd4ffc734b93aad5a348a7b71"
+metafile = true
+
+[[files]]
+file = "resourcepacks/fancyfast-bushy-leaves.pw.toml"
+hash = "67d9a093a5ca268723092df23ba359f58a11e1d7a73ab19a2f36871383248291"
 metafile = true
 
 [[files]]

@@ -1,0 +1,13 @@
+name = "Optimized Bushy Leaves"
+filename = "FancyFast-Bushy-Leaves.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/pQHHONnS/versions/HabiyTas/FancyFast%20Bushy%20Leaves.zip"
+hash-format = "sha512"
+hash = "fead491f8e7e887760d8448ea14fb3d93ad84e9f90b204f817d6a3d2544feaae380bf609d90cd8e71829c582ce4a1aa7054d9699b0ea2225c2552131becf3a5a"
+
+[update]
+[update.modrinth]
+mod-id = "pQHHONnS"
+version = "HabiyTas"

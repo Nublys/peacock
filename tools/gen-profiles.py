@@ -31,10 +31,12 @@ EUPHORIA = f"{CR_NAME} + EuphoriaPatches_1.10.5"   # folder Euphoria Patcher gen
 # Resource packs shipped in pack/resourcepacks/, enabled in every tier (last = highest priority). Must match the
 # `filename` fields of the .pw.toml files and config/defaultoptions/options.txt.
 # Appalachia-style look (2026-10-20): grass, foliage, 3D models, sun & moon, Fresh Animations' add-ons. Later = on top.
-RESOURCE_PACKS = '["vanilla","mod_resources","file/Fast-Better-Grass.zip","file/rainbows-foliage-vanilla-edition-v2.1.zip","file/3D-Default-1.20-v1.16.0.zip","file/Better-Leaves-9.6.zip","file/EnhancedBossBars-1.6.zip","file/xalis-enchanted-books-1.0.0-beta.2.zip","file/xalis-potions-1.2.0.zip","file/LowOnFire-26.3.zip","file/cubic-sun-moon-v1.8.5.zip","file/FreshAnimations_v1.10.4.zip","file/FA+Details-v2.2.1.zip","file/FA+Objects-v2.1.2.zip"]'
-# potato: no 3D models, no Fresh Animations (or its add-ons) — extra geometry per block/entity — and no Better Leaves
-# (bushy leaf models on every leaf block; Aaron, 2026-10-22: "Disable better leaves for the potato preset")
-POTATO_DROP = ['"file/3D-Default-1.20-v1.16.0.zip"', '"file/Better-Leaves-9.6.zip"', '"file/FreshAnimations_v1.10.4.zip"', '"file/FA+Details-v2.2.1.zip"', '"file/FA+Objects-v2.1.2.zip"']
+RESOURCE_PACKS = '["vanilla","mod_resources","file/Fast-Better-Grass.zip","file/rainbows-foliage-vanilla-edition-v2.1.zip","file/3D-Default-1.20-v1.16.0.zip","file/FancyFast-Bushy-Leaves.zip","file/EnhancedBossBars-1.6.zip","file/xalis-enchanted-books-1.0.0-beta.2.zip","file/xalis-potions-1.2.0.zip","file/LowOnFire-26.3.zip","file/cubic-sun-moon-v1.8.5.zip","file/FreshAnimations_v1.10.4.zip","file/FA+Details-v2.2.1.zip","file/FA+Objects-v2.1.2.zip"]'
+# potato: no 3D models, no Fresh Animations (or its add-ons) — extra geometry per block/entity — and no bushy leaves
+# (Aaron, 2026-10-22: "Disable better leaves for the potato preset"; bushy leaves also need Fancy leaves, and potato's
+# Fast leaves draw their see-through edges as boxes). The leaves are Optimized Bushy Leaves since 2026-10-22 (Aaron:
+# "Switch the leaf mod to Optimized Bushy Leaves"), Motschen's Better Leaves before.
+POTATO_DROP = ['"file/3D-Default-1.20-v1.16.0.zip"', '"file/FancyFast-Bushy-Leaves.zip"', '"file/FreshAnimations_v1.10.4.zip"', '"file/FA+Details-v2.2.1.zip"', '"file/FA+Objects-v2.1.2.zip"']
 
 #          tier          shaders  pack        preset      DH radius  DH transp.  threads  DH quality  options.txt keys
 TIERS = {
@@ -80,6 +82,8 @@ PREVIOUS_DEFAULTS = {
         "fovEffectScale:1.0", "screenEffectScale:1.0", "damageTiltStrength:1.0", "hideLightningFlashes:false",
         # potato's packs with Better Leaves, until 2026-10-22
         'resourcePacks:' + '["vanilla","mod_resources","file/Fast-Better-Grass.zip","file/rainbows-foliage-vanilla-edition-v2.1.zip","file/Better-Leaves-9.6.zip","file/EnhancedBossBars-1.6.zip","file/xalis-enchanted-books-1.0.0-beta.2.zip","file/xalis-potions-1.2.0.zip","file/LowOnFire-26.3.zip","file/cubic-sun-moon-v1.8.5.zip"]',
+        # every tier's packs with Better Leaves, until 2026-10-22 (the switch to Optimized Bushy Leaves)
+        'resourcePacks:["vanilla","mod_resources","file/Fast-Better-Grass.zip","file/rainbows-foliage-vanilla-edition-v2.1.zip","file/3D-Default-1.20-v1.16.0.zip","file/Better-Leaves-9.6.zip","file/EnhancedBossBars-1.6.zip","file/xalis-enchanted-books-1.0.0-beta.2.zip","file/xalis-potions-1.2.0.zip","file/LowOnFire-26.3.zip","file/cubic-sun-moon-v1.8.5.zip","file/FreshAnimations_v1.10.4.zip","file/FA+Details-v2.2.1.zip","file/FA+Objects-v2.1.2.zip"]',
     ],
     # the mods' shipped values before the quieter-boot change; without these the launcher took the old `true`s for
     # the player's own choice and kept the update popup and join warnings ("keep … 8 setting(s) you changed")

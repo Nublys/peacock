@@ -1308,3 +1308,13 @@ or replaceable-by-trees (water stays ground, so walls over ponds still stand on 
 finished column are notched out. Walls already standing are checked once (`peacock_capital_wall_trees`): a column
 whose stones rest on tree is taken down and rebuilt on the ground; every other column is left as it is.
 
+## Leaves: Optimized Bushy Leaves replaces Better Leaves (2026-10-22)
+Aaron: "Switch the leaf mod to Optimized Bushy Leaves, still leave leafs disabled for potato." Optimized Bushy Leaves
+v1.3 (Jagutka, Modrinth `fancyfast-bushy-leaves`, client side) is built for mid- and low-end PCs. Low, medium, high and
+ultra get it in Better Leaves' place; potato keeps none (bushy leaves need Fancy leaves: potato's Fast leaves draw their
+see-through edges as white boxes, which Aaron saw on a potato install whose pack list was his own). The old list is
+in `PREVIOUS_DEFAULTS`, so untouched installs switch on the next launch.
+Trade-off: it covers vanilla leaves only (oak, birch, spruce, jungle, acacia, dark oak, cherry, azalea, mangrove and
+roots); Better Leaves also covered Biomes O' Plenty and ~60 other mods, so BOP trees keep their plain leaves now.
+Its pack format is a newer one, so the resource-pack screen may label it "made for a newer version"; it loads anyway.
+
