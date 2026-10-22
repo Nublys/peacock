@@ -992,6 +992,10 @@ file = "config/paxi/datapacks/peacock/data/peacock/tags/worldgen/structure/natur
 hash = "dd1184a5ee780b01f7e1a1205b342bb9b6c052ad340b691a3f006f9989e0ce22"
 
 [[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/tags/worldgen/structure/ruins_abandoned.json"
+hash = "9b52a44f7ac4736fae4f175bc097308021989c5547b4e51f80e9048d885d1d68"
+
+[[files]]
 file = "config/paxi/datapacks/peacock/data/peacock/tags/worldgen/structure/rumour_acropolis.json"
 hash = "698b730f2994986700d846869b5466b6282b251b8b7196ca245c708f420114d5"
 
@@ -1409,7 +1413,7 @@ hash = "9a7028f15f20deaecff2121c94ec53931ddfaf4cb06c7c8ee04b9c504d30091f"
 
 [[files]]
 file = "defaultconfigs/ftbchunks/ftbchunks-world.snbt"
-hash = "c1b2a785a0a581d83b8c97414704736a6f08bea8e4d26353c51793653e05f120"
+hash = "f2104d4cf50fdeadad404214fefa18ba91bfe9a769fc2c7927d70f3b0a676127"
 
 [[files]]
 file = "defaultconfigs/ftbessentials-server.snbt"
@@ -1434,7 +1438,7 @@ hash = "4faefbccfc4cab282d70059defae8f62f40781f2af872f712b1c009395eb6528"
 
 [[files]]
 file = "kubejs/assets/peacock/lang/en_us.json"
-hash = "70c1f6780e299fa036260cfc901ed98d5a0853bbbe02ee0b42afa8e9c9627582"
+hash = "2b6051c5640c6eaa85952b4515e335a9b8e10fa691b79f15b982a971a24b226f"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/block/aluminum_block.png"
@@ -1513,6 +1517,10 @@ file = "kubejs/assets/peacock/textures/item/rumour_voucher.png"
 hash = "038d08aac0a5023226a000b920991bd5076a741c9402f0411ec9c1de5c8c7e3c"
 
 [[files]]
+file = "kubejs/assets/peacock/textures/item/steward_contract.png"
+hash = "b10e650eafa32c25a9faef58668bf189bb51d888ac4c847696b1343c32ecbe50"
+
+[[files]]
 file = "kubejs/client_scripts/blueprint_tooltips.js"
 hash = "09d333d76904e58dcfc54bac179a809c34e83ece952f11ab110dd5ea81e575f0"
 
@@ -1550,7 +1558,7 @@ hash = "6c16de3bde6076f6ec0da4ebd480c8735ccf8fa032f4e85e95190172687d008b"
 
 [[files]]
 file = "kubejs/server_scripts/blueprints.js"
-hash = "3124630fabe5d255e997dfb4b00c9a823506380dec19fee7e23404fab6f2fa4d"
+hash = "a91a891ee7a895323140ae6515b3c4ae364620d8ffbad1dea899dc2cb37e75dd"
 
 [[files]]
 file = "kubejs/server_scripts/boss_tuning.js"
@@ -1559,6 +1567,18 @@ hash = "90f4b5f522ccfa82d202e037aef49a8d7c38c694452e38cb41ba5d15c7365636"
 [[files]]
 file = "kubejs/server_scripts/capital_boards.js"
 hash = "23d3267a57c50a4a0b982d4d4842d6e0e875eef3b119c31ff353ff7b9a21c2f1"
+
+[[files]]
+file = "kubejs/server_scripts/capital_npcs.js"
+hash = "f35510760b973f23da63db47d7cca77d558347fdcafc81154e9c8eb98cb0c043"
+
+[[files]]
+file = "kubejs/server_scripts/capital_projects.js"
+hash = "8f1d8a7f3c415ee4c2906f446848d29b25729a359062eafd39ad3bb32dc6e708"
+
+[[files]]
+file = "kubejs/server_scripts/capital_services.js"
+hash = "657a5e8a9351495e91c18d94f1f68f6cb8b65ab35f190103083e45ba9db332d8"
 
 [[files]]
 file = "kubejs/server_scripts/capital_wall.js"
@@ -1586,7 +1606,7 @@ hash = "12bb9718ac3cf5e6b5b98a97f171b6a9a397ed518d1be049b663c745458c6ab8"
 
 [[files]]
 file = "kubejs/server_scripts/metals.js"
-hash = "afe18c852a6dbc71992435a7409f5517f3929440eceb6193dda8b64f191bf94f"
+hash = "e3827ef1cf03e58905d4c80545cd08194b9187fc7fdb0576ae61c104b58a7fbe"
 
 [[files]]
 file = "kubejs/server_scripts/no_vr_manual.js"
@@ -1609,6 +1629,10 @@ file = "kubejs/server_scripts/spyglass_zoom.js"
 hash = "8bc7ed088af268bf38cf1eddfa6867ae0291d468e109844cc8439d079dd2c1ed"
 
 [[files]]
+file = "kubejs/server_scripts/steward.js"
+hash = "f1c49314ea239418a77413ac43cb0b68fd66f58317341b8a386740355d75e567"
+
+[[files]]
 file = "kubejs/server_scripts/trading_depot_town.js"
 hash = "967b7eb67f207c89ac60e1ded0ac0ac1c8498eb3ef46f2f169bdac518a33d304"
 
@@ -1617,12 +1641,20 @@ file = "kubejs/server_scripts/villager_cap.js"
 hash = "a0b8b788b06450f53a96ac9e325bd8c6449edd8ecfd1d5deb50e50a43f34c2d2"
 
 [[files]]
+file = "kubejs/server_scripts/villager_trades.js"
+hash = "f378ca1580055baee923471d6390f5737c7d831fb6bcb4b63b9f199d87bdd97c"
+
+[[files]]
 file = "kubejs/server_scripts/welcome.js"
 hash = "0e9b4adad084519d84321cd28c1352242c4b2d33efc06ffbd07b4e0afd52de40"
 
 [[files]]
 file = "kubejs/startup_scripts/bossbar_scale.js"
 hash = "c98a3376d1b26ab97751a81735558691508336384f994c69849eebbbbae4cf3a"
+
+[[files]]
+file = "kubejs/startup_scripts/capital_economy.js"
+hash = "6bd6e43cfb772e0a1bfb79fd31a06f3a7e4d4def39dba9dc0ea37484a4323e4d"
 
 [[files]]
 file = "kubejs/startup_scripts/fire_drill.js"
@@ -2911,6 +2943,18 @@ file = "patchouli_books/peacock_almanac/en_us/entries/towns/recruits.json"
 hash = "7ca1ba50b31a3c3de6db4c3825921afd5b50cfc8c9922fb90cf54184cc0665d7"
 
 [[files]]
+file = "patchouli_books/peacock_almanac/en_us/entries/towns/services.json"
+hash = "030fed72959ab873da8471b68443e915aaf7bb778ad02b21ee5b555eaf24dbea"
+
+[[files]]
+file = "patchouli_books/peacock_almanac/en_us/entries/towns/shopping.json"
+hash = "47556be4b2bc8c5be7f63431173e80a9b2cf2cf356d5a6218a16ae807df867ea"
+
+[[files]]
+file = "patchouli_books/peacock_almanac/en_us/entries/towns/steward.json"
+hash = "f18b451c7b7f432f5d77fbb77f8eeadbc966c37be25a65780e2bc56438c37933"
+
+[[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/towns/town_life.json"
 hash = "d89cfb9f5394d87aad8629e2e278d204038cf7a49e480464e6a8e8138750c848"
 
@@ -2927,6 +2971,10 @@ file = "patchouli_books/peacock_almanac/en_us/entries/towns/war.json"
 hash = "aac477602995a409c9f725ce42299712e562908bd67c5907125ec4f1d92fe9f4"
 
 [[files]]
+file = "patchouli_books/peacock_almanac/en_us/entries/towns/works.json"
+hash = "f74b0d50b0f832118556d108473ee2f634644b684422a91d8f18611fd33d799b"
+
+[[files]]
 file = "peacock-server/README.txt"
 hash = "1f139b8561336fed8a4fd2830af1989d808425ac6cc603c26028afd49d105899"
 
@@ -2940,7 +2988,7 @@ hash = "f22cac22f221bc51031e15445a077a41a468774497bdcf46d8397370924024de"
 
 [[files]]
 file = "peacock-server/peacock-start.sh"
-hash = "cf6731ba06445fdf4160f989cb0073e2228ac2e3e4158e2be0cb1feddc304c93"
+hash = "114653687da22da0ec9b0d693982840786bb6a992f516044ca241cbf3899799a"
 
 [[files]]
 file = "peacock/launch.jar"

@@ -22,7 +22,8 @@ pack/                 the packwiz pack — this is what gets installed
   defaultconfigs/          server configs copied into new worlds (Big Cannons: no block damage)
   config/defaultoptions/   first-launch options.txt + keybindings.txt (Default Options)
   patchouli_books/         The Settler's Almanac (in-game guide; tools/gen-almanac.py)
-  kubejs/                  KubeJS: the Blueprint ladder (boss_tuning.js lifts the Radiation Director to boss stats), journals, bounty vouchers, welcome line, /peacock profile, caps and gates;
+  kubejs/                  KubeJS: the Blueprint ladder (boss_tuning.js lifts the Radiation Director to boss stats), the capital economy
+                           (capital_npcs.js framework, capital_services.js, capital_projects.js, steward.js, villager_trades.js), journals, bounty vouchers, welcome line, /peacock profile, caps and gates;
                            the capital: capital_wall.js (wall + gates, /peacock wall), capital_boards.js (the bounty board pavilion),
                            dead_capitals.js (far copies of the capital turn zombie);
                            metals.js (startup + server: alloys, metal blocks, lead shot, villager metal trades, one tin/bronze/steel)

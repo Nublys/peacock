@@ -49,6 +49,16 @@ GC_FLAGS="-XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:
 # Override with PEACOCK_HEAP_PERCENT (or set an explicit -Xmx in user_jvm_args.txt and leave this alone).
 HEAP_PERCENT="${PEACOCK_HEAP_PERCENT:-75.0}"
 
+# Steward (2026-10-22): FTB Chunks' force-loading runs only while a team member is online; keeping land running offline
+# is the Steward's paid job (kubejs/server_scripts/steward.js). New worlds get NEVER from defaultconfigs; a world made
+# before that still says ALWAYS in its own serverconfig, so it is switched here, once. PEACOCK_FREE_FORCELOAD=1 skips it.
+WORLD_DIR="$(grep -E '^level-name=' server.properties 2>/dev/null | cut -d= -f2- | tr -d '\r')"
+FTBC_WORLD="${WORLD_DIR:-world}/serverconfig/ftbchunks-world.snbt"
+if [ "${PEACOCK_FREE_FORCELOAD:-0}" != "1" ] && [ -f "${FTBC_WORLD}" ] && grep -q 'force_load_mode: "ALWAYS"' "${FTBC_WORLD}"; then
+  sed -i 's/force_load_mode: "ALWAYS"/force_load_mode: "NEVER"/' "${FTBC_WORLD}"
+  say "FTB Chunks force-loading set to online-only (the Steward keeps land running offline)"
+fi
+
 # Seed reroll loop. The capital reroll script that requested rerolls was retired on 2026-10-20 (the capital is now
 # a scattered CTOV town that Village Spawn Point finds on any seed), so nothing writes the marker any more and the
 # loop runs Java once and exits with its code. Kept for the hang watchdog below and in case a reroll ever returns:

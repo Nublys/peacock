@@ -1,0 +1,20 @@
+{
+  "name": "Capital Services",
+  "icon": "minecraft:anvil",
+  "category": "patchouli:towns",
+  "sortnum": 11,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Smith$() (the Forge): repairs what you hold for emeralds, by how worn it is. No XP, no \"too expensive\". He also clears anvil penalties and renames.$(br2)$(bold)Scribe$() (the Scriptorium): writes a copy of any Blueprint you know, for a friend, at half the charter price and a sheet of paper. Copies books and maps."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Physician$() (the Infirmary): golden apples and potions on her table; sneak and talk for cures, lifting Bad Omen, and curing a zombie villager you bring her.$(br2)$(bold)Undertaker$(): brings your latest corpse to the capital graveyard, priced by distance; refunded if nothing is left."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Courier$() (the Station): sends what you hold to any player, by rail. The further away they are, the longer it takes; it waits for them if they are offline.$(br2)$(bold)Keeper$() (the Lighthouse): a compass that always points to the lamp. $(bold)Exchange Merchant$() (the Market): ore from other regions, rare saplings, patterns and trims; fresh each dawn."
+    }
+  ]
+}

@@ -26,5 +26,6 @@
   "block.peacock.platinum_block": "Block of Platinum",
   "block.peacock.electrum_block": "Block of Electrum",
   "block.peacock.constantan_block": "Block of Constantan",
-  "block.peacock.invar_block": "Block of Invar"
+  "block.peacock.invar_block": "Block of Invar",
+  "item.peacock.steward_contract": "Steward's Contract"
 }

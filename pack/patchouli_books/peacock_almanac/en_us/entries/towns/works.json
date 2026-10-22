@@ -1,0 +1,20 @@
+{
+  "name": "The Capital Works",
+  "icon": "minecraft:lectern",
+  "category": "patchouli:towns",
+  "sortnum": 10,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "The $(bold)Clerk of the Works$() stands by a lectern on the capital's square. Talk to her: she shows the project the whole server is paying for, what it still needs, and who has given most.$(br2)Give emeralds (16 or 64 at a time), what you hold, or everything in your pack that is on the list."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "When a project is paid for, its building goes up just outside the wall and its people move in. In order: $(bold)the Forge$(), $(bold)the Scriptorium$(), $(bold)the Market$(), $(bold)the Infirmary$(), $(bold)the Rail Station$(), $(bold)the Lighthouse$().$(br2)Last of all: $(bold)Relight a Dead Town$(). The nearest abandoned ruin is cleared, its zombie villagers cured, and settlers move in around a new bell."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Each project wants emeralds and materials: stone bricks, logs, iron, glass, wool, and later Create parts and track. The later ones are big; a server builds them together over weeks.$(br2)$(bold)/peacock projects$() shows progress from anywhere."
+    }
+  ]
+}

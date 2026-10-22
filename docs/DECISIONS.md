@@ -1347,3 +1347,35 @@ be found; hard bosses pay.
 - Charters follow the tiers (Climate and Cooking 2 → 4 emerald blocks); "Every Line of the Ledger" now counts the
   new holders; Almanac bestiary, tier pages, ledger and charter list rewritten.
 
+## The capital economy: Works, services, the Steward, more trades (2026-10-22)
+Aaron, after the economy discussion ("There's little to spend on…"): "Can you try and ship it all?" Emeralds had many
+sources (bounties, trades, depots, pillager loot) and almost no sinks after charters; this adds sinks people want.
+- **Villager trades** (`villager_trades.js`): every profession also sells modded goods (Farmer's Delight, Aquaculture,
+  Cold Sweat, Create Deco, Macaw's, Ironworks bronze, Spartan alloys, rumour vouchers, Nature's Compass…), added on
+  right-click like the metal trades. Never a Blueprint-locked item (checked at runtime); a missing item is skipped.
+  Farmer's pies/meat +50% in winter. **Cure floor:** a player's major-positive gossip with a villager is capped at 5
+  points on each right-click, so a cure takes a few emeralds off, not the whole price.
+- **Service people** (`capital_npcs.js`): NoAI, invulnerable named villagers; right-click opens a chat menu with
+  clickable `/peacock npc …` choices, valid only for the person you last talked to (2 min, 8 blocks). Traders (Physician,
+  Exchange) open their trade screen on a plain click, the menu on sneak; their stock is reset each dawn.
+- **Capital Works** (`capital_projects.js`): a Clerk by a lectern near spawn takes donations for seven projects in
+  order — Forge (Smith), Scriptorium (Scribe), Market (Exchange + stalls), Infirmary (Physician, Undertaker, graveyard),
+  Rail Station (Courier), Lighthouse (Keeper, beacon beam), Relight a Dead Town (nearest `#peacock:ruins_abandoned`:
+  zombie villagers cured, zombies killed, bell, beds, bounty board, banner, six settlers). Buildings are built by
+  command on open ground found just outside the capital's bounding box (+8, clear of the wall), force-loaded while
+  building. Total ≈1,200 emeralds plus materials. `/peacock projects`, `/peacock projects finish` (op), `/peacock projects clerk` (op).
+- **Services** (`capital_services.js`): Smith (repair by wear, ×2 netherite; clear anvil penalty 4; rename 1), Scribe
+  (Blueprint copy = half charter in emerald blocks + paper; books/maps), Physician (trades; cure harmful effects 2, Bad
+  Omen 6, zombie villager 8 — no curer discount), Undertaker (Corpse mod: last corpse to the graveyard, 8 + 1/250
+  blocks, max 48, 32 from another dimension, refunded if none), Courier (held item to any player, 1 + 1/1000 blocks,
+  arrives after 30 s + 1 s per 20 blocks, waits for offline players), Keeper (lodestone compass to the lamp, 4),
+  Exchange (Geolosys clusters from other regions, BOP saplings, banner patterns, armour trims, name tags, saddles).
+- **The Steward** (`steward.js`): a contract (16 emeralds, from the Clerk) spawns a mortal NoAI steward; while his
+  employer is offline and his purse holds emeralds he force-loads the 3×3 chunks around him (vanilla `forceload`) at
+  1 emerald per chunk per 6 h (one per 40 min); login report; dismiss refunds half; death ends it.
+  **FTB Chunks `force_load_mode` is NEVER** from now on (defaultconfigs; existing worlds switched once by
+  `peacock-start.sh`, `PEACOCK_FREE_FORCELOAD=1` skips it): claims force-load only while the team is online.
+- Untested in play at the time of writing: the first server start places the Clerk; `/peacock projects finish` walks
+  the buildings for a test. `#peacock:ruins_abandoned` lists the `ruin_a` structures of `peacock-ruins.zip`; regenerate
+  it if `gen-ruins.py` changes the ruin set.
+

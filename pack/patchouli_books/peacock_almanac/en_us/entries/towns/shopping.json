@@ -1,0 +1,16 @@
+{
+  "name": "What Villagers Sell",
+  "icon": "minecraft:emerald",
+  "category": "patchouli:towns",
+  "sortnum": 13,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Villagers sell more than the old trades: farmers sell Farmer's Delight seeds and pies, fishermen Aquaculture tackle, leatherworkers waterskins and furs, masons Create Deco and roof blocks.$(br2)Smiths sell bronze tools, armour and Spartan alloy weapons; cartographers sell sealed rumours."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Nothing a Blueprint locks is ever on sale. Pies and preserved meat cost half again as much in $(bold)winter$(), when nothing grows.$(br2)Curing a villager still makes it cheaper, but never nearly free: the discount from a cure is capped."
+    }
+  ]
+}

@@ -35,6 +35,9 @@ function blueprint(rung, count) {
   })
 }
 
+// the Scribe (capital_services.js) writes copies with the same function
+global.PEACOCK_BLUEPRINT = blueprint
+
 // ---------------------------------------------------------------- 1 + 2: recipes
 ServerEvents.recipes(event => {
   // charter recipes first, so the staging pass below can skip them

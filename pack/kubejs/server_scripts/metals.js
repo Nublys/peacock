@@ -182,6 +182,7 @@ const MerchantOffer = Java.loadClass('net.minecraft.world.item.trading.MerchantO
 ItemEvents.entityInteracted(event => {
   var v = event.target
   if (!v || String(v.type) !== 'minecraft:villager' || v.level.isClientSide()) return
+  if (v.tags && v.tags.contains('peacock_npc')) return      // the capital's service people (capital_npcs.js) keep their stock
   try {
     var data = v.getVillagerData()
     var prof = String(data.getProfession().name())

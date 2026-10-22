@@ -419,6 +419,34 @@ ENTRIES = {
             txt("Late game, the " + B("Trading Floor") + " lets a train sell on a schedule: a depot in a real town, goods in, emeralds out, while you are elsewhere.",
                 "Depots need a Blueprint and a town with a bell and beds. There is no version that works in a hole in the ground."),
         ]),
+        ("works", "The Capital Works", "minecraft:lectern", [
+            txt("The " + B("Clerk of the Works") + " stands by a lectern on the capital's square. Talk to her: she shows the project the whole server is paying for, what it still needs, and who has given most.",
+                "Give emeralds (16 or 64 at a time), what you hold, or everything in your pack that is on the list."),
+            txt("When a project is paid for, its building goes up just outside the wall and its people move in. In order: " + B("the Forge") + ", " + B("the Scriptorium") + ", " + B("the Market") + ", " + B("the Infirmary") + ", " + B("the Rail Station") + ", " + B("the Lighthouse") + ".",
+                "Last of all: " + B("Relight a Dead Town") + ". The nearest abandoned ruin is cleared, its zombie villagers cured, and settlers move in around a new bell."),
+            txt("Each project wants emeralds and materials: stone bricks, logs, iron, glass, wool, and later Create parts and track. The later ones are big; a server builds them together over weeks.",
+                B("/peacock projects") + " shows progress from anywhere."),
+        ]),
+        ("services", "Capital Services", "minecraft:anvil", [
+            txt(B("Smith") + " (the Forge): repairs what you hold for emeralds, by how worn it is. No XP, no \"too expensive\". He also clears anvil penalties and renames.",
+                B("Scribe") + " (the Scriptorium): writes a copy of any Blueprint you know, for a friend, at half the charter price and a sheet of paper. Copies books and maps."),
+            txt(B("Physician") + " (the Infirmary): golden apples and potions on her table; sneak and talk for cures, lifting Bad Omen, and curing a zombie villager you bring her.",
+                B("Undertaker") + ": brings your latest corpse to the capital graveyard, priced by distance; refunded if nothing is left."),
+            txt(B("Courier") + " (the Station): sends what you hold to any player, by rail. The further away they are, the longer it takes; it waits for them if they are offline.",
+                B("Keeper") + " (the Lighthouse): a compass that always points to the lamp. " + B("Exchange Merchant") + " (the Market): ore from other regions, rare saplings, patterns and trims; fresh each dawn."),
+        ]),
+        ("steward", "The Steward", "peacock:steward_contract", [
+            txt("Land only runs while someone is near it, and force-loaded claims only run while their team is online. To keep a farm going while you sleep, hire a " + B("steward") + ".",
+                "The Clerk sells his contract (16 emeralds). Use it where he should live."),
+            txt("Pay him by talking to him. While you are away he keeps the " + B("3x3 chunks") + " around him running and takes " + B("one emerald every 40 minutes") + ". When his purse is empty your land waits for you; nothing is lost.",
+                "He can be killed: wall him in. Dismissing him returns half his purse."),
+        ]),
+        ("shopping", "What Villagers Sell", "minecraft:emerald", [
+            txt("Villagers sell more than the old trades: farmers sell Farmer's Delight seeds and pies, fishermen Aquaculture tackle, leatherworkers waterskins and furs, masons Create Deco and roof blocks.",
+                "Smiths sell bronze tools, armour and Spartan alloy weapons; cartographers sell sealed rumours."),
+            txt("Nothing a Blueprint locks is ever on sale. Pies and preserved meat cost half again as much in " + B("winter") + ", when nothing grows.",
+                "Curing a villager still makes it cheaper, but never nearly free: the discount from a cure is capped."),
+        ]),
     ],
     # ===================================================================================== threats
     "threats": [

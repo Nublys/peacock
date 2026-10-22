@@ -1,0 +1,16 @@
+{
+  "name": "The Steward",
+  "icon": "peacock:steward_contract",
+  "category": "patchouli:towns",
+  "sortnum": 12,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Land only runs while someone is near it, and force-loaded claims only run while their team is online. To keep a farm going while you sleep, hire a $(bold)steward$().$(br2)The Clerk sells his contract (16 emeralds). Use it where he should live."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Pay him by talking to him. While you are away he keeps the $(bold)3x3 chunks$() around him running and takes $(bold)one emerald every 40 minutes$(). When his purse is empty your land waits for you; nothing is lost.$(br2)He can be killed: wall him in. Dismissing him returns half his purse."
+    }
+  ]
+}
