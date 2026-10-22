@@ -2996,7 +2996,7 @@ hash = "7b956cd0b9ec8c3f12e3149e84f3e6bd2b42e76ac77bffc810bfcde2a1ef37bc"
 
 [[files]]
 file = "peacock/profiles/_previous/options.txt.keys"
-hash = "1d69136b319b4c2b49ef52e0a3dd40e162a8b74c0e55c088a8d9244a2b77c564"
+hash = "720a23b2e6e6b7823eddc6ccca6e3aa33b7a50b860b0beb5595900489013f511"
 
 [[files]]
 file = "peacock/profiles/high/config/DistantHorizons.toml.keys"
@@ -3292,7 +3292,7 @@ hash = "32e48ae6d8e771a6c24421b675413c3188ca0660f442addc9449564059911e07"
 
 [[files]]
 file = "peacock/profiles/potato/options.txt.keys"
-hash = "99be562d8e540d05a6a26fc8cab2241b52bb398318aafa139fb17d93ad00d7cb"
+hash = "790ebded35771d0e51fd006d02f64b929fb446b379ffbeafbf5de1b4524e1d8c"
 
 [[files]]
 file = "peacock/profiles/potato/shaderpacks/ComplementaryReimagined_r5.9.3 + EuphoriaPatches_1.10.5.txt.keys"

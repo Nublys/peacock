@@ -1287,3 +1287,9 @@ monument has three Elder Guardians, and each one drops Blueprints like any ladde
 team. "Every Line of the Ledger" now includes it. The other bosses without a Blueprint (Sculptor, Remnant, Maledictus,
 Scylla, Mutant Enderman, Hovering Inferno, the raid captains, Warden, Wither, Dragon) stay loot-only by choice.
 
+## Potato drops Better Leaves (2026-10-22)
+Aaron: "Disable better leaves for the potato preset." Better Leaves joins `POTATO_DROP` (with 3D Default and Fresh
+Animations): its bushy models add geometry to every leaf block, the most common block in a forest. The previous
+potato pack list is in `PREVIOUS_DEFAULTS`, so existing potato installs that never changed their packs lose it on the
+next launch; anyone who picked their packs by hand keeps their choice. Low and up keep it.
+
