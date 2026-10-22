@@ -477,7 +477,7 @@ hash = "8b5294ecf27df694378c8d4661e1cfe18a21ee13be2ef970fc8916893cd2f002"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/bountiful/bounty_pools/bountiful/mapper_rews.json"
-hash = "8262379ace2c1a3210c7740c912ca77381cf777503da16f6a074978ba069f065"
+hash = "f08791ea8fc7eed450d09ee5feda151745618d0d220af279c40d1de2e4d07dd4"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/bountiful/bounty_pools/bountiful/shepherd_objs.json"
@@ -1558,7 +1558,7 @@ hash = "23d3267a57c50a4a0b982d4d4842d6e0e875eef3b119c31ff353ff7b9a21c2f1"
 
 [[files]]
 file = "kubejs/server_scripts/capital_wall.js"
-hash = "bdfbaad008c4ef3b284737c0e09efed049b298315c22f73c1713ae89be5e4a48"
+hash = "e697009f2845fa0aba08b395036ceada159234bf7897765edadbf324ed494982"
 
 [[files]]
 file = "kubejs/server_scripts/cave_loot.js"

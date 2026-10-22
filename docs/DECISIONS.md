@@ -1322,3 +1322,9 @@ blockstates, models and textures win for every vanilla leaf, and Better Leaves s
 other modded trees (its modded models use their own mods' textures, so the light pack's opaque vanilla leaf textures do
 not reach them). Potato drops both.
 
+## Bounty fix: the cartographer's Field Manual reward (2026-10-22)
+The server logged "Bountiful reward pool entry is not valid!: pk_field_manual" every board refresh: Geolosys' Field Manual
+is not an item of its own but a Patchouli book (`patchouli:guide_book` with `{"patchouli:book":"geolosys:field_manual"}`,
+which is what Geolosys' own recipe makes). The reward is now that. Also `/peacock wall trees` (op) runs the wall's tree
+check by hand, and the check logs what it found (or that it found no capital) — on 2026-10-22 17:50 it left no line.
+

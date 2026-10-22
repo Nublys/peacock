@@ -239,12 +239,13 @@
   },
   "pk_field_manual": {
    "type": "item",
-   "content": "geolosys:field_manual",
+   "content": "patchouli:guide_book",
    "amount": {
     "min": 1,
     "max": 1
    },
-   "unitWorth": 400
+   "unitWorth": 400,
+   "nbt": "{\"patchouli:book\":\"geolosys:field_manual\"}"
   },
   "mapper_rew_black_dye": null,
   "mapper_rew_pink_banner": null,

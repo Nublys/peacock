@@ -268,7 +268,8 @@ function repairColumn(level, c, i, p, rng) {
 function repairTreeTops(server, log, done) {
   var level = server.overworld()
   var p = plan(level)
-  if (!p) { done(); return }
+  if (!p) { log('wall: tree check skipped — no capital at world spawn ' + level.getSharedSpawnPos()); done(); return }
+  log('wall: checking ' + p.cols.length + ' columns for any standing on a tree')
   var seed = (p.cols[0].x * 37 + p.cols[0].z) >>> 0
   var rng = () => { seed = (seed * 1664525 + 1013904223) >>> 0; return seed / 4294967296 }
   var i = 0, fixed = 0
@@ -362,6 +363,13 @@ ServerEvents.commandRegistry(event => {
   event.register(Commands.literal('peacock')
     .then(Commands.literal('wall')
       .requires(src => src.hasPermission(2))
+      // `/peacock wall trees`: the tree check again, by hand (rebuilds only columns that stand on a tree)
+      .then(Commands.literal('trees').executes(ctx => {
+        var src = ctx.source
+        var log = m => { console.info('[peacock] ' + m); src.sendSystemMessage(Text.gray(m)) }
+        try { repairTreeTops(src.server, log, () => src.server.persistentData.putBoolean(TREES_FIXED, true)); return 1 }
+        catch (e) { src.sendSystemMessage(Text.red('wall tree check failed: ' + e)); return 0 }
+      }))
       .executes(ctx => {
         var src = ctx.source
         var log = m => { console.info('[peacock] ' + m); src.sendSystemMessage(Text.gray(m)) }

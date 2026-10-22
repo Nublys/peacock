@@ -443,7 +443,7 @@ LIBRARIAN_EXTRA = {"pk_candle_holder": entry("supplementaries:candle_holder", 30
 MAPPER_EXTRA = {"pk_atlas": entry("map_atlases:atlas", 3000, 1, 1, "UNCOMMON"),
                 "pk_natures_compass": entry("naturescompass:naturescompass", 6000, 1, 1, "RARE"),
                 "pk_altimeter": entry("supplementaries:altimeter", 800, 1, 1), "pk_wind_vane": entry("supplementaries:wind_vane", 600, 1, 1),
-                "pk_field_manual": entry("geolosys:field_manual", 400, 1, 1),
+                "pk_field_manual": entry("patchouli:guide_book", 400, 1, 1, nbt='{"patchouli:book":"geolosys:field_manual"}'),   # a Patchouli book, not an item of its own
                 "mapper_rew_black_dye": None, "mapper_rew_pink_banner": None, "mapper_rew_light_blue_banner": None}
 # the pillager faction's own kind, in every decree: the story's enemies, not filler
 ALL_OBJS_EXTRA = {
