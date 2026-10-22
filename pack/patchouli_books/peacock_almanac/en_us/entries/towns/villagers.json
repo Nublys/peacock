@@ -6,7 +6,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Villagers here are people, not vending machines. $(bold)Villager Comfort$(): a villager without a bed, light and food trades badly; a happy village trades well.$(br2)$(bold)Restock Balance$(): trades run out and restock slowly. Buying out one librarian all day does not work."
+      "text": "Villagers here are people, not vending machines. $(bold)Villager Comfort$(): a villager without a bed, light and food trades badly; a happy village trades well.$(br2)$(bold)Restock Balance$(): a villager restocks only after a night in its own bed. Buying out one librarian all day does not work."
     },
     {
       "type": "patchouli:text",

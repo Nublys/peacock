@@ -1,0 +1,9 @@
+[
+    {
+        "condition": "entity_scores",
+        "entity": "this",
+        "scores": {
+            "clgd.villager.slept_last_night": 1
+        }
+    }
+]

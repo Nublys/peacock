@@ -1264,3 +1264,10 @@ in with the air temperature it reads, and one when the first breath is drawn.
   also allows the town's edge). Sites are kept in `peacock_board_pavilion_sites`; the one being built in
   `peacock_board_pavilion_site`; done flag `peacock_board_pavilions_v4`. A world with the one-pavilion version keeps it
   and gets the other two.
+
+## Villagers restock after sleeping; the bell visit is no longer needed (2026-10-22)
+Aaron: "Is there a config option to disable the Bell interaction? Sleeping should be enough to restock." Villager
+Restock Balance has no config: it is data-pack functions in the mod, and its rule is the predicate
+`clgd.villager:can_restock` (slept in a bed last night AND came within 6 blocks of its meeting point, the bell, between
+daytime 9000 and 11000). The pack datapack (Paxi, above the mods) overrides that predicate with the sleep condition
+alone. Villager Comfort still prices cramped, dark or caged villagers up to 4x, so halls stay a bad deal.

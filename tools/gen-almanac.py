@@ -338,7 +338,7 @@ ENTRIES = {
         ]),
         ("villagers", "Villagers Worth Keeping", "minecraft:emerald", [
             txt("Villagers here are people, not vending machines. " + B("Villager Comfort") + ": a villager without a bed, light and food trades badly; a happy village trades well.",
-                B("Restock Balance") + ": trades run out and restock slowly. Buying out one librarian all day does not work."),
+                B("Restock Balance") + ": a villager restocks only after a night in its own bed. Buying out one librarian all day does not work."),
             txt("Together they make trading halls pointless and towns valuable: the best prices are in a real village with real beds, and the way to more trade is " + B("more villages") + ", not more cells.",
                 B("Create Better Villagers") + " gives them Create goods to sell and buy. Villager trades are also how Blueprints spread once towns learn them."),
             txt(B("Workers") + " (Villager Workers): hire a farmer, miner, lumberjack, fisherman or shepherd with emeralds. Give them a chest, a bed and food and they work the area you set. They are the first labour you can buy.",

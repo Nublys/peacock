@@ -524,6 +524,10 @@ file = "config/paxi/datapacks/peacock/data/cataclysm/tags/worldgen/biome/has_str
 hash = "e9e6fd232618545626af37a1239915ed3f009527d41f1ba891ef14cefd0c9cac"
 
 [[files]]
+file = "config/paxi/datapacks/peacock/data/clgd.villager/predicates/can_restock.json"
+hash = "922a0ce7b58f36f942f81d1e2721555c0386f1544505cdf4ef2408d06919aae2"
+
+[[files]]
 file = "config/paxi/datapacks/peacock/data/create/recipes/filling/purified_water_bucket.json"
 hash = "4c702ebae17c77801f7a960fa6457fa14e7ae1970c2d981a9467cd8e9c8c53e4"
 
@@ -2907,7 +2911,7 @@ hash = "8dbe057c5c4d63a60297bb8a80c3e7da5f2329214c93fbc8fd5fb30538308a81"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/towns/villagers.json"
-hash = "fbaf8cfae2c18078f963d842de741fcce277e75acf869ccb3c2111e5ee083fa9"
+hash = "0c27306b11790f2ffb815039d5b44e02a93485c4167fec4cd8d55bd034791a23"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/towns/war.json"
