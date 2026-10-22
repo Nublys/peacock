@@ -4,7 +4,7 @@
 // until one fits, so the plaza took every slot no house fitted, whatever its weight: 50+ boards along one street.
 // Then two lone boards beside the bell, hard to spot (Aaron, 2026-10-21: "tuff to spot as they are a single block on
 // the ground ... create buildings around them"). Now, once per world, an open 7x7 pavilion with both boards back to
-// back on its centre post: stone-brick plinth, oak floor, oak log posts and beams, a red nether-brick hip roof, six
+// back on its centre post: stone-brick plinth, oak floor, oak log posts and beams, a clay-brick hip roof (red nether brick until 2026-10-22), six
 // hanging lanterns, a "Bounties" hanging sign over the north and south openings, oak railings east and west, and a
 // flagpole with a yellow banner (red diamond and border) that reads from across town and on the DH skyline.
 //
@@ -18,7 +18,8 @@
 // logs why spots were passed over. No capital: the same around world spawn. No room anywhere: bare boards by spawn,
 // tried again next start.
 // persistentData: `peacock_board_pavilion_sites` (those standing), `peacock_board_pavilion_site` (the one being
-// built, so a failed build is finished in place), `peacock_board_pavilions_v4` (done). Worlds from the one-pavilion
+// built, so a failed build is finished in place), `peacock_board_pavilions_v4` (done), `peacock_board_roofs_brick`
+// (standing pavilions re-roofed in brick). Worlds from the one-pavilion
 // versions keep theirs and get the rest; bare boards from a fallback are taken up first.
 //
 // Rhino notes (see tools/validate.py): `var` inside functions, no `const`/`let` in try blocks, no Math constants,
@@ -33,6 +34,11 @@ const GROUND = /^minecraft:(grass_block|dirt|coarse_dirt|rooted_dirt|podzol|myce
 const SOFT = /^minecraft:(air|cave_air|grass|tall_grass|fern|large_fern|dandelion|poppy|blue_orchid|allium|azure_bluet|red_tulip|orange_tulip|white_tulip|pink_tulip|oxeye_daisy|cornflower|lily_of_the_valley|sunflower|lilac|rose_bush|peony|snow|dead_bush|sweet_berry_bush|pink_petals|[a-z_]+_leaves|vine|glow_lichen|wheat|carrots|potatoes|beetroots)$/
 const FILLABLE = /^minecraft:(air|cave_air|water|grass|tall_grass|fern|large_fern|snow)$/
 const R = 3        // half width: the pavilion is 7x7
+// Aaron, 2026-10-22: "Bounty boards structure looks great but replace the nether bricks. They're out of place." He
+// chose clay brick: still a red roof that reads across town, in a village material.
+const ROOF_STAIRS = 'minecraft:brick_stairs'
+const ROOF_CAP = 'minecraft:bricks'
+const ROOFED = 'peacock_board_roofs_brick'
 
 function capitalStart(level) {
   var Registries = Java.loadClass('net.minecraft.core.registries.Registries')
@@ -175,10 +181,10 @@ function build(server, level, cx, y0, cz) {
       for (var iz = -r; iz <= r; iz++)
         if (Math.abs(ix) === r || Math.abs(iz) === r) cells.push([ix, iz, Math.abs(ix) === r && Math.abs(iz) === r ? 0 : 1])
     cells.sort((a, b) => a[2] - b[2])
-    cells.forEach(c => set(level, cx + c[0], ry, cz + c[1], 'minecraft:red_nether_brick_stairs',
+    cells.forEach(c => set(level, cx + c[0], ry, cz + c[1], ROOF_STAIRS,
       { facing: roofFacing(c[0], c[1], r), half: 'bottom', shape: 'straight', waterlogged: 'false' }))
   })
-  set(level, cx, y0 + 6, cz, 'minecraft:red_nether_bricks')
+  set(level, cx, y0 + 6, cz, ROOF_CAP)
   // flagpole and banner
   for (y = y0 + 7; y <= y0 + 10; y++) set(level, cx, y, cz, 'minecraft:oak_fence')
   var cmd = c => server.runCommandSilent(c)
@@ -383,6 +389,43 @@ function place(server) {
       (placed.length ? ': ' + placed.map(p => p.join(',')).join(' and ') : '') + '; trying again next start')
   return false
 }
+
+// pavilions built before 2026-10-22 have a red nether-brick roof: the same rings again in brick, block for block, only
+// where the nether brick still stands (anything a player changed is left alone)
+function reroof(server) {
+  var level = server.overworld()
+  var n = 0
+  readSites(server.persistentData).forEach(p => {
+    var cx = p[0], y0 = p[1], cz = p[2], ix, iz
+    ;[[3, y0 + 4], [2, y0 + 5], [1, y0 + 6]].forEach(ring => {
+      var r = ring[0], ry = ring[1], cells = []
+      for (ix = -r; ix <= r; ix++)
+        for (iz = -r; iz <= r; iz++)
+          if (Math.abs(ix) === r || Math.abs(iz) === r) cells.push([ix, iz, Math.abs(ix) === r && Math.abs(iz) === r ? 0 : 1])
+      cells.sort((a, b) => a[2] - b[2])
+      cells.forEach(c => {
+        if (String(level.getBlock(cx + c[0], ry, cz + c[1]).id) !== 'minecraft:red_nether_brick_stairs') return
+        set(level, cx + c[0], ry, cz + c[1], ROOF_STAIRS, { facing: roofFacing(c[0], c[1], r), half: 'bottom', shape: 'straight', waterlogged: 'false' })
+        n++
+      })
+    })
+    if (String(level.getBlock(cx, y0 + 6, cz).id) === 'minecraft:red_nether_bricks') { set(level, cx, y0 + 6, cz, ROOF_CAP); n++ }
+  })
+  return n
+}
+
+ServerEvents.loaded(event => {
+  var server = event.server
+  var data = server.persistentData
+  if (data.getBoolean(ROOFED)) return
+  server.scheduleInTicks(140, () => {
+    try {
+      var n = reroof(server)
+      data.putBoolean(ROOFED, true)
+      if (n) console.info('[peacock] capital boards: re-roofed the pavilions in brick (' + n + ' blocks)')
+    } catch (e) { console.error('[peacock] capital boards: re-roofing failed — ' + e) }
+  })
+})
 
 ServerEvents.loaded(event => {
   var server = event.server

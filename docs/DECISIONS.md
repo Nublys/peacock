@@ -1293,3 +1293,9 @@ Animations): its bushy models add geometry to every leaf block, the most common 
 potato pack list is in `PREVIOUS_DEFAULTS`, so existing potato installs that never changed their packs lose it on the
 next launch; anyone who picked their packs by hand keeps their choice. Low and up keep it.
 
+## Bounty pavilions: clay-brick roof (2026-10-22)
+Aaron: "Bounty boards structure looks great but replace the nether bricks. They're out of place." He picked clay brick
+(over spruce, dark oak and deepslate tiles): the roof stays red, so "red-roofed pavilions with yellow flags" still holds,
+in a material villages use. New pavilions are built with brick stairs and a brick cap; standing ones are re-roofed once
+(`peacock_board_roofs_brick`), block for block, only where the nether brick is still in place.
+
