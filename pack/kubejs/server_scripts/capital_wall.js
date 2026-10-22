@@ -8,7 +8,7 @@
 // existed gets the gates cut into its standing wall on the next start (`peacock_capital_wall_gates`).
 // The wall is HEIGHT blocks of stone bricks (some mossy, some cracked) on a foundation that fills down through
 // water, plants and soft ground, capped with a stone brick wall; a lantern post every PILLAR_EVERY blocks and a
-// taller tower at each corner of the outline. Trees in the way are cut through.
+// taller tower at each corner of the outline. Trees in the way are cut through, and notched where they hang over it.
 //
 // The work is spread over server ticks (COLUMNS_PER_TICK) so the server never stalls. `peacock_capital_wall2` in
 // server persistentData marks it done; `/peacock wall` (op) builds it again in place (harmless).
@@ -23,8 +23,26 @@ const MARGIN = 5
 const HEIGHT = 5
 const PILLAR_EVERY = 8
 const COLUMNS_PER_TICK = 40
-const SOFT = /^minecraft:(air|cave_air|void_air|grass|tall_grass|fern|large_fern|snow|vine|dead_bush|sweet_berry_bush|.*_leaves|.*_log|.*_wood|.*_sapling|.*_carpet|dandelion|poppy|blue_orchid|allium|azure_bluet|.*_tulip|oxeye_daisy|cornflower|lily_of_the_valley|sunflower|lilac|rose_bush|peony|.*mushroom|lily_pad|seagrass|tall_seagrass|kelp|kelp_plant)$/
+// What the ground scan passes through. Until 2026-10-22 only vanilla names counted, so a tree from another mod
+// (Biomes O' Plenty at the town's edge), a bee nest or a huge mushroom read as ground and the wall went up on the
+// canopy (Aaron: "The capital walls gen ontop of threes"). Now any mod's leaves, logs, wood, saplings and carpets,
+// those vanilla extras, and anything tagged leaves, logs, saplings, flowers or replaceable-by-trees.
+const SOFT = /^(minecraft:(air|cave_air|void_air|grass|tall_grass|fern|large_fern|snow|vine|dead_bush|sweet_berry_bush|dandelion|poppy|blue_orchid|allium|azure_bluet|oxeye_daisy|cornflower|lily_of_the_valley|sunflower|lilac|rose_bush|peony|lily_pad|seagrass|tall_seagrass|kelp|kelp_plant|bee_nest|cocoa|azalea|flowering_azalea|mangrove_roots|bamboo|pink_petals|glow_lichen|hanging_roots|mushroom_stem|brown_mushroom_block|red_mushroom_block)|[a-z0-9_.-]+:[a-z0-9_/.-]*(_leaves|_log|_wood|_sapling|_carpet|_tulip|mushroom))$/
+const SOFT_TAGS = ['minecraft:leaves', 'minecraft:logs', 'minecraft:saplings', 'minecraft:flowers', 'minecraft:replaceable_by_trees']
+// tree material: cut where it overhangs the wall, and the sign of a wall built on a canopy (repairTreeTops)
+const TREE = /^([a-z0-9_.-]+:[a-z0-9_/.-]*(_leaves|_log|_wood)|minecraft:(bee_nest|mushroom_stem|brown_mushroom_block|red_mushroom_block|mangrove_roots))$/
+const WALL = /^minecraft:(stone_bricks|mossy_stone_bricks|cracked_stone_bricks|stone_brick_wall|lantern)$/
+const TREES_FIXED = 'peacock_capital_wall_trees'
 var running = false
+
+function hasAnyTag(b, tags) {
+  try { for (var t = 0; t < tags.length; t++) if (b.hasTag(tags[t])) return true } catch (e) { }
+  return false
+}
+// water stays ground (the wall stands on a pond's surface and its foundation fills down), though replaceable_by_trees
+// lists it
+function soft(b) { var id = String(b.id); return id !== 'minecraft:water' && (SOFT.test(id) || hasAnyTag(b, SOFT_TAGS)) }
+function tree(b) { return TREE.test(String(b.id)) || hasAnyTag(b, ['minecraft:leaves', 'minecraft:logs']) }
 
 function capitalStart(level) {
   var Registries = Java.loadClass('net.minecraft.core.registries.Registries')
@@ -161,7 +179,7 @@ function brick(r) {
 // first air block above the ground in this column (water counts as ground), or null
 function groundAt(level, x, z, top, bottom) {
   for (var y = top; y > bottom; y--) {
-    if (!SOFT.test(String(level.getBlock(x, y, z).id))) return y + 1
+    if (!soft(level.getBlock(x, y, z))) return y + 1
   }
   return null
 }
@@ -198,7 +216,7 @@ function gatePath(level, p, site) {
       var id = String(level.getBlock(px, yg - 1, pz).id)
       if (/^minecraft:(grass_block|dirt|coarse_dirt|podzol|rooted_dirt|mycelium)$/.test(id)) { level.getBlock(px, yg - 1, pz).set('minecraft:dirt_path'); n++ }
       var above = String(level.getBlock(px, yg, pz).id)
-      if (above !== 'minecraft:air' && SOFT.test(above) && !/_log$|_wood$/.test(above)) { level.getBlock(px, yg, pz).set('minecraft:air'); n++ }
+      if (above !== 'minecraft:air' && soft(level.getBlock(px, yg, pz)) && !/_log$|_wood$/.test(above)) { level.getBlock(px, yg, pz).set('minecraft:air'); n++ }
     }
     if (x === g.x && z === g.z) break
     var e2 = 2 * err
@@ -217,8 +235,8 @@ function column(level, c, i, top, bottom, rng) {
   // foundation: water counts as ground for the scan above, so a wall over a pond stands on the surface; fill
   // the water (and anything soft under it) with stone bricks down to the bed, at most 8 deep
   for (var fy = yg - 1; fy > yg - 9; fy--) {
-    var id = String(level.getBlock(c.x, fy, c.z).id)
-    if (id !== 'minecraft:water' && !SOFT.test(id)) break
+    var fb = level.getBlock(c.x, fy, c.z)
+    if (String(fb.id) !== 'minecraft:water' && !soft(fb)) break
     set(fy, 'minecraft:stone_bricks')
   }
   var pillar = c.corner || c.post || i % PILLAR_EVERY === 0
@@ -226,7 +244,44 @@ function column(level, c, i, top, bottom, rng) {
   for (var wy = yg; wy < h; wy++) set(wy, brick(rng()))
   if (pillar) set(h, 'minecraft:lantern', { hanging: 'false' })
   else set(h, 'minecraft:stone_brick_wall')
+  // a notch through any tree hanging over the wall, so leaves never sit on the cap
+  for (var ty = h + 1; ty <= h + 12 && tree(level.getBlock(c.x, ty, c.z)); ty++) set(ty, 'minecraft:air')
   return n
+}
+
+// A wall built before 2026-10-22 may stand on a canopy where the old scan took leaves for ground. For each column:
+// skip air and tree from the top, walk down the wall's own blocks, and if what they stand on is tree, take that
+// stretch of wall down and build the column again on the real ground. Columns standing on ground are not touched.
+function repairColumn(level, c, i, p, rng) {
+  if (c.gate) return 0
+  var y = p.top, b
+  for (; y > p.bottom; y--) { b = level.getBlock(c.x, y, c.z); if (String(b.id) !== 'minecraft:air' && !tree(b)) break }
+  if (y <= p.bottom || !WALL.test(String(level.getBlock(c.x, y, c.z).id))) return 0
+  var wTop = y
+  for (; y > p.bottom && WALL.test(String(level.getBlock(c.x, y, c.z).id)); y--) { }
+  if (!tree(level.getBlock(c.x, y, c.z))) return 0
+  for (var yy = wTop; yy > y; yy--) level.getBlock(c.x, yy, c.z).set('minecraft:air')
+  column(level, c, i, p.top, p.bottom, rng)
+  return 1
+}
+
+function repairTreeTops(server, log, done) {
+  var level = server.overworld()
+  var p = plan(level)
+  if (!p) { done(); return }
+  var seed = (p.cols[0].x * 37 + p.cols[0].z) >>> 0
+  var rng = () => { seed = (seed * 1664525 + 1013904223) >>> 0; return seed / 4294967296 }
+  var i = 0, fixed = 0
+  var step = () => {
+    try {
+      var end = Math.min(i + COLUMNS_PER_TICK, p.cols.length)
+      for (; i < end; i++) fixed += repairColumn(level, p.cols[i], i, p, rng)
+      if (i < p.cols.length) { server.scheduleInTicks(1, step); return }
+      log('wall: ' + (fixed ? fixed + ' column(s) that stood on trees rebuilt on the ground' : 'no column stood on a tree'))
+      done()
+    } catch (e) { log('wall: tree repair failed — ' + e) }
+  }
+  step()
 }
 
 function cutGates(level, p) {
@@ -287,8 +342,18 @@ ServerEvents.loaded(event => {
   server.scheduleInTicks(160, () => {
     try {
       if (pd.getBoolean(DONE)) { if (addGates(server, log)) pd.putBoolean(GATES, true) }
-      else build(server, log, ok => { if (ok) { pd.putBoolean(DONE, true); pd.putBoolean(GATES, true) } })
+      else build(server, log, ok => { if (ok) { pd.putBoolean(DONE, true); pd.putBoolean(GATES, true); pd.putBoolean(TREES_FIXED, true) } })
     } catch (e) { console.error('[peacock] wall: failed — ' + e) }
+  })
+})
+
+ServerEvents.loaded(event => {
+  var server = event.server
+  var pd = server.persistentData
+  if (!pd.getBoolean(DONE) || pd.getBoolean(TREES_FIXED)) return   // a wall built from now on is built right
+  server.scheduleInTicks(200, () => {
+    try { repairTreeTops(server, m => console.info('[peacock] ' + m), () => pd.putBoolean(TREES_FIXED, true)) }
+    catch (e) { console.error('[peacock] wall: tree repair failed — ' + e) }
   })
 })
 
@@ -300,7 +365,7 @@ ServerEvents.commandRegistry(event => {
       .executes(ctx => {
         var src = ctx.source
         var log = m => { console.info('[peacock] ' + m); src.sendSystemMessage(Text.gray(m)) }
-        try { return build(src.server, log, ok => { if (ok) { src.server.persistentData.putBoolean(DONE, true); src.server.persistentData.putBoolean(GATES, true) } }) ? 1 : 0 }
+        try { return build(src.server, log, ok => { if (ok) { var d = src.server.persistentData; d.putBoolean(DONE, true); d.putBoolean(GATES, true); d.putBoolean(TREES_FIXED, true) } }) ? 1 : 0 }
         catch (e) { src.sendSystemMessage(Text.red('wall failed: ' + e)); return 0 }
       })))
 })

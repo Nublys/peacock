@@ -1299,3 +1299,12 @@ Aaron: "Bounty boards structure looks great but replace the nether bricks. They'
 in a material villages use. New pavilions are built with brick stairs and a brick cap; standing ones are re-roofed once
 (`peacock_board_roofs_brick`), block for block, only where the nether brick is still in place.
 
+## The capital wall no longer stands on trees (2026-10-22)
+Aaron: "The capital walls gen ontop of threes." The wall's ground scan only skipped blocks named `minecraft:…`, so
+another mod's tree (Biomes O' Plenty borders the capital's biomes, and the wall runs MARGIN blocks outside the town),
+a bee nest or a huge mushroom read as ground and the column went up on the canopy. The scan now skips any mod's
+leaves, logs, wood, saplings and carpets, those vanilla extras, and anything tagged leaves, logs, saplings, flowers
+or replaceable-by-trees (water stays ground, so walls over ponds still stand on the surface). Leaves hanging over a
+finished column are notched out. Walls already standing are checked once (`peacock_capital_wall_trees`): a column
+whose stones rest on tree is taken down and rebuilt on the ground; every other column is left as it is.
+
