@@ -1392,10 +1392,6 @@ file = "config/visualworkbench-client.toml"
 hash = "090cf77a65d58c12bc3e95d79f04a1f81f8859dd46cc66b82e92fcf2e2a995f1"
 
 [[files]]
-file = "config/watut-server.toml"
-hash = "fcadbee111b9b38fb226af6340521078bf429e5414c0090e0019c41bf9d28b35"
-
-[[files]]
 file = "config/waveycapes.json"
 hash = "1da99d26f48e54631db80aecf731bd0e107a4e6e92db46964491bf0bb104f13e"
 
@@ -1622,7 +1618,7 @@ hash = "a703bffab3a695acf0b1d0581f2b70bcb7797338dd88509be9ccedc15f56af86"
 
 [[files]]
 file = "kubejs/server_scripts/sleep_afk.js"
-hash = "5ae37431f1d4b20e9e590406b123a5229165ecd1ba5a8787e5e041d46e934457"
+hash = "dfba7091add1bda347777cb9a5a534920540f1856c691ab52d644224e0e67498"
 
 [[files]]
 file = "kubejs/server_scripts/spyglass_zoom.js"
@@ -1815,11 +1811,6 @@ metafile = true
 [[files]]
 file = "mods/controlling.pw.toml"
 hash = "cfb358f8257a2b5d90d5974c2ca1b897a01221005a6893f43cbe3d3003130873"
-metafile = true
-
-[[files]]
-file = "mods/coroutil.pw.toml"
-hash = "b2c7739b56ef71f50a86658cfa67375796beafd391c4dbe26a5de8cd92b9b685"
 metafile = true
 
 [[files]]
@@ -2553,11 +2544,6 @@ hash = "9066030f560c338dbc6c4067159fbcf1e37185da25ec5b29a77d3b484272059c"
 metafile = true
 
 [[files]]
-file = "mods/what-are-they-up-to.pw.toml"
-hash = "c557d1b26559ef987c229187d2f2705616e78179ce04fa1c96cc3d76a1cdf1b5"
-metafile = true
-
-[[files]]
 file = "mods/workshop-for-handsome-adventurer.pw.toml"
 hash = "d76b5786ce8680cf96da26a78c20add2a2e4cd5a8dd43ea3592d242760bd5dc8"
 metafile = true
@@ -2812,7 +2798,7 @@ hash = "b9853a45bef072affcbd161da8418f1c0825bfa43e55a6db5473d89111f261da"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/rules/what_we_dont_do.json"
-hash = "ff086216038ea659a1948e20ebe50b87b511d260de53b5e2cb6c40fa605e6053"
+hash = "4726877b626ee6064732cc4027a7b7bd5308d40f80283ee5675a6b486e863229"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/start/animals.json"

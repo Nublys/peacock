@@ -4,8 +4,8 @@
 // the night (or storm) skips, and the action bar counts "x/y players sleeping" for everyone. The pack sets it on
 // every start from kubejs/config/peacock.json (sleepPercent; -1 leaves the world's own value alone).
 //
-// Idle players are shown by What Are They Up To since 2026-10-18 (a "Zz" in the tab list and a sleeping player in
-// the world after five minutes still); the pack's own grey "[AFK]" team is gone, and removed from older worlds here.
+// The pack's old grey "[AFK]" team is gone (What Are They Up To replaced it 2026-10-18, and was itself removed
+// 2026-10-22); the team is still removed from older worlds here.
 //
 // KubeJS loads every server script into one shared scope, so the body lives in a function scope.
 ;(() => {

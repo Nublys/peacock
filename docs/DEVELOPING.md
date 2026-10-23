@@ -14,7 +14,7 @@ Everything you can edit lives in `pack/`.
 pack/                 the packwiz pack — this is what gets installed
   pack.toml           name, versions, index hash
   index.toml          every file below, hashed (regenerate with `packwiz refresh`)
-  mods/*.pw.toml      one file per mod (182; Spark, LuckPerms, Dynamic View, Noisium, Chunk Pregenerator server-only)
+  mods/*.pw.toml      one file per mod (180; Spark, LuckPerms, Dynamic View, Noisium, Chunk Pregenerator server-only)
   shaderpacks/        Complementary Reimagined (the only shader; Euphoria Patcher builds the high/ultra variant from it)
   resourcepacks/      Fresh Animations (+Details, Objects), Optimized Bushy Leaves over Better Leaves, Fast Better Grass, rainbow's foliage, 3D Default, Cubic Sun & Moon,
                       Enhanced Boss Bars, xali's books/potions, Low On Fire — on by default (the order is in tools/gen-profiles.py)

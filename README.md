@@ -150,9 +150,7 @@ everyone. The player locator bar shows friends' direction above the hotbar.
 
 ### Sleeping, idling and the tab list
 Sleep is a vote: when **half** the players online are in bed the night skips, and the action bar counts who is
-sleeping. You can see what other players are up to: a bubble while they type, their menu while they have one
-open, and after five minutes idle they doze off where they stand with a "Zz" in the tab list (What Are They Up
-To). The tab list also shows the server's TPS and everyone's ping — 20 is healthy.
+sleeping. The tab list also shows the server's TPS and everyone's ping — 20 is healthy.
 
 ### Zooming
 **Z** zooms (Just Zoom; scroll to change magnification), but only while you carry a **spyglass** — anywhere in

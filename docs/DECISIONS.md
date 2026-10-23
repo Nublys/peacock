@@ -1384,3 +1384,8 @@ now uses the `uuid` property (as achievements.js and blueprints.js always did) a
 Recruits manual also slipped through on that fresh world (the addon gives it later than 2 s after login), so
 no_vr_manual.js now looks again at 10 s and 30 s.
 
+## What Are They Up To removed (2026-10-22)
+Aaron: "Remove the mod that sees into players inventories and when they open chests. It's extra." Watut (and its
+library CoroUtil, which nothing else needs) showed other players' open menus — chests, inventories — and typing
+bubbles in the world, plus the idle "Zz". Gone, with its server config; idle players are simply not marked now.
+
