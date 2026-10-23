@@ -1389,3 +1389,10 @@ Aaron: "Remove the mod that sees into players inventories and when they open che
 library CoroUtil, which nothing else needs) showed other players' open menus — chests, inventories — and typing
 bubbles in the world, plus the idle "Zz". Gone, with its server config; idle players are simply not marked now.
 
+## Anthracite drops ordinary coal (2026-10-22)
+Aaron: anthracite "has no real use … that would be fine if it could be used in 100% of the places coal could be used."
+It was in `#minecraft:coals` (fuel, campfires) but the torch recipe and most Create/Ironworks recipes name
+`minecraft:coal`. Its deposit (a layer at Y -64 to -52) is unchanged; its two ores and its sample now drop vanilla coal
+(loot tables in the pack datapack, Silk Touch and Fortune as before), and anthracite already in inventories crafts into
+coal one for one (`peacock:anthracite_to_coal`). Lignite and bituminous coal are untouched.
+

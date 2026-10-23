@@ -303,7 +303,7 @@ ENTRIES = {
         ]),
         ("ores_deep", "Deep Ores", "geolosys:limonite_ore", [
             txt(B("Beryl") + " (green): emeralds. Y -56 to 19. Trade, and the Blueprint charters.",
-                B("Bituminous coal") + ": Y -32 to -16. Fuel.$(br)" + B("Anthracite") + ": hard coal. Y -64 to -52. Fuel."),
+                B("Bituminous coal") + ": Y -32 to -16. Fuel.$(br)" + B("Anthracite") + ": Y -64 to -52. Drops ordinary coal."),
             txt(B("Limonite") + " (yellow): nickel " + B("and") + " iron. Y -48 to -32, deepslate only. The only nickel: constantan (copper + nickel), invar (iron + nickel). Armorers buy it.",
                 B("Teallite") + ": tin, in deep dikes shared with beryl. Y -52 to -40."),
             txt(B("Kimberlite") + " (cyan flecks): diamonds. Y -64 to 10.",

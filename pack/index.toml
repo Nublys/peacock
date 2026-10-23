@@ -636,6 +636,18 @@ file = "config/paxi/datapacks/peacock/data/geolosys/deposits/ore/sphalerite.json
 hash = "a2776f83e6de7d64ea03f62b16a08b6c4714d7ea87fd89561f6d8557731c6a2a"
 
 [[files]]
+file = "config/paxi/datapacks/peacock/data/geolosys/loot_tables/blocks/anthracite_coal_ore.json"
+hash = "3dc4841dcc6294ad57e24b3a605065dd99437d1f10effba39f0f7b40cfd4de3e"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/geolosys/loot_tables/blocks/anthracite_coal_ore_sample.json"
+hash = "cb15d6c6626d870d14ddff6bb32e54f68e66792d39a1dc071f8139091d12af55"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/geolosys/loot_tables/blocks/deepslate_anthracite_coal_ore.json"
+hash = "bde0a8da0bf1c8e46ee0fd0249e25538c25ab76695b3889afbf442deeba92f48"
+
+[[files]]
 file = "config/paxi/datapacks/peacock/data/minecraft/worldgen/structure_set/villages.json"
 hash = "c0b9e9c962b343621485120d68f08f569dc16ae366e9014a555bd316338bf117"
 
@@ -1594,7 +1606,7 @@ hash = "9a12102cf2e55dc832c1a8878cc5a1e5bab70f7e0086902671fc2767db33b480"
 
 [[files]]
 file = "kubejs/server_scripts/geolosys_create.js"
-hash = "437073ce1974cd48925c985d6ce079c226555a12e6437ad460b7b6f7ef2fd62c"
+hash = "72fcdd041fa14fb62eb09e20cf4d7a75b5588e7035b758eec75f7071cef07182"
 
 [[files]]
 file = "kubejs/server_scripts/journals.js"
@@ -2766,7 +2778,7 @@ hash = "0869a03c119fa13044f40f23bffce349b30d150ff522c4ade44b97bdbbc1b2d3"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/ore/ores_deep.json"
-hash = "93cd531ca187b419951ac9a5d599a7a7a50e7b185b7c365a59874d6066481ff8"
+hash = "fe4487bc10a1a60f7bcefa01bbd1634147f2d135e5b44e530467e68a97fd0ff2"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/ore/ores_middle.json"

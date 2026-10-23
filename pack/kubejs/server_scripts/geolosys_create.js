@@ -18,6 +18,10 @@ ServerEvents.recipes(event => {
   const ZINC_CLUSTER = 'geolosys:zinc_cluster'
 
   event.smelting('create:zinc_ingot', ZINC_CLUSTER).xp(0.7).cookingTime(200).id('peacock:smelting/zinc_ingot_from_cluster')
+  // Anthracite is plain coal now (2026-10-22, Aaron: fine "if it could be used in 100% of the places coal could be
+  // used" — torches take only vanilla coal): its ores drop minecraft:coal (loot tables in the pack datapack), and any
+  // anthracite already mined crafts into coal one for one.
+  event.shapeless('minecraft:coal', ['geolosys:anthracite_coal']).id('peacock:anthracite_to_coal')
   event.blasting('create:zinc_ingot', ZINC_CLUSTER).xp(0.7).cookingTime(100).id('peacock:blasting/zinc_ingot_from_cluster')
 
   if (Item.exists('geolosys:zinc_ingot')) {

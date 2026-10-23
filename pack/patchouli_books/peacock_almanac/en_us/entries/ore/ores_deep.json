@@ -6,7 +6,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(bold)Beryl$() (green): emeralds. Y -56 to 19. Trade, and the Blueprint charters.$(br2)$(bold)Bituminous coal$(): Y -32 to -16. Fuel.$(br)$(bold)Anthracite$(): hard coal. Y -64 to -52. Fuel."
+      "text": "$(bold)Beryl$() (green): emeralds. Y -56 to 19. Trade, and the Blueprint charters.$(br2)$(bold)Bituminous coal$(): Y -32 to -16. Fuel.$(br)$(bold)Anthracite$(): Y -64 to -52. Drops ordinary coal."
     },
     {
       "type": "patchouli:text",
