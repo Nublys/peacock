@@ -1378,4 +1378,9 @@ sources (bounties, trades, depots, pillager loot) and almost no sinks after char
 - Untested in play at the time of writing: the first server start places the Clerk; `/peacock projects finish` walks
   the buildings for a test. `#peacock:ruins_abandoned` lists the `ruin_a` structures of `peacock-ruins.zip`; regenerate
   it if `gen-ruins.py` changes the ruin set.
+First server run (2026-10-22 20:02): the Clerk was placed (643,94,-5616), but steward.js failed on login and logout —
+"Cannot find function getUUID in object ServerPlayer": KubeJS does not expose `getUUID()` by that name. Every new script
+now uses the `uuid` property (as achievements.js and blueprints.js always did) and `player.selectedSlot`. The Village
+Recruits manual also slipped through on that fresh world (the addon gives it later than 2 s after login), so
+no_vr_manual.js now looks again at 10 s and 30 s.
 

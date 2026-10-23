@@ -106,7 +106,7 @@ function profOf(v) {
 
 function capCure(v, player) {
   if (!GossipType) return
-  var gossips = v.getGossips(), uuid = player.getUUID()
+  var gossips = v.getGossips(), uuid = player.uuid
   var all = t => true
   var before = gossips.getReputation(uuid, all)
   gossips.remove(uuid, GossipType.MAJOR_POSITIVE)

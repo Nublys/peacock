@@ -27,7 +27,9 @@ PlayerEvents.loggedIn(event => {
     kept.putBoolean('village_recruits_received_book', true)
     data.put('PlayerPersisted', kept)
   } catch (e) { console.warn('[peacock] vr manual: could not mark ' + p.username + ' — ' + e) }
-  event.server.scheduleInTicks(40, () => {
+  // the addon hands the book over some time after login on a fresh world (2026-10-22: "You received the Village
+  // Enlistment Manual" and no removal at 2 s), so look again at 10 s and 30 s
+  ;[40, 200, 600].forEach(t => event.server.scheduleInTicks(t, () => {
     try {
       var inv = p.inventory
       var removed = 0
@@ -37,6 +39,6 @@ PlayerEvents.loggedIn(event => {
       }
       if (removed > 0) console.info('[peacock] vr manual: removed ' + removed + ' from ' + p.username)
     } catch (e) { console.warn('[peacock] vr manual: ' + e) }
-  })
+  }))
 })
 })()

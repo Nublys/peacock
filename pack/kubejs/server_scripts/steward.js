@@ -40,7 +40,7 @@ function online(server, owner) { return !!server.getPlayerList().getPlayer(UUID.
 ItemEvents.rightClicked('peacock:steward_contract', event => {
   var player = event.player, server = player.server
   if (player.level.isClientSide()) return
-  var me = String(player.getUUID().toString()), c = all(server)
+  var me = String(player.uuid), c = all(server)
   if (c.contains(me)) {
     var old = c.getCompound(me)
     player.tell(Text.gold('You already employ a steward, at ' + old.getInt('x') + ', ' + old.getInt('y') + ', ' + old.getInt('z') + '. Dismiss him first.'))
@@ -61,10 +61,10 @@ ItemEvents.rightClicked('peacock:steward_contract', event => {
 R.steward = {
   name: 'Steward', color: 'gold', profession: 'minecraft:librarian',
   menu: (player, npc, api) => {
-    var server = player.server, owner = byNpc(server, String(npc.getUUID().toString()))
+    var server = player.server, owner = byNpc(server, String(npc.uuid))
     if (!owner) { api.say(player, 'Steward', 'gold', 'My employer has left me. I am only waiting now.'); return }
     var r = all(server).getCompound(owner)
-    if (owner !== String(player.getUUID().toString())) { api.say(player, 'Steward', 'gold', 'I keep ' + r.getString('name') + "'s land. Not yours."); return }
+    if (owner !== String(player.uuid)) { api.say(player, 'Steward', 'gold', 'I keep ' + r.getString('name') + "'s land. Not yours."); return }
     var purse = r.getInt('purse')
     api.say(player, 'Steward', 'gold', 'My purse holds ' + purse + ' emerald' + (purse === 1 ? '' : 's') + ': enough to keep your ' + CHUNKS + ' chunks running about ' + hours(purse) + ' hours while you are away.')
     player.tell(api.line([
@@ -75,7 +75,7 @@ R.steward = {
   actions: {},
 }
 function pay(player, npc, n, api) {
-  var server = player.server, me = String(player.getUUID().toString()), owner = byNpc(server, String(npc.getUUID().toString()))
+  var server = player.server, me = String(player.uuid), owner = byNpc(server, String(npc.uuid))
   if (owner !== me) return
   if (n === 'all') n = api.countEmeralds(player)
   if (n <= 0 || !api.take(player, n)) { api.poor(player, npc, n || 1); return }
@@ -88,19 +88,19 @@ R.steward.actions.pay8 = (player, npc, arg, api) => pay(player, npc, 8, api)
 R.steward.actions.pay32 = (player, npc, arg, api) => pay(player, npc, 32, api)
 R.steward.actions.payall = (player, npc, arg, api) => pay(player, npc, 'all', api)
 R.steward.actions.dismiss = (player, npc, arg, api) => {
-  var server = player.server, me = String(player.getUUID().toString())
-  if (byNpc(server, String(npc.getUUID().toString())) !== me) return
+  var server = player.server, me = String(player.uuid)
+  if (byNpc(server, String(npc.uuid)) !== me) return
   var c = all(server), r = c.getCompound(me), back = Math.floor(r.getInt('purse') / 2)
   if (r.getBoolean('loaded')) forceload(server, r, false)
   c.remove(me); store(server, c)
-  api.forget(server, String(npc.getUUID().toString()))
+  api.forget(server, String(npc.uuid))
   npc.discard()
   if (back > 0) player.give(Item.of('minecraft:emerald', back))
   player.tell(Text.gold('Your steward bows and leaves' + (back ? ', returning ' + back + ' emeralds.' : '.')))
 }
 
 PlayerEvents.loggedOut(event => {
-  var player = event.player, server = player.server, me = String(player.getUUID().toString()), c = all(server)
+  var player = event.player, server = player.server, me = String(player.uuid), c = all(server)
   if (!c.contains(me)) return
   var r = c.getCompound(me)
   if (r.getInt('purse') <= 0) return
@@ -110,7 +110,7 @@ PlayerEvents.loggedOut(event => {
 })
 
 PlayerEvents.loggedIn(event => {
-  var player = event.player, server = player.server, me = String(player.getUUID().toString()), c = all(server)
+  var player = event.player, server = player.server, me = String(player.uuid), c = all(server)
   if (!c.contains(me)) return
   var r = c.getCompound(me)
   var since = Number(r.getLong('since')), spent = r.getInt('spent'), was = r.getBoolean('loaded')
@@ -151,7 +151,7 @@ EntityEvents.death(event => {
   var e = event.entity
   if (!e || !e.tags || !e.tags.contains('peacock_npc_steward')) return
   try {
-    var server = e.level.server, npcId = String(e.getUUID().toString()), owner = byNpc(server, npcId)
+    var server = e.level.server, npcId = String(e.uuid), owner = byNpc(server, npcId)
     global.PEACOCK_NPC.forget(server, npcId)
     if (!owner) return
     var c = all(server), r = c.getCompound(owner)

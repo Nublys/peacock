@@ -1570,15 +1570,15 @@ hash = "23d3267a57c50a4a0b982d4d4842d6e0e875eef3b119c31ff353ff7b9a21c2f1"
 
 [[files]]
 file = "kubejs/server_scripts/capital_npcs.js"
-hash = "f35510760b973f23da63db47d7cca77d558347fdcafc81154e9c8eb98cb0c043"
+hash = "dcb84ad6a942a0fab1626279817c85dd879c0ebc753057aa7aae77a026ec0034"
 
 [[files]]
 file = "kubejs/server_scripts/capital_projects.js"
-hash = "8f1d8a7f3c415ee4c2906f446848d29b25729a359062eafd39ad3bb32dc6e708"
+hash = "7ac5696b916989b45c9b98d43c103e79885c1997c9a69372a5ff9b9d2b3f771b"
 
 [[files]]
 file = "kubejs/server_scripts/capital_services.js"
-hash = "657a5e8a9351495e91c18d94f1f68f6cb8b65ab35f190103083e45ba9db332d8"
+hash = "d6b8806521cacbab8697ce90b92b3afc8aa4fdcbaf64a3e8e89c89ebfeb5dd80"
 
 [[files]]
 file = "kubejs/server_scripts/capital_wall.js"
@@ -1610,7 +1610,7 @@ hash = "e3827ef1cf03e58905d4c80545cd08194b9187fc7fdb0576ae61c104b58a7fbe"
 
 [[files]]
 file = "kubejs/server_scripts/no_vr_manual.js"
-hash = "fa5abef14f5e188ac6734d733f38be7f063e11db1f73f0cb9936817723b2c409"
+hash = "7c0cd224ece10459491e004da8dd0d45d39ad98ce4b6b7256b125e3ebd234aa7"
 
 [[files]]
 file = "kubejs/server_scripts/profile_command.js"
@@ -1630,7 +1630,7 @@ hash = "8bc7ed088af268bf38cf1eddfa6867ae0291d468e109844cc8439d079dd2c1ed"
 
 [[files]]
 file = "kubejs/server_scripts/steward.js"
-hash = "f1c49314ea239418a77413ac43cb0b68fd66f58317341b8a386740355d75e567"
+hash = "4653eaca487246316c0d4a6d35fe2bcbb0912a4b1fe35791bd73f249e9776de6"
 
 [[files]]
 file = "kubejs/server_scripts/trading_depot_town.js"
@@ -1642,7 +1642,7 @@ hash = "a0b8b788b06450f53a96ac9e325bd8c6449edd8ecfd1d5deb50e50a43f34c2d2"
 
 [[files]]
 file = "kubejs/server_scripts/villager_trades.js"
-hash = "f378ca1580055baee923471d6390f5737c7d831fb6bcb4b63b9f199d87bdd97c"
+hash = "a4552490f9cf8e3e42e16b75dff77b9566bc79b98dbb06ee62578055263b3cb0"
 
 [[files]]
 file = "kubejs/server_scripts/welcome.js"

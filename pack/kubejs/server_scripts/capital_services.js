@@ -180,7 +180,7 @@ R.physician = {
       if (list.isEmpty()) { api.say(player, 'Physician', 'green', 'Bring the poor soul here first, on a lead if you must.'); return }
       if (!api.take(player, 8)) { api.poor(player, npc, 8); return }
       var z = list.get(0)
-      player.server.runCommandSilent('data merge entity ' + String(z.getUUID().toString()) + ' {ConversionTime:200}')
+      player.server.runCommandSilent('data merge entity ' + String(z.uuid) + ' {ConversionTime:200}')
       api.say(player, 'Physician', 'green', 'Ten seconds, and they will be themselves again.')
     },
   },
@@ -211,7 +211,7 @@ R.undertaker = {
     fetch: (player, npc, arg, api) => {
       var d = lastDeath(player), gy = pos(player.server, 'peacock_graveyard')
       if (!d || !gy) { api.say(player, 'Undertaker', 'gray', 'Nothing to fetch.'); return }
-      var price = fetchPrice(player, d), server = player.server, me = String(player.getUUID().toString()), name = player.username
+      var price = fetchPrice(player, d), server = player.server, me = String(player.uuid), name = player.username
       if (!api.take(player, price)) { api.poor(player, npc, price); return }
       api.say(player, 'Undertaker', 'gray', 'I will send the cart. Wait by the graveyard.')
       server.runCommandSilent('execute in ' + d.dim + ' run forceload add ' + d.x + ' ' + d.z)
@@ -225,7 +225,7 @@ R.undertaker = {
             if (String(e.type) !== 'corpse:corpse') continue
             var owner = e.getCorpseUUID()
             if (!owner.isPresent() || String(owner.get().toString()) !== me) continue
-            server.runCommandSilent('execute in minecraft:overworld run tp ' + String(e.getUUID().toString()) + ' ' + gy.x + ' ' + gy.y + ' ' + gy.z)
+            server.runCommandSilent('execute in minecraft:overworld run tp ' + String(e.uuid) + ' ' + gy.x + ' ' + gy.y + ' ' + gy.z)
             found++
           }
         } catch (e2) { console.warn('[peacock] undertaker: ' + e2) }
@@ -254,7 +254,7 @@ function lastPos(server, uuid) {
 PlayerEvents.loggedOut(event => {
   try {
     var data = event.player.server.persistentData, c = data.getCompound(LASTPOS)
-    c.putString(String(event.player.getUUID().toString()), Math.round(event.player.x) + ',' + Math.round(event.player.z))
+    c.putString(String(event.player.uuid), Math.round(event.player.x) + ',' + Math.round(event.player.z))
     data.put(LASTPOS, c)
   } catch (e) { }
 })
@@ -272,7 +272,7 @@ R.courier = {
       var prof = server.getProfileCache().get(name)
       if (!name || !prof.isPresent()) { api.say(player, 'Courier', 'yellow', 'Nobody by that name has ever come through the capital.'); return }
       var to = String(prof.get().getId().toString())
-      if (to === String(player.getUUID().toString())) { api.say(player, 'Courier', 'yellow', 'Just carry it yourself.'); return }
+      if (to === String(player.uuid)) { api.say(player, 'Courier', 'yellow', 'Just carry it yourself.'); return }
       var online = server.getPlayerList().getPlayerByName(name)
       var where = online ? { x: online.x, z: online.z } : lastPos(server, to)
       var dist = where ? Math.sqrt((where.x - npc.x) * (where.x - npc.x) + (where.z - npc.z) * (where.z - npc.z)) : 2000

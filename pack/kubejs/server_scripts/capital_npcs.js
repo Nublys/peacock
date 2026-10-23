@@ -163,7 +163,7 @@ global.PEACOCK_NPC = api
 function openMenu(player, npc, role) {
   var r = global.PEACOCK_ROLES[role]
   if (!r || !r.menu) return
-  player.persistentData.putString(TALK, role + '|' + String(npc.getUUID().toString()) + '|' + gameTime(npc.level))
+  player.persistentData.putString(TALK, role + '|' + String(npc.uuid) + '|' + gameTime(npc.level))
   try { r.menu(player, npc, api) } catch (e) { console.warn('[peacock] npc ' + role + ': menu: ' + e); player.tell(Text.red('(' + r.name + ' cannot help right now.)')) }
 }
 

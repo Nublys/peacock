@@ -366,7 +366,7 @@ function donateItems(player, npc, heldOnly, api) {
   var server = player.server, w = works(server), i = current(w)
   if (i < 0) return
   var p = PROJECTS[i], inv = player.inventory, total = 0, slot, k
-  var slots = heldOnly ? [inv.selected] : []
+  var slots = heldOnly ? [player.selectedSlot] : []
   if (!heldOnly) for (slot = 0; slot < 36; slot++) slots.push(slot)
   slots.forEach(sl => {
     var st = inv.getItem(sl)
