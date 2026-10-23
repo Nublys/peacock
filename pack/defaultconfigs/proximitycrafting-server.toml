@@ -1,0 +1,17 @@
+# Peacock (2026-10-23): one storeroom, not the whole base. The table reaches 8 blocks (the mod's default is 6); see
+# docs/DECISIONS.md "Proximity Crafting". Copied into a world's serverconfig/ the first time it loads with the mod.
+
+[proximityCrafting]
+	#Radius in blocks to scan for proximity item handlers around the proximity crafting table.
+	#Range: > 0
+	scanRadius = 8
+	#Minimum number of slots for a container to be considered as an ingredient source.
+	#Range: > 0
+	minSlotCount = 6
+	#Block entity ids excluded from proximity ingredient sources.
+	blockEntityBlacklist = ["minecraft:furnace", "minecraft:blast_furnace", "minecraft:smoker", "minecraft:brewing_stand", "trading_floor:trading_depot"]
+	#Maximum number of recipe units to place in the grid during max-transfer operations.
+	#Range: 1 ~ 4096
+	maxShiftCraftIterations = 64
+	#When true, logs debug information for scanning and recipe filling.
+	debugLogging = false

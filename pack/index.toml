@@ -1356,6 +1356,10 @@ file = "defaultconfigs/ftbessentials-server.snbt"
 hash = "4b37d469babdcddb3554454d93631737c8b1ff2866dc99b005e996b0b4e78ed1"
 
 [[files]]
+file = "defaultconfigs/proximitycrafting-server.toml"
+hash = "6bcb2afc229d65066839dbecddad4ac96bddcab41fb7ca412ecd4bad735eae50"
+
+[[files]]
 file = "justzoom_instance_data/persistence_data.json"
 hash = "4bc3fa413c4508f4680d8d2a3c4b1d95338b5eae23a759d7fc4e6fe93124a9a0"
 preserve = true
@@ -1457,6 +1461,22 @@ file = "kubejs/assets/peacock/textures/item/steward_contract.png"
 hash = "b10e650eafa32c25a9faef58668bf189bb51d888ac4c847696b1343c32ecbe50"
 
 [[files]]
+file = "kubejs/assets/proximitycrafting/textures/block/proximity_crafting_table_bottom.png"
+hash = "7e603e3018aaa84435cc373dd6664b7a481ad26553f078b8ec5721b03cd2f7ba"
+
+[[files]]
+file = "kubejs/assets/proximitycrafting/textures/block/proximity_crafting_table_front.png"
+hash = "00486bccad3e065d33b095960f0970479b9288c334c3c61b9e4a473038699a75"
+
+[[files]]
+file = "kubejs/assets/proximitycrafting/textures/block/proximity_crafting_table_side.png"
+hash = "5666eb221ba032726c2d709606b39640662dbc3cfdf5f495b52c9ea3d590067d"
+
+[[files]]
+file = "kubejs/assets/proximitycrafting/textures/block/proximity_crafting_table_top.png"
+hash = "53a5e906199ecb37c5f47d6ca83a2ea38b288c885ba7c90f1b735326061c45f0"
+
+[[files]]
 file = "kubejs/client_scripts/blueprint_tooltips.js"
 hash = "09d333d76904e58dcfc54bac179a809c34e83ece952f11ab110dd5ea81e575f0"
 
@@ -1494,7 +1514,7 @@ hash = "6c16de3bde6076f6ec0da4ebd480c8735ccf8fa032f4e85e95190172687d008b"
 
 [[files]]
 file = "kubejs/server_scripts/backpack.js"
-hash = "46995d93221a1ca1b9c40eb5ea840a3bd0eb343a1dda100e046f014585e7a470"
+hash = "6927057f3839d18657653a11f9d62c30ea8a1838ff5bba5179eb4951ec805dc7"
 
 [[files]]
 file = "kubejs/server_scripts/blueprints.js"
@@ -1559,6 +1579,10 @@ hash = "7c0cd224ece10459491e004da8dd0d45d39ad98ce4b6b7256b125e3ebd234aa7"
 [[files]]
 file = "kubejs/server_scripts/profile_command.js"
 hash = "f080acf86837aa66c9bc9ead68ef864af9b88aafe9769e6fc0f81f25af5cbe04"
+
+[[files]]
+file = "kubejs/server_scripts/proximity_crafting.js"
+hash = "6f23aa73a78d655b5f669193879835308987d842f49c25fb33d5f5236c2a1d78"
 
 [[files]]
 file = "kubejs/server_scripts/rumour_maps.js"
@@ -2314,6 +2338,11 @@ hash = "294d960c31eb9ba6072eba973af52cf85257cc4ffffb193d9b014fa0185dd46b"
 metafile = true
 
 [[files]]
+file = "mods/proximity-crafting.pw.toml"
+hash = "1984f60ea4048519e82d58020af00ca254afe63dc5122e2d17e40cdda584ecfc"
+metafile = true
+
+[[files]]
 file = "mods/puzzles-lib.pw.toml"
 hash = "57801dcff00d18cb749be4aeb4cefc4075e9f7c23e328fef7a20cbd609e3613d"
 metafile = true
@@ -2708,7 +2737,7 @@ hash = "05e202785c731c0dcd43f901b053b9e447a7203d5b81154ad072533de5d68bd9"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/mods/machines.json"
-hash = "b95ef94b8cffaa3175097a606430d5f3e3358dd32b9d0a4294ad5e48f2d02839"
+hash = "a76e7cd97d6d66ac083bc9973fa9b49d6249586d5b5855143224627d33742046"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/mods/people.json"
@@ -2776,7 +2805,7 @@ hash = "0854520f6959e51536411429a0cc3f4f2775be08074a7fae2109cab8b20472ab"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/start/carrying.json"
-hash = "c52566609ebade681fa48c586955c1c95c2e375e208b43839ced2e4a78a27aca"
+hash = "1b998e18819b706c0fc6cc08fcc09795af1bb3ed2b78bff91eab5dfa35e3d9a0"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/start/first_create.json"

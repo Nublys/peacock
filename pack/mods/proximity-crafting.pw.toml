@@ -1,0 +1,13 @@
+name = "Proximity Crafting"
+filename = "proximitycrafting-1.1.0+forge-1.20.1.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/ZFhd1VFL/versions/Afjehl5n/proximitycrafting-1.1.0%2Bforge-1.20.1.jar"
+hash-format = "sha512"
+hash = "9b0852b928dd19acf8aaadd2499748620b734d22b87ea56b0dc25981758b6e7502481205e474d7d982f283fd61efadef171d993bcfc6cb05d68e9dcffb7b6686"
+
+[update]
+[update.modrinth]
+mod-id = "ZFhd1VFL"
+version = "Afjehl5n"

@@ -10,7 +10,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Trotting Wagons$() and $(bold)Caravans & Convoys$() move goods by horse. $(bold)Storage Drawers$() (+Create compat) are visible bulk storage. $(bold)Workshop$() tables craft from the chests around them. $(bold)Backpacked$() is the backpack; $(bold)Supplementaries$() the sacks, ropes, pulleys and a hundred small things."
+      "text": "$(bold)Trotting Wagons$() and $(bold)Caravans & Convoys$() move goods by horse. $(bold)Storage Drawers$() (+Create compat) are visible bulk storage. $(bold)Proximity Crafting$()'s table crafts from the chests around it; $(bold)Workshop$() adds tables, tool racks and shelves. $(bold)Backpacked$() is the backpack; $(bold)Supplementaries$() the sacks, ropes, pulleys and a hundred small things."
     },
     {
       "type": "patchouli:text",

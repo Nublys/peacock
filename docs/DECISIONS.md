@@ -1417,7 +1417,7 @@ it because Recipe Stages' recipes are crafting recipes.
 ## Backpack: any common metal (2026-10-23)
 Aaron: "update the backpack recipe to also accept metal ingots of a similar value, not just iron." Metal is regional,
 so the two iron ingots in Backpacked's recipe locked out anyone far from iron. `server_scripts/backpack.js` replaces it
-(`peacock:backpack`) with the same shape taking any of `#peacock:backpack_metals` in each metal slot: iron, copper,
+(`peacock:backpack`) with the same shape taking any of `#peacock:common_metals` in each metal slot: iron, copper,
 tin, zinc, lead, nickel, aluminium. Gold, silver, platinum and the alloys are worth more and are left out.
 
 ## Blueprints: what a rung makes claims first (2026-10-23)
@@ -1464,3 +1464,21 @@ on the client; lines reporting a real problem (WARNING, missing, could NOT) stil
 ## Macs: no special case (2026-10-23)
 Aaron: "Please don't do anything specific for the mac just leave things as is." A launcher change that defaulted
 shaders off on macOS was made and reverted before it shipped; Macs get the same tiers as everyone.
+
+## Proximity Crafting (2026-10-23)
+Aaron: "When crafting EMI did not pull from local chests", wanting EMI to show what is craftable from nearby chests "similar
+to games like terraria". The Workshop tables only reach chests next to them, need a name tag in their side slot first,
+and EMI fills only from the one chest tab that is open. Tom's Simple Storage stays out ("does not match the theme").
+**Proximity Crafting** adds one table that reads every container within reach, and EMI's craftable filter and fill
+button work from all of them (checked in the jar: an EMI plugin with a craftable-filter controller). Ansible Crafting
+supports EMI only on Fabric/NeoForge; Nearby Chest Crafting only JEI on Forge.
+- Reach 8 blocks (`defaultconfigs/proximitycrafting-server.toml`; the mod's default is 6): one storeroom, not a base.
+  Furnaces, smokers, blast furnaces, brewing stands and trading depots are not sources.
+- Recipe (`proximity_crafting.js`): crafting table, four chests, four ingots of any common metal
+  (`#peacock:common_metals`, renamed from the backpack's tag, which shares it) instead of four diamonds. The diamond trim
+  is repainted iron (`kubejs/assets/proximitycrafting/textures/block`).
+- Claims: the table reads containers without asking whose they are, so it could reach over a claim border. It can be
+  placed and used only where every claimed chunk in its reach is your team's or an ally's; creative players are exempt.
+- Blueprints: its craft grid is a TransientCraftingContainer tied to its menu, so Recipe Stages finds the player as at a
+  vanilla table (checked in both jars); a locked recipe still refuses to craft. Untested in game.
+- Almanac: Carrying Things explains the table, and the Workshop's name tag.

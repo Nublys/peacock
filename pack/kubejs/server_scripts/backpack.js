@@ -5,19 +5,20 @@
 // iron, string, iron, 3 leather) now takes, in each of the two metal slots, any ingot of the pack's common
 // metals: iron, copper, tin, zinc, lead, nickel or aluminium (two different ones are fine). Gold, silver, platinum
 // and the alloys (bronze, brass, steel, electrum, constantan, invar) are worth more and stay out.
-// Tag: peacock:backpack_metals; recipe peacock:backpack replaces backpacked:backpack.
+// Tag: peacock:common_metals (also used by the Proximity table, proximity_crafting.js); recipe peacock:backpack replaces
+// backpacked:backpack.
 ;(() => {
 const METALS = ['#forge:ingots/iron', '#forge:ingots/copper', 'create_ironworks:tin_ingot', 'create:zinc_ingot',
   'geolosys:lead_ingot', 'geolosys:nickel_ingot', 'geolosys:aluminum_ingot']
 
 ServerEvents.tags('item', event => {
-  METALS.forEach(m => event.add('peacock:backpack_metals', m))
+  METALS.forEach(m => event.add('peacock:common_metals', m))
 })
 
 ServerEvents.recipes(event => {
   event.remove({ id: 'backpacked:backpack' })
   event.shaped('backpacked:backpack', ['LLL', 'SIS', 'LLL'], {
-    L: '#forge:leather', I: '#forge:string', S: '#peacock:backpack_metals',
+    L: '#forge:leather', I: '#forge:string', S: '#peacock:common_metals',
   }).id('peacock:backpack')
 })
 })()

@@ -208,7 +208,10 @@ ENTRIES = {
             txt(B("Shulker boxes") + " are late. Before them: sacks, backpacks, chest minecarts, wagons, ships. Create's chutes and belts move things between machines; wagons move them between towns.",
                 "A " + B("toolbox") + " (Create) holds tools and swaps them into your hand."),
             craft("create:crafting/curiosities/brown_toolbox", "Toolboxes are shared within range: open one and your hotbar can pull from it."),
-            txt(B("Crafting from your chests:") + " the Workshop's crafting tables (any wood) see the chests and barrels around them, and EMI's craftable filter counts what is in them. For a whole storeroom, build the storeroom: vaults, funnels, drawers, and a table in the middle.",
+            txt(B("Crafting from your chests:") + " the " + B("Proximity Crafting Table") + " uses every chest, barrel, drawer and vault within 8 blocks as if it were in your pack. Open it and EMI's craftable filter shows what the room can make; its fill button pulls the ingredients from wherever they are.",
+                "It works in your own land: it will not reach into land another team has claimed."),
+            craft("peacock:proximity_crafting_table", "Four chests, four common metal ingots (iron, copper, tin, zinc, lead, nickel or aluminium) and a crafting table. Set it in the storeroom."),
+            txt(B("Workshop tables") + " (any wood) can open one nearby chest at a time: put a " + B("name tag") + " in the table's side slot and the chests next to it appear as tabs (two name tags on a dual table reach two blocks).",
                 B("Storage Drawers") + " hold one item each in bulk, show it on the front, and feed Create funnels and belts directly."),
         ]),
     ],
@@ -723,7 +726,7 @@ ENTRIES = {
         ("machines", "Machines & Logistics", "create:cogwheel", [
             txt(B("Create") + " and its family: " + B("Steam 'n' Rails") + " (trains), " + B("Big Cannons") + ", " + B("Diesel Generators") + ", " + B("Enchantment Industry") + ", " + B("Dragons Plus") + ", " + B("Trading Floor") + " (depots), " + B("Create Deco") + " and " + B("Interiors") + " (looks), " + B("Create Better Villagers") + " (trades), " + B("Slice & Dice") + " (kitchen).",
                 B("Valkyrien Skies") + " + " + B("Eureka") + " are ships; " + B("Valkyrien Pirates") + " sail them against you."),
-            txt(B("Trotting Wagons") + " and " + B("Caravans & Convoys") + " move goods by horse. " + B("Storage Drawers") + " (+Create compat) are visible bulk storage. " + B("Workshop") + " tables craft from the chests around them. " + B("Backpacked") + " is the backpack; " + B("Supplementaries") + " the sacks, ropes, pulleys and a hundred small things."),
+            txt(B("Trotting Wagons") + " and " + B("Caravans & Convoys") + " move goods by horse. " + B("Storage Drawers") + " (+Create compat) are visible bulk storage. " + B("Proximity Crafting") + "'s table crafts from the chests around it; " + B("Workshop") + " adds tables, tool racks and shelves. " + B("Backpacked") + " is the backpack; " + B("Supplementaries") + " the sacks, ropes, pulleys and a hundred small things."),
             txt(B("Macaw's") + " nine mods are doors, roofs, windows, fences, bridges, paths, stairs, trapdoors, lights, paintings and furniture; " + B("Every Compat") + " makes every wood work with all of it."),
         ]),
         ("people", "People & Towns", "minecraft:emerald", [
