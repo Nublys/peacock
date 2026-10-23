@@ -733,7 +733,7 @@ ENTRIES = {
             txt(B("Macaw's") + " nine mods are doors, roofs, windows, fences, bridges, paths, stairs, trapdoors, lights, paintings and furniture; " + B("Every Compat") + " makes every wood work with all of it."),
         ]),
         ("people", "People & Towns", "minecraft:emerald", [
-            txt(B("Village Recruits") + " (the base mod) hires soldiers; its " + B("Village Expansion") + " addon gives towns names, factions, politics and growth. " + B("Guard Villagers") + " man the walls. " + B("Villager Workers") + " are hired labour. " + B("Villager Comfort") + ", " + B("Restock Balance") + " and " + B("Villager Names") + " make villagers people."),
+            txt(B("Village Recruits") + " (the base mod) hires soldiers; its " + B("Village Expansion") + " addon gives towns names, factions, politics and growth. " + B("Guard Villagers") + " man the walls. " + B("Villager Workers") + " are hired labour. " + B("Villager Comfort") + ", " + B("Villager Names") + " and sleeping to restock make villagers people."),
             txt(B("Bountiful") + " posts jobs. " + B("Doggy Talents") + " makes dogs. " + B("More Mob Variants") + " breeds the farm animals; " + B("Naturalist") + " and " + B("Critters and Companions") + " are the wild ones; " + B("Aquaculture") + " (+Delight) fish; " + B("Farmer's Delight") + " the kitchen."),
         ]),
         ("fights", "Fights", "minecraft:iron_sword", [

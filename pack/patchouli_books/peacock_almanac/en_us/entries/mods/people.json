@@ -6,7 +6,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(bold)Village Recruits$() (the base mod) hires soldiers; its $(bold)Village Expansion$() addon gives towns names, factions, politics and growth. $(bold)Guard Villagers$() man the walls. $(bold)Villager Workers$() are hired labour. $(bold)Villager Comfort$(), $(bold)Restock Balance$() and $(bold)Villager Names$() make villagers people."
+      "text": "$(bold)Village Recruits$() (the base mod) hires soldiers; its $(bold)Village Expansion$() addon gives towns names, factions, politics and growth. $(bold)Guard Villagers$() man the walls. $(bold)Villager Workers$() are hired labour. $(bold)Villager Comfort$(), $(bold)Villager Names$() and sleeping to restock make villagers people."
     },
     {
       "type": "patchouli:text",
