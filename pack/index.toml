@@ -1565,6 +1565,10 @@ file = "kubejs/server_scripts/almanac.js"
 hash = "6c16de3bde6076f6ec0da4ebd480c8735ccf8fa032f4e85e95190172687d008b"
 
 [[files]]
+file = "kubejs/server_scripts/backpack.js"
+hash = "46995d93221a1ca1b9c40eb5ea840a3bd0eb343a1dda100e046f014585e7a470"
+
+[[files]]
 file = "kubejs/server_scripts/blueprints.js"
 hash = "7a7bd0dd7e55c70f78b6de6ebf62781615c6e44f606f08265563e01756851dd9"
 
@@ -2818,7 +2822,7 @@ hash = "fd215a2db3f95005d725a08342a24477c18ad1e0e736ee359c7dc57ec1b9bca7"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/start/carrying.json"
-hash = "19ca7655f3f8d9bf2bd32b1b3b8e48612523fc632d2a02efcd37236cb0bd8373"
+hash = "c52566609ebade681fa48c586955c1c95c2e375e208b43839ced2e4a78a27aca"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/start/first_create.json"

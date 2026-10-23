@@ -203,7 +203,7 @@ ENTRIES = {
                 B("Closed for now:") + " brass and everything on it (mechanical crafters, arms, deployers, trains), blaze burners, cannons, diesel, precision mechanisms."),
         ]),
         ("carrying", "Carrying Things", "backpacked:backpack", [
-            spot("backpacked:backpack", "A backpack goes in your back slot and opens with " + B("B") + ". It can be upgraded and dyed, and stays on your corpse like everything else. Supplementaries' sacks are the cheap alternative: a block of storage you can carry.", title="Backpack"),
+            spot("backpacked:backpack", "A backpack goes in your back slot and opens with " + B("B") + ". Leather, string and two ingots of any common metal (iron, copper, tin, zinc, lead, nickel, aluminium). It can be upgraded and dyed. Supplementaries' sacks are the cheap alternative: a block of storage you can carry.", title="Backpack"),
             txt(B("Shulker boxes") + " are late. Before them: sacks, backpacks, chest minecarts, wagons, ships. Create's chutes and belts move things between machines; wagons move them between towns.",
                 "A " + B("toolbox") + " (Create) holds tools and swaps them into your hand."),
             craft("create:crafting/curiosities/brown_toolbox", "Toolboxes are shared within range: open one and your hotbar can pull from it."),

@@ -7,7 +7,7 @@
     {
       "type": "patchouli:spotlight",
       "item": "backpacked:backpack",
-      "text": "A backpack goes in your back slot and opens with $(bold)B$(). It can be upgraded and dyed, and stays on your corpse like everything else. Supplementaries' sacks are the cheap alternative: a block of storage you can carry.",
+      "text": "A backpack goes in your back slot and opens with $(bold)B$(). Leather, string and two ingots of any common metal (iron, copper, tin, zinc, lead, nickel, aluminium). It can be upgraded and dyed. Supplementaries' sacks are the cheap alternative: a block of storage you can carry.",
       "link_recipe": false,
       "title": "Backpack"
     },

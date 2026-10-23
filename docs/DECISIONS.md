@@ -1413,3 +1413,9 @@ wrapped by `blueprints.js`, so its original id no longer exists. The wrapped id 
 the rung is now left out (`peacock:staged/<ns>/<path>`; each recipe is wrapped once, so it stays unique), and
 `gen-almanac.py`'s `staged()` names it, so a page does not depend on which rung caught the recipe. Patchouli finds
 it because Recipe Stages' recipes are crafting recipes.
+
+## Backpack: any common metal (2026-10-23)
+Aaron: "update the backpack recipe to also accept metal ingots of a similar value, not just iron." Metal is regional,
+so the two iron ingots in Backpacked's recipe locked out anyone far from iron. `server_scripts/backpack.js` replaces it
+(`peacock:backpack`) with the same shape taking any of `#peacock:backpack_metals` in each metal slot: iron, copper,
+tin, zinc, lead, nickel, aluminium. Gold, silver, platinum and the alloys are worth more and are left out.
