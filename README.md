@@ -105,7 +105,7 @@ each boss lives; **rumour maps** from outposts, cartographers and bounty boards 
 ### Towns, bounties and recruits
 - **The capital** is the shared home: safe storage, a bounty board that works for everyone, villagers
   worth trading with. Villagers here are people: they trade well where they live well (beds, light,
-  food) and badly in a hole, and their stock restocks slowly. Towns stop breeding at about two dozen.
+  food) and badly in a hole, and they restock only after a night in a bed. Towns stop breeding at about two dozen.
 - **Bounty boards** post jobs — bring brass, kill pillagers at the outpost, clear the zombies from a
   ruin — and pay in emerald blocks, golden apples, saddles and real enchanted books. A board that trusts
   you pays better: sealed rumours (a map to a boss's home), the deeper journals, totems, and at the top a

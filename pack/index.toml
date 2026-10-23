@@ -452,10 +452,6 @@ file = "config/paxi/datapacks/peacock/data/cataclysm/tags/worldgen/biome/has_str
 hash = "e9e6fd232618545626af37a1239915ed3f009527d41f1ba891ef14cefd0c9cac"
 
 [[files]]
-file = "config/paxi/datapacks/peacock/data/clgd.villager/predicates/can_restock.json"
-hash = "922a0ce7b58f36f942f81d1e2721555c0386f1544505cdf4ef2408d06919aae2"
-
-[[files]]
 file = "config/paxi/datapacks/peacock/data/create/recipes/filling/purified_water_bucket.json"
 hash = "4c702ebae17c77801f7a960fa6457fa14e7ae1970c2d981a9467cd8e9c8c53e4"
 
@@ -802,6 +798,10 @@ hash = "3490b746205efc7f91135e7663a3ccebaa1ada1d753688e38ab6c4b45ff7d52e"
 [[files]]
 file = "config/paxi/datapacks/peacock/data/peacock/cold_sweat/item/insulator/modded_leather.json"
 hash = "04abdc86b407fbc772d73bc4a6a2f7ab6a96e5214c67b63610bcbd0e24cdd186"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/forge/biome_modifier/no_bats.json"
+hash = "2ad67c83e686a085bdce5cb67c076e6d960cb8fc7ede952a125be4ebf8b67994"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/peacock/loot_tables/chests/plunder.json"
@@ -1506,7 +1506,7 @@ hash = "cc48e7b6d2c9ccc4375e04f371c53582ebc7fa50f8f366ae097b71feaf9d2aed"
 
 [[files]]
 file = "kubejs/config/peacock.json"
-hash = "4d748e77147fafc9a2932114f5a37f1342bda7e3462408452ba4dd7440b56ba9"
+hash = "aa119d993cafe05b647cea1292f006a57a5e5d71716d0e931f405ef0d1b25e30"
 
 [[files]]
 file = "kubejs/server_scripts/achievements.js"
@@ -1615,6 +1615,10 @@ hash = "d9b4d8be0ada5477c3b7b6ebfd1231cdb2c28f374660a732bb5fa3d98f2b7c49"
 [[files]]
 file = "kubejs/server_scripts/villager_cap.js"
 hash = "ccc2e2d3931c0964d624e83f0ea0f3b924493fb24bc37095e148b5d1f3a72fcd"
+
+[[files]]
+file = "kubejs/server_scripts/villager_restock.js"
+hash = "31ea1d3ca04ac5dc08cabe9761834a864c88fb48cefba354201f79e5e4b7569c"
 
 [[files]]
 file = "kubejs/server_scripts/villager_trades.js"
@@ -1927,11 +1931,6 @@ metafile = true
 [[files]]
 file = "mods/curios.pw.toml"
 hash = "84a210b44f4eb1bcf234a1b7735bf55ec50a7ac609f5e2efa8f590f060bf4c9f"
-metafile = true
-
-[[files]]
-file = "mods/data-anchor.pw.toml"
-hash = "b6992f4a7a5d3277000db029119ce69dbed2552b547e12033e9bf6de59cec4fb"
 metafile = true
 
 [[files]]
@@ -2530,11 +2529,6 @@ hash = "b5bee8def83a746f4809751c4345cd75f6386aa130f3772d608a5b0163092c2c"
 metafile = true
 
 [[files]]
-file = "mods/villager-restock-balance.pw.toml"
-hash = "0dba7197b10f48e4303bf9f8079a7022fff375f298e170439a756a30b79723f5"
-metafile = true
-
-[[files]]
 file = "mods/villager-workers.pw.toml"
 hash = "4b3e7a14b5fc6cca4c58de8144c918ab67b20293987ba4cd27eb0fc38d8aa11e"
 metafile = true
@@ -2961,7 +2955,7 @@ hash = "8dbe057c5c4d63a60297bb8a80c3e7da5f2329214c93fbc8fd5fb30538308a81"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/towns/villagers.json"
-hash = "0c27306b11790f2ffb815039d5b44e02a93485c4167fec4cd8d55bd034791a23"
+hash = "fbbac8b1e39c3ff7c741f4c843783e2d1bd4948e7e22a2ec3a23b90f523e608e"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/towns/war.json"

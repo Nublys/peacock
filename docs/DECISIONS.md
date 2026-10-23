@@ -1495,3 +1495,19 @@ then "Let the real pick's recipe take any common metal ... Do this in addition t
   (`#peacock:common_metals`: iron, copper, tin, zinc, lead, nickel, aluminium) and two sticks.
 - Almanac, The Prospector's Pick: surface rocks lie near the middle of the deposit's chunk, not over the ore, and give
   no depth (checked in Geolosys' SampleUtils); then the hammer and the pick.
+
+## Villagers restock when they wake; Villager Restock Balance, Data Anchor and bats out (2026-10-23)
+Aaron, on the spark profile: "what else can be done? I'm hesitant about changing the villagers", then on restocking:
+"In my head they should restock on sleep." ... "Make it, and ship it".
+- **Restocking** (`villager_restock.js`, switch `sleepRestock`): vanilla refreshes a working villager's trades at its
+  workstation up to twice a day. Villager Restock Balance meant to require a night in bed, but its datapack wrote
+  `RestocksToday = 2` into every villager's saved data every tick (4.9% of the tick in the profile), and vanilla resets
+  that count on a villager's first restock of a new day, so only the second restock was ever blocked. Now, once a
+  second, each loaded villager's trades are read directly: uses that went down (a vanilla restock) are put back; a
+  villager seen asleep restocks all its trades the first time it is seen awake in the day, once per day. No bed, no
+  restock. Capital service people (peacock_npc) are skipped; they restock at dawn as before. The mod and our override of
+  its predicate are removed.
+- **Data Anchor** removed: only Enhanced Celestials needed it (removed 2026-10-22), and it hooked every block entity's
+  tick (1.2%).
+- **Bats** no longer spawn (`data/peacock/forge/biome_modifier/no_bats.json`): 14 in the profile, decoration only, 1.6%
+  plus their spawn attempts. Existing bats despawn on their own.
