@@ -176,8 +176,10 @@ ItemEvents.entityInteracted(event => {
   var r = global.PEACOCK_ROLES[role]
   if (!r) return
   if (r.trades && !player.isShiftKeyDown()) return          // the trade screen opens as usual
-  event.cancel()
   openMenu(player, npc, role)
+  // KubeJS: cancel() throws to end the handler at once, so it must come last; before 2026-10-23 it came first
+  // and the menu never opened ("right clicking on the NPCs did nothing")
+  event.cancel()
 })
 
 // the person this player last talked to, if still near and recent; else null (and a hint)

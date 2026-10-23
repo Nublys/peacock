@@ -1566,7 +1566,7 @@ hash = "6c16de3bde6076f6ec0da4ebd480c8735ccf8fa032f4e85e95190172687d008b"
 
 [[files]]
 file = "kubejs/server_scripts/blueprints.js"
-hash = "a91a891ee7a895323140ae6515b3c4ae364620d8ffbad1dea899dc2cb37e75dd"
+hash = "7a7bd0dd7e55c70f78b6de6ebf62781615c6e44f606f08265563e01756851dd9"
 
 [[files]]
 file = "kubejs/server_scripts/boss_tuning.js"
@@ -1578,7 +1578,7 @@ hash = "23d3267a57c50a4a0b982d4d4842d6e0e875eef3b119c31ff353ff7b9a21c2f1"
 
 [[files]]
 file = "kubejs/server_scripts/capital_npcs.js"
-hash = "dcb84ad6a942a0fab1626279817c85dd879c0ebc753057aa7aae77a026ec0034"
+hash = "630cb5f360ca5de5c9978cef54829d73b980df8bb6a351f28bd689d2cbd16eb7"
 
 [[files]]
 file = "kubejs/server_scripts/capital_projects.js"
@@ -1642,11 +1642,11 @@ hash = "4653eaca487246316c0d4a6d35fe2bcbb0912a4b1fe35791bd73f249e9776de6"
 
 [[files]]
 file = "kubejs/server_scripts/trading_depot_town.js"
-hash = "967b7eb67f207c89ac60e1ded0ac0ac1c8498eb3ef46f2f169bdac518a33d304"
+hash = "d9b4d8be0ada5477c3b7b6ebfd1231cdb2c28f374660a732bb5fa3d98f2b7c49"
 
 [[files]]
 file = "kubejs/server_scripts/villager_cap.js"
-hash = "a0b8b788b06450f53a96ac9e325bd8c6449edd8ecfd1d5deb50e50a43f34c2d2"
+hash = "ccc2e2d3931c0964d624e83f0ea0f3b924493fb24bc37095e148b5d1f3a72fcd"
 
 [[files]]
 file = "kubejs/server_scripts/villager_trades.js"
@@ -2662,7 +2662,7 @@ hash = "b02cf7c84e2e623d4725bff023464ebae64a16c1d4048aba691021fca36b0fd2"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/building/cannons.json"
-hash = "b8aeaecc62e18046bf635cea709de5de1ad2648e607f02d8a3dd8dcb0581e1fd"
+hash = "de9d3382d5974ea5ae39faca2bd599c40874ecc50a10539137359d7802a324a2"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/building/decor.json"
@@ -2670,11 +2670,11 @@ hash = "f5cf7970cdb8f12466b1d8fd581e3d99b5752dc079a1cf89f6868a3a3a19602b"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/building/ships.json"
-hash = "0bd8e4b02c6ccc60d411945ad6a84f05d26175b751a65ddc923800769fdfbae3"
+hash = "c7e3769e31e1d6e9feaa5ec9e9b99e8fd4990cde698527ec7633e3d4b96e68a9"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/building/trains.json"
-hash = "86433dd174f87629b6b8ed03c2767d5b7c91586545b2e7592932e14d1f22521a"
+hash = "9fa70ad7dafbc43cf670b8e1cccef663bc0dda19f1da667781eeee45a7f98b09"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/building/wagons.json"
@@ -2890,7 +2890,7 @@ hash = "0b52eda07430f208393f41acf0660bbbaaa137668de0549e7aff4a9a87d51df7"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/threats/night.json"
-hash = "c89b14252ba8a41c626481b091eed2e4a5450ce26a07513f3ea89b0fe65fcaa0"
+hash = "860a09ffa6d99029b19cc3f37682acac365b812259f478f53a0e8f88368bbffe"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/threats/pillagers.json"

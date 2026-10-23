@@ -10,7 +10,7 @@
     },
     {
       "type": "patchouli:crafting",
-      "recipe": "createbigcannons:cannon_mount",
+      "recipe": "peacock:staged/createbigcannons/cannon_mount",
       "text": "A mount turns a cannon into a turret. Cannons on a ship or a train are contraptions like any other."
     },
     {

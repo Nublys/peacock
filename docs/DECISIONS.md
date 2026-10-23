@@ -1396,3 +1396,20 @@ It was in `#minecraft:coals` (fuel, campfires) but the torch recipe and most Cre
 (loot tables in the pack datapack, Silk Touch and Fortune as before), and anthracite already in inventories crafts into
 coal one for one (`peacock:anthracite_to_coal`). Lignite and bituminous coal are untouched.
 
+
+## event.cancel() last: service people answer, gate messages show (2026-10-23)
+Aaron: "Right clicking on the NPCs also did nothing." In KubeJS 6, `event.cancel()` (and `success()`/`exit()`) throws
+to end the handler on the spot (EventExit), so nothing written after it ever runs. `capital_npcs.js` cancelled the
+right-click and then opened the menu: the vanilla trade screen was stopped and the menu never came, so the Clerk and
+every service person looked dead (traders still opened their trade screen, which never reached our code). The same
+order hid four messages: the Blueprint "Placing this" and "Hiring" denials (the block or hire was refused silently),
+the trading depot's town requirement, and the full-town notice. All five now cancel last, and `tools/validate.py`
+fails on any statement after an `event.cancel()` / `success()` / `exit()` in the same block.
+
+## Almanac crafting pages name the staged recipes (2026-10-23)
+A Mac client log showed seven Almanac crafting pages finding nothing ("Recipe … not found"): the training treat, ship
+helm, floater and balloon, train station, handcar and cannon mount. A Blueprint-locked recipe is removed and re-added
+wrapped by `blueprints.js`, so its original id no longer exists. The wrapped id was `peacock:staged/<rung>/<ns>/<path>`;
+the rung is now left out (`peacock:staged/<ns>/<path>`; each recipe is wrapped once, so it stays unique), and
+`gen-almanac.py`'s `staged()` names it, so a page does not depend on which rung caught the recipe. Patchouli finds
+it because Recipe Stages' recipes are crafting recipes.

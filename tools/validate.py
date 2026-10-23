@@ -143,6 +143,17 @@ def check_kubejs() -> None:
             for m in re.finditer(r"\bfor\s*\(\s*([A-Za-z_$][\w$]*)\s*=", line):
                 if m.group(1) not in declared:
                     err(f"{f.relative_to(ROOT)}:{i}: for ({m.group(1)} = …) reuses a loop variable only declared in an earlier for (var …); KubeJS' Rhino scopes that to its loop — declare it with var before the loops")
+        # event.cancel() / success() / exit() throw to end the handler at once (KubeJS 6 EventExit), so nothing after
+        # one in the same block ever runs (capital_npcs.js, 2026-10-23: the service people's menus never opened)
+        for i, line in enumerate(code, 1):
+            m = re.search(r"\bevent\.(cancel|success|exit)\([^)]*\)\s*;?\s*(.*)$", line)
+            if not m: continue
+            rest = m.group(2).strip()
+            if not rest:
+                nxt = next((l.strip() for l in code[i:] if l.strip()), "")
+                rest = nxt
+            if rest and not re.match(r"(\}|return\b)", rest):
+                err(f"{f.relative_to(ROOT)}:{i}: event.{m.group(1)}() ends the handler at once in KubeJS 6; move it to the end (the code after it never runs)")
 
 
 def check_advancements() -> None:

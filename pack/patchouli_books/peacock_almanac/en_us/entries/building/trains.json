@@ -10,12 +10,12 @@
     },
     {
       "type": "patchouli:crafting",
-      "recipe": "create:crafting/kinetics/track_station",
+      "recipe": "peacock:staged/create/crafting/kinetics/track_station",
       "text": "A station names a stop; a schedule tells the train where to go and what to wait for. Depots (Trading Floor) let a train trade at a town."
     },
     {
       "type": "patchouli:crafting",
-      "recipe": "railways:crafting/handcar",
+      "recipe": "peacock:staged/railways/crafting/handcar",
       "text": "The handcar is a rail bicycle: no engine, no fuel, two players pumping. The first thing to build on a new line."
     },
     {

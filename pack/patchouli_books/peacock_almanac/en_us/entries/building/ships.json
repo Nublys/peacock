@@ -10,13 +10,13 @@
     },
     {
       "type": "patchouli:crafting",
-      "recipe": "vs_eureka:oak_ship_helm",
+      "recipe": "peacock:staged/vs_eureka/oak_ship_helm",
       "text": "Place the helm on the deck and assemble. Floaters add buoyancy, ballast sinks, balloons lift. An engine burns fuel for speed; sails are free."
     },
     {
       "type": "patchouli:crafting",
-      "recipe": "vs_eureka:floater",
-      "recipe2": "vs_eureka:balloon_wool",
+      "recipe": "peacock:staged/vs_eureka/floater",
+      "recipe2": "peacock:staged/vs_eureka/balloon_wool",
       "text": "Floaters keep a heavy hull up; balloons make airships."
     },
     {

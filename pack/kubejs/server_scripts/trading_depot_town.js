@@ -44,8 +44,9 @@ BlockEvents.placed(DEPOT, event => {
   if (!player || player.isCreative()) return
   const town = countTown(event.level, event.block.pos)
   if (town.bells >= 1 && town.beds >= BEDS_REQUIRED) return
-  event.cancel()
   player.tell(Text.red('A trading depot needs a town: a bell and at least ' + BEDS_REQUIRED + ' beds within ' + RADIUS + ' blocks. ')
     .append(Text.gray('Found ' + town.bells + ' bell(s) and ' + town.beds + ' bed(s).')))
+  // KubeJS: cancel() throws to end the handler at once, so it must come last (2026-10-23)
+  event.cancel()
 })
 })()

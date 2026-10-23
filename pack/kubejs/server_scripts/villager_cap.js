@@ -24,9 +24,10 @@ EntityEvents.spawned('minecraft:villager', event => {
   const level = event.level
   const near = level.getEntitiesWithin(v.boundingBox.inflate(RADIUS, 24, RADIUS)).filter(e => String(e.type) === 'minecraft:villager' && String(e.uuid) !== String(v.uuid))
   if (near.length < CAP) return
-  event.cancel()
   level.players.forEach(p => {
     if (p.distanceTo(v) < RADIUS * 2) p.tell(Text.gray('This town is full (' + CAP + ' villagers). Found another one, or grow this one outward.'))
   })
+  // KubeJS: cancel() throws to end the handler at once, so it must come last (2026-10-23)
+  event.cancel()
 })
 })()

@@ -32,7 +32,7 @@
     },
     {
       "type": "patchouli:crafting",
-      "recipe": "doggytalents:training_treat",
+      "recipe": "peacock:staged/doggytalents/training_treat",
       "recipe2": "doggytalents:dog_bed",
       "text": "Treat a tamed wolf; a stick on the dog opens its talents."
     }

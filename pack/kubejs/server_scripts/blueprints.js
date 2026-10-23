@@ -67,7 +67,8 @@ ServerEvents.recipes(event => {
       type: type === 'minecraft:crafting_shaped' ? 'recipestages:shaped_stage' : 'recipestages:stage',
       stage: STAGE(rung),
       recipe: json,
-    }).id('peacock:staged/' + rung + '/' + id.replace(':', '/'))
+    // id without the rung (2026-10-23), so the Almanac's crafting pages can name it: peacock:staged/<ns>/<path>
+    }).id('peacock:staged/' + id.replace(':', '/'))
     if (out) global.PEACOCK_GATED_ITEMS[out] = rung
     staged++
   }
@@ -160,8 +161,9 @@ BlockEvents.placed(event => {
   if (!player || player.isCreative()) return
   const rung = global.PEACOCK_GATED_ITEMS[String(event.block.id)]
   if (!rung || player.stages.has(STAGE(rung))) return
-  event.cancel()
   deny(player, rung, 'Placing this')
+  // KubeJS: cancel() throws to end the handler at once, so it must come last (2026-10-23)
+  event.cancel()
 })
 
 ItemEvents.entityInteracted(event => {
@@ -173,7 +175,8 @@ ItemEvents.entityInteracted(event => {
   if (player.stages.has(STAGE('recruiting'))) return
   // owned recruits can still be commanded; hiring (a stranger, with emeralds in hand) is the gate
   if (String(event.item.id) !== 'minecraft:emerald') return
-  event.cancel()
   deny(player, 'recruiting', 'Hiring')
+  // KubeJS: cancel() throws to end the handler at once, so it must come last (2026-10-23)
+  event.cancel()
 })
 })()

@@ -59,6 +59,11 @@ def txt(*paras, title=None):
     if title: p["title"] = title
     return p
 
+def staged(recipe):
+    """A recipe a Blueprint locks: blueprints.js removes it and re-adds it wrapped, as peacock:staged/<ns>/<path>.
+    A page naming the original id shows nothing (client log: "Recipe … not found"), so name the wrapped one."""
+    return "peacock:staged/" + recipe.replace(":", "/", 1)
+
 def craft(recipe, text=None, title=None, recipe2=None):
     p = {"type": "patchouli:crafting", "recipe": recipe}
     if recipe2: p["recipe2"] = recipe2
@@ -462,7 +467,7 @@ ENTRIES = {
                 "Shields block in a cone; a parrying dagger blocks fast. Fire from a musket breaks a shield."),
             txt(B("Dogs:") + " tame a wolf, then feed it a " + B("Training Treat") + " to make it a dog (Doggy Talents). Dogs learn talents, carry things, fight well and come back. Whistle commands are on " + B("Shift+1..4") + ".",
                 "A dog bed is a home; a dog with Pack Puppy is a backpack with teeth."),
-            craft("doggytalents:training_treat", "Treat a tamed wolf; a stick on the dog opens its talents.", recipe2="doggytalents:dog_bed"),
+            craft(staged("doggytalents:training_treat"), "Treat a tamed wolf; a stick on the dog opens its talents.", recipe2="doggytalents:dog_bed"),
         ]),
         ("pillagers", "The Pillager Faction", "minecraft:crossbow", [
             txt("Pillagers are villagers who left (" + L("story/painted_ones", "The Painted Ones") + "). Outposts, forts, camps and the villages they hold are full of what they took, and their captains carry the ledgers of the old trade.",
@@ -618,23 +623,23 @@ ENTRIES = {
         ("ships", "Ships", "vs_eureka:oak_ship_helm", [
             txt(B("Valkyrien Skies") + " makes any build you assemble into a physical ship. " + B("Eureka") + " is the simple way: build a hull, place a helm, right-click to assemble, steer with the helm.",
                 "Rivers and coasts are everywhere here. A barge moves more than ten wagons."),
-            craft("vs_eureka:oak_ship_helm", "Place the helm on the deck and assemble. Floaters add buoyancy, ballast sinks, balloons lift. An engine burns fuel for speed; sails are free."),
-            craft("vs_eureka:floater", "Floaters keep a heavy hull up; balloons make airships.", recipe2="vs_eureka:balloon_wool"),
+            craft(staged("vs_eureka:oak_ship_helm"), "Place the helm on the deck and assemble. Floaters add buoyancy, ballast sinks, balloons lift. An engine burns fuel for speed; sails are free."),
+            craft(staged("vs_eureka:floater"), "Floaters keep a heavy hull up; balloons make airships.", recipe2=staged("vs_eureka:balloon_wool")),
             txt(B("Ships are Tier 2") + ": the Naga hold the knowledge. The helm, floaters, balloons and engine need the Blueprint; a hull is just blocks.",
                 B("Pirates") + " sail ships of their own and will board yours. Cannons on a deck are the answer (Tier 3)."),
         ]),
         ("trains", "Trains", "create:railway_casing", [
             txt(B("Create") + " tracks, stations, schedules and signals, extended by " + B("Steam 'n' Rails") + ": conductors, handcars, couplers, track switches, fuel tanks, and a locomotive palette.",
                 "Trains are " + B("Tier 2") + " (Ferrous Wroughtnaut). Tracks need brass casing; brass needs Tier 1."),
-            craft("create:crafting/kinetics/track_station", "A station names a stop; a schedule tells the train where to go and what to wait for. Depots (Trading Floor) let a train trade at a town."),
-            craft("railways:crafting/handcar", "The handcar is a rail bicycle: no engine, no fuel, two players pumping. The first thing to build on a new line."),
+            craft(staged("create:crafting/kinetics/track_station"), "A station names a stop; a schedule tells the train where to go and what to wait for. Depots (Trading Floor) let a train trade at a town."),
+            craft(staged("railways:crafting/handcar"), "The handcar is a rail bicycle: no engine, no fuel, two players pumping. The first thing to build on a new line."),
             txt("The dream the survivors remembered: a line from the capital to the mountain mine, a dock at the river, a depot in every town, ore moving while everyone sleeps.",
                 "Build the roadbed before the Blueprint. Track is fast to lay once you can."),
         ]),
         ("cannons", "Cannons", "createbigcannons:cannon_mount", [
             txt(B("Create Big Cannons") + ": cast or build cannons block by block, mount them, load them, aim with a controller or a contraption. Autocannons for defence, big guns for sieges.",
                 B("Tier 3") + ": Maledictus, in the Frosted Prison, holds the knowledge."),
-            craft("createbigcannons:cannon_mount", "A mount turns a cannon into a turret. Cannons on a ship or a train are contraptions like any other."),
+            craft(staged("createbigcannons:cannon_mount"), "A mount turns a cannon into a turret. Cannons on a ship or a train are contraptions like any other."),
             txt(B("Server rules:") + " shells hurt " + B("mobs and players") + " in their blast but " + B("do not break blocks") + ". You can defend a town and fight a ship; you cannot level a town. Explosions from cannons are AOE only.",
                 "Muskets are the handheld cousins and follow the Blasting Blueprint, not this one."),
         ]),
