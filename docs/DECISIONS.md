@@ -1511,3 +1511,12 @@ Aaron, on the spark profile: "what else can be done? I'm hesitant about changing
   tick (1.2%).
 - **Bats** no longer spawn (`data/peacock/forge/biome_modifier/no_bats.json`): 14 in the profile, decoration only, 1.6%
   plus their spawn attempts. Existing bats despawn on their own.
+
+## Bats back, four per player (2026-10-23)
+Aaron: "Why do bats use up so much? If there is a fix for them that is better then removing them." ... "4 near each
+player." A bat costs about a quarter of a villager (block collision every tick from flying, base entity checks, and
+every mod's per-creature hook: Mowzie's, Cold Sweat, Savage & Ravage, Cataclysm, Curios); 14 of them were in the
+profile because the cave-creature cap (about 15 per player) only ever holds bats, so a lower spawn weight would change
+nothing. The no-bats biome modifier is gone; `bat_cap.js` counts bats within 128 blocks of each player once a second
+and cancels a new bat near a player who already has four (an O(1) check against that count, so failed spawn attempts
+stay cheap). Bats saved beyond the limit vanish when their chunk loads. `batCap` in `kubejs/config/peacock.json`.
