@@ -32,7 +32,7 @@ const SELLS = [
   ['fisherman', 4, 8, 'aquaculture:tackle_box', 1], ['fisherman', 4, 1, 'aquaculture:fish_fillet_cooked', 4],
   // butcher
   ['butcher', 1, 1, 'farmersdelight:minced_beef', 4], ['butcher', 2, 1, 'farmersdelight:bacon', 4],
-  ['butcher', 3, 3, 'animania:salt_lick', 1], ['butcher', 3, 1, 'animania:salt', 6],
+  ['butcher', 3, 4, 'animal_feeding_trough:feeding_trough', 1], ['butcher', 3, 2, 'minecraft:lead', 2],   // Animania's salt until 2026-10-23
   // shepherd and leatherworker: Cold Sweat's warm things
   ['shepherd', 1, 1, 'farmersdelight:canvas', 3], ['shepherd', 2, 2, 'cold_sweat:goat_fur', 1],
   ['shepherd', 3, 6, 'cold_sweat:sewing_table', 1],

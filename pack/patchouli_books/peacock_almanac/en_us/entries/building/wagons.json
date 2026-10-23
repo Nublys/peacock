@@ -6,7 +6,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(bold)Trotting Wagons$(): a wagon hitched to a horse (or an Animania draft horse) with storage in the back. Lead the horse, the wagon follows. This is the first bulk transport.$(br2)$(bold)Caravans & Convoys$() wagons travel in trains behind a leader, carry chests, and can be sent along routes between stops."
+      "text": "$(bold)Trotting Wagons$(): a wagon hitched to a horse with storage in the back. Lead the horse, the wagon follows. This is the first bulk transport.$(br2)$(bold)Caravans & Convoys$() wagons travel in trains behind a leader, carry chests, and can be sent along routes between stops."
     },
     {
       "type": "patchouli:text",

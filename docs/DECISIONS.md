@@ -1419,3 +1419,48 @@ Aaron: "update the backpack recipe to also accept metal ingots of a similar valu
 so the two iron ingots in Backpacked's recipe locked out anyone far from iron. `server_scripts/backpack.js` replaces it
 (`peacock:backpack`) with the same shape taking any of `#peacock:backpack_metals` in each metal slot: iron, copper,
 tin, zinc, lead, nickel, aluminium. Gold, silver, platinum and the alloys are worth more and are left out.
+
+## Blueprints: what a rung makes claims first (2026-10-23)
+Aaron: "Make and push all updates." Each recipe is wrapped (Recipe Stages) once, by the first rung that claims it, and
+each rung used to run its outputs, inputs and output mods in turn. Brass comes first and gates every recipe that uses
+brass, so it claimed about 54 recipes that belong to later rungs before those were reached (checked against the mod
+jars): the mechanical arm, rotation speed controller and sequenced gearshift (Precision), all five diesel machines
+(Diesel), the content observer, stockpile switch and smart chute (Ender logistics), Steam 'n' Rails' brass parts
+(Trains), Big Cannons' brass pieces (Cannons); Blasting likewise took Big Cannons' gunpowder recipes. Now every rung's
+outputs and output mods claim first, and inputs only take what is left. The Doggy Talents training treat contains
+gunpowder, so a dog needed Blasting; it is exempt (`FREE` in `blueprints.js`) and its Almanac page names its own recipe.
+
+## Animals: Animania out (2026-10-23)
+Aaron: Animania cost 22% of the server's entity time (spark), and its animals needed food, water, beds and good moods
+("No mods that make animal keeping extra work?"). With our config it also replaced the vanilla animals at world
+generation. Decided with Aaron: no herd is worth keeping, so no migration step ("You can delete them"); the peafowl go
+too ("Pack does not need that bird specifically"); the feeding trough is in ("Include").
+- **Out:** Animania Reborn, its five configs, the pack datapack's `animania` biome tags. Every Animania animal, block and
+  item in the world disappears on the first start without it.
+- **In:** vanilla farm animals again (Fresh Animations animates them, which it never could for Animania); **More Mob
+  Variants** (breeds and coats for cows, pigs, sheep, chickens, cats, wolves, stored on the animal), with **More Mob
+  Variants x Fresh Animations** 1.3.0-1.9 on top of Fresh Animations (not on potato, which has no Fresh Animations;
+  the old pack lists are in `PREVIOUS_DEFAULTS`); **Critters and Companions** (small animals; its libraries were
+  already in the pack); **Animal Feeding Trough** (animals eat and breed from it on their own). Naturalist stays the big
+  wildlife; its dragonfly and snail are off (`config/naturalist.json`), since Critters and Companions has both and its
+  dragonfly is tameable and drops the wings that tame the jumping spider.
+- **Herd cap** (`herd_cap.js`): two animals cannot make a baby while 40 of their kind live within 32 blocks; nearby
+  players are told, at most once a minute. The mechanical version of "don't build huge farms", needed now that troughs
+  breed animals unattended. Villagers keep their own cap. `herdCap`/`herdCapCount` in `kubejs/config/peacock.json`.
+- **Wildlife for old land** (`wildlife_reseed.js`): each overworld chunk generated before this change gets, once, the
+  spawn pass Minecraft runs when it generates a chunk (`NaturalSpawner.spawnMobsForChunkGeneration`, the biome's own
+  animals and density), when a player next loads it, two chunks per tick. New chunks are marked done as they are
+  generated (`ChunkEvent.Load#isNewChunk`); claimed chunks and the capital are skipped. Done chunks: one bit each, per
+  region, in server persistentData `peacock_reseed`. `wildlifeReseed` switch.
+- Both scripts get their Forge events through `startup_scripts/forge_hooks.js`: KubeJS 6 binds `ForgeEvents` only for
+  startup scripts, which do not reload, so the hook just calls a function the server script sets in `global`.
+- The butcher's Animania salt lick and salt became a feeding trough and leads; the Almanac's animal pages are rewritten.
+
+## Village Recruits' join report hidden (2026-10-23)
+Every login printed about twelve "[VillageRecruits Addon] … NOT found / detected / Integrity check passed" lines to
+every player. The addon has no setting for them, so `startup_scripts/quiet_join_chat.js` drops those system messages
+on the client; lines reporting a real problem (WARNING, missing, could NOT) still show.
+
+## Macs: no special case (2026-10-23)
+Aaron: "Please don't do anything specific for the mac just leave things as is." A launcher change that defaulted
+shaders off on macOS was made and reverted before it shipped; Macs get the same tiers as everyone.

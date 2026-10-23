@@ -51,11 +51,13 @@ ServerEvents.recipes(event => {
   if (!LADDER_ON) { console.info('[peacock] ladder disabled by kubejs/config/peacock.json: no recipes staged'); return }
 
   const wrapped = {}   // original recipe id -> rung
+  // never staged though an input matches: the training treat has gunpowder in it, and a dog should not need Blasting
+  const FREE = { 'doggytalents:training_treat': true }
   let staged = 0
 
   function stage(recipe, rung) {
     const id = recipe.getId()
-    if (!id || id.startsWith('peacock:') || id.startsWith('recipestages:') || wrapped[id]) return
+    if (!id || id.startsWith('peacock:') || id.startsWith('recipestages:') || wrapped[id] || FREE[id]) return
     const type = String(recipe.getType())
     if (type !== 'minecraft:crafting_shaped' && type !== 'minecraft:crafting_shapeless') return
     // recipe.json is a Gson JsonObject: String() gives compact JSON; JSON.stringify would dump its Java members
@@ -73,11 +75,19 @@ ServerEvents.recipes(event => {
     staged++
   }
 
+  // A recipe is wrapped once, by the first rung that claims it. What a rung makes (outputs, outputMods) claims first,
+  // for every rung, and only then what a rung's material goes into (inputs). Until 2026-10-23 each rung ran all three
+  // in turn, so Brass (first in the table, gating everything made with brass) took the mechanical arm, the diesel
+  // engines, Steam 'n' Rails' brass parts, Big Cannons' brass pieces and the content observer before Precision,
+  // Diesel, Trains, Cannons and Ender logistics were reached: about 54 recipes needed only the Brass Blueprint.
   Object.keys(L).forEach(rung => {
     const g = L[rung].gates || {}
     ;(g.outputs || []).forEach(id => event.forEachRecipe({ output: id }, r => stage(r, rung)))
-    ;(g.inputs || []).forEach(id => event.forEachRecipe({ input: id }, r => stage(r, rung)))
     ;(g.outputMods || []).forEach(mod => event.forEachRecipe({ output: '@' + mod }, r => stage(r, rung)))
+  })
+  Object.keys(L).forEach(rung => {
+    const g = L[rung].gates || {}
+    ;(g.inputs || []).forEach(id => event.forEachRecipe({ input: id }, r => stage(r, rung)))
     // the gate list itself is place-gated even when the item is not crafted (e.g. machine-made)
     ;(g.outputs || []).forEach(id => { global.PEACOCK_GATED_ITEMS[id] = rung })
   })

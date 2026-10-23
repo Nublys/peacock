@@ -44,7 +44,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "Season matters: see $(l:patchouli:land/crops)What Grows When$(). Out of season, crops stop; a greenhouse roof or a deep farm keeps the pot full.$(br2)Animals are from Animania and are a chapter of their own: $(l:patchouli:start/animals)Animals$()"
+      "text": "Season matters: see $(l:patchouli:land/crops)What Grows When$(). Out of season, crops stop; a greenhouse roof or a deep farm keeps the pot full.$(br2)Animals have a chapter of their own: $(l:patchouli:start/animals)Animals$()"
     }
   ]
 }

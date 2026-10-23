@@ -178,18 +178,19 @@ ENTRIES = {
             txt(B("Nourishment") + " comes from full meals (anything made in a pot or on a stove): slow natural regeneration even when your hunger bar is not full. " + B("Comfort") + " comes from warm dishes (soups, stews): faster healing. Both show as potion effects.",
                 "Raw and roasted food keeps you alive; meals make the difference in a fight."),
             txt("Season matters: see " + L("land/crops", "What Grows When") + ". Out of season, crops stop; a greenhouse roof or a deep farm keeps the pot full.",
-                "Animals are from Animania and are a chapter of their own: " + L("start/animals", "Animals")),
+                "Animals have a chapter of their own: " + L("start/animals", "Animals")),
         ]),
-        ("animals", "Animals", "animania:trough", [
-            txt("Animania replaces the farm animals. Cows, pigs, sheep, goats, chickens, rabbits, horses, ferrets, hamsters, cats and more come in real breeds with males, females and young.",
-                "They are not vending machines. An animal that is fed and watered produces; one that is not, does not."),
-            craft("animania:trough", "Fill a trough with food (wheat, hay, seeds by animal) or water (bucket). Animals eat and drink on their own. One of each per pen."),
-            craft("animania:salt_lick", "Salt licks keep livestock healthy; nests collect the eggs.", recipe2="animania:block_nest"),
-            txt(B("Milk") + " needs a fed, watered cow or goat and a bucket; cheese comes from milk in a cheese mold. " + B("Wool") + " and " + B("eggs") + " come on their own schedule.",
-                B("Breeding") + " needs a male and a female of the same kind, both fed. Young take time to grow."),
-            txt(B("Cats") + " hunt rodents and keep ferrets company; " + B("ferrets") + " and " + B("hamsters") + " are pets. " + B("Draft horses") + " pull wagons (see " + L("building/wagons", "Wagons") + ").",
-                "Wild animals are Naturalist's: deer, boar, bears, big cats, snakes. Bears defend themselves; snakes bite; vultures circle. Hunt deer and boar for meat."),
-            ent("animania:cow_holstein", "A Holstein: the dairy breed. Every breed has a look and a temper; the field manual in your inventory (Animania's) lists them.", scale=0.9),
+        ("animals", "Animals", "animal_feeding_trough:feeding_trough", [
+            txt("The farm animals are Minecraft's own: cows, pigs, sheep, chickens, goats, rabbits, horses, cats. " + B("More Mob Variants") + " gives them breeds and coats (a sooty pig, a horned sheep, a cookie cow) that their young inherit.",
+                "They ask nothing of you but food to breed: no thirst, no moods, no beds."),
+            craft("animal_feeding_trough:feeding_trough", "Fill a feeding trough with an animal's breeding food (wheat, seeds, carrots): the animals around it eat and breed on their own."),
+            txt(B("A pasture holds 40.") + " Two animals cannot have young while 40 of their kind live within 32 blocks; you are told when it happens. Spread a herd over two pastures, or eat some.",
+                "Every animal is ticked by the server for everyone on it; that is the reason."),
+            txt(B("Wild animals") + " are Naturalist's: deer, boar, bears, lions, elephants, giraffes, zebras, rhinos, alligators, snakes, birds, butterflies and fireflies. Bears defend themselves, snakes bite, vultures circle.",
+                B("Critters and Companions") + " adds the small ones: otters open clams for pearls, ferrets dig up loot, red pandas scare off neutral mobs, and dragonflies and jumping spiders can be tamed."),
+            txt(B("Dogs") + " are Doggy Talents' (" + L("threats/night", "The Night") + "). " + B("Horses") + " pull wagons (" + L("building/wagons", "Wagons") + ").",
+                "Land explored before the animals changed gets its wild animals back the first time someone walks through it again."),
+            ent("naturalist:deer", "A deer: wary and fast, and the best meat in the woods.", scale=0.8),
         ]),
         ("first_create", "Your First Machines", "create:andesite_alloy", [
             txt("Nothing in the homestead tier is locked. Andesite alloy, water wheels, presses, mixers, saws, millstones, belts, funnels and chutes are yours from day one.",
@@ -467,7 +468,7 @@ ENTRIES = {
                 "Shields block in a cone; a parrying dagger blocks fast. Fire from a musket breaks a shield."),
             txt(B("Dogs:") + " tame a wolf, then feed it a " + B("Training Treat") + " to make it a dog (Doggy Talents). Dogs learn talents, carry things, fight well and come back. Whistle commands are on " + B("Shift+1..4") + ".",
                 "A dog bed is a home; a dog with Pack Puppy is a backpack with teeth."),
-            craft(staged("doggytalents:training_treat"), "Treat a tamed wolf; a stick on the dog opens its talents.", recipe2="doggytalents:dog_bed"),
+            craft("doggytalents:training_treat", "Treat a tamed wolf; a stick on the dog opens its talents.", recipe2="doggytalents:dog_bed"),
         ]),
         ("pillagers", "The Pillager Faction", "minecraft:crossbow", [
             txt("Pillagers are villagers who left (" + L("story/painted_ones", "The Painted Ones") + "). Outposts, forts, camps and the villages they hold are full of what they took, and their captains carry the ledgers of the old trade.",
@@ -615,7 +616,7 @@ ENTRIES = {
             txt(B("Falling leaves") + ", " + B("Particle Rain") + " weather, " + B("3D skins") + " and " + B("capes") + " are cosmetic and free to turn off if frames matter (see " + L("tools/performance", "Performance") + ")."),
         ]),
         ("wagons", "Wagons", "minecraft:lead", [
-            txt(B("Trotting Wagons") + ": a wagon hitched to a horse (or an Animania draft horse) with storage in the back. Lead the horse, the wagon follows. This is the first bulk transport.",
+            txt(B("Trotting Wagons") + ": a wagon hitched to a horse with storage in the back. Lead the horse, the wagon follows. This is the first bulk transport.",
                 B("Caravans & Convoys") + " wagons travel in trains behind a leader, carry chests, and can be sent along routes between stops."),
             txt("Roads matter: Macaw's paths and Supplementaries' ropes and pulleys make a road and a loading dock out of nothing.",
                 "A wagon of zinc clusters from the mountains to the capital is the first trade route this server will have."),
@@ -687,7 +688,7 @@ ENTRIES = {
         ("info", "Finding Things Out", "minecraft:spyglass", [
             txt(B("Jade") + " names whatever you look at, with its health, contents or progress. Hold " + B("Shift") + " for more. Numpad 0 toggles it.",
                 B("EMI") + " is the recipe book: " + B("R") + " for recipes, " + B("U") + " for uses, " + B("A") + " to favourite, drag to the side to pin. It knows Create, Farmer's Delight, loot tables and enchantments."),
-            txt(B("Create") + " ponders with " + B("W") + ". " + B("Geolosys") + " and " + B("Animania") + " give you their own books on first join. Village Recruits is explained in " + L("towns/new_towns", "Towns & Trade") + ".",
+            txt(B("Create") + " ponders with " + B("W") + ". " + B("Geolosys") + " gives you its own book on first join. Village Recruits is explained in " + L("towns/new_towns", "Towns & Trade") + ".",
                 "This almanac links to the others where they exist, and does not repeat them."),
             txt(B("Advancements") + " (" + B("L") + ") has a " + B("Peacock") + " tab: every boss, the journals, the dead towns, the Blueprint tiers, the towns and the first winter. Bosses count for everyone who fought, not only the one who landed the blow."),
         ]),
@@ -727,7 +728,7 @@ ENTRIES = {
         ]),
         ("people", "People & Towns", "minecraft:emerald", [
             txt(B("Village Recruits") + " (the base mod) hires soldiers; its " + B("Village Expansion") + " addon gives towns names, factions, politics and growth. " + B("Guard Villagers") + " man the walls. " + B("Villager Workers") + " are hired labour. " + B("Villager Comfort") + ", " + B("Restock Balance") + " and " + B("Villager Names") + " make villagers people."),
-            txt(B("Bountiful") + " posts jobs. " + B("Doggy Talents") + " makes dogs. " + B("Animania") + " makes farm animals; " + B("Naturalist") + " wild ones; " + B("Aquaculture") + " (+Delight) fish; " + B("Farmer's Delight") + " the kitchen."),
+            txt(B("Bountiful") + " posts jobs. " + B("Doggy Talents") + " makes dogs. " + B("More Mob Variants") + " breeds the farm animals; " + B("Naturalist") + " and " + B("Critters and Companions") + " are the wild ones; " + B("Aquaculture") + " (+Delight) fish; " + B("Farmer's Delight") + " the kitchen."),
         ]),
         ("fights", "Fights", "minecraft:iron_sword", [
             txt(B("Better Combat") + " is how swinging works. " + B("Spartan Weaponry") + " and " + B("Spartan Shields") + " are the arsenal; " + B("Musket Mod") + " the guns.",

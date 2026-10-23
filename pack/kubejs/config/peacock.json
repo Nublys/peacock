@@ -1,5 +1,5 @@
 {
-  "_comment": "Peacock pack switches read by kubejs/server_scripts/*.js. Server-side; takes effect on /reload or restart. ladder=false disables recipe staging and place/hire gates (Blueprints still drop). sleepPercent: players (%) that must sleep to skip the night (-1 = vanilla rule untouched). bossBarScale: size of boss bars on screen, client-side (1 = vanilla). tabListOffset: where the player list (Tab) opens, client-side: \"auto\" lines it up with Jade's overlay below the compass bar; a number is a fixed shift in GUI pixels (0 = vanilla position). coldBreath: visible breath when Cold Sweat's outside air temperature at a player is below breathBelowF (°F), client-side (false = off). boardPavilions: how many bounty-board pavilions the capital gets, built once per world (default 3).",
+  "_comment": "Peacock pack switches read by kubejs/server_scripts/*.js. Server-side; takes effect on /reload or restart. ladder=false disables recipe staging and place/hire gates (Blueprints still drop). sleepPercent: players (%) that must sleep to skip the night (-1 = vanilla rule untouched). bossBarScale: size of boss bars on screen, client-side (1 = vanilla). tabListOffset: where the player list (Tab) opens, client-side: \"auto\" lines it up with Jade's overlay below the compass bar; a number is a fixed shift in GUI pixels (0 = vanilla position). coldBreath: visible breath when Cold Sweat's outside air temperature at a player is below breathBelowF (°F), client-side (false = off). boardPavilions: how many bounty-board pavilions the capital gets, built once per world (default 3). herdCap/herdCapCount: two animals cannot breed when this many of their kind are within 32 blocks (default 40). wildlifeReseed: give each chunk generated before the 2026-10-23 animal replacement its biome's animals once, when next loaded (claims and the capital skipped).",
   "rumourMaps": true,
   "depotNeedsTown": true,
   "ladder": true,
@@ -11,5 +11,8 @@
   "tabListOffset": "auto",
   "coldBreath": true,
   "breathBelowF": 45,
-  "boardPavilions": 3
+  "boardPavilions": 3,
+  "herdCap": true,
+  "herdCapCount": 40,
+  "wildlifeReseed": true
 }

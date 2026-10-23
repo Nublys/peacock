@@ -1,37 +1,35 @@
 {
   "name": "Animals",
-  "icon": "animania:trough",
+  "icon": "animal_feeding_trough:feeding_trough",
   "category": "patchouli:start",
   "sortnum": 2,
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Animania replaces the farm animals. Cows, pigs, sheep, goats, chickens, rabbits, horses, ferrets, hamsters, cats and more come in real breeds with males, females and young.$(br2)They are not vending machines. An animal that is fed and watered produces; one that is not, does not."
+      "text": "The farm animals are Minecraft's own: cows, pigs, sheep, chickens, goats, rabbits, horses, cats. $(bold)More Mob Variants$() gives them breeds and coats (a sooty pig, a horned sheep, a cookie cow) that their young inherit.$(br2)They ask nothing of you but food to breed: no thirst, no moods, no beds."
     },
     {
       "type": "patchouli:crafting",
-      "recipe": "animania:trough",
-      "text": "Fill a trough with food (wheat, hay, seeds by animal) or water (bucket). Animals eat and drink on their own. One of each per pen."
-    },
-    {
-      "type": "patchouli:crafting",
-      "recipe": "animania:salt_lick",
-      "recipe2": "animania:block_nest",
-      "text": "Salt licks keep livestock healthy; nests collect the eggs."
+      "recipe": "animal_feeding_trough:feeding_trough",
+      "text": "Fill a feeding trough with an animal's breeding food (wheat, seeds, carrots): the animals around it eat and breed on their own."
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Milk$() needs a fed, watered cow or goat and a bucket; cheese comes from milk in a cheese mold. $(bold)Wool$() and $(bold)eggs$() come on their own schedule.$(br2)$(bold)Breeding$() needs a male and a female of the same kind, both fed. Young take time to grow."
+      "text": "$(bold)A pasture holds 40.$() Two animals cannot have young while 40 of their kind live within 32 blocks; you are told when it happens. Spread a herd over two pastures, or eat some.$(br2)Every animal is ticked by the server for everyone on it; that is the reason."
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Cats$() hunt rodents and keep ferrets company; $(bold)ferrets$() and $(bold)hamsters$() are pets. $(bold)Draft horses$() pull wagons (see $(l:patchouli:building/wagons)Wagons$()).$(br2)Wild animals are Naturalist's: deer, boar, bears, big cats, snakes. Bears defend themselves; snakes bite; vultures circle. Hunt deer and boar for meat."
+      "text": "$(bold)Wild animals$() are Naturalist's: deer, boar, bears, lions, elephants, giraffes, zebras, rhinos, alligators, snakes, birds, butterflies and fireflies. Bears defend themselves, snakes bite, vultures circle.$(br2)$(bold)Critters and Companions$() adds the small ones: otters open clams for pearls, ferrets dig up loot, red pandas scare off neutral mobs, and dragonflies and jumping spiders can be tamed."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Dogs$() are Doggy Talents' ($(l:patchouli:threats/night)The Night$()). $(bold)Horses$() pull wagons ($(l:patchouli:building/wagons)Wagons$()).$(br2)Land explored before the animals changed gets its wild animals back the first time someone walks through it again."
     },
     {
       "type": "patchouli:entity",
-      "entity": "animania:cow_holstein",
-      "text": "A Holstein: the dairy breed. Every breed has a look and a temper; the field manual in your inventory (Animania's) lists them.",
-      "scale": 0.9
+      "entity": "naturalist:deer",
+      "text": "A deer: wary and fast, and the best meat in the woods.",
+      "scale": 0.8
     }
   ]
 }

@@ -31,14 +31,15 @@ EUPHORIA = f"{CR_NAME} + EuphoriaPatches_1.10.5"   # folder Euphoria Patcher gen
 # Resource packs shipped in pack/resourcepacks/, enabled in every tier (last = highest priority). Must match the
 # `filename` fields of the .pw.toml files and config/defaultoptions/options.txt.
 # Appalachia-style look (2026-10-20): grass, foliage, 3D models, sun & moon, Fresh Animations' add-ons. Later = on top.
-RESOURCE_PACKS = '["vanilla","mod_resources","file/Fast-Better-Grass.zip","file/rainbows-foliage-vanilla-edition-v2.1.zip","file/3D-Default-1.20-v1.16.0.zip","file/Better-Leaves-9.6.zip","file/FancyFast-Bushy-Leaves.zip","file/EnhancedBossBars-1.6.zip","file/xalis-enchanted-books-1.0.0-beta.2.zip","file/xalis-potions-1.2.0.zip","file/LowOnFire-26.3.zip","file/cubic-sun-moon-v1.8.5.zip","file/FreshAnimations_v1.10.4.zip","file/FA+Details-v2.2.1.zip","file/FA+Objects-v2.1.2.zip"]'
+# More Mob Variants' breeds under Fresh Animations (2026-10-23, the animal replacement) sit on top of Fresh Animations.
+RESOURCE_PACKS = '["vanilla","mod_resources","file/Fast-Better-Grass.zip","file/rainbows-foliage-vanilla-edition-v2.1.zip","file/3D-Default-1.20-v1.16.0.zip","file/Better-Leaves-9.6.zip","file/FancyFast-Bushy-Leaves.zip","file/EnhancedBossBars-1.6.zip","file/xalis-enchanted-books-1.0.0-beta.2.zip","file/xalis-potions-1.2.0.zip","file/LowOnFire-26.3.zip","file/cubic-sun-moon-v1.8.5.zip","file/FreshAnimations_v1.10.4.zip","file/FA+Details-v2.2.1.zip","file/FA+Objects-v2.1.2.zip","file/MoreMobVariants_FreshAnimations_1.3.0-1.9.zip"]'
 # potato: no 3D models, no Fresh Animations (or its add-ons) — extra geometry per block/entity — and no bushy leaves
 # (Aaron, 2026-10-22: "Disable better leaves for the potato preset"; bushy leaves also need Fancy leaves, and potato's
 # Fast leaves draw their see-through edges as boxes). The leaves are Optimized Bushy Leaves since 2026-10-22 (Aaron:
 # "Switch the leaf mod to Optimized Bushy Leaves"), Motschen's Better Leaves before. Both ship, stacked: Optimized Bushy
 # Leaves above for vanilla trees (its 1.20.1 version covers vanilla only), Better Leaves below for Biomes O' Plenty and
 # the other modded trees (Aaron, 2026-10-22: "Stack both packs").
-POTATO_DROP = ['"file/3D-Default-1.20-v1.16.0.zip"', '"file/Better-Leaves-9.6.zip"', '"file/FancyFast-Bushy-Leaves.zip"', '"file/FreshAnimations_v1.10.4.zip"', '"file/FA+Details-v2.2.1.zip"', '"file/FA+Objects-v2.1.2.zip"']
+POTATO_DROP = ['"file/3D-Default-1.20-v1.16.0.zip"', '"file/Better-Leaves-9.6.zip"', '"file/FancyFast-Bushy-Leaves.zip"', '"file/FreshAnimations_v1.10.4.zip"', '"file/FA+Details-v2.2.1.zip"', '"file/FA+Objects-v2.1.2.zip"', '"file/MoreMobVariants_FreshAnimations_1.3.0-1.9.zip"']
 
 #          tier          shaders  pack        preset      DH radius  DH transp.  threads  DH quality  options.txt keys
 TIERS = {
@@ -69,6 +70,9 @@ TIERS = {
 # "not the player's own" and updates it, so a changed default reaches existing installs. Append, never remove.
 PREVIOUS_DEFAULTS = {
     "options.txt.keys": [
+        # every tier's packs and potato's, before More Mob Variants x Fresh Animations (2026-10-23)
+        'resourcePacks:["vanilla","mod_resources","file/Fast-Better-Grass.zip","file/rainbows-foliage-vanilla-edition-v2.1.zip","file/3D-Default-1.20-v1.16.0.zip","file/Better-Leaves-9.6.zip","file/FancyFast-Bushy-Leaves.zip","file/EnhancedBossBars-1.6.zip","file/xalis-enchanted-books-1.0.0-beta.2.zip","file/xalis-potions-1.2.0.zip","file/LowOnFire-26.3.zip","file/cubic-sun-moon-v1.8.5.zip","file/FreshAnimations_v1.10.4.zip","file/FA+Details-v2.2.1.zip","file/FA+Objects-v2.1.2.zip"]',
+        'resourcePacks:["vanilla","mod_resources","file/Fast-Better-Grass.zip","file/rainbows-foliage-vanilla-edition-v2.1.zip","file/EnhancedBossBars-1.6.zip","file/xalis-enchanted-books-1.0.0-beta.2.zip","file/xalis-potions-1.2.0.zip","file/LowOnFire-26.3.zip","file/cubic-sun-moon-v1.8.5.zip"]',
         'resourcePacks:["vanilla","mod_resources","file/FreshAnimations_v1.10.4.zip"]',
         'resourcePacks:' + '["vanilla","mod_resources","file/Better-Leaves-9.6.zip","file/EnhancedBossBars-1.6.zip","file/xalis-enchanted-books-1.0.0-beta.2.zip","file/xalis-potions-1.2.0.zip","file/LowOnFire-26.3.zip","file/FreshAnimations_v1.10.4.zip"]',
         'resourcePacks:' + '["vanilla","mod_resources","file/Better-Leaves-9.6.zip","file/EnhancedBossBars-1.6.zip","file/xalis-enchanted-books-1.0.0-beta.2.zip","file/xalis-potions-1.2.0.zip","file/LowOnFire-26.3.zip"]',
