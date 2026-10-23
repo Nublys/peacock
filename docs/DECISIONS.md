@@ -1482,3 +1482,16 @@ supports EMI only on Fabric/NeoForge; Nearby Chest Crafting only JEI on Forge.
 - Blueprints: its craft grid is a TransientCraftingContainer tied to its menu, so Recipe Stages finds the player as at a
   vanilla table (checked in both jars); a locked recipe still refuses to craft. Untested in game.
 - Almanac: Carrying Things explains the table, and the Workshop's name tag.
+
+## Prospecting before metal: the flint hammer; the pick takes any common metal (2026-10-23)
+Aaron: "Is it possible to add a alternative/worse stone prospecters? So the player does not have to find iron first",
+then "Let the real pick's recipe take any common metal ... Do this in addition to the flint pic".
+- **Flint Prospector's Hammer** (`startup_scripts/flint_hammer.js`, `server_scripts/flint_hammer.js`): flint,
+  cobblestone, flint over two sticks. Right-click a block: the ores in a 9 × 9 column from that block down 24 blocks are
+  named in chat, no direction or depth; 32 uses, one click a second. It reads Geolosys' own deposit list
+  (`Prospecting.getDepositBlocks`, minus its detection blacklist; surface samples skipped), about 2,000 blocks a click.
+  The pick stays the better tool: which way, 5 blocks into a face, else the whole chunk, and it never breaks.
+- **Prospector's pick** (`peacock:prospectors_pick` replaces Geolosys' recipe): three ingots of any common metal
+  (`#peacock:common_metals`: iron, copper, tin, zinc, lead, nickel, aluminium) and two sticks.
+- Almanac, The Prospector's Pick: surface rocks lie near the middle of the deposit's chunk, not over the ore, and give
+  no depth (checked in Geolosys' SampleUtils); then the hammer and the pick.

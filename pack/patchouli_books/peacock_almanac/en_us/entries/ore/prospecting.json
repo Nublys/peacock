@@ -6,12 +6,21 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Craft the pick early. Right-click stone and it tells you what ore is nearby and roughly where. Walk, tap, walk, tap. It never breaks.$(br2)Geolosys hands you its own $(bold)Field Manual$() on first join. It lists every deposit, what it drops and at what depth."
+      "text": "$(bold)Surface rocks$() (samples) mean a deposit under that chunk: they lie near the chunk's middle, not straight above the ore, and say nothing about depth. Break one for a cluster of its metal.$(br2)Geolosys hands you its own $(bold)Field Manual$() on first join. It lists every deposit, what it drops and at what depth."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Flint Prospector's Hammer$() (day one: flint, cobblestone, sticks): right-click a block and it names the ores in a 9 by 9 column from there down 24 blocks. No direction, no depth; 32 uses. It answers: is it worth digging here?$(br2)$(bold)The prospector's pick$() answers where: right-click stone and it names the ore within 5 blocks of that face and which way it lies; if none, what is anywhere in the chunk. It never breaks."
     },
     {
       "type": "patchouli:crafting",
-      "recipe": "geolosys:crafting/prospectors_pick_from_crafting",
-      "text": "Tap exposed stone, not dirt. In deepslate it reads deeper deposits. Pair it with a depth meter."
+      "recipe": "peacock:flint_prospectors_hammer",
+      "text": "Tap the ground where the rocks are. Nothing? Walk on: the deposit may be in the next chunk, or deeper than 24 blocks."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "peacock:prospectors_pick",
+      "text": "Three ingots of any common metal (iron, copper, tin, zinc, lead, nickel, aluminium) and two sticks. Tap exposed stone, not dirt."
     },
     {
       "type": "patchouli:crafting",

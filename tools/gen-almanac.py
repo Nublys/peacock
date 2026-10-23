@@ -278,9 +278,12 @@ ENTRIES = {
                 "Everything else follows depth, not biome."),
         ]),
         ("prospecting", "The Prospector's Pick", "geolosys:prospectors_pick", [
-            txt("Craft the pick early. Right-click stone and it tells you what ore is nearby and roughly where. Walk, tap, walk, tap. It never breaks.",
+            txt(B("Surface rocks") + " (samples) mean a deposit under that chunk: they lie near the chunk's middle, not straight above the ore, and say nothing about depth. Break one for a cluster of its metal.",
                 "Geolosys hands you its own " + B("Field Manual") + " on first join. It lists every deposit, what it drops and at what depth."),
-            craft("geolosys:crafting/prospectors_pick_from_crafting", "Tap exposed stone, not dirt. In deepslate it reads deeper deposits. Pair it with a depth meter."),
+            txt(B("Flint Prospector's Hammer") + " (day one: flint, cobblestone, sticks): right-click a block and it names the ores in a 9 by 9 column from there down 24 blocks. No direction, no depth; 32 uses. It answers: is it worth digging here?",
+                B("The prospector's pick") + " answers where: right-click stone and it names the ore within 5 blocks of that face and which way it lies; if none, what is anywhere in the chunk. It never breaks."),
+            craft("peacock:flint_prospectors_hammer", "Tap the ground where the rocks are. Nothing? Walk on: the deposit may be in the next chunk, or deeper than 24 blocks."),
+            craft("peacock:prospectors_pick", "Three ingots of any common metal (iron, copper, tin, zinc, lead, nickel, aluminium) and two sticks. Tap exposed stone, not dirt."),
             craft("geolosys:crafting/field_manual_from_crafting", "Lost the manual? Craft one. The depth meter reads your Y.", recipe2="geolosys:crafting/depth_meter"),
             txt(B("Metals you will need, in order:") + " copper and iron (homestead; iron is common and shallow), then " + B("zinc") + " (brass needs it, and brass needs a Blueprint), then gold and coal in bulk once machines run.",
                 "The first player to find zinc should tell everyone. That is a trade route being born."),
@@ -757,7 +760,7 @@ ENTRIES = {
             txt("Out of season. Hover the seeds for their seasons; put a glass roof a few blocks over the field, or farm below Y 48, and the season stops mattering. See " + L("land/crops", "What Grows When") + "."),
         ]),
         ("ore", "...find any ore?", "geolosys:prospectors_pick", [
-            txt("Because it is not everywhere. Look for small rock clusters on the surface (samples), craft the prospector's pick and tap stone, and read " + L("ore/deposits", "where each metal lies") + ". Iron is shallow and common; zinc is under mountains; gold in dry land. Caves have deposits deep down and chests full of clusters."),
+            txt("Because it is not everywhere. Look for small rock clusters on the surface (samples), tap the ground with a flint hammer, then a prospector's pick, and read " + L("ore/deposits", "where each metal lies") + ". Iron is shallow and common; zinc is under mountains; gold in dry land. Caves have deposits deep down and chests full of clusters."),
         ]),
         ("minimap", "...see a minimap?", "map_atlases:atlas", [
             txt("There is none, on purpose. Craft an atlas (" + B("M") + "), pin things (" + B("P") + "), and read the land. The locator bar shows your friends; " + B("J") + " shows claims. See " + L("rules/what_we_dont_do", "What We Do Not Do") + "."),

@@ -1441,6 +1441,10 @@ file = "kubejs/assets/peacock/textures/item/fire_drill.png"
 hash = "3969f18a9c823fa284fd3e8a0d13d9956941bb894474e88632dd0592353c2603"
 
 [[files]]
+file = "kubejs/assets/peacock/textures/item/flint_prospectors_hammer.png"
+hash = "81811666c3bebd4382a9ab645af9968f8e6d47cc62b33690b43bba95450d49f2"
+
+[[files]]
 file = "kubejs/assets/peacock/textures/item/invar_ingot.png"
 hash = "74d4668f38ea3ba5d1365d409a496d006d9c344ac61b863affb402cf74315ccf"
 
@@ -1557,6 +1561,10 @@ file = "kubejs/server_scripts/fire_drill_recipe.js"
 hash = "9a12102cf2e55dc832c1a8878cc5a1e5bab70f7e0086902671fc2767db33b480"
 
 [[files]]
+file = "kubejs/server_scripts/flint_hammer.js"
+hash = "ac2bb331a2f5af85e0c4ce2092f16bfc1c69a7e2e38a5f95985a68d152669c1e"
+
+[[files]]
 file = "kubejs/server_scripts/geolosys_create.js"
 hash = "72fcdd041fa14fb62eb09e20cf4d7a75b5588e7035b758eec75f7071cef07182"
 
@@ -1631,6 +1639,10 @@ hash = "6bd6e43cfb772e0a1bfb79fd31a06f3a7e4d4def39dba9dc0ea37484a4323e4d"
 [[files]]
 file = "kubejs/startup_scripts/fire_drill.js"
 hash = "e47482cdc15f348403399b7c97413d8cac404b0d39d77b3bcf7c9a24676859af"
+
+[[files]]
+file = "kubejs/startup_scripts/flint_hammer.js"
+hash = "a08e2c170c702ed325e353e24e83109e1cc8dc9cf821daf6e5fa7a798bfafa23"
 
 [[files]]
 file = "kubejs/startup_scripts/forge_hooks.js"
@@ -2705,7 +2717,7 @@ hash = "35dde0dd88010ae2574059ca0326103ae2d888ef165f135ab93109891669cb28"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/faq/ore.json"
-hash = "01eea9ce015744cc259431a4ed80be0073a09fc951ccdad64141124daff6e6cb"
+hash = "02c0f5a1b4dc1177c101b44ccb22646e2795f9e0005231e60faf5d074a639c36"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/land/crops.json"
@@ -2777,7 +2789,7 @@ hash = "5895ef282e0d9c970e683dab350c811481fdddea6e79dcea2d8564d3d478629e"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/ore/prospecting.json"
-hash = "bf7adff7b245401b3a3f9ab93c6da98cd9853d916e1bc1345e93f3ef04f4272f"
+hash = "e5f782e5145e29a81c401fbb8661a90440dab1d65d2004a92cbed01eb49f0062"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/ore/regional_ore.json"

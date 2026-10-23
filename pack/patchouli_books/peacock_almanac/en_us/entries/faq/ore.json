@@ -6,7 +6,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Because it is not everywhere. Look for small rock clusters on the surface (samples), craft the prospector's pick and tap stone, and read $(l:patchouli:ore/deposits)where each metal lies$(). Iron is shallow and common; zinc is under mountains; gold in dry land. Caves have deposits deep down and chests full of clusters."
+      "text": "Because it is not everywhere. Look for small rock clusters on the surface (samples), tap the ground with a flint hammer, then a prospector's pick, and read $(l:patchouli:ore/deposits)where each metal lies$(). Iron is shallow and common; zinc is under mountains; gold in dry land. Caves have deposits deep down and chests full of clusters."
     }
   ]
 }
