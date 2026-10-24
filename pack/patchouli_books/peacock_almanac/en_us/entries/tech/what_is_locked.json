@@ -14,7 +14,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Trains:$() track, stations, controls, schedules, signals, train doors, railway casing, all of Steam 'n' Rails.$(br)$(bold)Ships:$() all of Eureka: helms, floaters, ballast, balloons, engines.$(br)$(bold)Trading Floor:$() the depot.$(br)$(bold)Diesel:$() all of Create Diesel Generators.$(br)$(bold)Diving:$() Create's backtank, diving helmet and boots; the conduit."
+      "text": "$(bold)Trains:$() track, stations, controls, schedules, signals, train doors, railway casing, all of Steam 'n' Rails.$(br)$(bold)Trading Floor:$() the depot.$(br)$(bold)Diesel:$() all of Create Diesel Generators.$(br)$(bold)Diving:$() Create's backtank, diving helmet and boots; the conduit."
     },
     {
       "type": "patchouli:text",

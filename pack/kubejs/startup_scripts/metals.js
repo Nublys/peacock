@@ -7,7 +7,7 @@
 //     its forge:ingots/forge:nuggets tag, which also unlocks Spartan's electrum, constantan and invar weapons
 //   • storage blocks for lead, silver, nickel, aluminium, platinum and the three alloys (tin, bronze and steel blocks
 //     come from Create: Ironworks); a lead block also switches Supplementaries' cannonballs from iron to lead
-//   • aluminium sheet (Eureka balloons) and platinum sheet (a shorter precision mechanism); other sheets come from
+//   • aluminium sheet (made Eureka balloons until 2026-10-24; kept for the ship/air replacement) and platinum sheet (a shorter precision mechanism); other sheets come from
 //     Create and Ironworks, and none is made that nothing uses
 // Textures are recoloured from Geolosys' ingots, Create's iron sheet and the vanilla iron block.
 //

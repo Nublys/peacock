@@ -44,7 +44,7 @@ GC_FLAGS="-XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:
   -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5
   -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1"
 
-# Heap: 75% of the container, not 90. Netty buffers, Valkyrien Skies' physics, metaspace and the JVM itself
+# Heap: 75% of the container, not 90. Netty buffers, metaspace and the JVM itself
 # all live outside the Java heap; at 90% a busy evening gets the container OOM-killed instead of a GC pause.
 # Override with PEACOCK_HEAP_PERCENT (or set an explicit -Xmx in user_jvm_args.txt and leave this alone).
 HEAP_PERCENT="${PEACOCK_HEAP_PERCENT:-75.0}"

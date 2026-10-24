@@ -63,7 +63,7 @@ hash = "54b999cd4b8859787eec9d1b8df99b5e318030961fe7bf444dc31727de8a69f6"
 
 [[files]]
 file = "config/canary.properties"
-hash = "11720950bc46f74fff4433c851b0e755aa315f4e64e8be491dad05b8faf01ef9"
+hash = "4212677a77cbb6f6e3e67e230f2408614c5538b469737106803b0323d4903062"
 
 [[files]]
 file = "config/caravansconvoys-common.toml"
@@ -1128,14 +1128,6 @@ file = "config/paxi/datapacks/peacock/data/peacock/worldgen/template_pool/war_ca
 hash = "b9dcb578a13c41c95a7e4823ecca2b624b8fcd3cfef81aecbfbf13243b4a5063"
 
 [[files]]
-file = "config/paxi/datapacks/peacock/data/pirates/worldgen/structure_set/wrecks.json"
-hash = "1f1bb31bafab68a01fc4bdb58f545df731de3938bb0352b5fc522c11af128549"
-
-[[files]]
-file = "config/paxi/datapacks/peacock/data/pirates_eureka/worldgen/structure_set/ships.json"
-hash = "6f19f102767d574468eea1f3b2a1ad8fcfe56655d152bd62bef4d6b88778e67a"
-
-[[files]]
 file = "config/paxi/datapacks/peacock/data/sereneseasons/tags/blocks/autumn_crops.json"
 hash = "a5310d4145eefae9ed989d01e717c64365bba38f2eb6847f7e2f438c7f74cda6"
 
@@ -1194,10 +1186,6 @@ hash = "fdad3882dce3efcc9d1deece8cf4599fa821d9d8c83ba9088320421c53e7e5f0"
 [[files]]
 file = "config/paxi/datapacks/peacock/pack.mcmeta"
 hash = "d95489181581732e809992e3756ad554f6bf0fa3e4fc1edff1a02b143d152e3a"
-
-[[files]]
-file = "config/pirates/config.acfg"
-hash = "9bfc31d8f3c53bb6ca982bab64125232870f5657fc2145b2c04f2b51a64b3060"
 
 [[files]]
 file = "config/ponder-client.toml"
@@ -1262,14 +1250,6 @@ hash = "c73292a81a8409d74edb12b0bb9226bda03f39e11afc8abfe6bff52cc30ef480"
 [[files]]
 file = "config/underground_village/common.json5"
 hash = "210c7b1672741c9eeecdf5f5ae2ffadbd427cf9c633fc75f355e641225700cc6"
-
-[[files]]
-file = "config/valkyrienskies/valkyrienskies-client.toml"
-hash = "f002bcce8d27856892757ab4b85fcc6180d198cc7da6304a26dae32effdd5a6a"
-
-[[files]]
-file = "config/valkyrienskies/valkyrienskies-common.toml"
-hash = "0b23797166d41ac0dfd91761a2a3390315ed699820aca833b174da67db92ee67"
 
 [[files]]
 file = "config/village_recruits/README.txt"
@@ -1582,7 +1562,7 @@ hash = "12bb9718ac3cf5e6b5b98a97f171b6a9a397ed518d1be049b663c745458c6ab8"
 
 [[files]]
 file = "kubejs/server_scripts/metals.js"
-hash = "e3827ef1cf03e58905d4c80545cd08194b9187fc7fdb0576ae61c104b58a7fbe"
+hash = "0c29296a0549c8fdd1e76a1e2ca37f5a239986afd079f5f27b23629514c3f822"
 
 [[files]]
 file = "kubejs/server_scripts/no_vr_manual.js"
@@ -1658,11 +1638,11 @@ hash = "fae52ddeb2ceab289a8b1e72bd7bec5350c5f2bdf69e54e5b1e070a4891f9fa3"
 
 [[files]]
 file = "kubejs/startup_scripts/metals.js"
-hash = "b3dca150dde74c73c1494c7e7a55977e3f94b8e13372c051dcb8f7dbd7334832"
+hash = "86718af392fbc435338a813545b01d2f70e0c6f7bb3ef74a3cbfc24fc69a754e"
 
 [[files]]
 file = "kubejs/startup_scripts/peacock_ladder.js"
-hash = "50ca1458a286dafc9fe19475ce685161eebaac5086efa46bff0c64bc1bec3f23"
+hash = "1b858e0793d76e7698a8bc8137983867665c18a7025b3f75f7fc786d27d10a4a"
 
 [[files]]
 file = "kubejs/startup_scripts/quiet_join_chat.js"
@@ -2020,11 +2000,6 @@ metafile = true
 [[files]]
 file = "mods/euphoria-patches.pw.toml"
 hash = "8b9a0884963be8c914c763a709d0072823f0bcf741fa0591528d2ced936a55d3"
-metafile = true
-
-[[files]]
-file = "mods/eureka.pw.toml"
-hash = "25a77d22981acefe715992fb2145440e5a55961df281051c73e3d9aced527a47"
 metafile = true
 
 [[files]]
@@ -2498,16 +2473,6 @@ hash = "7b11f0b577ac00d30ca3d3271eb349e820c2857957423b865e6c593ec1d4babf"
 metafile = true
 
 [[files]]
-file = "mods/valkyrien-pirates.pw.toml"
-hash = "ff3a138655404bb220e1bc12b8f4192e468dccc371ad9e475969a070cdb7e561"
-metafile = true
-
-[[files]]
-file = "mods/valkyrien-skies.pw.toml"
-hash = "0d2d6bf7c333f15b04211c4c5dadc60919971dce4258490eede4892d7cab53a3"
-metafile = true
-
-[[files]]
 file = "mods/village-spawn-point.pw.toml"
 hash = "a8300ff8da33357763138e5595cc11f052b6c010d65be36b1986ecadeee47652"
 metafile = true
@@ -2540,11 +2505,6 @@ metafile = true
 [[files]]
 file = "mods/visual-workbench.pw.toml"
 hash = "ac1c9b7fa62ef9f0397407eaf6b0746e7d8a585e7ba51e4ecca357df310b23a7"
-metafile = true
-
-[[files]]
-file = "mods/vlib.pw.toml"
-hash = "a96e35c18e68b2fe84cacf6fd4fbe854cf858ab78bced7e6bf4b1ae0653d89a0"
 metafile = true
 
 [[files]]
@@ -2667,7 +2627,7 @@ hash = "f5cf7970cdb8f12466b1d8fd581e3d99b5752dc079a1cf89f6868a3a3a19602b"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/building/ships.json"
-hash = "c7e3769e31e1d6e9feaa5ec9e9b99e8fd4990cde698527ec7633e3d4b96e68a9"
+hash = "3c2698d6cb076c857e536c88e36b6b87b6b0559acb2a54fd65e5b5ac584ee41b"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/building/trains.json"
@@ -2735,7 +2695,7 @@ hash = "57b99b7b6e97bfbf0f2e828e83156292a2161582c975298b8ae585d340ccf804"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/land/terrain.json"
-hash = "6ac802c34ce028d3ed7940013ecf25360f179c56c10086a87edb6e637867aafb"
+hash = "9cfddf6616766f17b3c3349ec43570d789277ff73050220235b257282a7d3c15"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/land/warmth.json"
@@ -2747,7 +2707,7 @@ hash = "05e202785c731c0dcd43f901b053b9e447a7203d5b81154ad072533de5d68bd9"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/mods/machines.json"
-hash = "a76e7cd97d6d66ac083bc9973fa9b49d6249586d5b5855143224627d33742046"
+hash = "4cee06ae95adb714e696750f911ede66ca7fd9e8f1f118c66e25d8f618e7833c"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/mods/people.json"
@@ -2867,7 +2827,7 @@ hash = "5854a87494a7fa4a957a0b6326e78541ee40790a33132d0c61f0937d565cd596"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/tech/tier2.json"
-hash = "0e344d539bb5188fc554f55311bee123cea0a13dfc73bbc331eb56943a03e5d0"
+hash = "35ee28315bd4b90e5fcc40157376796362063c0f15e68bddeb513bf712446321"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/tech/tier3.json"
@@ -2879,7 +2839,7 @@ hash = "c566cb77dc20b1d36733ed092034a7e96d90b8ffa525c6b854b3d0cbd3e98747"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/tech/what_is_locked.json"
-hash = "469f6e3978e0937e0d98f649f1143ce7df9df49b77ec9f3ec62acad08a2cdbf7"
+hash = "b8c16b0a99adcb06987caa18adff5ffaab384d12d436c0c2dea3198950933bdf"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/threats/finding.json"
@@ -2891,7 +2851,7 @@ hash = "c89b14252ba8a41c626481b091eed2e4a5450ce26a07513f3ea89b0fe65fcaa0"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/threats/pillagers.json"
-hash = "77feb6c198254196487914b3071c2a9c0aaaa329501c2b0140e0d1ed67d97515"
+hash = "f2cb687ba31dca2cff0bab1a509632e205535c0e2bcab55bf6fb854855bc1ff0"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/tools/atlas.json"
@@ -2919,7 +2879,7 @@ hash = "3d58f961d5a710e96c60215fe34deb40f89f7277bcfe3f02ec2b076b92918177"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/towns/caravans.json"
-hash = "0aa4ef869d8f21baf2f113b0d5617921abb1720ae8018786f34f8f13383012f0"
+hash = "7c4e2b2ad0d2a779052929f1693cb930f4bac37dd56aba5dd36bc11a4db3dc2b"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/towns/joining.json"
@@ -2983,7 +2943,7 @@ hash = "f22cac22f221bc51031e15445a077a41a468774497bdcf46d8397370924024de"
 
 [[files]]
 file = "peacock-server/peacock-start.sh"
-hash = "114653687da22da0ec9b0d693982840786bb6a992f516044ca241cbf3899799a"
+hash = "7af0a76e89ec950b73b3da388c42a0df71d2e864c3b91a198f51c94b383eb3f8"
 
 [[files]]
 file = "peacock/launch.jar"

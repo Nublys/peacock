@@ -1,27 +1,12 @@
 {
   "name": "Ships",
-  "icon": "vs_eureka:oak_ship_helm",
+  "icon": "minecraft:oak_boat",
   "category": "patchouli:building",
   "sortnum": 2,
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(bold)Valkyrien Skies$() makes any build you assemble into a physical ship. $(bold)Eureka$() is the simple way: build a hull, place a helm, right-click to assemble, steer with the helm.$(br2)Rivers and coasts are everywhere here. A barge moves more than ten wagons."
-    },
-    {
-      "type": "patchouli:crafting",
-      "recipe": "peacock:staged/vs_eureka/oak_ship_helm",
-      "text": "Place the helm on the deck and assemble. Floaters add buoyancy, ballast sinks, balloons lift. An engine burns fuel for speed; sails are free."
-    },
-    {
-      "type": "patchouli:crafting",
-      "recipe": "peacock:staged/vs_eureka/floater",
-      "recipe2": "peacock:staged/vs_eureka/balloon_wool",
-      "text": "Floaters keep a heavy hull up; balloons make airships."
-    },
-    {
-      "type": "patchouli:text",
-      "text": "$(bold)Ships are Tier 2$(): the Naga hold the knowledge. The helm, floaters, balloons and engine need the Blueprint; a hull is just blocks.$(br2)$(bold)Pirates$() sail ships of their own and will board yours. Cannons on a deck are the answer (Tier 3)."
+      "text": "Rivers and coasts are everywhere here, and a river carries a boat downstream. A chest boat is the first cargo ship.$(br2)$(bold)Ships are Tier 2$(): the Naga hold the shipwright's craft."
     }
   ]
 }

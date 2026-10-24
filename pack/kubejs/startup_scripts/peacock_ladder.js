@@ -57,8 +57,9 @@ global.LADDER = {
   },
   ships: {
     name: 'Ships', tier: 2, bosses: ['mowziesmobs:naga'], key: 'minecraft:oak_boat',
-    gates: { outputMods: ['vs_eureka'] },
-    story: 'Helms, floaters, ballast, balloons, engines: a hull that moves.',
+    // Eureka went with Valkyrien Skies (2026-10-24); the ship and air mods that replace it are gated here when added
+    gates: {},
+    story: 'Hulls, helms and sails: the shipwright\'s craft.',
   },
   trade: {
     name: 'Trading Floor', tier: 2, bosses: ['illagerinvasion:invoker', 'illageandspillage:spiritcaller', 'illageandspillage:magispeller', 'illageandspillage:freakager', 'illageandspillage:ragno'], key: 'minecraft:lectern',

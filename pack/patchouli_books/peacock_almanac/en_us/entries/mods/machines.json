@@ -6,7 +6,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(bold)Create$() and its family: $(bold)Steam 'n' Rails$() (trains), $(bold)Big Cannons$(), $(bold)Diesel Generators$(), $(bold)Enchantment Industry$(), $(bold)Dragons Plus$(), $(bold)Trading Floor$() (depots), $(bold)Create Deco$() and $(bold)Interiors$() (looks), $(bold)Create Better Villagers$() (trades), $(bold)Slice & Dice$() (kitchen).$(br2)$(bold)Valkyrien Skies$() + $(bold)Eureka$() are ships; $(bold)Valkyrien Pirates$() sail them against you."
+      "text": "$(bold)Create$() and its family: $(bold)Steam 'n' Rails$() (trains), $(bold)Big Cannons$(), $(bold)Diesel Generators$(), $(bold)Enchantment Industry$(), $(bold)Dragons Plus$(), $(bold)Trading Floor$() (depots), $(bold)Create Deco$() and $(bold)Interiors$() (looks), $(bold)Create Better Villagers$() (trades), $(bold)Slice & Dice$() (kitchen).$(br2)Boats, wagons and rails carry goods."
     },
     {
       "type": "patchouli:text",

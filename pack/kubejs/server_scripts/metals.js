@@ -18,9 +18,9 @@
 // 3. Lead is shot: musket cartridges and Big Cannons' shot balls and solid shot also take lead (more cartridges and
 //    shot balls per craft than iron). Wrapped in the same Recipe Stages gate as the originals (Blasting, Cannons).
 // 4. Alloys in a heated basin: electrum (gold + silver), constantan (copper + nickel), invar (2 iron + nickel).
-// 5. Storage blocks, and sheets where something uses them: aluminium sheets make Eureka balloons (light metal,
-//    8 per craft; gated by Ships like Eureka's own), platinum sheets make a precision mechanism in 3 steps
-//    instead of 5 and without Create's scrap chance.
+// 5. Storage blocks, and sheets where something uses them: platinum sheets make a precision mechanism in 3 steps
+//    instead of 5 and without Create's scrap chance. (Aluminium sheets made Eureka balloons until Eureka went with
+//    Valkyrien Skies, 2026-10-24; the sheet is still pressed, for whatever replaces it.)
 // 6. Villagers buy the rarer metals (BUYS, at the end).
 ;(() => {
 const SW = (() => { try { return JsonIO.read('kubejs/config/peacock.json') || {} } catch (e) { return {} } })()
@@ -141,11 +141,6 @@ ServerEvents.recipes(event => {
     event.custom({ type: 'create:pressing', ingredients: [{ tag: 'forge:ingots/' + m }], results: [{ item: 'peacock:' + m + '_sheet' }] })
       .id('peacock:metals/pressing/' + m + '_sheet')
   })
-  event.custom(gated('ships', {
-    type: 'minecraft:crafting_shaped', group: 'balloons',
-    pattern: [' # ', '# #', ' # '], key: { '#': { tag: 'forge:plates/aluminum' } },
-    result: { item: 'vs_eureka:balloon', count: 8 },
-  })).id('peacock:metals/balloon_from_aluminum')
   const PM = 'create:incomplete_precision_mechanism'
   event.custom({
     type: 'create:sequenced_assembly', ingredient: { tag: 'forge:plates/platinum' }, transitionalItem: { item: PM }, loops: 3,

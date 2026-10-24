@@ -15,7 +15,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Caravans & Convoys$(): merchant caravans travel between settlements with wagons, and you can run your own. Build a stop and routes open. This is the mid-game economy before rail.$(br2)Pirates and raiders know the roads too."
+      "text": "$(bold)Caravans & Convoys$(): merchant caravans travel between settlements with wagons, and you can run your own. Build a stop and routes open. This is the mid-game economy before rail.$(br2)Raiders know the roads too."
     },
     {
       "type": "patchouli:text",

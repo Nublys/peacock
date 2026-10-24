@@ -1574,3 +1574,18 @@ corrected too (from the launch after the one that downloads the new launcher).
   down", server log). Direction's step methods and Block.getDescriptionId are not reachable by name from scripts on the
   server, so the steps come from a table keyed on the direction's name and an ore's name from KubeJS'
   `level.getBlock(x, y, z).id` (looked up only for blocks that matched).
+
+## Valkyrien Skies out, with Eureka, Valkyrien Pirates and vlib (2026-10-24)
+
+- Aaron: "Remove Valkyrien Skies." In the 2026-10-24 profile it cost 7.7% of the tick by itself (every moving
+  entity checked against ships, plus a ship-drag tracker), and it was why Canary's `ai.poi` was off: villagers
+  looking for a bed or job site (AcquirePoi) were another 8.6%, almost all of it the POI lookup that `ai.poi`
+  speeds up. Removed: `valkyrien-skies`, `eureka`, `valkyrien-pirates`, `vlib` (only Valkyrien Pirates used it), their
+  configs, and the pack's structure-set overrides for pirate wrecks and ships.
+- Canary `mixin.ai.poi` is back on. `entity.collisions` stays off for now (it was off for Valkyrien Skies, but has
+  not been tried with Create's contraptions here).
+- The Ships rung (Naga, Tier 2) gates nothing until the replacement ship and air mods are added; its Blueprint can
+  still be learned. The aluminium-sheet balloon recipe went with Eureka (the sheet is still pressed). Almanac: the
+  Ships page is boats only for now; Eureka and pirate mentions removed.
+- Existing world: Eureka ships and pirate ships vanish (Valkyrien Skies kept ship blocks in its own far-off
+  shipyard region; those chunks stay on disk, unreachable). Pirate entities are dropped as their chunks load.

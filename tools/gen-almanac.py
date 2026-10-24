@@ -253,8 +253,8 @@ ENTRIES = {
         ("terrain", "The Land Itself", "minecraft:grass_block", [
             txt("Tectonic and Terralith shape the terrain: real mountain ranges, deep valleys, long rivers, high plateaus. Biomes O' Plenty fills them. Streams run and fall from the hills, and slabs soften the slopes.",
                 "The capital sits in a lowland. Mountains are where the zinc is; dry country is where the gold is."),
-            txt("Rivers and coasts matter: ships (Eureka) and wagons are how goods move before rails exist. Rivers carry a current: a boat drifts downstream. Build towns where water and road meet.",
-                "Structory scatters ruins; Create Structures leave old workshops with parts in them. Pirates hold the coasts."),
+            txt("Rivers and coasts matter: boats and wagons are how goods move before rails exist. Rivers carry a current: a boat drifts downstream. Build towns where water and road meet.",
+                "Structory scatters ruins; Create Structures leave old workshops with parts in them."),
             txt(B("Nature's Compass") + " finds a biome by name: the way to the nearest snowy peak, savanna or desert. It is how you find the places bosses live.",
                 "Craft one before the first long trip."),
             craft("naturescompass:natures_compass", "Right-click to open the biome list, pick one, follow the needle. It cannot find structures; that is what rumours and maps are for."),
@@ -427,7 +427,7 @@ ENTRIES = {
                 "Each finished bounty raises the board's standing, shared by all. At ten, " + B("sealed rumours") + " (a map to a boss); at fifteen, journals and totems; at thirty, a named weapon."),
             craft("bountiful:crafting/bountyboard", "The capital's board works for everyone; a new town can craft its own. Decrees set what a board asks for; Archivist's Records pays in writings."),
             txt(B("Caravans & Convoys") + ": merchant caravans travel between settlements with wagons, and you can run your own. Build a stop and routes open. This is the mid-game economy before rail.",
-                "Pirates and raiders know the roads too."),
+                "Raiders know the roads too."),
             txt("Late game, the " + B("Trading Floor") + " lets a train sell on a schedule: a depot in a real town, goods in, emeralds out, while you are elsewhere.",
                 "Depots need a Blueprint and a town with a bell and beds. There is no version that works in a hole in the ground."),
         ]),
@@ -483,7 +483,7 @@ ENTRIES = {
                 B("Savage & Ravage") + " and " + B("Respillaged") + " make outposts worth the fight: loot, totems, creepers you did not expect."),
             ent("illagerinvasion:invoker", "The Invoker: the fort's master. Summons, shields, teleports, and does not fight alone. Bring recruits. It holds the trading ledgers: the Trading Floor Blueprint.", scale=0.8),
             txt(B("Totems") + " (Respillaged) summon captains when you are ready, which is how late Blueprints stay available on a busy server: nobody waits on worldgen for a boss that can be called.",
-                "Pirates (Valkyrien Pirates) hold the sea the way illagers hold the land: ships that fight back, and loot in the hold."),
+                "Out on the open sea, nobody keeps the peace."),
         ]),
         ("finding", "Finding Them", "minecraft:map", [
             txt("Bosses live in places. Finding the place is most of the fight, and the pack never lets you type a command for it.",
@@ -571,7 +571,7 @@ ENTRIES = {
         ]),
         ("tier2", "Tier 2: Bring Recruits", "minecraft:diamond", [
             txt("Bosses that guard a place. Bring a squad, or a friend. Diamond or good iron with enchantments; food with Comfort; a way home.",
-                B("Ferrous Wroughtnaut") + " holds " + B("Trains") + " (Steam 'n' Rails).$(br)" + B("Naga") + " holds " + B("Ships") + " (Eureka).$(br)" + B("The Invoker") + " holds the " + B("Trading Floor") + ".$(br)" + B("Umvuthi") + " holds " + B("Diesel") + ".$(br)" + B("Elder Guardians") + " hold " + B("Diving") + ".$(br)" + B("Frostmaw") + " holds " + B("Climate control") + "; " + B("Torte") + " (Nether) " + B("Advanced cooking") + "."),
+                B("Ferrous Wroughtnaut") + " holds " + B("Trains") + " (Steam 'n' Rails).$(br)" + B("Naga") + " holds " + B("Ships") + ".$(br)" + B("The Invoker") + " holds the " + B("Trading Floor") + ".$(br)" + B("Umvuthi") + " holds " + B("Diesel") + ".$(br)" + B("Elder Guardians") + " hold " + B("Diving") + ".$(br)" + B("Frostmaw") + " holds " + B("Climate control") + "; " + B("Torte") + " (Nether) " + B("Advanced cooking") + "."),
             txt("Trains and ships are the two ways to move ore between regions that do not involve a horse. Diesel is the engine that does not need a river. The Trading Floor is the market that runs without you.",
                 "The Invoker's ledgers also turn up on the totem captains. Tier 2 is where a server's economy stops being one person's chest."),
             rel(["bosses/mowzies", "bosses/illagers", "bosses/incendium"], title="Who to fight"),
@@ -606,7 +606,7 @@ ENTRIES = {
             txt("Only " + B("crafting-table recipes") + " can be locked, so the rule is: the things built " + I("from") + " a material are locked, the material is not. Anyone can mix brass in a basin; nobody without the Blueprint can make a casing or a funnel from it.",
                 "Everything whose recipe is locked is also locked to " + B("place") + ": a brass machine handed to you will not go down until you have learned it."),
             txt(B("Brass:") + " every recipe with brass in it or brass out of it, and the mechanical crafter.$(br)" + B("Blasting:") + " everything made with gunpowder, TNT, the empty blaze burner, muskets and cartridges, powder charges.$(br)" + B("Climate:") + " the hearth, boiler and icebox.$(br)" + B("Cooking:") + " Slice & Dice slicer and sprinkler."),
-            txt(B("Trains:") + " track, stations, controls, schedules, signals, train doors, railway casing, all of Steam 'n' Rails.$(br)" + B("Ships:") + " all of Eureka: helms, floaters, ballast, balloons, engines.$(br)" + B("Trading Floor:") + " the depot.$(br)" + B("Diesel:") + " all of Create Diesel Generators.$(br)" + B("Diving:") + " Create's backtank, diving helmet and boots; the conduit."),
+            txt(B("Trains:") + " track, stations, controls, schedules, signals, train doors, railway casing, all of Steam 'n' Rails.$(br)" + B("Trading Floor:") + " the depot.$(br)" + B("Diesel:") + " all of Create Diesel Generators.$(br)" + B("Diving:") + " Create's backtank, diving helmet and boots; the conduit."),
             txt(B("Precision:") + " everything made with a precision mechanism: arms, speed controllers, sequenced gearshifts, extendo grips.$(br)" + B("Netherite:") + " ingots and anything crafted from them (smithing is not locked).$(br)" + B("Cannons:") + " all of Create Big Cannons.$(br)" + B("Arcane:") + " Enchantment Industry and Dragons Plus.$(br)" + B("Ender:") + " ender chests, portable interfaces, item vaults, smart chutes, stockpile switches."),
             txt(B("Recruiting") + " locks the act of hiring, not an item: emeralds on a recruit do nothing until you have learned it. Guards and your own dogs are never locked.",
                 "Hover anything grey in EMI: the tooltip names the Blueprint and the boss that holds it."),
@@ -627,13 +627,9 @@ ENTRIES = {
             txt("Roads matter: Macaw's paths and Supplementaries' ropes and pulleys make a road and a loading dock out of nothing.",
                 "A wagon of zinc clusters from the mountains to the capital is the first trade route this server will have."),
         ]),
-        ("ships", "Ships", "vs_eureka:oak_ship_helm", [
-            txt(B("Valkyrien Skies") + " makes any build you assemble into a physical ship. " + B("Eureka") + " is the simple way: build a hull, place a helm, right-click to assemble, steer with the helm.",
-                "Rivers and coasts are everywhere here. A barge moves more than ten wagons."),
-            craft(staged("vs_eureka:oak_ship_helm"), "Place the helm on the deck and assemble. Floaters add buoyancy, ballast sinks, balloons lift. An engine burns fuel for speed; sails are free."),
-            craft(staged("vs_eureka:floater"), "Floaters keep a heavy hull up; balloons make airships.", recipe2=staged("vs_eureka:balloon_wool")),
-            txt(B("Ships are Tier 2") + ": the Naga hold the knowledge. The helm, floaters, balloons and engine need the Blueprint; a hull is just blocks.",
-                B("Pirates") + " sail ships of their own and will board yours. Cannons on a deck are the answer (Tier 3)."),
+        ("ships", "Ships", "minecraft:oak_boat", [
+            txt("Rivers and coasts are everywhere here, and a river carries a boat downstream. A chest boat is the first cargo ship.",
+                B("Ships are Tier 2") + ": the Naga hold the shipwright's craft."),
         ]),
         ("trains", "Trains", "create:railway_casing", [
             txt(B("Create") + " tracks, stations, schedules and signals, extended by " + B("Steam 'n' Rails") + ": conductors, handcars, couplers, track switches, fuel tanks, and a locomotive palette.",
@@ -728,7 +724,7 @@ ENTRIES = {
         ]),
         ("machines", "Machines & Logistics", "create:cogwheel", [
             txt(B("Create") + " and its family: " + B("Steam 'n' Rails") + " (trains), " + B("Big Cannons") + ", " + B("Diesel Generators") + ", " + B("Enchantment Industry") + ", " + B("Dragons Plus") + ", " + B("Trading Floor") + " (depots), " + B("Create Deco") + " and " + B("Interiors") + " (looks), " + B("Create Better Villagers") + " (trades), " + B("Slice & Dice") + " (kitchen).",
-                B("Valkyrien Skies") + " + " + B("Eureka") + " are ships; " + B("Valkyrien Pirates") + " sail them against you."),
+                "Boats, wagons and rails carry goods."),
             txt(B("Trotting Wagons") + " and " + B("Caravans & Convoys") + " move goods by horse. " + B("Storage Drawers") + " (+Create compat) are visible bulk storage. " + B("Proximity Crafting") + "'s table crafts from the chests around it; " + B("Workshop") + " adds tables, tool racks and shelves. " + B("Backpacked") + " is the backpack; " + B("Supplementaries") + " the sacks, ropes, pulleys and a hundred small things."),
             txt(B("Macaw's") + " nine mods are doors, roofs, windows, fences, bridges, paths, stairs, trapdoors, lights, paintings and furniture; " + B("Every Compat") + " makes every wood work with all of it."),
         ]),
