@@ -11,6 +11,9 @@
 //
 // Rhino notes (see tools/validate.py): `var` inside functions, no `const`/`let` in try blocks, no Math constants.
 ;(() => {
+// Entity.distanceTo / distanceToSqr are not reachable from scripts on the server ("Cannot find function distanceTo",
+// 2026-10-24: a Mutant Skeleton died and gave no Blueprint); x/y/z do work, so distance is worked out from them
+function dist2(a, b) { var dx = a.x - b.x, dy = a.y - b.y, dz = a.z - b.z; return dx * dx + dy * dy + dz * dz }
 const CFG = (() => { try { return JsonIO.read('kubejs/config/peacock.json') || {} } catch (e) { return {} } })()
 const ON = CFG.herdCap !== false
 const HERD = typeof CFG.herdCapCount === 'number' ? CFG.herdCapCount : 40
@@ -30,7 +33,7 @@ global.PEACOCK_ON_BREED = !ON ? null : event => {
   event.setCanceled(true)
   var key = 'entity.' + type.replace(':', '.'), now = gameTime(level)   // the animal's name, in the reader's language
   level.players.forEach(p => {
-    if (p.distanceToSqr(a) > 24 * 24) return
+    if (dist2(p, a) > 24 * 24) return
     var last = Number(p.persistentData.getLong(LAST))
     if (last && now - last < TELL_EVERY) return
     p.persistentData.putLong(LAST, now)

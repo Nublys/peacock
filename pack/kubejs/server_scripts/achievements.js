@@ -8,6 +8,9 @@
 // The BOSSES table must match tools/gen-advancements.py, which prints it.
 // Rhino notes (see tools/validate.py): `var` inside functions, no `const`/`let` in try blocks, no Math constants.
 ;(() => {
+// Entity.distanceTo / distanceToSqr are not reachable from scripts on the server ("Cannot find function distanceTo",
+// 2026-10-24: a Mutant Skeleton died and gave no Blueprint); x/y/z do work, so distance is worked out from them
+function dist2(a, b) { var dx = a.x - b.x, dy = a.y - b.y, dz = a.z - b.z; return dx * dx + dy * dy + dz * dz }
 const BOSSES = {
   'mutantmonsters:mutant_zombie': ['mutant_zombie', true],
   'mutantmonsters:mutant_skeleton': ['mutant_skeleton', true],
@@ -87,7 +90,7 @@ EntityEvents.death(event => {
   uuids.forEach(u => {
     try {
       var p = level.server.getPlayerList().getPlayer(UUID.fromString(u))
-      if (!p || String(p.level.dimension) !== String(level.dimension) || p.distanceTo(boss) > 128) return
+      if (!p || String(p.level.dimension) !== String(level.dimension) || dist2(p, boss) > 128 * 128) return
       grant(p, 'bosses/first')
       grant(p, 'bosses/' + id)
       if (!done(p, 'bosses/ledger') && LEDGER.every(b => done(p, 'bosses/' + b))) grant(p, 'bosses/ledger')

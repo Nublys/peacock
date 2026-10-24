@@ -1642,3 +1642,14 @@ everything and push". Sources in `art/concepts/` (not shipped).
   texture just does not look good." ChatGPT drew its pickaxe two-armed, and the import squeezed that onto vanilla's
   one-armed footprint; its block was flat. Now vanilla's golden pickaxe and gold block in electrum's colours, the block
   with an engraved sun disc (`tools/fix-electrum-art.py`; run it after `import-gear-art.py`).
+
+## Boss Blueprints were not dropping (2026-10-24)
+
+From the 2026-10-24 server log: a Mutant Skeleton died, and the Blueprint drop and the boss achievement both failed
+with "Cannot find function distanceTo in object ServerPlayer". Like Direction.getStepX earlier the same day, the
+server's script engine cannot reach Entity.distanceTo / distanceToSqr by name, so every boss death since the ladder
+began checking distance gave nothing, not even the spare dropped on the ground. Fixed in all five scripts that used
+them (blueprints, achievements, villager_cap, herd_cap, capital_npcs): distance now comes from x/y/z, which do work.
+The drop loop now handles each fighter on their own, so one failure cannot cost the others or the spare.
+`tools/validate.py` now rejects getStepX/Y/Z, distanceTo and distanceToSqr in server and startup scripts.
+Also: the Village Recruits addon's join line about the missing aircraft compat is hidden (it was left out on purpose).

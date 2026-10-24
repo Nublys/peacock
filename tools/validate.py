@@ -155,6 +155,14 @@ def check_kubejs() -> None:
             if rest and not re.match(r"(\}|return\b)", rest):
                 err(f"{f.relative_to(ROOT)}:{i}: event.{m.group(1)}() ends the handler at once in KubeJS 6; move it to the end (the code after it never runs)")
 
+        # Minecraft methods the server's script engine cannot find by name, each seen failing in a server log:
+        # Direction.getStepX/Y/Z and Block.getDescriptionId (flint hammer, 2026-10-24), Entity.distanceTo /
+        # distanceToSqr (boss Blueprint drops, 2026-10-24). Client scripts may call them through a fallback.
+        if "client_scripts" not in str(f):
+            for i, line in enumerate(code, 1):
+                m = re.search(r"\.(getStep[XYZ]|distanceTo|distanceToSqr)\(", line)
+                if m:
+                    err(f"{f.relative_to(ROOT)}:{i}: .{m.group(1)}() is not reachable from KubeJS scripts on the server; use x/y/z (or a table)")
 
 def check_advancements() -> None:
     """Every boss achievements.js grants must exist in the generated advancement tree (tools/gen-advancements.py)."""

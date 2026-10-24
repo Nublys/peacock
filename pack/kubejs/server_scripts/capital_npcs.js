@@ -14,6 +14,9 @@
 // Rhino notes (see tools/validate.py): `var` inside functions, no `const`/`let` in try blocks, no Math constants,
 // every loop variable declared before its loops.
 ;(() => {
+// Entity.distanceTo / distanceToSqr are not reachable from scripts on the server ("Cannot find function distanceTo",
+// 2026-10-24: a Mutant Skeleton died and gave no Blueprint); x/y/z do work, so distance is worked out from them
+function dist2(a, b) { var dx = a.x - b.x, dy = a.y - b.y, dz = a.z - b.z; return dx * dx + dy * dy + dz * dz }
 global.PEACOCK_ROLES = global.PEACOCK_ROLES || {}
 const TALK = 'peacock_npc_talk'
 const RECORDS = 'peacock_npcs'            // server persistentData: "role|uuid|dim|x|y|z;…" of every service person
@@ -191,7 +194,7 @@ function talkingTo(player) {
   if (gameTime(level) - Number(p[2]) > TALK_TICKS) { player.tell(Text.gray('Talk to them again first.')); return null }
   var npc = null
   try { npc = level.getEntity(UUID.fromString(p[1])) } catch (e) { npc = null }
-  if (!npc || !npc.isAlive() || npc.distanceToSqr(player) > REACH * REACH) { player.tell(Text.gray('Talk to them again first: you have to stand near them.')); return null }
+  if (!npc || !npc.isAlive() || dist2(npc, player) > REACH * REACH) { player.tell(Text.gray('Talk to them again first: you have to stand near them.')); return null }
   return { role: p[0], npc: npc }
 }
 

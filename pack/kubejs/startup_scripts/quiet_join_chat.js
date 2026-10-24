@@ -11,11 +11,13 @@
 if (!Platform.isClientEnvironment()) return
 const PREFIX = '[VillageRecruits Addon]'
 const PROBLEM = /WARNING|missing|MISSING|could NOT|NOT readable/
+// known and chosen, not a problem: the Recruits aircraft compat is left out on purpose (docs/DECISIONS.md, 2026-10-24)
+const EXPECTED = /immersiveaircraftscompat/
 
 ForgeEvents.onEvent('net.minecraftforge.client.event.ClientChatReceivedEvent$System', event => {
   try {
     var text = String(event.getMessage().getString())
-    if (text.indexOf(PREFIX) !== 0 || PROBLEM.test(text)) return
+    if (text.indexOf(PREFIX) !== 0 || (PROBLEM.test(text) && !EXPECTED.test(text))) return
     event.setCanceled(true)
   } catch (e) { }
 })

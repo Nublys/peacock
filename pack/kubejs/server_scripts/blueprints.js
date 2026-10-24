@@ -16,6 +16,9 @@
 // KubeJS loads every server script into one shared scope; a bare `{}` block does not isolate `const` in
 // its Rhino ("redeclaration of var"), so the body lives in a function scope.
 ;(() => {
+// Entity.distanceTo / distanceToSqr are not reachable from scripts on the server ("Cannot find function distanceTo",
+// 2026-10-24: a Mutant Skeleton died and gave no Blueprint); x/y/z do work, so distance is worked out from them
+function dist2(a, b) { var dx = a.x - b.x, dy = a.y - b.y, dz = a.z - b.z; return dx * dx + dy * dy + dz * dz }
 const SW = (() => { try { return JsonIO.read('kubejs/config/peacock.json') || {} } catch (e) { return {} } })()
 const LADDER_ON = SW.ladder !== false
 const L = global.LADDER
@@ -132,12 +135,15 @@ EntityEvents.death(event => {
   const fighters = (boss.persistentData.getString('peacock_fighters') || '').split(',').filter(s => s.length)
   const level = boss.level
   let given = 0
+  // each fighter on their own, so one failure can never cost the others (or the spare) their Blueprint (2026-10-24)
   fighters.forEach(uuid => {
-    const p = level.server.getPlayerList().getPlayer(UUID.fromString(uuid))
-    if (!p || String(p.level.dimension) !== String(level.dimension) || p.distanceTo(boss) > 128) return
-    rungs.forEach(rung => p.give(blueprint(rung)))
-    p.tell(Text.aqua('A Blueprint falls from the ' + String(boss.name.getString()) + '. Use it to learn.'))
-    given++
+    try {
+      var p = level.server.getPlayerList().getPlayer(UUID.fromString(uuid))
+      if (!p || String(p.level.dimension) !== String(level.dimension) || dist2(p, boss) > 128 * 128) return
+      rungs.forEach(rung => p.give(blueprint(rung)))
+      p.tell(Text.aqua('A Blueprint falls from the ' + String(boss.name.getString()) + '. Use it to learn.'))
+      given++
+    } catch (e) { console.warn('[peacock] blueprint drop: ' + e) }
   })
   // one spare for someone who was not there (two if nobody who hit it was still around)
   rungs.forEach(rung => boss.block.popItem(blueprint(rung, given ? 1 : 2)))

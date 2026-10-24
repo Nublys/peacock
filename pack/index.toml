@@ -1894,7 +1894,7 @@ hash = "cf9567b4ca1fda1fe97f29a57e04bf4dd0ed0e7d73d24769491b4b59954061ab"
 
 [[files]]
 file = "kubejs/server_scripts/achievements.js"
-hash = "61576ffa8e7211c179f4864aa314be6a539a4ce040975f6425618b8dc7398832"
+hash = "69a083a40e03bac15cf616f5d4c5360bc3b242b9f82b6ee4583c70902fbc2717"
 
 [[files]]
 file = "kubejs/server_scripts/almanac.js"
@@ -1910,7 +1910,7 @@ hash = "2ecc26057a63c16d1e257902f523e10679cf48b01e248b896a6744108e00bac8"
 
 [[files]]
 file = "kubejs/server_scripts/blueprints.js"
-hash = "cdfd9940e38e6a93019ed231ba9254b64015278eb3204d70a2cbcbc30ca1b6af"
+hash = "c908d0c54a071310e1752480bc3cfe5fb37ed4e3a019e4ebb0176e52d25660c6"
 
 [[files]]
 file = "kubejs/server_scripts/boss_tuning.js"
@@ -1922,7 +1922,7 @@ hash = "23d3267a57c50a4a0b982d4d4842d6e0e875eef3b119c31ff353ff7b9a21c2f1"
 
 [[files]]
 file = "kubejs/server_scripts/capital_npcs.js"
-hash = "630cb5f360ca5de5c9978cef54829d73b980df8bb6a351f28bd689d2cbd16eb7"
+hash = "7380d14c14234909c242bfb2adbeaafd6c1b2915dfd7f58307737165c7ccd58b"
 
 [[files]]
 file = "kubejs/server_scripts/capital_projects.js"
@@ -1958,7 +1958,7 @@ hash = "72fcdd041fa14fb62eb09e20cf4d7a75b5588e7035b758eec75f7071cef07182"
 
 [[files]]
 file = "kubejs/server_scripts/herd_cap.js"
-hash = "d68700e7b7a04a9723882e73bf05aea695393215c9c3b466ab29c89e283a3207"
+hash = "ba2d333f66a00de5660313994258e30a9f499e9dee6f6d8b41ceaa45a8c0d5c8"
 
 [[files]]
 file = "kubejs/server_scripts/journals.js"
@@ -2014,7 +2014,7 @@ hash = "d9b4d8be0ada5477c3b7b6ebfd1231cdb2c28f374660a732bb5fa3d98f2b7c49"
 
 [[files]]
 file = "kubejs/server_scripts/villager_cap.js"
-hash = "ccc2e2d3931c0964d624e83f0ea0f3b924493fb24bc37095e148b5d1f3a72fcd"
+hash = "f8f84754c415cd9fcbc5e4f3aaea579619af832f9195925f286287f1b5444b61"
 
 [[files]]
 file = "kubejs/server_scripts/villager_restock.js"
@@ -2066,7 +2066,7 @@ hash = "a3b042bddbea55369e579b44a5d561c99ac071e0b822e9f870c95bcd121d879f"
 
 [[files]]
 file = "kubejs/startup_scripts/quiet_join_chat.js"
-hash = "ff62be1551f4aad28cb1dd518cfe2b6a64e7121b2df275e6548c172fa1a9d7b5"
+hash = "6119cf7f51dcbcdd7e5532a49934d569b98df40d7868c6d6aa28a239283cabb5"
 
 [[files]]
 file = "kubejs/startup_scripts/tab_list_offset.js"
