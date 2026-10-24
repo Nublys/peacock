@@ -3195,7 +3195,7 @@ hash = "6faeeac70e8bedbca9a3978ff0ead50bb03e13d9d9dd869bd85a181523f87972"
 
 [[files]]
 file = "peacock/profiles/medium/config/DistantHorizons.toml.keys"
-hash = "a5c762fb05ff8118e12a451a00e5df8821c9d92085902de56fd882001bfe4a5c"
+hash = "2d88875e669ecd4cea52a4cebd7340244999a5f979bdb5f3872d7f1f38ed4d78"
 
 [[files]]
 file = "peacock/profiles/medium/config/coldsweat/client.toml.keys"

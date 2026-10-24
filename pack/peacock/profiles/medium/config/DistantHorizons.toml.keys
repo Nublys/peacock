@@ -1,8 +1,8 @@
 lodChunkRenderDistanceRadius = 192
 numberOfThreads = 2
 transparency = "DISABLED"
-verticalQuality = "HIGH"
-horizontalQuality = "HIGH"
+verticalQuality = "MEDIUM"
+horizontalQuality = "MEDIUM"
 enableSsao = true
 chunkGeneratorMode = "FEATURES"
 enableAutoUpdater = false

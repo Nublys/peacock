@@ -1524,7 +1524,8 @@ stay cheap). Bats saved beyond the limit vanish when their chunk loads. `batCap`
 ## Distant Horizons quality up a step (2026-10-23)
 Aaron, on DH detail: "Set low to MEDIUM too" (with medium and high to HIGH, as offered). Horizontal quality (how far the
 full-detail ring reaches before LODs halve) and vertical quality (overhangs, cliffs, caves at a distance) are now
-potato LOW, low MEDIUM, medium HIGH, high HIGH, ultra HIGH; the shipped first-launch `DistantHorizons.toml` matches low.
+potato LOW, low MEDIUM, medium MEDIUM, high HIGH, ultra HIGH; the shipped first-launch `DistantHorizons.toml` matches low.
+Medium stays at MEDIUM (Aaron, 2026-10-23: "Keep the medium tier at medium"); it went to HIGH for one commit.
 Both are client-only (GPU and memory); render distance, which is what costs the server, is unchanged. Players who set
 their own quality keep it. `maxHorizontalResolution` stays BLOCK everywhere.
 Same change, the transparency fix: low and medium wrote `transparency = "FAKE"`, which DH 3.3.3 does not have (its enum

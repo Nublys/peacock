@@ -52,7 +52,7 @@ TIERS = {
                         options={"renderDistance": "6", "simulationDistance": "6", "graphicsMode": "1", "particles": "1",
                                  "entityShadows": "false", "biomeBlendRadius": "2", "entityDistanceScaling": "0.75",
                                  "renderClouds": '"fast"'}),
-    "medium":      dict(shaders=True,  pack=CR_ZIP,  preset="MEDIUM",  dh=192, transp="DISABLED", threads=2, quality="HIGH", ssao=True, emb=("DEFAULT","DEFAULT","true"),
+    "medium":      dict(shaders=True,  pack=CR_ZIP,  preset="MEDIUM",  dh=192, transp="DISABLED", threads=2, quality="MEDIUM", ssao=True, emb=("DEFAULT","DEFAULT","true"),
                         options={"renderDistance": "8", "simulationDistance": "8", "graphicsMode": "1", "particles": "0",
                                  "entityShadows": "true", "biomeBlendRadius": "3", "entityDistanceScaling": "1.0",
                                  "renderClouds": '"true"'}),
