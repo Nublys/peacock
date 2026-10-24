@@ -1638,3 +1638,7 @@ everything and push". Sources in `art/concepts/` (not shipped).
 - **Blueprint, Fire Drill, Rumour Voucher, Steward's Contract, Flint Prospector's Hammer**: the concepts were drawn
   at about 32 × 32 and blur at 16, so they are redrawn by hand after them (`tools/draw-items.py`).
 - Metal sheets (aluminium, platinum, lead, invar) are unchanged recolours until their concept comes back.
+- Same day, Aaron on electrum (the pale gold one: gold + silver): "The pickaxe texture [is] screwed up, and the block
+  texture just does not look good." ChatGPT drew its pickaxe two-armed, and the import squeezed that onto vanilla's
+  one-armed footprint; its block was flat. Now vanilla's golden pickaxe and gold block in electrum's colours, the block
+  with an engraved sun disc (`tools/fix-electrum-art.py`; run it after `import-gear-art.py`).

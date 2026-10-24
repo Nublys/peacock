@@ -1370,7 +1370,7 @@ hash = "b54afe909f9d36f6e787359ddddabdcccea9a492bad9f7edb59103c02814fb64"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/block/electrum_block.png"
-hash = "5540c83a4a0494e1a0e3ff84b56f55224bac98e9ecb6c3d2858a4f899dc5b55b"
+hash = "74fef47f04a577750560c31750e242fddc7e1d318037fcad9641cfb8041b4a12"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/block/invar_block.png"
@@ -1514,7 +1514,7 @@ hash = "497c546910c8b1335fd3d2cbe3db025980ac4930deece466eaa096457bae74ec"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/electrum_pickaxe.png"
-hash = "b5a50fba2706c327d364f50f5ae9f39b8aa71653c4ce9208eb1e235df26bd44f"
+hash = "cb9f5c229349c59be76de5105c1733e64931db5ba68fffd2d996e168b02551f9"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/electrum_shovel.png"
