@@ -6,7 +6,15 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(bold)Tin$(): bronze, Ironworks tools, buckets, lanterns$(br)$(bold)Bronze$(): Ironworks bronze tools and armour, bronze cannons$(br)$(bold)Steel$(): iron + coal dust, superheated; the best Ironworks gear$(br)$(bold)Lead$(): musket and cannon shot$(br2)$(bold)Nickel$(): constantan, invar$(br)$(bold)Silver$(): electrum$(br)$(bold)Aluminum$(): balloon sheets$(br)$(bold)Platinum$(): a quicker precision mechanism"
+      "text": "$(bold)Tools and armour$() in every metal. Ironworks makes copper, bronze, brass and steel. Tin is early; lead heavy (shrugs off knockback); silver enchantable and bites the undead; nickel lasts.$(br2)Aluminum is light and fast; electrum fastest and most enchantable, but fragile; constantan the workhorse; invar hard-wearing; platinum near diamond."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Lead$(): shot, ship cannonballs, pipes$(br)$(bold)Silver$(): electrum, electron tubes$(br)$(bold)Aluminum$(): aircraft hulls, propellers$(br)$(bold)Platinum$(): engines, precision mechanisms$(br)$(bold)Bronze$(): cannons, ship guns"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Constantan$(): thermometers, telescopes$(br)$(bold)Invar$(): the hearth, aircraft boilers$(br)$(bold)Electrum$(): transmitters, content observers$(br)$(bold)Tin$(): lanterns$(br2)Illager fleets carry silver, platinum and electrum in their holds."
     },
     {
       "type": "patchouli:text",

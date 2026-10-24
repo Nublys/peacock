@@ -1589,3 +1589,33 @@ corrected too (from the launch after the one that downloads the new launcher).
   Ships page is boats only for now; Eureka and pirate mentions removed.
 - Existing world: Eureka ships and pirate ships vanish (Valkyrien Skies kept ship blocks in its own far-off
   shipyard region; those chunks stay on disk, unreachable). Pirate entities are dropped as their chunks load.
+
+## Ships and aircraft back; every metal gets tools, armour and work (2026-10-24)
+
+Aaron approved the plan ("Make the update"; hoes in; copper; lead armour knockback resistance only).
+
+- **Mods added:** Small Ships 2.0.2 (dockyard-built cogs to galleons, ship cannons, Recruits captains can sail them),
+  Immersive Aircraft 1.5.0 (airships, gyrodyne, quadrocopter, biplane, warship; also wakes the Village Recruits
+  addon's sky villages, which look for it), Ships 3.0.3 (EMD's datapack-as-mod: illager ships and four-ship evoker
+  fleets on the oceans; illagers that fall in water take boats and chase). Ships runs about ten entity selectors
+  every tick, as Incendium's clock does; its own boat cap (50) is set to 12 on each start (`ships_tuning.js`).
+  The Recruits aircraft compat was left out (a CurseForge-only test build); the addon's sky villages still need it
+  for aircraft to be piloted.
+- **Gates:** Ships (Naga, Tier 2) = all of Small Ships, and Immersive Aircraft's airships, gyrodyne, quadrocopter and
+  every part and upgrade, named one by one. Cannons (Maledictus, Tier 3) adds the biplane, warship, bamboo hopper,
+  rotary cannon, heavy crossbow and bomb bay.
+- **Tools and armour** (`startup_scripts/metal_gear.js`, recipes `server_scripts/metal_gear.js`): tin, lead, silver,
+  nickel, aluminium, electrum, constantan, invar and platinum each get pickaxe, axe, shovel, hoe, sword and four armour
+  pieces (81 items), ordinary recipes, repaired with the ingot. Copper already had a full set from Create: Ironworks
+  (as do bronze, brass and steel), so copper needed nothing; tin, which the 2026-10-21 notes wrongly said Ironworks
+  covered, got one instead. Characters and numbers are in the startup script's header. Silver gear does 50% more to
+  the undead in melee (LivingHurtEvent relay in `forge_hooks.js`; Spartan's silver weapons already have their own
+  undead bonus). Textures: vanilla iron's, recoloured to each ingot by `tools/gen-metal-gear.py` (worn layers under
+  `peacock:textures/models/armor/`). Aluminium's are placeholders until the hand-drawn set (after ChatGPT's concept).
+- **Metal uses** (`server_scripts/metal_uses.js`, all extra recipes beside the originals, gated like them): lead
+  shot for ship cannons and lead fluid pipes; tin lanterns; silver electron tubes; aluminium aircraft hulls and
+  propellers; platinum eco engines and diesel engines; bronze ship cannons; constantan thermometers and telescopes;
+  invar hearths and aircraft boilers; electrum transmitters and content observers. New lead and invar sheets. Fleet
+  treasure and supply chests carry silver, platinum and electrum.
+- **Fix found on the way:** the prospector's pick recipe (2026-10-23) used a centred handle, the same grid as an
+  iron or copper pickaxe, so the two fought over it. Back to Geolosys' own offset handle ('III', '  S', '  S').

@@ -57,9 +57,17 @@ global.LADDER = {
   },
   ships: {
     name: 'Ships', tier: 2, bosses: ['mowziesmobs:naga'], key: 'minecraft:oak_boat',
-    // Eureka went with Valkyrien Skies (2026-10-24); the ship and air mods that replace it are gated here when added
-    gates: {},
-    story: 'Hulls, helms and sails: the shipwright\'s craft.',
+    // Eureka went with Valkyrien Skies (2026-10-24). Now: all of Small Ships (the dockyard, cannon, shot, sails), and
+    // Immersive Aircraft's airships, gyrodyne, quadrocopter and every part and upgrade. The biplane, warship and
+    // aircraft weapons are Cannons' (listed there; Ships names its aircraft one by one so it does not claim them).
+    gates: { outputMods: ['smallships'],
+             outputs: ['immersive_aircraft:airship', 'immersive_aircraft:cargo_airship', 'immersive_aircraft:gyrodyne', 'immersive_aircraft:quadrocopter',
+                       'immersive_aircraft:hull', 'immersive_aircraft:sail', 'immersive_aircraft:propeller', 'immersive_aircraft:engine', 'immersive_aircraft:boiler',
+                       'immersive_aircraft:enhanced_propeller', 'immersive_aircraft:eco_engine', 'immersive_aircraft:nether_engine', 'immersive_aircraft:steel_boiler',
+                       'immersive_aircraft:sturdy_pipes', 'immersive_aircraft:improved_landing_gear', 'immersive_aircraft:hull_reinforcement',
+                       'immersive_aircraft:industrial_gears', 'immersive_aircraft:gyroscope', 'immersive_aircraft:gyroscope_dials',
+                       'immersive_aircraft:gyroscope_hud', 'immersive_aircraft:telescope'] },
+    story: 'The dockyard and its ships, and airships: hulls, sails, engines and propellers.',
   },
   trade: {
     name: 'Trading Floor', tier: 2, bosses: ['illagerinvasion:invoker', 'illageandspillage:spiritcaller', 'illageandspillage:magispeller', 'illageandspillage:freakager', 'illageandspillage:ragno'], key: 'minecraft:lectern',
@@ -91,8 +99,11 @@ global.LADDER = {
   },
   cannons: {
     name: 'Cannons', tier: 3, bosses: ['cataclysm:maledictus'], key: 'minecraft:tnt',
-    gates: { outputMods: ['createbigcannons'] },
-    story: 'Create Big Cannons: cast, build, mount, fire. They hurt mobs and players, never the land.',
+    gates: { outputMods: ['createbigcannons'],
+             // Immersive Aircraft's fighting machines (2026-10-24); they also need Ships for hulls and engines
+             outputs: ['immersive_aircraft:biplane', 'immersive_aircraft:warship', 'immersive_aircraft:bamboo_hopper',
+                       'immersive_aircraft:rotary_cannon', 'immersive_aircraft:heavy_crossbow', 'immersive_aircraft:bomb_bay'] },
+    story: 'Create Big Cannons: cast, build, mount, fire. They hurt mobs and players, never the land. Also the biplane, the warship and aircraft guns.',
   },
   arcane: {
     name: 'Arcane industry', tier: 4, bosses: ['cataclysm:the_harbinger', 'cataclysm:ignis'], key: 'minecraft:enchanting_table',

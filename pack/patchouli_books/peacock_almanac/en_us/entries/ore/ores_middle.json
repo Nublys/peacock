@@ -6,11 +6,11 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(bold)Lignite$(): soft coal. Y -4 to 32. Fuel.$(br2)$(bold)Galena$() (dark grey): lead $(bold)and$() silver, both from every block. Y -16 to 32. Lead is musket and cannon shot and the Supplementaries cannonball. Silver makes electrum; clerics buy it."
+      "text": "$(bold)Lignite$(): soft coal. Y -4 to 32. Fuel.$(br2)$(bold)Galena$() (dark grey): lead $(bold)and$() silver, both from every block. Y -16 to 32. Lead: shot for muskets, cannons and ships, lead pipes, heavy tools and armour. Silver: electrum, electron tubes, gear that bites the undead."
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Gold$(): gold. Y -64 to 32, dry land only (desert, badlands, savanna). Create's precision mechanisms, electrum, golden food.$(br2)$(bold)Platinum$(): platinum. Y -25 to 19. Platinum sheets build a precision mechanism in three steps instead of five. An expert cleric pays two emeralds an ingot."
+      "text": "$(bold)Gold$(): gold. Y -64 to 32, dry land only (desert, badlands, savanna). Create's precision mechanisms, electrum, golden food.$(br2)$(bold)Platinum$(): platinum. Y -25 to 19. Near-diamond tools and armour; platinum sheets make quicker precision mechanisms and better engines. Clerics pay well."
     },
     {
       "type": "patchouli:text",

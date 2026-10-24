@@ -36,7 +36,9 @@ ServerEvents.recipes(event => {
   event.shaped(HAMMER, ['FCF', ' S ', ' S '], { F: 'minecraft:flint', C: '#forge:cobblestone', S: 'minecraft:stick' })
     .id('peacock:flint_prospectors_hammer')
   event.remove({ id: 'geolosys:crafting/prospectors_pick_from_crafting' })
-  event.shaped('geolosys:prospectors_pick', ['III', ' S ', ' S '], { I: '#peacock:common_metals', S: '#forge:rods/wooden' })
+  // Geolosys' own offset shape (handle on the right): centred, it was the same grid as an iron or copper pickaxe and
+  // the two recipes fought over it (2026-10-24, found while adding the metal tool sets)
+  event.shaped('geolosys:prospectors_pick', ['III', '  S', '  S'], { I: '#peacock:common_metals', S: '#forge:rods/wooden' })
     .id('peacock:prospectors_pick')
 })
 

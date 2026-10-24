@@ -1,0 +1,13 @@
+name = "Ships"
+filename = "ships-3.0.3.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/M185nxi6/versions/qD0w21Oo/ships-3.0.3.jar"
+hash-format = "sha512"
+hash = "8b23ab0991c988fb3bd1c29e97c5a005d4a82750f29668cb5cdd3f9273d4b7aeca4d1ee7142bca2f5dca53524417001949749302b62956d90b387beda5afcfd5"
+
+[update]
+[update.modrinth]
+mod-id = "M185nxi6"
+version = "qD0w21Oo"

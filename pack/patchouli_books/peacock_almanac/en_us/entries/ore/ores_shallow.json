@@ -10,7 +10,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Cassiterite$() (pale tan): tin. Y 44 to 68. Bronze (copper + tin in a basin), Ironworks tin buckets, hoppers and lanterns. Toolsmiths buy it.$(br2)$(bold)Bauxite$() (tan): aluminum. Y 48 to 65. Aluminum sheets make airship balloons, eight to a craft. Toolsmiths buy it."
+      "text": "$(bold)Cassiterite$() (pale tan): tin. Y 44 to 68. Bronze (copper + tin in a basin), tin tools and armour (stone-grade, early), lanterns. Toolsmiths buy it.$(br2)$(bold)Bauxite$() (tan): aluminum. Y 48 to 65. The airship metal: aluminum sheets make aircraft hulls and propellers. Light, fast tools and armour. Toolsmiths buy it."
     },
     {
       "type": "patchouli:text",

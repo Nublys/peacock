@@ -15,7 +15,7 @@
 ;(() => {
 const ALLOYS = ['electrum', 'constantan', 'invar']
 const BLOCKS = ['lead', 'silver', 'nickel', 'aluminum', 'platinum', 'electrum', 'constantan', 'invar']
-const SHEETS = ['aluminum', 'platinum']
+const SHEETS = ['aluminum', 'platinum', 'lead', 'invar']   // lead and invar sheets: 2026-10-24 (lead pipes, invar fittings)
 
 StartupEvents.registry('item', event => {
   ALLOYS.forEach(m => {

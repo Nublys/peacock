@@ -1,12 +1,25 @@
 {
-  "name": "Ships",
-  "icon": "minecraft:oak_boat",
+  "name": "Ships and Aircraft",
+  "icon": "smallships:oak_cog",
   "category": "patchouli:building",
   "sortnum": 2,
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Rivers and coasts are everywhere here, and a river carries a boat downstream. A chest boat is the first cargo ship.$(br2)$(bold)Ships are Tier 2$(): the Naga hold the shipwright's craft."
+      "text": "$(bold)Small Ships$(): build a $(bold)dockyard$() beside water and it builds the ship from the stores you give it: cog, brig, galley, drakkar, caravel, dhow, galleon. Cannons go on deck; recruits captains can sail them and crew the guns.$(br2)Rivers and coasts are everywhere here. A cog moves more than ten wagons."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "peacock:staged/smallships/dockyard",
+      "text": "The dockyard: place it by the water. The ship's hull, sails and cannons come from what you load into it."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Immersive Aircraft$(): hull, sail, engine and propeller make an airship, a gyrodyne you pedal, or a quadrocopter. Aluminum hulls and propellers come two to a craft.$(br2)$(bold)Ships are Tier 2$(): the Naga hold the dockyard and the airships. The $(bold)biplane$(), $(bold)warship$() and aircraft guns are $(bold)Cannons$() (Tier 3)."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Illager ships$() ride the oceans, alone or in fleets of four with an evoker each; illagers that fall in water grab a boat and come after you.$(br2)Cannon shot is lead or iron; a bronze cannon is cast from bronze blocks."
     }
   ]
 }

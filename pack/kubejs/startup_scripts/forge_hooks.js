@@ -1,4 +1,4 @@
-// Peacock — relay two Forge events to the server scripts (2026-10-23).
+// Peacock — relay Forge events to the server scripts (2026-10-23).
 //
 // KubeJS 6 lets only startup scripts listen to raw Forge events (ForgeEvents is bound for startup scripts alone), and
 // startup scripts do not reload with /reload. So these hooks only forward the event to a function a server script put
@@ -8,6 +8,8 @@
 //   ChunkEvent.Load → global.PEACOCK_ON_CHUNK_LOAD (server_scripts/wildlife_reseed.js): a chunk became a full chunk,
 //     with isNewChunk() true when it was just generated rather than read from disk. Also fires for the client's
 //     chunks, so the server script checks the level.
+//   LivingHurtEvent → global.PEACOCK_ON_HURT (server_scripts/metal_gear.js, 2026-10-24): damage about to be dealt,
+//     with setAmount; silver gear does more to the undead.
 ForgeEvents.onEvent('net.minecraftforge.event.entity.living.BabyEntitySpawnEvent', event => {
   var f = global.PEACOCK_ON_BREED
   if (!f) return
@@ -17,4 +19,9 @@ ForgeEvents.onEvent('net.minecraftforge.event.level.ChunkEvent$Load', event => {
   var f = global.PEACOCK_ON_CHUNK_LOAD
   if (!f) return
   try { f(event) } catch (e) { console.warn('[peacock] chunk hook: ' + e) }
+})
+ForgeEvents.onEvent('net.minecraftforge.event.entity.living.LivingHurtEvent', event => {
+  var f = global.PEACOCK_ON_HURT
+  if (!f) return
+  try { f(event) } catch (e) { console.warn('[peacock] hurt hook: ' + e) }
 })
