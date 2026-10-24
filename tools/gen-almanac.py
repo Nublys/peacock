@@ -280,9 +280,9 @@ ENTRIES = {
         ("prospecting", "The Prospector's Pick", "geolosys:prospectors_pick", [
             txt(B("Surface rocks") + " (samples) mean a deposit under that chunk: they lie near the chunk's middle, not straight above the ore, and say nothing about depth. Break one for a cluster of its metal.",
                 "Geolosys hands you its own " + B("Field Manual") + " on first join. It lists every deposit, what it drops and at what depth."),
-            txt(B("Flint Prospector's Hammer") + " (day one: flint, cobblestone, sticks): right-click a block and it names the ores in a 9 by 9 column from there down 24 blocks. No direction, no depth; 32 uses. It answers: is it worth digging here?",
+            txt(B("Flint Prospector's Hammer") + " (day one: flint, cobblestone, sticks): right-click a block and it names the ores in a 9 by 9 column from there down 64 blocks, with how much (a trace, some, rich) and roughly how deep. No direction; 64 uses.",
                 B("The prospector's pick") + " answers where: right-click stone and it names the ore within 5 blocks of that face and which way it lies; if none, what is anywhere in the chunk. It never breaks."),
-            craft("peacock:flint_prospectors_hammer", "Tap the ground where the rocks are. Nothing? Walk on: the deposit may be in the next chunk, or deeper than 24 blocks."),
+            craft("peacock:flint_prospectors_hammer", "Tap the ground where the rocks are. Nothing? Walk on: the deposit may be in the next chunk, or deeper than 64 blocks."),
             craft("peacock:prospectors_pick", "Three ingots of any common metal (iron, copper, tin, zinc, lead, nickel, aluminium) and two sticks. Tap exposed stone, not dirt."),
             craft("geolosys:crafting/field_manual_from_crafting", "Lost the manual? Craft one. The depth meter reads your Y.", recipe2="geolosys:crafting/depth_meter"),
             txt(B("Metals you will need, in order:") + " copper and iron (homestead; iron is common and shallow), then " + B("zinc") + " (brass needs it, and brass needs a Blueprint), then gold and coal in bulk once machines run.",

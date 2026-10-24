@@ -10,12 +10,12 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Flint Prospector's Hammer$() (day one: flint, cobblestone, sticks): right-click a block and it names the ores in a 9 by 9 column from there down 24 blocks. No direction, no depth; 32 uses. It answers: is it worth digging here?$(br2)$(bold)The prospector's pick$() answers where: right-click stone and it names the ore within 5 blocks of that face and which way it lies; if none, what is anywhere in the chunk. It never breaks."
+      "text": "$(bold)Flint Prospector's Hammer$() (day one: flint, cobblestone, sticks): right-click a block and it names the ores in a 9 by 9 column from there down 64 blocks, with how much (a trace, some, rich) and roughly how deep. No direction; 64 uses.$(br2)$(bold)The prospector's pick$() answers where: right-click stone and it names the ore within 5 blocks of that face and which way it lies; if none, what is anywhere in the chunk. It never breaks."
     },
     {
       "type": "patchouli:crafting",
       "recipe": "peacock:flint_prospectors_hammer",
-      "text": "Tap the ground where the rocks are. Nothing? Walk on: the deposit may be in the next chunk, or deeper than 24 blocks."
+      "text": "Tap the ground where the rocks are. Nothing? Walk on: the deposit may be in the next chunk, or deeper than 64 blocks."
     },
     {
       "type": "patchouli:crafting",

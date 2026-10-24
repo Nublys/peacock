@@ -1535,3 +1535,25 @@ logs). Low and medium now write DISABLED (opaque, the cheap option), high and ul
 client and server `DistantHorizons.toml` say DISABLED. `launch.jar` gets a `REJECTED` list: a setting whose last
 written value is one the mod rejected (here `transparency` "FAKE") counts as untouched, so existing installs are
 corrected too (from the launch after the one that downloads the new launcher).
+
+## Flint hammer reads deeper, Incendium's mob scans kept to the Nether, DH clouds off (2026-10-24)
+
+- **Flint Prospector's Hammer** (Aaron: "make the flint prospectors pic more useful, and improve the texture by copying
+  the original"). It now reads a 9 × 9 column 64 blocks down (was 24) and gives, per ore, how much is in the column
+  (a trace: under 8 blocks; some: under 40; rich: 40+) and roughly how deep the first of it is, to the nearest 8 blocks:
+  "Below here: hematite (rich, ~16 down), coal (a trace, ~48 down)". Deepslate and plain forms count as one ore; the
+  richest is named first. 64 uses (was 32). Still no direction, which stays the metal pick's job. About 5,300 block
+  reads per click, at most one click a second. Texture: Geolosys' prospector's pick (GPLv3, as the rest of Geolosys'
+  art) with the iron head repainted in five flint greys, a few knapped chips on the edge and two turns of string where
+  the head meets the haft; the handle is unchanged.
+- **Incendium**: its every-tick clock (`incendium:clocks/main`) ran three `@e[type=#incendium:mobs_no_player]` scans
+  over every loaded entity in every dimension, 3.6% of the tick in the 2026-10-23 profile with nobody in the Nether.
+  Overridden through paxi (`config/paxi/datapacks/peacock/data/incendium/functions/clocks/main.mcfunction`, a copy of
+  5.3.5's with those three lines run `in minecraft:the_nether` with `distance=0..`, which limits `@e` to that
+  dimension). Incendium's mobs only live in the Nether. Projectile, item and frost lines are unchanged. Re-check the
+  copy when Incendium updates.
+- **Distant Horizons clouds off** (`enableCloudRendering = false`, shipped configs and every profile). Walking through
+  clouds was glitchy; DH's three-layer LOD clouds drew over the near terrain. DH's `overrideVanillaGraphicsSettings`
+  also hides vanilla clouds, so without shaders there are no clouds now. Existing installs: the launcher counts a
+  value the pack used to ship as "not the player's" on a key it never wrote (`FORMER` in Launch.java), so clouds turn
+  off on the next launch; a player who turns them back on afterwards keeps that. Tested on a copy of an install.

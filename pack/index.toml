@@ -2,7 +2,7 @@ hash-format = "sha256"
 
 [[files]]
 file = "config/DistantHorizons.toml"
-hash = "16ad3931512e6e8e38f161aee678393be13150462e7153a22b3320263c3a7c24"
+hash = "54163d72bed667df7d4e5bd32e6c84a4645d656aa72e14a074ec5b1799b5e805"
 preserve = true
 
 [[files]]
@@ -570,6 +570,10 @@ hash = "cb15d6c6626d870d14ddff6bb32e54f68e66792d39a1dc071f8139091d12af55"
 [[files]]
 file = "config/paxi/datapacks/peacock/data/geolosys/loot_tables/blocks/deepslate_anthracite_coal_ore.json"
 hash = "bde0a8da0bf1c8e46ee0fd0249e25538c25ab76695b3889afbf442deeba92f48"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/incendium/functions/clocks/main.mcfunction"
+hash = "c11531494a15135c8eee760dda7e0d02c98553dac8c381c798f6a95a14c03187"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/minecraft/worldgen/structure_set/villages.json"
@@ -1438,7 +1442,7 @@ hash = "3969f18a9c823fa284fd3e8a0d13d9956941bb894474e88632dd0592353c2603"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/flint_prospectors_hammer.png"
-hash = "81811666c3bebd4382a9ab645af9968f8e6d47cc62b33690b43bba95450d49f2"
+hash = "9dd49bd37eee93071304feb8b1a3d17a6ff32f3588eb49d9cd9f0da1a8a526ba"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/invar_ingot.png"
@@ -1562,7 +1566,7 @@ hash = "9a12102cf2e55dc832c1a8878cc5a1e5bab70f7e0086902671fc2767db33b480"
 
 [[files]]
 file = "kubejs/server_scripts/flint_hammer.js"
-hash = "ac2bb331a2f5af85e0c4ce2092f16bfc1c69a7e2e38a5f95985a68d152669c1e"
+hash = "bcf764385cfdf45f9377f1cfbaba1bb03c41a1f38c7b75267d19a56bfe21a9ee"
 
 [[files]]
 file = "kubejs/server_scripts/geolosys_create.js"
@@ -1646,7 +1650,7 @@ hash = "e47482cdc15f348403399b7c97413d8cac404b0d39d77b3bcf7c9a24676859af"
 
 [[files]]
 file = "kubejs/startup_scripts/flint_hammer.js"
-hash = "a08e2c170c702ed325e353e24e83109e1cc8dc9cf821daf6e5fa7a798bfafa23"
+hash = "0b81ba2a03e39ccc8d16639f1796962497810dfc6a1433b8ca5db7e63e3f1692"
 
 [[files]]
 file = "kubejs/startup_scripts/forge_hooks.js"
@@ -2783,7 +2787,7 @@ hash = "5895ef282e0d9c970e683dab350c811481fdddea6e79dcea2d8564d3d478629e"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/ore/prospecting.json"
-hash = "e5f782e5145e29a81c401fbb8661a90440dab1d65d2004a92cbed01eb49f0062"
+hash = "3b1bed492b056560562b7708db065c4001b17d36bf0341cfd628797e19e4b078"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/ore/regional_ore.json"
@@ -2971,7 +2975,7 @@ hash = "1f139b8561336fed8a4fd2830af1989d808425ac6cc603c26028afd49d105899"
 
 [[files]]
 file = "peacock-server/config/DistantHorizons.toml"
-hash = "eaab15e091e630b285a5e229c50afd796873cc7c105febba16028f793af7cba4"
+hash = "41cda5b8163be6ffd77420da9c6750ef6be5b958fac5b89524cb8529374eebbe"
 
 [[files]]
 file = "peacock-server/config/dynamicview.json"
@@ -2983,7 +2987,7 @@ hash = "114653687da22da0ec9b0d693982840786bb6a992f516044ca241cbf3899799a"
 
 [[files]]
 file = "peacock/launch.jar"
-hash = "8b784f5ed746ed6e2f256ca204d18d0eeaa98f6b36239806cf3fdc504eeea7cf"
+hash = "3d6145176832364f8b94408784eb04ab026d546e965e3bea1ee673c0b123ed87"
 
 [[files]]
 file = "peacock/profiles/README.txt"
@@ -3043,7 +3047,7 @@ hash = "a5c6081c92f50640f7df20c0a31b742cf16735a8db86d2280b61a259bbdd2682"
 
 [[files]]
 file = "peacock/profiles/high/config/DistantHorizons.toml.keys"
-hash = "3fc0cb1368c9303d7e0fa7be5b821eea6320c6c31bdc1d9ab99a4f7f7a6d0e8f"
+hash = "1efd8ce51c0fd530fc58f43f66fd8f642748ad7708eca28b76c0421e00371ae5"
 
 [[files]]
 file = "peacock/profiles/high/config/coldsweat/client.toml.keys"
@@ -3119,7 +3123,7 @@ hash = "ed50d1efb065f355b9a58b4bbb47b662a33a124f1a48b740cf5e4152365953b2"
 
 [[files]]
 file = "peacock/profiles/low/config/DistantHorizons.toml.keys"
-hash = "4cf7edb3f438b1c49bc40d90f324d1b2104f2c8d90a2805d5f02c0930d2e58ed"
+hash = "600be2513519e100b46e37b65d5a31d2c08bb3b2bef8bdb014de829bc914a4e5"
 
 [[files]]
 file = "peacock/profiles/low/config/coldsweat/client.toml.keys"
@@ -3195,7 +3199,7 @@ hash = "6faeeac70e8bedbca9a3978ff0ead50bb03e13d9d9dd869bd85a181523f87972"
 
 [[files]]
 file = "peacock/profiles/medium/config/DistantHorizons.toml.keys"
-hash = "2d88875e669ecd4cea52a4cebd7340244999a5f979bdb5f3872d7f1f38ed4d78"
+hash = "bbb020431ad000a81b1abb3d2f04e618bdf1b1c99e4742c16bbe888aed8f9f27"
 
 [[files]]
 file = "peacock/profiles/medium/config/coldsweat/client.toml.keys"
@@ -3271,7 +3275,7 @@ hash = "084ce2b07765a4674a2886cd6f0ecd5a91049f92eb88396d2a745dc2c2831597"
 
 [[files]]
 file = "peacock/profiles/potato/config/DistantHorizons.toml.keys"
-hash = "7eee0479887b0628dfb211277036fb863df91dfd4ea6c7ce653e1dddf0f02f28"
+hash = "98e326b3a83311101f49671f74b65b4535ccac4afec2329998a81d9fd13fba8c"
 
 [[files]]
 file = "peacock/profiles/potato/config/coldsweat/client.toml.keys"
@@ -3347,7 +3351,7 @@ hash = "6faeeac70e8bedbca9a3978ff0ead50bb03e13d9d9dd869bd85a181523f87972"
 
 [[files]]
 file = "peacock/profiles/ultra/config/DistantHorizons.toml.keys"
-hash = "947a6dd55cfb5fefbebe4f002c0eb8a1956b6cfbf6d56bc7b65d5832f027edc5"
+hash = "b6354fdd7c484eac304c5598d5faaf242cb369022f4022d66aa65c1e31e272f4"
 
 [[files]]
 file = "peacock/profiles/ultra/config/coldsweat/client.toml.keys"

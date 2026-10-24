@@ -56,6 +56,10 @@ public class Launch {
      *  Distant Horizons 3.3.3 has no "FAKE" transparency (only COMPLETE and DISABLED); low and medium wrote it until
      *  2026-10-23. */
     static final Map<String, Set<String>> REJECTED = Map.of("config/DistantHorizons.toml#transparency", Set.of("\"FAKE\"", "FAKE"));
+    /** Values a key had before any profile set it (the mod's default, which the pack shipped too): on an install the
+     *  launcher never wrote that key on, one of these is not the player's own choice either, so a newly added key still
+     *  applies. Distant Horizons' LOD clouds were on until 2026-10-24. */
+    static final Map<String, Set<String>> FORMER = Map.of("config/DistantHorizons.toml#enableCloudRendering", Set.of("true"));
 
     public static void main(String[] args) throws Exception {
         if (args.length < 1) { log("usage: java -jar peacock/launch.jar <pack.toml url> [extra packwiz-installer args]"); System.exit(2); }
@@ -219,7 +223,8 @@ public class Launch {
             String last = state.getProperty(stateKey);
             // Known to us: untouched only if still what we last wrote. Never seen: untouched if it is any profile's value.
             boolean untouched = reset || (last != null ? (same(cur, last) || REJECTED.getOrDefault(targetRel + "#" + qkey, Set.of()).contains(last))
-                                                       : anyProfile.getOrDefault(qkey, Set.of()).stream().anyMatch(v -> same(cur, v)));
+                                                       : (anyProfile.getOrDefault(qkey, Set.of()).stream().anyMatch(v -> same(cur, v))
+                                                          || FORMER.getOrDefault(targetRel + "#" + qkey, Set.of()).stream().anyMatch(v -> same(cur, v))));
             if (!untouched) { kept++; continue; }
             lines.set(idx, found.group(1) + found.group(2) + key + found.group(2) + found.group(4) + value + found.group(6));   // keep indent, quoting, spacing, trailing comma
             state.setProperty(stateKey, value); set++; changed.add(qkey);

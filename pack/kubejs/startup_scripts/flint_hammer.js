@@ -5,12 +5,14 @@
 // cobblestone and sticks. Right-click a block: it names the ores within a 9 × 9 column from that block down 24 blocks,
 // with no direction and no depth (server_scripts/flint_hammer.js). The pick says which way; the hammer only says
 // whether it is worth digging here. 32 uses.
+// 2026-10-24: 64 blocks down, with a rough depth and amount per ore; 64 uses (server_scripts/flint_hammer.js). Texture: the
+// Geolosys prospector's pick (GPLv3) repainted with a flint head and a string lashing.
 ;(() => {
 StartupEvents.registry('item', event => {
   event.create('peacock:flint_prospectors_hammer')
     .displayName("Flint Prospector's Hammer")
     .texture('peacock:item/flint_prospectors_hammer')
-    .maxDamage(32)
-    .tooltip(Text.gray('Right-click a block: which ores lie below it (24 blocks, no direction)'))
+    .maxDamage(64)
+    .tooltip(Text.gray('Right-click a block: which ores lie below it, how deep and how much (64 blocks, no direction)'))
 })
 })()

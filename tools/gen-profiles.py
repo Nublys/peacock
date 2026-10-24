@@ -251,7 +251,9 @@ def dh_keys(dh, transp, threads, quality, ssao):
              "showModCompatibilityWarningsOnStartup = false", "showHighVanillaRenderDistanceWarning = false",
              "showPoolInsufficientMemoryWarning = false", "showGarbageCollectorWarning = false",
              "showSlowWorldGenSettingWarnings = false",
-             f'ignoredRenderBlockCsv = "{DH_IGNORED}"']
+             f'ignoredRenderBlockCsv = "{DH_IGNORED}"',
+             # DH's three-layer LOD clouds made walking through clouds glitchy (Aaron, 2026-10-24: "Disable the DH clouds")
+             "enableCloudRendering = false"]
     return "\n".join(lines) + "\n"
 
 def embeddium_keys(weather, leaves, vignette):
