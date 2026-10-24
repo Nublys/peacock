@@ -7,12 +7,13 @@
 // whether it is worth digging here. 32 uses.
 // 2026-10-24: 64 blocks down, with a rough depth and amount per ore; 64 uses (server_scripts/flint_hammer.js). Texture: the
 // Geolosys prospector's pick (GPLv3) repainted with a flint head and a string lashing.
+// 2026-10-24 (later): it also points, 3 blocks into the face you tap; 32 uses.
 ;(() => {
 StartupEvents.registry('item', event => {
   event.create('peacock:flint_prospectors_hammer')
     .displayName("Flint Prospector's Hammer")
     .texture('peacock:item/flint_prospectors_hammer')
-    .maxDamage(64)
-    .tooltip(Text.gray('Right-click a block: which ores lie below it, how deep and how much (64 blocks, no direction)'))
+    .maxDamage(32)
+    .tooltip(Text.gray('Right-click a block face: ores 3 blocks in that way, and below it (64 down, how deep, how much)'))
 })
 })()

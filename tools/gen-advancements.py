@@ -145,7 +145,7 @@ def main():
         "survival/fire_drill", {"insulated": {"trigger": "cold_sweat:armor_insulated"}})
     adv("survival/hearth", "Hearth and Home", "Place a hearth", "cold_sweat:hearth", "survival/sewn_in",
         {"hearth": {"trigger": "minecraft:placed_block", "conditions": {"location": [{
-            "condition": "minecraft:location_check", "predicate": {"block": {"blocks": ["cold_sweat:hearth"]}}}]}}},
+            "condition": "minecraft:location_check", "predicate": {"block": {"blocks": ["cold_sweat:hearth_bottom"]}}}]}}},
         frame="goal")
     adv("survival/winter", "First Thaw", "Live through a winter and see the spring", "minecraft:snow_block",
         "survival/fire_drill", IMPOSSIBLE, frame="goal")

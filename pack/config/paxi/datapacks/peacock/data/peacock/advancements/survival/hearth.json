@@ -24,7 +24,7 @@
             "predicate": {
               "block": {
                 "blocks": [
-                  "cold_sweat:hearth"
+                  "cold_sweat:hearth_bottom"
                 ]
               }
             }

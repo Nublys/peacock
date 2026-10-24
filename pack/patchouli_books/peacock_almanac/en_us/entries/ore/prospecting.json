@@ -10,7 +10,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Flint Prospector's Hammer$() (day one: flint, cobblestone, sticks): right-click a block and it names the ores in a 9 by 9 column from there down 64 blocks, with how much (a trace, some, rich) and roughly how deep. No direction; 64 uses.$(br2)$(bold)The prospector's pick$() answers where: right-click stone and it names the ore within 5 blocks of that face and which way it lies; if none, what is anywhere in the chunk. It never breaks."
+      "text": "$(bold)Flint Prospector's Hammer$() (day one: flint, cobblestone, sticks): tap a block face: it names ores 3 blocks in that way, and in a 9 by 9 column 64 down, with how much and roughly how deep. 32 uses.$(br2)$(bold)The prospector's pick$() answers where: right-click stone and it names the ore within 5 blocks of that face and which way it lies; if none, what is anywhere in the chunk. It never breaks."
     },
     {
       "type": "patchouli:crafting",

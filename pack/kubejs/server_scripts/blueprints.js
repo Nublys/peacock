@@ -169,7 +169,10 @@ BlockEvents.placed(event => {
   if (!LADDER_ON) return
   const player = event.player
   if (!player || player.isCreative()) return
-  const rung = global.PEACOCK_GATED_ITEMS[String(event.block.id)]
+  // by block id, then by the block's item: a few blocks are named apart from their item (Cold Sweat's hearth is placed
+  // as cold_sweat:hearth_bottom), and those got past this gate until 2026-10-24
+  let rung = global.PEACOCK_GATED_ITEMS[String(event.block.id)]
+  if (!rung) { try { rung = global.PEACOCK_GATED_ITEMS[String(event.block.item.id)] } catch (e) { } }
   if (!rung || player.stages.has(STAGE(rung))) return
   deny(player, rung, 'Placing this')
   // KubeJS: cancel() throws to end the handler at once, so it must come last (2026-10-23)

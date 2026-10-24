@@ -1557,3 +1557,16 @@ corrected too (from the launch after the one that downloads the new launcher).
   also hides vanilla clouds, so without shaders there are no clouds now. Existing installs: the launcher counts a
   value the pack used to ship as "not the player's" on a key it never wrote (`FORMER` in Launch.java), so clouds turn
   off on the next launch; a player who turns them back on afterwards keeps that. Tested on a copy of an install.
+
+## Flint hammer points the way; hearth advancement and gate (2026-10-24)
+
+- Aaron: "Have the flint pick also give directions, just it wont go as deep as the iron pic, it wont have nearly as
+  many uses." The tapped face now matters, as with Geolosys' pick: the hammer also looks 3 blocks into the block,
+  away from the face, 3 × 3 across, and says which way ("North, within 3 blocks: hematite"; "Nothing west within 3
+  blocks."). Geolosys' pick looks 5 deep, 5 × 5 (`proPickRange`, `proPickDiameter`), falls back to the whole chunk at
+  every height ("X is in this area"), and never wears out (`enableProPickDmg = false`). The hammer's second line, the
+  9 × 9 column 64 down with amount and rough depth, stays. 32 uses (was 64).
+- Fixed from the 2026-10-23 server log: the "Hearth and Home" advancement failed to load ("Unknown block id
+  'cold_sweat:hearth'"); Cold Sweat places its hearth as `cold_sweat:hearth_bottom`. The same mismatch let a hearth
+  that was not crafted (loot, trade) be placed without the Climate control Blueprint; the place gate now also checks
+  the block's item.

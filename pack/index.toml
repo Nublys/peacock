@@ -765,7 +765,7 @@ hash = "67aa576268663a170c21007af2b1a4697c51cb9d93dda94cadbb4659cd96f613"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/peacock/advancements/survival/hearth.json"
-hash = "8ae59caf07a230a76adbbb6b9c027f0cd75b5729d4f93cfd8c3177b5da7a9a1a"
+hash = "718c81382681189a78cdb7b24f8660dd69016e680955c21e43355d6836f09310"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/peacock/advancements/survival/sewn_in.json"
@@ -1526,7 +1526,7 @@ hash = "2ecc26057a63c16d1e257902f523e10679cf48b01e248b896a6744108e00bac8"
 
 [[files]]
 file = "kubejs/server_scripts/blueprints.js"
-hash = "062268d4e6f766bdfe35d133f78d6e74e5edbfb37a3e1761174e193dae887377"
+hash = "cdfd9940e38e6a93019ed231ba9254b64015278eb3204d70a2cbcbc30ca1b6af"
 
 [[files]]
 file = "kubejs/server_scripts/boss_tuning.js"
@@ -1566,7 +1566,7 @@ hash = "9a12102cf2e55dc832c1a8878cc5a1e5bab70f7e0086902671fc2767db33b480"
 
 [[files]]
 file = "kubejs/server_scripts/flint_hammer.js"
-hash = "bcf764385cfdf45f9377f1cfbaba1bb03c41a1f38c7b75267d19a56bfe21a9ee"
+hash = "1bfccc7b2707a814239ce1d572fef2d467659c82dbb63fe2ced032b880a801c2"
 
 [[files]]
 file = "kubejs/server_scripts/geolosys_create.js"
@@ -1650,7 +1650,7 @@ hash = "e47482cdc15f348403399b7c97413d8cac404b0d39d77b3bcf7c9a24676859af"
 
 [[files]]
 file = "kubejs/startup_scripts/flint_hammer.js"
-hash = "0b81ba2a03e39ccc8d16639f1796962497810dfc6a1433b8ca5db7e63e3f1692"
+hash = "b6ef1d58e7559f34dc0ab8f945249c94bcb7aa1e3bbfd7ad13b87b9439ecfb0c"
 
 [[files]]
 file = "kubejs/startup_scripts/forge_hooks.js"
@@ -2787,7 +2787,7 @@ hash = "5895ef282e0d9c970e683dab350c811481fdddea6e79dcea2d8564d3d478629e"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/ore/prospecting.json"
-hash = "3b1bed492b056560562b7708db065c4001b17d36bf0341cfd628797e19e4b078"
+hash = "bbea37f4e2973d52569e717424bd5c2f248781d42e42c02e0591c01ce72a5b8e"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/ore/regional_ore.json"
