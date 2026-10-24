@@ -1566,7 +1566,7 @@ hash = "9a12102cf2e55dc832c1a8878cc5a1e5bab70f7e0086902671fc2767db33b480"
 
 [[files]]
 file = "kubejs/server_scripts/flint_hammer.js"
-hash = "1bfccc7b2707a814239ce1d572fef2d467659c82dbb63fe2ced032b880a801c2"
+hash = "d917ece3f37a6f5b49b4d3f9e8f5f99d6bae8de812770a87bddf65d60643b6af"
 
 [[files]]
 file = "kubejs/server_scripts/geolosys_create.js"

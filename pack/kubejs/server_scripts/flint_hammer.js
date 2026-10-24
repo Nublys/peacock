@@ -22,6 +22,9 @@ const HAMMER = 'peacock:flint_prospectors_hammer'
 const HALF = 4          // 9 × 9
 const DEPTH = 64
 const REACH = 3        // the directional look: 3 deep, 3 × 3 (Geolosys' pick: proPickRange 5, proPickDiameter 5)
+// Direction's own getStepX/Y/Z are not reachable from scripts on the server (2026-10-24: "Cannot find function getStepX"),
+// so the steps come from the direction's name
+const STEP = { DOWN: [0, -1, 0], UP: [0, 1, 0], NORTH: [0, 0, -1], SOUTH: [0, 0, 1], WEST: [-1, 0, 0], EAST: [1, 0, 0] }
 const WAY = { DOWN: 'Straight down', UP: 'Straight up', NORTH: 'North', SOUTH: 'South', WEST: 'West', EAST: 'East' }
 let Prospecting = null, MutableBlockPos = null
 try {
@@ -45,7 +48,7 @@ function oresBelow(level, x, y, z) {
     pos.set(x + dx, yy, z + dz)
     var state = level.getBlockState(pos)
     if (!deposits.contains(state) || !Prospecting.canDetect(state)) continue
-    var key = String(state.getBlock().getDescriptionId())
+    var key = keyAt(level, x + dx, yy, z + dz)
     if (key.indexOf('sample') >= 0) continue                         // surface rocks are not what is below
     var group = key.replace('deepslate_', '')
     var f = found[group]
@@ -60,10 +63,14 @@ function oresBelow(level, x, y, z) {
 }
 
 // what lies in the direction the tap points: from the tapped block REACH deep away from the face, 3 × 3 across
+// an ore's translation key from KubeJS' own block lookup (only for blocks that matched, so it costs little); the
+// vanilla Block method for it is in the same unmapped state as Direction's steps
+function keyAt(level, x, y, z) { return 'block.' + String(level.getBlock(x, y, z).id).replace(':', '.') }
+
 function oresThatWay(level, x, y, z, into) {
   var deposits = Prospecting.getDepositBlocks()
   if (deposits.isEmpty()) { Prospecting.populateDepositBlocks(); deposits = Prospecting.getDepositBlocks() }
-  var sx = into.getStepX(), sy = into.getStepY(), sz = into.getStepZ()
+  var st = STEP[String(into).toUpperCase()], sx = st[0], sy = st[1], sz = st[2]
   var pos = new MutableBlockPos(), seen = {}, keys = [], i, a, b
   for (i = 0; i < REACH; i++) for (a = -1; a <= 1; a++) for (b = -1; b <= 1; b++) {
     // a and b run along the two axes the direction does not
@@ -71,7 +78,7 @@ function oresThatWay(level, x, y, z, into) {
     pos.set(px, py, pz)
     var state = level.getBlockState(pos)
     if (!deposits.contains(state) || !Prospecting.canDetect(state)) continue
-    var key = String(state.getBlock().getDescriptionId())
+    var key = keyAt(level, px, py, pz)
     if (key.indexOf('sample') >= 0) continue
     var group = key.replace('deepslate_', '')
     if (seen[group]) continue
@@ -91,7 +98,7 @@ BlockEvents.rightClicked(event => {
   var level = event.level, b = event.block
   try {
     if (player.getCooldowns().isOnCooldown(item.getItem())) return
-    var into = event.facing.getOpposite(), way = WAY[String(into.name())] || String(into)
+    var into = event.facing.getOpposite(), way = WAY[String(into).toUpperCase()] || String(into)
     var there = oresThatWay(level, b.x, b.y, b.z, into)
     if (there.length) {
       var dir = Text.gold(way + ', within ' + REACH + ' blocks: ')

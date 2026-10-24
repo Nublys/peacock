@@ -1570,3 +1570,7 @@ corrected too (from the launch after the one that downloads the new launcher).
   'cold_sweat:hearth'"); Cold Sweat places its hearth as `cold_sweat:hearth_bottom`. The same mismatch let a hearth
   that was not crafted (loot, trade) be placed without the Climate control Blueprint; the place gate now also checks
   the block's item.
+- Same day, fix: the first directional hammer failed on every tap ("TypeError: Cannot find function getStepX in object
+  down", server log). Direction's step methods and Block.getDescriptionId are not reachable by name from scripts on the
+  server, so the steps come from a table keyed on the direction's name and an ore's name from KubeJS'
+  `level.getBlock(x, y, z).id` (looked up only for blocks that matched).
