@@ -1653,3 +1653,24 @@ them (blueprints, achievements, villager_cap, herd_cap, capital_npcs): distance 
 The drop loop now handles each fighter on their own, so one failure cannot cost the others or the spare.
 `tools/validate.py` now rejects getStepX/Y/Z, distanceTo and distanceToSqr in server and startup scripts.
 Also: the Village Recruits addon's join line about the missing aircraft compat is hidden (it was left out on purpose).
+
+## Performance pass after Valkyrien Skies (2026-10-24)
+
+From the profile https://spark.lucko.me/E1gCdJQRV0 (one player, 20 TPS, 41 ms mean). Aaron: "Make all those changes
+If you think they're worth it but don't be so aggressive with the mob caps."
+- **Canary `entity.collisions` back on.** Entities moving into blocks were 11.8% of the tick (villagers 4.8%), most of
+  it vanilla building collision lists (Guava `ImmutableList.Builder.addAll` under `Entity.collide`). It was off only
+  for Valkyrien Skies. Watch Create contraptions pushing players and mobs after the restart.
+- **Fish cap** (`creature_caps.js`, `fishCap` 12): at most 12 fish within 128 blocks of a player, against Minecraft's
+  ~20 per player. Fish were 4% of the tick, mostly the constant come-and-go. Bucket and named fish are never touched.
+- **Otter groups top out at three** (`otterGroup` 3): Critters & Companions spawns two to four; eight otters were 2%.
+  Its spawn rules live in a YACL json5 file whose layout is not documented, so the cap is a script rather than a
+  config edit. Babies, tamed and named otters are never touched.
+- **Guard Villagers' "villagers have common sense" off**: it adds a goal scan to every villager (running from polar
+  bears) costing 1–1.7% with ~60 villagers; villagers still flee zombies and illagers through their own brain.
+- **`/peacock villagers`** (`villager_census.js`): counts the grown villagers within 96 blocks with no bed or no job
+  site and makes them glow, so the capital (or a town) can be given what they are searching for (5.5% of the tick
+  was villagers searching for and walking to beds and workstations).
+- Considered and left: Canary `chunk.serialization` (it speeds up writing chunks; the cost in the profile was reading
+  them), Guard Villagers' cleric healing and smith repairs (about 1%, but village flavour), and the small per-mob
+  hooks with no setting (Cold Sweat, Savage & Ravage, Curios, Mowzie's, a Recruits banner hook).

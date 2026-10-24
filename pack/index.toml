@@ -63,7 +63,7 @@ hash = "54b999cd4b8859787eec9d1b8df99b5e318030961fe7bf444dc31727de8a69f6"
 
 [[files]]
 file = "config/canary.properties"
-hash = "4212677a77cbb6f6e3e67e230f2408614c5538b469737106803b0323d4903062"
+hash = "17f02fc6426f3ddfca44d115a8b5e3394b90adbd951ad3bde1c938495e9ea7ec"
 
 [[files]]
 file = "config/caravansconvoys-common.toml"
@@ -224,7 +224,7 @@ hash = "645da331f569f887cda302c428cdaa1a8dc934183c914c708dc6821c20d9c713"
 
 [[files]]
 file = "config/guardvillagers-common.toml"
-hash = "d703bbc5dac576a4433431a6f4e895b85f12b352d93142231a461b59a7673cb4"
+hash = "9d75a7f86270e967b1e94f1da01dc1ed8128070db35d3909660cec9fd09eb099"
 
 [[files]]
 file = "config/illageandspillage-client.toml"
@@ -1890,7 +1890,7 @@ hash = "cc48e7b6d2c9ccc4375e04f371c53582ebc7fa50f8f366ae097b71feaf9d2aed"
 
 [[files]]
 file = "kubejs/config/peacock.json"
-hash = "cf9567b4ca1fda1fe97f29a57e04bf4dd0ed0e7d73d24769491b4b59954061ab"
+hash = "80926acc83f1c1ba145ba07a2ec09da40ccdb2a2a9be0ae0d8aba01b20bec026"
 
 [[files]]
 file = "kubejs/server_scripts/achievements.js"
@@ -1939,6 +1939,10 @@ hash = "e697009f2845fa0aba08b395036ceada159234bf7897765edadbf324ed494982"
 [[files]]
 file = "kubejs/server_scripts/cave_loot.js"
 hash = "bc99db5246b2b571d6a06b00867955f1296966e1dea6dadc256336e9e6cc36aa"
+
+[[files]]
+file = "kubejs/server_scripts/creature_caps.js"
+hash = "61ca00c42deca979bbc745dc15c51ae858aa7c36f4d67b4dd2638ecffe0c3aa6"
 
 [[files]]
 file = "kubejs/server_scripts/dead_capitals.js"
@@ -2015,6 +2019,10 @@ hash = "d9b4d8be0ada5477c3b7b6ebfd1231cdb2c28f374660a732bb5fa3d98f2b7c49"
 [[files]]
 file = "kubejs/server_scripts/villager_cap.js"
 hash = "f8f84754c415cd9fcbc5e4f3aaea579619af832f9195925f286287f1b5444b61"
+
+[[files]]
+file = "kubejs/server_scripts/villager_census.js"
+hash = "4616ac8b528dcf33519b1df9424a66c8432fab1aa69b0a1c758f8d646b582156"
 
 [[files]]
 file = "kubejs/server_scripts/villager_restock.js"

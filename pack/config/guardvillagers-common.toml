@@ -80,7 +80,9 @@
 	"How many times a cleric can heal a guard in one day" = 3
 	"Profession Whitelist for healing ai for clerics" = ["cleric"]
 	#This makes villagers run from polar bears, as anyone with common sense would.
-	"Have Villagers have some common sense?" = true
+	#Peacock 2026-10-24: off. It gives every villager an extra goal scan (1-1.7% of the server tick in the spark profile
+	#with ~60 villagers); they still flee zombies and illagers through their own brain.
+	"Have Villagers have some common sense?" = false
 	"Profession Whitelist for golem repair ai" = ["armorer", "weaponsmith"]
 	"Profession Whitelist for guard weaponry repair ai" = ["weaponsmith", "armorer"]
 	"Have it so clerics heal guards and players with hero of the village?" = true
