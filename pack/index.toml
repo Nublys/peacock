@@ -1362,63 +1362,63 @@ hash = "2b6051c5640c6eaa85952b4515e335a9b8e10fa691b79f15b982a971a24b226f"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/block/aluminum_block.png"
-hash = "955f918836b3b50d7cd6f8b267700d78900022e54302bc850b4c057f240f0959"
+hash = "2b689a29e0b94a7a55521ab9a957a4b51e573dafa38ab582d5c614c6b776f7fb"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/block/constantan_block.png"
-hash = "c5546c50c5fcd1f0aab0290191fb657c23b3e1971f985dacbcbc93da516bf401"
+hash = "b54afe909f9d36f6e787359ddddabdcccea9a492bad9f7edb59103c02814fb64"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/block/electrum_block.png"
-hash = "720bfd15505e6246daac14f8eecce051c869aad32a95c3cf09b353b8a1201fb5"
+hash = "5540c83a4a0494e1a0e3ff84b56f55224bac98e9ecb6c3d2858a4f899dc5b55b"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/block/invar_block.png"
-hash = "7d949c066706ec3d602c5ff3b52c9ca95d8f7c11f2d9d55050bd210ae9849493"
+hash = "bb3ddb95284245db4c87b4207e4338308afdc8d1bf005fe54c0b5a5b5b03592a"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/block/lead_block.png"
-hash = "295aac7c2d501e23736faf4cf1178e1aebb804e13bc17af0b9239a820c05cdcf"
+hash = "de9271045fd85fa6d73d0bb114719b4d949c52129b1ab2b3a913dfeae6d746e8"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/block/nickel_block.png"
-hash = "9fcd6d19f6776ae575c47c8312857969adf03c15a2f06639757551fe37e4ed41"
+hash = "991a24ec86c781b4370627dc28a4ef1e19d03c703b32a4786cd99f75f940d75d"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/block/platinum_block.png"
-hash = "a30cfe66700da1161f81bab59be39d161d543b448fc60739731a236fb02b699e"
+hash = "c5fca7033422deff038e6db598ef970adcd4a10891dd6d84d1f161bb5a25dea1"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/block/silver_block.png"
-hash = "5f295e16cbd90c684e10595d6570b1204541802fcee194fb7475962fa2590e12"
+hash = "bb045e23e518d4273a8df5601701e61f8b5659423051040697848b72f9faff29"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/aluminum_axe.png"
-hash = "fe0bd8463f2611bbce83da41b3d62c6f26b723deb2576500ee964f3b0c14ab16"
+hash = "40acd427c4ca18beb8e57ac6559d4d57af5b32ead844cc5237bb3123406dd3a8"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/aluminum_boots.png"
-hash = "86829df9dbd4a2cddb119396ee18a1feae813de2c52f9d915cf3f0ddfdedc29c"
+hash = "f4d6851e96b3ebbd4c70796b9d425061e7df9334e39b0c72c6fb2ee95ad2a6e3"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/aluminum_chestplate.png"
-hash = "6fbef86cb73cdf48302d33a3d18e6889f05385e6534c54dc8813c4282acc51f8"
+hash = "c5691c9a9fc8c777682496fd362aa97f23b060b04345dca1440ad389aca75114"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/aluminum_helmet.png"
-hash = "47a3739e8fc37b968a9ea3052bfae9b9e22ebfbc91ea012a744b47d08ddc04b9"
+hash = "31a8501ae8569ada21e0f1c473e1883d0befe45c211dc6710dde15f6d318440b"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/aluminum_hoe.png"
-hash = "483558a001561b86d38383b88e7e3015a851e28decd6bc9fd334ab04186ae719"
+hash = "69bc031598bc0f68b9f144b8456ac32b9195abedd22ed8a676e47391a27ae4f5"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/aluminum_leggings.png"
-hash = "3c0d1af9b2093432fb63af65f236ac196ab8098e366461f7927d9fcc61afd44a"
+hash = "bd551ae5107b3553410fd708457662337b3624fcc06edadc582cbfaf5f130733"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/aluminum_pickaxe.png"
-hash = "fa9791ee39aff9da0fb374fb5f94202a5b20faea24936ff3363ae6f8ff3d3971"
+hash = "e44dc172e1be004577a09cab8bc3adb2d04d9cf76aa3e15011d5de9932c95bbd"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/aluminum_sheet.png"
@@ -1426,35 +1426,35 @@ hash = "cbab6092e833e0adb9596c0e98494a95bfe16e210d95cc06dd15b753ce4cc902"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/aluminum_shovel.png"
-hash = "6c9b941e37644faba809d1b3568c22e370afc2e2ade0bf3d59f0d9123a971532"
+hash = "2874bae4c8818fbc7250591edfecad020517c96677445ed5bd4e84bc17bd75ce"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/aluminum_sword.png"
-hash = "4966a959c95e5cf2a877dba7541e57fc9c2ff20de32ecba66c09258e227ed1c2"
+hash = "39331ef89800a21bb08c1ceab9db4c6a4d96cc1ae715ba67b2fdee77f05eab8e"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/blueprint.png"
-hash = "244b616ffc97ccae07006cdbae119954d722f13cc5fbe72b738c0f95d25c7eb3"
+hash = "09b97e5cdd5fa9bb99f53b8768c6b59b604a07bb0678a306cd1785165731abfc"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/constantan_axe.png"
-hash = "469541ec81d180935b47da7433aba08894b31d11d5b0783a1812f0a54a9a254c"
+hash = "993734aa6e99d10b19618dd922ad44bcc3b63a436096d5b6044a0993c1f6552c"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/constantan_boots.png"
-hash = "ca754551b01303b940077d0d43336ad591e675d8cb880c423d194db42c8c598a"
+hash = "b2837a9761f24eabd789959da6a5e76ea11a8392ac834e18b1381f2e88713dc2"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/constantan_chestplate.png"
-hash = "d4a6035777f693d158e88070d8ea279cb86e0c1518abd50182ed56fa8e565d88"
+hash = "0860277dba809b943a1dd699294528e7687246acd175f31e98e3b8f678435e9f"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/constantan_helmet.png"
-hash = "fc48bd60f3673b853e5b86135e12940e79d561bbade23a1d5271c4bd4e4be746"
+hash = "f13cca43c576e0d5d64f166e5f09fb10aafbd49e3ed91f632f2b92aa2d71caa6"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/constantan_hoe.png"
-hash = "525b4c25fa3a30e9dce69d61ee68ab962cc779875644b580376b2708f301d319"
+hash = "059a0bb88436e60d35b64938522cbe9d15b875cccd6c6a940e53f84ea8b33392"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/constantan_ingot.png"
@@ -1462,7 +1462,7 @@ hash = "fb54365e3c7c86835ae2d74fff7df7f37bc7e155070d7f039868223b2bfae5a8"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/constantan_leggings.png"
-hash = "038a8d60fd378087b18b3369233649225bb103268be2660d605294af6532ee43"
+hash = "0a0878617b83988acd22281538611367b9cd8ac07bb629ff9bcf78140c2961f9"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/constantan_nugget.png"
@@ -1470,35 +1470,35 @@ hash = "7bc14cbb556fe90a0689f7b8b3b9561c6a371922ebf7cef542c50fe6143698bd"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/constantan_pickaxe.png"
-hash = "3c865b1b2d3d60637f22fa6687a1e6720a56c675675aba3b62d16a75346eda41"
+hash = "d69ff39c696a073b1640e7be87001839ad317b1d43345a3c794bf63009248b4d"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/constantan_shovel.png"
-hash = "9c53df993fd0e3f384aa1e9b3e050c18f048472041e1414ae54c88ef49b007b5"
+hash = "bd610097404524e7993bf382ace635c7619e058d895e5e462be23e5da21d3a92"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/constantan_sword.png"
-hash = "eb66666b055fa5cfe720f001e08d6f2fd994cabf07f9ad0e886c51097ef67854"
+hash = "aa90e6ea4aeb930b98d9a5fcf5c450010de9ab6750b0d684040a8762cc1513cb"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/electrum_axe.png"
-hash = "7fb25d370376de7803df9bfa233e418258e2c44b0eaad44fd7d19542ab421cea"
+hash = "03a4114c86f722a7a59cc1531e4ee519eedcac6b45c2e19e42afdf15e219b8a5"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/electrum_boots.png"
-hash = "f51da327032155cb4bcb418fd3a8eebfe0874b976aa8c877dcdff381d43fb843"
+hash = "46422d5f9bf507fcccc68b045600eba357fc9ad6fa48d887a55a701fa42eda5d"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/electrum_chestplate.png"
-hash = "ea66e60d87962f9a622325665b98f87aad9937643c7479df2d2d8c8bb6372530"
+hash = "d7d0eca1673378a98bd3d96203555844a609be71758e25aee571b64e6ea90c3b"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/electrum_helmet.png"
-hash = "1403c308cd276bdfc639ee4676074b733bfcc6b0f7ed5c721c7e67671461a2ae"
+hash = "423020d8ddf31493c80f48c96fff2a966cbbd03ec54a7d55626d522fd7704c6d"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/electrum_hoe.png"
-hash = "d147e37d4f8bb75ba0e260d8554e725e58e499d826fa7b543df8bcbe30167e34"
+hash = "766eb8746479dddeb17ff80554d115e19aebd76299afcd158fa34729037ae4b3"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/electrum_ingot.png"
@@ -1506,7 +1506,7 @@ hash = "50717cd1adceab907f9b0cfd1abf8e839f8366fb8117f7e494db4d586bca3bbc"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/electrum_leggings.png"
-hash = "d4ecd738d8c9d7e5e1c86264b1ef08e39f3bb886fcb2422654f861c5c578781e"
+hash = "a1589d059e2c4a17bbfa05ce9089f1a6dfa9b63f91adaec1f514249fbdf94ac9"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/electrum_nugget.png"
@@ -1514,43 +1514,43 @@ hash = "497c546910c8b1335fd3d2cbe3db025980ac4930deece466eaa096457bae74ec"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/electrum_pickaxe.png"
-hash = "8b94f24d47f6d9674dbd134a8f9ea60707dcf5a6084b9d4d2c151cdac84a2946"
+hash = "b5a50fba2706c327d364f50f5ae9f39b8aa71653c4ce9208eb1e235df26bd44f"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/electrum_shovel.png"
-hash = "e9afd681d7c5b51a832e3f8a4ecf5070eae7fe15f5d41f41bd194acc449dbd50"
+hash = "13e6e346545723f84d4c03d0c46b97aaa7d887d8cc1ff7f13abe5e6790615a21"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/electrum_sword.png"
-hash = "9cdac8d260223f079ddca1fb3ae7a124068fa389e23d079ec7794e1fd542b7a8"
+hash = "6c5546e06fab5e7cf5c8f0ba8c7c2d430bd879c62a4e80307e5cbbd5002ad63c"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/fire_drill.png"
-hash = "3969f18a9c823fa284fd3e8a0d13d9956941bb894474e88632dd0592353c2603"
+hash = "6b5b73b49abbe0358f6c1836608212fafa8440055c79a815f379a9430b3dba2b"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/flint_prospectors_hammer.png"
-hash = "9dd49bd37eee93071304feb8b1a3d17a6ff32f3588eb49d9cd9f0da1a8a526ba"
+hash = "92f7530ac9583a9bd9568cebe2c5261f99c559348574aca473fcb7b71cc682eb"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/invar_axe.png"
-hash = "966c25de39110266301ca4ec8c8fc589585e55c82320a7e4603d344dab77e10c"
+hash = "6c628a58d851b5c10f5c6034ace894785941d34700678e3f36b840cb0b633769"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/invar_boots.png"
-hash = "b9fa44a569a18cf8633ec1419eeac161097434811ba75bdb10953e0db126b6ee"
+hash = "f629843bff9f016b444ac33f57f98c56990a503c489bfda71a71c326fa5aecb6"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/invar_chestplate.png"
-hash = "3dd4a9fc2614065e5109f18753824031c609a692d42c797788aca8bf3f790589"
+hash = "8f11333d8bde2ab4667697fa3d03556dde00c3c99827c173fc1244fec5ddd4cc"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/invar_helmet.png"
-hash = "341d508017f68e74c8f45d23f7f7c4d3c322ac2a92b23d3097311ef36d3703ec"
+hash = "a4f30178a248138c1ea64107a4905d7abc9dca337c8b96d04c7a6e883f62005c"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/invar_hoe.png"
-hash = "f771aa5a2d84bfc957c2809918f50da67f53876154a0414da12dcbde123fcc5a"
+hash = "82e7890de13d1093fbc2a9c5467eba863eb52387d75d7dbe9afc63df4e6419b3"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/invar_ingot.png"
@@ -1558,7 +1558,7 @@ hash = "74d4668f38ea3ba5d1365d409a496d006d9c344ac61b863affb402cf74315ccf"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/invar_leggings.png"
-hash = "b9eaaf16e42347c93066108fba5f9e7f56d776046850e54c45a2272f849c200a"
+hash = "b0f9a616493b24d2cd0d542b19c65d55d1fbd2a7e8f780f1e06bef072410d4ce"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/invar_nugget.png"
@@ -1566,7 +1566,7 @@ hash = "380c9c490084ba06293309c31b91c6dca918938e451bb423262412388c312041"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/invar_pickaxe.png"
-hash = "677bee2811a3d542d6366ca77287b5d66d5262d674e7acef0d2e2556855334af"
+hash = "8ddf7c4445d9937761e2257822421b05e87d4d11ec9eb1a0ed9a6b9c628aa355"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/invar_sheet.png"
@@ -1574,39 +1574,39 @@ hash = "5d7ec9b1508cf8cb8c840b176db93313a5cb69064faa76238372e4593fb1ad0b"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/invar_shovel.png"
-hash = "a148112ebf4e58d73e797bd4b4185d065585ecf3b1bb2f93c3df66b25f860d51"
+hash = "80acdc2dc4fe335cd55b1032cfb35fd5b216baf424de5e6e2dfdeece5716b59a"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/invar_sword.png"
-hash = "af5a4304564e96b1327cf006b11c7cccf3479d788b166f4083ebea2b8d94556a"
+hash = "e0810dfa9bfbb46efe016d8f2497e4d080fcb089a5a376c6265e310a8a372e05"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/lead_axe.png"
-hash = "9ac9c5d1b46a56316e0da6b82c4d2830f34c88880231dd6572c84d835ae51d0f"
+hash = "4609a65ea335b92049c89b842648ed1174d0a7ac51458a268c87ad50ccc4f372"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/lead_boots.png"
-hash = "88c295e70bf0804230e3023fc929b78cbcb6e0039827924ef7aff2cbe51d7fb6"
+hash = "403a69ba4a9e8065c8fd09050c7b5e6215dc65f03ecd3005942a71cde40eb6e2"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/lead_chestplate.png"
-hash = "4c56a2a9e6d5637c2bb0f4902654ea842cf710556924ae9c734bd7376e1573fd"
+hash = "13c986e86fd26838572fc91272a37014fdc50c31fa5f56bbabf2c6db8e0e5c8d"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/lead_helmet.png"
-hash = "9e1d871a714125a4612b4fa3156f604ae6247c85114a282daceeac4fe26e16a2"
+hash = "cddc4bcb838a5414d2ab009d33c27626114ec019242dce62bff343721d5477f7"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/lead_hoe.png"
-hash = "3301d4ba0df3dfbccc0d78c2476ab763d32e09c79d1592ef1a898207992fb875"
+hash = "2597f94439d3759ac570d74ebf708eac6248b19a988ce352740286c378017986"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/lead_leggings.png"
-hash = "254b944370d4cec60498c93b60d23c421d6c45e862ceaed7cdab6a89122295c3"
+hash = "549d7ae0b3cae9f99e8e2440d2806e0ef7fbf737f7700aae7d960509de49d546"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/lead_pickaxe.png"
-hash = "03f300d93b1469d4641f169511ec29be27a26e96208c6f803663306e659314a2"
+hash = "4da9f3d6a65f8627ceec6f87255c2d9c8c46e18428210420e10425ed48f7aa09"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/lead_sheet.png"
@@ -1614,75 +1614,75 @@ hash = "bd508ff9abc763de9144e952a2b0310cf730c8cc558c2602b30000e45337acd2"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/lead_shovel.png"
-hash = "c8bbb38f83cd4c06c2e20b564756400bba7cb8f0066a61eda05e9e9ac41ab5d8"
+hash = "5531c5fdd067ab7a75d7fb00d48d06b050c98ba5acc550e2624093df16a87507"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/lead_sword.png"
-hash = "47962c55d68ff918ae76fcc4755fa15fbc7bb5f1ddca6787ea198c335a1dfdf3"
+hash = "3a180d179df57bc6c1ceaaae6869f4a413438dac6e8410c2441a92bfc8ae27da"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/nickel_axe.png"
-hash = "1cb4a30ab85e48a845e86fdb21d584369d5b9d41144674ee3f5bc1c98fe85688"
+hash = "7912d5e4432f1daf3964d71d66f2ead25131639ece2443657b089e6b9350983b"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/nickel_boots.png"
-hash = "85bb8a4bb667eef71eec40fba423ce959c066fd02b657bed51de94c7e2c0d2ae"
+hash = "e50c0965268ddda924b6e8356439482d09cc17866ce06b3440ebc2fe81532e3c"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/nickel_chestplate.png"
-hash = "14996c167b9338a7a18074f38f06f3463a09be52b820d8d3516353fc17ec3681"
+hash = "b2d2da1aff1cfded4e2a3abf598e7d57120ebb600c1b4c452ffc0476edd0e1e2"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/nickel_helmet.png"
-hash = "dc4e134dd01abbb9a70480bfde60f67b53f214400f845bf462f0ab4dbce59a89"
+hash = "17127f7e71c03aa98ef5f8e63abbffe6cf2d5553f2b96c9b9100d3ddc6d85eb8"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/nickel_hoe.png"
-hash = "72e1b5d79b1e956fde9c8f05768c8d09ef2ecd5e86812492c4a5da621c948879"
+hash = "2d157c1e30d7ddf53baa63ab794995487e38135cf6a4744854a744c0a17c3a43"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/nickel_leggings.png"
-hash = "aaf25c694562f9b9d0939e37f0272e48aad08db43314e3ad168b394d0d0a6ca8"
+hash = "29cfe9f7739770217846de0376f5e5d4a402822439261e86d0d577cfb57c91cc"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/nickel_pickaxe.png"
-hash = "c0dd93d8bfff3fbde262cd9f6ccc8dbae44d5fc0354a8541984d6fda9edfab70"
+hash = "df32a2fd88a7a12796a48a7c67f7099de24fd3ad067234c3254d37b14f9a7d1b"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/nickel_shovel.png"
-hash = "c14d07cdb59868bd55c82247b7386ec48fa09412217b7d960e98233b2a40e40c"
+hash = "999207d26dc15a034366797595ab5e178d99805377f1b3b2230856853faefea1"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/nickel_sword.png"
-hash = "bd5df6a00ea037290df461f879f94cd6a012fff4dc3165126f055da567155baf"
+hash = "b3d49d9ee5de30763d6cfadf035dea2d66c7b107ff3d20c4b4bfa728b9619d7f"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/platinum_axe.png"
-hash = "15619b36cde054065e6586f8275e3358612d860d34b81956ebe3c32e46988b1d"
+hash = "8522858d61e9d8c98023cf97feb99031c61116a709fb9f33abf9ad8a83d56f72"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/platinum_boots.png"
-hash = "276fe4709f288b51676f0ddddd1f0ffa2a3d0e846c38f5ed4c4201c9e5a5b566"
+hash = "d4cf3f832abe7f08ec3b84c0761c9d956e286a6ff9ba0f5402a288e86fad5348"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/platinum_chestplate.png"
-hash = "e7e3e35f04e092f9deb254ed0c9ab03e2ded59e1f026bfbada06f7f12c28a0d8"
+hash = "705e866a8ed65b61862c2a09b989b5dad19c1598cb0b0bf79572f89bb7fbeaf7"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/platinum_helmet.png"
-hash = "c58ff33fbea023b028db3058ef04d5e22ad21cd097749a5d81031fb4549c6938"
+hash = "875bd30c90ef43fc4b49cf6f09b15043008d595b7e84ce81f493ef1baf9ed193"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/platinum_hoe.png"
-hash = "a20d0f0fd390c904e2657aa0753b4c686574d2f47851cde99bba4f6f2a3d11ef"
+hash = "1a4f16de345e4288ba79846d213903c001db325e290041a8b248a39fd6252316"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/platinum_leggings.png"
-hash = "34723922caebea07523265b29d29811e1a6c3be88df0a2085d5522686af69c43"
+hash = "6ff49f88283e5e349b7a738d9af5f7c5553e9c17ff9757f349bb81cb7a7723f5"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/platinum_pickaxe.png"
-hash = "7e1fd227b8310b2289306e5efadfdd7b25925962295b3886564f8b2138bf754e"
+hash = "8e09c63220c5e72afe0bfac8899709506901579f02f4b967449ac8b1e12b4687"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/platinum_sheet.png"
@@ -1690,163 +1690,163 @@ hash = "179cd68766557f3932e2c4a8dc6e8af1f697be2857412a831f61961cb36aec7c"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/platinum_shovel.png"
-hash = "3047b6a3669a3a50d3b73ba80736f87569fafb44bdbdf96a23e15e64979e9301"
+hash = "92672c10b336f10f7c3f02ed29f3183363a1f7820cf370fafeb3e023e66bbc72"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/platinum_sword.png"
-hash = "744c0606752d470796147bad7bcc30bbdbba9bf9e8b53fe5d6421231d9829ad3"
+hash = "9c2cda91db04774b11905b4dfd548b04c58336be8e7d9901aa850b4725d3329d"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/rumour_voucher.png"
-hash = "038d08aac0a5023226a000b920991bd5076a741c9402f0411ec9c1de5c8c7e3c"
+hash = "12e5f74284597504ebf7a6083f5769318e1cea9c447795fa36d940c0d3839afe"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/silver_axe.png"
-hash = "2077f880ced98337bdd12a5599e061abb4624dc813c67a73b17973fa62987f8a"
+hash = "4ac4b80e1165cacc149c0579b564ff7424273993dce8f53dfa23db417f5def1f"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/silver_boots.png"
-hash = "bf1aac9cc4147b3d98c36e671721426de3b76201fdbd965b3ad788243c1cbd78"
+hash = "e20ce8b044acdaa72968b9a144b3211ad6aa5e9d401a664f726983f0216f6ed2"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/silver_chestplate.png"
-hash = "52181f6bd33460286cceaf1412107866a73be0eed7bf9b707e211f688309fe00"
+hash = "5ed8d1f442bf03c8cb6d2fd09fed50769db89efbad73ec1c6895200a8e5de376"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/silver_helmet.png"
-hash = "7845bde79dab8cd2c2a960ab1135ad334ac51ef9391ebddf95e2baa459d69a69"
+hash = "bdc753290267a71ae097bb230d487b7057a01307032db961b79e5cb055c9dd6c"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/silver_hoe.png"
-hash = "e8cff34151343c46052ab763b42d90595d4fe2b3604850d0b50b1bef1ca884f5"
+hash = "8b3ab96fa8357ea6950d2beaa89bb598df7b7abe363a69536aa8110bc0ae2d7c"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/silver_leggings.png"
-hash = "58f5b633904e5d4f853bb36ac8e0a56f38aa79db4a77dc9858af883deddf2fbe"
+hash = "328bf5c1d483b2c1397ac037f58902b11a2a2d119133ac979bba74704fbd52ca"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/silver_pickaxe.png"
-hash = "cc8434269f1dc963ebdc6e9a9317323369330c56ab05c8ca918c886b2404eef3"
+hash = "5b4176e157bb49e70f92fb4c26f8abbf8c2791c2aa3e6189bc2f69ece6cd82d8"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/silver_shovel.png"
-hash = "47761837dafc60b791d25259cc16b41f6c4d73909134971d830cb3c7b0b2d3b3"
+hash = "ea0ccbb5ffa15a6e590d05ffbc9178afc310827e73b32ba43df25951e3ebfd2d"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/silver_sword.png"
-hash = "603367b79e45f4ae6c78d0f46743df11740a09ac938001493943d078c35f56e1"
+hash = "4f6dd1aaa7b7237cbfd70c6b70b643c6721603c51409939ae410de7b6aa10b21"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/steward_contract.png"
-hash = "b10e650eafa32c25a9faef58668bf189bb51d888ac4c847696b1343c32ecbe50"
+hash = "82317ac66d3f057e6998ad46545fa9ebcb99f6c561bfef37f94d42ae11091ea9"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/tin_axe.png"
-hash = "848132d78ba6aac8c9d2b9fbf40e0015f257102bb6a401b9d73a58d17ef8d544"
+hash = "4e7388af999bf32496f71975bf4d40f7825a9febb0744edff08da61027a090a8"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/tin_boots.png"
-hash = "cf2e77f95773eb9ae64259a01525125f68bec6d9f8107a4b1177e10bbb5a36a3"
+hash = "4018791cbaedfa063ae3ee79b5a73ef2eade07c4e0728fce0ae37638a89a3863"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/tin_chestplate.png"
-hash = "846b649bffb1c11245740a44b447f576b1a861224fc5c7ddf838b9d74c8c123d"
+hash = "858c64c79e853f4c0486853cf6a259eaba8807281ab37329c0dca6faa2e7e45a"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/tin_helmet.png"
-hash = "b2a01cbeefe2fcf7ad7ed371a5feb0c9f11377d2da20d38030ad8734fd7de7ed"
+hash = "f02fa7db7f7d28736fd577e721c37ae3b58948c7e03689c64be20cb7185008f1"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/tin_hoe.png"
-hash = "bba397445ae8fda885a1a5e6b307620cefd572c382a9e5043b25229b36dbba85"
+hash = "5261cd3f478573c1e12ac6782b4d1d9d2803214dab94b39ae92bf3552fe88991"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/tin_leggings.png"
-hash = "388cf562a21064d6412ffc55e357ea4dc697d2f20a7c12ffc69ad9803350028a"
+hash = "8f47a214e3205317b0526c062e76daa11147d10c3fd2fafb2c3fa070ea02ef3f"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/tin_pickaxe.png"
-hash = "4ab46804f45253025f759f4fb88fc0bfed7e2a02645f7fd1e5157e2e9e9129d1"
+hash = "d8739e6cb49dbbd017bec858ec1337a1cab8a74787e6a746b816f3e7f94f44a6"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/tin_shovel.png"
-hash = "aa60fff9540c5e5be0036cadbfea6975acf09d6321c675869d20cc2c122ac00b"
+hash = "9471f9df368602f38f198e40c0e11162e656f112fdc919c25e7b3c220d8de490"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/item/tin_sword.png"
-hash = "d32dc32fe5c179aa7f6002005b22664bde0fac657dcd87d624a7e1f798ed97f8"
+hash = "9b89419f4c3c068446dda416b604d47d6789ac833070dde0adc2efa23db7796e"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/models/armor/aluminum_layer_1.png"
-hash = "888b5bb868d06fb0cd5649f9a19a601c6ec0c01691f5b5e9999da263ec5774b2"
+hash = "a31a5dcb1dce9b1ddf0ec6923bda72f77b8a94239864796a561d16d5f0b78958"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/models/armor/aluminum_layer_2.png"
-hash = "c608e7990c82f41c5e75a1bb12e8e0bfceb5fccaa05846f9ffb125ae78b0709f"
+hash = "cbb26bb3e2b028ad94afb2c935641994f8db3c6551a04dd0b9b80df7ea6fdc97"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/models/armor/constantan_layer_1.png"
-hash = "43e479ff563c131a25fffede65f47de3fc6134bac3341ef89e33914a270c09ca"
+hash = "1c6866aaaf16c661d47037d3716ad11470e5312227426f05dc8606048172a719"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/models/armor/constantan_layer_2.png"
-hash = "96a497b5b5672f843236c2d0be661521c425b6491f64278ddb23a65ee4e14cae"
+hash = "61a99665ae904f980bca8410e8d16a0d4e5ff59cdbfe895ec8b6662514f8c4e3"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/models/armor/electrum_layer_1.png"
-hash = "7c503e31093894566294a828c772d71ff4c60292591aa58f7eafc7282b94e903"
+hash = "1297b7dec09dbfd46c7f3384a396705364e2e433c9b7356ec49832428f96cc8a"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/models/armor/electrum_layer_2.png"
-hash = "deeec8cb77c3361724b7464eb5d81ea89c358837a849df2c0a70e167385a2c21"
+hash = "31d4b2d94fee8bfe324ab757a25aec8a7e5505b43c1d3afee30b101d4adb05b6"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/models/armor/invar_layer_1.png"
-hash = "819e25c277bfc350c90638949c8f675d22d554ae9e4517d015190aa4a8e9c0fc"
+hash = "1e00971a8b09228396777956629304cc7f8bc58d586725fa1ab3d1cb42d525a5"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/models/armor/invar_layer_2.png"
-hash = "f833f255f0100dfbffc7f16bfd87dccbbd0d8c6a1c6e2cc575482f9f5200c6f7"
+hash = "3146c51afe6bc26621de19b96d79acf829b205886b5c6dbd7e9a1fe3d7922cc0"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/models/armor/lead_layer_1.png"
-hash = "cbd08eb9df6a019433db379aed34c9f5288252c18bddaa262c6b3432cac54d28"
+hash = "f89d784b3aff13671cd093edd4765f6571e1c5c76937fa056cb5b760f699188c"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/models/armor/lead_layer_2.png"
-hash = "e2bc13ca9769f54be5be52bd3e8639e5440647436aa2601df6dce3cf25ac2481"
+hash = "eb3587cb2a7376d93cb736c15ff52295ae75219d8ccf260dcfff7e621615fccf"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/models/armor/nickel_layer_1.png"
-hash = "23a16804bc39c99ba0c6ec211949f06574c037474e81f8ec0492384cddb9d858"
+hash = "f8f5f5bc4b5f13b51fd96df972692ac62aac9cb19cd85e6520459ca6b656aba0"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/models/armor/nickel_layer_2.png"
-hash = "d4fb5cb39ab81f57798c1a56c157cbbe6371be189483386ab074287a8d0c91cc"
+hash = "10bc2a89d923a1cfdc311ad9d98af92eb01e1525d5cfe0b6d28f6857d258dadd"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/models/armor/platinum_layer_1.png"
-hash = "cd9ed24e2327c1289edfb2ebe1da7cfd0161fdbefff83502bd74007c0abc5440"
+hash = "67f161f99be28e20ae383f870f5842ef62a5eea9424754c9cabff3c3b33eaf93"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/models/armor/platinum_layer_2.png"
-hash = "99b4135990c24f75168deb254de3c8bb3e7b44556c676a80760fc18de493346f"
+hash = "016529ca6a5b4a0c2ed1121d38522a6685b731402b08d859556345ffb38d5bde"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/models/armor/silver_layer_1.png"
-hash = "2f51b7d12d28fc65afe6733dbe8b4baddd5bdb2e2efc26067b3412e07b311c43"
+hash = "7666814b78f53506e5e142d3cf0cf55602a3cac18a076cc953799b2f3c4b4a43"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/models/armor/silver_layer_2.png"
-hash = "b2001c31a863fd309c7af2ceaeeff530e9fcd8b22a49e08b4c6f634a802fbd60"
+hash = "d185d43a4ef57f09ac2691608ed12ee1d805ac3b4e8a5b6c9336f283545c976d"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/models/armor/tin_layer_1.png"
-hash = "9b4c862d90c9e2138a664074051ead7fa6cff6b6df6b3f76775d7bc1be219032"
+hash = "683da313487d5802199e9d94b3d3f113edfcb3461eaf023dad79e7a68f355dda"
 
 [[files]]
 file = "kubejs/assets/peacock/textures/models/armor/tin_layer_2.png"
-hash = "9e1571c06c4f568423e430ba6143d0bf03e8db7416c34dbb02890769e43db03d"
+hash = "03fe4398e89e84b26bdb86b1dc00a27db8a60c096241b3f6294df794938781a0"
 
 [[files]]
 file = "kubejs/assets/proximitycrafting/textures/block/proximity_crafting_table_bottom.png"

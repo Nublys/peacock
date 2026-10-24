@@ -1619,3 +1619,22 @@ Aaron approved the plan ("Make the update"; hoes in; copper; lead armour knockba
   treasure and supply chests carry silver, platinum and electrum.
 - **Fix found on the way:** the prospector's pick recipe (2026-10-23) used a centred handle, the same grid as an
   iron or copper pickaxe, so the two fought over it. Back to Geolosys' own offset handle ('III', '  S', '  S').
+
+## Gear and item art (2026-10-24)
+
+Aaron made concept art with ChatGPT from prompts written here (per-metal looks: aluminium aircraft skin with an amber
+visor, tin folded tinware, lead heavy and blunt, silver ornate with crescents, nickel clean plating, electrum ancient
+with a sun disc, constantan wire-wrapped, invar bolted and machined, platinum faceted with a blue gem), and "Make
+everything and push". Sources in `art/concepts/` (not shipped).
+- **Tools and armour icons** (81): `tools/import-gear-art.py` fits each concept piece onto vanilla iron's footprint,
+  samples it to 16 × 16, gives tools vanilla's stick, snaps each metal to one 9-colour palette (keeping aluminium's
+  amber and platinum's blue) and puts back by hand the details sampling loses (rivets, crescents, sun discs, bolts,
+  wire wraps).
+- **Worn armour** (18 sheets): still vanilla's layout recoloured (`tools/gen-metal-gear.py`), now in the drawn icons'
+  own colours, with each metal's marks drawn on: aluminium's visor across the eyes and rivets, silver's crescent,
+  electrum's sun, invar's bolts, constantan's wire trim, platinum's gem, lead's flecks, tin's dents. ChatGPT's own
+  layer sheets did not follow the game's layout, so they were a style guide only.
+- **Storage blocks** (8): ChatGPT delivered real 16 × 16 files; used as they are.
+- **Blueprint, Fire Drill, Rumour Voucher, Steward's Contract, Flint Prospector's Hammer**: the concepts were drawn
+  at about 32 × 32 and blur at 16, so they are redrawn by hand after them (`tools/draw-items.py`).
+- Metal sheets (aluminium, platinum, lead, invar) are unchanged recolours until their concept comes back.
