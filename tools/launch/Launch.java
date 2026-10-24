@@ -51,6 +51,11 @@ public class Launch {
     static Path mcDir, peacockDir, stateFile;
     static Properties state = new Properties();
     static boolean reset = "1".equals(System.getenv("PEACOCK_RESET"));
+    /** Values a profile once wrote that the mod itself rejected and replaced with its own default: the file then differs
+     *  from what we last wrote although the player changed nothing, so the replacement is not the player's own choice.
+     *  Distant Horizons 3.3.3 has no "FAKE" transparency (only COMPLETE and DISABLED); low and medium wrote it until
+     *  2026-10-23. */
+    static final Map<String, Set<String>> REJECTED = Map.of("config/DistantHorizons.toml#transparency", Set.of("\"FAKE\"", "FAKE"));
 
     public static void main(String[] args) throws Exception {
         if (args.length < 1) { log("usage: java -jar peacock/launch.jar <pack.toml url> [extra packwiz-installer args]"); System.exit(2); }
@@ -213,7 +218,8 @@ public class Launch {
             if (same(cur, value)) { state.setProperty(stateKey, value); continue; }
             String last = state.getProperty(stateKey);
             // Known to us: untouched only if still what we last wrote. Never seen: untouched if it is any profile's value.
-            boolean untouched = reset || (last != null ? same(cur, last) : anyProfile.getOrDefault(qkey, Set.of()).stream().anyMatch(v -> same(cur, v)));
+            boolean untouched = reset || (last != null ? (same(cur, last) || REJECTED.getOrDefault(targetRel + "#" + qkey, Set.of()).contains(last))
+                                                       : anyProfile.getOrDefault(qkey, Set.of()).stream().anyMatch(v -> same(cur, v)));
             if (!untouched) { kept++; continue; }
             lines.set(idx, found.group(1) + found.group(2) + key + found.group(2) + found.group(4) + value + found.group(6));   // keep indent, quoting, spacing, trailing comma
             state.setProperty(stateKey, value); set++; changed.add(qkey);

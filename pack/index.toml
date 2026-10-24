@@ -2,7 +2,7 @@ hash-format = "sha256"
 
 [[files]]
 file = "config/DistantHorizons.toml"
-hash = "de542fe60e22a6fed2186b59dfd158cef4622b4237f03bc42ffef3ca23c3c785"
+hash = "16ad3931512e6e8e38f161aee678393be13150462e7153a22b3320263c3a7c24"
 preserve = true
 
 [[files]]
@@ -2971,7 +2971,7 @@ hash = "1f139b8561336fed8a4fd2830af1989d808425ac6cc603c26028afd49d105899"
 
 [[files]]
 file = "peacock-server/config/DistantHorizons.toml"
-hash = "f54e56c1bfbaf01f856e555066d1418d7ca39ebd5dfee5b606d6a715328df0ed"
+hash = "eaab15e091e630b285a5e229c50afd796873cc7c105febba16028f793af7cba4"
 
 [[files]]
 file = "peacock-server/config/dynamicview.json"
@@ -2983,7 +2983,7 @@ hash = "114653687da22da0ec9b0d693982840786bb6a992f516044ca241cbf3899799a"
 
 [[files]]
 file = "peacock/launch.jar"
-hash = "ac4b79ba1ea1daea565b96dee67cf5a477836266c4d10ea22cf94f11bef25548"
+hash = "8b784f5ed746ed6e2f256ca204d18d0eeaa98f6b36239806cf3fdc504eeea7cf"
 
 [[files]]
 file = "peacock/profiles/README.txt"
@@ -3043,7 +3043,7 @@ hash = "a5c6081c92f50640f7df20c0a31b742cf16735a8db86d2280b61a259bbdd2682"
 
 [[files]]
 file = "peacock/profiles/high/config/DistantHorizons.toml.keys"
-hash = "5fe3575004023546ac3c9a495ba2fea794456246e041919ef71e0e95297b0b1e"
+hash = "3fc0cb1368c9303d7e0fa7be5b821eea6320c6c31bdc1d9ab99a4f7f7a6d0e8f"
 
 [[files]]
 file = "peacock/profiles/high/config/coldsweat/client.toml.keys"
@@ -3119,7 +3119,7 @@ hash = "ed50d1efb065f355b9a58b4bbb47b662a33a124f1a48b740cf5e4152365953b2"
 
 [[files]]
 file = "peacock/profiles/low/config/DistantHorizons.toml.keys"
-hash = "de67e82b095b1ef90d981cf76b0baef35d4c8b682ef1d70ce4306d31ce88cf53"
+hash = "4cf7edb3f438b1c49bc40d90f324d1b2104f2c8d90a2805d5f02c0930d2e58ed"
 
 [[files]]
 file = "peacock/profiles/low/config/coldsweat/client.toml.keys"
@@ -3195,7 +3195,7 @@ hash = "6faeeac70e8bedbca9a3978ff0ead50bb03e13d9d9dd869bd85a181523f87972"
 
 [[files]]
 file = "peacock/profiles/medium/config/DistantHorizons.toml.keys"
-hash = "a47014413f6eb82af0f49c41235d0fcd84640fda1a0f8b1d94778d43d59a18b3"
+hash = "a5c762fb05ff8118e12a451a00e5df8821c9d92085902de56fd882001bfe4a5c"
 
 [[files]]
 file = "peacock/profiles/medium/config/coldsweat/client.toml.keys"

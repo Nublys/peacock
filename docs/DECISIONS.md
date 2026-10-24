@@ -1520,3 +1520,17 @@ profile because the cave-creature cap (about 15 per player) only ever holds bats
 nothing. The no-bats biome modifier is gone; `bat_cap.js` counts bats within 128 blocks of each player once a second
 and cancels a new bat near a player who already has four (an O(1) check against that count, so failed spawn attempts
 stay cheap). Bats saved beyond the limit vanish when their chunk loads. `batCap` in `kubejs/config/peacock.json`.
+
+## Distant Horizons quality up a step (2026-10-23)
+Aaron, on DH detail: "Set low to MEDIUM too" (with medium and high to HIGH, as offered). Horizontal quality (how far the
+full-detail ring reaches before LODs halve) and vertical quality (overhangs, cliffs, caves at a distance) are now
+potato LOW, low MEDIUM, medium HIGH, high HIGH, ultra HIGH; the shipped first-launch `DistantHorizons.toml` matches low.
+Both are client-only (GPU and memory); render distance, which is what costs the server, is unchanged. Players who set
+their own quality keep it. `maxHorizontalResolution` stays BLOCK everywhere.
+Same change, the transparency fix: low and medium wrote `transparency = "FAKE"`, which DH 3.3.3 does not have (its enum
+is COMPLETE and DISABLED only, checked in the jar), so DH replaced it with its own default, and the launcher then kept
+that replacement as the player's own choice ("keep config/DistantHorizons.toml: 1 setting(s) you changed" in client
+logs). Low and medium now write DISABLED (opaque, the cheap option), high and ultra keep COMPLETE, and the shipped
+client and server `DistantHorizons.toml` say DISABLED. `launch.jar` gets a `REJECTED` list: a setting whose last
+written value is one the mod rejected (here `transparency` "FAKE") counts as untouched, so existing installs are
+corrected too (from the launch after the one that downloads the new launcher).
