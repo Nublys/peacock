@@ -2,7 +2,7 @@
   "name": "Finding Things Out",
   "icon": "minecraft:spyglass",
   "category": "patchouli:tools",
-  "sortnum": 1,
+  "sortnum": 2,
   "pages": [
     {
       "type": "patchouli:text",

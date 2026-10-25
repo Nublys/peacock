@@ -1,0 +1,13 @@
+name = "Controlify: Forgified"
+filename = "controlify-forgified-2.1.9-mc1.20.1-forge.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/G2K5sLls/versions/Tzzphrug/controlify-forgified-2.1.9-mc1.20.1-forge.jar"
+hash-format = "sha512"
+hash = "b18d36be936adb4ea2fa9ac3118ce4f251eb559c0263a16e55f57888aae822b1f33dd466e48f107b107c74c1d9a38c680a0f8b38130e6ffdeae97a54b18785d2"
+
+[update]
+[update.modrinth]
+mod-id = "G2K5sLls"
+version = "Tzzphrug"

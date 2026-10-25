@@ -689,6 +689,14 @@ ENTRIES = {
     ],
     # ===================================================================================== tools
     "tools": [
+        ("controller", "Playing with a Controller", "minecraft:compass", [
+            txt("Plug in a controller and " + B("Controlify") + " takes over: on-screen button hints, a cursor for menus, an on-screen keyboard for text. Xbox, PlayStation, Switch and Steam Deck are recognised and labelled.",
+                B("Sticks") + " move and look. " + B("Right trigger") + " attacks, " + B("left trigger") + " uses. " + B("A") + " jumps, " + B("Y") + " inventory, " + B("X") + " swaps hands."),
+            txt(B("Bumpers") + " the hotbar. " + B("Click left stick") + " sprint, " + B("right stick") + " sneak. " + B("Start") + " pause, " + B("Select") + " camera.",
+                B("B") + " opens the backpack. " + B("D-pad:") + " up chat, down drop, left the atlas, right the " + B("radial menu") + "."),
+            txt("The radial menu starts empty and is yours to fill: Controlify's settings, Radial Menu. Good picks: Recruits command screen, place a pin, zoom, dog whistle, quiver, player list.",
+                "Ships, airships and wagons steer with the sticks like walking."),
+        ]),
         ("controls", "Keys", "minecraft:lever", [
             txt(B("B") + " backpack$(br)" + B("M") + " atlas, " + B("P") + " place a pin$(br)" + B("V") + " quiver$(br)" + B("R / U / N") + " Recruits: command / team / map$(br)" + B("Shift+1..4") + " dog whistles$(br)" + B("Alt") + " (hold) Create tool menu$(br)" + B("W") + " (hold, over a Create item) ponder"),
             txt(B("K") + " shaders on/off, " + B("O") + " shader menu$(br)" + B("R") + " recipes for the hovered item, " + B("U") + " its uses (EMI)$(br)" + B(",") + " voice chat menu, " + B(".") + " mute mic$(br)" + B("Right Alt") + " push-to-talk$(br)" + B("Z") + " zoom (scroll to adjust), only while you carry a spyglass, backpack included",
@@ -746,7 +754,7 @@ ENTRIES = {
                 B("Mutant Monsters") + ", " + B("Mowzie's Mobs") + ", " + B("L_Ender's Cataclysm") + ", " + B("Illager Invasion") + ", " + B("Savage & Ravage") + ", " + B("Illage & Spillage Respillaged") + " are the bosses and the raids. " + B("Corpse") + " keeps your things when you fall."),
         ]),
         ("quality", "Quality of Life", "minecraft:spyglass", [
-            txt(B("EMI") + " (recipes), " + B("Jade") + " (what am I looking at), " + B("AppleSkin") + ", " + B("Mouse Tweaks") + ", " + B("Controlling") + ", " + B("Easy Anvils") + ", " + B("Visual Workbench") + ", " + B("Map Atlases") + ", " + B("Nature's Compass") + ", " + B("Locator Bar") + ", " + B("Patchouli") + " (this book), " + B("Simple Voice Chat") + ", " + B("Chat Animation") + ", " + B("No Chat Reports") + ".",
+            txt(B("EMI") + " (recipes), " + B("Jade") + " (what am I looking at), " + B("AppleSkin") + ", " + B("Mouse Tweaks") + ", " + B("Controlling") + ", " + B("Controlify") + " (controllers), " + B("Easy Anvils") + ", " + B("Visual Workbench") + ", " + B("Map Atlases") + ", " + B("Nature's Compass") + ", " + B("Locator Bar") + ", " + B("Patchouli") + " (this book), " + B("Simple Voice Chat") + ", " + B("Chat Animation") + ", " + B("No Chat Reports") + ".",
                 B("FTB Chunks / Teams / Essentials") + " are claims, parties, /spawn and /back."),
             txt(B("Performance:") + " Embeddium, Oculus (shaders), ImmediatelyFast, Entity Culling, ModernFix, FerriteCore, Canary (server). " + B("Looks:") + " Subtle Effects, Particle Rain, Falling Leaves, Smooth Steps, Better Biome Reblend, Wavey Capes, 3D Skin Layers, Not Enough Animations, Entity Model and Texture Features, and the resource packs."),
             txt(B("Under the hood:") + " KubeJS runs the pack's rules; Game Stages and Recipe Stages hold the ladder; Paxi carries the datapack; Default Options sets first-run settings; the launcher jar applies your hardware profile."),

@@ -1,0 +1,20 @@
+{
+  "name": "Playing with a Controller",
+  "icon": "minecraft:compass",
+  "category": "patchouli:tools",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Plug in a controller and $(bold)Controlify$() takes over: on-screen button hints, a cursor for menus, an on-screen keyboard for text. Xbox, PlayStation, Switch and Steam Deck are recognised and labelled.$(br2)$(bold)Sticks$() move and look. $(bold)Right trigger$() attacks, $(bold)left trigger$() uses. $(bold)A$() jumps, $(bold)Y$() inventory, $(bold)X$() swaps hands."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Bumpers$() the hotbar. $(bold)Click left stick$() sprint, $(bold)right stick$() sneak. $(bold)Start$() pause, $(bold)Select$() camera.$(br2)$(bold)B$() opens the backpack. $(bold)D-pad:$() up chat, down drop, left the atlas, right the $(bold)radial menu$()."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "The radial menu starts empty and is yours to fill: Controlify's settings, Radial Menu. Good picks: Recruits command screen, place a pin, zoom, dog whistle, quiver, player list.$(br2)Ships, airships and wagons steer with the sticks like walking."
+    }
+  ]
+}

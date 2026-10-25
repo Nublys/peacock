@@ -1,0 +1,13 @@
+{
+  "defaults": {
+    "fabric-key-binding-api-v1:key.backpacked.open_backpack": {
+      "button": "controlify:button/east"
+    },
+    "fabric-key-binding-api-v1:key.map_atlases.open_minimap": {
+      "button": "controlify:button/dpad_left"
+    },
+    "controlify:pick_block": {
+      "type": "empty"
+    }
+  }
+}

@@ -1674,3 +1674,23 @@ If you think they're worth it but don't be so aggressive with the mob caps."
 - Considered and left: Canary `chunk.serialization` (it speeds up writing chunks; the cost in the profile was reading
   them), Guard Villagers' cleric healing and smith repairs (about 1%, but village flavour), and the small per-mob
   hooks with no setting (Cold Sweat, Savage & Ravage, Curios, Mowzie's, a Recruits banner hook).
+
+## Controller support: Controlify: Forgified (2026-10-25)
+
+Aaron: "What about a controller mod? Would you be able to pre-bind all controls so they're sensible?", then "Make it
+and ship it". Controlify itself has no Forge build; Controlify: Forgified 2.1.9 is the unofficial Forge 1.20.1 port
+(of Controlify 2.1.2 with backports), needs only YACL, client-only (`side = "client"`). Controllable (MrCrayfish) was
+the alternative, CurseForge-only and plainer.
+- **Pre-bound layout**: Controlify reads its default binds from resource packs (`controllers/default_bind/*.json`,
+  layered over the mod's own) and gives every other mod's keybind a binding with the id
+  `fabric-key-binding-api-v1:<key name>`. `kubejs/assets/controlify/controllers/default_bind/default.json` changes
+  only three things over Controlify's console-like defaults: **B** opens the backpack (B does nothing in-game by
+  default), **D-pad left** opens the atlas (Map Atlases, the pack's map; FTB Chunks' own map key is unbound in this
+  pack), and pick-block is unbound to make room. Everything else is Controlify's: sticks move/look, triggers
+  attack/use, A jump, Y inventory, X swap hands, bumpers hotbar, stick clicks sprint/sneak, Start pause, Select camera,
+  D-pad up chat / down drop / right radial menu.
+- **Radial menu**: its eight slots are saved per physical controller (under an id Controlify makes from it), so they
+  cannot be pre-filled; each player fills them once in Controlify's settings. The Almanac page ("Playing with a
+  Controller", Controls) suggests what to put there.
+- Not checked in-game: that the B and D-pad-left defaults take (they depend on Controlify's layering of default
+  binds and on its modded-key ids, read from its code).
