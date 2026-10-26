@@ -7,9 +7,30 @@ arrived. You rebuild it with trains, ships and brass — one boss at a time.
 This page is the guide: how to get in, what the world is, and how the pieces work. The full
 reference is in-game — every new player is handed **The Settler's Almanac** on first join.
 
+> ### ⬇ Download
+> **Modrinth App:** [**Peacock.mrpack**](https://github.com/Nublys/peacock/releases/download/rolling/Peacock.mrpack)
+> (always the newest build) → Modrinth App → **+** → **From file**. **[Setup guide](docs/INSTALL-MODRINTH.md)**
+>
+> **Prism Launcher** (updates itself): Add Instance → Import →
+> `https://raw.githubusercontent.com/Nublys/peacock/main/dist/Peacock-Prism.zip`. **[Setup guide](docs/INSTALL-PRISM.md)**
+>
+> **CurseForge App:** a zip per hardware tier on the [latest release](https://github.com/Nublys/peacock/releases/latest). **[Setup guide](docs/INSTALL-CURSEFORGE.md)**
+>
+> New here? **[Quick start](docs/QUICKSTART.md)**: install, your first hour, the keys worth knowing.
+
 ---
 
 ## Getting in
+
+**Modrinth App** (what most of the group uses):
+
+1. Install the [Modrinth App](https://modrinth.com/app) and sign in.
+2. Download [**Peacock.mrpack**](https://github.com/Nublys/peacock/releases/download/rolling/Peacock.mrpack), then in the app **+** (Create instance) → **From file** → choose it.
+3. Instance → Settings → Java and memory → **6144 MB**.
+4. Launch and add the server from the group chat.
+
+When the pack updates, download it again, or add the one-line launch hook from the
+**[Modrinth guide](docs/INSTALL-MODRINTH.md)** so it updates itself every launch.
 
 **Prism Launcher** (recommended — the pack updates itself every launch):
 

@@ -1710,3 +1710,21 @@ none, so a player's own changes stay theirs).
   right-side lines.
 - **Off:** packets, rotation, server-side light/heightmap, slime chunks, particle and sound counts, chunk-render
   internals, block and fluid tags, the help/pie-chart module. The sidebar and boss bars hide while F3 is open.
+
+## Modrinth App download, quick start, version 1.1.0 (2026-10-26)
+
+Aaron: "pack it for modrinth and include that in the github for people to find, and a quick start up guide too"; "It's
+just so people can download and import it into modrinth launcher"; "Many of my friends use modrinth".
+- **Always-current `Peacock.mrpack`**: `.github/workflows/mrpack.yml` exports it on every push to `main` that touches
+  `pack/` and replaces it on the `rolling` pre-release, so
+  `https://github.com/Nublys/peacock/releases/download/rolling/Peacock.mrpack` never goes stale. Tagged releases
+  (`release.yml`) also carry a stable-named `Peacock.mrpack` next to `Peacock-X.Y.Z.mrpack`. CurseForge-hosted mods
+  are embedded (`--restrictDomains=false`), fine for importing from GitHub, not for a Modrinth listing (not planned).
+  Tested locally: 14.6 MB, 183 files, Forge 47.4.16.
+- **Guides**: `docs/INSTALL-MODRINTH.md` (import from file, memory, updating by re-download or the one-line
+  `launch.jar` pre-launch hook, troubleshooting) and `docs/QUICKSTART.md` (the three install routes in one table, the
+  first hour, the keys worth knowing, what to do when something is off). The README opens with a download box and
+  puts the Modrinth App first under "Getting in".
+- **CI fix**: `validate.yml` compared `launch.jar` byte for byte, and the runner's JDK builds different bytes, so every
+  push since 2026-10-22 failed. It now compares the class's disassembly with constant-pool numbers stripped.
+- Version 1.1.0 (tag `v1.1.0`): the first tagged release that builds (the v1.0.0 tag predates the workflow).

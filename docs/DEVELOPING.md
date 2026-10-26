@@ -105,6 +105,10 @@ Releases are for everyone else (Modrinth App, CurseForge App, bare-metal servers
 git tag vX.Y.Z && git push origin vX.Y.Z
 ```
 
+Between versions, `.github/workflows/mrpack.yml` rebuilds `Peacock.mrpack` on every push to `main` that touches
+`pack/` and puts it on the `rolling` pre-release (tag force-moved), so the Modrinth App download linked from the
+README (`releases/download/rolling/Peacock.mrpack`) is always current without tagging anything.
+
 `.github/workflows/release.yml` builds `Peacock-Prism.zip` (the importable instance), `Peacock-X.Y.Z.mrpack`,
 five `Peacock-X.Y.Z-curseforge-<tier>.zip` (one per hardware tier, profile baked in with `tools/apply-profile.py`)
 and `Peacock-X.Y.Z-server.zip`, and attaches them to a GitHub release with the commit log as notes.

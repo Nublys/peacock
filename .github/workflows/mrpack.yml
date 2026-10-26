@@ -1,0 +1,55 @@
+name: mrpack
+
+# The Modrinth App download, always current: on every push to main that touches the pack, export
+# Peacock.mrpack and put it on the "rolling" release (tag moved to the new commit, file replaced), so
+# https://github.com/Nublys/peacock/releases/download/rolling/Peacock.mrpack is always the newest build.
+# Not marked "latest": tagged vX.Y.Z releases (release.yml) stay the versioned ones.
+# CurseForge-hosted mods are embedded as overrides (--restrictDomains=false): it is for importing into the
+# Modrinth App from here, not for a Modrinth listing.
+
+on:
+  push:
+    branches: [main]
+    paths: ["pack/**", ".github/workflows/mrpack.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: mrpack
+  cancel-in-progress: true
+
+jobs:
+  mrpack:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: "1.24"
+      - name: Install packwiz
+        run: go install github.com/packwiz/packwiz@latest
+      - name: Export
+        working-directory: pack
+        run: |
+          ~/go/bin/packwiz refresh
+          ~/go/bin/packwiz modrinth export --restrictDomains=false -o ../Peacock.mrpack
+          echo "VER=$(sed -n 's/^version = "\(.*\)"/\1/p' pack.toml)" >> "$GITHUB_ENV"
+      - name: Move the rolling tag
+        run: |
+          git tag -f rolling
+          git push -f origin rolling
+      - uses: softprops/action-gh-release@v2
+        with:
+          tag_name: rolling
+          name: "Peacock — latest build"
+          make_latest: false
+          prerelease: true
+          body: |
+            The newest build of Peacock for the **Modrinth App**, rebuilt automatically every time the pack changes
+            (${{ env.VER }}, commit ${{ github.sha }}).
+
+            Download **Peacock.mrpack** below → Modrinth App → **+** → **From file**. Setup guide:
+            https://github.com/Nublys/peacock/blob/main/docs/INSTALL-MODRINTH.md
+          files: Peacock.mrpack

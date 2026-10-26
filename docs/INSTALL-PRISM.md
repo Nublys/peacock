@@ -79,11 +79,9 @@ If you would rather not import a zip:
 
 ## Modrinth App
 
-The Modrinth App can do the same: import `Peacock-X.Y.Z.mrpack` from the
-[latest release](https://github.com/Nublys/peacock/releases/latest), then add the pre-launch hook under the
-instance's Options → Hooks (`launch.jar` ships inside the pack, so nothing needs copying):
-`java -jar peacock/launch.jar https://raw.githubusercontent.com/Nublys/peacock/main/pack/pack.toml`.
-Without the hook the instance stays on the version you imported, at the `low` defaults.
+Has its own guide: **[INSTALL-MODRINTH.md](INSTALL-MODRINTH.md)** (download
+[`Peacock.mrpack`](https://github.com/Nublys/peacock/releases/download/rolling/Peacock.mrpack), import it from
+file, and optionally add the one-line launch hook that keeps it current).
 
 ## Something is wrong
 

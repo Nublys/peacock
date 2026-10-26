@@ -43,6 +43,7 @@ jobs:
           ~/go/bin/packwiz refresh
           git diff --exit-code -- index.toml pack.toml
           ~/go/bin/packwiz modrinth export --restrictDomains=false -o "../Peacock-${VER}.mrpack"
+          cp "../Peacock-${VER}.mrpack" ../Peacock.mrpack      # stable name for releases/latest/download/Peacock.mrpack
           ~/go/bin/packwiz curseforge export -s server -o "../Peacock-${VER}-server.zip"
       - name: CurseForge zips, one per hardware tier
         run: |
@@ -60,7 +61,7 @@ jobs:
           {
             echo "Peacock ${VER} — Forge 1.20.1 ($(grep -c '^\[\[files\]\]' pack/index.toml) files, $(ls pack/mods | wc -l) mods)"
             echo
-            echo "Install guides: docs/INSTALL-PRISM.md (Peacock-Prism.zip) and docs/INSTALL-CURSEFORGE.md (pick the zip for your hardware tier). Prism users sync from main and never need a new release."
+            echo "Install guides: docs/INSTALL-MODRINTH.md (Peacock.mrpack), docs/INSTALL-PRISM.md (Peacock-Prism.zip) and docs/INSTALL-CURSEFORGE.md (pick the zip for your hardware tier). Prism users sync from main and never need a new release."
             echo
             echo "Changes since the previous tag:"
             PREV=$(git describe --tags --abbrev=0 "${GITHUB_REF_NAME}^" 2>/dev/null || true)
@@ -72,6 +73,7 @@ jobs:
           files: |
             Peacock-Prism.zip
             Peacock-${{ env.VER }}.mrpack
+            Peacock.mrpack
             Peacock-${{ env.VER }}-curseforge-potato.zip
             Peacock-${{ env.VER }}-curseforge-low.zip
             Peacock-${{ env.VER }}-curseforge-medium.zip

@@ -30,11 +30,16 @@ jobs:
         with:
           distribution: temurin
           java-version: "21"
+      # Compared as disassembly, constant-pool numbers stripped: javac builds differ byte-for-byte between JDK
+      # releases (this runner's JDK 21 vs the one launch.jar was built with), so a byte compare failed every push.
       - name: launch.jar matches its source
         run: |
+          mkdir -p /tmp/committed && (cd /tmp/committed && jar xf "$GITHUB_WORKSPACE/pack/peacock/launch.jar" Launch.class)
           sh tools/build-launch.sh
-          git diff --exit-code -- pack/peacock/launch.jar \
-            || { echo "::error::pack/peacock/launch.jar is stale — run tools/build-launch.sh and commit"; exit 1; }
+          norm() { javap -c -p "$1" | sed -E 's/#[0-9]+(, *[0-9]+)?//g; s/^ *[0-9]+: //'; }
+          diff <(norm /tmp/committed/Launch.class) <(norm build/launch/Launch.class) > /tmp/launch.diff \
+            || { cat /tmp/launch.diff | head -40; echo "::error::pack/peacock/launch.jar is stale — run tools/build-launch.sh and commit"; exit 1; }
+          git checkout -- pack/peacock/launch.jar dist/Peacock-Prism.zip
       - name: Profiles match the generator
         run: |
           python3 tools/gen-profiles.py
