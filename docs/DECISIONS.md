@@ -1694,3 +1694,19 @@ the alternative, CurseForge-only and plainer.
   Controller", Controls) suggests what to put there.
 - Not checked in-game: that the B and D-pad-left defaults take (they depend on Controlify's layering of default
   binds and on its modded-key ids, read from its code).
+
+## BetterF3, laid out for debugging (2026-10-26)
+
+Aaron: "add better F3 and customize the F3 menu so the most important information a user may want or need to debug
+will be available." BetterF3 7.0.2 (Forge 1.20.1, needs Cloth Config, client-only). Its layout ships as a first-launch
+file through Default Options (`config/defaultoptions/extra/config/betterf3.json`, copied only when the player has
+none, so a player's own changes stay theirs).
+- **Left:** game version; FPS; server tick (TPS/ms, the line players paste when they say "it's laggy"); position,
+  block and chunk coordinates; dimension, facing, light, biome, local difficulty, days played; entities rendered;
+  render distance, graphics mode and the shader pack (Oculus); loaded and pending chunks (Distant Horizons /
+  chunk-loading trouble); and other mods' own left-side lines (Distant Horizons and others report there).
+- **Right:** clock; Java version; memory used, allocation rate and allocated memory (GC trouble); CPU, display, GPU,
+  GPU use and driver; the block, fluid or entity under the crosshair with its id and block states; other mods'
+  right-side lines.
+- **Off:** packets, rotation, server-side light/heightmap, slime chunks, particle and sound counts, chunk-render
+  internals, block and fluid tags, the help/pie-chart module. The sidebar and boss bars hide while F3 is open.

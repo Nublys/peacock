@@ -107,6 +107,10 @@ file = "config/createdieselgenerators-common.toml"
 hash = "8dbd7ed422d8cd88d8ac7ca47a8308c5a0d40d4db1a6af5cf46e989c3a5a4129"
 
 [[files]]
+file = "config/defaultoptions/extra/config/betterf3.json"
+hash = "b2650f9832550c94a5f603378cd3080ad11e073b015dce2fc931b3d50310c8c5"
+
+[[files]]
 file = "config/defaultoptions/keybindings.txt"
 hash = "0bcee95ab75190a082b6922fae3d6c1662c2f31429a8fe6cf3e5f9caa5aecf1e"
 
@@ -2140,6 +2144,11 @@ hash = "aa0f4d55833b5031884f023727ff0806163b5781ff05025a14c5c9b1c8cb7781"
 metafile = true
 
 [[files]]
+file = "mods/betterf3.pw.toml"
+hash = "28358fe53c22695b3bf1f93ac2225c46fe3525918b7b993ac36e68a7f0a16fe8"
+metafile = true
+
+[[files]]
 file = "mods/bettertabinfo.pw.toml"
 hash = "2313574ad9de324bc42137b4b557a221ed7d7d2a3fb2ebb16c1c6fc7ec3b0250"
 metafile = true
@@ -3167,7 +3176,7 @@ hash = "974e9df679c238c60f715f876e0cc57a3ac954856495daee8245ca6edab84615"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/mods/quality.json"
-hash = "2eb71f90e6823ed2bf2e90ba102025cc96b696536f4d5fd0b3c5bcb6c446d5f1"
+hash = "cd4c05c6beae672c41cb0584e177df2c0afb22027800f24c5e60c449c087dda6"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/mods/world.json"

@@ -6,7 +6,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(bold)EMI$() (recipes), $(bold)Jade$() (what am I looking at), $(bold)AppleSkin$(), $(bold)Mouse Tweaks$(), $(bold)Controlling$(), $(bold)Controlify$() (controllers), $(bold)Easy Anvils$(), $(bold)Visual Workbench$(), $(bold)Map Atlases$(), $(bold)Nature's Compass$(), $(bold)Locator Bar$(), $(bold)Patchouli$() (this book), $(bold)Simple Voice Chat$(), $(bold)Chat Animation$(), $(bold)No Chat Reports$().$(br2)$(bold)FTB Chunks / Teams / Essentials$() are claims, parties, /spawn and /back."
+      "text": "$(bold)EMI$() (recipes), $(bold)Jade$() (what am I looking at), $(bold)AppleSkin$(), $(bold)Mouse Tweaks$(), $(bold)Controlling$(), $(bold)Controlify$() (controllers), $(bold)BetterF3$() (a tidier F3 screen), $(bold)Easy Anvils$(), $(bold)Visual Workbench$(), $(bold)Map Atlases$(), $(bold)Nature's Compass$(), $(bold)Locator Bar$(), $(bold)Patchouli$() (this book), $(bold)Simple Voice Chat$(), $(bold)Chat Animation$(), $(bold)No Chat Reports$().$(br2)$(bold)FTB Chunks / Teams / Essentials$() are claims, parties, /spawn and /back."
     },
     {
       "type": "patchouli:text",
