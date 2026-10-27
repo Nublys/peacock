@@ -1889,3 +1889,14 @@ Aaron: "Do you think these could cause balance issues ... There's no randomness 
   size) plus a big strike (one in ten, ~2.5× the ore). A big strike lifts the average ore per deposit by ~15%, so each
   varied deposit's total weight is divided by that ratio (solved from the simulation): the same ore per chunk, deposits
   about 13% less often, one in ten paying big. `chunkSkipChance` 0.885. The Almanac's ore page says so.
+
+## Artifacts added (2026-10-27)
+Aaron, on the empty Curios slots ("There's not many items to fill those slots"), then "Add Artifacts". Artifacts 9.5.19
+(Forge 1.20.1; requires Curios, Cloth Config, Architectury, all in the pack, and ExpandAbility 9.0.4, added from
+CurseForge: Modrinth has no Forge 1.20.1 build). About forty worn accessories, never crafted: injected into vanilla
+chest tables (mineshaft, ancient city, stronghold, temples, outposts, villages and more), worn by the odd zombie or
+skeleton, and found in underground campsites (worldgen, so only in chunks generated from now on), about 30% of whose
+chests are mimics. Defaults kept. Repurposed Structures' mineshaft chests get the same Artifacts roll as the vanilla
+table YUNG's mineshafts already use (`cave_loot.js`). Its Pickaxe Heater smelts ore drops, Geolosys clusters included
+(their smelting recipe), trading Create's crushing bonus for convenience; left as is. Almanac page under Ore &
+Prospecting. Curios (in the pack since Phase 0, required by nothing until now) is now a hard dependency.

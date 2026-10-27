@@ -371,6 +371,13 @@ ENTRIES = {
             txt("Ironworks adds copper, bronze, brass and steel sets on top; Spartan Weaponry makes its daggers, spears, longbows and the rest of all these metals too.",
                 "Alloys (" + L("ore/metals", "What the Metals Are For") + ") mix in a heated basin: electrum, constantan and invar are made, not mined."),
         ]),
+        ("artifacts", "Treasures: Artifacts", "artifacts:night_vision_goggles", [
+            spot("artifacts:night_vision_goggles", B("Artifacts") + " are worn treasures: goggles that see in the dark, a scarf of invisibility, digging claws, a lucky scarf, running shoes, a cloud in a bottle (a double jump), about forty in all. Nobody crafts them; they are found.", title="Artifacts"),
+            txt(B("Where:") + " mineshaft, ancient city, stronghold, temple and outpost chests; small " + B("campsites") + " deep underground (a bed, a lantern, a chest, barrels); and now and then on a zombie or skeleton that wore one and dropped it.",
+                B("Mimics:") + " about a third of campsite chests bite. Hit it before you open it if it looks too good."),
+            txt(B("Wearing them:") + " open your inventory and click the " + B("Curios") + " button beside it: rings, necklace, belt, charm, hands, head, feet. Cataclysm's boss accessories go in the same slots.",
+                "Hover an artifact for what it does. Most work the moment they are worn."),
+        ]),
         ("caving", "What Caves Are For", "minecraft:torch", [
             txt("Geolosys took every vanilla vein, so ore is in deposits, not sprinkled through the stone. Caves are how you reach the deep ones, and the deep pays better:",
                 LI(B("Deep deposits") + " under every biome: lead and silver, nickel, platinum, tin, gold. A deep cave finds them in its walls.", B("Deepslate metal ore") + " gives one to two clusters a block.")),
@@ -781,7 +788,7 @@ ENTRIES = {
                 B("Geolosys") + " places ore in regional deposits. " + B("Paxi") + " loads the pack's own datapack over everything else."),
             txt(B("Distant Horizons") + " draws the far terrain. " + B("ChoiceTheorem's Overhauled Village") + " builds the villages (every one a ruin now); " + B("Streams Reflowing") + " the flowing streams; " + B("Terrain Slabs") + " the soft slopes; " + B("YUNG's") + " mineshafts, dungeons and API; " + B("Structory") + " ruins; " + B("Create Structures") + " old workshops.",
                 B("Village Spawn Point") + " puts everyone in the capital."),
-            txt(B("YUNG's Extras") + " and " + B("YUNG's Bridges") + " add small finds and bridges. " + B("Repurposed Structures") + " adds mineshafts and dungeons in each biome's own style (its villages and surface structures are switched off)."),
+            txt(B("YUNG's Extras") + " and " + B("YUNG's Bridges") + " add small finds and bridges. " + B("Repurposed Structures") + " adds mineshafts and dungeons in each biome's own style (its villages and surface structures are switched off). " + B("Artifacts") + " hides wearable treasures in chests and underground campsites."),
         ]),
         ("machines", "Machines & Logistics", "create:cogwheel", [
             txt(B("Create") + " and its family: " + B("Steam 'n' Rails") + " (trains), " + B("Big Cannons") + ", " + B("Diesel Generators") + ", " + B("Enchantment Industry") + ", " + B("Dragons Plus") + ", " + B("Trading Floor") + " (depots), " + B("Create Deco") + " and " + B("Interiors") + " (looks), " + B("Create Better Villagers") + " (trades), " + B("Slice & Dice") + " (kitchen).",

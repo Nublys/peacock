@@ -127,5 +127,12 @@ ServerEvents.chestLootTables(event => {
       addPool(table, [0, 1], DEEPEST_POOL, below(-32))
     })
   })
+  // Artifacts (2026-10-27) adds its accessories to the vanilla mineshaft table, which YUNG's mineshafts use; Repurposed
+  // Structures' mineshafts have tables of their own, so they get the same Artifacts roll (its own 30% chance inside)
+  ;['taiga', 'jungle', 'savanna', 'icy', 'desert', 'ocean', 'swamp', 'birch', 'dark_forest', 'stone'].forEach(b => {
+    event.modify('repurposed_structures:chests/mineshafts/' + b, table => {
+      table.addPool(pool => { pool.addLootTable('artifacts:inject/chests/abandoned_mineshaft') })
+    })
+  })
 })
 })()

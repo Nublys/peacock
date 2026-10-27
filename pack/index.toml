@@ -2642,7 +2642,7 @@ hash = "e697009f2845fa0aba08b395036ceada159234bf7897765edadbf324ed494982"
 
 [[files]]
 file = "kubejs/server_scripts/cave_loot.js"
-hash = "3fb00372313d9487500b609adb1a0c7d1fe47ca62bd7845ba4161853283c7223"
+hash = "118794e80c1407e13dae34a9a03d7a9fd8ed1dc5f0b81d665e07596eec28d262"
 
 [[files]]
 file = "kubejs/server_scripts/creature_caps.js"
@@ -2813,6 +2813,11 @@ metafile = true
 [[files]]
 file = "mods/architectury-api.pw.toml"
 hash = "4e81241ba2da06f425efc5e09fb6b38470125c1581c39e1310c5843a0b96ec76"
+metafile = true
+
+[[files]]
+file = "mods/artifacts.pw.toml"
+hash = "2de33e7d757cfa1108b05247cb59f6db2f08000af824da328322d78cdb7c4c4d"
 metafile = true
 
 [[files]]
@@ -3138,6 +3143,11 @@ metafile = true
 [[files]]
 file = "mods/every-compat.pw.toml"
 hash = "3a7ec6f4135f49932618f74f463df6e2ce4ddfe3d7f37bd457a594e39f1e55fc"
+metafile = true
+
+[[files]]
+file = "mods/expandability.pw.toml"
+hash = "a9c35b5265445218f14be7bce6c01bcaf7f6c3e456e8ef675ae41b3d0298e3a5"
 metafile = true
 
 [[files]]
@@ -3898,11 +3908,15 @@ hash = "e5de9a50b29a81bc011dd78887b1eb6dab21b6adb70c84b8425b60f40ae4bd53"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/mods/world.json"
-hash = "a15052749657ed309def5a87cb1b5f566e3f7c51a23c2ab456d088b96490337f"
+hash = "a614cba52c425c706afce7a1fce70fef2a64f9bc8ab174c86e143543f6f5a865"
+
+[[files]]
+file = "patchouli_books/peacock_almanac/en_us/entries/ore/artifacts.json"
+hash = "5be11988b2cd9457d7b009ceb2789882f54e8a675e59725d2394ea63bfe1a7bd"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/ore/caving.json"
-hash = "cb02161754f7ce69fc96dcb0ca15bee705d83e9ff0ae2c47ed20a37f5743f7ea"
+hash = "041f1a10b4b527170a4e594cef1c1615958832b2d876900031d19adda57af1a7"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/ore/deposits.json"

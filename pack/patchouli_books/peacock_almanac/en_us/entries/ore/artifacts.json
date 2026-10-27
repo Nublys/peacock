@@ -1,0 +1,23 @@
+{
+  "name": "Treasures: Artifacts",
+  "icon": "artifacts:night_vision_goggles",
+  "category": "patchouli:ore",
+  "sortnum": 8,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "artifacts:night_vision_goggles",
+      "text": "$(bold)Artifacts$() are worn treasures: goggles that see in the dark, a scarf of invisibility, digging claws, a lucky scarf, running shoes, a cloud in a bottle (a double jump), about forty in all. Nobody crafts them; they are found.",
+      "link_recipe": false,
+      "title": "Artifacts"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Where:$() mineshaft, ancient city, stronghold, temple and outpost chests; small $(bold)campsites$() deep underground (a bed, a lantern, a chest, barrels); and now and then on a zombie or skeleton that wore one and dropped it.$(br2)$(bold)Mimics:$() about a third of campsite chests bite. Hit it before you open it if it looks too good."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Wearing them:$() open your inventory and click the $(bold)Curios$() button beside it: rings, necklace, belt, charm, hands, head, feet. Cataclysm's boss accessories go in the same slots.$(br2)Hover an artifact for what it does. Most work the moment they are worn."
+    }
+  ]
+}

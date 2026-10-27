@@ -14,7 +14,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)YUNG's Extras$() and $(bold)YUNG's Bridges$() add small finds and bridges. $(bold)Repurposed Structures$() adds mineshafts and dungeons in each biome's own style (its villages and surface structures are switched off)."
+      "text": "$(bold)YUNG's Extras$() and $(bold)YUNG's Bridges$() add small finds and bridges. $(bold)Repurposed Structures$() adds mineshafts and dungeons in each biome's own style (its villages and surface structures are switched off). $(bold)Artifacts$() hides wearable treasures in chests and underground campsites."
     }
   ]
 }
