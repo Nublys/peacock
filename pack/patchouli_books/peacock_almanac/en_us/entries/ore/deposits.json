@@ -30,7 +30,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)No two deposits are alike.$() Most are the usual size; about a third are small pockets, worth a quarter to a half of that; about one in ten is a $(bold)big strike$() of two to three times the usual. A small find is not the whole region's luck.$(br2)Deposits only replace stone, so a cave, a dirt bank or the surface takes its bite: what you dig out is often less than the deposit was."
+      "text": "$(bold)Now and then you strike it rich.$() Nine deposits in ten are the usual size; about one in ten is a $(bold)big strike$() of two to three times the ore. Worth telling the others about.$(br2)Deposits only replace stone, so a cave, a dirt bank or the surface takes its bite: what you dig out is often less than the deposit was."
     },
     {
       "type": "patchouli:text",

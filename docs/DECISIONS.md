@@ -1885,3 +1885,7 @@ Aaron: "Do you think these could cause balance issues ... There's no randomness 
 - **Kimberlite** out of the deepslate bonus: kimberlite only exists in deepslate, so the bonus was a flat +50% on every
   diamond, on top of the diamonds in deep chests. Beryl was already out.
 - Still before the pregen: none of this reaches chunks that already exist.
+- Same day, Aaron: "Remove small, just normal and big." Each varied deposit is now normal (nine finds in ten, its old
+  size) plus a big strike (one in ten, ~2.5× the ore). A big strike lifts the average ore per deposit by ~15%, so each
+  varied deposit's total weight is divided by that ratio (solved from the simulation): the same ore per chunk, deposits
+  about 13% less often, one in ten paying big. `chunkSkipChance` 0.885. The Almanac's ore page says so.

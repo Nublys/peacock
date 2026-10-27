@@ -220,7 +220,7 @@ hash = "ef8aea667f7fc9fa6651c40a9cffab47f1cad1fb1b0039c7eb2307c7651e2b30"
 
 [[files]]
 file = "config/geolosys-common.toml"
-hash = "4ff005896662c2f2d57b954c06a3b462cb7e662ced9f37cb6fd3328f846aa787"
+hash = "57431b800fe426dd1cf5e4fa5579ab26b405e64e556486e47b27cc5403575ce5"
 
 [[files]]
 file = "config/guardvillagers-client.toml"
@@ -557,7 +557,7 @@ hash = "70a90aba862be84ac35c08b75d2a1ff768f4e189ae55cdc9207dd92f6709ae74"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/geolosys/deposits/ore/assorted_quartz.json"
-hash = "5ce8dfb5b74d30588177c980ade4f26d61dee94676f45a4159c22c0bd1de6cf0"
+hash = "9295ea2a17e9d8f2d0446e677f260ae87b8a5cada381e72095a345869cc98c65"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/geolosys/deposits/ore/autunite.json"
@@ -565,11 +565,11 @@ hash = "b9cab5e78fee4d9c55e7f3fb289f48a9506d1172e289f3aeeb58044ad3c7a697"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/geolosys/deposits/ore/azurite.json"
-hash = "6d411810e4466f333989c37eefe273edc078eba5fb41924fb5509d1987b45f2f"
+hash = "99a7e3d15e4d1c7750913c061ced762324992ca19be48e5d0020fa0f9a2a15a4"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/geolosys/deposits/ore/bauxite.json"
-hash = "a146d12da9ce630303689acd2f67d97a687509a08046fa5018f0e86d45064d46"
+hash = "a5b640d2b462761f88af7d193ad9a8ecb9fb7b098d78e0498a588975fc8d3b56"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/geolosys/deposits/ore/beryl.json"
@@ -581,23 +581,23 @@ hash = "907fe8f19b667a23f6ee05c03eb1e8931c8f34fbd5c3bd8846ee7bff7913d34b"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/geolosys/deposits/ore/cassiterite.json"
-hash = "9b0a3ad11e3fe7d4b74c4d76c48c7e11d2787eb9387771e34c6d86fed82ba1d6"
+hash = "abddf8f28e8e2f2b2a11fdebe8e630513499414aee55380858b1aeb8b93fd3f4"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/geolosys/deposits/ore/cinnabar.json"
-hash = "02c5c44385be4ec64b7b50b30f85342369df357a3283e1002fe542b1f5bd72ae"
+hash = "cff1372622fbf5f3c6e1dd5cea874bd5cf9f7f6843bb207e580bc06098b1526f"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/geolosys/deposits/ore/coal.json"
-hash = "d38d491b7a5c9af9492ca04cca399167efdc9281bb6ff5889d96146f32a7892f"
+hash = "357f1d6df349db6d4415322904e4c98f10a0a9d3a36966849f888aea48df6001"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/geolosys/deposits/ore/galena.json"
-hash = "8672339212763da256f3c8dcd2a4683409405eeadee880728d5aa70f14ddad6c"
+hash = "65c7cc4de11e2c70a02c377eef362842bd08d7bcf6dc0147184ae898557ca434"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/geolosys/deposits/ore/gold.json"
-hash = "f2909fd1135f851a6b9210a33252ede7a6306e6d0035ac58529ac0eef16f3189"
+hash = "437e7a98eb8390f25a4fda2bc62766e032057a667896dfbf8d2efc7b9e784481"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/geolosys/deposits/ore/gold_nether.json"
@@ -605,15 +605,15 @@ hash = "ee571ae1d187ad820a400fdb5d08885c9cda4e67c2fff80f2eb69e789b686a99"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/geolosys/deposits/ore/hematite.json"
-hash = "c7b20e5fc056a744f49966ca94a289696d37d04afa84419b0f6ab4e8f3de00ca"
+hash = "073b1540f6af8cac650707f9f5a0c258477829285b46f83f9c3b019653dd0d88"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/geolosys/deposits/ore/kimberlite.json"
-hash = "cf3b76cbc7d4704f4608110c0aba8d568a28ca79627d9c16c8d95942efd43934"
+hash = "6e9096e9624b98b0c1d66e12cff032bb21d6df84a6b5408a58c9be4d816a090e"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/geolosys/deposits/ore/lapis.json"
-hash = "321c39a8a4e316688c99dbccca4400678c8b0a539c5b205cbec0d0ee0df10fca"
+hash = "d1e5ec5b90a56710615bd519f0d1bdf40595185220e75cda8d54dc0f78937f4c"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/geolosys/deposits/ore/lignite.json"
@@ -621,19 +621,19 @@ hash = "5d10e86505244baf5ad43519f3bd8a410ed12806c33555faeab4447b57d33b4f"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/geolosys/deposits/ore/limonite.json"
-hash = "95f1b7b375e4bbe5d8fe8314bc8d5556999bc320de366e588f07e77199170ac2"
+hash = "3e4630f65f7eee36517078999af5b6ab7575ff1559c5afdf50def01540f5b833"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/geolosys/deposits/ore/malachite.json"
-hash = "a97aa4fc362bfb6f6546a0ef983f143adfd91eb36fb333e1580cf07ba04e7602"
+hash = "97017604ba5ac715a21950c10624cca6c1226850ff31633f6103cf13fadd3b74"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/geolosys/deposits/ore/platinum.json"
-hash = "b9f33a07928308d50bef2f582f14142500fa528ca9698f0a8051aad104b83108"
+hash = "3f434fbd8b02ebddf2c2d067ca6a6ccabbcbd34a435a1a3b2ca96b72743f3d31"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/geolosys/deposits/ore/sphalerite.json"
-hash = "707075f908805b85379ef6a5cbe2d3d04af49d09f91cf9b68f758d2f689e1a18"
+hash = "2c3bc28df381e4d45020186f4c739f9638bc9b3fa681e75a0edffe51f0cc73c5"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/geolosys/deposits/ore/teallite_and_emerald.json"
@@ -972,180 +972,100 @@ file = "config/paxi/datapacks/peacock/data/peacock/deposits/ore/assorted_quartz_
 hash = "f87b52ad5be40e129e912ca2cc7f1e4fcc137d0c963ddd3954abfcf0b66dfbd7"
 
 [[files]]
-file = "config/paxi/datapacks/peacock/data/peacock/deposits/ore/assorted_quartz_small.json"
-hash = "d8e9ec234b6ceb0bf9be6ea0e32b1ab25434d46eb1600d9395f9566a5b7b7703"
-
-[[files]]
 file = "config/paxi/datapacks/peacock/data/peacock/deposits/ore/azurite_large.json"
 hash = "b6dc3996541a99c7934c6817e323d7eb3e8c8c7b9fc0b5cf04dee1ee250924b5"
-
-[[files]]
-file = "config/paxi/datapacks/peacock/data/peacock/deposits/ore/azurite_small.json"
-hash = "9c65767a0b990f07c341a07eaa998c5f5077152ea9f5112267ee80754f7528d2"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/peacock/deposits/ore/bauxite_large.json"
 hash = "440d22d9f59cb8938373eb3778340296ff08ccc6762d176121ea64e001c99285"
 
 [[files]]
-file = "config/paxi/datapacks/peacock/data/peacock/deposits/ore/bauxite_small.json"
-hash = "79f1355078ad048ad96c7d9397dbc10afb6f97c7002d675cefce462661c3de7f"
-
-[[files]]
 file = "config/paxi/datapacks/peacock/data/peacock/deposits/ore/cassiterite_large.json"
-hash = "61100a13d56d58deb538f5e62196c31d6ee6b5907d6801a9b795df912608edc1"
-
-[[files]]
-file = "config/paxi/datapacks/peacock/data/peacock/deposits/ore/cassiterite_small.json"
-hash = "aeeeddee0732fd003381fa6218597300e8991031981b3a475630d7e0ac6c8c7c"
+hash = "64e0b01fd4c4a86d8e8310eda102d3582f15d090700a80c927d78d1813809a77"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/peacock/deposits/ore/cinnabar_large.json"
-hash = "e4b5e8955c0d838b895c4a3844a1f697223341580d74f29b40ea60758b4768f6"
-
-[[files]]
-file = "config/paxi/datapacks/peacock/data/peacock/deposits/ore/cinnabar_small.json"
-hash = "913d5ff26820e35af22fad526ff95cf3cb23242cb2a15af1e10a812bd9398de5"
+hash = "716238901ce07e7ca30ff1193bc1de8eebd390660c88abc405d20bfbe91fffb5"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/peacock/deposits/ore/coal_large.json"
-hash = "0c391bca1ca4eb2b02db2b57b8b68c874f3a527e11c494f48ebba2df5089453f"
-
-[[files]]
-file = "config/paxi/datapacks/peacock/data/peacock/deposits/ore/coal_small.json"
-hash = "dcfeecd4080c288e0ad38a0217aa27c0099578f89b558d023225585f2f976af8"
+hash = "97049926d9af9c3de402d585ac65ddf5913709705b01b94521fed90f411296fa"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/peacock/deposits/ore/deep_cassiterite.json"
-hash = "ae5fdca7480ea8ac1849a7869ac8be4704cbff5e1a60d9552d4609add6f4319f"
+hash = "4d187bed7d036c325eede8ba804432fa05ac57d0d185d1c5d2e3753dc34042c7"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/peacock/deposits/ore/deep_cassiterite_large.json"
 hash = "fd54f462b60f5003964aa74467629ba12a9ff0aab6f9f5f347f078407117ee8f"
 
 [[files]]
-file = "config/paxi/datapacks/peacock/data/peacock/deposits/ore/deep_cassiterite_small.json"
-hash = "2c12e8bab04fb0baa65c90d6ca6efd8dd2eb1831e5defa432baa008870547030"
-
-[[files]]
 file = "config/paxi/datapacks/peacock/data/peacock/deposits/ore/deep_galena.json"
-hash = "fba0d5e460f229f94ca4fbad6521a9425dfcefaf124d0d7c0d4d6230ebfca462"
+hash = "74bbdbf1618e10f4ae8f531a79cbdb1151b4f98d24ed579211922fd396045b66"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/peacock/deposits/ore/deep_galena_large.json"
 hash = "edc2f675e7f9ad62d0ea6f22bf21863d595d5c18d830f57c08e1fe0ce3546ef4"
 
 [[files]]
-file = "config/paxi/datapacks/peacock/data/peacock/deposits/ore/deep_galena_small.json"
-hash = "8b9ba1e1f977a7a5a241797d9f329fbd1e92ec50ecb1ce60f067da3efb7acf23"
-
-[[files]]
 file = "config/paxi/datapacks/peacock/data/peacock/deposits/ore/deep_gold.json"
-hash = "65b261742e53c382de1106928c9781b811328d77127312b34fbc2f98ffb59a1b"
+hash = "9f8b82aaf1416b5735f840c6f6e2f61821ec51f386c8c982c00440c2e65d7217"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/peacock/deposits/ore/deep_gold_large.json"
 hash = "7519000781f29a49dcdda94cc479c38ac59dfd3f60638a49f24b34c246f01a34"
 
 [[files]]
-file = "config/paxi/datapacks/peacock/data/peacock/deposits/ore/deep_gold_small.json"
-hash = "ff0237c91ca26260dcb8713221c9c0deb2c90072c39f33694848822d5001c219"
-
-[[files]]
 file = "config/paxi/datapacks/peacock/data/peacock/deposits/ore/deep_limonite.json"
-hash = "1fea53683f115588ec63668a7b325707823010dc3f4a95800aa05827f57fc781"
+hash = "14709eab04d4812692e75b7bd09f521cad97b034da16ce909b84a3c9fc4168b4"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/peacock/deposits/ore/deep_limonite_large.json"
 hash = "ffe9c72d8cc63e433ed88baee6509f475930c4e4d6a76e7c2a02bf6bcda75a22"
 
 [[files]]
-file = "config/paxi/datapacks/peacock/data/peacock/deposits/ore/deep_limonite_small.json"
-hash = "f411c49224ef536bae4b2929ef5e8ed539cbef9799d2b89c6fb659fec5417f99"
-
-[[files]]
 file = "config/paxi/datapacks/peacock/data/peacock/deposits/ore/deep_platinum.json"
-hash = "75b59bcd04339c0b5a45c634e27b1b2be717f6a2ac5547c0750ff58bde77816e"
+hash = "7ead8b5f1d0208e0699f138ce1d2fb04636b920f9ac4e615b566a73637261d97"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/peacock/deposits/ore/deep_platinum_large.json"
 hash = "51da1e42ffc6a1fdc5e9b7187541517c8289060c690b7e9fe3f155247c89b71f"
 
 [[files]]
-file = "config/paxi/datapacks/peacock/data/peacock/deposits/ore/deep_platinum_small.json"
-hash = "e108ed909d147d2004b74e9b15e88ce9a69bed4bc336f1cecfc2ce504814be52"
-
-[[files]]
 file = "config/paxi/datapacks/peacock/data/peacock/deposits/ore/galena_large.json"
-hash = "9f35aa4402facf6326071e8f5264adc04303f669fc8327b9ea4d6e4692d3cb1a"
-
-[[files]]
-file = "config/paxi/datapacks/peacock/data/peacock/deposits/ore/galena_small.json"
-hash = "bcb1fe3c14191a0809a3ca27a58cee90046308dc1fbcee0044d9be246edf9d92"
+hash = "f126ad31233e630f03ea5997ee92933d3c90599266e54abfce1b1808dc3b6579"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/peacock/deposits/ore/gold_large.json"
-hash = "a0cbd913563c2269f0804502ab38cb597cc8c9ec626b5d49f9f87fad4ad86d83"
-
-[[files]]
-file = "config/paxi/datapacks/peacock/data/peacock/deposits/ore/gold_small.json"
-hash = "3cfbb2acc102c5f076a42952b4b6cdfbb28361450f8a1d9f5ec00ab90c3c254c"
+hash = "9a6c8b6d3c41a8f25499e7318526b60ba37b2210115850ad06ccc0077966ef53"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/peacock/deposits/ore/hematite_large.json"
-hash = "93105eefe785a6abe51a380074a257107adffc826a57b025dfc2cd323af44ed8"
-
-[[files]]
-file = "config/paxi/datapacks/peacock/data/peacock/deposits/ore/hematite_small.json"
-hash = "45d4f23906a8808c1a956bb78e74ef50a86905471054ea018a779c4ca66bb4e1"
+hash = "c35b93f7c0dbe79f585a005d6f7c01d4d803152cdf950bdfd2e8654123c86d22"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/peacock/deposits/ore/kimberlite_large.json"
 hash = "aa5451475d1a5c9af851999be1ddefd4307b38133525a56412596245f987d666"
 
 [[files]]
-file = "config/paxi/datapacks/peacock/data/peacock/deposits/ore/kimberlite_small.json"
-hash = "9cab2e9570c04b9b7f7c8de29182a8373021efdbaa174d9e3a33428d2083f7b8"
-
-[[files]]
 file = "config/paxi/datapacks/peacock/data/peacock/deposits/ore/lapis_large.json"
-hash = "2c70293b4fd4598a4d01bee1fb166e0fd94d0d2a5d748a6b7478c782af91b6d2"
-
-[[files]]
-file = "config/paxi/datapacks/peacock/data/peacock/deposits/ore/lapis_small.json"
-hash = "c5b649a345d9d8d965513efae19ac81b3d9e4a83f78a0c458bb7c3047e291d9b"
+hash = "19fc344281b7852364de72d7072f271f48c28e75240e7d686aea3cf2885eaa85"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/peacock/deposits/ore/limonite_large.json"
 hash = "c62af3b95e14dc1cc95ef547b79966a3c410b38b4fb2c3d8b7add3bfbcfacbb0"
 
 [[files]]
-file = "config/paxi/datapacks/peacock/data/peacock/deposits/ore/limonite_small.json"
-hash = "518a7b90fa25c70a8dca62f37258577472516c21d177fcd6c1f2e2ea8d4e3419"
-
-[[files]]
 file = "config/paxi/datapacks/peacock/data/peacock/deposits/ore/malachite_large.json"
-hash = "bdd1c41b4c25b3da592c06c1d9a8269207c1686e9ee51ac2c67518b42fc8f76f"
-
-[[files]]
-file = "config/paxi/datapacks/peacock/data/peacock/deposits/ore/malachite_small.json"
-hash = "eff3f08c1baa636159989a5d289189782fe9eff66751004abd54acd5fe38601c"
+hash = "68f6a9f379c5beafb5e189f5a216946bc4cef4ac37f6243e04296ab3194dd739"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/peacock/deposits/ore/platinum_large.json"
-hash = "b87ae8ec3891df86c3debdc2e210f019032a90c5286e3eee543e7c346a4d5da0"
-
-[[files]]
-file = "config/paxi/datapacks/peacock/data/peacock/deposits/ore/platinum_small.json"
-hash = "a1cd195973592b801b34a37eef8205b0628a0f6e7fd901b65c7b0a26c3a7cf74"
+hash = "bea7dd46bf655ba4bdb1ab6fbe5b0f23b99244b7d81fba40981d6e0263a167f9"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/peacock/deposits/ore/sphalerite_large.json"
-hash = "d7768adb66d082c5c8d51c2f4310bada19926658322f23093c18d2126067ddee"
-
-[[files]]
-file = "config/paxi/datapacks/peacock/data/peacock/deposits/ore/sphalerite_small.json"
-hash = "38eb3fbdf06939635e7d6e6c7e65cd6c6321a38cda932984957ae0b2c057f5a9"
+hash = "f332c76781cc23aba72472cbb3fbf1948fa428e8f9604eab41ebd8edc1d048dc"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/peacock/loot_tables/chests/plunder.json"
@@ -3986,7 +3906,7 @@ hash = "cb02161754f7ce69fc96dcb0ca15bee705d83e9ff0ae2c47ed20a37f5743f7ea"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/ore/deposits.json"
-hash = "68d4592d3b9e5aef2a843378bd72e6950e69ca46196e6b8e3f7c4a329b6cfc95"
+hash = "6a1a1a2d82aeda18a698a8e39f3db133213acbaa81baeb80018c843644e21d6c"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/ore/gear.json"

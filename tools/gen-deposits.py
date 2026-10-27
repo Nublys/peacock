@@ -7,12 +7,14 @@ so every find of a metal is much the same. Aaron (2026-10-27): "There's no rando
 
 This writes, into the pack datapack (Paxi loads it above Geolosys):
   data/geolosys/deposits/**   every deposit Geolosys ships, weights x10 (integer weights; the split below needs room)
-  data/peacock/deposits/ore/  the small and large variants, and the deep layer (with its own variants)
+  data/peacock/deposits/ore/  the large variants, and the deep layer (with its own)
 
-Size variety: each overworld ore deposit (dense, sparse, dike) becomes three: a small pocket (most of the rest), the
-normal deposit (most finds) and a rare large strike (about one in ten). The small/large weights are solved from a
-simulation of Geolosys' own generate() code (seeded, below) so the AVERAGE ore per deposit, and so the ore per chunk,
-stays what it was. Layers (the coals), stones, peat, the Nether and the End are left as they are, weights x10.
+Size variety: each overworld ore deposit (dense, sparse, dike) becomes two: the normal deposit (nine finds in ten,
+unchanged) and a large strike (about one in ten, ~2.5x the ore). Aaron (2026-10-27): "Remove small, just normal and big"
+(a first version also had small pockets). A big strike raises the average ore per deposit by roughly 15%, so each
+varied deposit's total weight is divided by that ratio (solved from a seeded simulation of Geolosys' own generate()
+code, below): the ore per chunk stays what it was, deposits are found about 13% less often, and one in ten pays big.
+Layers (the coals), stones, peat, the Nether and the End are left as they are, weights x10.
 
 The deep layer: lead/silver, nickel, platinum, tin and gold also generate below about Y -16 under every biome, sized so
 each gives roughly a third of its regional deposit's ore per chunk (gold less: it is already broad). See DECISIONS.md.
@@ -30,10 +32,10 @@ DATA = ROOT / "pack/config/paxi/datapacks/peacock/data"
 BASE = json.loads((ROOT / "tools/data/geolosys-deposits.json").read_text())["deposits"]
 
 WEIGHT_SCALE = 10
-# Blob ore grows with roughly size^2.7 (longer AND thicker), so modest size steps: small ~0.4x the ore, large ~2.5x.
+# Blob ore grows with roughly size^2.7 (longer AND thicker), so a modest size step makes ~2.5x the ore.
 # Dikes are columns: their ore is linear in height, so they vary by height (centred on the deposit's own band).
-BLOB_SMALL, BLOB_LARGE = 0.72, 1.40
-DIKE_SMALL, DIKE_LARGE = 0.45, 2.0
+BLOB_LARGE = 1.40
+DIKE_LARGE = 2.0
 LARGE_SHARE = 0.10                # about one find in ten is a large strike
 WEIGHT_OVERRIDE = {"ore/bauxite": 4}
 NO_VARIANTS = {"ore/beryl", "ore/teallite_and_emerald"}   # emeralds are the currency: no jackpot strikes   # aluminum: 2 -> 4 (2026-10-27; it has jobs now and was the rarest by far)
@@ -96,17 +98,16 @@ def mean_ore(dep, n=160):
     return sum(f() for _ in range(n)) / n * ore_share(c)
 
 
-def scaled(dep, which):
+def large_of(dep):
     d = json.loads(json.dumps(dep))
     c = d["config"]
     if d["type"] == "geolosys:deposit_dike":
-        f = DIKE_SMALL if which == "small" else DIKE_LARGE
-        mid, half = (c["yMin"] + c["yMax"]) / 2, abs(c["yMax"] - c["yMin"]) / 2 * f
+        mid, half = (c["yMin"] + c["yMax"]) / 2, abs(c["yMax"] - c["yMin"]) / 2 * DIKE_LARGE
         c["yMin"], c["yMax"] = max(-64, round(mid - half)), min(300, round(mid + half))
         if c["yMax"] - c["yMin"] < 4:
             c["yMax"] = c["yMin"] + 4
     else:
-        c["size"] = max(4, round(c["size"] * (BLOB_SMALL if which == "small" else BLOB_LARGE)))
+        c["size"] = max(4, round(c["size"] * BLOB_LARGE))
     return d
 
 
@@ -118,25 +119,22 @@ def varied(dep):
 
 
 def split(name, dep, weight):
-    """normal/small/large deposits whose weighted mean ore equals the normal deposit's."""
-    total = weight * WEIGHT_SCALE
-    small, large = scaled(dep, "small"), scaled(dep, "large")
-    m0, ms, ml = mean_ore(dep), mean_ore(small), mean_ore(large)
+    """normal + large deposits; total weight divided by the mean-ore ratio so ore per chunk is unchanged."""
+    large = large_of(dep)
+    m0, ml = mean_ore(dep), mean_ore(large)
+    ratio = (1 - LARGE_SHARE) + LARGE_SHARE * ml / m0
+    total = max(2, round(weight * WEIGHT_SCALE / ratio))
     wl = max(1, round(LARGE_SHARE * total))
-    ws = round(wl * (ml - m0) / max(1e-6, m0 - ms))
-    while total - wl - ws < 0.4 * total and wl > 1:      # keep the normal deposit the usual find
-        wl -= 1
-        ws = round(wl * (ml - m0) / max(1e-6, m0 - ms))
-    wn = total - wl - ws
+    wn = total - wl
     out = []
-    for suffix, d, w, m in (("", dep, wn, m0), ("_small", small, ws, ms), ("_large", large, wl, ml)):
+    for suffix, d, w, m in (("", dep, wn, m0), ("_large", large, wl, ml)):
         d = json.loads(json.dumps(d))
         d["config"]["generationWeight"] = w
         out.append((name + suffix, d, w, m))
-    mean = sum(w * m for _, _, w, m in out) / total
-    print(f"  {name:22s} w{weight:<2} small {ms:5.0f} x{ws:<3} normal {m0:5.0f} x{wn:<3} large {ml:5.0f} x{wl:<3}"
-          f" mean {mean:5.0f} ({mean / m0 * 100:3.0f}% of normal)")
-    return out, m0
+    supply = sum(w * m for _, _, w, m in out) / WEIGHT_SCALE
+    print(f"  {name:22s} w{weight:<2} normal {m0:5.0f} x{wn:<3} large {ml:5.0f} x{wl:<3} weight {weight * WEIGHT_SCALE}->{total}"
+          f"  ore/chunk {supply / (weight * m0) * 100:3.0f}% of before")
+    return out, m0, total
 
 
 def write(path: Path, obj):
@@ -148,38 +146,40 @@ def main():
     for d in (DATA / "geolosys/deposits", DATA / "peacock/deposits"):
         if d.exists():
             shutil.rmtree(d)
-    supply = {}
+    supply, final = {}, {}
     print("variants (ore blocks in solid stone; weights x10):")
     for rel, dep in sorted(BASE.items()):
         dep = json.loads(json.dumps(dep))
         w = WEIGHT_OVERRIDE.get(rel, dep["config"]["generationWeight"])
         if not varied(dep) or rel in NO_VARIANTS:
             dep["config"]["generationWeight"] = w * WEIGHT_SCALE
+            final[rel] = (dep["config"].get("biomeTag"), w * WEIGHT_SCALE)
             write(DATA / "geolosys/deposits" / f"{rel}.json", dep)
             continue
-        parts, m0 = split(rel.split("/")[1], dep, w)
+        parts, m0, total = split(rel.split("/")[1], dep, w)
         supply[rel] = w * m0
+        final[rel] = (dep["config"].get("biomeTag"), total)
         (name, d, _, _), rest = parts[0], parts[1:]
         write(DATA / "geolosys/deposits" / f"{rel}.json", d)
         for name, d, _, _ in rest:
             write(DATA / "peacock/deposits/ore" / f"{name}.json", d)
     print("deep layer (ore per chunk relative to the regional deposit, inside its own biome):")
-    deep_weight = 0
     for name, (src, y0, y1, w, over) in DEEP.items():
         dep = json.loads(json.dumps(BASE[src]))
         c = dep["config"]
         c.update({"yMin": y0, "yMax": y1, "biomeTag": "#minecraft:is_overworld", **over})
         c.pop("biomes", None)
-        parts, m0 = split(name, dep, w)
+        parts, m0, total = split(name, dep, w)
+        final[name] = ("#minecraft:is_overworld", total)
         print(f"  {'':22s} -> {w * m0 / supply[src] * 100:3.0f}% of {src.split('/')[1]}'s")
         for n, d, _, _ in parts:
             write(DATA / "peacock/deposits/ore" / f"{n}.json", d)
-        deep_weight += w
-    # the surface rate stays where it was: a biome with no special tags had weight W0 before any of this
+    # each deposit's ore per chunk stays where it was: in a biome with no special tags the pool weighed W0 before any of
+    # this; the attempt rate scales with the pool's new weight (each deposit's own weight already carries its change)
     w0 = sum(d["config"]["generationWeight"] for d in BASE.values()
              if d["config"].get("biomeTag") == "#minecraft:is_overworld")
-    w1 = w0 + sum(WEIGHT_OVERRIDE[r] - BASE[r]["config"]["generationWeight"] for r in WEIGHT_OVERRIDE) + deep_weight
-    print(f"overworld base weight {w0} -> {w1}: set chunkSkipChance = {1 - 0.1 * w1 / w0:.3f} (it was 0.9)")
+    w1 = sum(t for tag, t in final.values() if tag == "#minecraft:is_overworld") / WEIGHT_SCALE
+    print(f"overworld pool weight {w0} -> {w1:.1f}: set chunkSkipChance = {1 - 0.1 * w1 / w0:.3f} (it was 0.9)")
 
 
 if __name__ == "__main__":
