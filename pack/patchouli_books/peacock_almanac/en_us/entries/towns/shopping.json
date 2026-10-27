@@ -1,8 +1,8 @@
 {
   "name": "What Villagers Sell",
-  "icon": "minecraft:emerald",
+  "icon": "minecraft:emerald_block",
   "category": "patchouli:towns",
-  "sortnum": 13,
+  "sortnum": 6,
   "pages": [
     {
       "type": "patchouli:text",

@@ -6,11 +6,11 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Beatable alone in iron armour with a dog. These are the dark age's fallout, not its masters. They wander near home and you will meet them whether you look or not.$(br2)$(bold)Mutant Zombie$() and the $(bold)Mutant Enderman$() hold $(bold)Brass$().$(br)$(bold)Mutant Skeleton$() holds $(bold)Recruiting$().$(br)$(bold)Mutant Creeper$() holds $(bold)Blasting$()."
+      "text": "Beatable alone in iron armour with a dog. These are the dark age's fallout, not its masters. They wander near home and you will meet them whether you look or not.$(br2)$(li)$(bold)Mutant Zombie$() and the $(bold)Mutant Enderman$() hold $(bold)Brass$().$(li)$(bold)Mutant Skeleton$() holds $(bold)Recruiting$().$(li)$(bold)Mutant Creeper$() holds $(bold)Blasting$()."
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Fires, furnaces, insulation and waterskins$() are never locked: the hearth (Climate control) is Tier 2, and so is Slice & Dice (Advanced cooking), because Torte keeps it in the Nether.$(br)The $(bold)Mutant Snow Golem$() is a pet you make, not a boss: it holds nothing."
+      "text": "$(bold)Fires, furnaces, insulation and waterskins$() are never locked: the hearth (Climate control) is Tier 2, and so is Slice & Dice (Advanced cooking), because Torte keeps it in the Nether.$(br2)The $(bold)Mutant Snow Golem$() is a pet you make, not a boss: it holds nothing."
     },
     {
       "type": "patchouli:spotlight",

@@ -2,7 +2,7 @@
   "name": "Recruits & Guards",
   "icon": "minecraft:iron_sword",
   "category": "patchouli:towns",
-  "sortnum": 4,
+  "sortnum": 9,
   "pages": [
     {
       "type": "patchouli:text",

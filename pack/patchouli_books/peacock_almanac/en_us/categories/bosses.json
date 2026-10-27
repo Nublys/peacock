@@ -1,6 +1,6 @@
 {
   "name": "Bestiary of Bosses",
-  "description": "Every boss, where it lives, and what it holds.",
+  "description": "Every boss, where it lives, how to find it, and what it holds.",
   "icon": "minecraft:wither_skeleton_skull",
-  "sortnum": 6
+  "sortnum": 9
 }

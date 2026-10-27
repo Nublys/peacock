@@ -1,6 +1,6 @@
 {
   "name": "Towns & Trade",
-  "description": "The capital, villagers, workers, recruits, caravans and bounties.",
+  "description": "The capital and its people, bounties, villagers, the new towns and their wars.",
   "icon": "minecraft:emerald",
-  "sortnum": 4
+  "sortnum": 6
 }

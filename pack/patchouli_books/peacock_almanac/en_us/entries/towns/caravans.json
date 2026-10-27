@@ -1,8 +1,8 @@
 {
-  "name": "Caravans, Bounties, Markets",
+  "name": "Bounties, Caravans & Depots",
   "icon": "bountiful:bountyboard",
   "category": "patchouli:towns",
-  "sortnum": 9,
+  "sortnum": 2,
   "pages": [
     {
       "type": "patchouli:text",

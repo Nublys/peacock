@@ -6,7 +6,11 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Bosses that guard a place. Bring a squad, or a friend. Diamond or good iron with enchantments; food with Comfort; a way home.$(br2)$(bold)Ferrous Wroughtnaut$() holds $(bold)Trains$() (Steam 'n' Rails).$(br)$(bold)Naga$() holds $(bold)Ships$().$(br)$(bold)The Invoker$() holds the $(bold)Trading Floor$().$(br)$(bold)Umvuthi$() holds $(bold)Diesel$().$(br)$(bold)Elder Guardians$() hold $(bold)Diving$().$(br)$(bold)Frostmaw$() holds $(bold)Climate control$(); $(bold)Torte$() (Nether) $(bold)Advanced cooking$()."
+      "text": "Bosses that guard a place. Bring a squad, or a friend. Diamond or good iron with enchantments; food with Comfort; a way home.$(br2)$(li)$(bold)Ferrous Wroughtnaut$(): $(bold)Trains$() (Steam 'n' Rails)$(li)$(bold)Naga$(): $(bold)Ships$()$(li)$(bold)The Invoker$(): the $(bold)Trading Floor$()$(li)$(bold)Umvuthi$(): $(bold)Diesel$()"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Elder Guardians$(): $(bold)Diving$()$(li)$(bold)Frostmaw$(): $(bold)Climate control$()$(li)$(bold)Torte$() (Nether): $(bold)Advanced cooking$()$(br2)Climate control and cooking are the two homestead comforts the dead age took furthest: a hearth that heats a house, and machines that cook."
     },
     {
       "type": "patchouli:text",

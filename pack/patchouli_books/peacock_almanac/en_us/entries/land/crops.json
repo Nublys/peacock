@@ -6,7 +6,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Crops $(bold)do not grow out of season$(). Hover seeds for their fertile seasons.$(br2)$(bold)Spring:$() carrots, potatoes, cabbage, onions, berries, most saplings$(br)$(bold)Summer:$() wheat, melons, tomatoes, onions, rice, sugar cane, cactus$(br)$(bold)Autumn:$() wheat, pumpkins, beetroot, carrots, cabbage, rice$(br)$(bold)Winter:$() sweet berries, spruce"
+      "text": "Crops $(bold)do not grow out of season$(); hover seeds for theirs.$(li)$(bold)Spring:$() carrots, potatoes, cabbage, onions, berries, most saplings$(li)$(bold)Summer:$() wheat, melons, tomatoes, onions, rice, sugar cane, cactus$(li)$(bold)Autumn:$() wheat, pumpkins, beetroot, carrots, cabbage, rice$(li)$(bold)Winter:$() sweet berries, spruce"
     },
     {
       "type": "patchouli:text",

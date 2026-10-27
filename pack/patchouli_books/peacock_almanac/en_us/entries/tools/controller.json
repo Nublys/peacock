@@ -2,7 +2,7 @@
   "name": "Playing with a Controller",
   "icon": "minecraft:compass",
   "category": "patchouli:tools",
-  "sortnum": 0,
+  "sortnum": 1,
   "pages": [
     {
       "type": "patchouli:text",
@@ -10,11 +10,11 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Bumpers$() the hotbar. $(bold)Click left stick$() sprint, $(bold)right stick$() sneak. $(bold)Start$() pause, $(bold)Select$() camera.$(br2)$(bold)B$() opens the backpack. $(bold)D-pad:$() up chat, down drop, left the atlas, right the $(bold)radial menu$()."
+      "text": "$(li)$(bold)Bumpers:$() hotbar$(li)$(bold)Click left stick:$() sprint; $(bold)right stick:$() sneak$(li)$(bold)Start:$() pause; $(bold)Select:$() camera$(li)$(bold)B:$() backpack (the pack's bind)$(li)$(bold)D-pad:$() up chat, down drop, left the atlas (the pack's bind), right the $(bold)radial menu$()"
     },
     {
       "type": "patchouli:text",
-      "text": "The radial menu starts empty and is yours to fill: Controlify's settings, Radial Menu. Good picks: Recruits command screen, place a pin, zoom, dog whistle, quiver, player list.$(br2)Ships, airships and wagons steer with the sticks like walking."
+      "text": "The radial menu starts empty and is yours to fill: Options, Controls, Controller Settings, Radial Menu. Good picks: Recruits command screen, place a pin, zoom, dog whistle, quiver, player list.$(br2)Ships, airships and wagons steer with the sticks like walking."
     }
   ]
 }

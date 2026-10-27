@@ -6,11 +6,11 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Two or more, with a plan, in the Nether and the deep. Netherite is the armour the tier after this one assumes.$(br2)$(bold)Radiation Director$() and the $(bold)Leviathan$() hold $(bold)Precision mechanisms$(): mechanical arms, the reactor's own parts.$(br)$(bold)Netherite Monstrosity$() and the $(bold)Ancient Remnant$() hold $(bold)Netherite$()."
+      "text": "Two or more, with a plan, in the Nether and the deep.$(br2)$(li)$(bold)Radiation Director$() and the $(bold)Leviathan$(): $(bold)Precision mechanisms$(), mechanical arms and the reactor's own parts.$(li)$(bold)Netherite Monstrosity$() and the $(bold)Ancient Remnant$(): $(bold)Netherite$().$(li)$(bold)Maledictus$(): $(bold)Cannons$() (Big Cannons)."
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Maledictus$() holds $(bold)Cannons$() (Big Cannons).$(br)Maledictus and the Remnant also drop the $(bold)Ancient Factory's$() Eye.$(br2)Cannons are a server rule as much as a technology: they damage $(bold)mobs and players$() but not the land. Griefing is off; sieges are on."
+      "text": "Maledictus and the Remnant also drop the $(bold)Ancient Factory's$() Eye.$(br2)Cannons are a server rule as much as a technology: they damage $(bold)mobs and players$() but not the land. Griefing is off; sieges are on."
     },
     {
       "type": "patchouli:relations",

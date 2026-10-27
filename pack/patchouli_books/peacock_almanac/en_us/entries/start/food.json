@@ -2,7 +2,7 @@
   "name": "Food & Cooking",
   "icon": "farmersdelight:cooking_pot",
   "category": "patchouli:start",
-  "sortnum": 1,
+  "sortnum": 3,
   "pages": [
     {
       "type": "patchouli:text",

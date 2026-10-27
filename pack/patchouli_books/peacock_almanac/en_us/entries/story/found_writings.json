@@ -6,7 +6,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "The survivors left books: a guild ledger, a physician's casebook, a stationmaster's log, a child's drawings, a pamphlet from beyond the river. Each blames something different. Read enough and you will know what happened; they never did.$(br2)They are not reprinted here. Look in the dead towns' chests, in mineshafts and dungeons, and in the pillagers' plunder."
+      "text": "The survivors left books: a guild ledger, a physician's casebook, a stationmaster's log, a child's drawings, a pamphlet from beyond the river. Each blames something different. Read enough and you will know what happened; they never did.$(br2)They are not reprinted here. Look in the dead towns' chests, mineshafts, dungeons and the pillagers' plunder."
     },
     {
       "type": "patchouli:text",

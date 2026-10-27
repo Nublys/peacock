@@ -14,7 +14,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Macaw's$() nine mods are doors, roofs, windows, fences, bridges, paths, stairs, trapdoors, lights, paintings and furniture; $(bold)Every Compat$() makes every wood work with all of it."
+      "text": "$(bold)Macaw's$() nine mods are doors, roofs, windows, fences, bridges, paths, stairs, trapdoors, lights, paintings and furniture; $(bold)Every Compat$() makes every wood work with all of it.$(br2)$(bold)FallingTree$() fells a tree from its bottom log; $(bold)Passable Foliage$() lets you walk through leaves; $(bold)Nether Portal Fix$() links portals sensibly."
     }
   ]
 }

@@ -1,0 +1,12 @@
+{
+  "name": "...chop just one log?",
+  "icon": "minecraft:oak_log",
+  "category": "patchouli:faq",
+  "sortnum": 9,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "FallingTree: chop the bottom log and the tree comes down as logs. Sneak while chopping to take one log. Leaves let you walk through them, slowly. See $(l:patchouli:start/differences)Small Things That Differ$()."
+    }
+  ]
+}

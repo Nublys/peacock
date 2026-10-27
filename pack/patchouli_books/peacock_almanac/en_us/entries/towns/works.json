@@ -2,7 +2,7 @@
   "name": "The Capital Works",
   "icon": "minecraft:lectern",
   "category": "patchouli:towns",
-  "sortnum": 10,
+  "sortnum": 3,
   "pages": [
     {
       "type": "patchouli:text",

@@ -2,7 +2,7 @@
   "name": "The Mutants",
   "icon": "mutantmonsters:mutant_skeleton_rib_cage",
   "category": "patchouli:bosses",
-  "sortnum": 1,
+  "sortnum": 2,
   "pages": [
     {
       "type": "patchouli:text",

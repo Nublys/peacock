@@ -2,15 +2,15 @@
   "name": "Where You Woke Up",
   "icon": "minecraft:bell",
   "category": "patchouli:start",
-  "sortnum": 0,
+  "sortnum": 1,
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Everyone spawns in the same village: the $(bold)capital$(), the last old town alive, inside the survivors' wall. Its bounty boards are in red-roofed pavilions with yellow flags. The first market, and the first thing raiders come for.$(br2)Claim a bed early. There is no fast travel; the way home matters. Almost every other old stone village is a ruin ($(l:patchouli:story/dead_towns)The Dead Towns$())."
+      "text": "Everyone spawns in the same village: the $(bold)capital$(), the last old town alive, inside the survivors' wall. Its bounty boards stand in red-roofed pavilions with yellow flags. The first market, and the first thing raiders come for.$(br2)Claim a bed early; there is no fast travel. Almost every other old stone village is a ruin ($(l:patchouli:story/dead_towns)The Dead Towns$())."
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Day one checklist:$()$(br)- Wood, a crafting table, a bed in the capital$(br)- Check the season (sky colour, or craft a calendar)$(br)- Food: villager farms are fair game, replant what you take$(br)- A campfire before nightfall: three sticks make a $(l:patchouli:land/warmth)fire drill$()"
+      "text": "$(bold)Day one checklist:$()$(li)Wood, a crafting table, a bed in the capital$(li)Check the season: sky colour, or craft a calendar$(li)Food: villager farms are fair game, replant what you take$(li)A campfire before nightfall: three sticks make a $(l:patchouli:land/warmth)fire drill$()"
     },
     {
       "type": "patchouli:text",

@@ -2,7 +2,7 @@
   "name": "Joining a Town",
   "icon": "minecraft:white_banner",
   "category": "patchouli:towns",
-  "sortnum": 3,
+  "sortnum": 8,
   "pages": [
     {
       "type": "patchouli:text",
@@ -14,7 +14,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Useful commands:$()$(br)/vrcontracts standing: what every faction thinks of you, and why$(br)/vrintel: what your faction knows about its neighbours$(br)/vrconvoy: convoys on the road$(br)/vrconfig: what this server has switched on"
+      "text": "$(bold)Useful commands:$()$(li)/vrcontracts standing: what every faction thinks of you, and why$(li)/vrintel: what your faction knows about its neighbours$(li)/vrconvoy: convoys on the road$(li)/vrconfig: what this server has switched on"
     }
   ]
 }

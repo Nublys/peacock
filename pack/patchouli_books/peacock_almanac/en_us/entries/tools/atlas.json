@@ -2,12 +2,12 @@
   "name": "The Atlas",
   "icon": "map_atlases:atlas",
   "category": "patchouli:tools",
-  "sortnum": 3,
+  "sortnum": 2,
   "pages": [
     {
       "type": "patchouli:spotlight",
       "item": "map_atlases:atlas",
-      "text": "$(bold)Map Atlases$() collects maps into one book: craft an atlas from a book and a compass, feed it empty maps, carry it, and it fills as you travel and shows in the corner. $(bold)M$() opens it; $(bold)P$() drops a pin where you stand.",
+      "text": "$(bold)Map Atlases$() collects maps into one book: craft an atlas from a book and a compass, feed it empty maps, carry it, and it fills as you travel. While it is on you it shows in the corner of the screen. $(bold)M$() opens it; $(bold)P$() drops a pin where you stand.",
       "link_recipe": false,
       "title": "The atlas"
     },

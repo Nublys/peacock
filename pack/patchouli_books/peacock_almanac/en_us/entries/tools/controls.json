@@ -2,15 +2,15 @@
   "name": "Keys",
   "icon": "minecraft:lever",
   "category": "patchouli:tools",
-  "sortnum": 1,
+  "sortnum": 0,
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(bold)B$() backpack$(br)$(bold)M$() atlas, $(bold)P$() place a pin$(br)$(bold)V$() quiver$(br)$(bold)R / U$() Recruits: command / team$(br)$(bold)Shift+1..4$() dog whistles$(br)$(bold)Alt$() (hold) Create tool menu$(br)$(bold)W$() (hold, over a Create item) ponder"
+      "text": "$(li)$(bold)B$() backpack$(li)$(bold)M$() atlas, $(bold)P$() place a pin$(li)$(bold)J$() claim manager$(li)$(bold)L$() advancements$(li)$(bold)V$() quiver$(li)$(bold)R / U$() Recruits: command / team$(li)$(bold)Shift+1..4$() dog whistles$(li)$(bold)Alt$() (hold) Create tool menu$(li)$(bold)W$() (hold, over a Create item) ponder"
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)K$() shaders on/off, $(bold)O$() shader menu$(br)$(bold)R$() recipes for the hovered item, $(bold)U$() its uses (EMI)$(br)$(bold),$() voice chat menu, $(bold).$() mute mic$(br)$(bold)Right Alt$() push-to-talk$(br)$(bold)Z$() zoom (scroll to adjust), only while you carry a spyglass, backpack included$(br2)Controlling is installed: Options, Controls has a search box, so any bind can be found by name."
+      "text": "$(li)$(bold)K$() shaders on/off, $(bold)O$() shader menu$(li)$(bold)R / U$() recipes / uses of the hovered item (EMI)$(li)$(bold),$() voice chat menu, $(bold).$() mute mic, $(bold)Right Alt$() push-to-talk$(li)$(bold)Z$() zoom (scroll to adjust), only while you carry a spyglass$(li)$(bold)F3$() debug screen ($(l:patchouli:tools/info)Finding Things Out$())$(br2)Options, Controls has a search box, so any bind can be found by name."
     },
     {
       "type": "patchouli:text",

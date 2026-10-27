@@ -6,15 +6,15 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(bold)Overworld, anywhere:$() Mutant Zombie, Skeleton, Creeper, Enderman (wander); Ferrous Wroughtnaut (chamber under the ground, not in oceans)$(br)$(bold)Snow:$() Frostmaw, Maledictus (Frosted Prison)$(br)$(bold)Savanna:$() Umvuthi (Umvuthana grove)$(br)$(bold)Stony shores:$() Naga"
+      "text": "$(li)$(bold)Overworld, anywhere:$() Mutant Zombie, Skeleton, Creeper, Enderman (they wander); Ferrous Wroughtnaut (a chamber under the ground, never under oceans)$(li)$(bold)Snow:$() Frostmaw; Maledictus (Frosted Prison)$(li)$(bold)Savanna:$() Umvuthi (Umvuthana grove)$(li)$(bold)Stony shores:$() Naga"
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Peaks:$() the Sculptor's monastery$(br)$(bold)Desert:$() Ancient Remnant (Cursed Pyramid)$(br)$(bold)Deep ocean:$() the Leviathan (Sunken City); Scylla (Acropolis, warm ocean)$(br)$(bold)Underground:$() the Harbinger (Ancient Factory)$(br)$(bold)Ocean monuments:$() Elder Guardians$(br)$(bold)Illager country:$() the Invoker (Illager Fort)"
+      "text": "$(li)$(bold)Peaks:$() the Sculptor's monastery$(li)$(bold)Desert:$() Ancient Remnant (Cursed Pyramid)$(li)$(bold)Deep ocean:$() the Leviathan (Sunken City); Scylla (Acropolis, warm ocean)$(li)$(bold)Underground:$() the Harbinger (Ancient Factory)$(li)$(bold)Ocean monuments:$() Elder Guardians$(li)$(bold)Illager country:$() the Invoker (Illager Fort)"
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Nether:$() Torte (Quartz Kitchen, quartz flats); Radiation Director (Nether Reactor, toxic heap); Ignis (Burning Arena, infernal dunes and ash); Netherite Monstrosity (Soul Blacksmith, withered forest); the Hovering Inferno (summoned at an Infernal Altar with a nether star)$(br)$(bold)End:$() Ender Guardian (Ruined Citadel)"
+      "text": "$(li)$(bold)Nether:$() Torte (Quartz Kitchen, quartz flats); Radiation Director (Nether Reactor, toxic heap); Ignis (Burning Arena, infernal dunes and ash); Netherite Monstrosity (Soul Blacksmith, withered forest); the Hovering Inferno (summoned at an Infernal Altar with a nether star; loot, not a Blueprint)$(li)$(bold)End:$() Ender Guardian (Ruined Citadel)"
     },
     {
       "type": "patchouli:relations",

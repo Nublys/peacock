@@ -6,7 +6,11 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(bold)No free minimap.$() The atlas you fill is the map.$(br)$(bold)No fast travel.$() Rails, ships, wagons and roads.$(br)$(bold)No trading halls.$() Villagers trade well where they live well.$(br)$(bold)No block griefing from cannons.$() They hurt mobs and players; the land stays.$(br2)$(bold)No thirst.$() The seasons and the cold are the survival layer: what grows when, and a fire for winter nights."
+      "text": "$(li)$(bold)No free minimap.$() The atlas you fill as you explore is the map.$(li)$(bold)No fast travel.$() Rails, ships, wagons and roads.$(li)$(bold)No trading halls.$() Villagers trade well where they live well."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)No block griefing from cannons.$() They hurt mobs and players; the land stays.$(li)$(bold)No thirst.$() The seasons and the cold are the survival layer: what grows when, and a fire for winter nights."
     },
     {
       "type": "patchouli:text",
@@ -14,7 +18,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Towns are capped$() at about two dozen villagers; breeding stops when a town is full. Found another.$(br)$(bold)Depots need towns:$() a bell and four beds within 32 blocks.$(br)$(bold)Technology is personal:$() your Blueprints are yours. Trade them.$(br2)Everything on this page is enforced by the pack, not by trust. The admin can switch any of it in $(bold)kubejs/config/peacock.json$()."
+      "text": "$(li)$(bold)Towns are capped$() at about two dozen villagers; breeding stops when a town is full. Found another.$(li)$(bold)Depots need towns:$() a bell and four beds within 32 blocks.$(li)$(bold)Technology is personal:$() your Blueprints are yours. Trade them.$(br2)Everything on this page is enforced by the pack, not by trust. The admin can switch any of it in $(bold)kubejs/config/peacock.json$()."
     }
   ]
 }

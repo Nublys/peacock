@@ -1,6 +1,6 @@
 {
   "name": "Building & Logistics",
-  "description": "Decor, wagons, ships, trains, cannons.",
+  "description": "Decor, wagons, ships and aircraft, trains, cannons.",
   "icon": "mcwroofs:oak_roof",
-  "sortnum": 8
+  "sortnum": 10
 }

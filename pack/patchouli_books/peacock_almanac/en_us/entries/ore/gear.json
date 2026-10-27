@@ -1,0 +1,36 @@
+{
+  "name": "Tools & Armour in Every Metal",
+  "icon": "peacock:platinum_pickaxe",
+  "category": "patchouli:ore",
+  "sortnum": 7,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Every metal makes the full set, tools and armour, in the usual shapes. Each repairs with its own ingot and takes armour trims. Which to carry:$(br2)$(li)$(bold)Tin:$() early and soft; stone-grade mining, a step up from copper.$(li)$(bold)Lead:$() heavy. Iron-grade, slow swing, hits harder; the armour shrugs off knockback."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Silver:$() soft but very enchantable; its tools and weapons do half again as much to the undead.$(li)$(bold)Nickel:$() iron that lasts longer.$(li)$(bold)Aluminum:$() light and fast, wears quickly, enchants well.$(li)$(bold)Electrum:$() the fastest tools and the best enchanting; fragile."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Constantan:$() the workhorse, between iron and steel.$(li)$(bold)Invar:$() hard-wearing, the longest life short of platinum; the armour has a little toughness.$(li)$(bold)Platinum:$() diamond-grade mining, close to diamond's life, and it enchants better than diamond."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "peacock:gear/tin_pickaxe",
+      "recipe2": "peacock:gear/lead_sword",
+      "text": "Vanilla's shapes, ingots and sticks. Silver for graveyards, lead for the gate."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "peacock:gear/platinum_chestplate",
+      "recipe2": "peacock:gear/invar_helmet",
+      "text": "Armour likewise. Only lead resists knockback; platinum is nearest diamond."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Ironworks adds copper, bronze, brass and steel sets on top; Spartan Weaponry makes its daggers, spears, longbows and the rest of all these metals too.$(br2)Alloys ($(l:patchouli:ore/metals)What the Metals Are For$()) mix in a heated basin: electrum, constantan and invar are made, not mined."
+    }
+  ]
+}

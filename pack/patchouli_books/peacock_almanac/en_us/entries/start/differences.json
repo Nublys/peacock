@@ -1,0 +1,20 @@
+{
+  "name": "Small Things That Differ",
+  "icon": "minecraft:oak_log",
+  "category": "patchouli:start",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Habits from plain Minecraft that need adjusting:$(br2)$(li)$(bold)Trees fall whole$() when you chop the bottom log (FallingTree). Sneak to take a single log.$(li)$(bold)Leaves let you through:$() walk into a bush and you walk through it, slowly."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Streams flow.$() Rivers carry a current; a boat drifts downstream. Hillsides are stepped with slabs, so walking is less jumping.$(li)$(bold)Zoom needs a spyglass:$() $(bold)Z$() zooms only while one is in your inventory or backpack.$(li)$(bold)Dying leaves a corpse$() holding everything; walk back and right-click it. Nothing despawns."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Trades restock on sleep:$() a villager refreshes its trades when it wakes from a bed, once a day.$(li)$(bold)Herds and towns have caps:$() 40 animals of a kind per pasture, about two dozen villagers per town. The pack tells you when you hit one.$(li)$(bold)No fast travel:$() $(bold)/spawn$() and $(bold)/back$() after a death are all there is."
+    }
+  ]
+}

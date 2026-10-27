@@ -20,7 +20,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Spring:$() thaw, planting, breeding.$(br)$(bold)Summer:$() long days, heat, the main harvest.$(br)$(bold)Autumn:$() second harvest, pumpkins, storing.$(br)$(bold)Winter:$() snow, cold, dark early; berries and whatever is under glass.$(br2)Animals, fish and crops all follow the year. Plan around it, or fight it with glass."
+      "text": "$(li)$(bold)Spring:$() thaw, planting, breeding.$(li)$(bold)Summer:$() long days, heat, the main harvest.$(li)$(bold)Autumn:$() second harvest, pumpkins, storing.$(li)$(bold)Winter:$() snow, cold, dark early; berries and whatever is under glass.$(br2)Animals, fish and crops all follow the year. Plan around it, or fight it with glass."
     }
   ]
 }

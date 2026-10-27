@@ -2,7 +2,7 @@
   "name": "The Illager Masters",
   "icon": "minecraft:white_banner",
   "category": "patchouli:bosses",
-  "sortnum": 3,
+  "sortnum": 4,
   "pages": [
     {
       "type": "patchouli:text",

@@ -1,6 +1,6 @@
 {
   "name": "First Days",
-  "description": "Spawn, the capital, food, animals, and the first machines.",
+  "description": "Your first hour, the capital, food, animals, and the first machines.",
   "icon": "minecraft:campfire",
-  "sortnum": 1
+  "sortnum": 0
 }

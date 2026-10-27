@@ -2,7 +2,7 @@
   "name": "Finding Things Out",
   "icon": "minecraft:spyglass",
   "category": "patchouli:tools",
-  "sortnum": 2,
+  "sortnum": 3,
   "pages": [
     {
       "type": "patchouli:text",
@@ -15,6 +15,11 @@
     {
       "type": "patchouli:text",
       "text": "$(bold)Advancements$() ($(bold)L$()) has a $(bold)Peacock$() tab: every boss, the journals, the dead towns, the Blueprint tiers, the towns and the first winter. Bosses count for everyone who fought, not only the one who landed the blow."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)F3$() is laid out for finding out why something is slow (BetterF3). Left: your $(bold)FPS$() and the $(bold)server tick$(). Right: your GPU and memory. Below: coordinates, biome, light, what you look at.$(br2)Server tick under 20 TPS: the server; tell the group. Low FPS with TPS fine: your machine; Distant Horizons' range first, then shaders.",
+      "title": "Reading F3"
     }
   ]
 }

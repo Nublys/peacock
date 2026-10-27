@@ -2,7 +2,7 @@
   "name": "How a Town Lives",
   "icon": "minecraft:hay_block",
   "category": "patchouli:towns",
-  "sortnum": 5,
+  "sortnum": 10,
   "pages": [
     {
       "type": "patchouli:text",

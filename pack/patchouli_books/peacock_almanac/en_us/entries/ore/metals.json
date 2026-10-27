@@ -10,11 +10,12 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Lead$(): shot, ship cannonballs, pipes$(br)$(bold)Silver$(): electrum, electron tubes$(br)$(bold)Aluminum$(): aircraft hulls, propellers$(br)$(bold)Platinum$(): engines, precision mechanisms$(br)$(bold)Bronze$(): cannons, ship guns"
+      "text": "$(li)$(bold)Lead$(): shot, ship cannonballs, pipes$(li)$(bold)Silver$(): electrum, electron tubes$(li)$(bold)Aluminum$(): aircraft hulls, propellers$(li)$(bold)Platinum$(): engines, precision mechanisms$(li)$(bold)Bronze$(): cannons, ship guns",
+      "title": "Each metal's job"
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Constantan$(): thermometers, telescopes$(br)$(bold)Invar$(): the hearth, aircraft boilers$(br)$(bold)Electrum$(): transmitters, content observers$(br)$(bold)Tin$(): lanterns$(br2)Silver and platinum are the rare ones, and electrum needs silver."
+      "text": "$(li)$(bold)Constantan$(): thermometers, telescopes$(li)$(bold)Invar$(): the hearth, aircraft boilers$(li)$(bold)Electrum$(): transmitters, content observers$(li)$(bold)Tin$(): lanterns$(br2)Silver and platinum are the rare ones, and electrum needs silver."
     },
     {
       "type": "patchouli:text",

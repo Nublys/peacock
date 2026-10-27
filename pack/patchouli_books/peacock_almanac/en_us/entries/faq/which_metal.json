@@ -1,0 +1,12 @@
+{
+  "name": "...choose a metal to wear?",
+  "icon": "peacock:platinum_chestplate",
+  "category": "patchouli:faq",
+  "sortnum": 11,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Platinum if you have it; invar or constantan for everyday; lead at a gate (knockback resistance); silver against the undead; electrum for speed and enchanting if you can afford to replace it. The whole table is in $(l:patchouli:ore/gear)Tools & Armour in Every Metal$()."
+    }
+  ]
+}

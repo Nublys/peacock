@@ -14,7 +14,8 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Heat:$() a lit campfire, fire, furnace, smoker, blast furnace or stove warms you within about seven blocks, more the closer you stand. Two campfires is the most that adds up. Walls between you and the fire weaken it. Lava and magma are hot; ice cools.$(br2)A roof, four walls and a fire is a winter night survived."
+      "text": "A lit campfire, fire, furnace, smoker, blast furnace or stove warms you within a few blocks, more the closer you stand. Walls between you and the fire weaken it. Lava and magma are hot; ice cools.$(br2)A roof, four walls and a fire is a winter night survived.",
+      "title": "Heat"
     },
     {
       "type": "patchouli:crafting",

@@ -2,7 +2,7 @@
   "name": "The New Towns",
   "icon": "recruits:recruit_block",
   "category": "patchouli:towns",
-  "sortnum": 2,
+  "sortnum": 7,
   "pages": [
     {
       "type": "patchouli:text",

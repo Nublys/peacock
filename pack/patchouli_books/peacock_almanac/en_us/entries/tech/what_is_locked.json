@@ -6,19 +6,26 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Only $(bold)crafting-table recipes$() can be locked, so the rule is: the things built $(italic)from$() a material are locked, the material is not. Anyone can mix brass in a basin; nobody without the Blueprint can make a casing or a funnel from it.$(br2)Everything whose recipe is locked is also locked to $(bold)place$(): a brass machine handed to you will not go down until you have learned it."
+      "text": "Only $(bold)crafting-table recipes$() can be locked, so the rule is: the things built $(italic)from$() a material are locked, the material is not. Anyone can mix brass in a basin; nobody without the Blueprint can make a casing or a funnel from it.$(br2)Locked recipes are also locked to $(bold)place$(): a brass machine handed to you will not go down until you have learned it."
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Brass:$() every recipe with brass in it or brass out of it, and the mechanical crafter.$(br)$(bold)Blasting:$() everything made with gunpowder, TNT, the empty blaze burner, muskets and cartridges, powder charges.$(br)$(bold)Climate:$() the hearth, boiler and icebox.$(br)$(bold)Cooking:$() Slice & Dice slicer and sprinkler."
+      "text": "$(li)$(bold)Brass:$() every recipe with brass in it or brass out of it, and the mechanical crafter.$(li)$(bold)Blasting:$() everything made with gunpowder, TNT, the empty blaze burner, muskets and cartridges, powder charges.$(li)$(bold)Climate:$() the hearth, boiler and icebox.$(li)$(bold)Cooking:$() Slice & Dice slicer and sprinkler.",
+      "title": "Tier 1 and 2"
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Trains:$() track, stations, controls, schedules, signals, train doors, railway casing, all of Steam 'n' Rails.$(br)$(bold)Ships:$() the dockyard, ship cannon and shot; airships and their parts.$(br)$(bold)Trading Floor:$() the depot.$(br)$(bold)Diesel:$() all of Create Diesel Generators.$(br)$(bold)Diving:$() Create's backtank, diving helmet and boots; the conduit."
+      "text": "$(li)$(bold)Trains:$() track, stations, controls, schedules, signals, train doors, railway casing, all of Steam 'n' Rails.$(li)$(bold)Ships:$() the dockyard, ship cannon and shot; airships and their parts.$(li)$(bold)Trading Floor:$() the depot.$(li)$(bold)Diesel:$() all of Create Diesel Generators.$(li)$(bold)Diving:$() Create's backtank, diving helmet and boots; the conduit."
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Precision:$() everything made with a precision mechanism: arms, speed controllers, sequenced gearshifts, extendo grips.$(br)$(bold)Netherite:$() ingots and anything crafted from them (smithing is not locked).$(br)$(bold)Cannons:$() Create Big Cannons; the biplane, warship and aircraft guns.$(br)$(bold)Arcane:$() Enchantment Industry and Dragons Plus.$(br)$(bold)Ender:$() ender chests, portable interfaces, item vaults, smart chutes, stockpile switches."
+      "text": "$(li)$(bold)Precision:$() everything made with a precision mechanism: arms, speed controllers, sequenced gearshifts, extendo grips.$(li)$(bold)Netherite:$() ingots and anything crafted from them (smithing is not locked).$(li)$(bold)Cannons:$() Create Big Cannons; the biplane, warship and aircraft guns.",
+      "title": "Tier 3"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Arcane:$() Enchantment Industry and Dragons Plus.$(li)$(bold)Ender:$() ender chests, portable interfaces, item vaults, smart chutes, stockpile switches.",
+      "title": "Tier 4"
     },
     {
       "type": "patchouli:text",

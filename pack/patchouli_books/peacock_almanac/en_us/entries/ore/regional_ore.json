@@ -19,7 +19,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Three metals are tied to terrain$() in this pack:$(br)$(bold)Iron (hematite)$(): everywhere, Y 32 to 60, the most common deposit$(br)$(bold)Zinc (sphalerite)$(): under mountains only, Y 37 to 46$(br)$(bold)Gold$(): dry country only (desert, badlands, savanna), Y -64 to 32$(br2)Everything else follows depth, not biome."
+      "text": "$(bold)Three metals are tied to terrain$() in this pack:$(li)$(bold)Iron (hematite)$(): everywhere, Y 32 to 60, the most common deposit$(li)$(bold)Zinc (sphalerite)$(): under mountains only, Y 37 to 46$(li)$(bold)Gold$(): dry country only (desert, badlands, savanna), Y -64 to 32$(br2)Everything else follows depth, not biome."
     }
   ]
 }

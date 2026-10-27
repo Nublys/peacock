@@ -1769,3 +1769,26 @@ Aaron: "Go through all the readmes, and documentation, to fix any inconsistencie
 - Almanac: force-loading runs only while the team is online (the page said "while nobody is online"); the atlas's
   corner map acknowledged ("no free minimap").
 - `defaultoptions/keybindings.txt`: the two Valkyrien Skies keys removed.
+
+## The Almanac reorganised (2026-10-27)
+Aaron: "scrub through the whole book, ensure it is helpful ... laying it out in a clean looking and readable way ... All
+the chapters are where players would expect them to be." Every claim was checked against the configs, scripts and jars
+(ore depths, the 35–100 °F band, caps, charter prices, the depot rule, Controlify's layout, the Village Recruits
+commands all held). Changes, in `tools/gen-almanac.py`:
+- **Order:** how to play first (First Days, Controls, Rules), then the world (Dark Age, Land, Ore, Towns, Threats),
+  then Blueprints before the Bestiary, Building, the mod list and the FAQ. Inside Towns the capital's pages come
+  before the new towns; "Finding a Boss" moved from Threats into the Bestiary.
+- **New pages:** Your First Hour (the quick start's six steps, linked); Small Things That Differ (trees fall whole,
+  passable leaves, flowing streams, zoom needs a spyglass, corpses, restock on sleep, caps, no fast travel); Tools &
+  Armour in Every Metal (the nine metals' characters, with recipes); Reading F3; three FAQ entries (one log, stuttering,
+  which metal). The mod list gains FallingTree, Passable Foliage, Nether Portal Fix, Just Zoom, EMIffect, Distraction
+  Free Recipes, Clumps and Let Me Despawn.
+- **Fixed:** the performance page put the MacBook Air on `medium` (it is `low`, as everywhere else); "there is no
+  minimap" said three times although the carried atlas draws in the corner; the Hovering Inferno called Tier 4 on one
+  page and off the ladder on another; the voice page assumed Prism; an unverifiable Cold Sweat sentence (two campfires)
+  dropped.
+- **Layout:** real Patchouli bullets (`$(li)`) replace dash-and-linebreak lists everywhere; headings on the ore tables,
+  Heat, the locked lists and the tiers. The generator's budget check now also estimates rendered lines (22 characters a
+  line, a bullet or break starts a new one), since a list of short items is taller than its character count says;
+  pages that failed were split.
+- Left alone on Aaron's instruction: the Recruits map (`N`) and everything about it on Leading a Faction.

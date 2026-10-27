@@ -1,0 +1,20 @@
+{
+  "name": "Your First Hour",
+  "icon": "minecraft:campfire",
+  "category": "patchouli:start",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Six things, in order. Each has a chapter; this is the short version.$(br2)$(li)$(bold)Read this book.$() Chapters on the left; blue text links. Start with $(l:patchouli:start/spawn)Where You Woke Up$().$(li)$(bold)Make a fire.$() Three sticks on a diagonal make a $(l:patchouli:land/warmth)fire drill$(); hold right-click on a block. Cold is real."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Find metal.$() Ore is regional. Look for small rock clusters on the ground and tap there with a flint hammer ($(l:patchouli:ore/prospecting)Prospecting$()).$(li)$(bold)Take a bounty.$() The boards in the capital's pavilions pay emeralds, and emeralds buy almost anything from the capital's people ($(l:patchouli:towns/caravans)Bounties$())."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Claim your land$() once you settle: $(bold)J$() ($(l:patchouli:rules/claims)Claiming Land$()).$(li)$(bold)Fight a boss for technology.$() Machines are locked behind Blueprints that bosses drop ($(l:patchouli:tech/how_blueprints_work)Blueprints$()).$(br2)Lost? The last chapter, $(l:patchouli:faq/cold)Why Can't I...$(), answers the usual questions."
+    }
+  ]
+}

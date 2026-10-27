@@ -1,8 +1,8 @@
 {
-  "name": "Finding Them",
+  "name": "Finding a Boss",
   "icon": "minecraft:map",
-  "category": "patchouli:threats",
-  "sortnum": 2,
+  "category": "patchouli:bosses",
+  "sortnum": 1,
   "pages": [
     {
       "type": "patchouli:text",

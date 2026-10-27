@@ -6,7 +6,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "There is none, on purpose. Craft an atlas ($(bold)M$()), pin things ($(bold)P$()), and read the land. The locator bar shows your friends; $(bold)J$() shows claims. See $(l:patchouli:rules/what_we_dont_do)What We Do Not Do$()."
+      "text": "Not a free one. Craft an atlas, carry it and it draws itself in the corner as you explore; $(bold)M$() opens it, $(bold)P$() pins things. The locator bar shows your friends; $(bold)J$() shows claims. See $(l:patchouli:tools/atlas)The Atlas$()."
     }
   ]
 }

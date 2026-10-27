@@ -2,7 +2,7 @@
   "name": "The Nether's Keepers",
   "icon": "minecraft:blaze_powder",
   "category": "patchouli:bosses",
-  "sortnum": 5,
+  "sortnum": 6,
   "pages": [
     {
       "type": "patchouli:text",
@@ -10,7 +10,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Radiation Director$() in the $(bold)Nether Reactor$() of the toxic heap: a wither skeleton overseer in a maze of radiation, far tougher than it looks once roused. Holds the reactor's $(bold)precision parts$() (Tier 3).$(br2)$(bold)Hovering Inferno$(): summoned at an $(bold)Infernal Altar$() in the dunes with a nether star. You do not kill it; you survive it. Tier 4."
+      "text": "$(bold)Radiation Director$() in the $(bold)Nether Reactor$() of the toxic heap: a wither skeleton overseer in a maze of radiation, far tougher than it looks once roused. Holds the reactor's $(bold)precision parts$() (Tier 3).$(br2)$(bold)Hovering Inferno$(): summoned at an $(bold)Infernal Altar$() in the dunes with a nether star. You do not kill it; you survive it. Not on the ladder: it holds loot, not a Blueprint."
     }
   ]
 }

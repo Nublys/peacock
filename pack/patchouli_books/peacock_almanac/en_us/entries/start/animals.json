@@ -2,7 +2,7 @@
   "name": "Animals",
   "icon": "animal_feeding_trough:feeding_trough",
   "category": "patchouli:start",
-  "sortnum": 2,
+  "sortnum": 4,
   "pages": [
     {
       "type": "patchouli:text",

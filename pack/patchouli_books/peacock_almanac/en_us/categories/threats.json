@@ -1,6 +1,6 @@
 {
   "name": "Threats",
-  "description": "The night, the pillager faction, and how to fight.",
+  "description": "The night, how fighting works, and the pillager faction.",
   "icon": "minecraft:crossbow",
-  "sortnum": 5
+  "sortnum": 7
 }

@@ -6,7 +6,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(bold)The Harbinger$() and $(bold)Ignis$() hold $(bold)Arcane industry$(): enchantment as a factory, dragon's breath as a fluid.$(br)$(bold)Ender Guardian$() (the End) holds $(bold)Ender logistics$(): ender chests, portable interfaces, item vaults. $(bold)Scylla$() (warm ocean) shares it."
+      "text": "$(li)$(bold)The Harbinger$() and $(bold)Ignis$(): $(bold)Arcane industry$(), enchantment as a factory, dragon's breath as a fluid.$(li)$(bold)Ender Guardian$() (the End) and $(bold)Scylla$() (warm ocean): $(bold)Ender logistics$(), ender chests, portable interfaces, item vaults."
     },
     {
       "type": "patchouli:text",

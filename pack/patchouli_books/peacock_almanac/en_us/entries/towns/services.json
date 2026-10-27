@@ -2,7 +2,7 @@
   "name": "Capital Services",
   "icon": "minecraft:anvil",
   "category": "patchouli:towns",
-  "sortnum": 11,
+  "sortnum": 4,
   "pages": [
     {
       "type": "patchouli:text",

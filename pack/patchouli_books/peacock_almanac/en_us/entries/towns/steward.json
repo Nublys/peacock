@@ -2,7 +2,7 @@
   "name": "The Steward",
   "icon": "peacock:steward_contract",
   "category": "patchouli:towns",
-  "sortnum": 12,
+  "sortnum": 5,
   "pages": [
     {
       "type": "patchouli:text",

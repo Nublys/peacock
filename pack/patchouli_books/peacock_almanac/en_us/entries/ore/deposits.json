@@ -10,15 +10,18 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Shallow:$()$(br)Malachite (copper) Y -16 to 90$(br)Coal Y 34 to 78$(br)Cassiterite (tin) Y 44 to 68$(br)Bauxite (aluminum) Y 48 to 65$(br)Hematite (iron) Y 32 to 60$(br)Sphalerite (zinc) Y 37 to 46, mountains"
+      "text": "$(li)Malachite (copper) Y -16 to 90$(li)Coal Y 34 to 78$(li)Cassiterite (tin) Y 44 to 68$(li)Bauxite (aluminum) Y 48 to 65$(li)Hematite (iron) Y 32 to 60$(li)Sphalerite (zinc) Y 37 to 46, mountains",
+      "title": "Shallow"
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Middle:$()$(br)Lignite (soft coal) Y -4 to 32$(br)Galena (lead + silver) Y -16 to 32$(br)Gold Y -64 to 32, dry land$(br)Platinum Y -25 to 19$(br)Lapis Y -64 to 64$(br)Azurite (copper) Y -49 to 13$(br)Cinnabar (redstone) Y -60 to 15"
+      "text": "$(li)Lignite (soft coal) Y -4 to 32$(li)Galena (lead + silver) Y -16 to 32$(li)Gold Y -64 to 32, dry land$(li)Platinum Y -25 to 19$(li)Lapis Y -64 to 64$(li)Azurite (copper) Y -49 to 13$(li)Cinnabar (redstone) Y -60 to 15",
+      "title": "Middle"
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Deep:$()$(br)Beryl (emerald) Y -56 to 19$(br)Bituminous coal Y -32 to -16$(br)Limonite (nickel + iron) Y -48 to -32$(br)Teallite (tin) Y -52 to -40$(br)Kimberlite (diamond) Y -64 to 10$(br)Quartz Y -64 to -48$(br)Anthracite (hard coal) Y -64 to -52"
+      "text": "$(li)Beryl (emerald) Y -56 to 19$(li)Bituminous coal Y -32 to -16$(li)Limonite (nickel + iron) Y -48 to -32$(li)Teallite (tin) Y -52 to -40$(li)Kimberlite (diamond) Y -64 to 10$(li)Quartz Y -64 to -48$(li)Anthracite (hard coal) Y -64 to -52",
+      "title": "Deep"
     },
     {
       "type": "patchouli:text",

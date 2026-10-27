@@ -2,7 +2,7 @@
   "name": "Merchants & Contracts",
   "icon": "minecraft:emerald_block",
   "category": "patchouli:towns",
-  "sortnum": 6,
+  "sortnum": 11,
   "pages": [
     {
       "type": "patchouli:text",

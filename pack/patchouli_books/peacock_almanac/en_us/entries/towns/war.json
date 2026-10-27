@@ -2,7 +2,7 @@
   "name": "War, Scouts & Sides",
   "icon": "minecraft:crossbow",
   "category": "patchouli:towns",
-  "sortnum": 7,
+  "sortnum": 12,
   "pages": [
     {
       "type": "patchouli:text",

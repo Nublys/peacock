@@ -1,6 +1,6 @@
 {
   "name": "Ore & Prospecting",
-  "description": "Metal is regional. Finding it is the first adventure.",
+  "description": "Metal is regional. Finding it is the first adventure; every metal has a use.",
   "icon": "geolosys:prospectors_pick",
-  "sortnum": 3
+  "sortnum": 5
 }

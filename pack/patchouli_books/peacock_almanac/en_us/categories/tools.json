@@ -1,6 +1,6 @@
 {
   "name": "Controls, Map & Settings",
-  "description": "Keys, the atlas, EMI and Jade, voice chat, performance profiles.",
+  "description": "Keys, controllers, the atlas, EMI and Jade, F3, voice chat, graphics profiles.",
   "icon": "map_atlases:atlas",
-  "sortnum": 10
+  "sortnum": 1
 }

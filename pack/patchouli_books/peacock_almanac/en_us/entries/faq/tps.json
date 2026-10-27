@@ -1,0 +1,12 @@
+{
+  "name": "...stop the stuttering?",
+  "icon": "minecraft:clock",
+  "category": "patchouli:faq",
+  "sortnum": 10,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Press $(bold)F3$(). If the $(bold)server tick$() line is under 20 TPS, the server is busy: tell the group what everyone was doing. If TPS is fine and your $(bold)FPS$() is low, it is your machine: $(l:patchouli:faq/fps)more frames$(). Hold $(bold)Tab$() for the server's TPS and everyone's ping."
+    }
+  ]
+}

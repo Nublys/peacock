@@ -2,7 +2,7 @@
   "name": "Leading a Faction",
   "icon": "minecraft:golden_helmet",
   "category": "patchouli:towns",
-  "sortnum": 8,
+  "sortnum": 13,
   "pages": [
     {
       "type": "patchouli:text",
