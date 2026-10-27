@@ -301,7 +301,7 @@ ENTRIES = {
             smelt("geolosys:smelting/iron_ingot_from_cluster_smelting", "One cluster, one ingot in a furnace. Create's crushing wheels and washing give more per cluster once you have them."),
             txt(B("Where metal lives") + " near the surface:" + LI(B("Everywhere:") + " iron (hematite), copper (malachite), coal, aluminum (bauxite)", B("Mountains:") + " zinc, platinum, beryl", B("Dry country:") + " gold, lapis; " + B("sandy:") + " tin (cassiterite)", B("Plains:") + " lead and silver (galena); " + B("marsh:") + " nickel (limonite)")),
             txt(B("Deep down it evens out.") + " Below about Y -16, in the deepslate, lead and silver, nickel, platinum, tin and gold lie in their own deposits under " + I("every") + " biome: smaller than the regional ones, but a cave that runs deep enough finds them in its walls.",
-                "Deepslate ore also gives one to two clusters a block, not one. The regional deposits are the rich ones; the deep is the road for everyone else."),
+                "Deepslate metal ore also gives one to two clusters a block, not one. The regional deposits are the rich ones; the deep is the road for everyone else."),
         ]),
         ("prospecting", "The Prospector's Pick", "geolosys:prospectors_pick", [
             txt(B("Surface rocks") + " (samples) mean a deposit under that chunk: they lie near the chunk's middle, not straight above the ore, and say nothing about depth. Break one for a cluster of its metal.",
@@ -320,8 +320,10 @@ ENTRIES = {
             txt(LI("Malachite (copper) Y -16 to 90", "Coal Y 34 to 78", "Cassiterite (tin) Y 44 to 68", "Bauxite (aluminum) Y 48 to 65", "Hematite (iron) Y 32 to 60", "Sphalerite (zinc) Y 37 to 46, mountains"), title="Shallow"),
             txt(LI("Lignite (soft coal) Y -4 to 32", "Galena (lead + silver) Y -16 to 32", "Gold Y -64 to 32, dry land", "Platinum Y -25 to 19", "Lapis Y -64 to 64", "Azurite (copper) Y -49 to 13", "Cinnabar (redstone) Y -60 to 15"), title="Middle"),
             txt(LI("Beryl (emerald) Y -56 to 19", "Bituminous coal Y -32 to -16", "Limonite (nickel + iron) Y -48 to -32", "Teallite (tin) Y -52 to -40", "Kimberlite (diamond) Y -64 to 10", "Quartz Y -64 to -48", "Anthracite (hard coal) Y -64 to -52"), title="Deep"),
-            txt(LI("Galena (lead + silver) Y -56 to -16", "Limonite (nickel + iron) Y -60 to -24", "Platinum Y -56 to -20", "Cassiterite (tin) Y -56 to -16", "Gold Y -64 to -24"), "Smaller than the regional deposits, found under any biome.", title="Deep, everywhere"),
-            txt(B("Mining:") + " ore drops " + B("clusters") + ", never raw ore; deepslate ore drops one to two. " + B("Fortune") + " gives more clusters. " + B("Silk Touch") + " gives the ore block itself.",
+            txt(LI("Galena (lead + silver) Y -56 to -16", "Limonite (nickel + iron) Y -56 to -44", "Platinum Y -56 to -20", "Cassiterite (tin) Y -56 to -16", "Gold Y -64 to -24"), "Smaller than the regional deposits, found under any biome.", title="Deep, everywhere"),
+            txt(B("No two deposits are alike.") + " Most are the usual size; about a third are small pockets, worth a quarter to a half of that; about one in ten is a " + B("big strike") + " of two to three times the usual. A small find is not the whole region's luck.",
+                "Deposits only replace stone, so a cave, a dirt bank or the surface takes its bite: what you dig out is often less than the deposit was."),
+            txt(B("Mining:") + " ore drops " + B("clusters") + ", never raw ore; deepslate metal ore drops one to two. " + B("Fortune") + " gives more clusters. " + B("Silk Touch") + " gives the ore block itself.",
                 B("Processing:") + " a cluster smelts to one ingot. A millstone or crushing wheels crush it, and washing (an encased fan through water) turns crushed ore into nuggets with a bonus. Uranium is not in this world."),
         ]),
         ("ores_shallow", "Shallow Ores", "geolosys:malachite_ore", [
@@ -343,7 +345,7 @@ ENTRIES = {
         ("ores_deep", "Deep Ores", "geolosys:limonite_ore", [
             txt(B("Beryl") + " (green): emeralds. Y -56 to 19. Trade, and the Blueprint charters.",
                 B("Bituminous coal") + ": Y -32 to -16. Fuel.$(br)" + B("Anthracite") + ": Y -64 to -52. Drops ordinary coal."),
-            txt(B("Limonite") + " (yellow): nickel " + B("and") + " iron. Y -48 to -32 in marshes; Y -60 to -24 anywhere. The only nickel: long-lasting nickel gear, constantan (copper + nickel), invar (iron + nickel). Armorers buy it.",
+            txt(B("Limonite") + " (yellow): nickel " + B("and") + " iron. Y -48 to -32 in marshes; Y -56 to -44 anywhere. The only nickel: long-lasting nickel gear, constantan (copper + nickel), invar (iron + nickel). Armorers buy it.",
                 B("Teallite") + ": tin, in deep dikes shared with beryl. Y -52 to -40."),
             txt(B("Kimberlite") + " (cyan flecks): diamonds. Y -64 to 10.",
                 B("Quartz") + ": nether quartz, here the only source: Geolosys took the Nether's veins too. Y -64 to -48. Rose quartz (with redstone), comparators, observers."),
@@ -371,7 +373,7 @@ ENTRIES = {
         ]),
         ("caving", "What Caves Are For", "minecraft:torch", [
             txt("Geolosys took every vanilla vein, so ore is in deposits, not sprinkled through the stone. Caves are how you reach the deep ones, and the deep pays better:",
-                LI(B("Deep deposits") + " under every biome: lead and silver, nickel, platinum, tin, gold. A deep cave finds them in its walls.", B("Deepslate ore") + " gives one to two clusters a block.")),
+                LI(B("Deep deposits") + " under every biome: lead and silver, nickel, platinum, tin, gold. A deep cave finds them in its walls.", B("Deepslate metal ore") + " gives one to two clusters a block.")),
             txt(LI(B("Mineshafts and dungeons:") + " YUNG's, plus Repurposed Structures' biome versions (icy, desert, jungle, swamp...). Cataclysm's ruins and Ancient Factory.", B("Chests pay more the deeper they are:") + " every underground chest carries ore; below Y 0 it adds the rare metals, below Y -32 diamonds and platinum.")),
             txt(LI(B("Cave goods sell:") + " bounty boards ask for amethyst, glow lichen, dripstone, moss, spore blossoms, sculk and echo shards; the capital's later projects want glow berries, deepslate and amethyst.", B("The deep dark") + " holds the Warden, one of the three holders of the Ender logistics Blueprint (" + L("tech/tier4", "Tier 4") + ").")),
             txt("Rumour maps to the deeper bosses turn up in the same chests. A mineshaft is a good first expedition: wood, rails, chests, and the way to the deposits below.",

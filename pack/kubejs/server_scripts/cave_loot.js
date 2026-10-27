@@ -64,13 +64,13 @@ const DEEP_POOL = [
   ['geolosys:gold_cluster', 8, [1, 3]],
   ['geolosys:platinum_cluster', 6, [1, 2]],
   ['geolosys:tin_cluster', 6, [2, 4]],
-  ['minecraft:diamond', 3, [1, 1]],
+  ['minecraft:diamond', 1, [1, 1]],
   ['minecraft:amethyst_shard', 6, [2, 6]],
 ]
 // below Y -32: one more roll at the best of it
 const DEEPEST_POOL = [
-  ['geolosys:platinum_cluster', 5, [1, 3]],
-  ['minecraft:diamond', 4, [1, 2]],
+  ['geolosys:platinum_cluster', 5, [1, 2]],
+  ['minecraft:diamond', 2, [1, 1]],
   ['geolosys:silver_cluster', 3, [2, 4]],
   ['minecraft:echo_shard', 1, [1, 1]],
 ]
@@ -122,8 +122,9 @@ ServerEvents.chestLootTables(event => {
           pool.addItem(e[0], e[1]).addFunction({ function: 'minecraft:set_count', count: { type: 'minecraft:uniform', min: e[2][0], max: e[2][1] } })
         })
       })
-      addPool(table, [1, 2], DEEP_POOL, below(0))
-      addPool(table, [1, 1], DEEPEST_POOL, below(-32))
+      // 0-1 rolls each: a mineshaft has dozens of chest minecarts, and there are two kinds of mineshaft (2026-10-27)
+      addPool(table, [0, 1], DEEP_POOL, below(0))
+      addPool(table, [0, 1], DEEPEST_POOL, below(-32))
     })
   })
 })

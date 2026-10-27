@@ -57,6 +57,7 @@ Several parts of the pack are generated; edit the generator, not the output, and
 | `tools/gen-advancements.py` | the Peacock achievements tab (`data/peacock/advancements/**` in the pack datapack) | the boss table in the script (must match `kubejs/server_scripts/achievements.js`; `validate.py` checks), `tools/data/journals.json`, the ruin tag in `peacock-ruins.zip` — run after `gen-ruins.py` |
 | `tools/build-launch.sh` | `pack/peacock/launch.jar`, then `dist/Peacock-Prism.zip` via `tools/build-instance.py` | `tools/launch/Launch.java` (needs a JDK ≥ 17) |
 | `tools/build-instance.py` | `dist/Peacock-Prism.zip` — the importable Prism instance (instance.cfg, mmc-pack.json, launch.jar) | the constants in the script |
+| `tools/gen-deposits.py` | every Geolosys deposit in the pack datapack (weights x10, small/normal/large variants, the deep layer); prints the `chunkSkipChance` to set | `tools/data/geolosys-deposits.json` (Geolosys' own definitions + the pack's) and the tables in the script |
 | `tools/apply-profile.py` | a pack copy with one tier's `*.keys` baked into its config files (release workflow, CurseForge zips) | `pack/peacock/profiles/<tier>/` |
 
 After any of them: `cd pack && packwiz refresh && cd .. && python3 tools/validate.py`.

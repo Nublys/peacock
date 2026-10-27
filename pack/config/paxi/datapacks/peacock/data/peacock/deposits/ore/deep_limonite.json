@@ -1,8 +1,8 @@
 {
   "type": "geolosys:deposit_dike",
   "config": {
-    "yMin": -60,
-    "yMax": -24,
+    "yMin": -56,
+    "yMax": -44,
     "baseRadius": 4,
     "biomeTag": "#minecraft:is_overworld",
     "blocks": {
@@ -33,6 +33,6 @@
         "chance": 1.0
       }
     ],
-    "generationWeight": 5
+    "generationWeight": 12
   }
 }

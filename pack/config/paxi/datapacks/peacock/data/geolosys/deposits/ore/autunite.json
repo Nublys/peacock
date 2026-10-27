@@ -34,7 +34,7 @@
     "spread": 6,
     "size": 24,
     "biomeTag": "#minecraft:is_end",
-    "generationWeight": 4
+    "generationWeight": 40
   },
   "_peacock": "Uranium has no use in this pack. Confined to End biomes, where none of its replacement materials (stone, deepslate) exist, so it never generates."
 }

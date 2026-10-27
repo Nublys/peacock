@@ -3,7 +3,7 @@
   "config": {
     "yMin": -64,
     "yMax": -24,
-    "size": 20,
+    "size": 26,
     "biomeTag": "#minecraft:is_overworld",
     "blocks": {
       "default": [
@@ -33,6 +33,6 @@
         "chance": 1.0
       }
     ],
-    "generationWeight": 3
+    "generationWeight": 20
   }
 }

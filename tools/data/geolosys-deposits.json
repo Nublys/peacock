@@ -1,0 +1,936 @@
+{
+ "_comment": "Geolosys 8.0.5 deposit definitions with Peacock's 2026-10 overrides (gold dry-only, sphalerite mountains, hematite, autunite in the End). Input of tools/gen-deposits.py; re-snapshot when Geolosys is updated.",
+ "deposits": {
+  "ore/ancient_debris": {
+   "type": "geolosys:deposit_dike",
+   "config": {
+    "yMin": 8,
+    "yMax": 22,
+    "baseRadius": 3,
+    "biomeTag": "#minecraft:is_nether",
+    "blockStateMatchers": [
+     "minecraft:netherrack",
+     "minecraft:basalt",
+     "minecraft:blackstone",
+     "minecraft:magma_block",
+     "minecraft:lava"
+    ],
+    "blocks": {
+     "default": [
+      {
+       "block": "geolosys:ancient_debris_ore",
+       "chance": 0.6
+      },
+      {
+       "block": null,
+       "chance": 0.4
+      }
+     ]
+    },
+    "samples": [
+     {
+      "block": "geolosys:ancient_debris_ore_sample",
+      "chance": 1.0
+     }
+    ],
+    "generationWeight": 1
+   }
+  },
+  "ore/anthracitic_coal": {
+   "type": "geolosys:deposit_layer",
+   "config": {
+    "yMax": -52,
+    "yMin": -64,
+    "radius": 3,
+    "depth": 4,
+    "biomeTag": "#minecraft:is_overworld",
+    "blocks": {
+     "default": [
+      {
+       "block": "geolosys:anthracite_coal_ore",
+       "chance": 0.65
+      },
+      {
+       "block": null,
+       "chance": 0.35
+      }
+     ],
+     "minecraft:deepslate": [
+      {
+       "block": "geolosys:deepslate_anthracite_coal_ore",
+       "chance": 0.65
+      },
+      {
+       "block": null,
+       "chance": 0.35
+      }
+     ]
+    },
+    "samples": [
+     {
+      "block": "geolosys:anthracite_coal_ore_sample",
+      "chance": 1.0
+     }
+    ],
+    "generationWeight": 4
+   }
+  },
+  "ore/assorted_quartz": {
+   "type": "geolosys:deposit_dike",
+   "config": {
+    "yMin": -64,
+    "yMax": -48,
+    "baseRadius": 7,
+    "biomeTag": "#minecraft:is_overworld",
+    "blocks": {
+     "default": [
+      {
+       "block": "geolosys:quartz_ore",
+       "chance": 1.0
+      }
+     ],
+     "minecraft:deepslate": [
+      {
+       "block": "geolosys:deepslate_quartz_ore",
+       "chance": 1.0
+      }
+     ]
+    },
+    "samples": [
+     {
+      "block": "geolosys:quartz_ore_sample",
+      "chance": 1.0
+     }
+    ],
+    "generationWeight": 6
+   }
+  },
+  "ore/autunite": {
+   "type": "geolosys:deposit_sparse",
+   "config": {
+    "blocks": {
+     "default": [
+      {
+       "block": "geolosys:autunite_ore",
+       "chance": 0.85
+      },
+      {
+       "block": "minecraft:granite",
+       "chance": 0.15
+      }
+     ],
+     "minecraft:deepslate": [
+      {
+       "block": "geolosys:deepslate_autunite_ore",
+       "chance": 0.85
+      },
+      {
+       "block": "minecraft:deepslate_granite",
+       "chance": 0.15
+      }
+     ]
+    },
+    "samples": [
+     {
+      "block": "geolosys:autunite_ore_sample",
+      "chance": 1.0
+     }
+    ],
+    "yMin": 8,
+    "yMax": 33,
+    "spread": 6,
+    "size": 24,
+    "biomeTag": "#minecraft:is_end",
+    "generationWeight": 4
+   },
+   "_peacock": "Uranium has no use in this pack. Confined to End biomes, where none of its replacement materials (stone, deepslate) exist, so it never generates."
+  },
+  "ore/azurite": {
+   "type": "geolosys:deposit_dense",
+   "config": {
+    "blocks": {
+     "default": [
+      {
+       "block": "geolosys:azurite_ore",
+       "chance": 0.85
+      },
+      {
+       "block": null,
+       "chance": 0.15
+      }
+     ],
+     "minecraft:deepslate": [
+      {
+       "block": "geolosys:deepslate_azurite_ore",
+       "chance": 0.85
+      },
+      {
+       "block": null,
+       "chance": 0.15
+      }
+     ]
+    },
+    "samples": [
+     {
+      "block": "geolosys:azurite_ore_sample",
+      "chance": 1.0
+     }
+    ],
+    "yMin": -49,
+    "yMax": 13,
+    "size": 80,
+    "biomeTag": "#minecraft:is_overworld",
+    "generationWeight": 3
+   }
+  },
+  "ore/bauxite": {
+   "type": "geolosys:deposit_dense",
+   "config": {
+    "yMin": 48,
+    "yMax": 65,
+    "size": 25,
+    "biomeTag": "#minecraft:is_overworld",
+    "blocks": {
+     "default": [
+      {
+       "block": "geolosys:bauxite_ore",
+       "chance": 0.9
+      },
+      {
+       "block": null,
+       "chance": 0.1
+      }
+     ],
+     "minecraft:deepslate": [
+      {
+       "block": "geolosys:deepslate_bauxite_ore",
+       "chance": 0.9
+      },
+      {
+       "block": null,
+       "chance": 0.1
+      }
+     ]
+    },
+    "samples": [
+     {
+      "block": "geolosys:bauxite_ore_sample",
+      "chance": 1.0
+     }
+    ],
+    "generationWeight": 2
+   }
+  },
+  "ore/beryl": {
+   "type": "geolosys:deposit_dike",
+   "config": {
+    "yMin": -56,
+    "yMax": 19,
+    "baseRadius": 2,
+    "biomeTag": "#minecraft:is_mountain",
+    "blocks": {
+     "default": [
+      {
+       "block": "geolosys:beryl_ore",
+       "chance": 0.45
+      },
+      {
+       "block": null,
+       "chance": 0.55
+      }
+     ],
+     "minecraft:deepslate": [
+      {
+       "block": "geolosys:deepslate_beryl_ore",
+       "chance": 0.45
+      },
+      {
+       "block": null,
+       "chance": 0.55
+      }
+     ]
+    },
+    "samples": [
+     {
+      "block": "geolosys:beryl_ore_sample",
+      "chance": 1.0
+     }
+    ],
+    "generationWeight": 2
+   }
+  },
+  "ore/bituminous_coal": {
+   "type": "geolosys:deposit_layer",
+   "config": {
+    "yMin": -32,
+    "yMax": -16,
+    "radius": 4,
+    "depth": 5,
+    "biomeTag": "#minecraft:is_overworld",
+    "blocks": {
+     "default": [
+      {
+       "block": "geolosys:bituminous_coal_ore",
+       "chance": 0.55
+      },
+      {
+       "block": null,
+       "chance": 0.45
+      }
+     ],
+     "minecraft:deepslate": [
+      {
+       "block": "geolosys:deepslate_bituminous_coal_ore",
+       "chance": 0.55
+      },
+      {
+       "block": null,
+       "chance": 0.45
+      }
+     ]
+    },
+    "samples": [
+     {
+      "block": "geolosys:bituminous_coal_ore_sample",
+      "chance": 1.0
+     }
+    ],
+    "generationWeight": 5
+   }
+  },
+  "ore/cassiterite": {
+   "type": "geolosys:deposit_dense",
+   "config": {
+    "yMin": 44,
+    "yMax": 68,
+    "size": 24,
+    "density": 1.0,
+    "biomeTag": "#geolosys:is_sandy",
+    "blocks": {
+     "default": [
+      {
+       "block": "geolosys:cassiterite_ore",
+       "chance": 0.75
+      },
+      {
+       "block": null,
+       "chance": 0.25
+      }
+     ],
+     "minecraft:deepslate": [
+      {
+       "block": "geolosys:deepslate_cassiterite_ore",
+       "chance": 0.75
+      },
+      {
+       "block": null,
+       "chance": 0.25
+      }
+     ]
+    },
+    "samples": [
+     {
+      "block": "geolosys:cassiterite_ore_sample",
+      "chance": 1.0
+     }
+    ],
+    "generationWeight": 6
+   }
+  },
+  "ore/cinnabar": {
+   "type": "geolosys:deposit_sparse",
+   "config": {
+    "yMin": -60,
+    "yMax": 15,
+    "size": 64,
+    "spread": 48,
+    "biomeTag": "#minecraft:is_overworld",
+    "blocks": {
+     "default": [
+      {
+       "block": "geolosys:cinnabar_ore",
+       "chance": 1.0
+      }
+     ],
+     "minecraft:deepslate": [
+      {
+       "block": "geolosys:deepslate_cinnabar_ore",
+       "chance": 1.0
+      }
+     ]
+    },
+    "samples": [
+     {
+      "block": "geolosys:cinnabar_ore_sample",
+      "chance": 1.0
+     }
+    ],
+    "generationWeight": 4
+   }
+  },
+  "ore/coal": {
+   "type": "geolosys:deposit_sparse",
+   "config": {
+    "yMin": 34,
+    "yMax": 78,
+    "size": 48,
+    "spread": 48,
+    "biomeTag": "#minecraft:is_overworld",
+    "blocks": {
+     "default": [
+      {
+       "block": "geolosys:coal_ore",
+       "chance": 1.0
+      }
+     ],
+     "minecraft:deepslate": [
+      {
+       "block": "geolosys:deepslate_coal_ore",
+       "chance": 1.0
+      }
+     ]
+    },
+    "samples": [
+     {
+      "block": "geolosys:coal_ore_sample",
+      "chance": 1.0
+     }
+    ],
+    "generationWeight": 6
+   }
+  },
+  "ore/galena": {
+   "type": "geolosys:deposit_sparse",
+   "config": {
+    "yMin": -16,
+    "yMax": 32,
+    "size": 32,
+    "spread": 32,
+    "biomeTag": "#forge:is_plains",
+    "blocks": {
+     "default": [
+      {
+       "block": "geolosys:galena_ore",
+       "chance": 1.0
+      }
+     ],
+     "minecraft:deepslate": [
+      {
+       "block": "geolosys:deepslate_galena_ore",
+       "chance": 1.0
+      }
+     ]
+    },
+    "samples": [
+     {
+      "block": "geolosys:galena_ore_sample",
+      "chance": 1.0
+     }
+    ],
+    "generationWeight": 6
+   }
+  },
+  "ore/gold": {
+   "type": "geolosys:deposit_dense",
+   "config": {
+    "yMin": -64,
+    "yMax": 32,
+    "size": 40,
+    "biomeTag": "#forge:is_dry/overworld",
+    "blocks": {
+     "default": [
+      {
+       "block": "geolosys:gold_ore",
+       "chance": 0.85
+      },
+      {
+       "block": null,
+       "chance": 0.15
+      }
+     ],
+     "minecraft:deepslate": [
+      {
+       "block": "geolosys:deepslate_gold_ore",
+       "chance": 0.85
+      },
+      {
+       "block": null,
+       "chance": 0.15
+      }
+     ]
+    },
+    "samples": [
+     {
+      "block": "geolosys:gold_ore_sample",
+      "chance": 1.0
+     }
+    ],
+    "generationWeight": 6
+   }
+  },
+  "ore/gold_nether": {
+   "type": "geolosys:deposit_dense",
+   "config": {
+    "yMin": 10,
+    "yMax": 40,
+    "size": 35,
+    "blockStateMatchers": [
+     "minecraft:netherrack",
+     "minecraft:basalt",
+     "minecraft:blackstone",
+     "minecraft:magma_block",
+     "minecraft:lava"
+    ],
+    "biomeTag": "#minecraft:is_nether",
+    "blocks": {
+     "default": [
+      {
+       "block": "geolosys:nether_gold_ore",
+       "chance": 0.3
+      },
+      {
+       "block": null,
+       "chance": 0.7
+      }
+     ]
+    },
+    "samples": [
+     {
+      "block": "geolosys:nether_gold_ore_sample",
+      "chance": 1.0
+     }
+    ],
+    "generationWeight": 10
+   }
+  },
+  "ore/hematite": {
+   "type": "geolosys:deposit_dike",
+   "config": {
+    "yMin": 32,
+    "yMax": 60,
+    "baseRadius": 2,
+    "biomeTag": "#minecraft:is_overworld",
+    "blocks": {
+     "default": [
+      {
+       "block": "geolosys:hematite_ore",
+       "chance": 1.0
+      }
+     ],
+     "minecraft:deepslate": [
+      {
+       "block": "geolosys:deepslate_hematite_ore",
+       "chance": 1.0
+      }
+     ]
+    },
+    "samples": [
+     {
+      "block": "geolosys:hematite_ore_sample",
+      "chance": 1.0
+     }
+    ],
+    "generationWeight": 9
+   }
+  },
+  "ore/kimberlite": {
+   "type": "geolosys:deposit_dike",
+   "config": {
+    "yMin": -64,
+    "yMax": 10,
+    "baseRadius": 3,
+    "biomeTag": "#minecraft:is_overworld",
+    "blocks": {
+     "default": [
+      {
+       "block": "geolosys:kimberlite_ore",
+       "chance": 0.5
+      },
+      {
+       "block": null,
+       "chance": 0.5
+      }
+     ],
+     "minecraft:deepslate": [
+      {
+       "block": "geolosys:deepslate_kimberlite_ore",
+       "chance": 0.5
+      },
+      {
+       "block": null,
+       "chance": 0.5
+      }
+     ]
+    },
+    "samples": [
+     {
+      "block": "geolosys:kimberlite_ore_sample",
+      "chance": 1.0
+     }
+    ],
+    "generationWeight": 2
+   }
+  },
+  "ore/lapis": {
+   "type": "geolosys:deposit_sparse",
+   "config": {
+    "yMin": -64,
+    "yMax": 64,
+    "size": 30,
+    "spread": 24,
+    "biomeTag": "#forge:is_dry/overworld",
+    "blocks": {
+     "default": [
+      {
+       "block": "geolosys:lapis_ore",
+       "chance": 1.0
+      }
+     ],
+     "minecraft:deepslate": [
+      {
+       "block": "geolosys:deepslate_lapis_ore",
+       "chance": 1.0
+      }
+     ]
+    },
+    "samples": [
+     {
+      "block": "geolosys:lapis_ore_sample",
+      "chance": 1.0
+     }
+    ],
+    "generationWeight": 5
+   }
+  },
+  "ore/lignite": {
+   "type": "geolosys:deposit_layer",
+   "config": {
+    "yMin": -4,
+    "yMax": 32,
+    "radius": 3,
+    "depth": 4,
+    "biomeTag": "#minecraft:is_overworld",
+    "blocks": {
+     "default": [
+      {
+       "block": "geolosys:lignite_ore",
+       "chance": 0.85
+      },
+      {
+       "block": null,
+       "chance": 0.15
+      }
+     ],
+     "minecraft:deepslate": [
+      {
+       "block": "geolosys:deepslate_lignite_ore",
+       "chance": 0.85
+      },
+      {
+       "block": null,
+       "chance": 0.15
+      }
+     ]
+    },
+    "samples": [
+     {
+      "block": "geolosys:lignite_ore_sample",
+      "chance": 1.0
+     }
+    ],
+    "generationWeight": 7
+   }
+  },
+  "ore/limonite": {
+   "type": "geolosys:deposit_dike",
+   "config": {
+    "yMin": -48,
+    "yMax": -32,
+    "baseRadius": 6,
+    "biomeTag": "#geolosys:is_marshy",
+    "blocks": {
+     "default": [
+      {
+       "block": "geolosys:limonite_ore",
+       "chance": 0.65
+      },
+      {
+       "block": null,
+       "chance": 0.35
+      }
+     ],
+     "minecraft:deepslate": [
+      {
+       "block": "geolosys:deepslate_limonite_ore",
+       "chance": 0.65
+      },
+      {
+       "block": null,
+       "chance": 0.35
+      }
+     ]
+    },
+    "samples": [
+     {
+      "block": "geolosys:limonite_ore_sample",
+      "chance": 1.0
+     }
+    ],
+    "generationWeight": 4
+   }
+  },
+  "ore/malachite": {
+   "type": "geolosys:deposit_dense",
+   "config": {
+    "blocks": {
+     "default": [
+      {
+       "block": "geolosys:malachite_ore",
+       "chance": 0.9
+      },
+      {
+       "block": null,
+       "chance": 0.1
+      }
+     ],
+     "minecraft:deepslate": [
+      {
+       "block": "geolosys:deepslate_malachite_ore",
+       "chance": 0.9
+      },
+      {
+       "block": null,
+       "chance": 0.1
+      }
+     ]
+    },
+    "samples": [
+     {
+      "block": "geolosys:malachite_ore_sample",
+      "chance": 1.0
+     }
+    ],
+    "yMin": -16,
+    "yMax": 90,
+    "size": 45,
+    "biomeTag": "#minecraft:is_overworld",
+    "generationWeight": 6
+   }
+  },
+  "ore/platinum": {
+   "type": "geolosys:deposit_dike",
+   "config": {
+    "yMin": -25,
+    "yMax": 19,
+    "baseRadius": 4,
+    "biomeTag": "#minecraft:is_mountain",
+    "blocks": {
+     "default": [
+      {
+       "block": "geolosys:platinum_ore",
+       "chance": 0.67
+      },
+      {
+       "block": null,
+       "chance": 0.33
+      }
+     ],
+     "minecraft:deepslate": [
+      {
+       "block": "geolosys:deepslate_platinum_ore",
+       "chance": 0.67
+      },
+      {
+       "block": null,
+       "chance": 0.33
+      }
+     ]
+    },
+    "samples": [
+     {
+      "block": "geolosys:platinum_ore_sample",
+      "chance": 1.0
+     }
+    ],
+    "generationWeight": 4
+   }
+  },
+  "ore/sphalerite": {
+   "type": "geolosys:deposit_sparse",
+   "config": {
+    "yMin": 37,
+    "yMax": 46,
+    "spread": 48,
+    "size": 28,
+    "biomeTag": "#minecraft:is_mountain",
+    "blocks": {
+     "default": [
+      {
+       "block": "geolosys:sphalerite_ore",
+       "chance": 1.0
+      }
+     ],
+     "minecraft:deepslate": [
+      {
+       "block": "geolosys:deepslate_sphalerite_ore",
+       "chance": 1.0
+      }
+     ]
+    },
+    "samples": [
+     {
+      "block": "geolosys:sphalerite_ore_sample",
+      "chance": 1.0
+     }
+    ],
+    "generationWeight": 7
+   }
+  },
+  "ore/teallite_and_emerald": {
+   "type": "geolosys:deposit_dike",
+   "config": {
+    "blocks": {
+     "default": [
+      {
+       "block": "geolosys:teallite_ore",
+       "chance": 0.6
+      },
+      {
+       "block": "geolosys:beryl_ore",
+       "chance": 0.15
+      },
+      {
+       "block": null,
+       "chance": 0.25
+      }
+     ],
+     "minecraft:deepslate": [
+      {
+       "block": "geolosys:deepslate_teallite_ore",
+       "chance": 0.6
+      },
+      {
+       "block": "geolosys:deepslate_beryl_ore",
+       "chance": 0.15
+      },
+      {
+       "block": null,
+       "chance": 0.25
+      }
+     ]
+    },
+    "samples": [
+     {
+      "block": "geolosys:teallite_ore_sample",
+      "chance": 1.0
+     }
+    ],
+    "yMin": -52,
+    "yMax": -40,
+    "baseRadius": 6,
+    "biomeTag": "#forge:is_hot/overworld",
+    "generationWeight": 2
+   }
+  },
+  "other/peat": {
+   "type": "geolosys:deposit_top_layer",
+   "config": {
+    "blocks": {
+     "default": [
+      {
+       "block": "geolosys:peat",
+       "chance": 1.0
+      }
+     ]
+    },
+    "samples": [
+     {
+      "block": "geolosys:rhododendron",
+      "chance": 1.0
+     }
+    ],
+    "radius": 4,
+    "depth": 4,
+    "chanceForSample": 0.25,
+    "generationWeight": 3,
+    "biomeTag": "#minecraft:is_overworld",
+    "blockStateMatchers": [
+     "minecraft:dirt",
+     "minecraft:grass_block"
+    ]
+   }
+  },
+  "stone/andesite": {
+   "type": "geolosys:deposit_dense",
+   "config": {
+    "size": 75,
+    "yMin": 2,
+    "yMax": 70,
+    "biomeTag": "#minecraft:is_overworld",
+    "blocks": {
+     "default": [
+      {
+       "block": "minecraft:andesite",
+       "chance": 1.0
+      }
+     ]
+    },
+    "samples": [
+     {
+      "block": null,
+      "chance": 1.0
+     }
+    ],
+    "generationWeight": 2
+   }
+  },
+  "stone/diorite": {
+   "type": "geolosys:deposit_dense",
+   "config": {
+    "size": 75,
+    "yMin": -20,
+    "yMax": 70,
+    "biomeTag": "#minecraft:is_overworld",
+    "blocks": {
+     "default": [
+      {
+       "block": "minecraft:diorite",
+       "chance": 1.0
+      }
+     ]
+    },
+    "samples": [
+     {
+      "block": null,
+      "chance": 1.0
+     }
+    ],
+    "generationWeight": 2
+   }
+  },
+  "stone/granite": {
+   "type": "geolosys:deposit_dense",
+   "config": {
+    "size": 75,
+    "yMin": 2,
+    "yMax": 70,
+    "biomeTag": "#minecraft:is_overworld",
+    "blocks": {
+     "default": [
+      {
+       "block": "minecraft:granite",
+       "chance": 1.0
+      }
+     ]
+    },
+    "samples": [
+     {
+      "block": null,
+      "chance": 1.0
+     }
+    ],
+    "generationWeight": 2
+   }
+  }
+ }
+}

@@ -6,7 +6,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Geolosys took every vanilla vein, so ore is in deposits, not sprinkled through the stone. Caves are how you reach the deep ones, and the deep pays better:$(br2)$(li)$(bold)Deep deposits$() under every biome: lead and silver, nickel, platinum, tin, gold. A deep cave finds them in its walls.$(li)$(bold)Deepslate ore$() gives one to two clusters a block."
+      "text": "Geolosys took every vanilla vein, so ore is in deposits, not sprinkled through the stone. Caves are how you reach the deep ones, and the deep pays better:$(br2)$(li)$(bold)Deep deposits$() under every biome: lead and silver, nickel, platinum, tin, gold. A deep cave finds them in its walls.$(li)$(bold)Deepslate metal ore$() gives one to two clusters a block."
     },
     {
       "type": "patchouli:text",

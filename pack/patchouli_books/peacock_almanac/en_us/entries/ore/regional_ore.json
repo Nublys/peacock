@@ -23,7 +23,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Deep down it evens out.$() Below about Y -16, in the deepslate, lead and silver, nickel, platinum, tin and gold lie in their own deposits under $(italic)every$() biome: smaller than the regional ones, but a cave that runs deep enough finds them in its walls.$(br2)Deepslate ore also gives one to two clusters a block, not one. The regional deposits are the rich ones; the deep is the road for everyone else."
+      "text": "$(bold)Deep down it evens out.$() Below about Y -16, in the deepslate, lead and silver, nickel, platinum, tin and gold lie in their own deposits under $(italic)every$() biome: smaller than the regional ones, but a cave that runs deep enough finds them in its walls.$(br2)Deepslate metal ore also gives one to two clusters a block, not one. The regional deposits are the rich ones; the deep is the road for everyone else."
     }
   ]
 }

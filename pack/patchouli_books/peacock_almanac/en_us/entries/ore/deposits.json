@@ -25,12 +25,16 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(li)Galena (lead + silver) Y -56 to -16$(li)Limonite (nickel + iron) Y -60 to -24$(li)Platinum Y -56 to -20$(li)Cassiterite (tin) Y -56 to -16$(li)Gold Y -64 to -24$(br2)Smaller than the regional deposits, found under any biome.",
+      "text": "$(li)Galena (lead + silver) Y -56 to -16$(li)Limonite (nickel + iron) Y -56 to -44$(li)Platinum Y -56 to -20$(li)Cassiterite (tin) Y -56 to -16$(li)Gold Y -64 to -24$(br2)Smaller than the regional deposits, found under any biome.",
       "title": "Deep, everywhere"
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Mining:$() ore drops $(bold)clusters$(), never raw ore; deepslate ore drops one to two. $(bold)Fortune$() gives more clusters. $(bold)Silk Touch$() gives the ore block itself.$(br2)$(bold)Processing:$() a cluster smelts to one ingot. A millstone or crushing wheels crush it, and washing (an encased fan through water) turns crushed ore into nuggets with a bonus. Uranium is not in this world."
+      "text": "$(bold)No two deposits are alike.$() Most are the usual size; about a third are small pockets, worth a quarter to a half of that; about one in ten is a $(bold)big strike$() of two to three times the usual. A small find is not the whole region's luck.$(br2)Deposits only replace stone, so a cave, a dirt bank or the surface takes its bite: what you dig out is often less than the deposit was."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Mining:$() ore drops $(bold)clusters$(), never raw ore; deepslate metal ore drops one to two. $(bold)Fortune$() gives more clusters. $(bold)Silk Touch$() gives the ore block itself.$(br2)$(bold)Processing:$() a cluster smelts to one ingot. A millstone or crushing wheels crush it, and washing (an encased fan through water) turns crushed ore into nuggets with a bonus. Uranium is not in this world."
     }
   ]
 }
