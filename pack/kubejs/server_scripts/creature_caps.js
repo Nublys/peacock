@@ -22,7 +22,13 @@ let FISH = null
 try { FISH = Java.loadClass('net.minecraft.world.entity.animal.AbstractFish') } catch (e) { console.warn('[peacock] creature caps: ' + e) }
 var fishCounts = {}                   // player uuid → fish within RANGE, refreshed every second
 
-function isFish(e) { return FISH && FISH.isInstance(e) }
+// Java.loadClass gives the class's static side only, so Class.isInstance is not there ("no public instance field or
+// method named isInstance", 2026-10-26, every entity join); Rhino's own instanceof works on it
+const FISH_IDS = { 'minecraft:cod': true, 'minecraft:salmon': true, 'minecraft:tropical_fish': true, 'minecraft:pufferfish': true }
+function isFish(e) {
+  if (!FISH) return false
+  try { return e instanceof FISH } catch (x) { return FISH_IDS[String(e.type)] === true }
+}
 function spared(e) {                  // a fish or otter someone cares about
   if (e.hasCustomName()) return true
   var nbt = e.nbt

@@ -1728,3 +1728,7 @@ just so people can download and import it into modrinth launcher"; "Many of my f
 - **CI fix**: `validate.yml` compared `launch.jar` byte for byte, and the runner's JDK builds different bytes, so every
   push since 2026-10-22 failed. It now compares the class's disassembly with constant-pool numbers stripped.
 - Version 1.1.0 (tag `v1.1.0`): the first tagged release that builds (the v1.0.0 tag predates the workflow).
+- Same day, fix (server log flooding): the fish cap called `isInstance` on the class from `Java.loadClass`, which only
+  exposes the class's static side, so every entity joining the world threw (and the once-a-second fish count too);
+  neither cap was working. Now Rhino's `instanceof`, with a vanilla-fish id list as fallback. The validator rejects
+  `.isInstance(` in server and startup scripts.

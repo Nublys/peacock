@@ -157,10 +157,11 @@ def check_kubejs() -> None:
 
         # Minecraft methods the server's script engine cannot find by name, each seen failing in a server log:
         # Direction.getStepX/Y/Z and Block.getDescriptionId (flint hammer, 2026-10-24), Entity.distanceTo /
-        # distanceToSqr (boss Blueprint drops, 2026-10-24). Client scripts may call them through a fallback.
+        # distanceToSqr (boss Blueprint drops, 2026-10-24), and Class.isInstance on a Java.loadClass result (only the
+        # static side is there; use instanceof — creature caps, 2026-10-26). Client scripts may call them through a fallback.
         if "client_scripts" not in str(f):
             for i, line in enumerate(code, 1):
-                m = re.search(r"\.(getStep[XYZ]|distanceTo|distanceToSqr)\(", line)
+                m = re.search(r"\.(getStep[XYZ]|distanceTo|distanceToSqr|isInstance)\(", line)
                 if m:
                     err(f"{f.relative_to(ROOT)}:{i}: .{m.group(1)}() is not reachable from KubeJS scripts on the server; use x/y/z (or a table)")
 

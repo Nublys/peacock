@@ -1950,7 +1950,7 @@ hash = "bc99db5246b2b571d6a06b00867955f1296966e1dea6dadc256336e9e6cc36aa"
 
 [[files]]
 file = "kubejs/server_scripts/creature_caps.js"
-hash = "61ca00c42deca979bbc745dc15c51ae858aa7c36f4d67b4dd2638ecffe0c3aa6"
+hash = "87d67ee9d902d76f7769f3a108551cdea0296d104a57ea4847e1d59a352a5da1"
 
 [[files]]
 file = "kubejs/server_scripts/dead_capitals.js"
