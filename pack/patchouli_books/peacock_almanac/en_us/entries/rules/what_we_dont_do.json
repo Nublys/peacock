@@ -6,7 +6,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(bold)No minimap.$() The atlas is the map.$(br)$(bold)No fast travel.$() Rails, ships, wagons and roads.$(br)$(bold)No trading halls.$() Villagers trade well where they live well.$(br)$(bold)No block griefing from cannons.$() They hurt mobs and players; the land stays.$(br2)$(bold)No thirst.$() The seasons and the cold are the survival layer: what grows when, and a fire for winter nights."
+      "text": "$(bold)No free minimap.$() The atlas you fill is the map.$(br)$(bold)No fast travel.$() Rails, ships, wagons and roads.$(br)$(bold)No trading halls.$() Villagers trade well where they live well.$(br)$(bold)No block griefing from cannons.$() They hurt mobs and players; the land stays.$(br2)$(bold)No thirst.$() The seasons and the cold are the survival layer: what grows when, and a fire for winter nights."
     },
     {
       "type": "patchouli:text",

@@ -60,8 +60,6 @@ key_create.keyinfo.toolmenu:key.keyboard.left.alt
 key_create.keyinfo.toolbelt:key.keyboard.left.alt
 key_create.keyinfo.rotate_menu:key.keyboard.unknown
 key_supplementaries.keybind.quiver:key.keyboard.v
-key_key.valkyrienskies.ship_down:key.keyboard.v
-key_key.valkyrienskies.ship_cruise:key.keyboard.c
 key_key.voice_chat:key.keyboard.comma
 key_key.voice_chat_settings:key.keyboard.unknown
 key_key.push_to_talk:key.keyboard.right.alt

@@ -42,7 +42,7 @@ Controlify's settings). The Almanac's *Playing with a Controller* page has the f
 ## When something is off
 
 - **Laggy?** Press `F3`. If the *server tick* line shows under 20 TPS, it's the server: tell the group. If FPS
-  is low, it's your machine: lower Distant Horizons' range, then `K` for shaders off. Prism users can also pick
-  a lighter graphics tier with `/peacock profile potato` (or `low`) and relaunch.
+  is low, it's your machine: lower Distant Horizons' range, then `K` for shaders off. Prism users (and Modrinth with the
+  launch hook) can also pick a lighter graphics tier with `/peacock profile potato` (or `low`) and relaunch.
 - **Can't connect / mods missing**: your copy is out of date. Prism: launch again. Modrinth: re-download.
 - **Crashed**: send `logs/latest.log` from the game folder to the group chat.

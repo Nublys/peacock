@@ -7,7 +7,7 @@
     {
       "type": "patchouli:spotlight",
       "item": "map_atlases:atlas",
-      "text": "There is no minimap. $(bold)Map Atlases$() collects maps into one book: craft an atlas from a book and a compass, feed it empty maps, carry it, and it fills as you travel. $(bold)M$() opens it; $(bold)P$() drops a pin where you stand.",
+      "text": "$(bold)Map Atlases$() collects maps into one book: craft an atlas from a book and a compass, feed it empty maps, carry it, and it fills as you travel and shows in the corner. $(bold)M$() opens it; $(bold)P$() drops a pin where you stand.",
       "link_recipe": false,
       "title": "The atlas"
     },

@@ -1752,3 +1752,20 @@ datapack."
 Aaron: "Remove the critters mod." Its otters had been 1.3–2% of the tick in the last profiles. The otter group cap in
 `creature_caps.js` (and its `otterGroup` switch) went with it; the fish cap stays. Almanac pages updated. In existing
 worlds its animals vanish on the next load; the server logs them as unknown entities once.
+
+## Documentation pass (2026-10-27)
+Aaron: "Go through all the readmes, and documentation, to fix any inconsistencies." Fixed against the pack as it is:
+- README: Blueprint tiers (climate control and cooking are Tier 2, not Tier 1; diving added), what each metal is for
+  (tools and armour in every metal; no balloons), ships (Small Ships and Immersive Aircraft, not Valkyrien Skies), the
+  map (the atlas has a corner map when carried; "shared" means the one on the capital's lectern), controls (EMI uses,
+  advancements, F3), the Modrinth guide link, the rolling `.mrpack` on the Releases page.
+- server/README: FTB Chunks force-loading is NEVER (team online only; the Steward covers offline), not ALWAYS; the
+  pregen command as it actually parses (`~ ~` in game, chunk coordinates from the console, `^` refused); Distant
+  Horizons on the server is INTERNAL_SERVER throughout; no Valkyrien Skies physics in the heap or core notes.
+- DEVELOPING: the 1.1.0 status, Rhino traps the validator now checks, the release story with the rolling `.mrpack`,
+  the new scripts, docs and resource pack, and a broken link to the server runbook.
+- Install guides: ~180 mods; `/peacock profile` works in the Modrinth App only with the launch hook.
+- PLAN: Valkyrien Skies items closed; a 1.1.0 section.
+- Almanac: force-loading runs only while the team is online (the page said "while nobody is online"); the atlas's
+  corner map acknowledged ("no free minimap").
+- `defaultoptions/keybindings.txt`: the two Valkyrien Skies keys removed.

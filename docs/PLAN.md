@@ -87,7 +87,7 @@ Still to do (needs playtest data or Phase 3 scripting):
 - Structure spacing (Structory thinning, Cataclysm structure sets) via datapack structure_set overrides
 - ~~Big Cannons block damage~~ decided: off everywhere, entity damage on (`defaultconfigs/createbigcannons-server.toml`)
 - Villager Comfort / Restock Balance numbers after the first market week
-- Create / Valkyrien Skies per-player caps; chunk-loading limits (Phase 5)
+- Create / ~~Valkyrien Skies~~ (removed 2026-10-24) per-player caps; chunk-loading limits (Phase 5)
 - ~~Mowzie's bosses in modded biomes~~ → Phase 3 (Paxi `has_mowzie_structure` tag)
 - **Test:** fresh world on the server — all players spawn in the same CTOV village, server DH LODs
   visible, iron and zinc findable within a session (prospector's pick + samples), a crop planted out
@@ -195,7 +195,7 @@ details below as they get exercised.
 - Distant Horizons server config: LOD generation on the server, distribution to clients,
   rate limits for many clients
 - Villager breeding cap per town: 24 within 48 blocks (`villager_cap.js`, shipped 2026-10-17)
-- Still open, needs play data: Valkyrien Skies per-player ship caps; Create contraption size limits;
+- Still open, needs play data: Create contraption size limits (Valkyrien Skies removed 2026-10-24);
   Mutant Monsters spawn rate per loaded chunk (more players = more chunks)
 - Runbook: start/stop, pack update procedure (bump → snapshot → restart), rollback, how to
   read a Spark report
@@ -295,8 +295,15 @@ and nature answered with sickness and monsters — is never stated in-game; the 
 Tagged at the end of Phase 7: the dead world, the capital, bounty boards, journals, the Rust Belt, atmosphere,
 the 6–8 player performance pass, the in-game profile picker, server manners, the Prism instance and the install
 guides. Everything from Phase 4 on is shipped but **untested in play**; the first real world is the test.
-Open from the plan: Tier 3–4 charter pricing, VS/Create per-player caps, Almanac chapters per stage, villager
+Open from the plan: Tier 3–4 charter pricing, Create per-player caps, Almanac chapters per stage, villager
 trade reactions, FTB Teams Blueprint sharing, Distant Horizons generation threads 2 → 3 if the server gets 8 cores.
+
+## Version 1.1.0 (2026-10-26)
+Since 1.0.0: the capital economy (the Works, service people, the Steward), Animania out for vanilla breeds and
+Naturalist, the flint prospector's hammer, tools, armour and jobs for every metal, Valkyrien Skies out for Small Ships
+and Immersive Aircraft, controller support (Controlify), BetterF3, the Modrinth App download (rolling `.mrpack`) and
+the quick start. Since then: the Ships datapack, Critters and Companions and Recruits' own map are out
+(DECISIONS.md, 2026-10-27).
 
 ## Decisions still open
 1. ~~Season length~~ 16 days per sub-season, crops stop out of season (2026-10-17)

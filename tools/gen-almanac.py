@@ -660,8 +660,8 @@ ENTRIES = {
                 "The capital is claimed by the server. Claim your own place as soon as you have one worth keeping."),
             txt(B("Teams:") + " you are your own team until you make a party. " + B("/ftbteams party create") + " then " + B("/ftbteams party invite <name>") + " shares claims and chests. Allies see and can use your things; they can also be set to only see.",
                 "Up to 200 chunks per team. Nobody needs that many; if you do, you have built a city."),
-            txt(B("Force-loading") + " (shift-click a claimed chunk) keeps it running while nobody is online: crops grow, machines turn, animals eat. " + B("Four chunks per team") + ", hard cap. Enough for one farm or one Create line; not enough for a factory, on purpose.",
-                "The server has one game thread. What you keep loaded while asleep, everybody pays for."),
+            txt(B("Force-loading") + " (shift-click a claimed chunk) keeps it running while you are away, as long as someone on your team is online: crops grow, machines turn. " + B("Four chunks per team") + ", hard cap; while you are all offline, a Steward keeps land running for a fee. Enough for one farm or one Create line; not enough for a factory, on purpose.",
+                "The server has one game thread. What you keep loaded, everybody pays for."),
         ]),
         ("commands", "Commands You Have", "minecraft:command_block", [
             txt(B("/spawn") + " walks you to the capital after a five-second warm-up; one use a minute. " + B("/back") + " returns you to where you died, once, within a while of dying. That is all the teleporting there is.",
@@ -670,7 +670,7 @@ ENTRIES = {
                 "Chat is plain chat; voice is in-game (" + L("tools/voice", "Voice Chat") + ")."),
         ]),
         ("what_we_dont_do", "What We Do Not Do", "minecraft:barrier", [
-            txt(B("No minimap.") + " The atlas is the map.$(br)" + B("No fast travel.") + " Rails, ships, wagons and roads.$(br)" + B("No trading halls.") + " Villagers trade well where they live well.$(br)" + B("No block griefing from cannons.") + " They hurt mobs and players; the land stays.",
+            txt(B("No free minimap.") + " The atlas you fill is the map.$(br)" + B("No fast travel.") + " Rails, ships, wagons and roads.$(br)" + B("No trading halls.") + " Villagers trade well where they live well.$(br)" + B("No block griefing from cannons.") + " They hurt mobs and players; the land stays.",
                 B("No thirst.") + " The seasons and the cold are the survival layer: what grows when, and a fire for winter nights."),
             txt(B("Sleep is a vote:") + " when half the players online are in bed, the night skips; the action bar counts who is sleeping.",
                 B("Tab") + " shows the server's TPS and everyone's ping. Twenty is healthy; if it sits below fifteen while nobody is doing anything unusual, tell the admin what everyone was doing."),
@@ -709,7 +709,7 @@ ENTRIES = {
             txt(B("Advancements") + " (" + B("L") + ") has a " + B("Peacock") + " tab: every boss, the journals, the dead towns, the Blueprint tiers, the towns and the first winter. Bosses count for everyone who fought, not only the one who landed the blow."),
         ]),
         ("atlas", "The Atlas", "map_atlases:atlas", [
-            spot("map_atlases:atlas", "There is no minimap. " + B("Map Atlases") + " collects maps into one book: craft an atlas from a book and a compass, feed it empty maps, carry it, and it fills as you travel. " + B("M") + " opens it; " + B("P") + " drops a pin where you stand.", title="The atlas"),
+            spot("map_atlases:atlas", B("Map Atlases") + " collects maps into one book: craft an atlas from a book and a compass, feed it empty maps, carry it, and it fills as you travel and shows in the corner. " + B("M") + " opens it; " + B("P") + " drops a pin where you stand.", title="The atlas"),
             txt("Mark deposits, villages, docks and boss structures. Different map scales zoom the atlas. A shared atlas on a lectern in the capital is the server's map room.",
                 "Supplementaries' " + B("globe") + " and Create's " + B("schematics") + " are the other two kinds of map: the world's shape, and a build's."),
         ]),

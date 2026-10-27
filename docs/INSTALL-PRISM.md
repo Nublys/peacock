@@ -27,7 +27,7 @@ Leave 6144 on a 16 GB machine; more is not faster.
 
 ## 3. First launch
 
-Launch. A console window shows `[peacock] syncing pack` and then packwiz-installer downloading about 170
+Launch. A console window shows `[peacock] syncing pack` and then packwiz-installer downloading about 180
 mods, the shaders and the resource packs — a few minutes on a normal connection. Then Minecraft starts.
 Every later launch does the same check in a few seconds and only downloads what changed.
 

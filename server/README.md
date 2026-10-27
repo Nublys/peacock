@@ -8,7 +8,7 @@ Everything here is for the host. Players never see this folder.
    `server/pterodactyl/egg-peacock.json`.
 2. **Create the server** from that egg. Allocation: one port (default 25565). Wings opens it
    for TCP **and** UDP, and Simple Voice Chat is configured to share the game port, so no
-   second allocation is needed. Resources for 6–8 players: **8 vCores** (worldgen, DH, physics and GC run beside the
+   second allocation is needed. Resources for 6–8 players: **8 vCores** (worldgen, DH and GC run beside the
    one game thread) and **16 GB**, of which the startup gives Java 75% (`PEACOCK_HEAP_PERCENT` to change); a 24 GB
    container should pin the heap at 12 GB with `PEACOCK_HEAP_PERCENT=50` — a bigger heap only lengthens GC pauses.
    Docker image: `ghcr.io/pterodactyl/yolks:java_17`.
@@ -112,23 +112,23 @@ Marked `side = "server"` in `pack/mods/`, so they install here and never on a cl
 
 - **FTB Chunks + FTB Teams + FTB Library** (both sides) — claims and capped force-loading. Defaults ship in
   `defaultconfigs/ftbchunks/` and are copied into the world's `serverconfig/` on first start: 200 claimed
-  chunks per team, **4 force-loaded** (ALWAYS mode: they keep running while the owner is offline), minimap
+  chunks per team, **4 force-loaded** (`force_load_mode` NEVER: they run only while someone on the team is online;
+  keeping land running offline is the Steward's paid job, `kubejs/server_scripts/steward.js`), FTB's minimap
   forced off for every client, explosions and mob griefing off inside claims. Players claim with `J`.
 - **FTB Essentials** (server) — `defaultconfigs/ftbessentials-server.snbt`: only `/spawn` (60 s cooldown,
   5 s warm-up) and `/back` after a death. Homes, warps, tpa, rtp and the virtual crafting/ender-chest
   commands are off: no fast travel is a design rule. Admin commands (`/tpl`, `/fly`, `/invsee`…) stay.
 - **Chunk Pregenerator** (server) — real-chunk pre-generation. Chunky is out for good (DH 3.3.3 binds to Chunky's
-  API and crashes); DH has no hook into this one. With nobody on, from the console:
+  API and crashes); DH has no hook into this one. Centre it on the capital, not 0,0 (spawn is wherever Village
+  Spawn Point found the capital). Easiest, as an op standing in the capital's square:
   ```
-  pregen start gen radius peacock SQUARE <cx> <cz> 128 minecraft:overworld
+  /pregen start gen radius peacock SQUARE ~ ~ 128 minecraft:overworld
   ```
-  Centre it on the capital, not 0,0: since 2026-10-20 spawn is wherever Village Spawn Point found the capital
-  (the `[Village Spawn Point] Village found!` boot, then the spawn coordinates in the first login line or
-  `/peacock wall`'s log). The mod counts in **chunks** — confirm with `pregen help` whether its centre is chunk
-  coordinates (block ÷ 16) or blocks on the installed version.
-  (radius 128 = 2 km each way, ~65k chunks, a few hours on 8 cores; `pregen taskList` to watch,
-  `pregen stop peacock` to stop, `pregen help` for the exact syntax of the installed version). The mod idles
-  when no task runs.
+  From the console, give the centre in **chunk** coordinates (the capital's block X and Z ÷ 16; a `b` prefix
+  takes blocks instead). `^` does not mean spawn here: it is vanilla's look-relative coordinate and is refused.
+  Radius 128 chunks = 2 km each way, ~65k chunks, a few hours on 8 cores (max 500). `pregen taskList` to watch,
+  `pregen pause` / `pregen resume` around play sessions (the task survives restarts), `pregen stop peacock` to
+  stop. The mod idles when no task runs.
 - **Distant Horizons generation mode** is `INTERNAL_SERVER` (since 2026-10-18): DH asks the *server* to generate
   the chunks it needs for the far horizon, through the normal worker pool, at `generationRequestRateLimit` = 6
   chunks/s per player and backing off when TPS drops. Structures and villages appear on the horizon correctly,
@@ -150,7 +150,7 @@ To change a shipped default after the world exists, edit the file under the worl
 `defaultconfigs/` is only read when that file is missing.
 
 **Heap.** `peacock-start.sh` gives Java 75% of the container (`PEACOCK_HEAP_PERCENT` to change). It was 90%:
-Netty buffers, Valkyrien Skies' physics, metaspace and the JVM itself live outside the heap, and at 90% a
+Netty buffers, metaspace and the JVM itself live outside the heap, and at 90% a
 busy evening gets the container OOM-killed instead of a GC pause. 8 GB container → ~6 GB heap, which is right
 for this mod count; below 8 GB, lower the container's player expectations rather than the percentage.
 
@@ -162,8 +162,9 @@ finally faster single-thread hardware, which is the only thing that moves the ce
 
 ## Distant Horizons on the server
 
-The server builds LODs for every chunk it loads and, on request from a client, generates terrain
-beyond that (`chunkGeneratorMode = "FEATURES"`, 2 threads, `pack/peacock-server/config/DistantHorizons.toml`).
+The server builds LODs for every chunk it loads and, on request from a client, has the server generate
+the chunks beyond that (`chunkGeneratorMode = "INTERNAL_SERVER"`, `pack/peacock-server/config/DistantHorizons.toml`;
+see above).
 Clients request generation only while DH is rendering on their side and the session's generator plan
 is enabled; a new world therefore has **no** far LODs until either players have requested them or you
 pre-generate. Commands (console, or an op in game; the console needs absolute coordinates):

@@ -14,7 +14,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Force-loading$() (shift-click a claimed chunk) keeps it running while nobody is online: crops grow, machines turn, animals eat. $(bold)Four chunks per team$(), hard cap. Enough for one farm or one Create line; not enough for a factory, on purpose.$(br2)The server has one game thread. What you keep loaded while asleep, everybody pays for."
+      "text": "$(bold)Force-loading$() (shift-click a claimed chunk) keeps it running while you are away, as long as someone on your team is online: crops grow, machines turn. $(bold)Four chunks per team$(), hard cap; while you are all offline, a Steward keeps land running for a fee. Enough for one farm or one Create line; not enough for a factory, on purpose.$(br2)The server has one game thread. What you keep loaded, everybody pays for."
     }
   ]
 }

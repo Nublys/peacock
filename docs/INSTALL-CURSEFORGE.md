@@ -45,6 +45,6 @@ Your worlds and screenshots are not involved — this is a server pack.
 ## Changing tier later
 
 Import the zip for the other tier as a new profile. The in-game `/peacock profile` command only works where
-the pre-launch step runs (Prism, Modrinth App); here it will tell you the tier was set, but nothing applies it.
+the pre-launch step runs (Prism, or the Modrinth App with its launch hook); here it will tell you the tier was set, but nothing applies it.
 Your own video and shader settings still work normally: `K` toggles shaders, `O` opens the shader menu, and
 Distant Horizons' radius is the first thing to lower if frames drop.

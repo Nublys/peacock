@@ -112,7 +112,7 @@ hash = "b2650f9832550c94a5f603378cd3080ad11e073b015dce2fc931b3d50310c8c5"
 
 [[files]]
 file = "config/defaultoptions/keybindings.txt"
-hash = "2009728f32b71d4f1ea6b504c6212f9d48622750bfe9544c7752ed23937341e9"
+hash = "0e1819e428bf115f4712869db91d1d64f6e71c2a2e7334ce1ebcc2fceb4794c3"
 
 [[files]]
 file = "config/defaultoptions/options.txt"
@@ -3202,7 +3202,7 @@ hash = "2c2cecf13420521af59b655ff703ce826c35ec416c69e82bc866dfb6527d12fb"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/rules/claims.json"
-hash = "f545eb7191e542fc87a3253660b8c566887590b1dba405938eae51aabf8103d2"
+hash = "4c68d0c01871623de0f6674fb75b64bb63809521ee695660d6e4c48fd26940e6"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/rules/commands.json"
@@ -3214,7 +3214,7 @@ hash = "b9853a45bef072affcbd161da8418f1c0825bfa43e55a6db5473d89111f261da"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/rules/what_we_dont_do.json"
-hash = "4726877b626ee6064732cc4027a7b7bd5308d40f80283ee5675a6b486e863229"
+hash = "d690896c5a12758e3495d6743e335261856fe5bfc7d63cd080ea42805812b762"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/start/animals.json"
@@ -3302,7 +3302,7 @@ hash = "8fff0391a915bc7a2c213781bc44f17a31d99fab03b4acd7e7c5a190db891c37"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/tools/atlas.json"
-hash = "c085cffeaf94120709785d4dd15674561f14d48e244ad2b667ebaf3a72b0f61d"
+hash = "bb0ba421b69691b4fc25d7e2fad5ea369a354a2af1c2f574ad4d246a09ba5c47"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/tools/controller.json"
