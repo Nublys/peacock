@@ -14,7 +14,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Growing it:$() more beds and workstations draw more villagers; Village Expansion lets a town build itself out; guards hold the wall; workers tend the fields.$(br2)Villagers have names (Villager Names). Learn them. The one who sells the thing you need will be gone if the raid gets through."
+      "text": "$(bold)Growing it:$() more beds and workstations draw more villagers; Village Expansion lets a town build itself out; guards hold the wall; workers tend the fields.$(br2)Like all land, the capital only runs while someone is near: its farms, villagers and guards rest while it is empty."
     }
   ]
 }

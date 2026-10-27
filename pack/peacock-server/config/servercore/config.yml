@@ -1,0 +1,9 @@
+# Peacock (2026-10-27): copied over the server's config/servercore/config.yml on every start (pack/peacock-server/).
+# Only the keys the pack sets; ServerCore fills in every other key with its default (and rewrites the file in full).
+# Edit here, not on the server. Takes effect after a restart.
+features:
+  # Stops the server from keeping spawn chunks loaded. Spawn is the capital: it now pauses, like any other land, while
+  # nobody is near it, instead of ticking its villagers, guards and farms forever (23-27% of the tick in every spark
+  # profile, even with everyone elsewhere). kubejs/server_scripts/capital_keepalive.js holds it loaded while a new
+  # world's one-time capital setup runs.
+  disable-spawn-chunks: true

@@ -89,6 +89,7 @@ the startup command copies them over the server root after each sync:
 |---|---|
 | `config/DistantHorizons.toml` | `chunkGeneratorMode = "INTERNAL_SERVER"` — the server's own worker pool generates what DH needs, 6 req/s per player (see the 2026-10-18 hang in DECISIONS) |
 | `config/dynamicview.json` | Dynamic View: simulation 5–10 / view 8–10 around a 36 ms tick |
+| `config/servercore/config.yml` | ServerCore: `disable-spawn-chunks` (the capital pauses when nobody is near; 2026-10-27) |
 | `config/servercore/optimizations.yml` | ServerCore: `fast-biome-lookups` on (2.4% of the tick was biome lookups in mob spawning) |
 
 Voice chat is **not** overridden: edit `config/voicechat/voicechat-server.properties` on the server by
@@ -143,7 +144,10 @@ Marked `side = "server"` in `pack/mods/`, so they install here and never on a cl
 - **ServerCore** (server, 2026-10-27) — Paper-style server patches: chunks that vanilla
   loads synchronously inside the tick are loaded without stalling it (`reduceSyncLoads`), the ticking-chunk list is
   cached (`cacheTickingChunks`), and since 2026-10-27 mob spawning reads biomes the fast way (`fast-biome-lookups`, via
-  `peacock-server/config/servercore/optimizations.yml`). Its **activation range** (far mobs tick once a second, Paper's rules) is off until the
+  `peacock-server/config/servercore/optimizations.yml`). **Spawn chunks are not kept loaded** (`disable-spawn-chunks`,
+  `peacock-server/config/servercore/config.yml`): spawn is the capital, which now pauses like any other land while
+  nobody is near it. Its traders restock the first time they are seen in a new day (`capital_npcs.js`); on a new
+  world `capital_keepalive.js` force-loads the capital until the wall, boards and Clerk are placed. Its **activation range** (far mobs tick once a second, Paper's rules) is off until the
   defaults have been profiled; when it goes on, widen the villager range so the capital stays awake with anyone in it
   and exclude the Recruits / Village Recruits soldiers. The mod writes `config/servercore/*.toml` on first start; the
   dynamic distance settings stay off (Dynamic View does that). No network channel, so clients need nothing.

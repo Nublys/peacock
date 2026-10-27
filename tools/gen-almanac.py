@@ -395,7 +395,7 @@ ENTRIES = {
             txt(B("What makes a town a town") + " here: a bell, beds, and villagers who sleep in them. Several mods check for exactly that. Trading depots, bounty boards and caravan stops all want a real settlement around them.",
                 "A hole in the ground with one librarian is not a town, and the pack will tell you so."),
             txt(B("Growing it:") + " more beds and workstations draw more villagers; Village Expansion lets a town build itself out; guards hold the wall; workers tend the fields.",
-                "Villagers have names (Villager Names). Learn them. The one who sells the thing you need will be gone if the raid gets through."),
+                "Like all land, the capital only runs while someone is near: its farms, villagers and guards rest while it is empty."),
         ]),
         ("villagers", "Villagers Worth Keeping", "minecraft:emerald", [
             txt("Villagers here are people, not vending machines. " + B("Villager Comfort") + ": a villager without a bed, light and food trades badly; a happy village trades well.",

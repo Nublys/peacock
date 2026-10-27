@@ -2625,8 +2625,12 @@ file = "kubejs/server_scripts/capital_boards.js"
 hash = "23d3267a57c50a4a0b982d4d4842d6e0e875eef3b119c31ff353ff7b9a21c2f1"
 
 [[files]]
+file = "kubejs/server_scripts/capital_keepalive.js"
+hash = "12696b801b369c96f16fac471f00156d630b8874c97b66314586aa57a6e1bf27"
+
+[[files]]
 file = "kubejs/server_scripts/capital_npcs.js"
-hash = "7380d14c14234909c242bfb2adbeaafd6c1b2915dfd7f58307737165c7ccd58b"
+hash = "f7919b05bda2a58e0b6558a1b6dc2381e2f00e7271b2211650f4ec6505c42fc9"
 
 [[files]]
 file = "kubejs/server_scripts/capital_projects.js"
@@ -4080,7 +4084,7 @@ hash = "10e7fa45acb61fc953810120a1735a28fedda67ac35d2b956d55a770314b1a71"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/towns/capital.json"
-hash = "3d58f961d5a710e96c60215fe34deb40f89f7277bcfe3f02ec2b076b92918177"
+hash = "4c5bee45c2f49f9fce2c99d1cbab622e13467efce362210924675785873c37e2"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/towns/caravans.json"
@@ -4145,6 +4149,10 @@ hash = "41cda5b8163be6ffd77420da9c6750ef6be5b958fac5b89524cb8529374eebbe"
 [[files]]
 file = "peacock-server/config/dynamicview.json"
 hash = "f22cac22f221bc51031e15445a077a41a468774497bdcf46d8397370924024de"
+
+[[files]]
+file = "peacock-server/config/servercore/config.yml"
+hash = "2f632e4adbf5605db01e69d4a5028044041941297b7c8baa21520ee9ccafb080"
 
 [[files]]
 file = "peacock-server/config/servercore/optimizations.yml"

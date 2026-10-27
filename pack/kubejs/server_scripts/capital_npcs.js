@@ -221,20 +221,34 @@ ServerEvents.commandRegistry(event => {
 })
 
 // ---------------------------------------------------------------- daily restock for the traders
-var lastDay = -1
+// Once a game day, each trading service person's offers are refreshed. Since 2026-10-27 the capital is not always loaded
+// (ServerCore disable-spawn-chunks: it pauses when nobody is near), so a trader is restocked the first time it is seen
+// loaded in a new day, not only at the moment the day turns. Checked once a minute; the day each one was last restocked
+// is kept in server persistentData (uuid -> day), so a restart neither skips nor repeats one.
+const RESTOCKED = 'peacock_npc_restocked'
 ServerEvents.tick(event => {
   var server = event.server
-  if (server.tickCount % 1200 !== 0) return
+  if (server.tickCount % 1200 !== 600) return
   try {
     var day = Math.floor(Number(server.overworld().getLevelData().getDayTime()) / 24000)
-    if (day === lastDay) return
-    var first = lastDay < 0
-    lastDay = day
-    if (first) return
+    var marks = server.persistentData.getCompound(RESTOCKED)
+    var due = {}, any = false
     records(server).forEach(r => {
       var role = global.PEACOCK_ROLES[r.role]
-      if (role && role.trades) server.runCommandSilent('execute in ' + r.dim + ' run data modify entity ' + r.uuid + ' Offers.Recipes[].uses set value 0')
+      if (role && role.trades && (!marks.contains(r.uuid) || marks.getInt(r.uuid) < day)) { due[r.uuid] = r; any = true }
     })
+    if (!any) return
+    var changed = false
+    server.getAllLevels().forEach(level => {
+      level.getEntities().forEach(e => {
+        var id = String(e.uuid), r = due[id]
+        if (!r) return
+        server.runCommandSilent('execute in ' + r.dim + ' run data modify entity ' + id + ' Offers.Recipes[].uses set value 0')
+        marks.putInt(id, day)
+        changed = true
+      })
+    })
+    if (changed) server.persistentData.put(RESTOCKED, marks)
   } catch (e) { console.warn('[peacock] npc restock: ' + e) }
 })
 })()

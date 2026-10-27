@@ -1900,3 +1900,21 @@ chests are mimics. Defaults kept. Repurposed Structures' mineshaft chests get th
 table YUNG's mineshafts already use (`cave_loot.js`). Its Pickaxe Heater smelts ore drops, Geolosys clusters included
 (their smelting recipe), trading Create's crushing bonus for convenience; left as is. Almanac page under Ore &
 Prospecting. Curios (in the pack since Phase 0, required by nothing until now) is now a hard dependency.
+
+## The capital pauses when nobody is near: spawn chunks not kept loaded (2026-10-27)
+Aaron, on an idle-looking log (30 ms ticks): "Look into freezing the capital when no one is near", then "Go ahead".
+Spawn chunks stay loaded and ticking forever, and spawn is the capital: its 54 villagers, 12 guards, NPCs and farms were
+23–27% of the tick in every profile, including one with the only player out exploring.
+- ServerCore `features.disable-spawn-chunks: true` (`pack/peacock-server/config/servercore/config.yml`, server only;
+  ServerCore fills the other keys with defaults). On a dedicated server it drops spawn's region ticket at start-up, so
+  the capital runs only while someone is within range, like any land.
+- Audit of every script touching the capital: courier, undertaker, steward and project building load what they need
+  (forceload); villager restock-on-sleep needs a night with someone near, which is the rule anyway; bounty boards pause
+  their timers. Two fixes:
+  - `capital_npcs.js`: the service traders restocked only if loaded at the moment the day turned. Now a trader is
+    restocked the first time it is seen loaded in a new day (checked once a minute; uuid → day kept in persistentData).
+  - `capital_keepalive.js` (new): a new world's one-time capital jobs (pavilions, wall and gates, Clerk) run seconds
+    after start, when nothing holds the capital loaded. While any of their flags is unset, the capital (spawn ±9
+    chunks, two forceload areas under the 256-chunk limit) is force-loaded, then released when they finish or after
+    ten minutes. No effect on the current world, whose jobs finished long ago.
+- Almanac: the capital, like all land, rests while it is empty.
