@@ -26,7 +26,9 @@ const GROUND = /^minecraft:(grass_block|dirt|coarse_dirt|rooted_dirt|podzol|myce
 const SOFT = /^([a-z0-9_.-]+:[a-z0-9_/.-]*(_leaves|_log|_wood|_sapling|_carpet)|minecraft:(air|cave_air|grass|tall_grass|fern|large_fern|dandelion|poppy|blue_orchid|allium|azure_bluet|red_tulip|orange_tulip|white_tulip|pink_tulip|oxeye_daisy|cornflower|lily_of_the_valley|sunflower|lilac|rose_bush|peony|snow|dead_bush|sweet_berry_bush|pink_petals|vine|glow_lichen|bee_nest|brown_mushroom|red_mushroom|pumpkin|melon))$/
 
 // ---------------------------------------------------------------- the projects
-// needs: [item id or #tag, count, label]
+// needs: [item id or #tag, count, label]. Progress is stored by index (given.<i>), so new needs go at the END of a list.
+// 2026-10-27: cave goods added to the Infirmary (glow berries), the Station (deepslate ballast) and the Lighthouse (amethyst
+// for the lens), so the server's projects send people underground.
 const PROJECTS = [
   { id: 'forge', name: 'The Forge', does: 'a smithy, and the Smith: repairs without XP, anvil penalties cleared, renaming',
     needs: [['minecraft:emerald', 48, 'emeralds'], ['minecraft:stone_bricks', 96, 'stone bricks'], ['minecraft:iron_ingot', 24, 'iron ingots'], ['#minecraft:logs', 32, 'logs']] },
@@ -35,11 +37,11 @@ const PROJECTS = [
   { id: 'market', name: 'The Market', does: 'a market hall with stalls for your shops, and the Exchange Merchant: ore from other regions, saplings, patterns, trims',
     needs: [['minecraft:emerald', 128, 'emeralds'], ['#minecraft:logs', 96, 'logs'], ['minecraft:stone_bricks', 128, 'stone bricks'], ['create:andesite_alloy', 32, 'andesite alloy'], ['#minecraft:wool', 32, 'wool']] },
   { id: 'infirmary', name: 'The Infirmary', does: 'a physician\'s house and a graveyard: the Physician (cures, curing zombie villagers) and the Undertaker (your corpse brought home)',
-    needs: [['minecraft:emerald', 128, 'emeralds'], ['#minecraft:wool', 48, 'wool'], ['minecraft:golden_carrot', 32, 'golden carrots'], ['minecraft:glass', 32, 'glass'], ['minecraft:stone_bricks', 96, 'stone bricks']] },
+    needs: [['minecraft:emerald', 128, 'emeralds'], ['#minecraft:wool', 48, 'wool'], ['minecraft:golden_carrot', 32, 'golden carrots'], ['minecraft:glass', 32, 'glass'], ['minecraft:stone_bricks', 96, 'stone bricks'], ['minecraft:glow_berries', 32, 'glow berries']] },
   { id: 'station', name: 'The Rail Station', does: 'a station on the capital\'s edge, and the Courier: parcels to any player, by rail',
-    needs: [['minecraft:emerald', 192, 'emeralds'], ['minecraft:stone_bricks', 160, 'stone bricks'], ['minecraft:iron_ingot', 64, 'iron ingots'], ['create:andesite_casing', 32, 'andesite casings'], ['create:track', 48, 'train tracks']] },
+    needs: [['minecraft:emerald', 192, 'emeralds'], ['minecraft:stone_bricks', 160, 'stone bricks'], ['minecraft:iron_ingot', 64, 'iron ingots'], ['create:andesite_casing', 32, 'andesite casings'], ['create:track', 48, 'train tracks'], ['minecraft:cobbled_deepslate', 128, 'cobbled deepslate']] },
   { id: 'lighthouse', name: 'The Lighthouse', does: 'a lit tower with a beacon beam you can see from far off, and the Keeper: a compass that always points home',
-    needs: [['minecraft:emerald', 256, 'emeralds'], ['minecraft:stone_bricks', 256, 'stone bricks'], ['minecraft:glass', 48, 'glass'], ['minecraft:iron_block', 9, 'iron blocks'], ['minecraft:glowstone', 16, 'glowstone']] },
+    needs: [['minecraft:emerald', 256, 'emeralds'], ['minecraft:stone_bricks', 256, 'stone bricks'], ['minecraft:glass', 48, 'glass'], ['minecraft:iron_block', 9, 'iron blocks'], ['minecraft:glowstone', 16, 'glowstone'], ['minecraft:amethyst_shard', 32, 'amethyst shards']] },
   { id: 'relight', name: 'Relight a Dead Town', does: 'the nearest abandoned ruin lives again: zombies cleared, its zombie villagers cured, a bell, beds, a bounty board and settlers',
     needs: [['minecraft:emerald', 384, 'emeralds'], ['minecraft:bread', 192, 'bread'], ['minecraft:golden_apple', 16, 'golden apples'], ['#minecraft:beds', 12, 'beds'], ['#minecraft:planks', 128, 'planks']] },
 ]

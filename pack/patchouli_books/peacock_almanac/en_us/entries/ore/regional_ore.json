@@ -19,7 +19,11 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Three metals are tied to terrain$() in this pack:$(li)$(bold)Iron (hematite)$(): everywhere, Y 32 to 60, the most common deposit$(li)$(bold)Zinc (sphalerite)$(): under mountains only, Y 37 to 46$(li)$(bold)Gold$(): dry country only (desert, badlands, savanna), Y -64 to 32$(br2)Everything else follows depth, not biome."
+      "text": "$(bold)Where metal lives$() near the surface:$(li)$(bold)Everywhere:$() iron (hematite), copper (malachite), coal, aluminum (bauxite)$(li)$(bold)Mountains:$() zinc, platinum, beryl$(li)$(bold)Dry country:$() gold, lapis; $(bold)sandy:$() tin (cassiterite)$(li)$(bold)Plains:$() lead and silver (galena); $(bold)marsh:$() nickel (limonite)"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Deep down it evens out.$() Below about Y -16, in the deepslate, lead and silver, nickel, platinum, tin and gold lie in their own deposits under $(italic)every$() biome: smaller than the regional ones, but a cave that runs deep enough finds them in its walls.$(br2)Deepslate ore also gives one to two clusters a block, not one. The regional deposits are the rich ones; the deep is the road for everyone else."
     }
   ]
 }

@@ -11,6 +11,10 @@
     {
       "type": "patchouli:text",
       "text": "$(bold)Distant Horizons$() draws the far terrain. $(bold)ChoiceTheorem's Overhauled Village$() builds the villages (every one a ruin now); $(bold)Streams Reflowing$() the flowing streams; $(bold)Terrain Slabs$() the soft slopes; $(bold)YUNG's$() mineshafts, dungeons and API; $(bold)Structory$() ruins; $(bold)Create Structures$() old workshops.$(br2)$(bold)Village Spawn Point$() puts everyone in the capital."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)YUNG's Extras$() and $(bold)YUNG's Bridges$() add small finds and bridges. $(bold)Repurposed Structures$() adds mineshafts and dungeons in each biome's own style (its villages and surface structures are switched off)."
     }
   ]
 }

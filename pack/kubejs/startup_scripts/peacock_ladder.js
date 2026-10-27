@@ -111,7 +111,7 @@ global.LADDER = {
     story: 'Enchantment as an industry, and dragon\'s breath as a fluid.',
   },
   ender: {
-    name: 'Ender logistics', tier: 4, bosses: ['cataclysm:ender_guardian', 'cataclysm:scylla'], key: 'minecraft:ender_eye',
+    name: 'Ender logistics', tier: 4, bosses: ['cataclysm:ender_guardian', 'cataclysm:scylla', 'minecraft:warden'], key: 'minecraft:ender_eye',
     gates: { outputs: ['minecraft:ender_chest', 'create:portable_storage_interface', 'create:portable_fluid_interface', 'create:item_vault', 'create:stockpile_switch', 'create:content_observer', 'create:smart_chute'] },
     story: 'The lost capital\'s last secret: storage that follows you, and vaults that think.',
   },

@@ -14,6 +14,10 @@
     },
     {
       "type": "patchouli:text",
+      "text": "$(li)$(bold)Deep dark:$() the Warden (ancient cities, deep under mountains)"
+    },
+    {
+      "type": "patchouli:text",
       "text": "$(li)$(bold)Nether:$() Torte (Quartz Kitchen, quartz flats); Radiation Director (Nether Reactor, toxic heap); Ignis (Burning Arena, infernal dunes and ash); Netherite Monstrosity (Soul Blacksmith, withered forest); the Hovering Inferno (summoned at an Infernal Altar with a nether star; loot, not a Blueprint)$(li)$(bold)End:$() Ender Guardian (Ruined Citadel)"
     },
     {

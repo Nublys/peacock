@@ -1827,3 +1827,36 @@ the tick, 2.4% of it biome lookups; Incendium's scheduled clock 3.4%. Aaron: "Ma
   shelter for Cold Sweat). "Just keep things as they are."
 - Also seen: 132 inert Ships spawner markers at X −1520, Z 128 and 60 stuck falling blocks by world 0,0; Incendium's
   `#incendium:other` tag scans markers and falling blocks every tick. Cleanup commands given to Aaron.
+
+## Caving: deep deposits, deeper loot, cave goods, the Warden; Alex's Caves not added (2026-10-27)
+Aaron: "Before I do a pregen how can we improve caving? The lack of ores sucks, so players need a reason to cave." Then,
+from the proposal: "Do 1-4, 6, 7, 8, 9." (5, Lootr, not taken.)
+- **Deep deposits** (`config/paxi/datapacks/peacock/data/peacock/deposits/ore/deep_*.json`, built from Geolosys' own
+  definitions): galena Y -56..-16 (w6), limonite -60..-24 (w5), platinum -56..-20 (w3), cassiterite -56..-16 (w5), gold
+  -64..-24 (w3), all `#minecraft:is_overworld`, smaller than the regional ones. Geolosys picks deposits per chunk by
+  weight (10% of chunks, two picks), so adding weight 22 would have made every regional deposit rarer:
+  `chunkSkipChance` 0.9 → 0.87 keeps the surface rate where it was and the extra attempts go to the deep. Regional
+  identity stays at the surface (zinc mountains, gold dry, galena plains, limonite marsh, platinum mountains).
+- **Deepslate ore yields more**: every Geolosys deepslate ore's loot table (in the pack datapack) drops 1–2 of each
+  cluster before Fortune (redstone and lapis ranges ×1.5). Beryl left alone: emeralds are the currency.
+- **Deeper chests pay better** (`cave_loot.js`): an extra pool below Y 0 (silver, nickel, lead, gold, platinum, tin,
+  diamond, amethyst) and one more roll below Y -32 (platinum, diamond, silver, echo shard), by `location_check` on the
+  chest position. Repurposed Structures' overworld mineshaft and dungeon chests joined the cave chest list.
+- **YUNG's Extras, YUNG's Bridges, Repurposed Structures** added. RS is cut down to overworld mineshafts, overworld
+  dungeons and the ocean ancient city: its 99 other structure biome tags are emptied, its well and nether/end dungeon
+  biome modifiers are `forge:none`, and its explorer-map trades are emptied (maps to structures that never generate
+  would make villagers search for them, a /locate on every trade). Its villages would have broken the capital/ruin
+  design; its nether structures overlap Incendium.
+- **Cave goods in the economy**: bounty objectives for amethyst, glow lichen, dripstone, cobbled deepslate, glow
+  berries, moss, spore blossoms, sculk, echo shards (all boards), deep ore samples (cartographers), glow ink (clerics);
+  capital projects append glow berries (Infirmary), 128 cobbled deepslate (Station), 32 amethyst (Lighthouse), at the
+  END of their lists because progress is stored by index.
+- **The Warden** is the third holder of Ender logistics (ladder, achievements, advancement "Hush" now Blueprint-bearing).
+- **Alex's Caves** was approved on condition of a compatibility check and is **not** added: an open, unresolved issue
+  (AlexsCaves #794) with Tectonic — lava tunnels replace the toxic caves' acid, the Abyssal Chasm rarely generates,
+  toxic/magnetic/forlorn caves go missing for some, the Candy Cavity's shape is overwritten; Tectonic declined to change
+  its noise. Also a 75 MB client download, block-destroying nuclear bombs, and its author recommends no shaders.
+- Almanac: the ore pages were wrong that "everything else follows depth, not biome" (galena is plains, limonite marsh,
+  platinum and beryl mountains, cassiterite sandy, teallite hot, lapis dry); fixed with the deep layer, the caving page
+  rewritten, the Warden in the Bestiary and Tier 4, the new mods listed.
+- Worldgen only reaches new chunks: the server restarts on this pack before the pregen.

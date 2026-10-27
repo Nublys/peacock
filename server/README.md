@@ -119,6 +119,9 @@ Marked `side = "server"` in `pack/mods/`, so they install here and never on a cl
 - **FTB Essentials** (server) — `defaultconfigs/ftbessentials-server.snbt`: only `/spawn` (60 s cooldown,
   5 s warm-up) and `/back` after a death. Homes, warps, tpa, rtp and the virtual crafting/ender-chest
   commands are off: no fast travel is a design rule. Admin commands (`/tpl`, `/fly`, `/invsee`…) stay.
+- **Worldgen changes only reach new chunks.** The deep deposits, Repurposed Structures, YUNG's Extras and Bridges
+  (2026-10-27) exist only in land generated after the server restarted with them; restart on the new pack *before*
+  pregenerating, or the pregen locks in the old ground.
 - **Chunk Pregenerator** (server) — real-chunk pre-generation. Chunky is out for good (DH 3.3.3 binds to Chunky's
   API and crashes); DH has no hook into this one. Centre it on the capital, not 0,0 (spawn is wherever Village
   Spawn Point found the capital). Easiest, as an op standing in the capital's square:

@@ -6,7 +6,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(li)$(bold)The Harbinger$() and $(bold)Ignis$(): $(bold)Arcane industry$(), enchantment as a factory, dragon's breath as a fluid.$(li)$(bold)Ender Guardian$() (the End) and $(bold)Scylla$() (warm ocean): $(bold)Ender logistics$(), ender chests, portable interfaces, item vaults."
+      "text": "$(li)$(bold)The Harbinger$() and $(bold)Ignis$(): $(bold)Arcane industry$(), enchantment as a factory, dragon's breath as a fluid.$(li)$(bold)Ender Guardian$() (the End), $(bold)Scylla$() (warm ocean) and the $(bold)Warden$() (the deep dark): $(bold)Ender logistics$(), ender chests, portable interfaces, item vaults."
     },
     {
       "type": "patchouli:text",

@@ -107,8 +107,9 @@ see — hematite, limonite, sphalerite, cassiterite — are the real ones for th
 Almanac has the table. Every metal makes tools and armour, and each has a job besides: tin makes bronze and
 lanterns, lead is shot and pipes, silver, nickel and gold mix into electrum, constantan and invar, aluminum makes
 aircraft hulls and propellers, platinum engines and precision mechanisms, and smiths and clerics buy them for
-emeralds. Caves have no ore in the walls, so caving is for what people left behind:
-mineshafts, dungeons, the ruins under the hills, and their chests, which do carry ore.
+emeralds. Deep down it evens out: below about Y -16, lead, silver, nickel, platinum, tin and gold lie in smaller
+deposits under every biome, deepslate ore drops extra, and underground chests pay more the deeper they are. Caves are also
+where the mineshafts, dungeons and ancient cities are, and the Warden in the deep dark holds a Blueprint.
 
 ### Blueprints: how technology comes back
 The old world's machines are gone, and every piece is held by a boss. The recipes exist — you can see

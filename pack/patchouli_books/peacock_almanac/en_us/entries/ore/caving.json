@@ -6,11 +6,15 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Caves have $(bold)no ore in the walls$(): Geolosys took every vanilla vein. So why go down? Two reasons.$(br2)The $(bold)deep deposits$() only exist there: galena, azurite, cinnabar, kimberlite, beryl, limonite, anthracite. Their samples sit on cave floors the way surface samples sit on grass."
+      "text": "Geolosys took every vanilla vein, so ore is in deposits, not sprinkled through the stone. Caves are how you reach the deep ones, and the deep pays better:$(br2)$(li)$(bold)Deep deposits$() under every biome: lead and silver, nickel, platinum, tin, gold. A deep cave finds them in its walls.$(li)$(bold)Deepslate ore$() gives one to two clusters a block."
     },
     {
       "type": "patchouli:text",
-      "text": "And the $(bold)places$(): mineshafts and dungeons (YUNG's, rebuilt for every biome), Cataclysm's ruins and its Ancient Factory.$(br2)Every chest down there carries ore: clusters of iron, copper, zinc, gold and the rarer metals, coal, lapis, redstone, and sometimes a prospector's pick. The deeper the place, the more it pays."
+      "text": "$(li)$(bold)Mineshafts and dungeons:$() YUNG's, plus Repurposed Structures' biome versions (icy, desert, jungle, swamp...). Cataclysm's ruins and Ancient Factory.$(li)$(bold)Chests pay more the deeper they are:$() every underground chest carries ore; below Y 0 it adds the rare metals, below Y -32 diamonds and platinum."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Cave goods sell:$() bounty boards ask for amethyst, glow lichen, dripstone, moss, spore blossoms, sculk and echo shards; the capital's later projects want glow berries, deepslate and amethyst.$(li)$(bold)The deep dark$() holds the Warden, one of the three holders of the Ender logistics Blueprint ($(l:patchouli:tech/tier4)Tier 4$())."
     },
     {
       "type": "patchouli:text",

@@ -7,6 +7,10 @@
 // pool of clusters (the same items the deposits drop), coal, and now and then a prospector's pick, plus
 // a smaller pool of supplies (torches, rope, rails, bread, powder) so a chest is never only ore. The
 // tables' own pools (tools, books, golden apples, horse armor...) are untouched.
+// 2026-10-27, Aaron ("players need a reason to cave"): deeper chests pay better. A chest below Y 0 rolls an extra
+// pool of the rare and deep metals, and one below Y -32 a further roll at diamonds and platinum (loot condition
+// location_check on the chest's own position, so the same mineshaft pays more where it runs deep). Repurposed
+// Structures' overworld mineshafts and dungeons are cave chests too.
 // Switch: "caveLoot" in kubejs/config/peacock.json.
 
 ;(() => {
@@ -52,6 +56,26 @@ const SUPPLY_POOL = [
   ['geolosys:field_manual', 1, [1, 1]],
 ]
 
+// below Y 0: the metals the deep deposits hold, and the rarer ones; item, weight, [min, max]
+const DEEP_POOL = [
+  ['geolosys:silver_cluster', 10, [1, 3]],
+  ['geolosys:nickel_cluster', 10, [1, 3]],
+  ['geolosys:lead_cluster', 8, [2, 4]],
+  ['geolosys:gold_cluster', 8, [1, 3]],
+  ['geolosys:platinum_cluster', 6, [1, 2]],
+  ['geolosys:tin_cluster', 6, [2, 4]],
+  ['minecraft:diamond', 3, [1, 1]],
+  ['minecraft:amethyst_shard', 6, [2, 6]],
+]
+// below Y -32: one more roll at the best of it
+const DEEPEST_POOL = [
+  ['geolosys:platinum_cluster', 5, [1, 3]],
+  ['minecraft:diamond', 4, [1, 2]],
+  ['geolosys:silver_cluster', 3, [2, 4]],
+  ['minecraft:echo_shard', 1, [1, 1]],
+]
+const below = y => ({ condition: 'minecraft:location_check', predicate: { position: { y: { max: y } } } })
+
 // table -> [rolls min, rolls max]; deeper and rarer places roll more
 const CAVE_CHESTS = {
   'minecraft:chests/abandoned_mineshaft': [1, 3],
@@ -68,6 +92,18 @@ const CAVE_CHESTS = {
   'betterdungeons:spider_dungeon/chests/egg_room': [1, 2],
   'cataclysm:chests/abandoned': [1, 2],
   'cataclysm:chests/abandoned_treasure': [2, 3],
+}
+// Repurposed Structures' overworld mineshafts and dungeons (the only parts of it the pack keeps)
+;['taiga', 'jungle', 'savanna', 'icy', 'desert', 'ocean', 'swamp', 'birch', 'dark_forest', 'stone'].forEach(b => { CAVE_CHESTS['repurposed_structures:chests/mineshafts/' + b] = [1, 3] })
+;['jungle', 'badlands', 'deep', 'icy', 'desert', 'ocean', 'swamp', 'mushroom', 'snow', 'dark_forest'].forEach(b => { CAVE_CHESTS['repurposed_structures:chests/dungeons/' + b] = [1, 2] })
+function addPool(table, rolls, items, condition) {
+  table.addPool(pool => {
+    pool.setUniformRolls(rolls[0], rolls[1])
+    if (condition) pool.addCondition(condition)
+    items.forEach(e => {
+      pool.addItem(e[0], e[1]).addFunction({ function: 'minecraft:set_count', count: { type: 'minecraft:uniform', min: e[2][0], max: e[2][1] } })
+    })
+  })
 }
 
 ServerEvents.chestLootTables(event => {
@@ -86,6 +122,8 @@ ServerEvents.chestLootTables(event => {
           pool.addItem(e[0], e[1]).addFunction({ function: 'minecraft:set_count', count: { type: 'minecraft:uniform', min: e[2][0], max: e[2][1] } })
         })
       })
+      addPool(table, [1, 2], DEEP_POOL, below(0))
+      addPool(table, [1, 1], DEEPEST_POOL, below(-32))
     })
   })
 })

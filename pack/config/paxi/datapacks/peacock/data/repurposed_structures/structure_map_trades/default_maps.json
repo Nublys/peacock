@@ -1,0 +1,9 @@
+{
+  "villagerMaps": {
+    "minecraft:cartographer": []
+  },
+  "wanderingTraderMap": {
+    "rare": [],
+    "common": []
+  }
+}

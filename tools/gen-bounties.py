@@ -416,12 +416,18 @@ MOD_POOLS = {
         "pk_malachite_sample": obj("geolosys:malachite_ore_sample", 200, 1, 3),
         "pk_cassiterite_sample": obj("geolosys:cassiterite_ore_sample", 250, 1, 3, "UNCOMMON"),
         "pk_sphalerite_sample": obj("geolosys:sphalerite_ore_sample", 300, 1, 3, "UNCOMMON"),
+        # the deep ones: samples of deposits most often found from a cave (2026-10-27)
+        "pk_galena_sample": obj("geolosys:galena_ore_sample", 350, 1, 3, "UNCOMMON"),
+        "pk_limonite_sample": obj("geolosys:limonite_ore_sample", 400, 1, 3, "UNCOMMON"),
+        "pk_platinum_sample": obj("geolosys:platinum_ore_sample", 700, 1, 2, "RARE"),
+        "pk_kimberlite_sample": obj("geolosys:kimberlite_ore_sample", 700, 1, 2, "RARE"),
     },
     "cleric_objs": {
         "pk_glow_goop": obj("naturalist:glow_goop", 300, 2, 6, "UNCOMMON"), "pk_snail_shell": obj("naturalist:snail_shell", 400, 1, 3, "UNCOMMON"),
         "pk_creeper_spores": obj("savage_and_ravage:creeper_spores", 300, 2, 6, "UNCOMMON"),
         "pk_illusionary_dust": obj("illagerinvasion:illusionary_dust", 800, 1, 3, "RARE"),
         "pk_silver_ingot": obj("geolosys:silver_ingot", 500, 1, 4, "UNCOMMON"),
+        "pk_glow_ink_sac": obj("minecraft:glow_ink_sac", 250, 2, 6),
     },
     "cleric_rews": {
         "pk_training_treat": entry("doggytalents:training_treat", 500, 1, 3, "UNCOMMON"),
@@ -459,6 +465,16 @@ ALL_OBJS_EXTRA = {
     # block entries doubled the pack's own
     # precious metal is wanted everywhere (2026-10-21)
     "pk_platinum_ingot": obj("geolosys:platinum_ingot", 1500, 1, 2, "RARE"),
+    # what only caves have (Aaron, 2026-10-27: "players need a reason to cave")
+    "pk_amethyst_shard": obj("minecraft:amethyst_shard", 120, 4, 16),
+    "pk_glow_lichen": obj("minecraft:glow_lichen", 40, 8, 24),
+    "pk_pointed_dripstone": obj("minecraft:pointed_dripstone", 60, 4, 16),
+    "pk_cobbled_deepslate": obj("minecraft:cobbled_deepslate", 15, 32, 64),
+    "pk_glow_berries": obj("minecraft:glow_berries", 40, 8, 24),
+    "pk_moss_block": obj("minecraft:moss_block", 40, 8, 24),
+    "pk_spore_blossom": obj("minecraft:spore_blossom", 600, 1, 2, "UNCOMMON"),
+    "pk_sculk": obj("minecraft:sculk", 150, 4, 12, "UNCOMMON"),
+    "pk_echo_shard": obj("minecraft:echo_shard", 3000, 1, 1, "RARE"),
     **{f"all_obj_{k}": None for k in ("dirt", "cobblestone", "stonebrick", "primary_currency", "zombie", "spider", "creeper", "iron_block")},
 }
 ALL_REWS_EXTRA = {f"all_rew_{k}": None for k in ("arrow", "glow_ink", "prismarine_crystals", "minecart", "axolotl_bucket",

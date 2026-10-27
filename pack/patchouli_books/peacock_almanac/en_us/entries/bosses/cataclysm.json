@@ -55,6 +55,12 @@
       "entity": "cataclysm:ender_guardian",
       "text": "Ender Guardian in the Ruined Citadel (the End). The last fight. Holds $(bold)Ender logistics$(): the lost capital's last secret.",
       "scale": 0.55
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:warden",
+      "text": "The Warden, in the ancient cities of the deep dark. Blind; it hunts by sound. Sneak, or bring friends and a plan. Holds $(bold)Ender logistics$(), the road for those who stay underground.",
+      "scale": 0.5
     }
   ]
 }

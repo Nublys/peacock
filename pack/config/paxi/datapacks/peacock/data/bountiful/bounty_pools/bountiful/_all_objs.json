@@ -325,6 +325,90 @@
    "unitWorth": 1500,
    "rarity": "RARE"
   },
+  "pk_amethyst_shard": {
+   "type": "item",
+   "content": "minecraft:amethyst_shard",
+   "amount": {
+    "min": 4,
+    "max": 16
+   },
+   "unitWorth": 120
+  },
+  "pk_glow_lichen": {
+   "type": "item",
+   "content": "minecraft:glow_lichen",
+   "amount": {
+    "min": 8,
+    "max": 24
+   },
+   "unitWorth": 40
+  },
+  "pk_pointed_dripstone": {
+   "type": "item",
+   "content": "minecraft:pointed_dripstone",
+   "amount": {
+    "min": 4,
+    "max": 16
+   },
+   "unitWorth": 60
+  },
+  "pk_cobbled_deepslate": {
+   "type": "item",
+   "content": "minecraft:cobbled_deepslate",
+   "amount": {
+    "min": 32,
+    "max": 64
+   },
+   "unitWorth": 15
+  },
+  "pk_glow_berries": {
+   "type": "item",
+   "content": "minecraft:glow_berries",
+   "amount": {
+    "min": 8,
+    "max": 24
+   },
+   "unitWorth": 40
+  },
+  "pk_moss_block": {
+   "type": "item",
+   "content": "minecraft:moss_block",
+   "amount": {
+    "min": 8,
+    "max": 24
+   },
+   "unitWorth": 40
+  },
+  "pk_spore_blossom": {
+   "type": "item",
+   "content": "minecraft:spore_blossom",
+   "amount": {
+    "min": 1,
+    "max": 2
+   },
+   "unitWorth": 600,
+   "rarity": "UNCOMMON"
+  },
+  "pk_sculk": {
+   "type": "item",
+   "content": "minecraft:sculk",
+   "amount": {
+    "min": 4,
+    "max": 12
+   },
+   "unitWorth": 150,
+   "rarity": "UNCOMMON"
+  },
+  "pk_echo_shard": {
+   "type": "item",
+   "content": "minecraft:echo_shard",
+   "amount": {
+    "min": 1,
+    "max": 1
+   },
+   "unitWorth": 3000,
+   "rarity": "RARE"
+  },
   "all_obj_dirt": null,
   "all_obj_cobblestone": null,
   "all_obj_stonebrick": null,

@@ -49,6 +49,15 @@
    },
    "unitWorth": 500,
    "rarity": "UNCOMMON"
+  },
+  "pk_glow_ink_sac": {
+   "type": "item",
+   "content": "minecraft:glow_ink_sac",
+   "amount": {
+    "min": 2,
+    "max": 6
+   },
+   "unitWorth": 250
   }
  }
 }

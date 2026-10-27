@@ -39,7 +39,7 @@ const BOSSES = {
   'illageandspillage:freakager': ['freakager', true],
   'illageandspillage:ragno': ['ragno', true],
   'minecraft:elder_guardian': ['elder_guardian', true],
-  'minecraft:warden': ['warden', false],
+  'minecraft:warden': ['warden', true],   // holds Ender logistics since 2026-10-27 (the deep dark's reason to go)
   'minecraft:wither': ['wither', false],
   'minecraft:ender_dragon': ['ender_dragon', false],
 }

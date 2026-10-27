@@ -37,6 +37,46 @@
    },
    "unitWorth": 300,
    "rarity": "UNCOMMON"
+  },
+  "pk_galena_sample": {
+   "type": "item",
+   "content": "geolosys:galena_ore_sample",
+   "amount": {
+    "min": 1,
+    "max": 3
+   },
+   "unitWorth": 350,
+   "rarity": "UNCOMMON"
+  },
+  "pk_limonite_sample": {
+   "type": "item",
+   "content": "geolosys:limonite_ore_sample",
+   "amount": {
+    "min": 1,
+    "max": 3
+   },
+   "unitWorth": 400,
+   "rarity": "UNCOMMON"
+  },
+  "pk_platinum_sample": {
+   "type": "item",
+   "content": "geolosys:platinum_ore_sample",
+   "amount": {
+    "min": 1,
+    "max": 2
+   },
+   "unitWorth": 700,
+   "rarity": "RARE"
+  },
+  "pk_kimberlite_sample": {
+   "type": "item",
+   "content": "geolosys:kimberlite_ore_sample",
+   "amount": {
+    "min": 1,
+    "max": 2
+   },
+   "unitWorth": 700,
+   "rarity": "RARE"
   }
  }
 }

@@ -53,7 +53,7 @@ BOSSES = [
     ("freakager", "Freak Out", "Defeat a Freakager", "minecraft:rotten_flesh", "goal", "illageandspillage:freakager", True),
     ("ragno", "Unwebbed", "Defeat Ragno", "minecraft:cobweb", "goal", "illageandspillage:ragno", True),
     ("elder_guardian", "Old Eyes", "Defeat an Elder Guardian", "minecraft:sponge", "goal", "minecraft:elder_guardian", True),
-    ("warden", "Hush", "Defeat a Warden", "minecraft:sculk_shrieker", "challenge", "minecraft:warden", False),
+    ("warden", "Hush", "Defeat a Warden", "minecraft:sculk_shrieker", "challenge", "minecraft:warden", True),
     ("wither", "Unwithered", "Defeat the Wither", "minecraft:nether_star", "challenge", "minecraft:wither", False),
     ("ender_dragon", "The Last Line", "Defeat the Ender Dragon", "minecraft:dragon_head", "challenge", "minecraft:ender_dragon", False),
 ]

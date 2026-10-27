@@ -220,7 +220,7 @@ hash = "ef8aea667f7fc9fa6651c40a9cffab47f1cad1fb1b0039c7eb2307c7651e2b30"
 
 [[files]]
 file = "config/geolosys-common.toml"
-hash = "5c38b21f406a5e213505d5a04d4087516ace3140d474fa8f736966bb255de970"
+hash = "dbd01ca1624de4b900f7b515812889c92926e3993260d5b22c652b1860e002ca"
 
 [[files]]
 file = "config/guardvillagers-client.toml"
@@ -321,7 +321,7 @@ hash = "13f7e543aef10672c4481b15dea47491b57de458254bfba43335bfa7556234cd"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/bountiful/bounty_pools/bountiful/_all_objs.json"
-hash = "8d1b360b7e8ae15e00c5fca04ec1230bc0ab4c9f9aeae53544d9e218624bc3da"
+hash = "d4a584e70782098875ade3cdfed09cc6383a59493e5a633ff668b6ca4b65d5cb"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/bountiful/bounty_pools/bountiful/_all_rews.json"
@@ -349,7 +349,7 @@ hash = "bc0ea465856113524b6f8365bffe96903a5a61a6e770f2b5497d9bc10fc6efec"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/bountiful/bounty_pools/bountiful/cleric_objs.json"
-hash = "1287d4cd9baa9ebabb248b43137c3033bcc8f65889057e85a9029b175a7391c3"
+hash = "3da62feae6a8d5dc6ec44861b73117d6b1fb563ba7817ce60c4713f047c52ac4"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/bountiful/bounty_pools/bountiful/cleric_rews.json"
@@ -405,7 +405,7 @@ hash = "676b04c95161866a70cfe49e49753db689d5ebd1d877b49fe83ed41f779b3de1"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/bountiful/bounty_pools/bountiful/mapper_objs.json"
-hash = "8b5294ecf27df694378c8d4661e1cfe18a21ee13be2ef970fc8916893cd2f002"
+hash = "896f4e0e1e7ebd3c3979db3ed0acd8fa2c28a1f1e831ad59be53a706a6691fb8"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/bountiful/bounty_pools/bountiful/mapper_rews.json"
@@ -573,7 +573,79 @@ hash = "cb15d6c6626d870d14ddff6bb32e54f68e66792d39a1dc071f8139091d12af55"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/geolosys/loot_tables/blocks/deepslate_anthracite_coal_ore.json"
-hash = "bde0a8da0bf1c8e46ee0fd0249e25538c25ab76695b3889afbf442deeba92f48"
+hash = "f07e23e7737b402271ce3cd7233367515a11841da655e253e53ecb5aaa8865b7"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/geolosys/loot_tables/blocks/deepslate_azurite_ore.json"
+hash = "b0f1718276239366b741e4f78897f8d2cac58a3d6790ba145f366ff16f4cfabc"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/geolosys/loot_tables/blocks/deepslate_bauxite_ore.json"
+hash = "bfab05df894cb3003338fb37ee4431dc8900df6c920062fb9b888518c2f19e45"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/geolosys/loot_tables/blocks/deepslate_bituminous_coal_ore.json"
+hash = "bbd295a4d29a166246d6336a6375428391baf445f6694c9484ad7a7af6560b1e"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/geolosys/loot_tables/blocks/deepslate_cassiterite_ore.json"
+hash = "0b56c64df0dc0892fd23075b2653a62adccffe1c8a25cc454a61532d7523167d"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/geolosys/loot_tables/blocks/deepslate_cinnabar_ore.json"
+hash = "f128d073efb55c8dc302a0177612d14e3ef73e6880a09f756d74747b1ca0a54f"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/geolosys/loot_tables/blocks/deepslate_coal_ore.json"
+hash = "ad23647515f4ef56f4cea06fb078a7c7cfe1ca7feb57259cc3a0b1d9e3e39dea"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/geolosys/loot_tables/blocks/deepslate_galena_ore.json"
+hash = "cc65463643dba6e4238335fe87c6587d24769e33d1928d509b7565df07ee2e33"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/geolosys/loot_tables/blocks/deepslate_gold_ore.json"
+hash = "fd8d93e461f33d1f0125570159da7b8183b34c80635b660018db9632b3a09e74"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/geolosys/loot_tables/blocks/deepslate_hematite_ore.json"
+hash = "c62d31f1da964c3578098ac372a9bfe980ab1ba661b4186276de12974a0b17d2"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/geolosys/loot_tables/blocks/deepslate_kimberlite_ore.json"
+hash = "517b6b1a27b511d22eb4bea76d10823a16483487fe961c1b8aaf9dc2c4905501"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/geolosys/loot_tables/blocks/deepslate_lapis_ore.json"
+hash = "04d554214195ac16b77da956ac62d29eedded6615251425d1c15e5a9073b97bb"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/geolosys/loot_tables/blocks/deepslate_lignite_ore.json"
+hash = "48813a66c96d04a8ec5f9eaa2e14bc9ea68a6a98008b895addeeb4d68a9f7c57"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/geolosys/loot_tables/blocks/deepslate_limonite_ore.json"
+hash = "80516d8390a5528ee718b640463877158fc6343ef03dcaa1de00f4c3e05f9a06"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/geolosys/loot_tables/blocks/deepslate_malachite_ore.json"
+hash = "6939603356779c8a4c8f10f7d4a84aa07f5ba28010e50cb70443476113a91aae"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/geolosys/loot_tables/blocks/deepslate_platinum_ore.json"
+hash = "1d4e6e6bb309accbfa14686bf8858d9fb5490f156e6566508b4f9483250b2ac0"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/geolosys/loot_tables/blocks/deepslate_quartz_ore.json"
+hash = "8bcf16d1095a06eaea43739c71397e7c721518372cedc99bd39b51dd7e8b6269"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/geolosys/loot_tables/blocks/deepslate_sphalerite_ore.json"
+hash = "01f39263b0f388f5daaea47186da29882d803d8d7c977f52dbd012d0969e4efb"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/geolosys/loot_tables/blocks/deepslate_teallite_ore.json"
+hash = "77fa6b206fef29b8716cd27a652601186b4ffbe1b6fdae75af8775427e2e9a4f"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/incendium/functions/clocks/main.mcfunction"
@@ -806,6 +878,26 @@ hash = "3490b746205efc7f91135e7663a3ccebaa1ada1d753688e38ab6c4b45ff7d52e"
 [[files]]
 file = "config/paxi/datapacks/peacock/data/peacock/cold_sweat/item/insulator/modded_leather.json"
 hash = "04abdc86b407fbc772d73bc4a6a2f7ab6a96e5214c67b63610bcbd0e24cdd186"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/deposits/ore/deep_cassiterite.json"
+hash = "ff5ded3c1d3447366b966ac6e26126c511f83b4b914a4f67fcc01fc18f3a78c7"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/deposits/ore/deep_galena.json"
+hash = "313daf4c43661ad432fdf926295458f0fdb451adbb385548e61ab844a6687f83"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/deposits/ore/deep_gold.json"
+hash = "a3dbe396eedfb1371a5966759b5bc82914b37665b4d7edf1d97879bc2ee0e0f4"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/deposits/ore/deep_limonite.json"
+hash = "9e5e06bb323d667b5b3a596f8b893bf3f61d65231d72c3fe76c7a9d0630cc962"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/peacock/deposits/ore/deep_platinum.json"
+hash = "105872cd767b75d4ab428550f02cc8674a031e1d8407af3d1e45ff66443a1e0a"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/peacock/loot_tables/chests/plunder.json"
@@ -1130,6 +1222,442 @@ hash = "adaddf6df31596003aa03fcac5dec6e755ef4523c92aef4984835de683eb7c26"
 [[files]]
 file = "config/paxi/datapacks/peacock/data/peacock/worldgen/template_pool/war_camp/war_camp.json"
 hash = "b9dcb578a13c41c95a7e4823ecca2b624b8fcd3cfef81aecbfbf13243b4a5063"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/forge/biome_modifier/dungeons/end.json"
+hash = "7952921e9d4106984e0f71cf58e061f812a3fc35d12b7a23d0459ff965ce4618"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/forge/biome_modifier/dungeons/nether.json"
+hash = "7952921e9d4106984e0f71cf58e061f812a3fc35d12b7a23d0459ff965ce4618"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/forge/biome_modifier/wells/badlands.json"
+hash = "7952921e9d4106984e0f71cf58e061f812a3fc35d12b7a23d0459ff965ce4618"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/forge/biome_modifier/wells/cherry.json"
+hash = "7952921e9d4106984e0f71cf58e061f812a3fc35d12b7a23d0459ff965ce4618"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/forge/biome_modifier/wells/forest.json"
+hash = "7952921e9d4106984e0f71cf58e061f812a3fc35d12b7a23d0459ff965ce4618"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/forge/biome_modifier/wells/mossy_stone.json"
+hash = "7952921e9d4106984e0f71cf58e061f812a3fc35d12b7a23d0459ff965ce4618"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/forge/biome_modifier/wells/mushroom.json"
+hash = "7952921e9d4106984e0f71cf58e061f812a3fc35d12b7a23d0459ff965ce4618"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/forge/biome_modifier/wells/nether.json"
+hash = "7952921e9d4106984e0f71cf58e061f812a3fc35d12b7a23d0459ff965ce4618"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/forge/biome_modifier/wells/snow.json"
+hash = "7952921e9d4106984e0f71cf58e061f812a3fc35d12b7a23d0459ff965ce4618"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/structure_map_trades/default_maps.json"
+hash = "c6363cc67f460c2d0d17224e97fbe34ff84acaef716e6c766d4c29aaf857378e"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/ancient_cities/end.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/ancient_cities/nether.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/bastions/underground.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/cities/nether.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/cities/overworld.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/dungeons/end.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/dungeons/nether.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/fortresses/jungle.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/igloos/grassy.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/igloos/mangrove.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/igloos/mushroom.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/igloos/stone.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/mansions/birch.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/mansions/desert.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/mansions/jungle.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/mansions/mangrove.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/mansions/oak.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/mansions/savanna.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/mansions/snowy.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/mansions/taiga.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/mineshafts/crimson.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/mineshafts/end.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/mineshafts/nether.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/mineshafts/warped.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/monuments/desert.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/monuments/icy.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/monuments/jungle.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/monuments/nether.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/outposts/badlands.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/outposts/birch.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/outposts/crimson.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/outposts/desert.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/outposts/end.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/outposts/giant_tree_taiga.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/outposts/icy.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/outposts/jungle.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/outposts/mangrove.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/outposts/nether_brick.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/outposts/oak.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/outposts/snowy.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/outposts/taiga.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/outposts/warped.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/pyramids/badlands.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/pyramids/dark_forest.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/pyramids/end.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/pyramids/flower_forest.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/pyramids/giant_tree_taiga.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/pyramids/icy.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/pyramids/jungle.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/pyramids/mushroom.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/pyramids/nether.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/pyramids/ocean.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/pyramids/snowy.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/ruined_portals/end.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/ruins/land_cold.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/ruins/land_hot.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/ruins/land_icy.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/ruins/land_warm.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/ruins/nether.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/shipwrecks/crimson.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/shipwrecks/end.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/shipwrecks/nether_bricks.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/shipwrecks/warped.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/strongholds/end.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/strongholds/nether.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/temples/nether_basalt.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/temples/nether_crimson.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/temples/nether_soul.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/temples/nether_warped.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/temples/nether_wasteland.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/temples/ocean.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/temples/taiga.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/villages/badlands.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/villages/bamboo.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/villages/birch.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/villages/cherry.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/villages/crimson.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/villages/dark_forest.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/villages/giant_taiga.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/villages/jungle.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/villages/mountains.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/villages/mushroom.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/villages/oak.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/villages/ocean.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/villages/swamp.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/villages/warped.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/wells/badlands.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/wells/cherry.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/wells/forest.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/wells/mossy_stone.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/wells/mushroom.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/wells/nether.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/wells/snow.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/witch_huts/birch.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/witch_huts/dark_forest.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/witch_huts/giant_tree_taiga.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/witch_huts/mangrove.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/witch_huts/oak.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/repurposed_structures/tags/worldgen/biome/has_structure/witch_huts/taiga.json"
+hash = "70e8d4e35357011404c7943e9cb31891664d887ce593c8ea7eec1fee239f51a5"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/sereneseasons/tags/blocks/autumn_crops.json"
@@ -1902,7 +2430,7 @@ hash = "baa612c15ded0547cf13e595bbcd1b5e0f75d59b27b8dd9f19bef130d263fab2"
 
 [[files]]
 file = "kubejs/server_scripts/achievements.js"
-hash = "69a083a40e03bac15cf616f5d4c5360bc3b242b9f82b6ee4583c70902fbc2717"
+hash = "7c7568247f779efe71023c2f87f270f5f1ce390f7d81592c61510cc02ffd5c28"
 
 [[files]]
 file = "kubejs/server_scripts/almanac.js"
@@ -1934,7 +2462,7 @@ hash = "7380d14c14234909c242bfb2adbeaafd6c1b2915dfd7f58307737165c7ccd58b"
 
 [[files]]
 file = "kubejs/server_scripts/capital_projects.js"
-hash = "7ac5696b916989b45c9b98d43c103e79885c1997c9a69372a5ff9b9d2b3f771b"
+hash = "d3a0af3db9a7f8eb69d82070af81cdcb7d186ece23578766fdd1ef51d8bdab75"
 
 [[files]]
 file = "kubejs/server_scripts/capital_services.js"
@@ -1946,7 +2474,7 @@ hash = "e697009f2845fa0aba08b395036ceada159234bf7897765edadbf324ed494982"
 
 [[files]]
 file = "kubejs/server_scripts/cave_loot.js"
-hash = "bc99db5246b2b571d6a06b00867955f1296966e1dea6dadc256336e9e6cc36aa"
+hash = "39ccb5aaa72d7943f8c86015b1c85069f63e61d82ee18f1024752d353c716d90"
 
 [[files]]
 file = "kubejs/server_scripts/creature_caps.js"
@@ -2074,7 +2602,7 @@ hash = "06ffe3554e87d359a65fdc7271afeb5482bb77d90207126cb92d104c876a69df"
 
 [[files]]
 file = "kubejs/startup_scripts/peacock_ladder.js"
-hash = "a3b042bddbea55369e579b44a5d561c99ac071e0b822e9f870c95bcd121d879f"
+hash = "9d494bd9012b360aa3dda6e0783a4a266a728d4e3f3f4723fbcffbd1e1b9b159"
 
 [[files]]
 file = "kubejs/startup_scripts/quiet_join_chat.js"
@@ -2785,6 +3313,11 @@ hash = "ff94210597f5bf032a675a4be94f4707913d2bfacbe9a02a49b6982adf6b749a"
 metafile = true
 
 [[files]]
+file = "mods/repurposed-structures-forge.pw.toml"
+hash = "ac309378909ec0721542e02053438c8b010fd2451a1b0a930a35b32bb7c2f5d0"
+metafile = true
+
+[[files]]
 file = "mods/reworked-locator-bar.pw.toml"
 hash = "fa4e90bb84c3abe05b2336172e3536234a7adff9d07a9c9269d4d088a98bbdb0"
 metafile = true
@@ -2990,6 +3523,16 @@ hash = "4ce517d9069d08501f48e928692dc2f4617980683a2c4521f22c1ec538f34dcc"
 metafile = true
 
 [[files]]
+file = "mods/yungs-bridges.pw.toml"
+hash = "2c40cfe9099281acc57efa8d168dc685fd739cc067afce92c8d4a0697a00b67a"
+metafile = true
+
+[[files]]
+file = "mods/yungs-extras.pw.toml"
+hash = "cbc4a42265c7235d95f596f4d03819d868e002c2b175f2f6bd30420416a7cef2"
+metafile = true
+
+[[files]]
 file = "patchouli_books/peacock_almanac/book.json"
 hash = "911cdbaa2d19c133a682528f5454237559f52887162e77360f6b6fba4b86578a"
 
@@ -3047,7 +3590,7 @@ hash = "af0e6ca67f723d1665a62bad75fc09fc78db58916c52b65b45eba6c45f1b66dd"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/bosses/cataclysm.json"
-hash = "51c39e2f340834753c0ff2eda1eb78c379be1ad82ea55bbc3bda58df2ea84274"
+hash = "b2acb5e2e010f6bce2797e86802fb31679dacbb08ca7d6499cabdf4d608e1c5f"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/bosses/finding.json"
@@ -3071,7 +3614,7 @@ hash = "3e80f3b93aa1e010a1c4d2ead9f90601908b60fb362baa50c9b971690b07af53"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/bosses/where_they_are.json"
-hash = "be5583904de476587e3a1975de2b4950d4ebc87e8b145837fdb4c5b9513b88ed"
+hash = "afd147112af9f97c415be2902ec36ed40d74e8867f48781c8b896cd34fe2768f"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/building/cannons.json"
@@ -3187,15 +3730,15 @@ hash = "e5de9a50b29a81bc011dd78887b1eb6dab21b6adb70c84b8425b60f40ae4bd53"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/mods/world.json"
-hash = "900944678128c9a50008e1d3cddc16e817dcad74ad10b836c7b75e936bd65795"
+hash = "a15052749657ed309def5a87cb1b5f566e3f7c51a23c2ab456d088b96490337f"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/ore/caving.json"
-hash = "9667517d9a0b03dea99824d4af102179621e4e04f4a1c21efe39f2b01e566db1"
+hash = "75592a972ebdf6b4094d635b984c13b842ea26d2f06394cb6793ae0f9041de4f"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/ore/deposits.json"
-hash = "f20eb5808b160c9f8729850de53e3716f6815bdec69dd747b3a8f25912efab46"
+hash = "ba12bf4ef3596afa0f9a1202197aa162a42b89caa256e7d8599e0330831f6029"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/ore/gear.json"
@@ -3207,15 +3750,15 @@ hash = "8838889719c22e7e3b63df3e987089ab14cdc14b324d86be2a4e92eee6204aa3"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/ore/ores_deep.json"
-hash = "963738791f0507830342e4cbf2beb4a70576492b7aac4e62756a916282717d5a"
+hash = "a98594b417d8e922dd66d2af8eb14bb68996a3398298ed5fdd0975eb5ed2ab07"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/ore/ores_middle.json"
-hash = "05a61fba1e602e42af92580973d0d64cda97c654ebe703c5675fa1c872ea0ee1"
+hash = "61652808d22c5a529c54941880ee5c0cfcf2df813ad9ddeb36cdc77c65d7b335"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/ore/ores_shallow.json"
-hash = "791382885655c7cf9f3dc22b288464b33874e1164afd27e63fd712a7980893fe"
+hash = "df57530a86459d5a8b34c9bb22e7c25fed1a0ddc9c57ed111e9d85bf1cccf75a"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/ore/prospecting.json"
@@ -3223,7 +3766,7 @@ hash = "bbea37f4e2973d52569e717424bd5c2f248781d42e42c02e0591c01ce72a5b8e"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/ore/regional_ore.json"
-hash = "d7fa2f467d3689ac2b268687a0ff1d76ff8e5cd656ecdb83ec91a6a28a2bcf0c"
+hash = "1ece48485fe0804f481d52f4efdacfe8ca4424938d7d598b2a9db873a81dd2df"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/rules/claims.json"
@@ -3315,7 +3858,7 @@ hash = "f44d85e88f234f07ab3d6183ca05473760d6f66904d6b02d5c74685598e45308"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/tech/tier4.json"
-hash = "629f142b9a1564d3830dd0866820bc40fc1ecfd1bebc0e11a5871f6d4f9ea258"
+hash = "07ffe51ca318e8da73f1e86e96576aaaf00be21d71fa303a50c793a6594ad50f"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/tech/what_is_locked.json"
