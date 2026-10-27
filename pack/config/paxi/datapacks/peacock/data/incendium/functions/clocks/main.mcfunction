@@ -3,6 +3,8 @@
 # everything they do is Nether-only (Nether biomes and structures). `in minecraft:the_nether` with `distance=0..`
 # keeps them to the Nether. The projectile, item and frost lines stay as Incendium wrote them, so its weapons
 # behave the same everywhere. Re-check this copy when Incendium is updated.
+# 2026-10-27: the two shield lines scanned every entity in every dimension (no type filter) four times a tick for
+# in.cd_shield, a score Incendium only ever sets on players (player/main); they now look at players only.
 # clock: 1t
 
 schedule function incendium:clocks/main 1t replace
@@ -28,6 +30,6 @@ execute as @e[type=#incendium:other, tag=in.ticking_entity] at @s run function i
 execute if entity @a[tag=nbs_borderofli] run function incendium:border_of_life/tick
 
 # shield cloud effect clear
-execute if entity @e[scores={in.cd_shield=1..},predicate=incendium:holding/radiation_shield] run effect clear @e[scores={in.cd_shield=1..},predicate=incendium:holding/radiation_shield] poison
+execute if entity @a[scores={in.cd_shield=1..},predicate=incendium:holding/radiation_shield] run effect clear @a[scores={in.cd_shield=1..},predicate=incendium:holding/radiation_shield] poison
 
-execute if entity @e[scores={in.cd_shield=1..},predicate=incendium:holding/necrotic_shield] run effect clear @e[scores={in.cd_shield=1..},predicate=incendium:holding/necrotic_shield] wither
+execute if entity @a[scores={in.cd_shield=1..},predicate=incendium:holding/necrotic_shield] run effect clear @a[scores={in.cd_shield=1..},predicate=incendium:holding/necrotic_shield] wither

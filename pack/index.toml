@@ -577,7 +577,7 @@ hash = "bde0a8da0bf1c8e46ee0fd0249e25538c25ab76695b3889afbf442deeba92f48"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/incendium/functions/clocks/main.mcfunction"
-hash = "c11531494a15135c8eee760dda7e0d02c98553dac8c381c798f6a95a14c03187"
+hash = "0f55aa824cfdc89a76166e08728464472d68d725e6ae38a2422d71557cd0afe9"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/minecraft/worldgen/structure_set/villages.json"
@@ -3420,6 +3420,10 @@ hash = "41cda5b8163be6ffd77420da9c6750ef6be5b958fac5b89524cb8529374eebbe"
 [[files]]
 file = "peacock-server/config/dynamicview.json"
 hash = "f22cac22f221bc51031e15445a077a41a468774497bdcf46d8397370924024de"
+
+[[files]]
+file = "peacock-server/config/servercore/optimizations.yml"
+hash = "e3e3f2e06d29513ce5bc9f9e6e15be4b765bfc6ded36f8507c183d0050fb4601"
 
 [[files]]
 file = "peacock-server/peacock-start.sh"

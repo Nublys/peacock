@@ -89,6 +89,7 @@ the startup command copies them over the server root after each sync:
 |---|---|
 | `config/DistantHorizons.toml` | `chunkGeneratorMode = "INTERNAL_SERVER"` — the server's own worker pool generates what DH needs, 6 req/s per player (see the 2026-10-18 hang in DECISIONS) |
 | `config/dynamicview.json` | Dynamic View: simulation 5–10 / view 8–10 around a 36 ms tick |
+| `config/servercore/optimizations.yml` | ServerCore: `fast-biome-lookups` on (2.4% of the tick was biome lookups in mob spawning) |
 
 Voice chat is **not** overridden: edit `config/voicechat/voicechat-server.properties` on the server by
 hand (`port=` your dedicated UDP allocation, or `-1` to share the game port) and it stays.
@@ -136,9 +137,10 @@ Marked `side = "server"` in `pack/mods/`, so they install here and never on a cl
   generator into the 16:58 deadlock. The cost: those chunks are real and saved (≈1–2 GB per 2 km radius of
   horizon), and exploring generates terrain for the whole DH radius over time, not just the render distance.
   Pregen first so the area around spawn is already done.
-- **ServerCore** (server, 2026-10-27) — Paper-style server patches, running on its defaults for now: chunks that vanilla
+- **ServerCore** (server, 2026-10-27) — Paper-style server patches: chunks that vanilla
   loads synchronously inside the tick are loaded without stalling it (`reduceSyncLoads`), the ticking-chunk list is
-  cached (`cacheTickingChunks`). Its **activation range** (far mobs tick once a second, Paper's rules) is off until the
+  cached (`cacheTickingChunks`), and since 2026-10-27 mob spawning reads biomes the fast way (`fast-biome-lookups`, via
+  `peacock-server/config/servercore/optimizations.yml`). Its **activation range** (far mobs tick once a second, Paper's rules) is off until the
   defaults have been profiled; when it goes on, widen the villager range so the capital stays awake with anyone in it
   and exclude the Recruits / Village Recruits soldiers. The mod writes `config/servercore/*.toml` on first start; the
   dynamic distance settings stay off (Dynamic View does that). No network channel, so clients need nothing.

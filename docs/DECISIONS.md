@@ -1812,3 +1812,18 @@ Aaron, on the same spark profile (villagers 23%, chunk loading and waiting ~20%)
 - Also answered: Java 17 and the Aikar flags are not the bottleneck (young GC 19 ms every ~50 s, 2.2 of 6 GB used);
   host-level items worth checking are CPU pinning to one socket's physical cores, the CPU governor and turbo, and the
   world living on an SSD.
+
+## ServerCore fast biome lookups; Incendium shield checks on players only (2026-10-27)
+Spark jwwVFKBDk7 (Aaron standing still in the capital, one player, 20.0 TPS, median 42 ms): mob-spawn attempts 6.7% of
+the tick, 2.4% of it biome lookups; Incendium's scheduled clock 3.4%. Aaron: "Make the two changes you recommend."
+- ServerCore `fast-biome-lookups: true`, shipped as `pack/peacock-server/config/servercore/optimizations.yml` (the
+  other three keys at their defaults). Trade-off accepted: near a biome border a mob from the neighbouring biome can
+  spawn a few blocks across it; structure spawns are unaffected.
+- Incendium clock override: the two shield lines scanned every entity in every dimension four times a tick for
+  `in.cd_shield`, a score Incendium only sets on players (`player/main`); `@e` → `@a`.
+- Considered and kept on Aaron's word: Passable Foliage (1.6%, its `isCollisionShapeFullBlock` hook on every block,
+  mostly inside mob spawning). A KubeJS `hasCollision = false` on leaves would cost nothing but empties the leaves'
+  cached collision shape, so they stop blocking rain and snow (rain under trees, snow piling beneath canopies, no
+  shelter for Cold Sweat). "Just keep things as they are."
+- Also seen: 132 inert Ships spawner markers at X −1520, Z 128 and 60 stuck falling blocks by world 0,0; Incendium's
+  `#incendium:other` tag scans markers and falling blocks every tick. Cleanup commands given to Aaron.
