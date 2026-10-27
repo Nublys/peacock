@@ -2815,6 +2815,11 @@ hash = "ba30c5a40ed43a9971d774b47f0f5b2db0ccad6930754e79fc141e7ac8106d1a"
 metafile = true
 
 [[files]]
+file = "mods/servercore.pw.toml"
+hash = "874a064efc37398f5818a38666ea31263bd65ed0478b519b819f7a361bd0893e"
+metafile = true
+
+[[files]]
 file = "mods/simple-voice-chat.pw.toml"
 hash = "3bd4e09190316b4c4901ba9fd822b891e2cf216eb645687458e3547ad13f93f0"
 metafile = true

@@ -136,6 +136,12 @@ Marked `side = "server"` in `pack/mods/`, so they install here and never on a cl
   generator into the 16:58 deadlock. The cost: those chunks are real and saved (≈1–2 GB per 2 km radius of
   horizon), and exploring generates terrain for the whole DH radius over time, not just the render distance.
   Pregen first so the area around spawn is already done.
+- **ServerCore** (server, 2026-10-27) — Paper-style server patches, running on its defaults for now: chunks that vanilla
+  loads synchronously inside the tick are loaded without stalling it (`reduceSyncLoads`), the ticking-chunk list is
+  cached (`cacheTickingChunks`). Its **activation range** (far mobs tick once a second, Paper's rules) is off until the
+  defaults have been profiled; when it goes on, widen the villager range so the capital stays awake with anyone in it
+  and exclude the Recruits / Village Recruits soldiers. The mod writes `config/servercore/*.toml` on first start; the
+  dynamic distance settings stay off (Dynamic View does that). No network channel, so clients need nothing.
 - **Noisium** (server) — optimises the noise and surface stages of chunk generation, the part Terralith and
   Tectonic make expensive; the only real worldgen optimiser on Forge 1.20.1 (C2ME is Fabric-only). Terrain is
   identical with or without it. If generation ever looks wrong or a worldgen crash names `noisium`, remove it

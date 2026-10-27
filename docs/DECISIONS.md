@@ -1792,3 +1792,23 @@ commands all held). Changes, in `tools/gen-almanac.py`:
   line, a bullet or break starts a new one), since a list of short items is taller than its character count says;
   pages that failed were split.
 - Left alone on Aaron's instruction: the Recruits map (`N`) and everything about it on Leading a Faction.
+
+## ServerCore added; Villager Optimizer rejected (2026-10-27)
+Aaron, on the same spark profile (villagers 23%, chunk loading and waiting ~20%): "Install Villager Optimizer", then
+"What about Let me despawn, ServerCore, AI Improvements, GPUBooster?", then "AddServerCore".
+- **Villager Optimizer** (CurseForge, 25 KB, closed source) was added and then decompiled before shipping: its brain
+  interval does nothing, its pathfinding interval calls `navigation.stop()` on every tick but one in a hundred (villagers
+  could not walk, and the brain would re-path every tick), its work step calls `Villager.restock()` every 10 s for any
+  sold-out villager (infinite trades, no bed), its sleep step fakes the slept timestamp. Only its tick-cancelling mode
+  saves anything, by freezing each villager for 2 s at a time. Removed, never committed.
+- **Where's My Brain** was decompiled too: its distance-bucketed `serverAiStep` skipping is sound, but it is a snapshot
+  build that also ships async entity tracking, a regional tick governor and async spawning. Superseded by ServerCore.
+- **ServerCore 1.5.2** (MIT, 19M downloads, Forge build 2024-11) added `side = "server"`: defaults only for now
+  (`reduceSyncLoads`, `cacheTickingChunks`); `fastBiomeLookups`, activation range and the dynamic settings stay off until
+  a profile with it running exists. Activation range is the Paper implementation (villagers wake to work, panic always
+  ticks); when tried, widen the villager range and exclude `recruits:*` and `village_recruits:*` so far garrisons and
+  convoys keep moving.
+- **AI Improvements** (small, 2023): offered, not added. **GPUBooster**: client rendering, nothing for TPS, skipped.
+- Also answered: Java 17 and the Aikar flags are not the bottleneck (young GC 19 ms every ~50 s, 2.2 of 6 GB used);
+  host-level items worth checking are CPU pinning to one socket's physical cores, the CPU governor and turbo, and the
+  world living on an SSD.
