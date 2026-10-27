@@ -10,7 +10,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Bountiful$() posts jobs. $(bold)Doggy Talents$() makes dogs. $(bold)More Mob Variants$() breeds the farm animals; $(bold)Naturalist$() and $(bold)Critters and Companions$() are the wild ones; $(bold)Aquaculture$() (+Delight) fish; $(bold)Farmer's Delight$() the kitchen."
+      "text": "$(bold)Bountiful$() posts jobs. $(bold)Doggy Talents$() makes dogs. $(bold)More Mob Variants$() breeds the farm animals; $(bold)Naturalist$() makes the wild ones; $(bold)Aquaculture$() (+Delight) fish; $(bold)Farmer's Delight$() the kitchen."
     }
   ]
 }

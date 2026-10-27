@@ -186,8 +186,7 @@ ENTRIES = {
             craft("animal_feeding_trough:feeding_trough", "Fill a feeding trough with an animal's breeding food (wheat, seeds, carrots): the animals around it eat and breed on their own."),
             txt(B("A pasture holds 40.") + " Two animals cannot have young while 40 of their kind live within 32 blocks; you are told when it happens. Spread a herd over two pastures, or eat some.",
                 "Every animal is ticked by the server for everyone on it; that is the reason."),
-            txt(B("Wild animals") + " are Naturalist's: deer, boar, bears, lions, elephants, giraffes, zebras, rhinos, alligators, snakes, birds, butterflies and fireflies. Bears defend themselves, snakes bite, vultures circle.",
-                B("Critters and Companions") + " adds the small ones: otters open clams for pearls, ferrets dig up loot, red pandas scare off neutral mobs, and dragonflies and jumping spiders can be tamed."),
+            txt(B("Wild animals") + " are Naturalist's: deer, boar, bears, lions, elephants, giraffes, zebras, rhinos, alligators, snakes, birds, butterflies and fireflies. Bears defend themselves, snakes bite, vultures circle."),
             txt(B("Dogs") + " are Doggy Talents' (" + L("threats/night", "The Night") + "). " + B("Horses") + " pull wagons (" + L("building/wagons", "Wagons") + ").",
                 "Land explored before the animals changed gets its wild animals back the first time someone walks through it again."),
             ent("naturalist:deer", "A deer: wary and fast, and the best meat in the woods.", scale=0.8),
@@ -745,7 +744,7 @@ ENTRIES = {
         ]),
         ("people", "People & Towns", "minecraft:emerald", [
             txt(B("Village Recruits") + " (the base mod) hires soldiers; its " + B("Village Expansion") + " addon gives towns names, factions, politics and growth. " + B("Guard Villagers") + " man the walls. " + B("Villager Workers") + " are hired labour. " + B("Villager Comfort") + ", " + B("Villager Names") + " and sleeping to restock make villagers people."),
-            txt(B("Bountiful") + " posts jobs. " + B("Doggy Talents") + " makes dogs. " + B("More Mob Variants") + " breeds the farm animals; " + B("Naturalist") + " and " + B("Critters and Companions") + " are the wild ones; " + B("Aquaculture") + " (+Delight) fish; " + B("Farmer's Delight") + " the kitchen."),
+            txt(B("Bountiful") + " posts jobs. " + B("Doggy Talents") + " makes dogs. " + B("More Mob Variants") + " breeds the farm animals; " + B("Naturalist") + " makes the wild ones; " + B("Aquaculture") + " (+Delight) fish; " + B("Farmer's Delight") + " the kitchen."),
         ]),
         ("fights", "Fights", "minecraft:iron_sword", [
             txt(B("Better Combat") + " is how swinging works. " + B("Spartan Weaponry") + " and " + B("Spartan Shields") + " are the arsenal; " + B("Musket Mod") + " the guns.",

@@ -19,7 +19,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Wild animals$() are Naturalist's: deer, boar, bears, lions, elephants, giraffes, zebras, rhinos, alligators, snakes, birds, butterflies and fireflies. Bears defend themselves, snakes bite, vultures circle.$(br2)$(bold)Critters and Companions$() adds the small ones: otters open clams for pearls, ferrets dig up loot, red pandas scare off neutral mobs, and dragonflies and jumping spiders can be tamed."
+      "text": "$(bold)Wild animals$() are Naturalist's: deer, boar, bears, lions, elephants, giraffes, zebras, rhinos, alligators, snakes, birds, butterflies and fireflies. Bears defend themselves, snakes bite, vultures circle."
     },
     {
       "type": "patchouli:text",

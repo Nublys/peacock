@@ -1898,7 +1898,7 @@ hash = "cc48e7b6d2c9ccc4375e04f371c53582ebc7fa50f8f366ae097b71feaf9d2aed"
 
 [[files]]
 file = "kubejs/config/peacock.json"
-hash = "80926acc83f1c1ba145ba07a2ec09da40ccdb2a2a9be0ae0d8aba01b20bec026"
+hash = "baa612c15ded0547cf13e595bbcd1b5e0f75d59b27b8dd9f19bef130d263fab2"
 
 [[files]]
 file = "kubejs/server_scripts/achievements.js"
@@ -1950,7 +1950,7 @@ hash = "bc99db5246b2b571d6a06b00867955f1296966e1dea6dadc256336e9e6cc36aa"
 
 [[files]]
 file = "kubejs/server_scripts/creature_caps.js"
-hash = "87d67ee9d902d76f7769f3a108551cdea0296d104a57ea4847e1d59a352a5da1"
+hash = "89a8e92de17e3fd859bdaf322a3afdd07e2d1fa5b9e6d544db7ff096a81641b6"
 
 [[files]]
 file = "kubejs/server_scripts/dead_capitals.js"
@@ -1970,7 +1970,7 @@ hash = "72fcdd041fa14fb62eb09e20cf4d7a75b5588e7035b758eec75f7071cef07182"
 
 [[files]]
 file = "kubejs/server_scripts/herd_cap.js"
-hash = "ba2d333f66a00de5660313994258e30a9f499e9dee6f6d8b41ceaa45a8c0d5c8"
+hash = "3f899e62a48ac06c1e70d23902a5b1688663d0ae677bb1a9a774089566f3e264"
 
 [[files]]
 file = "kubejs/server_scripts/journals.js"
@@ -2042,7 +2042,7 @@ hash = "0e9b4adad084519d84321cd28c1352242c4b2d33efc06ffbd07b4e0afd52de40"
 
 [[files]]
 file = "kubejs/server_scripts/wildlife_reseed.js"
-hash = "05dda7377012075c95874b572a1200cad9a9c6ba6873c5b9037be2d415c3515e"
+hash = "0ea3f95fb14ef5141b90571d2f1b0b6756520e542bb82f86892528f4b960b2f6"
 
 [[files]]
 file = "kubejs/startup_scripts/bossbar_scale.js"
@@ -2322,11 +2322,6 @@ metafile = true
 [[files]]
 file = "mods/creativecore.pw.toml"
 hash = "8abfbd1b229655786c40602f908fece95007ab6c3e04e7a05fa3e785301cbaee"
-metafile = true
-
-[[files]]
-file = "mods/critters-and-companions.pw.toml"
-hash = "10cf81efb7efc162edb060c26a48ffd997eab3d482929b1a84ea62c9be3f36ce"
 metafile = true
 
 [[files]]
@@ -3163,7 +3158,7 @@ hash = "445e30395786cecabf549cf41a255c2fa4b731582c3582ed87de5ec53c123a1c"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/mods/people.json"
-hash = "974e9df679c238c60f715f876e0cc57a3ac954856495daee8245ca6edab84615"
+hash = "f7a41864994bfd0d68ce0d0e5eb6dda75e624eea0afbee0e7256fd34b62ca1d9"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/mods/quality.json"
@@ -3223,7 +3218,7 @@ hash = "4726877b626ee6064732cc4027a7b7bd5308d40f80283ee5675a6b486e863229"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/start/animals.json"
-hash = "0854520f6959e51536411429a0cc3f4f2775be08074a7fae2109cab8b20472ab"
+hash = "17091452d548810e49b24c2af02f2641d1025584aa80b4eedaa939899eff5ff1"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/start/carrying.json"

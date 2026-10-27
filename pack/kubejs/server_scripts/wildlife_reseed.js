@@ -3,7 +3,7 @@
 // Aaron, planning it: "Could you spawn in that new wild life so the already gened stuff isnt bare". Animania replaced
 // the vanilla animals at world generation, so with Animania gone every chunk generated before had its cows, sheep,
 // pigs, chickens, rabbits, goats, foxes and the rest removed with it, and Minecraft only places a biome's animals once,
-// when a chunk is generated. Naturalist and Critters and Companions likewise only appear in new land.
+// when a chunk is generated. Naturalist's animals likewise only appear in new land.
 // So each overworld chunk that was generated before this script existed gets, once, the same pass Minecraft runs when
 // it generates a chunk (NaturalSpawner.spawnMobsForChunkGeneration: the biome's animals, at the biome's density,
 // vanilla and modded alike). It happens when a player first loads the chunk again, two chunks per tick.

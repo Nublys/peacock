@@ -1,7 +1,7 @@
 // Peacock — herd cap: a pasture has room for so many of one animal (2026-10-23).
 //
-// Part of the animal replacement (Animania out, vanilla animals with More Mob Variants' breeds, Naturalist, Critters
-// and Companions, Animal Feeding Trough in). The feeding trough breeds animals on its own, and a thousand cows in one
+// Part of the animal replacement (Animania out, vanilla animals with More Mob Variants' breeds, Naturalist, Animal
+// Feeding Trough in). The feeding trough breeds animals on its own, and a thousand cows in one
 // pen is a thousand entities ticking for everyone on the server. Instead of a house rule ("don't build huge farms"),
 // two animals cannot make a baby when HERD or more of their kind already live within RADIUS blocks; the parents go
 // back to waiting as after any breeding (vanilla's 5-minute cooldown), the food is spent, and anyone nearby is told

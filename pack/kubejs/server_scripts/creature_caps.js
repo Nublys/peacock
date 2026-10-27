@@ -1,22 +1,18 @@
-// Peacock — gentle caps on fish near players and on otter group size (2026-10-24).
+// Peacock — a gentle cap on fish near players (2026-10-24; the otter cap went with Critters and Companions, 2026-10-27).
 //
 // The 2026-10-24 profile (one player, 20 TPS) had ocean fish at 4% of the tick and eight otters at 2%. Aaron: "Make all
-// those changes ... but don't be so aggressive with the mob caps." So both stay common, just not crowded:
+// those changes ... but don't be so aggressive with the mob caps." So fish stay common, just not crowded:
 //   fish:   at most 12 fish (any kind: cod, salmon, tropical, puffer, Aquaculture's) within 128 blocks of a player.
 //           Minecraft's own limit is about 20 per player, and fish come and go constantly (they despawn when far), so
 //           the cap mostly trims the churn. Same scheme as the bat cap (bat_cap.js): counted once a second, and a fish
 //           appearing near a player who already has 12 around is cancelled. Fish from a bucket or with a name are never
 //           touched.
-//   otters: Critters & Companions spawns them in rivers in groups of two to four; a fourth otter within 16 blocks of
-//           three others is cancelled, so groups top out at three. Babies, tamed and named otters are never touched.
-// Switches in kubejs/config/peacock.json: "fishCap" (number, default 12; false = vanilla), "otterGroup" (default 3;
-// false = the mod's own).
+// Switch in kubejs/config/peacock.json: "fishCap" (number, default 12; false = vanilla).
 //
 // Rhino notes (see tools/validate.py): `var` inside functions, no Math constants; event.cancel() last; no distanceTo.
 ;(() => {
 const CFG = (() => { try { return JsonIO.read('kubejs/config/peacock.json') || {} } catch (e) { return {} } })()
 const FISH_MAX = CFG.fishCap === false ? -1 : (typeof CFG.fishCap === 'number' ? CFG.fishCap : 12)
-const OTTER_MAX = CFG.otterGroup === false ? -1 : (typeof CFG.otterGroup === 'number' ? CFG.otterGroup : 3)
 const RANGE = 128
 let FISH = null
 try { FISH = Java.loadClass('net.minecraft.world.entity.animal.AbstractFish') } catch (e) { console.warn('[peacock] creature caps: ' + e) }
@@ -29,7 +25,7 @@ function isFish(e) {
   if (!FISH) return false
   try { return e instanceof FISH } catch (x) { return FISH_IDS[String(e.type)] === true }
 }
-function spared(e) {                  // a fish or otter someone cares about
+function spared(e) {                  // a fish someone cares about
   if (e.hasCustomName()) return true
   var nbt = e.nbt
   return nbt && (nbt.getBoolean('FromBucket') || nbt.contains('Owner'))
@@ -68,16 +64,6 @@ EntityEvents.spawned(event => {
     var key = String(best.uuid), n = fishCounts[key] || 0
     if (n < FISH_MAX) { fishCounts[key] = n + 1; return }
     if (spared(e)) return
-    event.cancel()
-  }
-  if (OTTER_MAX >= 0 && String(e.type) === 'crittersandcompanions:otter') {
-    if (e.isBaby() || spared(e)) return
-    var near = 0
-    event.level.getEntities().forEach(o => {
-      if (o !== e && String(o.type) === 'crittersandcompanions:otter' &&
-          Math.abs(o.x - e.x) <= 16 && Math.abs(o.z - e.z) <= 16 && Math.abs(o.y - e.y) <= 8) near++
-    })
-    if (near < OTTER_MAX) return
     event.cancel()
   }
 })

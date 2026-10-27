@@ -1747,3 +1747,8 @@ datapack."
 - Existing worlds: ships already generated stay as blocks; their spawner markers and any fleet illagers stay until
   killed (`kill @e[type=marker,tag=ships.spawner]` clears the markers). The server logs "Missing data pack mod:ships"
   once.
+
+## Critters and Companions removed (2026-10-27)
+Aaron: "Remove the critters mod." Its otters had been 1.3–2% of the tick in the last profiles. The otter group cap in
+`creature_caps.js` (and its `otterGroup` switch) went with it; the fish cap stays. Almanac pages updated. In existing
+worlds its animals vanish on the next load; the server logs them as unknown entities once.
