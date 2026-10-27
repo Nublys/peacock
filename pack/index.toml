@@ -42,6 +42,10 @@ file = "config/backpacked.client.toml"
 hash = "2b97d849fc68d5cf168da1701ab53fafc367404a14a806468b18c5d808fa1a19"
 
 [[files]]
+file = "config/betterf3.toml"
+hash = "dd6fe106855f71678fa082b28cfd3e7f71980204cc4bce84d13283dafdf655bb"
+
+[[files]]
 file = "config/biomesoplenty/biome_toggles.json"
 hash = "6e81cf8f8ffd55004413d05e2579a63613d39a180bf5a4ff67ffa98ec44b1aa9"
 
@@ -3215,8 +3219,8 @@ hash = "3a010bd39fd897013be22cabf41f00e4ecc231c6de8600b1391719768e119efb"
 metafile = true
 
 [[files]]
-file = "mods/geolosys-next.pw.toml"
-hash = "6c99dcce116dbc1e9744ebad32d9dcb9c58c0489bd50c07e9813601122a2eb14"
+file = "mods/geolosys.pw.toml"
+hash = "348a929bca80739b1ae38bdb4137fd0e8518f7dcddf9e06b3c067dcf0e0f7ef7"
 metafile = true
 
 [[files]]
@@ -3948,7 +3952,7 @@ hash = "df57530a86459d5a8b34c9bb22e7c25fed1a0ddc9c57ed111e9d85bf1cccf75a"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/ore/prospecting.json"
-hash = "bbea37f4e2973d52569e717424bd5c2f248781d42e42c02e0591c01ce72a5b8e"
+hash = "cff1f8f96d21c3369e11dcadd13ed24811b567fc45c0e0723cd7b32462896e4e"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/ore/regional_ore.json"

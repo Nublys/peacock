@@ -19,7 +19,7 @@ Layers (the coals), stones, peat, the Nether and the End are left as they are, w
 The deep layer: lead/silver, nickel, platinum, tin and gold also generate below about Y -16 under every biome, sized so
 each gives roughly a third of its regional deposit's ore per chunk (gold less: it is already broad). See DECISIONS.md.
 
-Input: tools/data/geolosys-deposits.json (Geolosys 8.0.5 with the pack's earlier overrides). After running, set
+Input: tools/data/geolosys-deposits.json (Geolosys Next 8.0.5 with the pack's earlier overrides; the original Geolosys 7.0.14, used since 2026-10-27, ships the same deposits). After running, set
 chunkSkipChance in pack/config/geolosys-common.toml to the value printed, then refresh and validate:
 
     python3 tools/gen-deposits.py && (cd pack && packwiz refresh) && python3 tools/validate.py

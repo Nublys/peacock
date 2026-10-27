@@ -1918,3 +1918,22 @@ Spawn chunks stay loaded and ticking forever, and spawn is the capital: its 54 v
     chunks, two forceload areas under the 256-chunk limit) is force-loaded, then released when they finish or after
     ten minutes. No effect on the current world, whose jobs finished long ago.
 - Almanac: the capital, like all land, rests while it is empty.
+
+## Original Geolosys instead of Geolosys Next; BetterF3's slide sped up (2026-10-27)
+The server crashed at 17:04:38: Geolosys Next's worldgen thread wrote a sparse deposit's ore into chunk −184,173 while
+the main thread was auto-saving it ("Accessing PalettedContainer from multiple threads"). Geolosys Next 8.0.5
+(immails' unofficial 1.20.1 fork, last build 2024-11) writes straight into already-generated chunks from the worker
+thread; sparse deposits scatter by `spread` (48 for coal, cinnabar, sphalerite), reaching 3–4 chunks out, into land
+that is finished and being saved. The original Geolosys (oitsjustjose) has 1.20.1 builds too, and 7.0.12 fixed this
+("writing to stale chunks"): decompiled, it checks it may write before touching a generated chunk and skips the block
+otherwise. Geolosys Next was in the pack from Phase 0 with no recorded reason. Aaron: "Do 1 and 2" (with a backup made).
+- **Geolosys 7.0.14** replaces Geolosys Next 8.0.5. Same mod id, blocks, items (but one), deposit JSON format and
+  shipped deposits, config keys, and the `Prospecting` API the Flint Prospector's Hammer uses, so the pack's deposits,
+  loot tables, recipes and existing world carry over. Ore that would have landed in finished chunks is now dropped, so
+  wide-scatter deposits give slightly less ore into already-explored land.
+- Lost with Next: the **depth meter** (held ones vanish) — the original shows depth below sea level in the corner while
+  the prospector's pick is held, so the Almanac's prospecting page now says that instead. The pick still names the
+  ore and which way it lies ("Found Hematite Ore north from you"); Next had only reworded it.
+- **BetterF3** (Aaron: "Can you also reduce BetterF3s animations?"): its only animation is the F3 screen sliding in and
+  out. `config/betterf3.toml` sets `animationSpeed = 3.0`, the most it allows (default 1.0); `animations = false` would
+  drop it. BetterF3 reads a partial file (missing keys keep defaults).

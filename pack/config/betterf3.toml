@@ -1,0 +1,5 @@
+# Peacock: BetterF3 opens and closes its F3 screen at the fastest slide it allows (3.0, the maximum; default 1.0).
+# Aaron (2026-10-27): "Can you also reduce BetterF3s animations?" Set animations = false to drop the slide entirely.
+[general]
+	animations = true
+	animationSpeed = 3.0

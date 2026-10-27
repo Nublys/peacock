@@ -310,7 +310,7 @@ ENTRIES = {
                 B("The prospector's pick") + " answers where: right-click stone and it names the ore within 5 blocks of that face and which way it lies; if none, what is anywhere in the chunk. It never breaks."),
             craft("peacock:flint_prospectors_hammer", "Tap the ground where the rocks are. Nothing? Walk on: the deposit may be in the next chunk, or deeper than 64 blocks."),
             craft("peacock:prospectors_pick", "Three ingots of any common metal (iron, copper, tin, zinc, lead, nickel, aluminium) and two sticks. Tap exposed stone, not dirt."),
-            craft("geolosys:crafting/field_manual_from_crafting", "Lost the manual? Craft one. The depth meter reads your Y.", recipe2="geolosys:crafting/depth_meter"),
+            craft("geolosys:crafting/field_manual_from_crafting", "Lost the manual? Craft one. While you hold the pick, the corner of the screen shows how far below sea level you are."),
             txt(B("Metals you will need, in order:") + " copper and iron (homestead; iron is common and shallow), then " + B("zinc") + " (brass needs it, and brass needs a Blueprint), then gold and coal in bulk once machines run.",
                 "The first player to find zinc should tell everyone. That is a trade route being born."),
         ]),

@@ -25,8 +25,7 @@
     {
       "type": "patchouli:crafting",
       "recipe": "geolosys:crafting/field_manual_from_crafting",
-      "recipe2": "geolosys:crafting/depth_meter",
-      "text": "Lost the manual? Craft one. The depth meter reads your Y."
+      "text": "Lost the manual? Craft one. While you hold the pick, the corner of the screen shows how far below sea level you are."
     },
     {
       "type": "patchouli:text",
