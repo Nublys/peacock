@@ -47,7 +47,7 @@ key_key.backpack:key.keyboard.b
 key_key.backpacked.open_management:key.keyboard.unknown
 key_key.recruits.command_screen_key:key.keyboard.r
 key_key.recruits.team_screen_key:key.keyboard.u
-key_key.recruits.map_screen_key:key.keyboard.n
+key_key.recruits.map_screen_key:key.keyboard.unknown
 key_key.village_recruits.wiki:key.keyboard.i
 key_key.map_atlases.open_minimap:key.keyboard.m
 key_key.map_atlases.zoom_out_minimap:key.keyboard.keypad.subtract

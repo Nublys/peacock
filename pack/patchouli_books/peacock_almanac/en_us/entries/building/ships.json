@@ -19,7 +19,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Illager ships$() ride the oceans, alone or in fleets of four with an evoker each; illagers that fall in water grab a boat and come after you.$(br2)Cannon shot is lead or iron; a bronze cannon is cast from bronze blocks."
+      "text": "Cannon shot is lead or iron; a bronze cannon is cast from bronze blocks."
     }
   ]
 }

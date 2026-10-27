@@ -84,6 +84,8 @@ PREVIOUS_DEFAULTS = {
         'renderClouds:false', 'renderClouds:"false"',
         # music shipped at full volume until 2026-10-20
         "soundCategory_music:1.0", "soundCategory_music:0.3", "soundCategory_neutral:1.0", "soundCategory_ambient:1.0",
+        # Recruits' world map was on N until 2026-10-27
+        "key_key.recruits.map_screen_key:key.keyboard.n",
         # vanilla's full screen motion until 2026-10-21
         "fovEffectScale:1.0", "screenEffectScale:1.0", "damageTiltStrength:1.0", "hideLightningFlashes:false",
         # potato's packs with Better Leaves, until 2026-10-22
@@ -130,6 +132,8 @@ COMMON_KEYS = {
     "key_key.ftbchunks.waypoint_manager": "key.keyboard.unknown",
     # Just Zoom's options screen defaults to B, which is the backpack; its options stay reachable from the mod list
     "key_justzoom.keybinds.keybind.open_options": "key.keyboard.unknown",
+    # Recruits' own world map (was N) unbound (Aaron, 2026-10-27): the atlas is the pack's one map
+    "key_key.recruits.map_screen_key": "key.keyboard.unknown",
     # first-launch screens and toasts (only added when missing: a player's own choice stands)
     "onboardAccessibility": "false", "skipMultiplayerWarning": "true", "joinedFirstServer": "true",
     "tutorialStep": "none", "realmsNotifications": "false",

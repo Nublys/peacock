@@ -6,7 +6,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Villages arm $(bold)Guard Villagers$() to hold a wall: hand a villager a sword or crossbow and they take the post. $(bold)Recruits$() are soldiers you hire and own: command them with $(bold)R$(), teams with $(bold)U$(), their map with $(bold)N$()."
+      "text": "Villages arm $(bold)Guard Villagers$() to hold a wall: hand a villager a sword or crossbow and they take the post. $(bold)Recruits$() are soldiers you hire and own: command them with $(bold)R$() and teams with $(bold)U$()."
     },
     {
       "type": "patchouli:entity",

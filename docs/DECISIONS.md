@@ -1732,3 +1732,18 @@ just so people can download and import it into modrinth launcher"; "Many of my f
   exposes the class's static side, so every entity joining the world threw (and the once-a-second fish count too);
   neither cap was working. Now Rhino's `instanceof`, with a vanilla-fish id list as fallback. The validator rejects
   `.isInstance(` in server and startup scripts.
+
+## Recruits' map unbound; the Ships datapack removed (2026-10-27)
+Aaron, after spark profile C5UIRHg7UR ("Are there two map mods?" ... "N opens a map"): "Unbind VR map, and remove ship
+datapack."
+- **Recruits' world map** (`N`) unbound: in `defaultoptions/keybindings.txt` for new installs and in every tier's
+  `options.txt.keys` for existing ones (the old `N` is listed in `_previous`, so an untouched `N` is replaced and a
+  player's own rebinding stands). `UpdateMapTiles = false` in `recruits-client.toml`, so the client stops redrawing map
+  tiles nobody opens. Map Atlases stays the one map; FTB Chunks' claim screen stays on `J`.
+- **Ships** (illager ships and fleets, illagers taking boats) removed: its `ships:main` tick function searched every
+  entity about fifteen times a tick (2.8% of the tick in that profile). `ships_tuning.js` (boat limit) and the fleet
+  chest loot in `metal_uses.js` (silver, platinum, electrum) went with it; those metals still come from ore. Small Ships
+  and Immersive Aircraft are untouched. Almanac pages no longer mention illager fleets.
+- Existing worlds: ships already generated stay as blocks; their spawner markers and any fleet illagers stay until
+  killed (`kill @e[type=marker,tag=ships.spawner]` clears the markers). The server logs "Missing data pack mod:ships"
+  once.

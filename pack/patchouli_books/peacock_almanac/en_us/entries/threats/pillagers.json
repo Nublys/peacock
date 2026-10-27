@@ -20,7 +20,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Totems$() (Respillaged) summon captains when you are ready, which is how late Blueprints stay available on a busy server: nobody waits on worldgen for a boss that can be called.$(br2)Illager bands sail the oceans too: ships, fleets, and boats that chase."
+      "text": "$(bold)Totems$() (Respillaged) summon captains when you are ready, which is how late Blueprints stay available on a busy server: nobody waits on worldgen for a boss that can be called."
     }
   ]
 }

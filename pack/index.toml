@@ -112,7 +112,7 @@ hash = "b2650f9832550c94a5f603378cd3080ad11e073b015dce2fc931b3d50310c8c5"
 
 [[files]]
 file = "config/defaultoptions/keybindings.txt"
-hash = "0bcee95ab75190a082b6922fae3d6c1662c2f31429a8fe6cf3e5f9caa5aecf1e"
+hash = "2009728f32b71d4f1ea6b504c6212f9d48622750bfe9544c7752ed23937341e9"
 
 [[files]]
 file = "config/defaultoptions/options.txt"
@@ -1205,7 +1205,7 @@ hash = "58f7821842631af9ec8bcaddb60526b81cd1b9ad63cbba87c83c70e53c3a9b16"
 
 [[files]]
 file = "config/recruits-client.toml"
-hash = "144c2ec2643b74ca7895301f8b589e48dea3888bc41f266b6af1afdcc1f9092e"
+hash = "8e2e3fc523e4108f219c070734a7046fd2530bd654ccf69e17fc4a20179d86e2"
 
 [[files]]
 file = "config/savage_and_ravage-client.toml"
@@ -1982,7 +1982,7 @@ hash = "6fbcc18b42f87b07084155f6324cd5873a987b41b00eeca6013f86f195d5e0ec"
 
 [[files]]
 file = "kubejs/server_scripts/metal_uses.js"
-hash = "4d142f923725a3bb678dcc9e2355f1db44c301fab3bd198579f1327cedb59a18"
+hash = "80b2007ad1f76a828445656541fc633b2ef32c9f6bbb12872ab6b8d22c10bba2"
 
 [[files]]
 file = "kubejs/server_scripts/metals.js"
@@ -2003,10 +2003,6 @@ hash = "6f23aa73a78d655b5f669193879835308987d842f49c25fb33d5f5236c2a1d78"
 [[files]]
 file = "kubejs/server_scripts/rumour_maps.js"
 hash = "a703bffab3a695acf0b1d0581f2b70bcb7797338dd88509be9ccedc15f56af86"
-
-[[files]]
-file = "kubejs/server_scripts/ships_tuning.js"
-hash = "6c8d2dceb6ce576c69f0829fa619df950884f4753c094a52b27b26ecffd5f07f"
 
 [[files]]
 file = "kubejs/server_scripts/sleep_afk.js"
@@ -2824,11 +2820,6 @@ hash = "ba30c5a40ed43a9971d774b47f0f5b2db0ccad6930754e79fc141e7ac8106d1a"
 metafile = true
 
 [[files]]
-file = "mods/ships.pw.toml"
-hash = "913986c2b84cf90f03bd5314e19b9dee0af14c2536848d5c678674006ec8677c"
-metafile = true
-
-[[files]]
 file = "mods/simple-voice-chat.pw.toml"
 hash = "3bd4e09190316b4c4901ba9fd822b891e2cf216eb645687458e3547ad13f93f0"
 metafile = true
@@ -3088,7 +3079,7 @@ hash = "f5cf7970cdb8f12466b1d8fd581e3d99b5752dc079a1cf89f6868a3a3a19602b"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/building/ships.json"
-hash = "45eb7d712365cf3a265881d8f1de0a5e3a79deccad9967e2f347b7a084144261"
+hash = "c393e3e68526a016afb4687d1fe77b9f09463c3bf6b3e7d29571d422027f3870"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/building/trains.json"
@@ -3168,7 +3159,7 @@ hash = "05e202785c731c0dcd43f901b053b9e447a7203d5b81154ad072533de5d68bd9"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/mods/machines.json"
-hash = "4cc16f6c085d11c4758ae17339ce65c627f020e0943f205a516da6e76a3c0c10"
+hash = "445e30395786cecabf549cf41a255c2fa4b731582c3582ed87de5ec53c123a1c"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/mods/people.json"
@@ -3192,7 +3183,7 @@ hash = "f41fd95f32a2ac7d8ca04a52271c0da0c7ba00b2f3258475f66080622535c480"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/ore/metals.json"
-hash = "5b29cc07ec050d9d5b56404dbad57b4ffabf073ef0ba27a8f7f27a5d2d718bd5"
+hash = "ce3b14f5b8f191fcd9f93239236fd6eedeffd7c878de8b68943eb9aa126b44b1"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/ore/ores_deep.json"
@@ -3312,7 +3303,7 @@ hash = "c89b14252ba8a41c626481b091eed2e4a5450ce26a07513f3ea89b0fe65fcaa0"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/threats/pillagers.json"
-hash = "a5cc9cb98650cda67cbaea3a02239d4ff27defc6f3729b5c5853bd89ba5f8c46"
+hash = "8fff0391a915bc7a2c213781bc44f17a31d99fab03b4acd7e7c5a190db891c37"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/tools/atlas.json"
@@ -3324,7 +3315,7 @@ hash = "4f70ae0aad0877ae09fc4a9d9d275da2d60a3f9c57c501297af2e7acb01ecc3d"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/tools/controls.json"
-hash = "aa88ea4a902add37a45e32a3aa5fa649f3cbe84d56c5c12d1cbc67925a8a21ae"
+hash = "9d3efb3f153ada9e681917963d6286b5a2d1e9736053038a5869f3e7f9648579"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/tools/info.json"
@@ -3360,7 +3351,7 @@ hash = "bbaf3a2481ee6d56f4fb2728790bb9963ca6b2389e5f83aeb555e7cc059680ec"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/towns/recruits.json"
-hash = "7ca1ba50b31a3c3de6db4c3825921afd5b50cfc8c9922fb90cf54184cc0665d7"
+hash = "00725e12e0232b4bca591c8b1b73f557b6ba6b7b833f1c61b4d512841f21ce6e"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/towns/services.json"
@@ -3468,7 +3459,7 @@ hash = "7b956cd0b9ec8c3f12e3149e84f3e6bd2b42e76ac77bffc810bfcde2a1ef37bc"
 
 [[files]]
 file = "peacock/profiles/_previous/options.txt.keys"
-hash = "a5c6081c92f50640f7df20c0a31b742cf16735a8db86d2280b61a259bbdd2682"
+hash = "b6a0bf5b4004757cfecea2f68c3c335d2fa4d810cc43aa9e240896a69eab4ee5"
 
 [[files]]
 file = "peacock/profiles/high/config/DistantHorizons.toml.keys"
@@ -3536,7 +3527,7 @@ hash = "32e48ae6d8e771a6c24421b675413c3188ca0660f442addc9449564059911e07"
 
 [[files]]
 file = "peacock/profiles/high/options.txt.keys"
-hash = "9684c5e06680554a53aa48b4ce358eff9e0cba76dba19f7ffd3690ce8e8b6c1c"
+hash = "c80d1fc5c0f5e539329c0775ec3df694e4b588ad5bb6a477997cb8dd66d7f44e"
 
 [[files]]
 file = "peacock/profiles/high/shaderpacks/ComplementaryReimagined_r5.9.3 + EuphoriaPatches_1.10.5.txt.keys"
@@ -3612,7 +3603,7 @@ hash = "32e48ae6d8e771a6c24421b675413c3188ca0660f442addc9449564059911e07"
 
 [[files]]
 file = "peacock/profiles/low/options.txt.keys"
-hash = "5e8a22dffade203561da495a3310b85961a4b5bbc543d8dd8f41281aa596b257"
+hash = "63386414e519d90174a8a52ec3a64412f5c3c9a480c0f80bbc2a802fe2f783a7"
 
 [[files]]
 file = "peacock/profiles/low/shaderpacks/ComplementaryReimagined_r5.9.3 + EuphoriaPatches_1.10.5.txt.keys"
@@ -3688,7 +3679,7 @@ hash = "32e48ae6d8e771a6c24421b675413c3188ca0660f442addc9449564059911e07"
 
 [[files]]
 file = "peacock/profiles/medium/options.txt.keys"
-hash = "f154afe6916564d5ef9e0762cba802d766ae2af564903b8dd57fa94176d20049"
+hash = "91bd29b0ca270f5cd6b5d229ca328ea0e50618c9581fd5525c652f69027dbc9a"
 
 [[files]]
 file = "peacock/profiles/medium/shaderpacks/ComplementaryReimagined_r5.9.3 + EuphoriaPatches_1.10.5.txt.keys"
@@ -3764,7 +3755,7 @@ hash = "32e48ae6d8e771a6c24421b675413c3188ca0660f442addc9449564059911e07"
 
 [[files]]
 file = "peacock/profiles/potato/options.txt.keys"
-hash = "790ebded35771d0e51fd006d02f64b929fb446b379ffbeafbf5de1b4524e1d8c"
+hash = "426a9c6753719368f7db62b09cac787b43e64a29f624f033e4b674ea68793c46"
 
 [[files]]
 file = "peacock/profiles/potato/shaderpacks/ComplementaryReimagined_r5.9.3 + EuphoriaPatches_1.10.5.txt.keys"
@@ -3840,7 +3831,7 @@ hash = "32e48ae6d8e771a6c24421b675413c3188ca0660f442addc9449564059911e07"
 
 [[files]]
 file = "peacock/profiles/ultra/options.txt.keys"
-hash = "81a4a68e2b3867a42361d3f37eb98aed6cbb3a633d02f54d88b0e8ccb8c0f277"
+hash = "a897d80a02b9c2293d9fdf329b2499d07d954a3816bde3975328dd700261eec3"
 
 [[files]]
 file = "peacock/profiles/ultra/shaderpacks/ComplementaryReimagined_r5.9.3 + EuphoriaPatches_1.10.5.txt.keys"

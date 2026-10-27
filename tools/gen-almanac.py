@@ -329,7 +329,7 @@ ENTRIES = {
             txt(
                 B("Lead") + ": shot, ship cannonballs, pipes$(br)" + B("Silver") + ": electrum, electron tubes$(br)" + B("Aluminum") + ": aircraft hulls, propellers$(br)" + B("Platinum") + ": engines, precision mechanisms$(br)" + B("Bronze") + ": cannons, ship guns"),
             txt(B("Constantan") + ": thermometers, telescopes$(br)" + B("Invar") + ": the hearth, aircraft boilers$(br)" + B("Electrum") + ": transmitters, content observers$(br)" + B("Tin") + ": lanterns",
-                "Illager fleets carry silver, platinum and electrum in their holds."),
+                "Silver and platinum are the rare ones, and electrum needs silver."),
             txt("Alloys mix in a " + B("heated basin") + ": electrum is gold + silver, constantan copper + nickel, invar two iron + nickel. Every metal also has a storage block.",
                 "Smiths, armorers and clerics buy the rarer metals for emeralds, bounty boards ask for them, and Spartan Weaponry makes weapons of all of them."),
         ]),
@@ -377,7 +377,7 @@ ENTRIES = {
             txt(B("Useful commands:") + "$(br)/vrcontracts standing: what every faction thinks of you, and why$(br)/vrintel: what your faction knows about its neighbours$(br)/vrconvoy: convoys on the road$(br)/vrconfig: what this server has switched on"),
         ]),
         ("recruits", "Recruits & Guards", "minecraft:iron_sword", [
-            txt("Villages arm " + B("Guard Villagers") + " to hold a wall: hand a villager a sword or crossbow and they take the post. " + B("Recruits") + " are soldiers you hire and own: command them with " + B("R") + ", teams with " + B("U") + ", their map with " + B("N") + "."),
+            txt("Villages arm " + B("Guard Villagers") + " to hold a wall: hand a villager a sword or crossbow and they take the post. " + B("Recruits") + " are soldiers you hire and own: command them with " + B("R") + " and teams with " + B("U") + "."),
             ent("recruits:recruit", "Recruits follow, hold, patrol and guard. They die for good, so give them armour. Pay is emeralds per hire.", scale=0.9),
             txt("Hiring is " + B("locked") + " until the Mutant Skeleton falls: the drill that made soldiers of farmers was lost with it (" + L("tech/tier1", "Tier 1") + "). Guards are not locked; a wall can always be manned.",
                 B("Hiring:") + " right-click a recruit with emeralds in hand; the price is on the screen. Shift-right-click one for his own screen: inventory, equipment, upkeep."),
@@ -486,8 +486,7 @@ ENTRIES = {
             txt(B("Raids") + " come from Bad Omen (kill a captain, carry the curse into a town) and from the illagers themselves, who grow bolder as the server does. A village with guards and walls holds; one without does not.",
                 B("Savage & Ravage") + " and " + B("Respillaged") + " make outposts worth the fight: loot, totems, creepers you did not expect."),
             ent("illagerinvasion:invoker", "The Invoker: the fort's master. Summons, shields, teleports, and does not fight alone. Bring recruits. It holds the trading ledgers: the Trading Floor Blueprint.", scale=0.8),
-            txt(B("Totems") + " (Respillaged) summon captains when you are ready, which is how late Blueprints stay available on a busy server: nobody waits on worldgen for a boss that can be called.",
-                "Illager bands sail the oceans too: ships, fleets, and boats that chase."),
+            txt(B("Totems") + " (Respillaged) summon captains when you are ready, which is how late Blueprints stay available on a busy server: nobody waits on worldgen for a boss that can be called."),
         ]),
         ("finding", "Finding Them", "minecraft:map", [
             txt("Bosses live in places. Finding the place is most of the fight, and the pack never lets you type a command for it.",
@@ -637,8 +636,7 @@ ENTRIES = {
             craft(staged("smallships:dockyard"), "The dockyard: place it by the water. The ship's hull, sails and cannons come from what you load into it."),
             txt(B("Immersive Aircraft") + ": hull, sail, engine and propeller make an airship, a gyrodyne you pedal, or a quadrocopter. Aluminum hulls and propellers come two to a craft.",
                 B("Ships are Tier 2") + ": the Naga hold the dockyard and the airships. The " + B("biplane") + ", " + B("warship") + " and aircraft guns are " + B("Cannons") + " (Tier 3)."),
-            txt(B("Illager ships") + " ride the oceans, alone or in fleets of four with an evoker each; illagers that fall in water grab a boat and come after you.",
-                "Cannon shot is lead or iron; a bronze cannon is cast from bronze blocks."),
+            txt("Cannon shot is lead or iron; a bronze cannon is cast from bronze blocks."),
         ]),
         ("trains", "Trains", "create:railway_casing", [
             txt(B("Create") + " tracks, stations, schedules and signals, extended by " + B("Steam 'n' Rails") + ": conductors, handcars, couplers, track switches, fuel tanks, and a locomotive palette.",
@@ -698,7 +696,7 @@ ENTRIES = {
                 "Ships, airships and wagons steer with the sticks like walking."),
         ]),
         ("controls", "Keys", "minecraft:lever", [
-            txt(B("B") + " backpack$(br)" + B("M") + " atlas, " + B("P") + " place a pin$(br)" + B("V") + " quiver$(br)" + B("R / U / N") + " Recruits: command / team / map$(br)" + B("Shift+1..4") + " dog whistles$(br)" + B("Alt") + " (hold) Create tool menu$(br)" + B("W") + " (hold, over a Create item) ponder"),
+            txt(B("B") + " backpack$(br)" + B("M") + " atlas, " + B("P") + " place a pin$(br)" + B("V") + " quiver$(br)" + B("R / U") + " Recruits: command / team$(br)" + B("Shift+1..4") + " dog whistles$(br)" + B("Alt") + " (hold) Create tool menu$(br)" + B("W") + " (hold, over a Create item) ponder"),
             txt(B("K") + " shaders on/off, " + B("O") + " shader menu$(br)" + B("R") + " recipes for the hovered item, " + B("U") + " its uses (EMI)$(br)" + B(",") + " voice chat menu, " + B(".") + " mute mic$(br)" + B("Right Alt") + " push-to-talk$(br)" + B("Z") + " zoom (scroll to adjust), only while you carry a spyglass, backpack included",
                 "Controlling is installed: Options, Controls has a search box, so any bind can be found by name."),
             txt("The bar above your hotbar is the " + B("locator bar") + ": a dot per player, by direction, like the newer game. It is not a map; it is where your friends are.",
@@ -741,7 +739,7 @@ ENTRIES = {
         ]),
         ("machines", "Machines & Logistics", "create:cogwheel", [
             txt(B("Create") + " and its family: " + B("Steam 'n' Rails") + " (trains), " + B("Big Cannons") + ", " + B("Diesel Generators") + ", " + B("Enchantment Industry") + ", " + B("Dragons Plus") + ", " + B("Trading Floor") + " (depots), " + B("Create Deco") + " and " + B("Interiors") + " (looks), " + B("Create Better Villagers") + " (trades), " + B("Slice & Dice") + " (kitchen).",
-                B("Small Ships") + " and " + B("Immersive Aircraft") + " carry goods by sea and air; " + B("Ships") + " puts illagers on the water."),
+                B("Small Ships") + " and " + B("Immersive Aircraft") + " carry goods by sea and air."),
             txt(B("Trotting Wagons") + " and " + B("Caravans & Convoys") + " move goods by horse. " + B("Storage Drawers") + " (+Create compat) are visible bulk storage. " + B("Proximity Crafting") + "'s table crafts from the chests around it; " + B("Workshop") + " adds tables, tool racks and shelves. " + B("Backpacked") + " is the backpack; " + B("Supplementaries") + " the sacks, ropes, pulleys and a hundred small things."),
             txt(B("Macaw's") + " nine mods are doors, roofs, windows, fences, bridges, paths, stairs, trapdoors, lights, paintings and furniture; " + B("Every Compat") + " makes every wood work with all of it."),
         ]),

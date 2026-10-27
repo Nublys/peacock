@@ -14,6 +14,7 @@ key_key.ftbchunks.toggle_minimap:key.keyboard.unknown
 key_key.ftbchunks.add_waypoint:key.keyboard.unknown
 key_key.ftbchunks.waypoint_manager:key.keyboard.unknown
 key_justzoom.keybinds.keybind.open_options:key.keyboard.unknown
+key_key.recruits.map_screen_key:key.keyboard.unknown
 onboardAccessibility:false
 skipMultiplayerWarning:true
 joinedFirstServer:true

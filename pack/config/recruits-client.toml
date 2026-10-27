@@ -13,7 +13,7 @@
 	#Should the world map tiles be updated while playing?
 	#Disable this if you experience performance issues with the map.""
 	#default: true
-	UpdateMapTiles = true
+	UpdateMapTiles = false
 	#----WorldMapShowCoordinates----
 	#Show the coordinates and zoom readout on the world map.
 	#default: true

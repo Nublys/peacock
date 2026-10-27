@@ -14,7 +14,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Constantan$(): thermometers, telescopes$(br)$(bold)Invar$(): the hearth, aircraft boilers$(br)$(bold)Electrum$(): transmitters, content observers$(br)$(bold)Tin$(): lanterns$(br2)Illager fleets carry silver, platinum and electrum in their holds."
+      "text": "$(bold)Constantan$(): thermometers, telescopes$(br)$(bold)Invar$(): the hearth, aircraft boilers$(br)$(bold)Electrum$(): transmitters, content observers$(br)$(bold)Tin$(): lanterns$(br2)Silver and platinum are the rare ones, and electrum needs silver."
     },
     {
       "type": "patchouli:text",

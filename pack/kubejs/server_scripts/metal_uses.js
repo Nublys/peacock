@@ -18,8 +18,6 @@
 //              boiler and steel boiler [Ships]
 //   electrum   signal parts: two Create transmitters from an electrum ingot and redstone (redstone links, display
 //              links); a content observer with an electrum ingot for the electron tube [Ender logistics]
-// Also: the Ships fleets' treasure and supply chests carry the rare metals (silver, platinum, electrum) a fighter
-// brings home for engines and instruments.
 // Sheets: lead and invar are new (startup_scripts/metals.js), pressed like the others.
 //
 // Rhino notes (see tools/validate.py): `var` inside functions, no Math constants.
@@ -77,26 +75,5 @@ ServerEvents.recipes(event => {
   shaped(event, 'electrum_transmitter', null, 'create:transmitter', 2, ['E', 'R'], { E: '#forge:ingots/electrum', R: '#forge:dusts/redstone' })
   shaped(event, 'electrum_content_observer', 'ender', 'create:content_observer', 1, ['R', 'B', 'I'],
     { R: '#forge:ingots/electrum', B: 'create:brass_casing', I: 'minecraft:observer' })
-})
-
-// item, weight, [min, max]
-const FLEET_METALS = [
-  ['geolosys:silver_ingot', 6, [1, 3]],
-  ['geolosys:silver_cluster', 4, [1, 2]],
-  ['geolosys:platinum_cluster', 3, [1, 1]],
-  ['geolosys:platinum_ingot', 2, [1, 1]],
-  ['peacock:electrum_nugget', 4, [3, 8]],
-]
-ServerEvents.chestLootTables(event => {
-  ;['ships:chests/ship_treasure', 'ships:chests/ship_supply'].forEach(id => {
-    event.modify(id, table => {
-      table.addPool(pool => {
-        pool.setUniformRolls(id.indexOf('treasure') >= 0 ? 1 : 0, 2)
-        FLEET_METALS.forEach(e => {
-          pool.addItem(e[0], e[1]).addFunction({ function: 'minecraft:set_count', count: { type: 'minecraft:uniform', min: e[2][0], max: e[2][1] } })
-        })
-      })
-    })
-  })
 })
 })()

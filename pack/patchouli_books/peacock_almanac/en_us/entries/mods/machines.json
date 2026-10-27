@@ -6,7 +6,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(bold)Create$() and its family: $(bold)Steam 'n' Rails$() (trains), $(bold)Big Cannons$(), $(bold)Diesel Generators$(), $(bold)Enchantment Industry$(), $(bold)Dragons Plus$(), $(bold)Trading Floor$() (depots), $(bold)Create Deco$() and $(bold)Interiors$() (looks), $(bold)Create Better Villagers$() (trades), $(bold)Slice & Dice$() (kitchen).$(br2)$(bold)Small Ships$() and $(bold)Immersive Aircraft$() carry goods by sea and air; $(bold)Ships$() puts illagers on the water."
+      "text": "$(bold)Create$() and its family: $(bold)Steam 'n' Rails$() (trains), $(bold)Big Cannons$(), $(bold)Diesel Generators$(), $(bold)Enchantment Industry$(), $(bold)Dragons Plus$(), $(bold)Trading Floor$() (depots), $(bold)Create Deco$() and $(bold)Interiors$() (looks), $(bold)Create Better Villagers$() (trades), $(bold)Slice & Dice$() (kitchen).$(br2)$(bold)Small Ships$() and $(bold)Immersive Aircraft$() carry goods by sea and air."
     },
     {
       "type": "patchouli:text",

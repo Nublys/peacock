@@ -197,7 +197,7 @@ can loot it, so say where you fell.
 | `M` / `P` | Atlas / place a pin |
 | `J` | Claim manager (FTB Chunks) |
 | `K` / `O` | Shaders on/off / shader menu |
-| `R` / `U` / `N` | Recruits: command / team / map |
+| `R` / `U` | Recruits: command / team |
 | `V` | Quiver |
 | `Z` | Zoom — only while you carry a spyglass (inventory or backpack); scroll to adjust |
 | `Shift+1–4` | Dog whistles (Doggy Talents) |
