@@ -1951,3 +1951,23 @@ Cold Sweat's custom config spec ("Spec[...CSConfigSpec] isn't supported in forge
 requires it; no other mod in the pack depends on it. Aaron: "Remove Carbon Config for clients". `carbon-config.pw.toml`
 side `both` → `server`: Prism (packwiz-installer) removes it from clients on the next sync, and the mrpack and
 CurseForge zips no longer include it. The server keeps it for the pregenerator.
+
+## Deserts and the Nether mostly safe (2026-10-27)
+Aaron: "Can you make Deserts and the Nether mostly safe". With comfortable air at 35–110 °F, Cold Sweat 2.4.4's
+defaults put a desert noon at 115 °F, badlands 120, Terralith's ancient sands 130 and volcanic crater 162, and its
+unlisted hot biomes (Terralith lush desert, desert oasis, white mesa) at 99.5–144.5 °F from the fallback (vanilla
+temperature 2.0 ± 0.5 MC). The Nether has no day or night: vanilla 2.0 MC (122 °F) plus Cold Sweat's +32 °F Nether
+offset, a steady 154 °F. Summer adds 0.4/0.6/0.4 MC (+18/+27/+18 °F) everywhere in the overworld.
+- New `config/coldsweat/world.toml` (COMMON; only these keys, Cold Sweat fills the rest with defaults):
+  - `[Dimensions] "Dimension Temperatures" = [["minecraft:the_nether", 100, "F"]]`: the whole Nether (every
+    Incendium and BOP Nether biome too) is 100 °F. It replaces the biome, height and Nether-offset terms only
+    (BiomeTempModifier, ElevationTempModifier); block heat is a separate modifier, so lava, magma and fire still heat
+    their surroundings and a lava sea is still dangerous. The Soulspring Lamp stays the tool for that.
+  - `[Biomes] "Biome Temperature Offsets"`: the 20 overworld biomes (vanilla, Terralith, BOP) whose noon high is
+    above 100 °F peak at 95 °F, savanna's level, so deserts are never hotter than a savanna. Nights unchanged (capped
+    at 88 °F; the three fallback biomes, 99.5 °F at midnight, now 55 °F like a desert night). Offsets rather than
+    `"Biome Temperatures"`, which would replace Cold Sweat's whole default table. Offsets in °F are deltas
+    (`BiomeTempData.getMinTemp` converts non-absolute when `isOffset`).
+- Result: spring, autumn and winter deserts are comfortable; early and late summer noon reaches ~113 °F (barely
+  over); a high-summer noon ~122 °F for a few hours, the "mostly": shade, water, rabbit-hide insulation or the
+  icebox. Savannas (95–98 °F) are untouched. Almanac warmth page says so.

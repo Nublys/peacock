@@ -1,0 +1,38 @@
+# Peacock: only the keys the pack changes. Cold Sweat fills in every other key with its default on first load.
+# Aaron (2026-10-27): "Can you make Deserts and the Nether mostly safe" (comfortable air is 35-110 °F, main.toml).
+
+[Dimensions]
+	# The Nether is a steady 100 °F everywhere (Cold Sweat: the biome's 122 °F plus a 32 °F Nether offset, 154 °F).
+	# This replaces biome and height temperature only: lava, magma and fire still heat the air near them, so a lava
+	# sea is still hot (the Soulspring Lamp is for that).
+	"Dimension Temperatures" = [["minecraft:the_nether", 100, "F"]]
+
+[Biomes]
+	# Every overworld biome whose noon high was above 100 °F (deserts, badlands and mesas, canyons, wastelands,
+	# volcanic land) peaks at 95 °F instead, savanna's level; nights stay as they were (at most 88 °F; those that were
+	# 99.5 °F at midnight, from Cold Sweat's fallback for unlisted biomes, now 55 °F like a desert night). Summer still
+	# adds up to 27 °F, so a high-summer noon in the desert runs ~122 °F for a few hours: shade, water or rabbit hide.
+	# Offsets in °F: [biome, change at midnight, change at noon, "F"]; computed by hand from Cold Sweat 2.4.4's
+	# defaults (see docs/DECISIONS.md, 2026-10-27).
+	"Biome Temperature Offsets" = [
+		["biomesoplenty:scrubland", 0, -6.1, "F"],   # 61.9–101.1 → 61.9–95 °F
+		["biomesoplenty:volcano", -6, -25, "F"],   # 94–120 → 88–95 °F
+		["biomesoplenty:wasteland", 0, -10, "F"],   # 78–105 → 78–95 °F
+		["minecraft:badlands", 0, -25, "F"],   # 84–120 → 84–95 °F
+		["minecraft:desert", 0, -20, "F"],   # 48–115 → 48–95 °F
+		["minecraft:eroded_badlands", 0, -25, "F"],   # 88–120 → 88–95 °F
+		["minecraft:wooded_badlands", 0, -13, "F"],   # 80–108 → 80–95 °F
+		["terralith:ancient_sands", 0, -35, "F"],   # 83–130 → 83–95 °F
+		["terralith:arid_highlands", 0, -7, "F"],   # 74–102 → 74–95 °F
+		["terralith:basalt_cliffs", 0, -27, "F"],   # 76–122 → 76–95 °F
+		["terralith:bryce_canyon", 0, -15, "F"],   # 72–110 → 72–95 °F
+		["terralith:desert_canyon", 0, -26, "F"],   # 73–121 → 73–95 °F
+		["terralith:desert_oasis", -44.5, -49.5, "F"],   # 99.5–144.5 → 55–95 °F
+		["terralith:desert_spires", 0, -26, "F"],   # 60–121 → 60–95 °F
+		["terralith:lush_desert", -44.5, -49.5, "F"],   # 99.5–144.5 → 55–95 °F
+		["terralith:sandstone_valley", 0, -19, "F"],   # 78–114 → 78–95 °F
+		["terralith:shrubland", 0, -13.5, "F"],   # 63.5–108.5 → 63.5–95 °F
+		["terralith:volcanic_crater", -8, -67, "F"],   # 96–162 → 88–95 °F
+		["terralith:volcanic_peaks", 0, -27, "F"],   # 76–122 → 76–95 °F
+		["terralith:white_mesa", -44.5, -49.5, "F"]    # 99.5–144.5 → 55–95 °F
+	]

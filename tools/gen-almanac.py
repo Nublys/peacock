@@ -254,7 +254,7 @@ ENTRIES = {
             txt("Cold Sweat tracks two temperatures: the " + B("air") + " where you stand and your " + B("body") + ". The air follows the biome, the season, the hour, altitude, rain and shade. Your body follows the air slowly; the gauge by your hotbar shows which way it is going.",
                 "There is no thirst. Comfortable air is 35 to 110 °F; the thermometer reads it."),
             txt("Far enough either way and it hurts: the cold slows and freezes you, heat wears you down. New players get a grace period. Winter nights, rain and high ground are the danger.",
-                "The capital sits in mild country: comfortable in spring and autumn, a cold winter, a warm summer."),
+                "The capital sits in mild country: comfortable in spring and autumn, a cold winter, a warm summer. Deserts peak near 95 °F and the Nether is a steady 100 °F: only a high-summer noon, or standing by lava, is too hot."),
             txt("A lit campfire, fire, furnace, smoker, blast furnace or stove warms you within a few blocks, more the closer you stand. Walls between you and the fire weaken it. Lava and magma are hot; ice cools.",
                 "A roof, four walls and a fire is a winter night survived.", title="Heat"),
             craft("peacock:fire_drill", "The fire drill: three sticks. Hold right-click on a block for two seconds to light a campfire or candle, or start a fire. Twelve uses."),
