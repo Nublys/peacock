@@ -2610,7 +2610,7 @@ hash = "7c7568247f779efe71023c2f87f270f5f1ce390f7d81592c61510cc02ffd5c28"
 
 [[files]]
 file = "kubejs/server_scripts/almanac.js"
-hash = "6c16de3bde6076f6ec0da4ebd480c8735ccf8fa032f4e85e95190172687d008b"
+hash = "cff03a20122b225466e52ef7c65b56d08963e9c2bc3fc75747628e8afe969299"
 
 [[files]]
 file = "kubejs/server_scripts/backpack.js"
@@ -3724,7 +3724,7 @@ metafile = true
 
 [[files]]
 file = "patchouli_books/peacock_almanac/book.json"
-hash = "911cdbaa2d19c133a682528f5454237559f52887162e77360f6b6fba4b86578a"
+hash = "7fa9923f89accb089b31ca32a65adde99e6789020d5ddfc69b805f9df7e5eac9"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/categories/bosses.json"

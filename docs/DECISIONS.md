@@ -1971,3 +1971,9 @@ offset, a steady 154 °F. Summer adds 0.4/0.6/0.4 MC (+18/+27/+18 °F) everywher
 - Result: spring, autumn and winter deserts are comfortable; early and late summer noon reaches ~113 °F (barely
   over); a high-summer noon ~122 °F for a few hours, the "mostly": shade, water, rabbit-hide insulation or the
   icebox. Savannas (95–98 °F) are untouched. Almanac warmth page says so.
+
+## A recipe for The Settler's Almanac (2026-10-28)
+Aaron: "Can you add a recipe for the modpacks book?" Shapeless: a book and wheat seeds → The Settler's Almanac
+(`patchouli:guide_book` with `patchouli:book` = `patchouli:peacock_almanac`), recipe id `peacock:settlers_almanac`, in
+`almanac.js` beside the first-join gift. Checked every mod's recipes: the only other two-item book recipe is Geolosys'
+Field Manual (book + prospector's pick). The almanac's landing page says how to make another.

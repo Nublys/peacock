@@ -12,4 +12,11 @@ PlayerEvents.loggedIn(event => {
   player.persistentData.putBoolean('peacock_almanac_given', true)
   // the one-line welcome in welcome.js mentions the book; no second message here
 })
+
+// 2026-10-28, Aaron: "Can you add a recipe for the modpacks book?" A book and wheat seeds (a settler's book; no other
+// two-item book recipe in the pack uses seeds; Geolosys' Field Manual is a book and the prospector's pick).
+ServerEvents.recipes(event => {
+  event.shapeless(Item.of('patchouli:guide_book', '{"patchouli:book":"patchouli:peacock_almanac"}'),
+    ['minecraft:book', 'minecraft:wheat_seeds']).id('peacock:settlers_almanac')
+})
 })()
