@@ -6,7 +6,9 @@ history and are not rewritten when a later one supersedes them; the summary belo
 ## Where things stand (2026-10-20)
 - **The capital** is `peacock:capital`: CTOV's large plains town at size 7, on temperate lowland
   (`#peacock:capital_biomes`), one candidate per ~2,000 blocks; Village Spawn Point moves spawn into the nearest
-  one at world creation, so any seed works. `capital_wall.js` walls it along its outline with four lit gates
+  one at world creation, so any seed works (since 2026-10-28 `capital_choose.js` then moves it to the flattest within
+  4,500 blocks; the town's pieces sit on `beard_box` foundations). The Capital Works stand as ruins on planned lots
+  inside a wall grown around them, joined by roads (`capital_layout.js`, 2026-10-28). `capital_wall.js` walls it along its outline with four lit gates
   where the main roads end; `capital_boards.js` builds three bounty-board pavilions in the town (2026-10-21). Any far copy turns zombie
   (`dead_capitals.js`), so it is the only living old town. *Supersedes:* the concentric-ring CTOV capital,
   Terralith's fortified village, the script founder, the seed reroll, the rectangle wall with boards inside the
@@ -1977,3 +1979,69 @@ Aaron: "Can you add a recipe for the modpacks book?" Shapeless: a book and wheat
 (`patchouli:guide_book` with `patchouli:book` = `patchouli:peacock_almanac`), recipe id `peacock:settlers_almanac`, in
 `almanac.js` beside the first-join gift. Checked every mod's recipes: the only other two-item book recipe is Geolosys'
 Field Manual (book + prospector's pick). The almanac's landing page says how to make another.
+
+## The capital's town plan: Works on planned lots, as ruins, inside the wall, with roads (2026-10-28)
+Aaron: "Is there a way to incorporate the new buildings into the village? Drawing roads, changing the walls to go around
+them, and ensuring the spacing is good so it's never to close to anything or each other?"; then "Lighthouse can be outside
+the wall, but a road should go to it"; "what if they're already there just in ruins, so the player is repairing them?" …
+"Yes, fold it in". Prompted by the Forge and the Scriptorium going up 24 blocks apart on one stretch of wall.
+- **`capital_layout.js`** (new), once per world (`peacock_layout_v1`), after the capital's first-day jobs (the
+  keepalive flags): every Works building not yet standing gets a lot, biggest first: 6 blocks from every building (town
+  pieces and other Works), 3 from every street, 4-40 blocks outside the standing wall, dry, at most 3 blocks of rise,
+  no claimed chunk (FTB Chunks); preferring the side of town with the fewest Works, then close to the wall, then close
+  to a street. The Lighthouse goes 12-70 blocks outside the wall as it will stand, on the highest ground, near where a
+  gate will be. Terrain for the search comes from the world generator (`getBaseHeight`, nothing loaded), ~10,000
+  points over ~80 ticks; the search itself runs 250 spots a tick (benchmarked in KubeJS' Rhino: ~5 s of work in all,
+  no tick over ~0.3 s). Chosen lots are then checked on the real ground (chunks held) and re-planned if one fails, or
+  if the wall around them would cross a claim.
+- **Ruins.** Each lot gets its building from `capital_projects.js`' own builder, then decayed: everything of use or
+  value taken (beacon and iron, lava, beds, workstations, glass, doors, ladders, signs), most of the roof and upper walls
+  fallen (likelier the higher it is), bricks cracked and mossy, cobwebs; nobody moves in, and the graveyard and
+  lighthouse-lamp keys the builder sets are taken back. A sign by the front: "in ruins / Restore it at / the Clerk".
+- **The wall moves once** (`capital_wall.js` `regrow`): `plan(level, extras)` takes the walled Works footprints, each
+  kept 7 blocks inside; the new stretch is built first, then the old columns not on the new line come down (only the
+  wall's own blocks, down to the lowest ground beside them, so a building or a player's work next to it is safe); the
+  gates move out. `peacock_wall_extras` remembers what the standing wall encloses, so `/peacock wall` and the tree check
+  rebuild the moved wall, not the first one.
+- **Roads**: three wide, in the town's commonest street block, from each building's front (all builders face south)
+  to the nearest street or earlier Works road; the Lighthouse's to just outside the nearest gate. Routed (Dijkstra) on
+  the real ground around buildings, the wall and anything built, at most a block of rise a step (two if nothing else
+  works), planks over water, a lantern post every 12 blocks, the odd worn patch.
+- **Restoring**: paying for a building runs its builder on the ruin's lot (it clears the lot first), removes the ruin
+  sign and moves its people in. A building with no lot (the plan found none) is built on open ground as before.
+- **Chunk tickets**: everything runs on per-chunk `/forceload` tickets counted in `capital_layout.js` (shared with
+  `capital_projects.js`), released when each step is done; nothing relies on spawn chunks.
+- Tested in a mock world (scratchpad harness: terrain, a CTOV-like town, the command set, chunk tickets): a fresh world
+  and the live world's state (Forge and Scriptorium standing, old progress layout). Every lot met its spacing, the old
+  wall left no block behind, the new one had no gap, no chunk was touched unheld. Not yet run on a real server.
+- `/peacock layout` (op) runs the plan by hand.
+
+## The Hall of Heroes and the boss record; Works progress bug (2026-10-28)
+Aaron: "Can you also add a building that logs all bosses defeated, and who defeated them first?" … "Go ahead".
+- **`boss_record.js`** (new): every boss kill, credited to the same players as the boss achievement (achievements.js
+  calls it), in persistentData `peacock_bosses`: first slayers, when (ms, in-game day, date), total kills, kills per
+  player. Players within two minutes of each other share a first (one fight). A first kill is announced to everyone.
+  Kills from before the record: each player's boss advancements carry the time they were earned, read when they log in,
+  so the earliest becomes the first (count at least 1).
+- **The Hall of Heroes**, Capital Works #3 (96 emeralds, 128 stone bricks, 32 logs, 16 glass, 8 gold ingots): a stone
+  hall with 30 birch plaques (boss, first slayers, day), windows above them; plaques update on a first kill, every five
+  minutes and when the Chronicler is spoken to, whenever the Hall's chunk is loaded. **The Chronicler** lists every
+  boss: first slayers, date, times slain, top slayer; the undefeated as such.
+- **Bug fixed**: Works progress was one list by need index, never cleared when a project finished, so each project
+  started with the last one's counts: the Scriptorium needed only 16 emeralds (which is why both went up within 24
+  seconds). Progress is now per project (`progress.<id>.<k>`), the finished set is a list of ids (`done`), and
+  `migrate` converts the old layout: what the current project held beyond the carried-over counts was really given and
+  is kept (on the live world, anything given to the Market moves with it, behind the Hall).
+
+## New worlds: the capital on the flattest ground nearby (2026-10-28)
+Aaron: "The town is also really stacked on top of each. Farms spawning on top of each other, some spawning
+underground. I understand this is fixed for this world, but the next one?" … "Awesome, make that update too."
+Jigsaw pieces each settle at their own ground height and only collide in 3D, so on a hillside a farm slides under
+another and rigid buildings sink; the structure only checks the biome at its centre. The live capital is near y 189.
+- **`capital_choose.js`** (new), on a new world's first load (game time under a minute; flag `peacock_capital_chosen`),
+  before the capital scripts build at spawn: every possible `peacock:capital` spot within 4,500 blocks (the structure
+  set's own `isStructureChunk`, 64x64 chunks a region, no chunk generated), kept if its centre's biome is
+  `#peacock:capital_biomes`, scored by the spread of 25 generator heights over +-100 blocks (+4 per wet sample, +1 per
+  500 blocks out); `setworldspawn` to the best. The town generates there as normal. An existing world is untouched.
+- **`beard_box`** terrain adaptation for the capital (`peacock-ruins.zip`, and `tools/gen-ruins.py` so a rebuild keeps
+  it): solid foundations under each piece and room cut above, instead of CTOV's `beard_thin`.

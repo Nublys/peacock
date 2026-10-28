@@ -5,14 +5,19 @@
 // your hand, or everything in your pack that fits). When a project's needs are met, its building goes up outside the
 // capital's wall — open ground the script finds, levelled and built in place like the bounty pavilions — and the
 // people who work there move in:
-//   1 The Forge          the Smith            5 The Rail Station   the Courier
-//   2 The Scriptorium    the Scribe           6 The Lighthouse     the Keeper, and a beacon beam over the capital
-//   3 The Market         the Exchange, stalls 7 Relight a Dead Town: the nearest abandoned ruin is cleared, its zombie
-//   4 The Infirmary      the Physician,         villagers cured, a bell, beds, a bounty board and settlers moved in
-//                        the Undertaker, a graveyard
+//   1 The Forge          the Smith            5 The Infirmary      the Physician, the Undertaker, a graveyard
+//   2 The Scriptorium    the Scribe           6 The Rail Station   the Courier
+//   3 The Hall of Heroes the Chronicler       7 The Lighthouse     the Keeper, and a beacon beam over the capital
+//   4 The Market         the Exchange, stalls 8 Relight a Dead Town: the nearest abandoned ruin is cleared, its zombie
+//                                               villagers cured, a bell, beds, a bounty board and settlers moved in
+// Since 2026-10-28 the buildings stand from the start as ruins on planned lots inside a wall grown around them, joined
+// by roads (capital_layout.js); paying for one restores its ruin. The Hall of Heroes (boss_record.js) was added then.
 // The Clerk also sells the Steward's Contract (steward.js). `/peacock projects` shows progress anywhere;
 // `/peacock projects finish` (op) completes the current project at once (for testing or a stuck server).
-// persistentData `peacock_works`: index, given.<i>, donors.<name>, pending (built when a site is found), sites.
+// persistentData `peacock_works`: v (2), done ("forge,scriptorium,…"), progress.<id>.<need index>, donors.<name>,
+// pending (paid for, not yet built), sites.<id> ("x,y,z"), ruins.<id> (1 while it is a ruin), boxes.
+// Until 2026-10-28 progress was one `given` list by need index that was never cleared when a project finished, so the
+// next project started with the last one's counts (the Scriptorium needed 16 emeralds and nothing else); `migrate`.
 // Services: capital_services.js; framework: capital_npcs.js.
 //
 // Rhino notes (see tools/validate.py): `var` inside functions, no `const`/`let` in try blocks, no Math constants,
@@ -26,7 +31,7 @@ const GROUND = /^minecraft:(grass_block|dirt|coarse_dirt|rooted_dirt|podzol|myce
 const SOFT = /^([a-z0-9_.-]+:[a-z0-9_/.-]*(_leaves|_log|_wood|_sapling|_carpet)|minecraft:(air|cave_air|grass|tall_grass|fern|large_fern|dandelion|poppy|blue_orchid|allium|azure_bluet|red_tulip|orange_tulip|white_tulip|pink_tulip|oxeye_daisy|cornflower|lily_of_the_valley|sunflower|lilac|rose_bush|peony|snow|dead_bush|sweet_berry_bush|pink_petals|vine|glow_lichen|bee_nest|brown_mushroom|red_mushroom|pumpkin|melon))$/
 
 // ---------------------------------------------------------------- the projects
-// needs: [item id or #tag, count, label]. Progress is stored by index (given.<i>), so new needs go at the END of a list.
+// needs: [item id or #tag, count, label]. Progress is stored by project id and need index, so new needs go at the END.
 // 2026-10-27: cave goods added to the Infirmary (glow berries), the Station (deepslate ballast) and the Lighthouse (amethyst
 // for the lens), so the server's projects send people underground.
 const PROJECTS = [
@@ -34,6 +39,8 @@ const PROJECTS = [
     needs: [['minecraft:emerald', 48, 'emeralds'], ['minecraft:stone_bricks', 96, 'stone bricks'], ['minecraft:iron_ingot', 24, 'iron ingots'], ['#minecraft:logs', 32, 'logs']] },
   { id: 'scriptorium', name: 'The Scriptorium', does: 'a library, and the Scribe: Blueprint copies for teammates, books and maps copied',
     needs: [['minecraft:emerald', 64, 'emeralds'], ['#minecraft:planks', 96, 'planks'], ['minecraft:book', 24, 'books'], ['#minecraft:logs', 16, 'logs']] },
+  { id: 'hall', name: 'The Hall of Heroes', does: 'a hall with a plaque for every boss and who brought it down first, and the Chronicler, who keeps the record',
+    needs: [['minecraft:emerald', 96, 'emeralds'], ['minecraft:stone_bricks', 128, 'stone bricks'], ['#minecraft:logs', 32, 'logs'], ['minecraft:glass', 16, 'glass'], ['minecraft:gold_ingot', 8, 'gold ingots']] },
   { id: 'market', name: 'The Market', does: 'a market hall with stalls for your shops, and the Exchange Merchant: ore from other regions, saplings, patterns, trims',
     needs: [['minecraft:emerald', 128, 'emeralds'], ['#minecraft:logs', 96, 'logs'], ['minecraft:stone_bricks', 128, 'stone bricks'], ['create:andesite_alloy', 32, 'andesite alloy'], ['#minecraft:wool', 32, 'wool']] },
   { id: 'infirmary', name: 'The Infirmary', does: 'a physician\'s house and a graveyard: the Physician (cures, curing zombie villagers) and the Undertaker (your corpse brought home)',
@@ -46,13 +53,36 @@ const PROJECTS = [
     needs: [['minecraft:emerald', 384, 'emeralds'], ['minecraft:bread', 192, 'bread'], ['minecraft:golden_apple', 16, 'golden apples'], ['#minecraft:beds', 12, 'beds'], ['#minecraft:planks', 128, 'planks']] },
 ]
 
-function works(server) { return server.persistentData.getCompound(WORKS) }
+function works(server) { return migrate(server.persistentData.getCompound(WORKS)) }
 function save(server, w) { server.persistentData.put(WORKS, w) }
-function current(w) { var i = w.getInt('index'); return i < PROJECTS.length ? i : -1 }
-function given(w, i) { return w.getCompound('given').getInt(String(i)) }
-function setGiven(w, i, n) { var g = w.getCompound('given'); g.putInt(String(i), n); w.put('given', g) }
+function doneList(w) { var s = String(w.getString('done') || ''); return s ? s.split(',') : [] }
+function isDone(w, id) { return doneList(w).indexOf(id) >= 0 }
+function current(w) { for (var i = 0; i < PROJECTS.length; i++) if (!isDone(w, PROJECTS[i].id)) return i; return -1 }
+function given(w, id, k) { return w.getCompound('progress').getCompound(id).getInt(String(k)) }
+function setGiven(w, id, k, n) { var pr = w.getCompound('progress'), c = pr.getCompound(id); c.putInt(String(k), n); pr.put(id, c); w.put('progress', pr) }
 function credit(w, name, points) { var d = w.getCompound('donors'); d.putInt(name, d.getInt(name) + points); w.put('donors', d) }
-function complete(w, p) { return p.needs.every((n, i) => given(w, i) >= n[1]) }
+function complete(w, p) { return p.needs.every((n, k) => given(w, p.id, k) >= n[1]) }
+
+// from the first layout (index + one `given` list) to v2. The old list carried each finished project's counts into the
+// next: given[k] after a project = max(given[k] before, its need k). What the current project holds beyond that carry
+// was really given for it, and is kept.
+const OLD_ORDER = ['forge', 'scriptorium', 'market', 'infirmary', 'station', 'lighthouse', 'relight']
+function migrate(w) {
+  if (w.getInt('v') >= 2) return w
+  var idx = w.getInt('index'), done = OLD_ORDER.slice(0, Math.min(idx, OLD_ORDER.length)), carry = {}, k
+  done.forEach(id => { PROJECTS.filter(q => q.id === id)[0].needs.forEach((n, j) => { carry[j] = Math.max(carry[j] || 0, n[1]) }) })
+  w.putString('done', done.join(','))
+  if (idx < OLD_ORDER.length) {
+    var cur = PROJECTS.filter(q => q.id === OLD_ORDER[idx])[0], g = w.getCompound('given')
+    for (k = 0; k < cur.needs.length; k++) {
+      var real = Math.max(0, g.getInt(String(k)) - (carry[k] || 0))
+      if (real > 0) setGiven(w, cur.id, k, Math.min(real, cur.needs[k][1]))
+    }
+  }
+  w.remove('given'); w.remove('index')
+  w.putInt('v', 2)
+  return w
+}
 function matches(stack, need) {
   if (stack.isEmpty()) return false
   if (need.charAt(0) !== '#') return String(stack.id) === need
@@ -120,6 +150,10 @@ function findSite(level, w, hx, hz) {
 function cmd(server, c) { server.runCommandSilent('execute in ' + OW + ' run ' + c) }
 function fill(server, x0, y0, z0, x1, y1, z1, block, mode) { cmd(server, 'fill ' + x0 + ' ' + y0 + ' ' + z0 + ' ' + x1 + ' ' + y1 + ' ' + z1 + ' ' + block + (mode ? ' ' + mode : '')) }
 function put(server, x, y, z, block) { cmd(server, 'setblock ' + x + ' ' + y + ' ' + z + ' ' + block) }
+function signText(l1, l2, l3, l4) {
+  var m = (t, bold) => "'" + JSON.stringify({ text: t || '', bold: !!bold }) + "'"
+  return '{front_text:{messages:[' + [m(l1, true), m(l2), m(l3), m(l4)].join(',') + ']},is_waxed:1b}'
+}
 function sign(server, x, y, z, facing, l1, l2) {
   var m = t => "'" + JSON.stringify({ text: t || '' }) + "'"
   var mb = t => "'" + JSON.stringify({ text: t || '', bold: true }) + "'"
@@ -134,14 +168,15 @@ function groundwork(server, s, hx, hz, height, floor) {
   fill(server, s.x - hx - 1, s.y - 7, s.z - hz - 1, s.x + hx + 1, s.y - 2, s.z + hz + 1, 'minecraft:cobblestone', 'replace minecraft:air')
   fill(server, s.x - hx - 1, s.y - 7, s.z - hz - 1, s.x + hx + 1, s.y - 2, s.z + hz + 1, 'minecraft:cobblestone', 'replace minecraft:water')
 }
-// walls h high, log corners, a door in the south wall, windows, and a gable roof along x; front faces south (+z)
-function house(server, s, hx, hz, h, wall, log, roof, door) {
-  var x0 = s.x - hx, x1 = s.x + hx, z0 = s.z - hz, z1 = s.z + hz, y = s.y, i, t
+// walls h high, log corners, a door in the south wall, windows (at height `win`, default 1), and a gable roof along x;
+// front faces south (+z)
+function house(server, s, hx, hz, h, wall, log, roof, door, win) {
+  var x0 = s.x - hx, x1 = s.x + hx, z0 = s.z - hz, z1 = s.z + hz, y = s.y, i, t, wy = y + (win || 1)
   fill(server, x0, y, z0, x1, y + h - 1, z0, wall); fill(server, x0, y, z1, x1, y + h - 1, z1, wall)
   fill(server, x0, y, z0, x0, y + h - 1, z1, wall); fill(server, x1, y, z0, x1, y + h - 1, z1, wall)
   ;[[x0, z0], [x1, z0], [x0, z1], [x1, z1]].forEach(c => fill(server, c[0], y, c[1], c[0], y + h - 1, c[1], log + '[axis=y]'))
-  for (t = x0 + 2; t <= x1 - 2; t += 2) { put(server, t, y + 1, z0, 'minecraft:glass_pane'); if (Math.abs(t - s.x) > 1) put(server, t, y + 1, z1, 'minecraft:glass_pane') }
-  for (t = z0 + 2; t <= z1 - 2; t += 2) { put(server, x0, y + 1, t, 'minecraft:glass_pane'); put(server, x1, y + 1, t, 'minecraft:glass_pane') }
+  for (t = x0 + 2; t <= x1 - 2; t += 2) { put(server, t, wy, z0, 'minecraft:glass_pane'); if (Math.abs(t - s.x) > 1) put(server, t, wy, z1, 'minecraft:glass_pane') }
+  for (t = z0 + 2; t <= z1 - 2; t += 2) { put(server, x0, wy, t, 'minecraft:glass_pane'); put(server, x1, wy, t, 'minecraft:glass_pane') }
   if (door !== false) {
     put(server, s.x, y, z1, 'minecraft:' + (door || 'spruce') + '_door[facing=north,half=lower,hinge=left]')
     put(server, s.x, y + 1, z1, 'minecraft:' + (door || 'spruce') + '_door[facing=north,half=upper,hinge=left]')
@@ -180,6 +215,16 @@ const BUILD = {
     put(server, s.x - 2, s.y, s.z, 'minecraft:lectern[facing=south]'); put(server, s.x + 2, s.y, s.z, 'minecraft:cartography_table')
     sign(server, s.x + 1, s.y + 2, s.z + 4, 'south', 'Scriptorium', 'Capital Works')
     return [['scribe', s.x, s.y, s.z + 1, 0]]
+  },
+  // the Hall of Heroes: a plaque for every boss (boss_record.js) on the inside walls, windows above them
+  hall: (server, w, s) => {
+    var z
+    groundwork(server, s, 6, 4, 10, 'minecraft:polished_andesite')
+    house(server, s, 6, 4, 5, 'minecraft:stone_bricks', 'minecraft:dark_oak_log', 'minecraft:dark_oak', 'dark_oak', 3)
+    for (z = s.z - 3; z <= s.z + 3; z++) put(server, s.x, s.y, z, 'minecraft:red_carpet')
+    sign(server, s.x + 1, s.y + 2, s.z + 5, 'south', 'Hall of Heroes', 'Capital Works')
+    server.scheduleInTicks(5, () => hallRefresh(server))
+    return [['chronicler', s.x, s.y, s.z - 2, 0]]
   },
   market: (server, w, s) => {
     var x, z
@@ -243,7 +288,41 @@ const BUILD = {
     return [['keeper', s.x + 2, s.y, s.z + 4, 0]]
   },
 }
-const SIZE = { forge: [5, 4], scriptorium: [5, 4], market: [9, 6], infirmary: [16, 4], station: [8, 5], lighthouse: [4, 5] }
+const SIZE = { forge: [5, 4], scriptorium: [5, 4], hall: [7, 5], market: [9, 6], infirmary: [16, 4], station: [8, 5], lighthouse: [4, 5] }
+// everything each building touches, from its centre: [x0, z0, x1, z1] (groundwork, roof overhang, chimney, graveyard,
+// signs); its front, where the road meets it, is the middle of the south side, one block out. `height`: what the builder
+// clears above the floor. `outside`: not walled in (the Lighthouse).
+const FOOT = {
+  forge: { box: [-5, -4, 5, 4], height: 10 }, scriptorium: { box: [-5, -4, 5, 4], height: 10 }, hall: { box: [-7, -5, 7, 5], height: 10 },
+  market: { box: [-9, -6, 9, 6], height: 10 }, infirmary: { box: [-6, -4, 16, 4], height: 10 }, station: { box: [-8, -4, 8, 4], height: 8 },
+  lighthouse: { box: [-4, -4, 4, 4], height: 28, outside: true },
+}
+
+// ---------------------------------------------------------------- the Hall of Heroes' plaques
+// birch wall signs on the inside walls, rows at floor+1 and floor+2: the north wall (11 across) then the west and east
+// walls (5 each), in boss_record.js' order
+function hallSlots(s) {
+  var out = [], x, z, r
+  for (r = 1; r <= 2; r++) for (x = s.x - 5; x <= s.x + 5; x++) out.push([x, s.y + r, s.z - 3, 'south'])
+  for (r = 1; r <= 2; r++) for (z = s.z - 2; z <= s.z + 2; z++) out.push([s.x - 5, s.y + r, z, 'east'])
+  for (r = 1; r <= 2; r++) for (z = s.z - 2; z <= s.z + 2; z++) out.push([s.x + 5, s.y + r, z, 'west'])
+  return out
+}
+function hallRefresh(server) {
+  var w = works(server), at = String(w.getCompound('sites').getString('hall') || '')
+  if (!at || w.getCompound('ruins').getInt('hall') || !isDone(w, 'hall') || !global.PEACOCK_RECORD) return
+  var c = at.split(',').map(Number), s = { x: c[0], y: c[1], z: c[2] }, level = server.overworld()
+  try { if (!level.hasChunk(s.x >> 4, s.z >> 4)) return } catch (e) { }
+  var slots = hallSlots(s)
+  global.PEACOCK_RECORD.LIST.forEach((b, i) => {
+    if (i >= slots.length) return
+    var q = global.PEACOCK_RECORD.plaque(server, b[0]), sl = slots[i]
+    var m = (t, bold, gray) => "'" + JSON.stringify({ text: t || '', bold: !!bold, color: gray ? 'gray' : 'black' }) + "'"
+    var text = 'messages:[' + [m(q.lines[0], true, !q.done), m(q.lines[1], false, !q.done), m(q.lines[2], false, !q.done), m(q.lines[3], false, !q.done)].join(',') + ']'
+    put(server, sl[0], sl[1], sl[2], 'minecraft:birch_wall_sign[facing=' + sl[3] + ']{front_text:{' + text + '},is_waxed:1b}')
+  })
+}
+global.PEACOCK_HALL_REFRESH = hallRefresh
 
 // ---------------------------------------------------------------- relight a dead town
 function relight(server, w, done) {
@@ -288,12 +367,32 @@ function relight(server, w, done) {
 // ---------------------------------------------------------------- finishing a project
 function finish(server, idx) {
   var w = works(server), p = PROJECTS[idx]
-  w.putInt('index', idx + 1)
+  var d = doneList(w); if (d.indexOf(p.id) < 0) d.push(p.id)
+  w.putString('done', d.join(','))
   w.putString('pending', p.id)
   save(server, w)
   everyone(server, Text.gold('Capital Works: ').append(Text.white(p.name + ' is paid for! The builders are at work.')))
   build(server, p.id)
 }
+function footBox(id, s) { var f = FOOT[id].box; return [s.x + f[0], s.z + f[1], s.x + f[2], s.z + f[3]] }
+function chunksOf(box, pad) {
+  var out = [], a, b
+  for (a = (box[0] - pad) >> 4; a <= (box[2] + pad) >> 4; a++) for (b = (box[1] - pad) >> 4; b <= (box[3] + pad) >> 4; b++) out.push([a, b])
+  return out
+}
+function spawnPeople(server, people) {
+  people.forEach(q => global.PEACOCK_NPC.spawn(server, OW, q[0], q[1] + 0.5, q[2], q[3] + 0.5, q[4],
+    global.PEACOCK_ROLES[q[0]].offers ? { offers: global.PEACOCK_ROLES[q[0]].offers } : null))
+}
+// the chunks a job needs, loaded (capital_layout.js keeps the tickets); plain /forceload if that script is missing
+function holdBox(server, box, then) {
+  var L = global.PEACOCK_LAYOUT
+  if (L) { L.hold(server, chunksOf(box, 2), held => then(() => L.release(server, held))); return }
+  var area = (box[0] - 2) + ' ' + (box[1] - 2) + ' ' + (box[2] + 2) + ' ' + (box[3] + 2)
+  cmd(server, 'forceload add ' + area)
+  server.scheduleInTicks(40, () => then(() => cmd(server, 'forceload remove ' + area)))
+}
+
 function build(server, id) {
   var w = works(server)
   var p = PROJECTS.filter(q => q.id === id)[0]
@@ -308,27 +407,50 @@ function build(server, id) {
     })
     return
   }
+  var at = String(w.getCompound('sites').getString(id) || '')
+  if (at && w.getCompound('ruins').getInt(id)) { restore(server, p, at); return }
+  if (at) { w.putString('pending', ''); save(server, w); return }       // already standing
+  // no planned lot (the town plan could not place it): open ground outside the wall, as before 2026-10-28
   var level = server.overworld()
   var sz = SIZE[id]
   var s = findSite(level, w, sz[0], sz[1])
   if (!s) { console.warn('[peacock] works: no room found for ' + p.name + '; tried again next start'); return }
-  cmd(server, 'forceload add ' + (s.x - sz[0] - 2) + ' ' + (s.z - sz[1] - 2) + ' ' + (s.x + sz[0] + 12) + ' ' + (s.z + sz[1] + 2))
-  server.scheduleInTicks(40, () => {
+  var box = footBox(id, s)
+  holdBox(server, box, release => {
     try {
       var w2 = works(server)
-      var people = BUILD[id](server, w2, s)
-      people.forEach(q => global.PEACOCK_NPC.spawn(server, OW, q[0], q[1] + 0.5, q[2], q[3] + 0.5, q[4],
-        global.PEACOCK_ROLES[q[0]].offers ? { offers: global.PEACOCK_ROLES[q[0]].offers } : null))
-      addBox(w2, [s.x - sz[0], s.z - sz[1], s.x + sz[0], s.z + sz[1]])
+      spawnPeople(server, BUILD[id](server, w2, s))
+      addBox(w2, box)
       var sites = w2.getCompound('sites'); sites.putString(id, s.x + ',' + s.y + ',' + s.z); w2.put('sites', sites)
       w2.putString('pending', '')
       save(server, w2)
       everyone(server, Text.gold('Capital Works: ').append(Text.white(p.name + ' stands at ' + s.x + ', ' + s.y + ', ' + s.z + ': ' + p.does + '.')))
       console.info('[peacock] works: ' + p.name + ' built at ' + s.x + ',' + s.y + ',' + s.z)
     } catch (e) { console.warn('[peacock] works: building ' + p.name + ': ' + e) }
-    server.scheduleInTicks(200, () => cmd(server, 'forceload remove ' + (s.x - sz[0] - 2) + ' ' + (s.z - sz[1] - 2) + ' ' + (s.x + sz[0] + 12) + ' ' + (s.z + sz[1] + 2)))
+    server.scheduleInTicks(200, release)
   })
 }
+
+// a paid-for ruin is rebuilt in place: the builder clears its lot and puts the building up whole; its people move in
+function restore(server, p, at) {
+  var c = at.split(',').map(Number), s = { x: c[0], y: c[1], z: c[2] }, id = p.id
+  holdBox(server, footBox(id, s), release => {
+    try {
+      var w2 = works(server), r = w2.getCompound('ruins'); r.putInt(id, 0); w2.put('ruins', r)
+      var rs = String(w2.getCompound('ruinSigns').getString(id) || '')
+      if (rs) { var q = rs.split(',').map(Number); put(server, q[0], q[1], q[2], 'minecraft:air') }
+      save(server, w2)
+      spawnPeople(server, BUILD[id](server, works(server), s))
+      var w3 = works(server); w3.putString('pending', ''); save(server, w3)
+      everyone(server, Text.gold('Capital Works: ').append(Text.white(p.name + ' is restored, at ' + s.x + ', ' + s.y + ', ' + s.z + ': ' + p.does + '.')))
+      console.info('[peacock] works: ' + p.name + ' restored at ' + s.x + ',' + s.y + ',' + s.z)
+    } catch (e) { console.warn('[peacock] works: restoring ' + p.name + ': ' + e) }
+    server.scheduleInTicks(200, release)
+  })
+}
+
+global.PEACOCK_WORKS = { PROJECTS: PROJECTS, BUILD: BUILD, FOOT: FOOT, works: works, save: save, isDone: isDone,
+  footBox: footBox, put: put, fill: fill, cmd: cmd, signText: (l1, l2, l3, l4) => signText(l1, l2, l3, l4) }
 
 // ---------------------------------------------------------------- the Clerk
 function status(w, api) {
@@ -337,8 +459,10 @@ function status(w, api) {
   var p = PROJECTS[i]
   out.push(Text.gold('Capital Works ' + (i + 1) + '/' + PROJECTS.length + ': ').append(Text.white(p.name)))
   out.push(Text.gray('  When finished: ' + p.does + '.'))
+  var at = String(w.getCompound('sites').getString(p.id) || '')
+  if (at && w.getCompound('ruins').getInt(p.id)) out.push(Text.gray('  Its ruin stands at ' + at.split(',').join(', ') + ', waiting.'))
   p.needs.forEach((n, k) => {
-    var have = Math.min(given(w, k), n[1])
+    var have = Math.min(given(w, p.id, k), n[1])
     out.push((have >= n[1] ? Text.green('  ✔ ') : Text.yellow('  • ')).append(Text.white(have + ' / ' + n[1] + ' ' + n[2])))
   })
   var d = w.getCompound('donors'), names = []
@@ -354,11 +478,11 @@ function donateEmeralds(player, npc, n, api) {
   var p = PROJECTS[i], k = -1, j
   for (j = 0; j < p.needs.length; j++) if (p.needs[j][0] === 'minecraft:emerald') k = j
   if (k < 0) return
-  var want = Math.min(n, p.needs[k][1] - given(w, k))
+  var want = Math.min(n, p.needs[k][1] - given(w, p.id, k))
   if (want <= 0) { api.say(player, 'Clerk', 'gold', 'The emeralds for this one are all in. It needs materials now.'); return }
   want = Math.min(want, api.countEmeralds(player))
-  if (want <= 0 || !api.take(player, want)) { api.poor(player, npc, Math.min(n, p.needs[k][1] - given(w, k))); return }
-  setGiven(w, k, given(w, k) + want)
+  if (want <= 0 || !api.take(player, want)) { api.poor(player, npc, Math.min(n, p.needs[k][1] - given(w, p.id, k))); return }
+  setGiven(w, p.id, k, given(w, p.id, k) + want)
   credit(w, player.username, want)
   save(server, w)
   api.say(player, 'Clerk', 'gold', want + ' emeralds, entered in the ledger. Thank you.')
@@ -376,11 +500,11 @@ function donateItems(player, npc, heldOnly, api) {
     for (k = 0; k < p.needs.length; k++) {
       var n = p.needs[k]
       if (n[0] === 'minecraft:emerald' || !matches(st, n[0])) continue
-      var room = n[1] - given(w, k)
+      var room = n[1] - given(w, p.id, k)
       if (room <= 0) continue
       var m = Math.min(room, st.count)
       st.shrink(m)
-      setGiven(w, k, given(w, k) + m)
+      setGiven(w, p.id, k, given(w, p.id, k) + m)
       total += m
       break
     }
@@ -447,6 +571,13 @@ ServerEvents.loaded(event => {
   })
 })
 
+// the Hall's plaques catch up whenever its chunk is loaded: every five minutes, and a minute after start
+ServerEvents.tick(event => {
+  var server = event.server
+  if (server.tickCount % 6000 !== 1200) return
+  try { hallRefresh(server) } catch (e) { console.warn('[peacock] works: hall plaques: ' + e) }
+})
+
 ServerEvents.commandRegistry(event => {
   var Commands = event.commands
   event.register(Commands.literal('peacock')
@@ -455,7 +586,7 @@ ServerEvents.commandRegistry(event => {
       .then(Commands.literal('finish').requires(src => src.hasPermission(2)).executes(ctx => {
         var server = ctx.source.server, w = works(server), i = current(w)
         if (i < 0) { ctx.source.sendSystemMessage(Text.gray('All projects are finished.')); return 0 }
-        PROJECTS[i].needs.forEach((n, k) => setGiven(w, k, n[1]))
+        PROJECTS[i].needs.forEach((n, k) => setGiven(w, PROJECTS[i].id, k, n[1]))
         save(server, w)
         finish(server, i)
         return 1

@@ -87,15 +87,20 @@ EntityEvents.death(event => {
   var uuids = (boss.persistentData.getString(FIGHTERS) || '').split(',').filter(s => s.length)
   var killer = event.source.actual
   if (killer && killer.isPlayer() && uuids.indexOf(String(killer.uuid)) < 0) uuids.push(String(killer.uuid))
+  var credited = []
   uuids.forEach(u => {
     try {
       var p = level.server.getPlayerList().getPlayer(UUID.fromString(u))
       if (!p || String(p.level.dimension) !== String(level.dimension) || dist2(p, boss) > 128 * 128) return
+      credited.push(String(p.username))
       grant(p, 'bosses/first')
       grant(p, 'bosses/' + id)
       if (!done(p, 'bosses/ledger') && LEDGER.every(b => done(p, 'bosses/' + b))) grant(p, 'bosses/ledger')
     } catch (e) { console.warn('[peacock] achievements: ' + e) }
   })
+  // the boss record and the Hall of Heroes (boss_record.js), same players (2026-10-28)
+  try { if (global.PEACOCK_RECORD && credited.length) global.PEACOCK_RECORD.add(level.server, id, credited) }
+  catch (e) { console.warn('[peacock] achievements: boss record: ' + e) }
 })
 
 // ---------------------------------------------------------------- the rest, checked every few seconds

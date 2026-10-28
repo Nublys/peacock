@@ -144,11 +144,14 @@ each boss lives; **rumour maps** from outposts, cartographers and bounty boards 
 - **Caravans** run between towns and you can run your own. Late game, a **Trading Floor** depot lets a
   train sell on a schedule — in a real town, with a bell and beds.
 - **The Capital Works.** The Clerk on the capital's square takes donations — emeralds and materials — for
-  the project the whole server is building: the Forge, Scriptorium, Market, Infirmary, Rail Station and
-  Lighthouse go up outside the wall one after another, and their people move in (a Smith who repairs
-  without XP, a Scribe who copies Blueprints for teammates, a Physician, an Undertaker who brings your
-  corpse home, a Courier who sends parcels by rail, an Exchange that sells ore from other regions, a
-  Lighthouse Keeper whose compass points home). The last project relights a dead town.
+  the project the whole server is building. Every Works building already stands in ruins on its own lot
+  inside the capital's wall (the Lighthouse outside it, on high ground), with a road to its door; paying
+  for one restores it, one after another: the Forge, Scriptorium, Hall of Heroes, Market, Infirmary, Rail
+  Station and Lighthouse, and their people move in (a Smith who repairs without XP, a Scribe who copies
+  Blueprints for teammates, a Chronicler who keeps the record of every boss and who killed it first, a
+  Physician, an Undertaker who brings your corpse home, a Courier who sends parcels by rail, an Exchange
+  that sells ore from other regions, a Lighthouse Keeper whose compass points home). The last project
+  relights a dead town. A first boss kill is announced to everyone.
   `/peacock projects` shows progress. Villagers also sell far more than vanilla, modded goods included.
 
 ### Building and getting around

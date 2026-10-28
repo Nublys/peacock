@@ -417,8 +417,10 @@ ENTRIES = {
         ("works", "The Capital Works", "minecraft:lectern", [
             txt("The " + B("Clerk of the Works") + " stands by a lectern on the capital's square. Talk to her: she shows the project the whole server is paying for, what it still needs, and who has given most.",
                 "Give emeralds (16 or 64 at a time), what you hold, or everything in your pack that is on the list."),
-            txt("When a project is paid for, its building goes up just outside the wall and its people move in. In order: " + B("the Forge") + ", " + B("the Scriptorium") + ", " + B("the Market") + ", " + B("the Infirmary") + ", " + B("the Rail Station") + ", " + B("the Lighthouse") + ".",
-                "Last of all: " + B("Relight a Dead Town") + ". The nearest abandoned ruin is cleared, its zombie villagers cured, and settlers move in around a new bell."),
+            txt("Every Works building already stands, " + B("in ruins") + ", on its own lot inside the wall, a road to its door; the Lighthouse waits outside, on high ground. Paying for one restores it and its people move in.",
+                "In order: " + B("the Forge") + ", " + B("the Scriptorium") + ", " + B("the Hall of Heroes") + ", " + B("the Market") + ", " + B("the Infirmary") + ", " + B("the Rail Station") + ", " + B("the Lighthouse") + "."),
+            txt("Last of all: " + B("Relight a Dead Town") + ". The nearest abandoned ruin is cleared, its zombie villagers cured, and settlers move in around a new bell.",
+                "The Clerk tells you where the current project's ruin stands."),
             txt("Each project wants emeralds and materials: stone bricks, logs, iron, glass, wool, and later Create parts and track. The later ones are big; a server builds them together over weeks.",
                 B("/peacock projects") + " shows progress from anywhere."),
         ]),
@@ -429,6 +431,8 @@ ENTRIES = {
                 B("Undertaker") + ": brings your latest corpse to the capital graveyard, priced by distance; refunded if nothing is left."),
             txt(B("Courier") + " (the Station): sends what you hold to any player, by rail. The further away they are, the longer it takes; it waits for them if they are offline.",
                 B("Keeper") + " (the Lighthouse): a compass that always points to the lamp. " + B("Exchange Merchant") + " (the Market): ore from other regions, rare saplings, patterns and trims; fresh each dawn."),
+            txt(B("The Hall of Heroes") + " keeps a plaque for every boss: who brought it down first, and when. The record is kept from the first kill on, Hall or no Hall; a first kill is called out to everyone.",
+                B("Chronicler") + " (the Hall): the whole record, every boss, first slayers, how often each has fallen and who has slain it most. The undefeated are a list of what is still out there."),
         ]),
         ("steward", "The Steward", "peacock:steward_contract", [
             txt("Land only runs while someone is near it, and force-loaded claims only run while their team is online. To keep a farm going while you sleep, hire a " + B("steward") + ".",

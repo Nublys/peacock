@@ -321,7 +321,7 @@ hash = "3b6236845f6a5ff8804487b63b0d74305b91316dc9a008362838607b0be3bd8e"
 
 [[files]]
 file = "config/paxi/datapacks/peacock-ruins.zip"
-hash = "4b27aaaa21d29396ecfcb630664713e9a2ef9f5aedf713120011f3b977076c6b"
+hash = "9b8bc7f36c5516fb58ea08b38ccb91bc09624be97f83826d22c25e4e24d29f63"
 
 [[files]]
 file = "config/paxi/datapacks/peacock/data/bountiful/bounty_decrees/peacock/archivist.json"
@@ -2606,7 +2606,7 @@ hash = "baa612c15ded0547cf13e595bbcd1b5e0f75d59b27b8dd9f19bef130d263fab2"
 
 [[files]]
 file = "kubejs/server_scripts/achievements.js"
-hash = "7c7568247f779efe71023c2f87f270f5f1ce390f7d81592c61510cc02ffd5c28"
+hash = "8aa0cf00cd9bae7ed6808273b133e4ce30ccd02512b0fc8b978684704e2d0a2b"
 
 [[files]]
 file = "kubejs/server_scripts/almanac.js"
@@ -2625,6 +2625,10 @@ file = "kubejs/server_scripts/blueprints.js"
 hash = "c908d0c54a071310e1752480bc3cfe5fb37ed4e3a019e4ebb0176e52d25660c6"
 
 [[files]]
+file = "kubejs/server_scripts/boss_record.js"
+hash = "1380f349e32385b49bf72427c7228c3dc326bf7892ad1585f29fd2dd7f0a7ae6"
+
+[[files]]
 file = "kubejs/server_scripts/boss_tuning.js"
 hash = "90f4b5f522ccfa82d202e037aef49a8d7c38c694452e38cb41ba5d15c7365636"
 
@@ -2633,8 +2637,16 @@ file = "kubejs/server_scripts/capital_boards.js"
 hash = "23d3267a57c50a4a0b982d4d4842d6e0e875eef3b119c31ff353ff7b9a21c2f1"
 
 [[files]]
+file = "kubejs/server_scripts/capital_choose.js"
+hash = "be503f28373f82c1352f7fea34c0ec769061d8fa81dae213ffd0f62bbd7bcfc5"
+
+[[files]]
 file = "kubejs/server_scripts/capital_keepalive.js"
 hash = "12696b801b369c96f16fac471f00156d630b8874c97b66314586aa57a6e1bf27"
+
+[[files]]
+file = "kubejs/server_scripts/capital_layout.js"
+hash = "1b3b9b427b315d5e709b27c801ee9e84912f64006ea31307b0678a3424324e56"
 
 [[files]]
 file = "kubejs/server_scripts/capital_npcs.js"
@@ -2642,7 +2654,7 @@ hash = "f7919b05bda2a58e0b6558a1b6dc2381e2f00e7271b2211650f4ec6505c42fc9"
 
 [[files]]
 file = "kubejs/server_scripts/capital_projects.js"
-hash = "d3a0af3db9a7f8eb69d82070af81cdcb7d186ece23578766fdd1ef51d8bdab75"
+hash = "db83c7f17e8649edeb420f7c6ea43f36866dfa7c23179bfdce337c9ac5803417"
 
 [[files]]
 file = "kubejs/server_scripts/capital_services.js"
@@ -2650,7 +2662,7 @@ hash = "d6b8806521cacbab8697ce90b92b3afc8aa4fdcbaf64a3e8e89c89ebfeb5dd80"
 
 [[files]]
 file = "kubejs/server_scripts/capital_wall.js"
-hash = "e697009f2845fa0aba08b395036ceada159234bf7897765edadbf324ed494982"
+hash = "49ddecfc9cfac7ec724fb4bedd51e5b8d933e85d6f4f6de5198a2e72045c1baf"
 
 [[files]]
 file = "kubejs/server_scripts/cave_loot.js"
@@ -4116,7 +4128,7 @@ hash = "a0ee6baee8703e0f12243b3c1e2798a9f5c9441e3ea62bfd0f20ffd9ae7127d2"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/towns/services.json"
-hash = "c83e874d58da628dd328f27265f820305f299c34af2b5c6d05aa1a68abd14676"
+hash = "4b17f05666d54beb6dcdbc33d7f1d5bddfcbe0487eba6101e9a839db4ab2e99b"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/towns/shopping.json"
@@ -4144,7 +4156,7 @@ hash = "6b54535c21bb38972ffd2ace20c919bcfd8ff1978523f9df0035ebcd49179d10"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/towns/works.json"
-hash = "c458fc1b3018d9473d1b789dc00760621b428d361ae980e3c5559fd446fed065"
+hash = "5a3f8488dd647230a6b02f343ee1f24922d38b000b99512ccbeab891e23cdb4e"
 
 [[files]]
 file = "peacock-server/README.txt"

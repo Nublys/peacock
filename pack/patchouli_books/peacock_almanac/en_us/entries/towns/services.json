@@ -15,6 +15,10 @@
     {
       "type": "patchouli:text",
       "text": "$(bold)Courier$() (the Station): sends what you hold to any player, by rail. The further away they are, the longer it takes; it waits for them if they are offline.$(br2)$(bold)Keeper$() (the Lighthouse): a compass that always points to the lamp. $(bold)Exchange Merchant$() (the Market): ore from other regions, rare saplings, patterns and trims; fresh each dawn."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)The Hall of Heroes$() keeps a plaque for every boss: who brought it down first, and when. The record is kept from the first kill on, Hall or no Hall; a first kill is called out to everyone.$(br2)$(bold)Chronicler$() (the Hall): the whole record, every boss, first slayers, how often each has fallen and who has slain it most. The undefeated are a list of what is still out there."
     }
   ]
 }

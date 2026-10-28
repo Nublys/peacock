@@ -10,7 +10,11 @@
     },
     {
       "type": "patchouli:text",
-      "text": "When a project is paid for, its building goes up just outside the wall and its people move in. In order: $(bold)the Forge$(), $(bold)the Scriptorium$(), $(bold)the Market$(), $(bold)the Infirmary$(), $(bold)the Rail Station$(), $(bold)the Lighthouse$().$(br2)Last of all: $(bold)Relight a Dead Town$(). The nearest abandoned ruin is cleared, its zombie villagers cured, and settlers move in around a new bell."
+      "text": "Every Works building already stands, $(bold)in ruins$(), on its own lot inside the wall, a road to its door; the Lighthouse waits outside, on high ground. Paying for one restores it and its people move in.$(br2)In order: $(bold)the Forge$(), $(bold)the Scriptorium$(), $(bold)the Hall of Heroes$(), $(bold)the Market$(), $(bold)the Infirmary$(), $(bold)the Rail Station$(), $(bold)the Lighthouse$()."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Last of all: $(bold)Relight a Dead Town$(). The nearest abandoned ruin is cleared, its zombie villagers cured, and settlers move in around a new bell.$(br2)The Clerk tells you where the current project's ruin stands."
     },
     {
       "type": "patchouli:text",

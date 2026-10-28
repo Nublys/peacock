@@ -12,7 +12,9 @@
 //
 // The work is spread over server ticks (COLUMNS_PER_TICK) so the server never stalls. `peacock_capital_wall2` in
 // server persistentData marks it done; `/peacock wall` (op) builds it again in place (harmless).
-// Every column is in the spawn chunks, which are always loaded; a column whose chunk is not loaded is skipped.
+// A column whose chunk is not loaded is skipped (capital_keepalive.js holds the capital loaded while it is first built).
+// Since 2026-10-28 the wall also takes in the Capital Works buildings and moves out once to do it (`regrow`, called
+// by capital_layout.js with the chunks held); `peacock_wall_extras` remembers what it encloses.
 //
 // Rhino notes (see tools/validate.py): `var` inside functions, no `const`/`let` in try blocks, no Math constants.
 // Java lists from the game are copied into an ArrayList before use (Rhino cannot reflect on JDK immutable lists).
@@ -113,7 +115,10 @@ function wallColumns(corners) {
   return cols
 }
 
-function plan(level) {
+// `extras`: the Capital Works buildings the wall takes in (capital_layout.js, 2026-10-28), as [x0, z0, x1, z1]; each is
+// kept WORKS_MARGIN blocks inside the wall. Without extras this is the wall as first built, exactly.
+const WORKS_MARGIN = 7
+function plan(level, extras) {
   var start = capitalStart(level)
   if (!start) return null
   var fp = footprints(start)
@@ -124,12 +129,18 @@ function plan(level) {
     if (b.y1 > top) top = b.y1
     if (b.y0 < bottom) bottom = b.y0
   })
-  var cols = wallColumns(hull(pts))
   var cx = 0, cz = 0
   fp.buildings.forEach(b => { cx += (b.x0 + b.x1) / 2; cz += (b.z0 + b.z1) / 2 })
   cx /= fp.buildings.length; cz /= fp.buildings.length
-  var p = { cols: cols, top: top + 40, bottom: bottom - 12, roads: fp.roads.length, buildings: fp.buildings.length,
-            roadBoxes: fp.roads, buildingBoxes: fp.buildings, cx: cx, cz: cz }
+  var works = (extras || []).map(e => ({ x0: e[0], z0: e[1], x1: e[2], z1: e[3], y0: bottom, y1: top }))
+  works.forEach(b => {
+    var m = WORKS_MARGIN
+    pts.push([b.x0 - m, b.z0 - m], [b.x1 + m, b.z0 - m], [b.x0 - m, b.z1 + m], [b.x1 + m, b.z1 + m])
+  })
+  var corners = hull(pts)
+  var cols = wallColumns(corners)
+  var p = { cols: cols, hull: corners, top: top + 40, bottom: bottom - 12, roads: fp.roads.length, buildings: fp.buildings.length,
+            roadBoxes: fp.roads, buildingBoxes: fp.buildings.concat(works), townBoxes: fp.buildings, cx: cx, cz: cz }
   markGates(p)
   return p
 }
@@ -267,7 +278,7 @@ function repairColumn(level, c, i, p, rng) {
 
 function repairTreeTops(server, log, done) {
   var level = server.overworld()
-  var p = plan(level)
+  var p = plan(level, extrasOf(server))
   if (!p) { log('wall: tree check skipped — no capital at world spawn ' + level.getSharedSpawnPos()); done(); return }
   log('wall: checking ' + p.cols.length + ' columns for any standing on a tree')
   var seed = (p.cols[0].x * 37 + p.cols[0].z) >>> 0
@@ -295,7 +306,7 @@ function cutGates(level, p) {
 // gates only, into a wall that is already standing (worlds walled before gates existed)
 function addGates(server, log) {
   var level = server.overworld()
-  var p = plan(level)
+  var p = plan(level, extrasOf(server))
   if (!p) { log('wall gates: no capital at world spawn'); return false }
   var g = cutGates(level, p)
   log('wall gates: ' + g.gates + ' gates cut into the existing wall (' + g.blocks + ' blocks)' + (g.where.length ? ' at ' + g.where.join(' ') : ''))
@@ -305,7 +316,7 @@ function addGates(server, log) {
 function build(server, log, done) {
   if (running) { log('wall: already being built'); return false }
   var level = server.overworld()
-  var p = plan(level)
+  var p = plan(level, extrasOf(server))
   if (!p) { log('wall: no capital at world spawn ' + level.getSharedSpawnPos() + ' — nothing built'); done(false); return false }
   running = true
   var seed = (p.cols[0].x * 31 + p.cols[0].z) >>> 0
@@ -334,6 +345,100 @@ function build(server, log, done) {
   step()
   return true
 }
+
+// ---------------------------------------------------------------- the wall moves out (capital_layout.js, 2026-10-28)
+// The Capital Works buildings inside the wall, as last built: "x0,z0,x1,z1;…" in persistentData
+const EXTRAS = 'peacock_wall_extras'
+function extrasOf(server) {
+  var s = String(server.persistentData.getString(EXTRAS) || '')
+  return s ? s.split(';').map(t => t.split(',').map(Number)) : []
+}
+function colKey(c) { return c.x + ',' + c.z }
+
+// take an old wall column down to the ground around it: only the wall's own blocks (stone bricks, the cap, lanterns),
+// so anything a player built against it stays; the foundation below ground stays too, its top turned to grass
+function demolish(level, c, p, oldKeys) {
+  var n = 0, hs = []
+  ;[[2, 0], [-2, 0], [0, 2], [0, -2], [3, 0], [-3, 0], [0, 3], [0, -3]].forEach(d => {
+    var k = (c.x + d[0]) + ',' + (c.z + d[1])
+    if (oldKeys[k] !== undefined) return
+    var y = groundAt(level, c.x + d[0], c.z + d[1], p.top, p.bottom)
+    if (y !== null) hs.push(y)
+  })
+  if (!hs.length) return 0
+  // down to the lowest ground beside it: only wall blocks are taken, so the natural ground under the column is safe,
+  // and a building standing next to the wall cannot make the ground read high
+  var yn = Math.min.apply(null, hs), y
+  for (y = p.top; y >= yn; y--) {
+    var b = level.getBlock(c.x, y, c.z)
+    if (WALL.test(String(b.id))) { b.set('minecraft:air'); n++ }
+  }
+  for (y = yn + 6; y > yn - 12; y--) {
+    var t = level.getBlock(c.x, y, c.z)
+    if (String(t.id) === 'minecraft:air') continue
+    if (WALL.test(String(t.id))) { t.set('minecraft:grass_block'); n++ }
+    break
+  }
+  return n
+}
+
+// every column either plan touches (old and new), for loading their chunks first
+function columnsOf(pOld, pNew) {
+  var seen = {}, out = []
+  pOld.cols.concat(pNew.cols).forEach(c => {
+    ;[[0, 0], [3, 3], [3, -3], [-3, 3], [-3, -3]].forEach(d => {
+      var a = (c.x + d[0]) >> 4, b = (c.z + d[1]) >> 4, k = a + ',' + b
+      if (!seen[k]) { seen[k] = true; out.push([a, b]) }
+    })
+  })
+  pNew.sites.forEach(s => {
+    var g = pNew.cols[s.i], x0 = (Math.min(g.x, s.road[0]) - 3) >> 4, x1 = (Math.max(g.x, s.road[0]) + 3) >> 4
+    var z0 = (Math.min(g.z, s.road[1]) - 3) >> 4, z1 = (Math.max(g.z, s.road[1]) + 3) >> 4
+    for (var a = x0; a <= x1; a++) for (var b = z0; b <= z1; b++) { var k = a + ',' + b; if (!seen[k]) { seen[k] = true; out.push([a, b]) } }
+  })
+  return out
+}
+
+// from the wall standing (old extras) to the wall around `extras`: the new stretch first, then the old stretch that is
+// now inside the town comes down, then the gates. The chunks must be loaded (the caller holds them). Spread over ticks.
+function regrow(server, extras, log, done) {
+  if (running) { log('wall: busy; not moved'); done(false); return }
+  var level = server.overworld()
+  var pOld = plan(level, extrasOf(server)), pNew = plan(level, extras)
+  if (!pOld || !pNew) { log('wall: no capital; not moved'); done(false); return }
+  var oldKeys = {}, newKeys = {}
+  pOld.cols.forEach((c, i) => { oldKeys[colKey(c)] = i })
+  pNew.cols.forEach((c, i) => { newKeys[colKey(c)] = i })
+  var raise = [], razeList = []
+  pNew.cols.forEach((c, i) => {
+    var o = oldKeys[colKey(c)]
+    if (o === undefined || (pOld.cols[o].gate && !c.gate)) raise.push(i)
+  })
+  pOld.cols.forEach(c => { if (newKeys[colKey(c)] === undefined) razeList.push(c) })
+  running = true
+  var seed = (pNew.cols[0].x * 31 + pNew.cols[0].z) >>> 0
+  var rng = () => { seed = (seed * 1664525 + 1013904223) >>> 0; return seed / 4294967296 }
+  var i = 0, j = 0, built = 0, razed = 0
+  log('wall: moving out around ' + extras.length + ' Works buildings: ' + raise.length + ' new columns, ' + razeList.length + ' old ones to take down')
+  var step = () => {
+    try {
+      var end = Math.min(i + COLUMNS_PER_TICK, raise.length)
+      for (; i < end; i++) built += column(level, pNew.cols[raise[i]], raise[i], pNew.top, pNew.bottom, rng)
+      if (i < raise.length) { server.scheduleInTicks(1, step); return }
+      var end2 = Math.min(j + COLUMNS_PER_TICK, razeList.length)
+      for (; j < end2; j++) razed += demolish(level, razeList[j], pOld, oldKeys)
+      if (j < razeList.length) { server.scheduleInTicks(1, step); return }
+      var g = cutGates(level, pNew)
+      server.persistentData.putString(EXTRAS, extras.map(e => e.join(',')).join(';'))
+      running = false
+      log('wall: moved — ' + built + ' blocks built, ' + razed + ' taken down; ' + g.gates + ' gates' + (g.where.length ? ' at ' + g.where.join(' ') : ''))
+      done(true, pNew)
+    } catch (e) { running = false; log('wall: moving failed — ' + e); done(false) }
+  }
+  step()
+}
+
+global.PEACOCK_WALL = { plan: plan, extrasOf: extrasOf, columnsOf: columnsOf, regrow: regrow, soft: soft, WALL: WALL }
 
 ServerEvents.loaded(event => {
   var server = event.server

@@ -407,6 +407,9 @@ def main() -> None:
     cap["spawn_overrides"] = {}
     cap["size"] = 7                        # CTOV's large is 5: a bigger town
     cap["max_distance_from_center"] = 116
+    # 2026-10-28: solid foundations under each piece and room cut above it ("beard_box"), so fewer buildings float
+    # or sink on uneven ground (CTOV ships "beard_thin"); capital_choose.js puts spawn in the flattest capital nearby
+    cap["terrain_adaptation"] = "beard_box"
     write_json("data/peacock/worldgen/structure/capital.json", cap)
     cap_ids = ["peacock:capital"]
     write_json("data/peacock/worldgen/structure_set/capital.json", {
