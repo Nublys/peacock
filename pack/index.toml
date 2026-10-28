@@ -2895,7 +2895,7 @@ metafile = true
 
 [[files]]
 file = "mods/carbon-config.pw.toml"
-hash = "7de04ff833cd43e27843accf8a000dbf5d40f437e2673ce54b795a9e121f1db1"
+hash = "42416755b6e348fd26933e457e4ce06764f752ddd251b28b9d18f3b50456de59"
 metafile = true
 
 [[files]]

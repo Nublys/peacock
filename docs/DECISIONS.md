@@ -1943,3 +1943,11 @@ Aaron: "Raise the max comfortable heat". `config/coldsweat/main.toml` `[Difficul
 1.5111 → 1.7333 MC (100 → 110 °F; MC = (°F − 32) / 45), mirroring the 10 °F the minimum came down on 2026-10-21.
 Comfortable is now 35–110 °F; deserts, the Nether and standing close to furnaces still overheat. Almanac, README and
 PLAN say 110.
+
+## Carbon Config server-only (2026-10-27)
+A client crashed on numpad Enter: Carbon Config's default key opens its list of every mod's config, which throws on
+Cold Sweat's custom config spec ("Spec[...CSConfigSpec] isn't supported in forges spec") and takes the client down
+(numpad + is its second key). Carbon Config is in the pack only because Chunk Pregenerator (server-only, 2026-10-18)
+requires it; no other mod in the pack depends on it. Aaron: "Remove Carbon Config for clients". `carbon-config.pw.toml`
+side `both` → `server`: Prism (packwiz-installer) removes it from clients on the next sync, and the mrpack and
+CurseForge zips no longer include it. The server keeps it for the pregenerator.
