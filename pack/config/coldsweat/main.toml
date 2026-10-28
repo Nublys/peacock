@@ -8,10 +8,11 @@
 	"Auto Update" = false
 
 [Difficulty]
-	# Aaron: comfortable is 35-100 °F (2026-10-21; 45-100 on 2026-10-20; Cold Sweat's default 50-100). The world
+	# Aaron: comfortable is 35-110 °F (110 since 2026-10-27, "Raise the max comfortable heat"; 35-100 on 2026-10-21;
+	# 45-100 on 2026-10-20; Cold Sweat's default 50-100). The world
 	# gauge reads "freezing" below this minimum, and at 45 ordinary nights did; 35 keeps cool nights fine while frost,
 	# snow, mountains and winter still bite.
 	# 35 °F
 	"Minimum Habitable Temperature" = 0.06666666666666667
-	# 100 °F (unchanged)
-	"Maximum Habitable Temperature" = 1.511111111111111
+	# 110 °F (Cold Sweat's default 100)
+	"Maximum Habitable Temperature" = 1.7333333333333334

@@ -89,7 +89,7 @@ of them and you will know.
 ### Seasons and weather
 The year is four seasons of three sub-seasons, sixteen days each. Crops grow only in their season: wheat
 in spring and summer, nothing in winter without a greenhouse. Winter snow piles up in layers and melts
-back in spring. There is no thirst, but the cold is real (Cold Sweat; comfortable is 35–100 °F on the
+back in spring. There is no thirst, but the cold is real (Cold Sweat; comfortable is 35–110 °F on the
 thermometer): stand near a lit campfire or
 furnace under a roof, sew wool into your armour at a sewing table, and carry a waterskin warmed at the fire.
 Three sticks make a **fire drill** for your first campfire. The capital always sits in mild lowland — fine in

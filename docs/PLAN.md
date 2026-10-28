@@ -264,7 +264,7 @@ and nature answered with sickness and monsters — is never stated in-game; the 
   the jigsaw block they were missing.
 - ✅ **Third flight** (2026-10-19): the ruins never generated (a stale living-village set in the pack datapack won the
   load order; `validate.py` now fails on files both datapacks define). Temperature is back as **Cold Sweat** (no
-  thirst; comfortable 35–100 °F since 2026-10-21, 45–100 the day before) with a scripted **fire drill**; Tough As Nails gone. Just Zoom
+  thirst; comfortable 35–110 °F since 2026-10-27, 35–100 from 2026-10-21, 45–100 the day before) with a scripted **fire drill**; Tough As Nails gone. Just Zoom
   needs a spyglass; What Are They Up To; a Peacock achievements tab; Tools On My Back; more shaders to try.
   Village review: ruins keep 14 chunks from the capital, nature pieces 10; Stoneholm's living villages switched off
   (the mod stays: Create: Better Villagers requires it). The seed reroll (one fixed capital spot near the origin)

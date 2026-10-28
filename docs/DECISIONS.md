@@ -14,7 +14,7 @@ history and are not rewritten when a later one supersedes them; the summary belo
 - **Every other CTOV village is a ruin** (60% abandoned, 40% pillager-held), kept 14 chunks from the capital.
   Stoneholm's villages are switched off (the mod stays as a dependency). Village Recruits towers are the only
   new living settlements; the AI runs their diplomacy, wars and expansion.
-- **Temperature** is Cold Sweat, comfortable 35–100 °F (45 until 2026-10-21), no thirst (*supersedes* Tough As Nails).
+- **Temperature** is Cold Sweat, comfortable 35–110 °F (45 until 2026-10-21, 100 until 2026-10-27), no thirst (*supersedes* Tough As Nails).
 - **The server** syncs on every start; `peacock-start.sh` runs Java beside a shutdown watchdog. The only hang found
   (Supplementaries road signs) is fixed. Chunk Pregenerator, not Chunky, for pre-generation.
 - **The look** adds Subtle Effects (both sides), Particle Rain, Smooth Steps (Camera Overhaul removed 2026-10-21), Better Biome Reblend, six texture packs, Streams Reflowing and Terrain Slabs; AmbientSounds is gone. Cold
@@ -1937,3 +1937,9 @@ otherwise. Geolosys Next was in the pack from Phase 0 with no recorded reason. A
 - **BetterF3** (Aaron: "Can you also reduce BetterF3s animations?"): its only animation is the F3 screen sliding in and
   out. `config/betterf3.toml` sets `animationSpeed = 3.0`, the most it allows (default 1.0); `animations = false` would
   drop it. BetterF3 reads a partial file (missing keys keep defaults).
+
+## Comfortable up to 110 °F (2026-10-27)
+Aaron: "Raise the max comfortable heat". `config/coldsweat/main.toml` `[Difficulty] "Maximum Habitable Temperature"`
+1.5111 → 1.7333 MC (100 → 110 °F; MC = (°F − 32) / 45), mirroring the 10 °F the minimum came down on 2026-10-21.
+Comfortable is now 35–110 °F; deserts, the Nether and standing close to furnaces still overheat. Almanac, README and
+PLAN say 110.
