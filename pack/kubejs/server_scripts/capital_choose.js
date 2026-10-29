@@ -47,7 +47,7 @@ function choose(server) {
   }
   var height = (x, z) => gen.getBaseHeight(x, z, Heightmap.WORLD_SURFACE_WG, level, rs)
   var floor = (x, z) => gen.getBaseHeight(x, z, Heightmap.OCEAN_FLOOR_WG, level, rs)
-  var best = null, kept = 0, inRange = 0, sp = level.getSharedSpawnPos(), here = null
+  var best = null, ranked = [], kept = 0, inRange = 0, sp = level.getSharedSpawnPos(), here = null
   spots.forEach(c => {
     var x0 = c[0] * 16, z0 = c[1] * 16, dist = Math.sqrt(x0 * x0 + z0 * z0)
     if (dist > RADIUS) return
@@ -66,8 +66,21 @@ function choose(server) {
     var score = spread + wet * 4 + dist / 500
     var info = { x: x0 + 8, z: z0 + 8, y: y0, spread: spread, wet: wet, score: score }
     if (Math.abs(info.x - sp.getX()) < 160 && Math.abs(info.z - sp.getZ()) < 160) here = info
-    if (!best || score < best.score) best = info
+    ranked.push(info)
   })
+  // best first; the game checks the biome at the town's first piece, a little off the chunk corner read here, so the
+  // one chosen is the best where a capital really stands (its start is worked out; nothing is built yet)
+  ranked.sort((a, b) => a.score - b.score)
+  var BlockPos = Java.loadClass('net.minecraft.core.BlockPos')
+  var capital = level.registryAccess().registryOrThrow(Registries.STRUCTURE).get(new RL('peacock', 'capital'))
+  for (var r = 0; r < ranked.length && r < 6 && !best; r++) {
+    var cand = ranked[r]
+    try {
+      var start = capital ? level.structureManager().getStructureAt(new BlockPos(cand.x, cand.y, cand.z), capital) : null
+      if (start && start.isValid()) best = cand
+      else log('no capital stands at ' + cand.x + ', ' + cand.z + ' after all; next')
+    } catch (e) { log('could not check ' + cand.x + ', ' + cand.z + ': ' + e) }
+  }
   log(inRange + ' possible spots within ' + RADIUS + ' blocks, ' + kept + ' on capital land' +
       (here ? '; the nearest (where spawn is) spreads ' + here.spread + ' blocks' : ''))
   if (!best) { log('none qualifies; spawn left where it is'); return }

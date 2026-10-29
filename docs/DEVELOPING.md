@@ -25,6 +25,8 @@ pack/                 the packwiz pack — this is what gets installed
   kubejs/                  KubeJS: the Blueprint ladder (boss_tuning.js lifts the Radiation Director to boss stats), the capital economy
                            (capital_npcs.js framework, capital_services.js, capital_projects.js, steward.js, villager_trades.js), journals, bounty vouchers, welcome line, /peacock profile, caps and gates;
                            the capital: capital_wall.js (wall + gates, /peacock wall), capital_boards.js (the bounty board pavilion),
+                           capital_layout.js (Works lots, ruins, wall regrow, roads; /peacock layout [preview]), capital_choose.js
+                           (new worlds: flattest capital), boss_record.js (boss record, Hall of Heroes, Chronicler),
                            dead_capitals.js (far copies of the capital turn zombie);
                            metals.js (startup + server: alloys, metal blocks, sheets, villager metal trades, one tin/bronze/steel),
                            metal_gear.js (tools and armour in every metal), metal_uses.js (each metal's jobs), flint_hammer.js

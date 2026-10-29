@@ -59,19 +59,34 @@ function W() { return global.PEACOCK_WORKS }
 function key(x, z) { return x + ',' + z }
 
 // ---------------------------------------------------------------- holding chunks loaded (shared with capital_projects.js)
-// /forceload tickets per chunk, counted here so two jobs can share a chunk; only chunks this script added are released
-var holds = {}
+// /forceload tickets per chunk, counted here so two jobs can share a chunk. A chunk something else had force-loaded
+// already (a steward, the keepalive, an op) is used but never added or removed here: vanilla keeps one flag per chunk.
+// The chunks this script added are also written to persistentData, so a stop or crash mid-job cannot leave them
+// force-loaded for good: whatever is listed there is let go at the next start.
+const TICKETS = 'peacock_layout_tickets'
+var holds = {}, mine = {}
+var ChunkPos = null
+try { ChunkPos = Java.loadClass('net.minecraft.world.level.ChunkPos') } catch (e) { }
 function fl(server, op, cx, cz) { server.runCommandSilent('execute in ' + OW + ' run forceload ' + op + ' ' + (cx * 16) + ' ' + (cz * 16)) }
+function forcedAlready(level, cx, cz) {
+  // chunk keys stay below 2^53 for any coordinate within a million blocks, so the long survives Rhino's doubles
+  try { return !!level.getForcedChunks().contains(ChunkPos.asLong(cx, cz)) } catch (e) { return false }
+}
+function saveTickets(server) { server.persistentData.putString(TICKETS, Object.keys(mine).join(';')) }
 function hold(server, list, ready) {
   var level = server.overworld(), added = [], seen = {}
   list.forEach(c => {
     var k = key(c[0], c[1])
     if (seen[k]) return
     seen[k] = true
-    if (!holds[k]) { holds[k] = 0; fl(server, 'add', c[0], c[1]) }
+    if (!holds[k]) {
+      holds[k] = 0
+      if (!forcedAlready(level, c[0], c[1])) { fl(server, 'add', c[0], c[1]); mine[k] = true }
+    }
     holds[k]++
     added.push(k)
   })
+  saveTickets(server)
   var polls = 0
   var check = () => {
     var missing = 0
@@ -85,9 +100,22 @@ function hold(server, list, ready) {
 function release(server, added) {
   added.forEach(k => {
     holds[k] = (holds[k] || 1) - 1
-    if (holds[k] <= 0) { delete holds[k]; var c = k.split(',').map(Number); fl(server, 'remove', c[0], c[1]) }
+    if (holds[k] <= 0) {
+      delete holds[k]
+      if (mine[k]) { var c = k.split(',').map(Number); fl(server, 'remove', c[0], c[1]); delete mine[k] }
+    }
   })
+  saveTickets(server)
 }
+// at start: let go of anything a stopped or crashed job left force-loaded
+ServerEvents.loaded(event => {
+  var server = event.server, s = String(server.persistentData.getString(TICKETS) || '')
+  if (!s) return
+  var n = 0
+  s.split(';').forEach(k => { var c = k.split(',').map(Number); if (c.length === 2) { fl(server, 'remove', c[0], c[1]); n++ } })
+  server.persistentData.putString(TICKETS, '')
+  log(n + ' chunks a stopped job had force-loaded are let go')
+})
 function chunksOf(box, pad) {
   var out = [], a, b
   for (a = (box[0] - pad) >> 4; a <= (box[2] + pad) >> 4; a++) for (b = (box[1] - pad) >> 4; b <= (box[3] + pad) >> 4; b++) out.push([a, b])
@@ -293,28 +321,43 @@ function planLots(ctx) { var p = lotPlanner(ctx); while (!p.step(100000)) { } re
 
 // ---------------------------------------------------------------- the real ground (chunks loaded)
 function soft(b) { return global.PEACOCK_WALL ? global.PEACOCK_WALL.soft(b) : String(b.id) === 'minecraft:air' }
-// [y of the first open block above the ground, wet, blocked (something built stands there)]
+// what may be cleared from a road or a lot: plants, leaves, snow; never logs, carpets or saplings (a tree or a build)
+function plant(b) { return soft(b) && !/(_log|_wood|_sapling)$|[a-z]_carpet$/.test(String(b.id)) || String(b.id) === 'minecraft:moss_carpet' }
+// anything the world made: ground, stone and ores, water, plants and trees. Anything else is someone's work.
+const WILD = /^(minecraft:(air|cave_air|water|lava|bedrock|obsidian|magma_block|ice|packed_ice|blue_ice|snow|powder_snow|gravel|dirt_path|cobweb|bee_nest|moss_carpet|amethyst_block|budding_amethyst|smooth_basalt|dripstone_block|pointed_dripstone|sculk|sculk_vein|glow_lichen|suspicious_sand|suspicious_gravel)|[a-z0-9_.-]+:[a-z0-9_/.-]*_ore|geolosys:.+)$/
+function wild(b) { var id = String(b.id); return NATURAL.test(id) || WILD.test(id) || soft(b) }
+// [y of the first open block above the ground, wet, blocked (built ground, or a tree or build standing there)]
 function ground(level, x, z) {
-  var y = level.getHeight(Heightmap.MOTION_BLOCKING_NO_LEAVES, x, z), floor = level.getMinBuildHeight(), b
+  var y = level.getHeight(Heightmap.MOTION_BLOCKING_NO_LEAVES, x, z), floor = level.getMinBuildHeight(), b, standing = false
   while (y > floor + 1) {
     b = level.getBlock(x, y - 1, z)
-    if (String(b.id) === 'minecraft:water') return [y, true, false]
+    if (String(b.id) === 'minecraft:water') return [y, true, standing]
     if (!soft(b)) break
+    if (!plant(b)) standing = true
     y--
   }
   var id = String(level.getBlock(x, y - 1, z).id)
-  return [y, false, !GROUNDS.test(id) && !STREET.test(id)]
+  return [y, false, standing || !(NATURAL.test(id) || /^minecraft:(dirt_path|gravel|coarse_dirt|sand|red_sand)$/.test(id))]
 }
-function checkLot(level, lot) {
-  var ys = [], x, z, box = lot.box
+// the lot on the real ground: dry, level enough, no higher than the generator said (nothing built on it), and nothing
+// anywhere in what the builder will clear or fill (7 below the floor to the top of the building) that the world did
+// not make, block entities included. The floor height, or null with the reason in lot.why
+function checkLot(level, lot, height) {
+  var ys = [], x, y, z, box = lot.box
   for (x = box[0]; x <= box[2]; x += 2) for (z = box[1]; z <= box[3]; z += 2) {
     var g = ground(level, x, z)
-    if (g[1]) return null
+    if (g[1]) { lot.why = 'water at ' + x + ',' + z; return null }
     ys.push(g[0])
   }
   ys.sort((a, b) => a - b)
-  if (ys[ys.length - 1] - ys[0] > MAX_RISE + 1) return null
-  return ys[ys.length >> 1]
+  if (ys[ys.length - 1] - ys[0] > MAX_RISE + 1) { lot.why = 'too uneven'; return null }
+  var floorY = ys[ys.length >> 1]
+  if (lot.genY !== undefined && floorY > lot.genY + 2) { lot.why = 'stands ' + (floorY - lot.genY) + ' blocks above the land (built on?)'; return null }
+  for (x = box[0] - 1; x <= box[2] + 1; x++) for (z = box[1] - 1; z <= box[3] + 1; z++) for (y = floorY - 7; y <= floorY + height; y++) {
+    var b = level.getBlock(x, y, z)
+    if (!wild(b) || b.entity) { lot.why = String(b.id) + ' at ' + x + ',' + y + ',' + z; return null }
+  }
+  return floorY
 }
 
 // ---------------------------------------------------------------- ruins
@@ -454,7 +497,7 @@ function pave(level, path, block, rng) {
       var top = level.getBlock(x, g[0] - 1, z), id = String(top.id)
       if (g[1]) { top.set('minecraft:spruce_planks'); placed++ }
       else if (NATURAL.test(id) && id !== block) { top.set(rng() < 0.08 ? 'minecraft:coarse_dirt' : block); placed++ }
-      for (y = g[0]; y <= g[0] + 3; y++) { var up = level.getBlock(x, y, z); if (String(up.id) !== 'minecraft:air' && soft(up)) up.set('minecraft:air') }
+      for (y = g[0]; y <= g[0] + 3; y++) { var up = level.getBlock(x, y, z); if (String(up.id) !== 'minecraft:air' && plant(up)) up.set('minecraft:air') }
     }
     // a lantern post every 12 blocks, sides taking turns, two out from the middle
     if (i > 0 && i % 12 === 0 && i < path.length - 2) {
@@ -480,7 +523,7 @@ function road(server, from, targets, avoid, wallCols, done) {
   targets.cells.forEach(c => { var dd = (c[0] - from[0]) * (c[0] - from[0]) + (c[1] - from[1]) * (c[1] - from[1]); if (dd < td) { td = dd; tgt = c } })
   if (!tgt) { done(null); return }
   var m = 20, region = [Math.min(from[0], tgt[0]) - m, Math.min(from[1], tgt[1]) - m, Math.max(from[0], tgt[0]) + m, Math.max(from[1], tgt[1]) + m]
-  if (region[2] - region[0] > 220 || region[3] - region[1] > 220) { log('road from ' + from + ': its street is too far (' + Math.round(Math.sqrt(td)) + ' blocks)'); done(null); return }
+  if (region[2] - region[0] > 160 || region[3] - region[1] > 160) { log('road from ' + from + ': its street is too far (' + Math.round(Math.sqrt(td)) + ' blocks)'); done(null); return }
   var cellSet = {}
   targets.cells.forEach(c => { cellSet[key(c[0], c[1])] = true })
   var isTarget = (x, z) => cellSet[key(x, z)] || targets.boxes.some(r => x >= r[0] && x <= r[2] && z >= r[1] && z <= r[3])
@@ -489,7 +532,8 @@ function road(server, from, targets, avoid, wallCols, done) {
     try {
       var cell = (x, z) => {
         if (wallCols[key(x, z)]) return null
-        if (!isTarget(x, z) && avoid.some(b => x >= b[0] - 1 && x <= b[2] + 1 && z >= b[1] - 1 && z <= b[3] + 1)) return null
+        if (isTarget(x, z)) { var gt = ground(level, x, z); return [gt[0], gt[1], false] }   // the street itself
+        if (avoid.some(b => x >= b[0] - 1 && x <= b[2] + 1 && z >= b[1] - 1 && z <= b[3] + 1)) return null
         return ground(level, x, z)
       }
       path = route(region, from, isTarget, cell, 1) || route(region, from, isTarget, cell, 2)
@@ -510,7 +554,8 @@ function ready(server) {
   return !!(global.PEACOCK_WALL && W() && WAIT_FOR.every(f => pd.getBoolean(f)))
 }
 
-function run(server, reply) {
+// the whole plan; `dry`: plan and check the lots and the wall's new line, report, and touch nothing
+function run(server, reply, dry) {
   if (running) { reply('the town plan is already being laid out'); return }
   var level = server.overworld(), works = W().works(server), F = W().FOOT
   var p0 = global.PEACOCK_WALL.plan(level, global.PEACOCK_WALL.extrasOf(server))
@@ -525,14 +570,38 @@ function run(server, reply) {
   var town = p0.townBoxes.map(boxOf), roads = p0.roadBoxes.map(boxOf), poly = p0.hull
   var xs = poly.map(q => q[0]), zs = poly.map(q => q[1]), pad = LIGHT_MAX + MAX_FROM_WALL + 30
   var region = [Math.min.apply(null, xs) - pad, Math.min.apply(null, zs) - pad, Math.max.apply(null, xs) + pad, Math.max.apply(null, zs) + pad]
-  reply('laying out the capital: ' + (ids.length ? 'lots for ' + ids.join(', ') : 'no new lots') + (fixed.length ? '; already standing: ' + fixed.map(f => f.id).join(', ') : ''))
+  reply((dry ? 'preview of the capital plan: ' : 'laying out the capital: ') + (ids.length ? 'lots for ' + ids.join(', ') : 'no new lots') +
+    (fixed.length ? '; already standing: ' + fixed.map(f => f.id).join(', ') : ''))
   var fail = m => { running = false; reply('town plan stopped — ' + m) }
-  var afterLots = (lots, poly2, walledBoxes) => {
-    // ruins, one a tick
+  var walledOf = lots => fixed.filter(f => !f.outside).map(f => f.box).concat(ids.filter(id => lots[id] && !F[id].outside).map(id => lots[id].box))
+
+  // the wall's new line, checked for anything built on it (a preview only; the real move skips such columns itself)
+  var previewWall = (lots, walledBoxes) => {
+    var pOld = global.PEACOCK_WALL.plan(level, global.PEACOCK_WALL.extrasOf(server)), pNew = global.PEACOCK_WALL.plan(level, walledBoxes)
+    var oldKeys = {}
+    pOld.cols.forEach(c => { oldKeys[key(c.x, c.z)] = true })
+    var fresh = pNew.cols.filter(c => !oldKeys[key(c.x, c.z)])
+    hold(server, global.PEACOCK_WALL.columnsOf(pOld, pNew), held => {
+      var hits = []
+      try { fresh.forEach(c => { var why = global.PEACOCK_WALL.builtAt(level, c, pNew); if (why) hits.push(c.x + ',' + c.z + ' (' + why + ')') }) }
+      catch (e) { hits.push('check failed: ' + e) }
+      server.scheduleInTicks(20, () => release(server, held))
+      ids.forEach(id => reply(id + ': ' + (lots[id] ? 'lot at ' + lots[id].x + ', ' + lots[id].y + ', ' + lots[id].z : 'no lot fits (built on open ground when paid for)')))
+      reply('the wall: ' + fresh.length + ' new columns, ' + pOld.cols.filter(c => !pNew.cols.some(d => d.x === c.x && d.z === c.z)).length + ' old ones taken down; ' +
+        (hits.length ? hits.length + ' new columns would stand on something built and are left out: ' + hits.slice(0, 6).join('; ') + (hits.length > 6 ? ' …' : '') : 'nothing built on its new line'))
+      reply('roads are routed when the plan is laid out (around anything built). Nothing was changed. `/peacock layout` lays it out.')
+      running = false
+    })
+  }
+
+  var afterLots = (lots, walledBoxes) => {
+    if (dry) { previewWall(lots, walledBoxes); return }
+    // ruins, one at a time; a building paid for meanwhile (it has a site now) is left alone
     var place = ids.filter(id => lots[id])
     var raiseNext = () => {
       if (!place.length) { moveWall(walledBoxes); return }
       var id = place.shift(), lot = lots[id]
+      if (String(W().works(server).getCompound('sites').getString(id) || '')) { log(id + ': already built meanwhile; no ruin'); server.scheduleInTicks(1, raiseNext); return }
       hold(server, chunksOf(lot.box, 3), held => {
         try { raiseRuin(server, id, { x: lot.x, y: lot.y, z: lot.z }) } catch (e) { log(id + ': ruin failed — ' + e) }
         server.scheduleInTicks(40, () => release(server, held))
@@ -542,14 +611,20 @@ function run(server, reply) {
     raiseNext()
   }
   var moveWall = walledBoxes => {
-    var pOld = global.PEACOCK_WALL.plan(level, global.PEACOCK_WALL.extrasOf(server)), pNew = global.PEACOCK_WALL.plan(level, walledBoxes)
-    hold(server, global.PEACOCK_WALL.columnsOf(pOld, pNew), held => {
-      global.PEACOCK_WALL.regrow(server, walledBoxes, m => log(m), (ok, pW) => {
-        server.scheduleInTicks(40, () => release(server, held))
-        if (!ok) { fail('the wall did not move'); return }
-        layRoads(pW)
+    var held = null
+    try {
+      var pOld = global.PEACOCK_WALL.plan(level, global.PEACOCK_WALL.extrasOf(server)), pNew = global.PEACOCK_WALL.plan(level, walledBoxes)
+      hold(server, global.PEACOCK_WALL.columnsOf(pOld, pNew), h => {
+        held = h
+        try {
+          global.PEACOCK_WALL.regrow(server, walledBoxes, m => log(m), (ok, pW) => {
+            server.scheduleInTicks(40, () => release(server, held))
+            if (!ok) { fail('the wall did not move'); return }
+            server.scheduleInTicks(5, () => { try { layRoads(pW) } catch (e) { fail('roads failed — ' + e) } })
+          })
+        } catch (e) { release(server, held); fail('moving the wall failed — ' + e) }
       })
-    })
+    } catch (e) { if (held) release(server, held); fail('moving the wall failed — ' + e) }
   }
   var layRoads = pW => {
     var w = W().works(server), s2 = w.getCompound('sites'), done = w.getCompound('roaded'), all = [], wallCols = {}
@@ -564,7 +639,6 @@ function run(server, reply) {
     // nearest the town first, so later roads can join earlier ones; the Lighthouse last
     all.sort((a, b) => (F[a.id].outside ? 1 : 0) - (F[b.id].outside ? 1 : 0) ||
       (Math.abs(a.s.x - pW.cx) + Math.abs(a.s.z - pW.cz)) - (Math.abs(b.s.x - pW.cx) + Math.abs(b.s.z - pW.cz)))
-    var block = null
     var next = () => {
       if (!all.length) { finishPlan(); return }
       var a = all.shift(), front = [a.s.x, a.box[3] + 1], cells = roadCells(W().works(server)).map(t => t.split(',').map(Number))
@@ -576,18 +650,19 @@ function run(server, reply) {
           return [Math.round(g.x + dx / l * 3), Math.round(g.z + dz / l * 3)]
         })
         gates.sort((u, v) => ((u[0] - front[0]) * (u[0] - front[0]) + (u[1] - front[1]) * (u[1] - front[1])) - ((v[0] - front[0]) * (v[0] - front[0]) + (v[1] - front[1]) * (v[1] - front[1])))
-        targets = { boxes: [], cells: gates.length ? [gates[0]] : [], block: block }
-      } else targets = { boxes: roads, cells: cells, block: block }
+        targets = { boxes: [], cells: gates.length ? [gates[0]] : [], block: null }
+      } else targets = { boxes: roads, cells: cells, block: null }
       road(server, front, targets, avoid.filter(b => b !== a.box && !(b[0] === a.box[0] && b[1] === a.box[1])), wallCols, path => {
-        var w2 = W().works(server)
-        if (path) {
-          if (!block) block = targets.block || null
-          var rc = roadCells(w2)
-          path.forEach((q, i) => { if (i % 2 === 0) rc.push(key(q[0], q[1])) })
-          w2.putString('roadCells', rc.join(';'))
-          var rd = w2.getCompound('roaded'); rd.putInt(a.id, 1); w2.put('roaded', rd)
-          W().save(server, w2)
-        }
+        try {
+          var w2 = W().works(server)
+          if (path) {
+            var rc = roadCells(w2)
+            path.forEach((q, i) => { if (i % 2 === 0) rc.push(key(q[0], q[1])) })
+            w2.putString('roadCells', rc.join(';'))
+            var rd = w2.getCompound('roaded'); rd.putInt(a.id, 1); w2.put('roaded', rd)
+            W().save(server, w2)
+          }
+        } catch (e) { log('road record failed — ' + e) }
         server.scheduleInTicks(10, next)
       })
     }
@@ -598,7 +673,7 @@ function run(server, reply) {
     running = false
     reply('the capital is laid out: every Works building has its lot, the wall stands around them, roads join them to the town')
   }
-  // 1 the land; 2 lots, checked on the real ground (and re-planned if one fails); then the rest
+  // 1 the land; 2 lots, checked on the real ground one by one (re-planned away from any that fail); then the rest
   var far = LIGHT_MAX + MAX_FROM_WALL + 25
   var distWall = (x, z) => {
     if (inside(poly, x, z)) return -1
@@ -606,10 +681,15 @@ function run(server, reply) {
     for (i = 0; i < poly.length; i++) d = Math.min(d, segDist([x, z], poly[i], poly[(i + 1) % poly.length]))
     return d > far ? -1 : d
   }
-  if (!ids.length) { afterLots({}, poly, fixed.filter(f => !f.outside).map(f => f.box)); return }
+  if (!ids.length) { afterLots({}, walledOf({})); return }
   readGrid(server, region, distWall, grid => {
     if (!grid) { fail('the land could not be read'); return }
     var banned = {}, round = 0
+    // keep the planner away from a failed spot: every candidate within `r` blocks of it
+    var ban = (id, lot, r) => {
+      var b = banned[id] = banned[id] || {}, x, z
+      for (x = lot.x - r; x <= lot.x + r; x += GRID) for (z = lot.z - r; z <= lot.z + r; z += GRID) b[key(Math.round(x / GRID) * GRID, Math.round(z / GRID) * GRID)] = true
+    }
     var attempt = () => {
       var planner = null
       try { planner = lotPlanner({ poly: poly, cx: p0.cx, cz: p0.cz, town: town, roads: roads, fixed: fixed, ids: ids, grid: grid, banned: banned, level: level }) }
@@ -617,71 +697,99 @@ function run(server, reply) {
       var stepPlan = () => {
         var finished = false
         try { finished = planner.step(250) } catch (e) { fail('planning failed — ' + e); return }
-        if (finished) checkPlan(planner.result)
+        if (finished) checkPlan(planner.result.lots)
         else server.scheduleInTicks(1, stepPlan)
       }
       stepPlan()
     }
-    var checkPlan = plan => {
-      var chosen = ids.filter(id => plan.lots[id])
-      ids.filter(id => !plan.lots[id]).forEach(id => log(id + ': no lot fits; it will be built on open ground when paid for'))
-      var need = []
-      chosen.forEach(id => { need = need.concat(chunksOf(plan.lots[id].box, 1)) })
-      hold(server, need, held => {
-        var bad = 0
-        try {
-          chosen.forEach(id => {
-            var lot = plan.lots[id], y = checkLot(level, lot)
-            if (y === null) { bad++; banned[id] = banned[id] || {}; banned[id][key(lot.x, lot.z)] = true; log(id + ': lot at ' + lot.x + ',' + lot.z + ' fails on the real ground; looking again') }
+    var checkPlan = lots => {
+      var chosen = ids.filter(id => lots[id]), failed = [], k = 0
+      chosen.forEach(id => { lots[id].genY = lots[id].y })
+      var nextLot = () => {
+        if (k >= chosen.length) { checkClaims(); return }
+        var id = chosen[k++], lot = lots[id]
+        hold(server, chunksOf(lot.box, 2), held => {
+          try {
+            var y = checkLot(level, lot, W().FOOT[id].height)
+            if (y === null) { failed.push(id); ban(id, lot, 12); log(id + ': lot at ' + lot.x + ',' + lot.z + ' fails on the real ground (' + lot.why + ')') }
             else lot.y = y
-          })
-          // the wall as it will stand must not cross anyone's claim
-          var pNew = global.PEACOCK_WALL.plan(level, plan.walledBoxes), hit = null
-          for (var i = 0; i < pNew.cols.length && !hit; i += 4) if (claimed(level, pNew.cols[i].x, pNew.cols[i].z)) hit = pNew.cols[i]
+          } catch (e) { failed.push(id); ban(id, lot, 12); log(id + ': checking its lot failed — ' + e) }
+          server.scheduleInTicks(10, () => release(server, held))
+          server.scheduleInTicks(2, nextLot)
+        })
+      }
+      // the wall as it will stand must cross no one's claim
+      var checkClaims = () => {
+        try {
+          var pNew = global.PEACOCK_WALL.plan(level, walledOf(lots)), hit = null, i
+          for (i = 0; i < pNew.cols.length && !hit; i++) if (claimed(level, pNew.cols[i].x, pNew.cols[i].z)) hit = pNew.cols[i]
           if (hit) {
             var near = null, nd = 1e18
-            chosen.forEach(id => { if (F[id].outside) return; var dd = rectDist(plan.lots[id].box, hit.x, hit.z); if (dd < nd) { nd = dd; near = id } })
-            if (near) { bad++; banned[near] = banned[near] || {}; banned[near][key(plan.lots[near].x, plan.lots[near].z)] = true; log(near + ': the wall around it would cross a claim at ' + hit.x + ',' + hit.z + '; looking again') }
+            chosen.forEach(id => { if (F[id].outside || failed.indexOf(id) >= 0) return; var dd = rectDist(lots[id].box, hit.x, hit.z); if (dd < nd) { nd = dd; near = id } })
+            if (near) { failed.push(near); ban(near, lots[near], 24); log(near + ': the wall around it would cross a claim at ' + hit.x + ',' + hit.z) }
+            else log('the wall would cross a claim at ' + hit.x + ',' + hit.z + ' around buildings already standing; those columns will be left out')
           }
-        } catch (e) { log('checking lots failed — ' + e) }
-        server.scheduleInTicks(20, () => release(server, held))
-        if (bad && round++ < 6) { server.scheduleInTicks(25, attempt); return }
-        chosen.forEach(id => log(id + ': lot at ' + plan.lots[id].x + ',' + plan.lots[id].y + ',' + plan.lots[id].z))
-        afterLots(plan.lots, plan.poly2, plan.walledBoxes)
-      })
+        } catch (e) { log('checking claims failed — ' + e) }
+        if (failed.length && round++ < 6) { log('looking again (' + round + ')'); server.scheduleInTicks(20, attempt); return }
+        // out of tries: what still fails is dropped and built on open ground when paid for
+        failed.forEach(id => { log(id + ': no good lot found; it will be built on open ground when paid for'); lots[id] = null })
+        ids.filter(id => !lots[id] && failed.indexOf(id) < 0).forEach(id => log(id + ': no lot fits; it will be built on open ground when paid for'))
+        ids.forEach(id => { if (lots[id]) log(id + ': lot at ' + lots[id].x + ',' + lots[id].y + ',' + lots[id].z) })
+        afterLots(lots, walledOf(lots))
+      }
+      nextLot()
     }
     attempt()
   })
 }
+function busy() { return running || autoWaiting }
+// for a building with no planned lot (capital_projects.js' fallback): clear of the wall as it stands now and of the
+// Works roads
+function outsideTown(server) {
+  var p = global.PEACOCK_WALL ? global.PEACOCK_WALL.plan(server.overworld(), global.PEACOCK_WALL.extrasOf(server)) : null
+  var cells = roadCells(W().works(server)).map(t => t.split(',').map(Number))
+  return box => !(p && boxPolyDist(box, p.hull) < CLEAR_WALL) && !cells.some(c => rectDist(box, c[0], c[1]) <= CLEAR_ROADS + 1)
+}
 
+// a new world lays itself out once its capital is ready. A world that already has Works buildings waits for an op:
+// `/peacock layout preview` shows what would happen, `/peacock layout` does it (take a backup first)
+var autoWaiting = false
 ServerEvents.loaded(event => {
   var server = event.server
   if (server.persistentData.getBoolean(FLAG)) return
+  var existing = !!W() && W().works(server).getCompound('sites').getAllKeys().size() > 0
+  if (existing) { log('this world already has Capital Works buildings: run `/peacock layout preview`, then `/peacock layout`, to lay the capital out'); return }
   var tries = 0
+  autoWaiting = true
   var check = () => {
     try {
-      if (server.persistentData.getBoolean(FLAG) || running) return
+      if (server.persistentData.getBoolean(FLAG) || running) { autoWaiting = false; return }
       if (!ready(server)) {
-        if (tries++ < 60) server.scheduleInTicks(400, check)
-        else log("the capital's first-day jobs never finished; `/peacock layout` runs the plan by hand")
+        if (tries++ < 60) { server.scheduleInTicks(400, check); return }
+        autoWaiting = false
+        log("the capital's first-day jobs never finished; `/peacock layout` runs the plan by hand")
         return
       }
+      autoWaiting = false
       if (!global.PEACOCK_WALL.plan(server.overworld(), [])) return      // no capital at spawn: nothing to lay out
       run(server, m => log(m))
-    } catch (e) { log('failed — ' + e) }
+    } catch (e) { autoWaiting = false; log('failed — ' + e) }
   }
   server.scheduleInTicks(900, check)
 })
 
 ServerEvents.commandRegistry(event => {
   var Commands = event.commands
+  var go = (ctx, dry) => {
+    var src = ctx.source
+    try { run(src.server, m => { log(m); src.sendSystemMessage(Text.gray(m)) }, dry); return 1 }
+    catch (e) { running = false; src.sendSystemMessage(Text.red('town plan failed: ' + e)); return 0 }
+  }
   event.register(Commands.literal('peacock')
-    .then(Commands.literal('layout').requires(src => src.hasPermission(2)).executes(ctx => {
-      var src = ctx.source
-      try { run(src.server, m => { log(m); src.sendSystemMessage(Text.gray(m)) }); return 1 }
-      catch (e) { src.sendSystemMessage(Text.red('town plan failed: ' + e)); return 0 }
-    })))
+    .then(Commands.literal('layout').requires(src => src.hasPermission(2))
+      .executes(ctx => go(ctx, false))
+      .then(Commands.literal('preview').executes(ctx => go(ctx, true)))))
 })
 
-global.PEACOCK_LAYOUT = { hold: hold, release: release, _test: { planLots: planLots, lotPlanner: lotPlanner, route: route, boxPolyDist: boxPolyDist, hull: hull, inside: inside, sampleGrid: sampleGrid, grownPoly: grownPoly } }
+global.PEACOCK_LAYOUT = { hold: hold, release: release, busy: busy, outsideTown: outsideTown, _test: { planLots: planLots, lotPlanner: lotPlanner, route: route, boxPolyDist: boxPolyDist, hull: hull, inside: inside, sampleGrid: sampleGrid, grownPoly: grownPoly } }
 })()

@@ -2045,3 +2045,31 @@ another and rigid buildings sink; the structure only checks the biome at its cen
   500 blocks out); `setworldspawn` to the best. The town generates there as normal. An existing world is untouched.
 - **`beard_box`** terrain adaptation for the capital (`peacock-ruins.zip`, and `tools/gen-ruins.py` so a rebuild keeps
   it): solid foundations under each piece and room cut above, instead of CTOV's `beard_thin`.
+
+## The town plan, after an independent review (2026-10-29)
+A separate review of the 2026-10-28 scripts, before the live server picked them up, found ways they could harm an
+unclaimed build or leave work half-done. Fixed:
+- **Nothing built is cleared or built over.** A lot is checked on the real ground, one per tick: dry, level, no higher
+  than the generator's land (else something stands on it), and every block the builder will clear or fill (7 below the
+  floor to the roof) must be the world's own (ground, stone and ores, water, plants and trees) with no block entity.
+  New wall columns that would stand on or through anything else are left out (logged, a gap beside the build), never
+  built on. Old columns come down only within the wall's own height. Roads never cross built floors, logs, carpets or
+  saplings (trees are walked around) and clear only plants. Gate paths leave carpets and saplings.
+- **Failed lots**: the planner is kept 12 blocks away from a failed spot (24 if the wall around it crosses a claim; every
+  wall column is checked now); after six rounds what still fails is dropped (built on open ground when paid for).
+- **Existing worlds wait for an op**: a world with Works buildings already standing does not lay itself out; `/peacock
+  layout preview` lists the lots, the wall's new and removed columns and anything built on the new line, changing
+  nothing; `/peacock layout` does it. New worlds still lay out on their own.
+- **Payments during the plan wait for it** (`busy`), so a building is never built on open ground and then given a ruin.
+  The fallback site search keeps clear of the moved wall and the Works roads. A restore that fails stays a ruin.
+- **Chunk tickets**: a chunk something else had force-loaded (a steward, the keepalive) is never added or removed;
+  the ones this script adds are listed in persistentData and let go at the next start if a job was cut short; every
+  callback is guarded so a failure releases its chunks once.
+- **The wall is safe to re-run**: a column whose ground is already wall is skipped (also fixes `/peacock wall` stacking
+  a second wall on the first), an old gate that becomes plain wall has its opening filled, and the done-callback runs
+  outside the step's try.
+- **Hall plaques** only replace air or a sign. **Migration** keeps the old counts as `given_old`.
+- **capital_choose.js** checks that a capital really stands at the chosen spot (its start worked out, nothing built)
+  before moving spawn, trying the next best otherwise.
+- Re-tested in the mock world with a player's house on the new wall line (left untouched, 10 columns left out), a build
+  on a chosen lot (re-planned), and a steward's force-loaded chunk (still loaded afterwards).

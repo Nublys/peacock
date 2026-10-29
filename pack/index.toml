@@ -2638,7 +2638,7 @@ hash = "23d3267a57c50a4a0b982d4d4842d6e0e875eef3b119c31ff353ff7b9a21c2f1"
 
 [[files]]
 file = "kubejs/server_scripts/capital_choose.js"
-hash = "be503f28373f82c1352f7fea34c0ec769061d8fa81dae213ffd0f62bbd7bcfc5"
+hash = "ffe96840bd29ab0c0152e221f6faac3cdd1a73ece011ef9e4eb3fa64b07861c2"
 
 [[files]]
 file = "kubejs/server_scripts/capital_keepalive.js"
@@ -2646,7 +2646,7 @@ hash = "12696b801b369c96f16fac471f00156d630b8874c97b66314586aa57a6e1bf27"
 
 [[files]]
 file = "kubejs/server_scripts/capital_layout.js"
-hash = "1b3b9b427b315d5e709b27c801ee9e84912f64006ea31307b0678a3424324e56"
+hash = "13ee2972ffa6ea2dcfe55a2cca92d0eeefa0212da2526bc65e68561b3fa0ac61"
 
 [[files]]
 file = "kubejs/server_scripts/capital_npcs.js"
@@ -2654,7 +2654,7 @@ hash = "f7919b05bda2a58e0b6558a1b6dc2381e2f00e7271b2211650f4ec6505c42fc9"
 
 [[files]]
 file = "kubejs/server_scripts/capital_projects.js"
-hash = "db83c7f17e8649edeb420f7c6ea43f36866dfa7c23179bfdce337c9ac5803417"
+hash = "604bca50775f474f4e2dcb744406c280f767b563c6470594d417dbe1197c0a87"
 
 [[files]]
 file = "kubejs/server_scripts/capital_services.js"
@@ -2662,7 +2662,7 @@ hash = "d6b8806521cacbab8697ce90b92b3afc8aa4fdcbaf64a3e8e89c89ebfeb5dd80"
 
 [[files]]
 file = "kubejs/server_scripts/capital_wall.js"
-hash = "49ddecfc9cfac7ec724fb4bedd51e5b8d933e85d6f4f6de5198a2e72045c1baf"
+hash = "6fe98ac05837f13f53034240f8675b13b910006033804e3d0f923b03b8486d3f"
 
 [[files]]
 file = "kubejs/server_scripts/cave_loot.js"

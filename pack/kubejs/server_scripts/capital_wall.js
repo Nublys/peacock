@@ -35,6 +35,8 @@ const SOFT_TAGS = ['minecraft:leaves', 'minecraft:logs', 'minecraft:saplings', '
 const TREE = /^([a-z0-9_.-]+:[a-z0-9_/.-]*(_leaves|_log|_wood)|minecraft:(bee_nest|mushroom_stem|brown_mushroom_block|red_mushroom_block|mangrove_roots))$/
 const WALL = /^minecraft:(stone_bricks|mossy_stone_bricks|cracked_stone_bricks|stone_brick_wall|lantern)$/
 const TREES_FIXED = 'peacock_capital_wall_trees'
+// what the world made (the wall may stand on it); anything else under or across a column is someone's work
+const WILD_GROUND = /^(minecraft:(grass_block|dirt|coarse_dirt|rooted_dirt|podzol|mycelium|moss_block|sand|red_sand|gravel|stone|andesite|diorite|granite|tuff|calcite|clay|snow_block|mud|terracotta|[a-z_]+_terracotta|sandstone|red_sandstone|deepslate|dirt_path|water|ice|packed_ice|blue_ice|bedrock|obsidian|magma_block|smooth_basalt|dripstone_block)|[a-z0-9_.-]+:[a-z0-9_/.-]*_ore|geolosys:.+)$/
 var running = false
 
 function hasAnyTag(b, tags) {
@@ -227,7 +229,7 @@ function gatePath(level, p, site) {
       var id = String(level.getBlock(px, yg - 1, pz).id)
       if (/^minecraft:(grass_block|dirt|coarse_dirt|podzol|rooted_dirt|mycelium)$/.test(id)) { level.getBlock(px, yg - 1, pz).set('minecraft:dirt_path'); n++ }
       var above = String(level.getBlock(px, yg, pz).id)
-      if (above !== 'minecraft:air' && soft(level.getBlock(px, yg, pz)) && !/_log$|_wood$/.test(above)) { level.getBlock(px, yg, pz).set('minecraft:air'); n++ }
+      if (above !== 'minecraft:air' && soft(level.getBlock(px, yg, pz)) && !/_log$|_wood$|_carpet$|_sapling$/.test(above)) { level.getBlock(px, yg, pz).set('minecraft:air'); n++ }
     }
     if (x === g.x && z === g.z) break
     var e2 = 2 * err
@@ -237,12 +239,25 @@ function gatePath(level, p, site) {
 }
 
 // a wall column; returns the number of blocks set
+// what stands in the way of a column: from the top down through air and plants to the natural ground, any block the
+// world did not make (a roof, a floor, a fence, a player's anything) — its id and height, or null
+function builtAt(level, c, p) {
+  for (var y = p.top; y > p.bottom; y--) {
+    var b = level.getBlock(c.x, y, c.z), id = String(b.id)
+    if (id === 'minecraft:air' || (soft(b) && !/_carpet$|_sapling$/.test(id))) continue
+    if (WILD_GROUND.test(id) || WALL.test(id)) return null
+    return id.replace('minecraft:', '') + ' at y ' + y
+  }
+  return null
+}
 function column(level, c, i, top, bottom, rng) {
   var n = 0
   var set = (y, id, props) => { var b = level.getBlock(c.x, y, c.z); if (props) b.set(id, props); else b.set(id); n++ }
   var yg = groundAt(level, c.x, c.z, top, bottom)
   if (yg === null) return 0
   if (c.gate) return 0          // gates are cut afterwards, see cutGates
+  if (WALL.test(String(level.getBlock(c.x, yg - 1, c.z).id))) return 0              // wall already stands here
+  if (builtAt(level, c, { top: top, bottom: bottom })) { c.skipped = true; return 0 }  // never on or through a build
   // foundation: water counts as ground for the scan above, so a wall over a pond stands on the surface; fill
   // the water (and anything soft under it) with stone bricks down to the bed, at most 8 deep
   for (var fy = yg - 1; fy > yg - 9; fy--) {
@@ -366,10 +381,10 @@ function demolish(level, c, p, oldKeys) {
     if (y !== null) hs.push(y)
   })
   if (!hs.length) return 0
-  // down to the lowest ground beside it: only wall blocks are taken, so the natural ground under the column is safe,
-  // and a building standing next to the wall cannot make the ground read high
-  var yn = Math.min.apply(null, hs), y
-  for (y = p.top; y >= yn; y--) {
+  // from the lowest ground beside it up to the wall's own height above the highest: only wall blocks are taken, and
+  // only within the wall's reach, so the natural ground under it and anything built well above it are safe
+  var yn = Math.min.apply(null, hs), yTop = Math.max.apply(null, hs) + HEIGHT + 4, y
+  for (y = yTop; y >= yn; y--) {
     var b = level.getBlock(c.x, y, c.z)
     if (WALL.test(String(b.id))) { b.set('minecraft:air'); n++ }
   }
@@ -399,6 +414,18 @@ function columnsOf(pOld, pNew) {
   return out
 }
 
+// an old gate that is now plain wall: fill its opening (the lintel above stays as the top)
+function refillGate(level, p, c) {
+  var n = 0, dx = p.cx - c.x, dz = p.cz - c.z, len = Math.sqrt(dx * dx + dz * dz) || 1
+  var yg = groundAt(level, c.x + Math.round(dx / len * 2), c.z + Math.round(dz / len * 2), p.top, p.bottom)
+  if (yg === null) return 0
+  for (var y = yg; y < yg + HEIGHT; y++) {
+    var b = level.getBlock(c.x, y, c.z), id = String(b.id)
+    if (id === 'minecraft:air' || id === 'minecraft:lantern') { b.set('minecraft:stone_bricks'); n++ }
+  }
+  return n
+}
+
 // from the wall standing (old extras) to the wall around `extras`: the new stretch first, then the old stretch that is
 // now inside the town comes down, then the gates. The chunks must be loaded (the caller holds them). Spread over ticks.
 function regrow(server, extras, log, done) {
@@ -409,10 +436,11 @@ function regrow(server, extras, log, done) {
   var oldKeys = {}, newKeys = {}
   pOld.cols.forEach((c, i) => { oldKeys[colKey(c)] = i })
   pNew.cols.forEach((c, i) => { newKeys[colKey(c)] = i })
-  var raise = [], razeList = []
+  var raise = [], razeList = [], refill = []
   pNew.cols.forEach((c, i) => {
     var o = oldKeys[colKey(c)]
-    if (o === undefined || (pOld.cols[o].gate && !c.gate)) raise.push(i)
+    if (o === undefined) raise.push(i)
+    else if (pOld.cols[o].gate && !c.gate) refill.push(i)
   })
   pOld.cols.forEach(c => { if (newKeys[colKey(c)] === undefined) razeList.push(c) })
   running = true
@@ -420,6 +448,7 @@ function regrow(server, extras, log, done) {
   var rng = () => { seed = (seed * 1664525 + 1013904223) >>> 0; return seed / 4294967296 }
   var i = 0, j = 0, built = 0, razed = 0
   log('wall: moving out around ' + extras.length + ' Works buildings: ' + raise.length + ' new columns, ' + razeList.length + ' old ones to take down')
+  var finished = null
   var step = () => {
     try {
       var end = Math.min(i + COLUMNS_PER_TICK, raise.length)
@@ -428,17 +457,22 @@ function regrow(server, extras, log, done) {
       var end2 = Math.min(j + COLUMNS_PER_TICK, razeList.length)
       for (; j < end2; j++) razed += demolish(level, razeList[j], pOld, oldKeys)
       if (j < razeList.length) { server.scheduleInTicks(1, step); return }
+      refill.forEach(k => { built += refillGate(level, pNew, pNew.cols[k]) })
       var g = cutGates(level, pNew)
       server.persistentData.putString(EXTRAS, extras.map(e => e.join(',')).join(';'))
-      running = false
-      log('wall: moved — ' + built + ' blocks built, ' + razed + ' taken down; ' + g.gates + ' gates' + (g.where.length ? ' at ' + g.where.join(' ') : ''))
-      done(true, pNew)
-    } catch (e) { running = false; log('wall: moving failed — ' + e); done(false) }
+      var skipped = pNew.cols.filter(c => c.skipped)
+      log('wall: moved — ' + built + ' blocks built, ' + razed + ' taken down; ' + g.gates + ' gates' + (g.where.length ? ' at ' + g.where.join(' ') : '') +
+        (skipped.length ? '; ' + skipped.length + ' columns left out where something is built: ' + skipped.slice(0, 8).map(c => c.x + ',' + c.z).join(' ') : ''))
+      finished = true
+    } catch (e) { log('wall: moving failed — ' + e); finished = false }
+    running = false
+    // outside the try: whatever the caller does next must not land in this catch
+    if (finished) done(true, pNew); else done(false)
   }
   step()
 }
 
-global.PEACOCK_WALL = { plan: plan, extrasOf: extrasOf, columnsOf: columnsOf, regrow: regrow, soft: soft, WALL: WALL }
+global.PEACOCK_WALL = { plan: plan, extrasOf: extrasOf, columnsOf: columnsOf, regrow: regrow, builtAt: builtAt, soft: soft, WALL: WALL }
 
 ServerEvents.loaded(event => {
   var server = event.server

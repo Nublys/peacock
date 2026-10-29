@@ -63,6 +63,12 @@ check for their lines in `latest.log`:
 - `[peacock] capital boards: 2 placed …` — two bounty boards by the bell (or the square's corners);
 - `[peacock] wall: … columns around … buildings` then `wall: done — …; 4 gates … at x,z …` — the stone wall and
   its gates (`/peacock wall`, op, rebuilds it in place);
+- `[peacock] capital: N possible spots …` then `spawn moved to …` — on a new world spawn moves to the flattest capital
+  within 4,500 blocks before the lines above;
+- `[peacock] layout: …` about a minute later — the town plan: the Capital Works ruins on their lots, the wall moved
+  out around them (`wall: moved — …`), roads to every door, ending `the capital is laid out`. A world that already
+  has Works buildings waits for an op: `/peacock layout preview` lists the lots and anything built on the wall's new
+  line (changing nothing), `/peacock layout` lays it out. Take a backup first;
 - far-away copies of the capital that generate later turn zombie: `[peacock] dead capital at chunk …`.
 Streams Reflowing and Terrain Slabs only shape **new** chunks, so their look needs a new world (or new land).
 

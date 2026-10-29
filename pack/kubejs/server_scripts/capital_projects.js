@@ -79,6 +79,10 @@ function migrate(w) {
       if (real > 0) setGiven(w, cur.id, k, Math.min(real, cur.needs[k][1]))
     }
   }
+  if (w.contains('given') || w.contains('index')) {
+    w.put('given_old', w.getCompound('given')); w.putInt('index_old', idx)
+    console.info('[peacock] works: progress moved to the per-project layout (done: ' + (done.join(', ') || 'none') + '; old counts kept as given_old)')
+  }
   w.remove('given'); w.remove('index')
   w.putInt('v', 2)
   return w
@@ -122,6 +126,7 @@ function findSite(level, w, hx, hz) {
   var z0 = bb ? bb.minZ() : sp.getZ() - 40, z1 = bb ? bb.maxZ() : sp.getZ() + 40
   var top = sp.getY() + 40, bottom = sp.getY() - 30
   var taken = boxes(w), d, t, k, cells, dx, dz
+  var clearOfTown = global.PEACOCK_LAYOUT ? global.PEACOCK_LAYOUT.outsideTown(level.getServer()) : null
   for (d = 8; d <= 80; d += 4) {
     var cands = []
     for (t = x0; t <= x1; t += 6) { cands.push([t, z0 - d - hz]); cands.push([t, z1 + d + hz]) }
@@ -130,6 +135,8 @@ function findSite(level, w, hx, hz) {
       var cx = cands[k][0], cz = cands[k][1]
       var clash = taken.some(b => cx + hx + 4 >= b[0] && cx - hx - 4 <= b[2] && cz + hz + 4 >= b[1] && cz - hz - 4 <= b[3])
       if (clash) continue
+      // clear of the wall as it stands now (it may have moved out) and of the Works roads
+      if (clearOfTown && !clearOfTown([cx - hx, cz - hz, cx + hx, cz + hz])) continue
       var ys = [], ok = true
       cells = [[0, 0], [-hx, -hz], [hx, -hz], [-hx, hz], [hx, hz]]
       for (dx = -hx; dx <= hx; dx += 2) for (dz = -hz; dz <= hz; dz += 2) cells.push([dx, dz])
@@ -319,6 +326,8 @@ function hallRefresh(server) {
     var q = global.PEACOCK_RECORD.plaque(server, b[0]), sl = slots[i]
     var m = (t, bold, gray) => "'" + JSON.stringify({ text: t || '', bold: !!bold, color: gray ? 'gray' : 'black' }) + "'"
     var text = 'messages:[' + [m(q.lines[0], true, !q.done), m(q.lines[1], false, !q.done), m(q.lines[2], false, !q.done), m(q.lines[3], false, !q.done)].join(',') + ']'
+    var here = String(level.getBlock(sl[0], sl[1], sl[2]).id)
+    if (here !== 'minecraft:air' && here.indexOf('sign') < 0) return          // something else hangs there now: leave it
     put(server, sl[0], sl[1], sl[2], 'minecraft:birch_wall_sign[facing=' + sl[3] + ']{front_text:{' + text + '},is_waxed:1b}')
   })
 }
@@ -410,6 +419,12 @@ function build(server, id) {
   var at = String(w.getCompound('sites').getString(id) || '')
   if (at && w.getCompound('ruins').getInt(id)) { restore(server, p, at); return }
   if (at) { w.putString('pending', ''); save(server, w); return }       // already standing
+  // the town plan is still being laid out: it may yet give this building a lot (or a ruin to restore); wait for it
+  if (global.PEACOCK_LAYOUT && global.PEACOCK_LAYOUT.busy()) {
+    console.info('[peacock] works: ' + p.name + ' waits for the town plan to finish')
+    server.scheduleInTicks(600, () => { if (String(works(server).getString('pending') || '') === id) build(server, id) })
+    return
+  }
   // no planned lot (the town plan could not place it): open ground outside the wall, as before 2026-10-28
   var level = server.overworld()
   var sz = SIZE[id]
@@ -436,11 +451,14 @@ function restore(server, p, at) {
   var c = at.split(',').map(Number), s = { x: c[0], y: c[1], z: c[2] }, id = p.id
   holdBox(server, footBox(id, s), release => {
     try {
-      var w2 = works(server), r = w2.getCompound('ruins'); r.putInt(id, 0); w2.put('ruins', r)
-      var rs = String(w2.getCompound('ruinSigns').getString(id) || '')
-      if (rs) { var q = rs.split(',').map(Number); put(server, q[0], q[1], q[2], 'minecraft:air') }
+      var w2 = works(server), r = w2.getCompound('ruins'); r.putInt(id, 0); w2.put('ruins', r)   // first, so the Hall's plaques go up with it
       save(server, w2)
-      spawnPeople(server, BUILD[id](server, works(server), s))
+      var people = null
+      try { people = BUILD[id](server, works(server), s) }
+      catch (e) { var wb = works(server), rb = wb.getCompound('ruins'); rb.putInt(id, 1); wb.put('ruins', rb); save(server, wb); throw e }   // still a ruin; tried again next start
+      var rs = String(works(server).getCompound('ruinSigns').getString(id) || '')
+      if (rs) { var q = rs.split(',').map(Number); put(server, q[0], q[1], q[2], 'minecraft:air') }
+      spawnPeople(server, people)
       var w3 = works(server); w3.putString('pending', ''); save(server, w3)
       everyone(server, Text.gold('Capital Works: ').append(Text.white(p.name + ' is restored, at ' + s.x + ', ' + s.y + ', ' + s.z + ': ' + p.does + '.')))
       console.info('[peacock] works: ' + p.name + ' restored at ' + s.x + ',' + s.y + ',' + s.z)
