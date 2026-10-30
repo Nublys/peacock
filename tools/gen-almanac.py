@@ -289,6 +289,8 @@ ENTRIES = {
                 "The Nether holds four Blueprints and the Inferno's altar. A mid-game place, not a shortcut."),
             txt("The End is Nullscape's: islands, pillars, crystal peaks and shadowlands. Cataclysm's Ruined Citadel stands in its highlands with the " + B("Ender Guardian") + " inside.",
                 "What the Guardian keeps is the last chapter. See " + L("tech/tier4", "Tier 4") + "."),
+            txt("The " + B("Ender Dragon") + " is not the old one. Its island is rebuilt, its caged crystals are guarded, and it dives, burns and fires beams; at the very end it must be struck in the air.",
+                "Bring a crew, arrows, slow falling and a way down. Kill it together: the Hall of Heroes remembers who was there."),
         ]),
     ],
     # ===================================================================================== ore

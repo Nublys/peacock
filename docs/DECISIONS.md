@@ -2073,3 +2073,20 @@ unclaimed build or leave work half-done. Fixed:
   before moving spawn, trying the next best otherwise.
 - Re-tested in the mock world with a player's house on the new wall line (left untouched, 10 columns left out), a build
   on a chosen lot (re-planned), and a steward's force-loaded chunk (still loaded afterwards).
+
+## A harder dragon: True Ending and YUNG's Better End Island (2026-10-30)
+Aaron: "Can the ender dragon fight be made more difficult?", then "Add True Ending and YUNG's Better End Island".
+- **True Ending 1.1.0c** (Forge 1.20.1, a datapack packaged as a mod, both sides so everyone hears its boss music):
+  300 HP, near-total knockback resistance, a shockwave dive (triple below 75%), chained fireballs, a laser, phantoms
+  guarding the caged crystals, an air-strike final phase, longer dragon breath. Its damage follows the difficulty, and
+  the server runs on hard.
+- **Its tick function is overridden** (`data/true_ending/functions/tick.mcfunction` in the pack datapack): nine bare
+  `@e[type=…]` scans every tick searched every loaded entity in every dimension, the pattern that cost Incendium 3.6%
+  of the tick (2026-10-24). Each now runs `in minecraft:the_end positioned 0 80 0` with `distance=..1024`; the dragon,
+  its markers, phantoms and decoys only exist there. Its `load` is overridden too, only to drop the chat line it sent
+  everyone on every start and `/reload`.
+- Its dive summons **decoy ender dragons** (tag `trueEnding_mirrordragon`, invulnerable); achievements.js ignores them, so
+  a decoy can never count as a dragon kill in the achievements or the Hall of Heroes.
+- **YUNG's Better End Island 2.0.6** (needs YUNG's API, in the pack): a rebuilt main island and crystal towers. Only the
+  main island; Nullscape keeps the outer End. A world whose dragon is already dead keeps its island as generated.
+- Almanac, the Nether & the End page: the dragon is not the old one.

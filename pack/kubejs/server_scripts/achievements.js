@@ -56,6 +56,8 @@ function grant(p, path) { if (!done(p, path)) p.unlockAdvancement(adv(path)) }
 function bossKey(entity) {
   var type = String(entity.type)
   if (!TYPES[type]) return null
+  // True Ending's decoy dragons (its dive attack) are ender dragons too: never a kill (2026-10-30)
+  try { if (entity.tags.contains('trueEnding_mirrordragon')) return null } catch (e) { }
   if (BOSSES[type]) return type
   var name = entity.hasCustomName() ? String(entity.customName.getString()) : ''
   var keys = Object.keys(BOSSES)

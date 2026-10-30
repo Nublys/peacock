@@ -11,6 +11,10 @@
     {
       "type": "patchouli:text",
       "text": "The End is Nullscape's: islands, pillars, crystal peaks and shadowlands. Cataclysm's Ruined Citadel stands in its highlands with the $(bold)Ender Guardian$() inside.$(br2)What the Guardian keeps is the last chapter. See $(l:patchouli:tech/tier4)Tier 4$()."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "The $(bold)Ender Dragon$() is not the old one. Its island is rebuilt, its caged crystals are guarded, and it dives, burns and fires beams; at the very end it must be struck in the air.$(br2)Bring a crew, arrows, slow falling and a way down. Kill it together: the Hall of Heroes remembers who was there."
     }
   ]
 }

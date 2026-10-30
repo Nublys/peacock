@@ -1884,6 +1884,14 @@ file = "config/paxi/datapacks/peacock/data/tconstruct/recipes/smeltery/casting/m
 hash = "0c6b74c83a620225dba311574f655f1661cfe3a82c370f1aa2160eab7cbfefbf"
 
 [[files]]
+file = "config/paxi/datapacks/peacock/data/true_ending/functions/load.mcfunction"
+hash = "dbc76eb4bd102e81b8795975d7ac0903560394495ad21005dec0140b8aef46f3"
+
+[[files]]
+file = "config/paxi/datapacks/peacock/data/true_ending/functions/tick.mcfunction"
+hash = "b0d82c0918055c3c619fc58ef33e3d7aca4e8b2cb34d1b9b2beff7ffd8c83d1d"
+
+[[files]]
 file = "config/paxi/datapacks/peacock/data/underground_village/worldgen/structure_set/underground_village.json"
 hash = "082283c08877fbe1faa11f4bc93c48998f8f63bd6dadf105a3fb6fe71457f27c"
 
@@ -2606,7 +2614,7 @@ hash = "baa612c15ded0547cf13e595bbcd1b5e0f75d59b27b8dd9f19bef130d263fab2"
 
 [[files]]
 file = "kubejs/server_scripts/achievements.js"
-hash = "8aa0cf00cd9bae7ed6808273b133e4ce30ccd02512b0fc8b978684704e2d0a2b"
+hash = "f6162ce50e2364e6b4bd336587b7a7e80e34679a82d5ec94d0af49af92fcd49e"
 
 [[files]]
 file = "kubejs/server_scripts/almanac.js"
@@ -3650,6 +3658,11 @@ hash = "f56d02109831397a2e68d136e3e3174c48653aefb0b68c71562e17e9ce642466"
 metafile = true
 
 [[files]]
+file = "mods/true-ending.pw.toml"
+hash = "0bc775f6b740e9fa539e8237f49ce5265a15f16725fef1deeab7097ea6571099"
+metafile = true
+
+[[files]]
 file = "mods/txnilib.pw.toml"
 hash = "360e8717e48ace854762aa02e2597a0c9fc9e1d443b665aae40acd047f83f692"
 metafile = true
@@ -3717,6 +3730,11 @@ metafile = true
 [[files]]
 file = "mods/yungs-better-dungeons.pw.toml"
 hash = "3b896ddf7389ad7d403b354cd94966c65f4989c9675ec245681b5c78d5208317"
+metafile = true
+
+[[files]]
+file = "mods/yungs-better-end-island.pw.toml"
+hash = "d9e05e164bb61c2bcecc58702c46e59c2721928a3b355050d1e84736d74fe6fc"
 metafile = true
 
 [[files]]
@@ -3896,7 +3914,7 @@ hash = "ab1e59f56d597c036206c3a764f1e00eafeced9d9bfc553d8d6796cee3d35b21"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/land/otherworlds.json"
-hash = "cf8ba159169753c42bc8c5d5e4fa947cad6fc98978dbe9468bd773c1e932c246"
+hash = "f5509dd807d66c6ae5c1243880c7df741d6a0370b62fe4041cb8ce99b96e1f9c"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/land/seasons.json"
