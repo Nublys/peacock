@@ -2115,3 +2115,8 @@ Aaron: "Can you make a profile for the steam deck called "deck" that can have pr
   wrote the same keys file and replaced it. gen-profiles.py now merges the two, so every profile sets it.
 - **Corrected**: the install guides, the Quickstart and the Almanac said voice chat is voice-activated by default.
   Simple Voice Chat 2.6.24's default is push-to-talk, and the first press of `,` runs a walkthrough that asks.
+
+### deck: shaders off by default (2026-11-01)
+Aaron's Deck ran under 30 FPS on the deck profile with CPU and GPU both around 50%; turning shaders off fixed it.
+"Disable shaders by default." The profile now ships `enableShaders=false`; the Complementary preset it writes stays
+the lightest one, so `K` turns shaders on as before. Everything else in the profile is unchanged.

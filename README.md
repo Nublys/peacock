@@ -231,7 +231,7 @@ touching it (`/peacock profile <tier> reset` puts the profile back over your edi
 | `medium` | thin laptop with a fan, 16 GB | Complementary, Medium | 192 | 8 |
 | `high` | laptop with a real GPU | Complementary + Euphoria, High | 256 | 10 |
 | `ultra` | desktop with a dedicated GPU | Complementary + Euphoria, Ultra | 384 | 12 |
-| `deck` | Steam Deck: also sets its controls ([Steam Deck](docs/INSTALL-PRISM.md#steam-deck)) | Complementary, lightest preset; 40 FPS cap | 96 | 6 |
+| `deck` | Steam Deck: also sets its controls ([Steam Deck](docs/INSTALL-PRISM.md#steam-deck)) | off (`K` for Complementary's lightest); 40 FPS cap | 96 | 6 |
 
 The look — falling leaves, fireflies and breath in the cold (Falling Leaves, Subtle Effects), rain and snow as particles with
 ground fog (Particle Rain), smooth steps up slabs (Smooth Steps),

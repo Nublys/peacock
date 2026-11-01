@@ -88,10 +88,11 @@ Prism runs on the Deck as it does on any Linux machine; the `deck` profile does 
 5. **40 FPS.** The profile caps Minecraft at 40. In the Quick Access menu (`…`) → Performance, set the refresh
    rate to 40 Hz and the framerate limit to 40 so frames arrive evenly.
 
-What the profile sets: Complementary's lightest preset, far terrain at 96, render distance 6, no Fresh
-Animations (it is CPU work and the CPU is the Deck's limit), GUI scale 2, full screen, the 40 FPS cap, and
+What the profile sets: shaders off (with them on, even at Complementary's lightest, the Deck fell under 30 FPS;
+`K` turns them on if you want to try), far terrain at 96, render distance 6, no Fresh Animations (it is CPU work
+and the CPU is the Deck's limit), GUI scale 2, full screen, the 40 FPS cap, and
 Controlify's enhanced Steam Deck driver off (it needs the Decky plugin, and SteamOS updates have broken it; off,
-the Deck is a normal Steam gamepad). For more battery, `/peacock profile potato` turns shaders off. Sleeping the
+the Deck is a normal Steam gamepad). For more battery still, `/peacock profile potato` goes lower. Sleeping the
 Deck drops you from the server; reconnect after it wakes.
 
 ## Doing it by hand instead

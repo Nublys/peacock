@@ -4306,7 +4306,7 @@ hash = "cafa6e6f53897b122c90517c20550af4b7ebb812333e75e7826a18b9d34dcbf7"
 
 [[files]]
 file = "peacock/profiles/deck/config/oculus.properties.keys"
-hash = "ecdc47e26c1b274613251b8935d35c7225b4e1b12b7671388999dacd0f7178cb"
+hash = "3679e644386b40bf6bf9c612b40b6dbac157398edf6cc87dda142f1b1c72efde"
 
 [[files]]
 file = "peacock/profiles/deck/config/particlerain/config.json.keys"

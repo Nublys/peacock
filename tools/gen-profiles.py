@@ -69,11 +69,13 @@ TIERS = {
                                  "entityShadows": "true", "biomeBlendRadius": "7", "entityDistanceScaling": "1.0",
                                  "renderClouds": '"true"'}),
     # Steam Deck (Aaron, 2026-11-01: "a profile for the steam deck called "deck" that can have pre set graphics and
-    # controls"). low's look on a known machine: its GPU (RDNA 2, 1280x800) carries Complementary's lightest preset and
-    # its 4-core CPU is the limit, so far terrain at 96 on one thread and no Fresh Animations. 40 FPS cap (the Deck's
+    # controls"). low's settings on a known machine, shaders off: with Complementary's lightest preset Aaron's Deck ran
+    # under 30 FPS with CPU and GPU both near 50%, and turning shaders off fixed it ("Disable shaders by default",
+    # 2026-11-01); the preset stays chosen, so K turns them on as low's. The 4-core CPU is the limit, so far terrain at
+    # 96 on one thread and no Fresh Animations. 40 FPS cap (the Deck's
     # battery sweet spot; set the Deck's own refresh to 40 Hz to match), GUI scale 2 (auto picks 3 at 800p, which
     # leaves 266 scaled pixels: modded screens overflow), full screen. Controls: DECK_FILES below.
-    "deck":        dict(shaders=True,  pack=CR_ZIP,  preset="POTATO",  dh=96,  transp="DISABLED", threads=1, quality="MEDIUM", ssao=False, emb=("FAST","FAST","false"),
+    "deck":        dict(shaders=False, pack=CR_ZIP,  preset="POTATO",  dh=96,  transp="DISABLED", threads=1, quality="MEDIUM", ssao=False, emb=("FAST","FAST","false"),
                         drop=FA_DROP,
                         options={"renderDistance": "6", "simulationDistance": "6", "graphicsMode": "1", "particles": "1",
                                  "entityShadows": "false", "biomeBlendRadius": "2", "entityDistanceScaling": "0.75",
