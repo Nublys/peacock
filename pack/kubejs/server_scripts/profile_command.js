@@ -8,7 +8,8 @@
 // KubeJS loads every server script into one shared scope; a bare `{}` block does not isolate `const` in
 // its Rhino ("redeclaration of var"), so the body lives in a function scope.
 ;(() => {
-const TIERS = ['potato', 'low', 'medium', 'high', 'ultra']
+// deck: the Steam Deck's own profile, graphics and controls (2026-11-01)
+const TIERS = ['potato', 'low', 'medium', 'high', 'ultra', 'deck']
 
 ServerEvents.commandRegistry(event => {
   const { commands: Commands, arguments: Arguments } = event
@@ -31,7 +32,7 @@ ServerEvents.commandRegistry(event => {
       .executes(ctx => {
         const player = ctx.source.player
         if (!player) return 0
-        player.tell(Text.gray('Graphics profile: /peacock profile <' + TIERS.join('|') + '>  — add "reset" to re-apply it over your own edits. Potato: no shaders, 6 chunks. Low: shaders at their lightest. Medium and up: more of everything.'))
+        player.tell(Text.gray('Graphics profile: /peacock profile <' + TIERS.join('|') + '>  — add "reset" to re-apply it over your own edits. Potato: no shaders, 6 chunks. Low: shaders at their lightest. Medium and up: more of everything. Deck: the Steam Deck, graphics and controls.'))
         return 1
       })
       .then(Commands.argument('tier', Arguments.WORD.create(event))

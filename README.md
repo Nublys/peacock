@@ -220,7 +220,7 @@ Every bind is searchable by name in Options → Controls.
 
 ## Performance
 
-The pack ships five graphics profiles, named by what the machine is. `/peacock profile <tier>` in chat,
+The pack ships six graphics profiles, named by what the machine is. `/peacock profile <tier>` in chat,
 then relaunch; anything you then change in the video or shader menus is yours and the profile stops
 touching it (`/peacock profile <tier> reset` puts the profile back over your edits).
 
@@ -231,11 +231,12 @@ touching it (`/peacock profile <tier> reset` puts the profile back over your edi
 | `medium` | thin laptop with a fan, 16 GB | Complementary, Medium | 192 | 8 |
 | `high` | laptop with a real GPU | Complementary + Euphoria, High | 256 | 10 |
 | `ultra` | desktop with a dedicated GPU | Complementary + Euphoria, Ultra | 384 | 12 |
+| `deck` | Steam Deck: also sets its controls ([Steam Deck](docs/INSTALL-PRISM.md#steam-deck)) | Complementary, lightest preset; 40 FPS cap | 96 | 6 |
 
 The look — falling leaves, fireflies and breath in the cold (Falling Leaves, Subtle Effects), rain and snow as particles with
 ground fog (Particle Rain), smooth steps up slabs (Smooth Steps),
 fuller grass and foliage, 3D details and livelier animals (resource packs) — is all on your machine and costs
-the server nothing; `potato` leaves out the 3D and animation packs.
+the server nothing; `potato` leaves out the 3D and animation packs, `deck` the animation packs.
 
 If frames drop: shaders off (`K`) is the big one, then Distant Horizons' radius, then render distance.
 Macs stay on plain Complementary (`low` or `medium`); the Euphoria variant needs more than macOS

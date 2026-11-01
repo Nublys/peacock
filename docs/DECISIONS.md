@@ -2090,3 +2090,28 @@ Aaron: "Can the ender dragon fight be made more difficult?", then "Add True Endi
 - **YUNG's Better End Island 2.0.6** (needs YUNG's API, in the pack): a rebuilt main island and crystal towers. Only the
   main island; Nullscape keeps the outer End. A world whose dragon is already dead keeps its island as generated.
 - Almanac, the Nether & the End page: the dragon is not the old one.
+
+## A Steam Deck profile, `deck` (2026-11-01)
+Aaron: "Can you make a profile for the steam deck called "deck" that can have pre set graphics and controls?"
+- **A sixth profile beside the five tiers.** Profiles are named by hardware, never by OS; the Deck is one known machine,
+  which is also what lets its profile preset controls. Picked like the others (`/peacock profile deck`, or
+  `PEACOCK_PROFILE=deck`); the launcher needed no change (it takes any folder under `profiles/`). No CurseForge zip:
+  the CurseForge app does not run on SteamOS, so Deck players use Prism (docs/INSTALL-PRISM.md, "Steam Deck").
+- **Graphics: low's, fitted to the Deck.** Complementary's lightest preset (its RDNA 2 GPU carries it at 800p), Distant
+  Horizons at 96 on one thread and no Fresh Animations or its add-ons (the 4-core CPU is the limit; the 3D models and
+  bushy leaves are GPU work and stay), low's particles, a 40 FPS cap (the Deck's battery sweet spot; the guide sets
+  the Deck to 40 Hz to match), GUI scale 2 (auto picks 3 at 1280x800, leaving 266 scaled pixels, too few for the pack's
+  bigger screens) and full screen.
+- **Controls.** Controlify's `useEnhancedSteamDeckDriver` off: it needs the Decky plugin, SteamOS updates have broken it,
+  and left on it stops at a "Decky required" screen in Game Mode or a quit/continue screen in Desktop Mode; off, the
+  Deck is the plain gamepad Steam Input presents, which the pack's controller binds already cover. Simple Voice Chat
+  marked set up, on push-to-talk: until its first-run walkthrough is done it keeps voice off and asks for a key press,
+  and the Deck's microphone sits beside its speakers, so voice activation would broadcast the game. Push-to-talk stays
+  Right Alt; the Steam Input layout in the guide puts it on L4 (R4 the voice menu, L5 the player list). Back buttons
+  are Steam Input's, not the game's, so that part is a guide step, not a file.
+- `_previous` lists the first-launch values these replace (`guiScale:0`, `maxFps:120`, `fullscreen:false`, the driver
+  `true`, `onboarding_finished=false`) so the profile applies over them; a choice the player made stays theirs.
+- **Fixed on the way**: Subtle Effects' drip-landing volume at 40% (2026-10-21) never shipped: the particle settings
+  wrote the same keys file and replaced it. gen-profiles.py now merges the two, so every profile sets it.
+- **Corrected**: the install guides, the Quickstart and the Almanac said voice chat is voice-activated by default.
+  Simple Voice Chat 2.6.24's default is push-to-talk, and the first press of `,` runs a walkthrough that asks.

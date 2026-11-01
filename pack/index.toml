@@ -2722,7 +2722,7 @@ hash = "7c0cd224ece10459491e004da8dd0d45d39ad98ce4b6b7256b125e3ebd234aa7"
 
 [[files]]
 file = "kubejs/server_scripts/profile_command.js"
-hash = "f080acf86837aa66c9bc9ead68ef864af9b88aafe9769e6fc0f81f25af5cbe04"
+hash = "e0fc47b459839529829f652f51e0c12bd366efa49469d978f5afb36d5cb3fc44"
 
 [[files]]
 file = "kubejs/server_scripts/proximity_crafting.js"
@@ -4114,11 +4114,11 @@ hash = "8aefef0f1c66f5704d25a121623ce9cb7c8f3549a29e1759ef801bad61197e68"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/tools/performance.json"
-hash = "7ce17493d5abad5bb7f56c6e907aec789307de03e81f2540617feca1f7186409"
+hash = "049563bd7952c3f545bf6186c177060b661eb72552816c371ad9b7adb6c70ec8"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/tools/voice.json"
-hash = "10e7fa45acb61fc953810120a1735a28fedda67ac35d2b956d55a770314b1a71"
+hash = "7bfddb2a55ae7226bef74796512630f4dfa0036005171f751657a1b5c06b5656"
 
 [[files]]
 file = "patchouli_books/peacock_almanac/en_us/entries/towns/capital.json"
@@ -4206,7 +4206,7 @@ hash = "3d6145176832364f8b94408784eb04ab026d546e965e3bea1ee673c0b123ed87"
 
 [[files]]
 file = "peacock/profiles/README.txt"
-hash = "f1a8bf4d4d80260d905156857d5d092e1ccdd7f513d2818d2cbceeb5313f3389"
+hash = "db99d3acd94baa4d9c04451f298d6aceda24e16c761b8004da32e54501083174"
 
 [[files]]
 file = "peacock/profiles/_previous/config/DistantHorizons.toml.keys"
@@ -4219,6 +4219,10 @@ hash = "38f5c7d249c637d9e0d1cba03867f6c0ecf73c845b8543530bd02952eb9e1106"
 [[files]]
 file = "peacock/profiles/_previous/config/colorwheel-client.toml.keys"
 hash = "c50c5986e79ea7b77996a74f990a268f58d76aa329b697e334ba646f8e883352"
+
+[[files]]
+file = "peacock/profiles/_previous/config/controlify.json.keys"
+hash = "fb72b5a861ba1f5dc750ad4b0a8603d1ac9ff141358012635de6a2423305bed2"
 
 [[files]]
 file = "peacock/profiles/_previous/config/embeddium-options.json.keys"
@@ -4257,8 +4261,96 @@ file = "peacock/profiles/_previous/config/subtle_effects/items.toml.keys"
 hash = "7b956cd0b9ec8c3f12e3149e84f3e6bd2b42e76ac77bffc810bfcde2a1ef37bc"
 
 [[files]]
+file = "peacock/profiles/_previous/config/voicechat/voicechat-client.properties.keys"
+hash = "dc94597da69b24b4faad8399498b4477412baf93b6bd8e763fd27bfbbc808376"
+
+[[files]]
 file = "peacock/profiles/_previous/options.txt.keys"
-hash = "b6a0bf5b4004757cfecea2f68c3c335d2fa4d810cc43aa9e240896a69eab4ee5"
+hash = "02dfa1ce8bd69b30d00dc961d9aa9b09ffffe8eac06481530805c5d90f9e41b8"
+
+[[files]]
+file = "peacock/profiles/deck/config/DistantHorizons.toml.keys"
+hash = "0bece164657d6f33602637cb3a7618b7850a64a4739e680586f9a60f028f4733"
+
+[[files]]
+file = "peacock/profiles/deck/config/coldsweat/client.toml.keys"
+hash = "c0d073aa79d0e3bc4536b40f4c04a6893c7415ee7346302882d6257afd978aa6"
+
+[[files]]
+file = "peacock/profiles/deck/config/colorwheel-client.toml.keys"
+hash = "889fc627d8b0e2dcf715950f5bdfebca08b4d3f202630bebaee13021f7ab0d95"
+
+[[files]]
+file = "peacock/profiles/deck/config/controlify.json.keys"
+hash = "c520590c3af81fd1f7c9084672de32bf4ea5af3e094b0699f8c6bee907e87cba"
+
+[[files]]
+file = "peacock/profiles/deck/config/embeddium-options.json.keys"
+hash = "7fdcb9fa54e9d5173aa01eca48df7c1f4d489ca436a6aaf49b47e5264ce9a9b4"
+
+[[files]]
+file = "peacock/profiles/deck/config/entity_model_features.json.keys"
+hash = "5ea1cc25b2543ce6cbde59a08580cda7656b59ceac7d70a3da9853dd3b61ff10"
+
+[[files]]
+file = "peacock/profiles/deck/config/fallingleaves-client.toml.keys"
+hash = "c37dae14afdd0e5ea1a80da4b5c541dce6ebffabde0e544c5a6d473e7915914c"
+
+[[files]]
+file = "peacock/profiles/deck/config/jade/jade.json.keys"
+hash = "446a3fc3204cbed5d80279cbd735dfaa57208689ae83602185062172d776f1f1"
+
+[[files]]
+file = "peacock/profiles/deck/config/locatorbar.json.keys"
+hash = "cafa6e6f53897b122c90517c20550af4b7ebb812333e75e7826a18b9d34dcbf7"
+
+[[files]]
+file = "peacock/profiles/deck/config/oculus.properties.keys"
+hash = "ecdc47e26c1b274613251b8935d35c7225b4e1b12b7671388999dacd0f7178cb"
+
+[[files]]
+file = "peacock/profiles/deck/config/particlerain/config.json.keys"
+hash = "0e1b696d3863d5649992d57fd31d27e3aa9719f32add1012f33493f59b5da3be"
+
+[[files]]
+file = "peacock/profiles/deck/config/soundphysics/soundphysics.properties.keys"
+hash = "2089080e8fbc16e8b3ce44d20410ffe8a1463eed1f94759e30a11df24deca72c"
+
+[[files]]
+file = "peacock/profiles/deck/config/streamsreflowing-client.properties.keys"
+hash = "04482b6c2bcc6e8cdef9e3b8e1ead82397ccf7455fce91ac961c427c204a4ae0"
+
+[[files]]
+file = "peacock/profiles/deck/config/subtle_effects/blocks.toml.keys"
+hash = "137f65cde95fd0335097812e412d51109ed19ee7969090c0fac33f0a9cf036fc"
+
+[[files]]
+file = "peacock/profiles/deck/config/subtle_effects/entities.toml.keys"
+hash = "30073d4365b47b8ab85d3401082b6727c8598ff5448cc377c5542f8392afd411"
+
+[[files]]
+file = "peacock/profiles/deck/config/subtle_effects/general.toml.keys"
+hash = "cf1ba21160f7a1108bba192a5bbd55c9424b9b0b89aac5f4db114b7c21809195"
+
+[[files]]
+file = "peacock/profiles/deck/config/subtle_effects/items.toml.keys"
+hash = "32e48ae6d8e771a6c24421b675413c3188ca0660f442addc9449564059911e07"
+
+[[files]]
+file = "peacock/profiles/deck/config/voicechat/voicechat-client.properties.keys"
+hash = "3dcb8584a8a5f616856e8412ff2171f18d10fd5d02cd901d50a8d9231ea13786"
+
+[[files]]
+file = "peacock/profiles/deck/options.txt.keys"
+hash = "148aa1d90bb0dd2b4da87b6edeaa9c2185e3b2a758e7f06f2870f31d1d23b419"
+
+[[files]]
+file = "peacock/profiles/deck/shaderpacks/ComplementaryReimagined_r5.9.3 + EuphoriaPatches_1.10.5.txt.keys"
+hash = "6faeeac70e8bedbca9a3978ff0ead50bb03e13d9d9dd869bd85a181523f87972"
+
+[[files]]
+file = "peacock/profiles/deck/shaderpacks/ComplementaryReimagined_r5.9.3.zip.txt.keys"
+hash = "6faeeac70e8bedbca9a3978ff0ead50bb03e13d9d9dd869bd85a181523f87972"
 
 [[files]]
 file = "peacock/profiles/high/config/DistantHorizons.toml.keys"
@@ -4318,7 +4410,7 @@ hash = "30073d4365b47b8ab85d3401082b6727c8598ff5448cc377c5542f8392afd411"
 
 [[files]]
 file = "peacock/profiles/high/config/subtle_effects/general.toml.keys"
-hash = "7416eb557fe7929d1321b30bb1d88198d86072c656ed5f3bc9e444c15f1b2db1"
+hash = "7ed6e4526ab269e067704b84678bcf0154e2cde70ae45a2b55ce11150feb3f4d"
 
 [[files]]
 file = "peacock/profiles/high/config/subtle_effects/items.toml.keys"
@@ -4394,7 +4486,7 @@ hash = "30073d4365b47b8ab85d3401082b6727c8598ff5448cc377c5542f8392afd411"
 
 [[files]]
 file = "peacock/profiles/low/config/subtle_effects/general.toml.keys"
-hash = "41d780d4c3ed099897f71151abc7ddf4f8f9d3cfc0062265e0fad4ac6c4d0d54"
+hash = "cf1ba21160f7a1108bba192a5bbd55c9424b9b0b89aac5f4db114b7c21809195"
 
 [[files]]
 file = "peacock/profiles/low/config/subtle_effects/items.toml.keys"
@@ -4470,7 +4562,7 @@ hash = "30073d4365b47b8ab85d3401082b6727c8598ff5448cc377c5542f8392afd411"
 
 [[files]]
 file = "peacock/profiles/medium/config/subtle_effects/general.toml.keys"
-hash = "7416eb557fe7929d1321b30bb1d88198d86072c656ed5f3bc9e444c15f1b2db1"
+hash = "7ed6e4526ab269e067704b84678bcf0154e2cde70ae45a2b55ce11150feb3f4d"
 
 [[files]]
 file = "peacock/profiles/medium/config/subtle_effects/items.toml.keys"
@@ -4546,7 +4638,7 @@ hash = "30073d4365b47b8ab85d3401082b6727c8598ff5448cc377c5542f8392afd411"
 
 [[files]]
 file = "peacock/profiles/potato/config/subtle_effects/general.toml.keys"
-hash = "2cbb23679ce90d06ffe89074fc45b6fe7856ed04ce7747c81ed8228a54076e8b"
+hash = "3b754cfdc01d0b26c40cc4dff5a83890c86ad87529318fd3d4a5058a665adcf5"
 
 [[files]]
 file = "peacock/profiles/potato/config/subtle_effects/items.toml.keys"
@@ -4622,7 +4714,7 @@ hash = "30073d4365b47b8ab85d3401082b6727c8598ff5448cc377c5542f8392afd411"
 
 [[files]]
 file = "peacock/profiles/ultra/config/subtle_effects/general.toml.keys"
-hash = "7416eb557fe7929d1321b30bb1d88198d86072c656ed5f3bc9e444c15f1b2db1"
+hash = "7ed6e4526ab269e067704b84678bcf0154e2cde70ae45a2b55ce11150feb3f4d"
 
 [[files]]
 file = "peacock/profiles/ultra/config/subtle_effects/items.toml.keys"

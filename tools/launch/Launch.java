@@ -5,7 +5,7 @@
 //   "$INST_JAVA" -jar "$INST_MC_DIR/peacock/launch.jar" https://raw.githubusercontent.com/Nublys/peacock/main/pack/pack.toml
 //
 // Profile selection, in order: kubejs/config/peacock-profile.json {"tier":"low"} (written in-game by `/peacock profile <tier>`),
-// then the environment variable PEACOCK_PROFILE, then DEFAULT_PROFILE. Tiers: potato | low | medium | high | ultra.
+// then the environment variable PEACOCK_PROFILE, then DEFAULT_PROFILE. Tiers: potato | low | medium | high | ultra, and deck (Steam Deck).
 // {"tier":"low","reset":true} re-applies the whole profile once (same as PEACOCK_RESET=1) and clears the flag.
 // (default: medium). Set it per instance in Prism: Edit -> Settings -> Environment variables.
 //

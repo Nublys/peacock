@@ -32,7 +32,7 @@ Memory: **6 GB** (8 GB on a 32 GB machine). Then Multiplayer → Add Server → 
 | `M` | atlas (map), `P` place a pin |
 | `R` / `U` (in a menu) | recipes / uses of the hovered item (EMI) |
 | `R` / `U` (in game) | Recruits: command / team |
-| `,` | voice chat menu (voice-activated by default) |
+| `,` | voice chat menu (sets it up the first time) |
 | `K` / `O` | shaders on/off / shader menu |
 | `F3` | debug screen: FPS, server tick, coordinates, biome, what you're looking at |
 

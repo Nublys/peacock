@@ -774,11 +774,11 @@ ENTRIES = {
         ]),
         ("voice", "Voice Chat", "minecraft:note_block", [
             txt("Simple Voice Chat is built in and uses the server's port: nothing to set up. Voice carries 48 blocks and fades with distance; use groups (" + B(",") + " menu) to talk across the map.",
-                "Default is voice activation; " + B("Right Alt") + " is push-to-talk if you switch. Mac: allow the microphone for your launcher when asked."),
+                "The first time you press " + B(",") + " it walks you through your microphone, then push-to-talk (" + B("Right Alt") + ") or voice activation. Mac: allow the microphone for your launcher when asked."),
         ]),
         ("performance", "Performance Profiles", "minecraft:redstone_torch", [
             txt("The pack ships graphics profiles by " + B("hardware") + ". Pick yours in-game with " + B("/peacock profile <tier>") + " and relaunch; the launcher applies it. (In Prism the PEACOCK_PROFILE variable still works as a fallback; CurseForge players pick the tier by which zip they install.)"),
-            txt(LI(B("potato:") + " integrated graphics, an old or hot laptop; shaders off", B("low") + " (the default): integrated graphics with headroom, a fanless MacBook Air; Complementary at its lightest", B("medium:") + " a thin laptop with a fan", B("high:") + " a laptop with a real GPU", B("ultra:") + " a desktop with a dedicated GPU"), title="The tiers"),
+            txt(LI(B("potato:") + " integrated graphics, an old or hot laptop; shaders off", B("low") + " (the default): integrated graphics with headroom, a fanless MacBook Air", B("medium:") + " a thin laptop with a fan", B("high:") + " a laptop with a real GPU", B("ultra:") + " a desktop with a dedicated GPU", B("deck:") + " a Steam Deck, graphics and controls"), title="The tiers"),
             txt("Anything you change in the video or shader menus is kept; the profile only sets defaults. Shaders toggle with " + B("K") + ". If frames drop: lower Distant Horizons' radius first, shaders second, render distance last.",
                 "Macs stay on plain Complementary; the Euphoria variant exceeds what macOS OpenGL offers."),
             txt(B("Distant Horizons") + " draws the far terrain from a low-detail copy the server builds as players explore. On a fresh world the horizon fills in over the first hour; a reset world starts over.",

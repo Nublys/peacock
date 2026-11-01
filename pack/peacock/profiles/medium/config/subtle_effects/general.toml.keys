@@ -1,2 +1,3 @@
+dropLandSoundVolume = 0.4
 enableParticleCulling = true
 particleRenderDistance = 5

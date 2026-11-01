@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Generate pack/peacock/profiles/<tier>/ from the pack defaults.
 
-Profiles are named by hardware tier, never by OS. Each folder holds *.keys files -- one setting per
+Profiles are named by hardware, never by OS: five tiers, plus `deck` for the Steam Deck (one known machine, so its
+profile can also preset the controls). Each folder holds *.keys files -- one setting per
 line in the target file's own syntax -- applied per setting by peacock/launch.jar:
   config/DistantHorizons.toml.keys     radius, threads, transparency, quality (TOML `key = value`)
   config/oculus.properties.keys        shader pack + on/off
@@ -39,6 +40,9 @@ RESOURCE_PACKS = '["vanilla","mod_resources","file/Fast-Better-Grass.zip","file/
 # "Switch the leaf mod to Optimized Bushy Leaves"), Motschen's Better Leaves before. Both ship, stacked: Optimized Bushy
 # Leaves above for vanilla trees (its 1.20.1 version covers vanilla only), Better Leaves below for Biomes O' Plenty and
 # the other modded trees (Aaron, 2026-10-22: "Stack both packs").
+# Fresh Animations and its add-ons alone: entity animation is CPU work every frame, and the Steam Deck's CPU is the
+# weak half of it (deck keeps the 3D models and bushy leaves, which are GPU work)
+FA_DROP = ['"file/FreshAnimations_v1.10.4.zip"', '"file/FA+Details-v2.2.1.zip"', '"file/FA+Objects-v2.1.2.zip"', '"file/MoreMobVariants_FreshAnimations_1.3.0-1.9.zip"']
 POTATO_DROP = ['"file/3D-Default-1.20-v1.16.0.zip"', '"file/Better-Leaves-9.6.zip"', '"file/FancyFast-Bushy-Leaves.zip"', '"file/FreshAnimations_v1.10.4.zip"', '"file/FA+Details-v2.2.1.zip"', '"file/FA+Objects-v2.1.2.zip"', '"file/MoreMobVariants_FreshAnimations_1.3.0-1.9.zip"']
 
 #          tier          shaders  pack        preset      DH radius  DH transp.  threads  DH quality  options.txt keys
@@ -64,6 +68,28 @@ TIERS = {
                         options={"renderDistance": "12", "simulationDistance": "10", "graphicsMode": "2", "particles": "0",
                                  "entityShadows": "true", "biomeBlendRadius": "7", "entityDistanceScaling": "1.0",
                                  "renderClouds": '"true"'}),
+    # Steam Deck (Aaron, 2026-11-01: "a profile for the steam deck called "deck" that can have pre set graphics and
+    # controls"). low's look on a known machine: its GPU (RDNA 2, 1280x800) carries Complementary's lightest preset and
+    # its 4-core CPU is the limit, so far terrain at 96 on one thread and no Fresh Animations. 40 FPS cap (the Deck's
+    # battery sweet spot; set the Deck's own refresh to 40 Hz to match), GUI scale 2 (auto picks 3 at 800p, which
+    # leaves 266 scaled pixels: modded screens overflow), full screen. Controls: DECK_FILES below.
+    "deck":        dict(shaders=True,  pack=CR_ZIP,  preset="POTATO",  dh=96,  transp="DISABLED", threads=1, quality="MEDIUM", ssao=False, emb=("FAST","FAST","false"),
+                        drop=FA_DROP,
+                        options={"renderDistance": "6", "simulationDistance": "6", "graphicsMode": "1", "particles": "1",
+                                 "entityShadows": "false", "biomeBlendRadius": "2", "entityDistanceScaling": "0.75",
+                                 "renderClouds": '"fast"', "guiScale": "2", "maxFps": "40", "fullscreen": "true"}),
+}
+
+# Controls the deck profile presets on top of the pack's controller binds (kubejs/assets/controlify/.../default.json):
+#   Controlify's "enhanced Steam Deck driver" off. It needs the Decky plugin and has been broken by SteamOS updates;
+#   left on, Controlify stops at a "Decky required" screen (Game Mode) or a quit/continue screen (Desktop Mode). Off,
+#   the Deck is the plain gamepad Steam Input presents, which Controlify already knows.
+#   Simple Voice Chat set up and on push-to-talk (its key stays Right Alt; the Deck's back buttons send it through
+#   Steam Input, docs/INSTALL-PRISM.md "Steam Deck"). Until its first-run walkthrough is done the mod keeps voice off
+#   and asks for a keyboard press; the Deck's mic is beside its speakers, so voice activation would carry the game.
+DECK_FILES = {
+    "config/controlify.json.keys": '"useEnhancedSteamDeckDriver": false\n',
+    "config/voicechat/voicechat-client.properties.keys": "onboarding_finished=true\nmicrophone_activation_type=PTT\n",
 }
 
 # Values earlier pack versions wrote as defaults. launch.jar treats a setting that still equals one of these as
@@ -94,6 +120,8 @@ PREVIOUS_DEFAULTS = {
         'resourcePacks:["vanilla","mod_resources","file/Fast-Better-Grass.zip","file/rainbows-foliage-vanilla-edition-v2.1.zip","file/3D-Default-1.20-v1.16.0.zip","file/FancyFast-Bushy-Leaves.zip","file/EnhancedBossBars-1.6.zip","file/xalis-enchanted-books-1.0.0-beta.2.zip","file/xalis-potions-1.2.0.zip","file/LowOnFire-26.3.zip","file/cubic-sun-moon-v1.8.5.zip","file/FreshAnimations_v1.10.4.zip","file/FA+Details-v2.2.1.zip","file/FA+Objects-v2.1.2.zip"]',
         # every tier's packs with Better Leaves, until 2026-10-22 (the switch to Optimized Bushy Leaves)
         'resourcePacks:["vanilla","mod_resources","file/Fast-Better-Grass.zip","file/rainbows-foliage-vanilla-edition-v2.1.zip","file/3D-Default-1.20-v1.16.0.zip","file/Better-Leaves-9.6.zip","file/EnhancedBossBars-1.6.zip","file/xalis-enchanted-books-1.0.0-beta.2.zip","file/xalis-potions-1.2.0.zip","file/LowOnFire-26.3.zip","file/cubic-sun-moon-v1.8.5.zip","file/FreshAnimations_v1.10.4.zip","file/FA+Details-v2.2.1.zip","file/FA+Objects-v2.1.2.zip"]',
+        # config/defaultoptions/options.txt's first-launch values for what the deck profile sets (2026-11-01)
+        "guiScale:0", "maxFps:120", "fullscreen:false",
     ],
     # the mods' shipped values before the quieter-boot change; without these the launcher took the old `true`s for
     # the player's own choice and kept the update popup and join warnings ("keep … 8 setting(s) you changed")
@@ -105,6 +133,9 @@ PREVIOUS_DEFAULTS = {
         'ignoredRenderBlockCsv = "minecraft:barrier,minecraft:structure_void,minecraft:light,minecraft:tripwire,minecraft:brown_mushroom"',
     ],
     "config/embeddium-options.json.keys": ['"force_disable_donation_prompts": false'],
+    # the mods' own defaults for what the deck profile sets (2026-11-01)
+    "config/controlify.json.keys": ['"useEnhancedSteamDeckDriver": true'],
+    "config/voicechat/voicechat-client.properties.keys": ["onboarding_finished=false"],
     "config/coldsweat/client.toml.keys": ["[Preferences]", '"Show Water Effect" = 3', '"Water Droplet Opacity" = 0.5',
                                           "[Accessibility]", '"Shiver Intensity" = 1.0', '"Heatstroke Sway Amount" = 1.0',
                                           '"Heatstroke Blur Strength" = 1.0'],
@@ -196,6 +227,7 @@ PARTICLES = {
     "medium": dict(rain=(1500, 75, 100, 16), leaves=(10, 2), se_dist=5),
     "high":   dict(rain=(1500, 75, 100, 16), leaves=(10, 2), se_dist=5),
     "ultra":  dict(rain=(1500, 75, 100, 16), leaves=(10, 2), se_dist=5),
+    "deck":   dict(rain=(750, 40, 50, 12), leaves=(6, 1), se_dist=4),
 }
 
 def particle_files(tier):
@@ -281,9 +313,8 @@ def main():
         (d / f"shaderpacks/{CR_ZIP}.txt.keys").write_text(txt)
         (d / f"shaderpacks/{EUPHORIA}.txt.keys").write_text(txt)
         packs = RESOURCE_PACKS
-        if not c.get("fresh_animations", True):
-            for p in POTATO_DROP:
-                packs = packs.replace("," + p, "")
+        for p in c.get("drop", [] if c.get("fresh_animations", True) else POTATO_DROP):
+            packs = packs.replace("," + p, "")
         opts = dict(c["options"], resourcePacks=packs, **COMMON_KEYS)
         (d / "options.txt.keys").write_text("".join(f"{k}:{v}\n" for k, v in opts.items()))
         # Sound Physics Remastered (cave echo, muffling through walls) costs CPU per sound; off on potato only
@@ -294,7 +325,12 @@ def main():
         # 2026-10-20) still let a hut's later bounces echo; the mod's default 0 lets any room ring. Reverb gain 0.7.
         (d / "config/soundphysics/soundphysics.properties.keys").write_text(
             f"enabled={'false' if tier == 'potato' else 'true'}\nreverb_attenuation_distance=24.0\nreverb_gain=0.7\n")
-        for rel, content in {**COMMON_FILES, **particle_files(tier)}.items():
+        # merged, not overridden: COMMON_FILES and the particle files both write config/subtle_effects/general.toml.keys
+        # (until 2026-11-01 the particle lines replaced the drip volume, so dropLandSoundVolume = 0.4 never shipped)
+        files = dict(COMMON_FILES)
+        for rel, content in list(particle_files(tier).items()) + list((DECK_FILES if tier == "deck" else {}).items()):
+            files[rel] = files.get(rel, "") + content
+        for rel, content in files.items():
             (d / rel).parent.mkdir(parents=True, exist_ok=True)
             (d / rel).write_text(content)
         print(f"{tier:12s} shaders={'on ' if c['shaders'] else 'off'} {c['pack'][:28]:28s} {c['preset']:7s} DH {c['dh']:>3} {c['transp']:8s} {c['threads']}t")
@@ -303,8 +339,8 @@ def main():
         f.parent.mkdir(parents=True, exist_ok=True)
         f.write_text("".join(l + "\n" for l in lines))
     (OUT / "README.txt").write_text(
-        "Hardware-tier profiles, applied by peacock/launch.jar: the tier picked in game (/peacock profile, saved in\n"
-        "kubejs/config/peacock-profile.json), else PEACOCK_PROFILE, else low (potato | low | medium | high | ultra).\n"
+        "Hardware profiles, applied by peacock/launch.jar: the one picked in game (/peacock profile, saved in\n"
+        "kubejs/config/peacock-profile.json), else PEACOCK_PROFILE, else low (potato | low | medium | high | ultra | deck).\n"
         "Generated by tools/gen-profiles.py - edit TIERS there, not these files.\n"
         "_previous/ is not a profile: it lists defaults older pack versions wrote, so the launcher\n"
         "can tell an untouched old default from a player's own change.\n")

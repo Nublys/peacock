@@ -10,7 +10,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(li)$(bold)potato:$() integrated graphics, an old or hot laptop; shaders off$(li)$(bold)low$() (the default): integrated graphics with headroom, a fanless MacBook Air; Complementary at its lightest$(li)$(bold)medium:$() a thin laptop with a fan$(li)$(bold)high:$() a laptop with a real GPU$(li)$(bold)ultra:$() a desktop with a dedicated GPU",
+      "text": "$(li)$(bold)potato:$() integrated graphics, an old or hot laptop; shaders off$(li)$(bold)low$() (the default): integrated graphics with headroom, a fanless MacBook Air$(li)$(bold)medium:$() a thin laptop with a fan$(li)$(bold)high:$() a laptop with a real GPU$(li)$(bold)ultra:$() a desktop with a dedicated GPU$(li)$(bold)deck:$() a Steam Deck, graphics and controls",
       "title": "The tiers"
     },
     {

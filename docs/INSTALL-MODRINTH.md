@@ -25,8 +25,8 @@ Launch, then **Multiplayer → Add Server** → the address from the group chat.
 
 - You are handed **The Settler's Almanac** on first join. It is the manual: read *What Happened* and
   *Where You Woke Up* first.
-- Voice chat is built in and voice-activated: `,` opens its menu. A Mac asks for microphone permission the
-  first time.
+- Voice chat is built in: the first time you press `,` it walks you through your microphone and push-to-talk
+  or voice activation. A Mac asks for microphone permission the first time.
 - Graphics start on the pack's `low` settings: shaders on at their lightest, Distant Horizons at a modest
   range. `K` turns shaders off and on, `O` opens the shader menu, and Distant Horizons' own settings are in
   Options. If the game stutters, lower Distant Horizons' range first, then turn shaders off.
@@ -54,7 +54,7 @@ java -jar peacock/launch.jar https://raw.githubusercontent.com/Nublys/peacock/ma
 
 `launch.jar` already ships inside the pack. From then on every launch checks GitHub, downloads only what changed,
 and `/peacock profile <tier>` in chat (then relaunch) picks a graphics tier for your machine: `potato`, `low`,
-`medium`, `high` or `ultra` (see the README's Performance section). If a launch fails with the hook in place,
+`medium`, `high` or `ultra`, or `deck` on a Steam Deck (see the README's Performance section). If a launch fails with the hook in place,
 remove the hook line and launch again; you will be on the version you have.
 
 ## Something is wrong

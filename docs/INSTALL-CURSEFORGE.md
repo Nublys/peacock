@@ -33,8 +33,8 @@ Apple Silicon build.
 
 ## 4. Join
 
-Play → Multiplayer → Add Server → the address from the group chat. Voice chat is built in (`,` for its
-menu, voice-activated by default). You are handed **The Settler's Almanac** on first join.
+Play → Multiplayer → Add Server → the address from the group chat. Voice chat is built in (`,` sets it up the
+first time: microphone, then push-to-talk or voice activation). You are handed **The Settler's Almanac** on first join.
 
 ## Updating
 
